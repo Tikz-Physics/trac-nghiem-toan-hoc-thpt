@@ -430,7 +430,34 @@
       flex-shrink: 0;
     }
 
-        /* CSS Math & Formula Engine */
+            /* CSS Math & Formula Engine */
+    .vec {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: stretch;
+      vertical-align: middle;
+      line-height: 1;
+      margin: 0 1.5px;
+      padding-top: 1px;
+      text-align: center;
+      position: relative;
+    }
+    .vec-sym {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+      padding: 0 1px;
+    }
+    .vec-arr {
+      width: 100%;
+      height: 5px;
+      display: block;
+      margin-bottom: 1.5px;
+      overflow: visible;
+      color: currentColor;
+    }
     math {
       font-size: inherit;
       color: inherit;
@@ -1113,11 +1140,11 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: Ax + By + Cz + D = 0 (với A² + B² + C² > 0)",
-    "exp": "• <b>Phương trình tổng quát của mặt phẳng (SGK Toán 12):</b> Mọi mặt phẳng trong không gian Oxyz đều có phương trình dạng Ax + By + Cz + D = 0, trong đó vectơ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (A; B; C) là vectơ pháp tuyến (A, B, C không đồng thời bằng 0)."
+    "exp": "• <b>Phương trình tổng quát của mặt phẳng (SGK Toán 12):</b> Mọi mặt phẳng trong không gian Oxyz đều có phương trình dạng Ax + By + Cz + D = 0, trong đó vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (A; B; C) là vectơ pháp tuyến (A, B, C không đồng thời bằng 0)."
   },
   {
     "type": "mcq",
-    "q": "Viết phương trình mặt phẳng đi qua điểm M(1; -2; 3) và nhận vectơ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (2; -1; 4) làm vectơ pháp tuyến.",
+    "q": "Viết phương trình mặt phẳng đi qua điểm M(1; -2; 3) và nhận vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (2; -1; 4) làm vectơ pháp tuyến.",
     "opts": [
       "2x - y + 4z - 16 = 0",
       "2x - y + 4z + 16 = 0",
@@ -1147,7 +1174,7 @@
     "stmts": [
       "Phương trình theo đoạn chắn của mặt phẳng (ABC) là <span class=\"fraction\"><span class=\"numerator\">x</span><span class=\"denominator\">2</span></span> + <span class=\"fraction\"><span class=\"numerator\">y</span><span class=\"denominator\">-3</span></span> + <span class=\"fraction\"><span class=\"numerator\">z</span><span class=\"denominator\">4</span></span> = 1.",
       "Phương trình tổng quát của mặt phẳng (ABC) là 6x - 4y + 3z - 12 = 0.",
-      "Vectơ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (6; -4; 3) là một vectơ pháp tuyến của mặt phẳng (ABC).",
+      "Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (6; -4; 3) là một vectơ pháp tuyến của mặt phẳng (ABC).",
       "Khoảng cách từ gốc toạ độ O đến mặt phẳng (ABC) bằng <span class=\"fraction\"><span class=\"numerator\">12</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">61</span></span></span></span>."
     ],
     "ans": [
@@ -1157,7 +1184,7 @@
       true
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-    "exp": "• <b>Ý a [Đúng]:</b> Ba điểm trên 3 trục: x/a + y/b + z/c = 1 ⇔ x/2 + y/(-3) + z/4 = 1.<br>• <b>Ý b [Đúng]:</b> Quy đồng mẫu số chung là 12: 6x - 4y + 3z = 12 ⇔ 6x - 4y + 3z - 12 = 0.<br>• <b>Ý c [Đúng]:</b> Hệ số trước x, y, z cho VTPT <math><mover><mi>n</mi><mo>→</mo></mover></math> = (6; -4; 3).<br>• <b>Ý d [Đúng]:</b> d(O, (ABC)) = |-12| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6² + (-4)² + 3²</span></span> = 12 / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">36 + 16 + 9</span></span> = 12 / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">61</span></span>."
+    "exp": "• <b>Ý a [Đúng]:</b> Ba điểm trên 3 trục: x/a + y/b + z/c = 1 ⇔ x/2 + y/(-3) + z/4 = 1.<br>• <b>Ý b [Đúng]:</b> Quy đồng mẫu số chung là 12: 6x - 4y + 3z = 12 ⇔ 6x - 4y + 3z - 12 = 0.<br>• <b>Ý c [Đúng]:</b> Hệ số trước x, y, z cho VTPT <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (6; -4; 3).<br>• <b>Ý d [Đúng]:</b> d(O, (ABC)) = |-12| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6² + (-4)² + 3²</span></span> = 12 / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">36 + 16 + 9</span></span> = 12 / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">61</span></span>."
   },
   {
     "type": "match",
@@ -1186,19 +1213,19 @@
   {
     "type": "drag",
     "q": "Chọn từ ngữ thích hợp điền vào chỗ trống để hoàn thiện vị trí tương đối giữa hai mặt phẳng (P) và (Q):",
-    "text": "Cho hai mặt phẳng (P) và (Q) có VTPT lần lượt là <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ và <math><mover><mi>n</mi><mo>→</mo></mover></math>₂. Hai mặt phẳng vuông góc với nhau khi và chỉ khi [blank]. Hai mặt phẳng song song hoặc trùng nhau khi và chỉ khi hai vectơ pháp tuyến [blank].",
+    "text": "Cho hai mặt phẳng (P) và (Q) có VTPT lần lượt là <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₁ và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₂. Hai mặt phẳng vuông góc với nhau khi và chỉ khi [blank]. Hai mặt phẳng song song hoặc trùng nhau khi và chỉ khi hai vectơ pháp tuyến [blank].",
     "words": [
-      "<math><mover><mi>n</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ = 0",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₁ · <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₂ = 0",
       "cùng phương",
-      "<math><mover><mi>n</mi><mo>→</mo></mover></math>₁ = <math><mover><mi>n</mi><mo>→</mo></mover></math>₂",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₁ = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₂",
       "cắt nhau"
     ],
     "ans": [
       0,
       1
     ],
-    "correctText": "(1) <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ = 0 • (2) cùng phương",
-    "exp": "• (P) ⊥ (Q) ⇔ <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ ⊥ <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ ⇔ <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ = 0.<br>• (P) // (Q) hoặc (P) ≡ (Q) ⇔ <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ và <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ cùng phương."
+    "correctText": "(1) <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₁ · <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₂ = 0 • (2) cùng phương",
+    "exp": "• (P) ⊥ (Q) ⇔ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₁ ⊥ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₂ ⇔ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₁ · <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₂ = 0.<br>• (P) // (Q) hoặc (P) ≡ (Q) ⇔ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₁ và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span>₂ cùng phương."
   },
   {
     "type": "mcq",
@@ -1211,7 +1238,7 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: H(0; 1; 2)",
-    "exp": "• Đường thẳng d qua A vuông góc (P) có VTCP <math><mover><mi>u</mi><mo>→</mo></mover></math> = <math><mover><mi>n</mi><mo>→</mo></mover></math><sub style=\"font-size:0.8em\">P</sub> = (1; 1; 1):<br>x = 1 + t, y = 2 + t, z = 3 + t.<br>• Thay vào phương trình (P): (1 + t) + (2 + t) + (3 + t) - 3 = 0 ⇔ 3t + 3 = 0 ⇔ t = -1.<br>• Với t = -1 ⇒ x = 0, y = 1, z = 2. Vậy toạ độ hình chiếu là <b>H(0; 1; 2)</b>.",
+    "exp": "• Đường thẳng d qua A vuông góc (P) có VTCP <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span><sub style=\"font-size:0.8em\">P</sub> = (1; 1; 1):<br>x = 1 + t, y = 2 + t, z = 3 + t.<br>• Thay vào phương trình (P): (1 + t) + (2 + t) + (3 + t) - 3 = 0 ⇔ 3t + 3 = 0 ⇔ t = -1.<br>• Với t = -1 ⇒ x = 0, y = 1, z = 2. Vậy toạ độ hình chiếu là <b>H(0; 1; 2)</b>.",
     "svgGraph": "<svg viewBox=\"0 0 380 200\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"8\" y=\"8\" width=\"364\" height=\"184\" rx=\"10\" fill=\"rgba(15,23,42,0.95)\" stroke=\"#0ea5e9\" stroke-width=\"1.6\"/>\n  <!-- Plane (P) -->\n  <polygon points=\"50,145 230,145 320,95 140,95\" fill=\"rgba(56,189,248,0.18)\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/>\n  <text x=\"90\" y=\"132\" fill=\"#38bdf8\" font-size=\"14\" font-weight=\"800\">(P)</text>\n  <!-- Point A -->\n  <circle cx=\"185\" cy=\"40\" r=\"5\" fill=\"#f43f5e\"/>\n  <text x=\"195\" y=\"42\" fill=\"#f43f5e\" font-size=\"13\" font-weight=\"800\">A(1; 2; 3)</text>\n  <!-- Perpendicular line AH -->\n  <line x1=\"185\" y1=\"40\" x2=\"185\" y2=\"120\" stroke=\"#fbbf24\" stroke-width=\"2\" stroke-dasharray=\"4,3\"/>\n  <circle cx=\"185\" cy=\"120\" r=\"4.5\" fill=\"#34d399\"/>\n  <text x=\"196\" y=\"125\" fill=\"#34d399\" font-size=\"14\" font-weight=\"900\">H</text>\n  <!-- Right angle square at H -->\n  <polyline points=\"185,110 175,110 175,120\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.4\"/>\n</svg>"
   },
   {
@@ -1231,8 +1258,8 @@
     "type": "tf",
     "q": "Trong một triển lãm nghệ thuật, một tấm kính cường lực lớn hình phẳng được dựng nghiêng đi qua 3 điểm gắn tường A(4; 0; 2), B(0; 6; 1), C(2; 3; 3) (đơn vị đo: mét). Xét tính Đúng/Sai của từng mệnh đề sau:",
     "stmts": [
-      "Hai vectơ chỉ phương trên mặt kính là <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (-4; 6; -1) và <math><mover><mi>AC</mi><mo>→</mo></mover></math> = (-2; 3; 1).",
-      "Tích có hướng của hai vectơ là [<math><mover><mi>AB</mi><mo>→</mo></mover></math>, <math><mover><mi>AC</mi><mo>→</mo></mover></math>] = (9; 6; 0).",
+      "Hai vectơ chỉ phương trên mặt kính là <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (-4; 6; -1) và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span> = (-2; 3; 1).",
+      "Tích có hướng của hai vectơ là [<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span>, <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span>] = (9; 6; 0).",
       "Phương trình mặt phẳng chứa tấm kính là 3x + 2y - 12 = 0.",
       "Mặt kính này vuông góc với mặt sàn nhà (Oxy)."
     ],
@@ -1243,7 +1270,7 @@
       true
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-    "exp": "• <b>Ý a [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (-4; 6; -1), <math><mover><mi>AC</mi><mo>→</mo></mover></math> = (-2; 3; 1).<br>• <b>Ý b [Đúng]:</b> [<math><mover><mi>AB</mi><mo>→</mo></mover></math>, <math><mover><mi>AC</mi><mo>→</mo></mover></math>] = (6·1 - (-1)·3; (-1)(-2) - (-4)·1; (-4)·3 - 6(-2)) = (9; 6; 0).<br>• <b>Ý c [Đúng]:</b> VTPT chọn <math><mover><mi>n</mi><mo>→</mo></mover></math> = (3; 2; 0). Qua A(4; 0; 2): 3(x - 4) + 2(y - 0) + 0(z - 2) = 0 ⇔ 3x + 2y - 12 = 0.<br>• <b>Ý d [Đúng]:</b> VTPT <math><mover><mi>n</mi><mo>→</mo></mover></math> = (3; 2; 0) vuông góc với vectơ <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 0; 1) của trục Oz ⇒ Mặt kính vuông góc mặt sàn."
+    "exp": "• <b>Ý a [Đúng]:</b> <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (-4; 6; -1), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span> = (-2; 3; 1).<br>• <b>Ý b [Đúng]:</b> [<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span>, <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span>] = (6·1 - (-1)·3; (-1)(-2) - (-4)·1; (-4)·3 - 6(-2)) = (9; 6; 0).<br>• <b>Ý c [Đúng]:</b> VTPT chọn <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (3; 2; 0). Qua A(4; 0; 2): 3(x - 4) + 2(y - 0) + 0(z - 2) = 0 ⇔ 3x + 2y - 12 = 0.<br>• <b>Ý d [Đúng]:</b> VTPT <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (3; 2; 0) vuông góc với vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">k</span></span> = (0; 0; 1) của trục Oz ⇒ Mặt kính vuông góc mặt sàn."
   },
   {
     "type": "mcq",

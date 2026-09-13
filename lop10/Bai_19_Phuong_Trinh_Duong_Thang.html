@@ -430,7 +430,34 @@
       flex-shrink: 0;
     }
 
-        /* CSS Math & Formula Engine */
+            /* CSS Math & Formula Engine */
+    .vec {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: stretch;
+      vertical-align: middle;
+      line-height: 1;
+      margin: 0 1.5px;
+      padding-top: 1px;
+      text-align: center;
+      position: relative;
+    }
+    .vec-sym {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+      padding: 0 1px;
+    }
+    .vec-arr {
+      width: 100%;
+      height: 5px;
+      display: block;
+      margin-bottom: 1.5px;
+      overflow: visible;
+      color: currentColor;
+    }
     math {
       font-size: inherit;
       color: inherit;
@@ -1106,14 +1133,14 @@
     "type": "mcq",
     "q": "Vectơ nào sau đây là một <b>vectơ chỉ phương</b> của đường thẳng có phương trình tổng quát 2x - 3y + 6 = 0?",
     "opts": [
-      "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 2)",
-      "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; -3)",
-      "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (-3; 2)",
-      "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; 3)"
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (3; 2)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (2; -3)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (-3; 2)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (2; 3)"
     ],
     "ans": 0,
-    "exp": "• Đường thẳng ax + by + c = 0 có VTPT <math><mover><mi>n</mi><mo>→</mo></mover></math> = (a; b) = (2; -3).<br>• VTCP <math><mover><mi>u</mi><mo>→</mo></mover></math> vuông góc với <math><mover><mi>n</mi><mo>→</mo></mover></math> nên <math><mover><mi>u</mi><mo>→</mo></mover></math> = (-b; a) = (3; 2).",
-    "correctText": "Phương án A: <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 2)"
+    "exp": "• Đường thẳng ax + by + c = 0 có VTPT <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (a; b) = (2; -3).<br>• VTCP <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> vuông góc với <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> nên <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (-b; a) = (3; 2).",
+    "correctText": "Phương án A: <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (3; 2)"
   },
   {
     "type": "match",
@@ -1124,7 +1151,7 @@
         "b": "A. ax + by + c = 0 (với a² + b² > 0)"
       },
       {
-        "a": "2. Phương trình tham số đi qua M(x₀; y₀) có VTCP <math><mover><mi>u</mi><mo>→</mo></mover></math> = (u₁; u₂)",
+        "a": "2. Phương trình tham số đi qua M(x₀; y₀) có VTCP <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (u₁; u₂)",
         "b": "B. {x = x₀ + u₁t; y = y₀ + u₂t}"
       },
       {
@@ -1145,7 +1172,7 @@
     "exp": "• Các dạng phương trình đường thẳng trong mặt phẳng toạ độ Oxy.",
     "colA": [
       "Phương trình tổng quát",
-      "Phương trình tham số đi qua M(x₀; y₀) có VTCP <math><mover><mi>u</mi><mo>→</mo></mover></math> = (u₁; u₂)",
+      "Phương trình tham số đi qua M(x₀; y₀) có VTCP <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (u₁; u₂)",
       "Phương trình chính tắc",
       "Phương trình theo đoạn chắn qua (a; 0) và (0; b)"
     ],
@@ -1167,9 +1194,9 @@
         "exp": "Khi t = 0 thì x = 1, y = -3 nên A(1; -3) ∈ d (Đúng)."
       },
       {
-        "text": "Một vectơ chỉ phương của d là <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; 4).",
+        "text": "Một vectơ chỉ phương của d là <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (2; 4).",
         "ans": true,
-        "exp": "Hệ số của t là (2; 4) nên <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; 4) là VTCP (Đúng)."
+        "exp": "Hệ số của t là (2; 4) nên <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (2; 4) là VTCP (Đúng)."
       },
       {
         "text": "Điểm B(3; 1) thuộc đường thẳng d.",
@@ -1179,12 +1206,12 @@
       {
         "text": "Phương trình tổng quát của d là 4x + 2y + 2 = 0.",
         "ans": false,
-        "exp": "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 2) ⇒ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (2; -1). PTTQ: 2(x - 1) - 1(y + 3) = 0 ⇔ 2x - y - 5 = 0 (Sai)."
+        "exp": "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (1; 2) ⇒ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (2; -1). PTTQ: 2(x - 1) - 1(y + 3) = 0 ⇔ 2x - y - 5 = 0 (Sai)."
       }
     ],
     "stmts": [
       "Đường thẳng d đi qua điểm A(1; -3).",
-      "Một vectơ chỉ phương của d là <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; 4).",
+      "Một vectơ chỉ phương của d là <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (2; 4).",
       "Điểm B(3; 1) thuộc đường thẳng d.",
       "Phương trình tổng quát của d là 4x + 2y + 2 = 0."
     ],
@@ -1194,12 +1221,12 @@
       true,
       false
     ],
-    "exp": "• <b>Ý a) [Đúng]:</b> Khi t = 0 thì x = 1, y = -3 nên A(1; -3) ∈ d (Đúng).<br>• <b>Ý b) [Đúng]:</b> Hệ số của t là (2; 4) nên <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; 4) là VTCP (Đúng).<br>• <b>Ý c) [Đúng]:</b> Với t = 1: x = 1 + 2(1) = 3; y = -3 + 4(1) = 1 nên B(3; 1) ∈ d (Đúng).<br>• <b>Ý d) [Sai]:</b> <math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 2) ⇒ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (2; -1). PTTQ: 2(x - 1) - 1(y + 3) = 0 ⇔ 2x - y - 5 = 0 (Sai).",
+    "exp": "• <b>Ý a) [Đúng]:</b> Khi t = 0 thì x = 1, y = -3 nên A(1; -3) ∈ d (Đúng).<br>• <b>Ý b) [Đúng]:</b> Hệ số của t là (2; 4) nên <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (2; 4) là VTCP (Đúng).<br>• <b>Ý c) [Đúng]:</b> Với t = 1: x = 1 + 2(1) = 3; y = -3 + 4(1) = 1 nên B(3; 1) ∈ d (Đúng).<br>• <b>Ý d) [Sai]:</b> <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (1; 2) ⇒ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (2; -1). PTTQ: 2(x - 1) - 1(y + 3) = 0 ⇔ 2x - y - 5 = 0 (Sai).",
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
   },
   {
     "type": "mcq",
-    "q": "Phương trình tổng quát của đường thẳng đi qua điểm M(2; -1) và nhận <math><mover><mi>n</mi><mo>→</mo></mover></math> = (3; 4) làm vectơ pháp tuyến là:",
+    "q": "Phương trình tổng quát của đường thẳng đi qua điểm M(2; -1) và nhận <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (3; 4) làm vectơ pháp tuyến là:",
     "opts": [
       "3x + 4y - 2 = 0",
       "3x + 4y + 2 = 0",
@@ -1251,7 +1278,7 @@
       "x + 2y - 7 = 0"
     ],
     "ans": 0,
-    "exp": "• Trung điểm I: x_I = 3, y_I = 2 ⇒ I(3; 2).<br>• <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (4; -2) cùng phương <math><mover><mi>n</mi><mo>→</mo></mover></math> = (2; -1).<br>• Trung trực: 2(x - 3) - 1(y - 2) = 0 ⇔ 2x - y - 4 = 0.",
+    "exp": "• Trung điểm I: x_I = 3, y_I = 2 ⇒ I(3; 2).<br>• <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (4; -2) cùng phương <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (2; -1).<br>• Trung trực: 2(x - 3) - 1(y - 2) = 0 ⇔ 2x - y - 4 = 0.",
     "correctText": "Phương án A: 2x - y - 4 = 0"
   },
   {
@@ -1278,7 +1305,7 @@
       "4x - 8y + 16 = 0"
     ],
     "ans": 0,
-    "exp": "• <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (4; 8) = 4(1; 2) ⇒ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (2; -1).<br>• Đường thẳng qua A(2; 3): 2(x - 2) - (y - 3) = 0 ⇔ 2x - y - 1 = 0.",
+    "exp": "• <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (4; 8) = 4(1; 2) ⇒ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (2; -1).<br>• Đường thẳng qua A(2; 3): 2(x - 2) - (y - 3) = 0 ⇔ 2x - y - 1 = 0.",
     "correctText": "Phương án A: 2x - y - 1 = 0"
   },
   {
@@ -1296,7 +1323,7 @@
   },
   {
     "type": "mcq",
-    "q": "Một chiếc tàu cứu hộ neo đậu tại cảng toạ độ A(1; 2) nhận lệnh cứu nạn một thuyền câu đang trôi dạt theo hướng vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 4). Phương trình đường đi thẳng của tàu cứu hộ để tiếp cận nhanh nhất là:",
+    "q": "Một chiếc tàu cứu hộ neo đậu tại cảng toạ độ A(1; 2) nhận lệnh cứu nạn một thuyền câu đang trôi dạt theo hướng vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (3; 4). Phương trình đường đi thẳng của tàu cứu hộ để tiếp cận nhanh nhất là:",
     "opts": [
       "{x = 1 + 3t; y = 2 + 4t} (t ≥ 0)",
       "{x = 3 + t; y = 4 + 2t}",
@@ -1304,7 +1331,7 @@
       "3x + 4y - 11 = 0"
     ],
     "ans": 0,
-    "exp": "• Đường thẳng qua A(1; 2) có VTCP <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 4) có dạng tham số: {x = 1 + 3t; y = 2 + 4t}.",
+    "exp": "• Đường thẳng qua A(1; 2) có VTCP <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (3; 4) có dạng tham số: {x = 1 + 3t; y = 2 + 4t}.",
     "correctText": "Phương án A: {x = 1 + 3t; y = 2 + 4t} (t ≥ 0)"
   }
 ];

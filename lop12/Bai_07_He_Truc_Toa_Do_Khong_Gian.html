@@ -430,7 +430,34 @@
       flex-shrink: 0;
     }
 
-        /* CSS Math & Formula Engine */
+            /* CSS Math & Formula Engine */
+    .vec {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: stretch;
+      vertical-align: middle;
+      line-height: 1;
+      margin: 0 1.5px;
+      padding-top: 1px;
+      text-align: center;
+      position: relative;
+    }
+    .vec-sym {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+      padding: 0 1px;
+    }
+    .vec-arr {
+      width: 100%;
+      height: 5px;
+      display: block;
+      margin-bottom: 1.5px;
+      overflow: visible;
+      color: currentColor;
+    }
     math {
       font-size: inherit;
       color: inherit;
@@ -1106,14 +1133,14 @@
     "type": "mcq",
     "q": "Trong không gian Oxyz, toạ độ của ba vectơ đơn vị lần lượt trên ba trục Ox, Oy, Oz là:",
     "opts": [
-      "<math><mover><mi>i</mi><mo>→</mo></mover></math> = (1; 0; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (0; 1; 0), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 0; 1)",
-      "<math><mover><mi>i</mi><mo>→</mo></mover></math> = (0; 1; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (1; 0; 0), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 0; 1)",
-      "<math><mover><mi>i</mi><mo>→</mo></mover></math> = (1; 1; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (0; 1; 1), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (1; 0; 1)",
-      "<math><mover><mi>i</mi><mo>→</mo></mover></math> = (1; 0; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (0; 0; 1), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 1; 0)"
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">i</span></span> = (1; 0; 0), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">j</span></span> = (0; 1; 0), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">k</span></span> = (0; 0; 1)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">i</span></span> = (0; 1; 0), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">j</span></span> = (1; 0; 0), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">k</span></span> = (0; 0; 1)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">i</span></span> = (1; 1; 0), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">j</span></span> = (0; 1; 1), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">k</span></span> = (1; 0; 1)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">i</span></span> = (1; 0; 0), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">j</span></span> = (0; 0; 1), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">k</span></span> = (0; 1; 0)"
     ],
     "ans": 0,
-    "correctText": "Phương án A: <math><mover><mi>i</mi><mo>→</mo></mover></math> = (1; 0; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (0; 1; 0), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 0; 1)",
-    "exp": "• <b>Định nghĩa hệ toạ độ Oxyz (SGK Toán 12):</b> Hệ trục toạ độ không gian gồm ba trục toạ độ đôi một vuông góc Ox, Oy, Oz với ba vectơ đơn vị tương ứng là <math><mover><mi>i</mi><mo>→</mo></mover></math> = (1; 0; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (0; 1; 0), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 0; 1)."
+    "correctText": "Phương án A: <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">i</span></span> = (1; 0; 0), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">j</span></span> = (0; 1; 0), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">k</span></span> = (0; 0; 1)",
+    "exp": "• <b>Định nghĩa hệ toạ độ Oxyz (SGK Toán 12):</b> Hệ trục toạ độ không gian gồm ba trục toạ độ đôi một vuông góc Ox, Oy, Oz với ba vectơ đơn vị tương ứng là <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">i</span></span> = (1; 0; 0), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">j</span></span> = (0; 1; 0), <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">k</span></span> = (0; 0; 1)."
   },
   {
     "type": "mcq",
@@ -1157,7 +1184,7 @@
       true
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-    "exp": "• <b>Ý a [Đúng]:</b> M(-0,5; 0,5; 2,5).<br>• <b>Ý b [Đúng]:</b> G(1; 1; 2).<br>• <b>Ý c [Đúng]:</b> BC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(4 - (-2))² + (2 - 1)² + (1 - 3)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">36 + 1 + 4</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">41</span></span>.<br>• <b>Ý d [Đúng]:</b> ABCD là hình bình hành ⇔ <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math> = (6; 1; -2) ⇒ D(1+6; 0+1; 2-2) = (7; 1; 0)."
+    "exp": "• <b>Ý a [Đúng]:</b> M(-0,5; 0,5; 2,5).<br>• <b>Ý b [Đúng]:</b> G(1; 1; 2).<br>• <b>Ý c [Đúng]:</b> BC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(4 - (-2))² + (2 - 1)² + (1 - 3)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">36 + 1 + 4</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">41</span></span>.<br>• <b>Ý d [Đúng]:</b> ABCD là hình bình hành ⇔ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AD</span></span> = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">BC</span></span> = (6; 1; -2) ⇒ D(1+6; 0+1; 2-2) = (7; 1; 0)."
   },
   {
     "type": "match",
@@ -1186,14 +1213,14 @@
   {
     "type": "drag",
     "q": "Chọn từ ngữ thích hợp điền vào chỗ trống để hoàn thiện định nghĩa toạ độ điểm trong không gian:",
-    "text": "Trong không gian Oxyz, toạ độ của điểm M là toạ độ của vectơ [blank]. Nếu <math><mover><mi>OM</mi><mo>→</mo></mover></math> = x<math><mover><mi>i</mi><mo>→</mo></mover></math> + y<math><mover><mi>j</mi><mo>→</mo></mover></math> + z<math><mover><mi>k</mi><mo>→</mo></mover></math> thì ta viết M([blank]). Số x được gọi là [blank], y là [blank], z là [blank] của điểm M.",
+    "text": "Trong không gian Oxyz, toạ độ của điểm M là toạ độ của vectơ [blank]. Nếu <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">OM</span></span> = x<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">i</span></span> + y<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">j</span></span> + z<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">k</span></span> thì ta viết M([blank]). Số x được gọi là [blank], y là [blank], z là [blank] của điểm M.",
     "words": [
-      "<math><mover><mi>OM</mi><mo>→</mo></mover></math>",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">OM</span></span>",
       "x; y; z",
       "hoành độ",
       "tung độ",
       "cao độ",
-      "<math><mover><mi>MO</mi><mo>→</mo></mover></math>"
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">MO</span></span>"
     ],
     "ans": [
       0,
@@ -1202,8 +1229,8 @@
       3,
       4
     ],
-    "correctText": "(1) <math><mover><mi>OM</mi><mo>→</mo></mover></math> • (2) x; y; z • (3) hoành độ • (4) tung độ • (5) cao độ",
-    "exp": "• <b>Quy chuẩn toạ độ điểm (SGK Toán 12):</b> Toạ độ điểm M chính là bộ ba số (x; y; z) tương ứng với khai triển vectơ vị trí <math><mover><mi>OM</mi><mo>→</mo></mover></math> theo bộ ba vectơ đơn vị."
+    "correctText": "(1) <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">OM</span></span> • (2) x; y; z • (3) hoành độ • (4) tung độ • (5) cao độ",
+    "exp": "• <b>Quy chuẩn toạ độ điểm (SGK Toán 12):</b> Toạ độ điểm M chính là bộ ba số (x; y; z) tương ứng với khai triển vectơ vị trí <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">OM</span></span> theo bộ ba vectơ đơn vị."
   },
   {
     "type": "mcq",
@@ -1237,7 +1264,7 @@
     "q": "Một trạm radar kiểm soát không lưu tại mặt đất gắn hệ toạ độ Oxyz (đơn vị đo: km) với gốc O tại trạm, mặt phẳng (Oxy) là mặt đất nằm ngang. Radar phát hiện máy bay A tại toạ độ (30; 40; 8) và sau 5 phút máy bay di chuyển đến vị trí B(60; 80; 10). Xét tính Đúng/Sai của từng nhận định sau:",
     "stmts": [
       "Khoảng cách ban đầu từ trạm radar O đến máy bay là khoảng 50,6 km.",
-      "Vectơ độ dời của máy bay trong 5 phút là <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (30; 40; 2).",
+      "Vectơ độ dời của máy bay trong 5 phút là <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (30; 40; 2).",
       "Quãng đường bay được của máy bay trong 5 phút xấp xỉ 50,04 km.",
       "Vận tốc trung bình của máy bay trong 5 phút này xấp xỉ 600 km/h."
     ],
@@ -1248,7 +1275,7 @@
       true
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-    "exp": "• <b>Ý a [Đúng]:</b> OA = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">30² + 40² + 8²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">900 + 1600 + 64</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2564</span></span> ≈ 50,64 km.<br>• <b>Ý b [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (60 - 30; 80 - 40; 10 - 8) = (30; 40; 2).<br>• <b>Ý c [Đúng]:</b> Quãng đường AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">30² + 40² + 2²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2500 + 4</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2504</span></span> ≈ 50,04 km.<br>• <b>Ý d [Đúng]:</b> Thời gian 5 phút = 5/60 giờ = 1/12 giờ. Vận tốc v = s/t = 50,04 / (1/12) ≈ 600,5 km/h."
+    "exp": "• <b>Ý a [Đúng]:</b> OA = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">30² + 40² + 8²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">900 + 1600 + 64</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2564</span></span> ≈ 50,64 km.<br>• <b>Ý b [Đúng]:</b> <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (60 - 30; 80 - 40; 10 - 8) = (30; 40; 2).<br>• <b>Ý c [Đúng]:</b> Quãng đường AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">30² + 40² + 2²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2500 + 4</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2504</span></span> ≈ 50,04 km.<br>• <b>Ý d [Đúng]:</b> Thời gian 5 phút = 5/60 giờ = 1/12 giờ. Vận tốc v = s/t = 50,04 / (1/12) ≈ 600,5 km/h."
   },
   {
     "type": "mcq",

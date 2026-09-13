@@ -430,7 +430,34 @@
       flex-shrink: 0;
     }
 
-        /* CSS Math & Formula Engine */
+            /* CSS Math & Formula Engine */
+    .vec {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: stretch;
+      vertical-align: middle;
+      line-height: 1;
+      margin: 0 1.5px;
+      padding-top: 1px;
+      text-align: center;
+      position: relative;
+    }
+    .vec-sym {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+      padding: 0 1px;
+    }
+    .vec-arr {
+      width: 100%;
+      height: 5px;
+      display: block;
+      margin-bottom: 1.5px;
+      overflow: visible;
+      color: currentColor;
+    }
     math {
       font-size: inherit;
       color: inherit;
@@ -1104,24 +1131,24 @@
     const RAW_QUESTIONS = [
   {
     "type": "mcq",
-    "q": "Trong mặt phẳng toạ độ Oxy, toạ độ của vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = x·<math><mover><mi>i</mi><mo>→</mo></mover></math> + y·<math><mover><mi>j</mi><mo>→</mo></mover></math> (với <math><mover><mi>i</mi><mo>→</mo></mover></math>, <math><mover><mi>j</mi><mo>→</mo></mover></math> là các vectơ đơn vị trên Ox, Oy) là:",
+    "q": "Trong mặt phẳng toạ độ Oxy, toạ độ của vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = x·<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">i</span></span> + y·<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">j</span></span> (với <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">i</span></span>, <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">j</span></span> là các vectơ đơn vị trên Ox, Oy) là:",
     "opts": [
-      "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; y)",
-      "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (y; x)",
-      "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (x + y; 0)",
-      "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 1)"
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (x; y)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (y; x)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (x + y; 0)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (1; 1)"
     ],
     "ans": 0,
-    "exp": "• Định nghĩa: <math><mover><mi>u</mi><mo>→</mo></mover></math> = x·<math><mover><mi>i</mi><mo>→</mo></mover></math> + y·<math><mover><mi>j</mi><mo>→</mo></mover></math> ⇔ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; y).",
-    "correctText": "Phương án A: <math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; y)"
+    "exp": "• Định nghĩa: <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = x·<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">i</span></span> + y·<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">j</span></span> ⇔ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (x; y).",
+    "correctText": "Phương án A: <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (x; y)"
   },
   {
     "type": "match",
     "q": "Ghép các công thức toạ độ vectơ và điểm (Cột A) với biểu thức tương ứng (Cột B):",
     "pairs": [
       {
-        "a": "1. Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> nối hai điểm A(x_A; y_A), B(x_B; y_B)",
-        "b": "A. <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (x_B - x_A; y_B - y_A)"
+        "a": "1. Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> nối hai điểm A(x_A; y_A), B(x_B; y_B)",
+        "b": "A. <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (x_B - x_A; y_B - y_A)"
       },
       {
         "a": "2. Trung điểm I của đoạn thẳng AB",
@@ -1132,8 +1159,8 @@
         "b": "C. x_G = (x_A + x_B + x_C)/3; y_G = (y_A + y_B + y_C)/3"
       },
       {
-        "a": "4. Độ dài của vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; y)",
-        "b": "D. |<math><mover><mi>u</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² + y²</span></span>"
+        "a": "4. Độ dài của vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (x; y)",
+        "b": "D. |<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² + y²</span></span>"
       }
     ],
     "ans": {
@@ -1144,16 +1171,16 @@
     },
     "exp": "• Toạ độ vectơ: cuối trừ đầu.<br>• Trung điểm: trung bình cộng 2 điểm.<br>• Trọng tâm: trung bình cộng 3 điểm.<br>• Độ dài: căn tổng bình phương.",
     "colA": [
-      "Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> nối hai điểm A(x_A; y_A), B(x_B; y_B)",
+      "Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> nối hai điểm A(x_A; y_A), B(x_B; y_B)",
       "Trung điểm I của đoạn thẳng AB",
       "Trọng tâm G của tam giác ABC",
-      "Độ dài của vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; y)"
+      "Độ dài của vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (x; y)"
     ],
     "colB": [
-      "<math><mover><mi>AB</mi><mo>→</mo></mover></math> = (x_B - x_A; y_B - y_A)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (x_B - x_A; y_B - y_A)",
       "x_I = (x_A + x_B)/2; y_I = (y_A + y_B)/2",
       "x_G = (x_A + x_B + x_C)/3; y_G = (y_A + y_B + y_C)/3",
-      "|<math><mover><mi>u</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² + y²</span></span>"
+      "|<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² + y²</span></span>"
     ],
     "correctText": "1-A • 2-B • 3-C • 4-D"
   },
@@ -1162,9 +1189,9 @@
     "q": "Cho hai điểm A(2; -3) và B(4; 1). Xét tính đúng - sai:",
     "items": [
       {
-        "text": "Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> có toạ độ là (2; 4).",
+        "text": "Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> có toạ độ là (2; 4).",
         "ans": true,
-        "exp": "<math><mover><mi>AB</mi><mo>→</mo></mover></math> = (4 - 2; 1 - (-3)) = (2; 4) (Đúng)."
+        "exp": "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (4 - 2; 1 - (-3)) = (2; 4) (Đúng)."
       },
       {
         "text": "Trung điểm I của đoạn AB có toạ độ là (3; -1).",
@@ -1177,16 +1204,16 @@
         "exp": "AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + 4²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">20</span></span> = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> (Đúng)."
       },
       {
-        "text": "Vectơ đối của <math><mover><mi>AB</mi><mo>→</mo></mover></math> là (-2; 4).",
+        "text": "Vectơ đối của <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> là (-2; 4).",
         "ans": false,
-        "exp": "-<math><mover><mi>AB</mi><mo>→</mo></mover></math> = (-2; -4) (Sai)."
+        "exp": "-<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (-2; -4) (Sai)."
       }
     ],
     "stmts": [
-      "Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> có toạ độ là (2; 4).",
+      "Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> có toạ độ là (2; 4).",
       "Trung điểm I của đoạn AB có toạ độ là (3; -1).",
       "Độ dài đoạn thẳng AB bằng 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>.",
-      "Vectơ đối của <math><mover><mi>AB</mi><mo>→</mo></mover></math> là (-2; 4)."
+      "Vectơ đối của <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> là (-2; 4)."
     ],
     "ans": [
       true,
@@ -1194,12 +1221,12 @@
       true,
       false
     ],
-    "exp": "• <b>Ý a) [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (4 - 2; 1 - (-3)) = (2; 4) (Đúng).<br>• <b>Ý b) [Đúng]:</b> x_I = (2 + 4)/2 = 3; y_I = (-3 + 1)/2 = -1 (Đúng).<br>• <b>Ý c) [Đúng]:</b> AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + 4²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">20</span></span> = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> (Đúng).<br>• <b>Ý d) [Sai]:</b> -<math><mover><mi>AB</mi><mo>→</mo></mover></math> = (-2; -4) (Sai).",
+    "exp": "• <b>Ý a) [Đúng]:</b> <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (4 - 2; 1 - (-3)) = (2; 4) (Đúng).<br>• <b>Ý b) [Đúng]:</b> x_I = (2 + 4)/2 = 3; y_I = (-3 + 1)/2 = -1 (Đúng).<br>• <b>Ý c) [Đúng]:</b> AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + 4²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">20</span></span> = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> (Đúng).<br>• <b>Ý d) [Sai]:</b> -<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (-2; -4) (Sai).",
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
   },
   {
     "type": "mcq",
-    "q": "Cho <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; -1) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (-3; 4). Toạ độ của vectơ tổng 2<math><mover><mi>u</mi><mo>→</mo></mover></math> + <math><mover><mi>v</mi><mo>→</mo></mover></math> là:",
+    "q": "Cho <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (2; -1) và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v</span></span> = (-3; 4). Toạ độ của vectơ tổng 2<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> + <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v</span></span> là:",
     "opts": [
       "(1; 2)",
       "(-1; 2)",
@@ -1207,7 +1234,7 @@
       "(7; -2)"
     ],
     "ans": 0,
-    "exp": "• 2<math><mover><mi>u</mi><mo>→</mo></mover></math> = (4; -2) ⇒ 2<math><mover><mi>u</mi><mo>→</mo></mover></math> + <math><mover><mi>v</mi><mo>→</mo></mover></math> = (4 - 3; -2 + 4) = (1; 2).",
+    "exp": "• 2<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (4; -2) ⇒ 2<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> + <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v</span></span> = (4 - 3; -2 + 4) = (1; 2).",
     "correctText": "Phương án A: (1; 2)"
   },
   {
@@ -1225,8 +1252,8 @@
       "(3; 6)",
       "10"
     ],
-    "exp": "• G = ( (1-2+4)/3; (2+3+1)/3 ) = (1; 2).<br>• <math><mover><mi>AC</mi><mo>→</mo></mover></math> = (4-1; 1-2) = (3; -1).<br>• AC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + (-1)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>.",
-    "sentence": "• Trọng tâm G có toạ độ là %%%SLOT_1%%%.<br>• Vectơ <math><mover><mi>AC</mi><mo>→</mo></mover></math> có toạ độ là %%%SLOT_2%%%.<br>• Độ dài cạnh AC là %%%SLOT_3%%%.",
+    "exp": "• G = ( (1-2+4)/3; (2+3+1)/3 ) = (1; 2).<br>• <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span> = (4-1; 1-2) = (3; -1).<br>• AC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + (-1)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>.",
+    "sentence": "• Trọng tâm G có toạ độ là %%%SLOT_1%%%.<br>• Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span> có toạ độ là %%%SLOT_2%%%.<br>• Độ dài cạnh AC là %%%SLOT_3%%%.",
     "words": [
       "(1; 2)",
       "(3; -1)",
@@ -1243,7 +1270,7 @@
   },
   {
     "type": "mcq",
-    "q": "Cho <math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; 2) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (6; -3). Hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> cùng phương khi x nhận giá trị:",
+    "q": "Cho <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (x; 2) và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v</span></span> = (6; -3). Hai vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v</span></span> cùng phương khi x nhận giá trị:",
     "opts": [
       "-4",
       "4",
@@ -1264,7 +1291,7 @@
       "(7; 5)"
     ],
     "ans": 0,
-    "exp": "• <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math> = (2; -5) ⇒ x_D + 1 = 2, y_D - 2 = -5 ⇒ D(1; -3).",
+    "exp": "• <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AD</span></span> = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">BC</span></span> = (2; -5) ⇒ x_D + 1 = 2, y_D - 2 = -5 ⇒ D(1; -3).",
     "correctText": "Phương án A: (1; -3)",
     "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <line x1=\"40\" y1=\"140\" x2=\"400\" y2=\"140\" stroke=\"#475569\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"160\" y1=\"220\" x2=\"160\" y2=\"20\" stroke=\"#475569\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"395\" y=\"132\" fill=\"#94a3b8\" font-size=\"13\">x</text>\n  <text x=\"170\" y=\"30\" fill=\"#94a3b8\" font-size=\"13\">y</text>\n  \n  <polygon points=\"134,88 238,36 290,166 186,218\" fill=\"rgba(56,189,248,0.12)\" stroke=\"#38bdf8\" stroke-width=\"2.2\"/>\n  \n  <circle cx=\"134\" cy=\"88\" r=\"4.5\" fill=\"#38bdf8\"/><text x=\"120\" y=\"80\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">A(-1; 2)</text>\n  <circle cx=\"238\" cy=\"36\" r=\"4.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"35\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">B(3; 4)</text>\n  <circle cx=\"290\" cy=\"166\" r=\"4.5\" fill=\"#38bdf8\"/><text x=\"300\" y=\"170\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">C(5; -1)</text>\n  \n  <circle cx=\"186\" cy=\"218\" r=\"5\" fill=\"#f43f5e\"/>\n  <text x=\"198\" y=\"222\" fill=\"#f43f5e\" font-size=\"13\" font-weight=\"900\">D(x; y) = ?</text>\n\n</svg>"
   },
@@ -1304,7 +1331,7 @@
       "D(6; 4)"
     ],
     "ans": 0,
-    "exp": "• <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math> = (2; 4) ⇒ D(2 + 2; 1 + 4) = D(4; 5).",
+    "exp": "• <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AD</span></span> = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">BC</span></span> = (2; 4) ⇒ D(2 + 2; 1 + 4) = D(4; 5).",
     "correctText": "Phương án A: D(4; 5)"
   }
 ];

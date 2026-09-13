@@ -430,7 +430,34 @@
       flex-shrink: 0;
     }
 
-        /* CSS Math & Formula Engine */
+            /* CSS Math & Formula Engine */
+    .vec {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: stretch;
+      vertical-align: middle;
+      line-height: 1;
+      margin: 0 1.5px;
+      padding-top: 1px;
+      text-align: center;
+      position: relative;
+    }
+    .vec-sym {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+      padding: 0 1px;
+    }
+    .vec-arr {
+      width: 100%;
+      height: 5px;
+      display: block;
+      margin-bottom: 1.5px;
+      overflow: visible;
+      color: currentColor;
+    }
     math {
       font-size: inherit;
       color: inherit;
@@ -1304,7 +1331,7 @@
       "7/2"
     ],
     "ans": 0,
-    "exp": "• Điểm đối xứng của S(2; 1) qua Ox là S'(2; -1).<br>• Đường thẳng S'R đi qua I: <math><mover><mi>S'R</mi><mo>→</mo></mover></math> = (4; 3) ⇒ PTTQ: 3(x - 2) - 4(y + 1) = 0 ⇔ 3x - 4y - 10 = 0.<br>• I thuộc Ox (y = 0) ⇒ 3x - 10 = 0 ⇒ x = 10/3.",
+    "exp": "• Điểm đối xứng của S(2; 1) qua Ox là S'(2; -1).<br>• Đường thẳng S'R đi qua I: <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">S'R</span></span> = (4; 3) ⇒ PTTQ: 3(x - 2) - 4(y + 1) = 0 ⇔ 3x - 4y - 10 = 0.<br>• I thuộc Ox (y = 0) ⇒ 3x - 10 = 0 ⇒ x = 10/3.",
     "correctText": "Phương án A: 10/3 (≈ 3,33)"
   }
 ];

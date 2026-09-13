@@ -430,7 +430,34 @@
       flex-shrink: 0;
     }
 
-        /* CSS Math & Formula Engine */
+            /* CSS Math & Formula Engine */
+    .vec {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: stretch;
+      vertical-align: middle;
+      line-height: 1;
+      margin: 0 1.5px;
+      padding-top: 1px;
+      text-align: center;
+      position: relative;
+    }
+    .vec-sym {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+      padding: 0 1px;
+    }
+    .vec-arr {
+      width: 100%;
+      height: 5px;
+      display: block;
+      margin-bottom: 1.5px;
+      overflow: visible;
+      color: currentColor;
+    }
     math {
       font-size: inherit;
       color: inherit;
@@ -1132,7 +1159,7 @@
         "b": "C. Cùng hướng và có cùng độ dài"
       },
       {
-        "a": "4. Vectơ-không (kí hiệu <math><mover><mn>0</mn><mo>→</mo></mover></math>)",
+        "a": "4. Vectơ-không (kí hiệu <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\" style=\"font-style:normal;\">0</span></span>)",
         "b": "D. Có điểm đầu và điểm cuối trùng nhau, độ dài bằng 0"
       }
     ],
@@ -1147,7 +1174,7 @@
       "Giá của vectơ",
       "Hai vectơ cùng phương",
       "Hai vectơ bằng nhau",
-      "Vectơ-không (kí hiệu <math><mover><mn>0</mn><mo>→</mo></mover></math>)"
+      "Vectơ-không (kí hiệu <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\" style=\"font-style:normal;\">0</span></span>)"
     ],
     "colB": [
       "Đường thẳng đi qua điểm đầu và điểm cuối của vectơ",
@@ -1162,31 +1189,31 @@
     "q": "Cho hình bình hành ABCD tâm O. Xét tính đúng - sai:",
     "items": [
       {
-        "text": "Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>DC</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
+        "text": "Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">DC</span></span> là hai vectơ bằng nhau.",
         "ans": true,
-        "exp": "AB và DC song song, cùng chiều và AB = DC nên <math><mover><mi>AB</mi><mo>→</mo></mover></math> = <math><mover><mi>DC</mi><mo>→</mo></mover></math> (Đúng)."
+        "exp": "AB và DC song song, cùng chiều và AB = DC nên <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">DC</span></span> (Đúng)."
       },
       {
-        "text": "Vectơ <math><mover><mi>AD</mi><mo>→</mo></mover></math> và <math><mover><mi>CB</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
+        "text": "Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AD</span></span> và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">CB</span></span> là hai vectơ bằng nhau.",
         "ans": false,
-        "exp": "AD và CB có hướng ngược nhau nên <math><mover><mi>AD</mi><mo>→</mo></mover></math> = -<math><mover><mi>CB</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math> (Sai)."
+        "exp": "AD và CB có hướng ngược nhau nên <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AD</span></span> = -<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">CB</span></span> = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">BC</span></span> (Sai)."
       },
       {
-        "text": "Vectơ <math><mover><mi>AO</mi><mo>→</mo></mover></math> và <math><mover><mi>OC</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
+        "text": "Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AO</span></span> và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">OC</span></span> là hai vectơ bằng nhau.",
         "ans": true,
-        "exp": "O là trung điểm AC nên AO = OC và cùng hướng A → C, tức <math><mover><mi>AO</mi><mo>→</mo></mover></math> = <math><mover><mi>OC</mi><mo>→</mo></mover></math> (Đúng)."
+        "exp": "O là trung điểm AC nên AO = OC và cùng hướng A → C, tức <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AO</span></span> = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">OC</span></span> (Đúng)."
       },
       {
-        "text": "Độ dài |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| bằng độ dài |<math><mover><mi>BD</mi><mo>→</mo></mover></math>|.",
+        "text": "Độ dài |<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span>| bằng độ dài |<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">BD</span></span>|.",
         "ans": false,
         "exp": "Trong hình bình hành nói chung, độ dài 2 đường chéo không bằng nhau (Sai)."
       }
     ],
     "stmts": [
-      "Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>DC</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
-      "Vectơ <math><mover><mi>AD</mi><mo>→</mo></mover></math> và <math><mover><mi>CB</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
-      "Vectơ <math><mover><mi>AO</mi><mo>→</mo></mover></math> và <math><mover><mi>OC</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
-      "Độ dài |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| bằng độ dài |<math><mover><mi>BD</mi><mo>→</mo></mover></math>|."
+      "Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">DC</span></span> là hai vectơ bằng nhau.",
+      "Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AD</span></span> và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">CB</span></span> là hai vectơ bằng nhau.",
+      "Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AO</span></span> và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">OC</span></span> là hai vectơ bằng nhau.",
+      "Độ dài |<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span>| bằng độ dài |<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">BD</span></span>|."
     ],
     "ans": [
       true,
@@ -1194,12 +1221,12 @@
       true,
       false
     ],
-    "exp": "• <b>Ý a) [Đúng]:</b> AB và DC song song, cùng chiều và AB = DC nên <math><mover><mi>AB</mi><mo>→</mo></mover></math> = <math><mover><mi>DC</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý b) [Sai]:</b> AD và CB có hướng ngược nhau nên <math><mover><mi>AD</mi><mo>→</mo></mover></math> = -<math><mover><mi>CB</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math> (Sai).<br>• <b>Ý c) [Đúng]:</b> O là trung điểm AC nên AO = OC và cùng hướng A → C, tức <math><mover><mi>AO</mi><mo>→</mo></mover></math> = <math><mover><mi>OC</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý d) [Sai]:</b> Trong hình bình hành nói chung, độ dài 2 đường chéo không bằng nhau (Sai).",
+    "exp": "• <b>Ý a) [Đúng]:</b> AB và DC song song, cùng chiều và AB = DC nên <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">DC</span></span> (Đúng).<br>• <b>Ý b) [Sai]:</b> AD và CB có hướng ngược nhau nên <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AD</span></span> = -<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">CB</span></span> = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">BC</span></span> (Sai).<br>• <b>Ý c) [Đúng]:</b> O là trung điểm AC nên AO = OC và cùng hướng A → C, tức <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AO</span></span> = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">OC</span></span> (Đúng).<br>• <b>Ý d) [Sai]:</b> Trong hình bình hành nói chung, độ dài 2 đường chéo không bằng nhau (Sai).",
     "correctText": "a) Đúng • b) Sai • c) Đúng • d) Sai"
   },
   {
     "type": "mcq",
-    "q": "Cho hình vuông ABCD cạnh a. Độ dài của vectơ <math><mover><mi>AC</mi><mo>→</mo></mover></math> là:",
+    "q": "Cho hình vuông ABCD cạnh a. Độ dài của vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span> là:",
     "opts": [
       "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>",
       "a",
@@ -1207,7 +1234,7 @@
       "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
     ],
     "ans": 0,
-    "exp": "• Độ dài vectơ <math><mover><mi>AC</mi><mo>→</mo></mover></math> chính là độ dài đoạn thẳng AC.<br>• Trong hình vuông cạnh a, đường chéo AC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + a²</span></span> = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
+    "exp": "• Độ dài vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span> chính là độ dài đoạn thẳng AC.<br>• Trong hình vuông cạnh a, đường chéo AC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + a²</span></span> = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
     "correctText": "Phương án A: a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>"
   },
   {
@@ -1225,7 +1252,7 @@
       "vuông góc",
       "không có hướng"
     ],
-    "exp": "• Hai vectơ cùng phương có thể cùng hướng hoặc ngược hướng.<br>• Vectơ <math><mover><mn>0</mn><mo>→</mo></mover></math> quy ước cùng phương cùng hướng với mọi vectơ.",
+    "exp": "• Hai vectơ cùng phương có thể cùng hướng hoặc ngược hướng.<br>• Vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\" style=\"font-style:normal;\">0</span></span> quy ước cùng phương cùng hướng với mọi vectơ.",
     "sentence": "• Hai vectơ cùng phương thì hoặc %%%SLOT_1%%% hoặc %%%SLOT_2%%%.<br>• Vectơ-không được coi là cùng phương, cùng hướng với %%%SLOT_3%%%.",
     "words": [
       "cùng hướng",
@@ -1243,7 +1270,7 @@
   },
   {
     "type": "mcq",
-    "q": "Cho tam giác ABC đều cạnh 4 cm. Độ dài vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> là:",
+    "q": "Cho tam giác ABC đều cạnh 4 cm. Độ dài vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> là:",
     "opts": [
       "4 cm",
       "2 cm",
@@ -1251,12 +1278,12 @@
       "2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> cm"
     ],
     "ans": 0,
-    "exp": "• |<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = AB = 4 cm.",
+    "exp": "• |<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span>| = AB = 4 cm.",
     "correctText": "Phương án A: 4 cm"
   },
   {
     "type": "mcq",
-    "q": "Cho 3 điểm phân biệt A, B, C thẳng hàng. Điều kiện cần và đủ để hai vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>AC</mi><mo>→</mo></mover></math> cùng hướng là:",
+    "q": "Cho 3 điểm phân biệt A, B, C thẳng hàng. Điều kiện cần và đủ để hai vectơ <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span> cùng hướng là:",
     "opts": [
       "Điểm A nằm ngoài đoạn thẳng BC và gần B hơn C (hoặc B nằm giữa A và C)",
       "Điểm A nằm giữa hai điểm B và C",
@@ -1264,13 +1291,13 @@
       "Điểm C là trung điểm của AB"
     ],
     "ans": 0,
-    "exp": "• <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>AC</mi><mo>→</mo></mover></math> cùng hướng khi và chỉ khi hai tia AB và AC trùng nhau, tức A không nằm giữa B và C.",
+    "exp": "• <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AC</span></span> cùng hướng khi và chỉ khi hai tia AB và AC trùng nhau, tức A không nằm giữa B và C.",
     "correctText": "Phương án A: Điểm A nằm ngoài đoạn thẳng BC và gần B hơn C (hoặc B nằm giữa A và C)",
     "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <line x1=\"40\" y1=\"120\" x2=\"400\" y2=\"120\" stroke=\"#475569\" stroke-width=\"2\"/>\n  \n  <circle cx=\"90\" cy=\"120\" r=\"5\" fill=\"#38bdf8\"/><text x=\"90\" y=\"150\" fill=\"#38bdf8\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">A</text>\n  <circle cx=\"210\" cy=\"120\" r=\"5\" fill=\"#fbbf24\"/><text x=\"210\" y=\"150\" fill=\"#fbbf24\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">B</text>\n  <circle cx=\"330\" cy=\"120\" r=\"5\" fill=\"#34d399\"/><text x=\"330\" y=\"150\" fill=\"#34d399\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">C</text>\n  \n  <line x1=\"90\" y1=\"90\" x2=\"204\" y2=\"90\" stroke=\"#fbbf24\" stroke-width=\"2.5\" marker-end=\"url(#arrAmber)\"/>\n  <text x=\"150\" y=\"80\" fill=\"#fbbf24\" font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">vectơ AB⃗</text>\n  \n  <line x1=\"90\" y1=\"55\" x2=\"324\" y2=\"55\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arrGreen)\"/>\n  <text x=\"210\" y=\"45\" fill=\"#34d399\" font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">vectơ AC⃗</text>\n  \n  <text x=\"220\" y=\"195\" fill=\"#e2e8f0\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\">Hai vectơ AB⃗ và AC⃗ cùng hướng khi nào?</text>\n\n</svg>"
   },
   {
     "type": "mcq",
-    "q": "Một máy bay chở khách đang bay theo hướng Tây sang Đông với vận tốc 700 km/h. Vectơ vận tốc <math><mover><mi>v</mi><mo>→</mo></mover></math> của máy bay được biểu diễn bằng một mũi tên:",
+    "q": "Một máy bay chở khách đang bay theo hướng Tây sang Đông với vận tốc 700 km/h. Vectơ vận tốc <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v</span></span> của máy bay được biểu diễn bằng một mũi tên:",
     "opts": [
       "Nằm ngang, hướng từ trái sang phải, có độ dài biểu diễn 700 km/h",
       "Thẳng đứng hướng lên trên",
@@ -1283,7 +1310,7 @@
   },
   {
     "type": "mcq",
-    "q": "Một con thuyền chuyển động trên mặt hồ phẳng lặng với vận tốc không đổi <math><mover><mi>v</mi><mo>→</mo></mover></math> = 15 km/h theo hướng Đông Bắc (hợp với hướng Đông góc 45°). Phát biểu nào sau đây là đúng về vận tốc của thuyền?",
+    "q": "Một con thuyền chuyển động trên mặt hồ phẳng lặng với vận tốc không đổi <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v</span></span> = 15 km/h theo hướng Đông Bắc (hợp với hướng Đông góc 45°). Phát biểu nào sau đây là đúng về vận tốc của thuyền?",
     "opts": [
       "Vận tốc là một đại lượng vectơ xác định bởi cả hướng di chuyển (Đông Bắc) và tốc độ (15 km/h)",
       "Vận tốc thuyền chỉ là con số 15 km/h không cần quan tâm đến hướng",
@@ -1296,16 +1323,16 @@
   },
   {
     "type": "mcq",
-    "q": "Một quả bóng bàn rơi tự do xuống đất rồi nảy ngược thẳng đứng lên trên với cùng độ lớn vận tốc 4 m/s. Gọi <math><mover><mi>v₁</mi><mo>→</mo></mover></math> là vectơ vận tốc ngay trước khi chạm đất và <math><mover><mi>v₂</mi><mo>→</mo></mover></math> là vectơ vận tốc ngay sau khi bật lên. Mối quan hệ giữa hai vectơ là:",
+    "q": "Một quả bóng bàn rơi tự do xuống đất rồi nảy ngược thẳng đứng lên trên với cùng độ lớn vận tốc 4 m/s. Gọi <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₁</span></span> là vectơ vận tốc ngay trước khi chạm đất và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₂</span></span> là vectơ vận tốc ngay sau khi bật lên. Mối quan hệ giữa hai vectơ là:",
     "opts": [
-      "<math><mover><mi>v₂</mi><mo>→</mo></mover></math> = -<math><mover><mi>v₁</mi><mo>→</mo></mover></math> (hai vectơ đối nhau)",
-      "<math><mover><mi>v₂</mi><mo>→</mo></mover></math> = <math><mover><mi>v₁</mi><mo>→</mo></mover></math> (hai vectơ bằng nhau)",
-      "<math><mover><mi>v₂</mi><mo>→</mo></mover></math> = 2<math><mover><mi>v₁</mi><mo>→</mo></mover></math>",
-      "<math><mover><mi>v₂</mi><mo>→</mo></mover></math> vuông góc với <math><mover><mi>v₁</mi><mo>→</mo></mover></math>"
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₂</span></span> = -<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₁</span></span> (hai vectơ đối nhau)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₂</span></span> = <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₁</span></span> (hai vectơ bằng nhau)",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₂</span></span> = 2<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₁</span></span>",
+      "<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₂</span></span> vuông góc với <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₁</span></span>"
     ],
     "ans": 0,
-    "exp": "• <math><mover><mi>v₁</mi><mo>→</mo></mover></math> hướng thẳng đứng xuống dưới, <math><mover><mi>v₂</mi><mo>→</mo></mover></math> hướng thẳng đứng lên trên.<br>• Cùng độ lớn 4 m/s và ngược hướng nên <math><mover><mi>v₂</mi><mo>→</mo></mover></math> = -<math><mover><mi>v₁</mi><mo>→</mo></mover></math> (hai vectơ đối nhau).",
-    "correctText": "Phương án A: <math><mover><mi>v₂</mi><mo>→</mo></mover></math> = -<math><mover><mi>v₁</mi><mo>→</mo></mover></math> (hai vectơ đối nhau)"
+    "exp": "• <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₁</span></span> hướng thẳng đứng xuống dưới, <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₂</span></span> hướng thẳng đứng lên trên.<br>• Cùng độ lớn 4 m/s và ngược hướng nên <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₂</span></span> = -<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₁</span></span> (hai vectơ đối nhau).",
+    "correctText": "Phương án A: <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₂</span></span> = -<span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">v₁</span></span> (hai vectơ đối nhau)"
   }
 ];
 

@@ -430,7 +430,34 @@
       flex-shrink: 0;
     }
 
-        /* CSS Math & Formula Engine */
+            /* CSS Math & Formula Engine */
+    .vec {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: stretch;
+      vertical-align: middle;
+      line-height: 1;
+      margin: 0 1.5px;
+      padding-top: 1px;
+      text-align: center;
+      position: relative;
+    }
+    .vec-sym {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+      padding: 0 1px;
+    }
+    .vec-arr {
+      width: 100%;
+      height: 5px;
+      display: block;
+      margin-bottom: 1.5px;
+      overflow: visible;
+      color: currentColor;
+    }
     math {
       font-size: inherit;
       color: inherit;
@@ -1104,7 +1131,7 @@
     const RAW_QUESTIONS = [
   {
     "type": "mcq",
-    "q": "Đường thẳng d đi qua điểm M₀(x₀; y₀; z₀) và có vectơ chỉ phương <math><mover><mi>u</mi><mo>→</mo></mover></math> = (a; b; c) (với a, b, c đều khác 0) có phương trình chính tắc là:",
+    "q": "Đường thẳng d đi qua điểm M₀(x₀; y₀; z₀) và có vectơ chỉ phương <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (a; b; c) (với a, b, c đều khác 0) có phương trình chính tắc là:",
     "opts": [
       "<span class=\"fraction\"><span class=\"numerator\">x - x₀</span><span class=\"denominator\">a</span></span> = <span class=\"fraction\"><span class=\"numerator\">y - y₀</span><span class=\"denominator\">b</span></span> = <span class=\"fraction\"><span class=\"numerator\">z - z₀</span><span class=\"denominator\">c</span></span>",
       "<span class=\"fraction\"><span class=\"numerator\">x - a</span><span class=\"denominator\">x₀</span></span> = <span class=\"fraction\"><span class=\"numerator\">y - b</span><span class=\"denominator\">y₀</span></span> = <span class=\"fraction\"><span class=\"numerator\">z - c</span><span class=\"denominator\">z₀</span></span>",
@@ -1117,7 +1144,7 @@
   },
   {
     "type": "mcq",
-    "q": "Viết phương trình tham số của đường thẳng d đi qua điểm A(1; 2; -3) và có vectơ chỉ phương <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; -1; 5).",
+    "q": "Viết phương trình tham số của đường thẳng d đi qua điểm A(1; 2; -3) và có vectơ chỉ phương <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (2; -1; 5).",
     "opts": [
       "x = 1 + 2t, y = 2 - t, z = -3 + 5t (t ∈ ℝ)",
       "x = 2 + t, y = -1 + 2t, z = 5 - 3t (t ∈ ℝ)",
@@ -1145,7 +1172,7 @@
     "type": "tf",
     "q": "Trong không gian Oxyz, cho hai điểm A(1; -1; 2) và B(3; 1; 4). Xét tính Đúng/Sai của từng nhận định sau:",
     "stmts": [
-      "Vectơ chỉ phương của đường thẳng AB có thể chọn là <math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 1; 1).",
+      "Vectơ chỉ phương của đường thẳng AB có thể chọn là <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (1; 1; 1).",
       "Phương trình chính tắc của đường thẳng AB là <span class=\"fraction\"><span class=\"numerator\">x - 1</span><span class=\"denominator\">1</span></span> = <span class=\"fraction\"><span class=\"numerator\">y + 1</span><span class=\"denominator\">1</span></span> = <span class=\"fraction\"><span class=\"numerator\">z - 2</span><span class=\"denominator\">1</span></span>.",
       "Điểm M(5; 3; 6) thuộc đường thẳng AB.",
       "Đường thẳng AB vuông góc với mặt phẳng (α): x + y + z + 10 = 0."
@@ -1157,14 +1184,14 @@
       true
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-    "exp": "• <b>Ý a [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (2; 2; 2) = 2(1; 1; 1) ⇒ chọn <math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 1; 1).<br>• <b>Ý b [Đúng]:</b> Qua A(1; -1; 2) với VTCP (1; 1; 1): (x - 1)/1 = (y + 1)/1 = (z - 2)/1.<br>• <b>Ý c [Đúng]:</b> Thay M(5; 3; 6): (5-1)/1 = (3+1)/1 = (6-2)/1 = 4 (thỏa mãn).<br>• <b>Ý d [Đúng]:</b> VTPT của (α) là <math><mover><mi>n</mi><mo>→</mo></mover></math> = (1; 1; 1) cùng phương với VTCP của đường thẳng ⇒ AB ⊥ (α)."
+    "exp": "• <b>Ý a [Đúng]:</b> <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (2; 2; 2) = 2(1; 1; 1) ⇒ chọn <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (1; 1; 1).<br>• <b>Ý b [Đúng]:</b> Qua A(1; -1; 2) với VTCP (1; 1; 1): (x - 1)/1 = (y + 1)/1 = (z - 2)/1.<br>• <b>Ý c [Đúng]:</b> Thay M(5; 3; 6): (5-1)/1 = (3+1)/1 = (6-2)/1 = 4 (thỏa mãn).<br>• <b>Ý d [Đúng]:</b> VTPT của (α) là <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">n</span></span> = (1; 1; 1) cùng phương với VTCP của đường thẳng ⇒ AB ⊥ (α)."
   },
   {
     "type": "match",
     "q": "Ghép các chuyển động thẳng thực tế (Cột A) với phương trình đường thẳng tương ứng trong hệ toạ độ không gian (Cột B):",
     "colA": [
       "Khinh khí cầu bay thẳng đứng lên cao từ bãi phóng (0; 0; 0)",
-      "Tia laser định vị chiếu từ đỉnh tháp (0; 0; 100) theo hướng <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 4; -1)",
+      "Tia laser định vị chiếu từ đỉnh tháp (0; 0; 100) theo hướng <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (3; 4; -1)",
       "Đường hầm tàu điện ngầm khoan thẳng qua lòng núi",
       "Tuyến cáp treo trượt thẳng từ chân đồi lên đỉnh núi"
     ],
@@ -1186,7 +1213,7 @@
   {
     "type": "drag",
     "q": "Chọn từ ngữ thích hợp điền vào chỗ trống để hoàn thiện vị trí tương đối giữa hai đường thẳng d₁ và d₂ trong không gian:",
-    "text": "Nếu hai vectơ chỉ phương <math><mover><mi>u</mi><mo>→</mo></mover></math>₁ và <math><mover><mi>u</mi><mo>→</mo></mover></math>₂ cùng phương thì d₁ và d₂ [blank] hoặc [blank]. Nếu <math><mover><mi>u</mi><mo>→</mo></mover></math>₁ và <math><mover><mi>u</mi><mo>→</mo></mover></math>₂ không cùng phương và hệ phương trình toạ độ vô nghiệm thì d₁ và d₂ [blank].",
+    "text": "Nếu hai vectơ chỉ phương <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span>₁ và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span>₂ cùng phương thì d₁ và d₂ [blank] hoặc [blank]. Nếu <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span>₁ và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span>₂ không cùng phương và hệ phương trình toạ độ vô nghiệm thì d₁ và d₂ [blank].",
     "words": [
       "song song",
       "trùng nhau",
@@ -1213,7 +1240,7 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: Chéo nhau",
-    "exp": "• VTCP: <math><mover><mi>u</mi><mo>→</mo></mover></math>₁ = (1; 1; 1) và <math><mover><mi>u</mi><mo>→</mo></mover></math>₂ = (1; 2; 3) không cùng phương (1/1 ≠ 1/2).<br>• Xét hệ giao điểm: t = 1 + s; t = 2s; t = 3s.<br>Từ 2s = 3s ⇒ s = 0 ⇒ t = 0. Thay vào pt 1: 0 = 1 + 0 (vô lý).<br>• Hệ vô nghiệm và 2 VTCP không cùng phương ⇒ Hai đường thẳng <b>chéo nhau</b>.",
+    "exp": "• VTCP: <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span>₁ = (1; 1; 1) và <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span>₂ = (1; 2; 3) không cùng phương (1/1 ≠ 1/2).<br>• Xét hệ giao điểm: t = 1 + s; t = 2s; t = 3s.<br>Từ 2s = 3s ⇒ s = 0 ⇒ t = 0. Thay vào pt 1: 0 = 1 + 0 (vô lý).<br>• Hệ vô nghiệm và 2 VTCP không cùng phương ⇒ Hai đường thẳng <b>chéo nhau</b>.",
     "svgGraph": "<svg viewBox=\"0 0 360 200\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"340\" height=\"180\" rx=\"8\" fill=\"rgba(15,23,42,0.9)\" stroke=\"#0ea5e9\" stroke-width=\"1.6\"/><polygon points=\"40,140 220,140 310,90 130,90\" fill=\"rgba(56,189,248,0.12)\" stroke=\"#38bdf8\" stroke-width=\"1.4\"/><line x1=\"60\" y1=\"120\" x2=\"280\" y2=\"105\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"285\" y=\"105\" fill=\"#34d399\" font-size=\"12\" font-weight=\"700\">d₁</text><line x1=\"160\" y1=\"30\" x2=\"200\" y2=\"170\" stroke=\"#f43f5e\" stroke-width=\"2\"/><text x=\"205\" y=\"175\" fill=\"#f43f5e\" font-size=\"12\" font-weight=\"700\">d₂</text><text x=\"180\" y=\"25\" fill=\"#fbbf24\" font-size=\"12\" font-weight=\"800\" text-anchor=\"middle\">Hai đường thẳng chéo nhau</text></svg>"
   },
   {
@@ -1233,7 +1260,7 @@
     "type": "tf",
     "q": "Một máy bay không người lái (Drone) cứu hộ bay theo đường thẳng từ trạm A(100; 200; 50) đến vị trí người gặp nạn B(700; 1000; 250) (đơn vị: mét). Xét tính Đúng/Sai của từng mệnh đề sau:",
     "stmts": [
-      "Vectơ chỉ phương của đường bay có thể chọn là <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 4; 1).",
+      "Vectơ chỉ phương của đường bay có thể chọn là <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (3; 4; 1).",
       "Đoạn đường bay từ A đến B có chiều dài bằng <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">600² + 800² + 200²</span></span> ≈ 1019,8 mét.",
       "Điểm tiếp sóng cứu hộ tại toạ độ S(400; 600; 150) chính là trung điểm trên đường bay của Drone.",
       "Góc nghiêng bay nâng cao của Drone so với mặt đất nằm ngang lớn hơn 30°."
@@ -1245,7 +1272,7 @@
       false
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-    "exp": "• <b>Ý a [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (600; 800; 200) = 200(3; 4; 1) ⇒ chọn <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 4; 1).<br>• <b>Ý b [Đúng]:</b> AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">600² + 800² + 200²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">360000 + 640000 + 40000</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1040000</span></span> ≈ 1019,8 m.<br>• <b>Ý c [Đúng]:</b> Trung điểm M = ((100+700)/2; (200+1000)/2; (50+250)/2) = (400; 600; 150).<br>• <b>Ý d [Sai]:</b> Độ cao tăng Δz = 200 m trên quãng đường ngang <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">600²+800²</span></span> = 1000 m. tan α = 200/1000 = 0,2 ⇒ α ≈ 11,3° (< 30°)."
+    "exp": "• <b>Ý a [Đúng]:</b> <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">AB</span></span> = (600; 800; 200) = 200(3; 4; 1) ⇒ chọn <span class=\"vec\"><svg class=\"vec-arr\" viewBox=\"0 0 100 20\" preserveAspectRatio=\"none\"><line x1=\"0\" y1=\"10\" x2=\"96\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 82 2 L 98 10 L 82 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span class=\"vec-sym\">u</span></span> = (3; 4; 1).<br>• <b>Ý b [Đúng]:</b> AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">600² + 800² + 200²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">360000 + 640000 + 40000</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1040000</span></span> ≈ 1019,8 m.<br>• <b>Ý c [Đúng]:</b> Trung điểm M = ((100+700)/2; (200+1000)/2; (50+250)/2) = (400; 600; 150).<br>• <b>Ý d [Sai]:</b> Độ cao tăng Δz = 200 m trên quãng đường ngang <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">600²+800²</span></span> = 1000 m. tan α = 200/1000 = 0,2 ⇒ α ≈ 11,3° (< 30°)."
   },
   {
     "type": "mcq",
