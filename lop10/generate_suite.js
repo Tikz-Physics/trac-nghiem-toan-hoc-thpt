@@ -1991,15 +1991,15 @@ function getQuestionRenderersJS() {
         const revContainer = document.getElementById('examReviewContainer');
         if (revContainer && revContainer.style.display === 'block') return;
 
-        // ArrowUp or ArrowLeft: Previous question
-        if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+        // Phím Mũi tên trái: Lùi câu hỏi trước đó
+        if (e.key === 'ArrowLeft') {
           e.preventDefault();
           if (currentQ > 0) {
             prevQuestion();
           }
         }
-        // ArrowDown or ArrowRight: Next question
-        else if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+        // Phím Mũi tên phải: Chuyển sang câu hỏi tiếp theo
+        else if (e.key === 'ArrowRight') {
           e.preventDefault();
           if (currentQ < questions.length - 1) {
             nextQuestion();
@@ -2008,6 +2008,20 @@ function getQuestionRenderersJS() {
             if (expPh && expPh.innerHTML.trim() !== '') {
               showResults();
             }
+          }
+        }
+        // Phím Mũi tên lên: Đổi về bài học trước đó
+        else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (typeof goToPrevLesson === 'function') {
+            goToPrevLesson();
+          }
+        }
+        // Phím Mũi tên xuống: Đổi sang bài học tiếp theo
+        else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          if (typeof goToNextLesson === 'function') {
+            goToNextLesson();
           }
         }
       });
@@ -2319,11 +2333,17 @@ function buildMasterHub() {
 
 
 
+    function goToPrevLesson() {
+      const curIdx = ALL_LESSONS_INFO.findIndex(l => l.id == currentLessonId);
+      if (curIdx > 0) {
+        changeLesson(ALL_LESSONS_INFO[curIdx - 1].id);
+      }
+    }
+
     function goToNextLesson() {
-      if (currentLessonId < 27) {
-        changeLesson(currentLessonId + 1);
-      } else {
-        alert('Chúc mừng em đã hoàn thành tất cả 27 bài học của toàn bộ 9 Chương Toán Học 10!');
+      const curIdx = ALL_LESSONS_INFO.findIndex(l => l.id == currentLessonId);
+      if (curIdx >= 0 && curIdx < ALL_LESSONS_INFO.length - 1) {
+        changeLesson(ALL_LESSONS_INFO[curIdx + 1].id);
       }
     }
 
@@ -2681,6 +2701,9 @@ function buildMasterHub() {
 
 // 2. GENERATE STANDALONE FILE
 function buildStandaloneFile(filename, lessonId, lessonTitle, questions) {
+  const lessonIdx = lessonsInfo.findIndex(item => item.id === lessonId);
+  const prevLesson = lessonIdx > 0 ? lessonsInfo[lessonIdx - 1] : null;
+  const nextLesson = (lessonIdx >= 0 && lessonIdx < lessonsInfo.length - 1) ? lessonsInfo[lessonIdx + 1] : null;
   const html = `<!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -3038,6 +3061,23 @@ function buildStandaloneFile(filename, lessonId, lessonTitle, questions) {
 
       html += '</tbody></table></div>';
       revWrap.innerHTML = html;
+    }
+
+    const PREV_LESSON_FILE = "${prevLesson ? prevLesson.filename : ''}";
+    const NEXT_LESSON_FILE = "${nextLesson ? nextLesson.filename : ''}";
+
+    function goToPrevLesson() {
+      if (PREV_LESSON_FILE) {
+        AudioEngine.playClick();
+        window.location.href = './' + PREV_LESSON_FILE;
+      }
+    }
+
+    function goToNextLesson() {
+      if (NEXT_LESSON_FILE) {
+        AudioEngine.playClick();
+        window.location.href = './' + NEXT_LESSON_FILE;
+      }
     }
 
     function restartLesson() {

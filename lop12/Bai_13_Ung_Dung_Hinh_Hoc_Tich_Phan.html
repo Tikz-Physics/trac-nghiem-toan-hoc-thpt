@@ -2220,15 +2220,15 @@
         const revContainer = document.getElementById('examReviewContainer');
         if (revContainer && revContainer.style.display === 'block') return;
 
-        // ArrowUp or ArrowLeft: Previous question
-        if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+        // Phím Mũi tên trái: Lùi câu hỏi trước đó
+        if (e.key === 'ArrowLeft') {
           e.preventDefault();
           if (currentQ > 0) {
             prevQuestion();
           }
         }
-        // ArrowDown or ArrowRight: Next question
-        else if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+        // Phím Mũi tên phải: Chuyển sang câu hỏi tiếp theo
+        else if (e.key === 'ArrowRight') {
           e.preventDefault();
           if (currentQ < questions.length - 1) {
             nextQuestion();
@@ -2237,6 +2237,20 @@
             if (expPh && expPh.innerHTML.trim() !== '') {
               showResults();
             }
+          }
+        }
+        // Phím Mũi tên lên: Đổi về bài học trước đó
+        else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (typeof goToPrevLesson === 'function') {
+            goToPrevLesson();
+          }
+        }
+        // Phím Mũi tên xuống: Đổi sang bài học tiếp theo
+        else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          if (typeof goToNextLesson === 'function') {
+            goToNextLesson();
           }
         }
       });
@@ -2527,6 +2541,23 @@
 
       html += '</tbody></table></div>';
       revWrap.innerHTML = html;
+    }
+
+    const PREV_LESSON_FILE = "Bai_12_Tich_Phan.html";
+    const NEXT_LESSON_FILE = "Bai_14_Phuong_Trinh_Mat_Phang.html";
+
+    function goToPrevLesson() {
+      if (PREV_LESSON_FILE) {
+        AudioEngine.playClick();
+        window.location.href = './' + PREV_LESSON_FILE;
+      }
+    }
+
+    function goToNextLesson() {
+      if (NEXT_LESSON_FILE) {
+        AudioEngine.playClick();
+        window.location.href = './' + NEXT_LESSON_FILE;
+      }
     }
 
     function restartLesson() {
