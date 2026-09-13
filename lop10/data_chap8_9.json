@@ -1,0 +1,792 @@
+{
+  "23": [
+    {
+      "type": "mcq",
+      "q": "Khi một công việc có thể hoàn thành bởi một trong hai phương án độc lập (phương án 1 có m cách, phương án 2 có n cách không trùng nhau), số cách hoàn thành công việc là:",
+      "opts": [
+        "m + n (Quy tắc cộng)",
+        "m · n (Quy tắc nhân)",
+        "mⁿ",
+        "m! + n!"
+      ],
+      "ans": 0,
+      "exp": "• Quy tắc cộng (SGK Toán 10): Nếu một công việc được thực hiện theo một trong hai phương án loại trừ nhau, có m và n cách thì tổng số cách là m + n."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các quy tắc đếm (Cột A) với ví dụ thực tế tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Quy tắc cộng",
+          "b": "A. Chọn 1 món tráng miệng trong thực đơn gồm 3 loại chè HOẶC 4 loại bánh"
+        },
+        {
+          "a": "2. Quy tắc nhân",
+          "b": "B. Chọn 1 bộ trang phục gồm 1 áo VÀ 1 quần"
+        },
+        {
+          "a": "3. Sơ đồ cây (Tree diagram)",
+          "b": "C. Biểu diễn trực quan phân nhánh các công đoạn kế tiếp"
+        },
+        {
+          "a": "4. Công việc gồm k công đoạn",
+          "b": "D. Tổng số cách thực hiện là tích n₁ · n₂ · ... · n_k"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Hoặc: quy tắc cộng.<br>• Và (kế tiếp): quy tắc nhân.<br>• Sơ đồ cây."
+    },
+    {
+      "type": "tf",
+      "q": "Từ các chữ số {1, 2, 3, 4, 5}, lập các số tự nhiên. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Số các số tự nhiên gồm 3 chữ số là 5³ = 125 số.",
+          "ans": true,
+          "exp": "Mỗi vị trí có 5 cách chọn: 5 · 5 · 5 = 125 (Đúng)."
+        },
+        {
+          "text": "b) Số các số tự nhiên gồm 3 chữ số đôi một khác nhau là 5 · 4 · 3 = 60 số.",
+          "ans": true,
+          "exp": "Chữ số đầu có 5 cách, chữ số 2 có 4 cách, chữ số 3 có 3 cách: 60 (Đúng)."
+        },
+        {
+          "text": "c) Số các số tự nhiên chẵn gồm 2 chữ số khác nhau là 10 số.",
+          "ans": false,
+          "exp": "Chữ số tận cùng chẵn chọn từ {2, 4} (2 cách). Chữ số đầu chọn từ 4 số còn lại: 4 · 2 = 8 số (Sai)."
+        },
+        {
+          "text": "d) Số các số lẻ gồm 3 chữ số khác nhau là 36 số.",
+          "ans": true,
+          "exp": "Chữ số cuối chọn từ {1, 3, 5} (3 cách). Hai chữ số đầu có 4 · 3 = 12 cách. Tổng: 3 · 12 = 36 số (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Một quán cơm phục vụ bữa trưa gồm: 4 món mặn, 3 món xào và 2 món canh. Một khách hàng chọn một bữa ăn đầy đủ gồm 1 món mặn, 1 món xào và 1 món canh. Số cách chọn bữa ăn là:",
+      "opts": [
+        "24 cách",
+        "9 cách",
+        "12 cách",
+        "36 cách"
+      ],
+      "ans": 0,
+      "exp": "• Áp dụng quy tắc nhân: N = 4 · 3 · 2 = 24 cách."
+    },
+    {
+      "type": "drag",
+      "q": "Điền vào chỗ trống số cách chọn:<br>• Bạn Bình có 5 áo sơ mi và 4 quần tây. Số cách chọn 1 bộ quần áo đi học là %%%SLOT_1%%%.<br>• Bình có thêm 3 đôi giày. Số cách chọn 1 bộ gồm áo, quần và giày là %%%SLOT_2%%%.<br>• Bình muốn chọn mặc áo sơ mi HOẶC áo khoác (có 2 áo khoác) thì có %%%SLOT_3%%% cách chọn áo.",
+      "slots": [
+        "20",
+        "60",
+        "7"
+      ],
+      "pool": [
+        "20",
+        "60",
+        "7",
+        "9",
+        "40"
+      ],
+      "exp": "• Áo và quần: 5 · 4 = 20.<br>• Áo, quần và giày: 5 · 4 · 3 = 60.<br>• Áo sơ mi hoặc áo khoác: 5 + 2 = 7."
+    },
+    {
+      "type": "mcq",
+      "q": "Có bao nhiêu số tự nhiên có 4 chữ số khác nhau được lập từ các chữ số {0, 1, 2, 3, 4, 5}?",
+      "opts": [
+        "300 số",
+        "360 số",
+        "120 số",
+        "720 số"
+      ],
+      "ans": 0,
+      "exp": "• Chữ số đầu a ≠ 0: 5 cách chọn (1 đến 5).<br>• Chữ số b: 5 cách (kể cả 0).<br>• Chữ số c: 4 cách.<br>• Chữ số d: 3 cách.<br>• Số các số: 5 · 5 · 4 · 3 = 300 số."
+    },
+    {
+      "type": "mcq",
+      "q": "Để đi từ thành phố A đến thành phố B có 3 tuyến xe buýt. Từ B đến C có 4 tuyến tàu hỏa. Hỏi có bao nhiêu cách đi từ A đến C qua B rồi quay trở lại A mà tuyến xe và tuyến tàu lượt về không trùng với lượt đi?",
+      "opts": [
+        "72 cách",
+        "144 cách",
+        "12 cách",
+        "24 cách"
+      ],
+      "ans": 0,
+      "exp": "• Lượt đi A → B: 3 cách; B → C: 4 cách.<br>• Lượt về C → B: 3 cách (khác lượt đi); B → A: 2 cách (khác lượt đi).<br>• Tổng số cách: 3 · 4 · 3 · 2 = 72 cách."
+    },
+    {
+      "type": "mcq",
+      "q": "Mã mở khóa điện thoại (mã PIN) gồm 6 chữ số thập phân (từ 0 đến 9). Có bao nhiêu mã PIN khác nhau có thể tạo được?",
+      "opts": [
+        "1.000.000 mã (10⁶)",
+        "151.200 mã",
+        "720 mã",
+        "600.000 mã"
+      ],
+      "ans": 0,
+      "exp": "• Mỗi vị trí có 10 lựa chọn độc lập từ 0 đến 9: 10 · 10 · 10 · 10 · 10 · 10 = 10⁶ = 1.000.000 mã."
+    },
+    {
+      "type": "mcq",
+      "q": "Biển số xe máy của một tỉnh có dạng 29-X1 ABCD (trong đó X là một chữ cái trong bảng 20 chữ in hoa, ABCD là cụm 4 chữ số từ 0 đến 9). Nếu cụm 4 chữ số ABCD không trùng nhau hoàn toàn, số lượng biển số xe tối đa có thể cấp cho một quận (cố định X) là:",
+      "opts": [
+        "5.040 biển",
+        "10.000 biển",
+        "9.000 biển",
+        "4.536 biển"
+      ],
+      "ans": 0,
+      "exp": "• Cụm 4 chữ số đôi một khác nhau: 10 · 9 · 8 · 7 = 5.040 biển."
+    },
+    {
+      "type": "mcq",
+      "q": "Một đề thi trắc nghiệm gồm 10 câu hỏi, mỗi câu có 4 phương án trả lời A, B, C, D và chỉ có một phương án đúng. Một thí sinh làm bài bằng cách khoanh ngẫu nhiên tất cả các câu. Hỏi có bao nhiêu cách điền phiếu trả lời khác nhau?",
+      "opts": [
+        "4¹⁰ = 1.048.576 cách",
+        "40 cách",
+        "10⁴ = 10.000 cách",
+        "24 cách"
+      ],
+      "ans": 0,
+      "exp": "• Mỗi câu có 4 cách điền. 10 câu liên tiếp: 4 · 4 · ... · 4 = 4¹⁰ = 1.048.576 cách."
+    }
+  ],
+  "24": [
+    {
+      "type": "mcq",
+      "q": "Số các chỉnh hợp chập k của n phần tử (1 ≤ k ≤ n) được tính bởi công thức:",
+      "opts": [
+        "A_n^k = n! / (n - k)!",
+        "C_n^k = n! / [k!(n - k)!]",
+        "P_n = n!",
+        "A_n^k = n! / k!"
+      ],
+      "ans": 0,
+      "exp": "• Chỉnh hợp: chọn k phần tử và CÓ sắp xếp thứ tự: A_n^k = n! / (n - k)!."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các khái niệm tổ hợp (Cột A) với công thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Số hoán vị của n phần tử",
+          "b": "A. P_n = n! = n(n - 1)...1"
+        },
+        {
+          "a": "2. Số chỉnh hợp chập k của n",
+          "b": "B. A_n^k = n! / (n - k)!"
+        },
+        {
+          "a": "3. Số tổ hợp chập k của n",
+          "b": "C. C_n^k = n! / [k!(n - k)!]"
+        },
+        {
+          "a": "4. Tính chất đối xứng tổ hợp",
+          "b": "D. C_n^k = C_n^(n - k)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Hoán vị: đổi chỗ toàn bộ.<br>• Chỉnh hợp: chọn có thứ tự.<br>• Tổ hợp: chọn không phân biệt thứ tự.<br>• C_n^k = C_n^(n - k)."
+    },
+    {
+      "type": "tf",
+      "q": "Xét tính đúng - sai của các đẳng thức tổ hợp sau:",
+      "items": [
+        {
+          "text": "a) P₄ = 4! = 24.",
+          "ans": true,
+          "exp": "4! = 4 · 3 · 2 · 1 = 24 (Đúng)."
+        },
+        {
+          "text": "b) A₅² = 20.",
+          "ans": true,
+          "exp": "A₅² = 5 · 4 = 20 (Đúng)."
+        },
+        {
+          "text": "c) C₅² = 10.",
+          "ans": true,
+          "exp": "C₅² = (5 · 4) / 2 = 10 (Đúng)."
+        },
+        {
+          "text": "d) C₆³ = A₆³.",
+          "ans": false,
+          "exp": "A₆³ = 6 · 5 · 4 = 120, còn C₆³ = 120 / 3! = 20. Khác nhau hoàn toàn (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Một lớp học có 35 học sinh. Cần chọn ra 1 ban cán sự lớp gồm 3 người: 1 lớp trưởng, 1 lớp phó và 1 bí thư. Số cách chọn là:",
+      "opts": [
+        "A₃₅³ = 39.270 cách",
+        "C₃₅³ = 6.545 cách",
+        "35³ cách",
+        "105 cách"
+      ],
+      "ans": 0,
+      "exp": "• Do 3 chức danh khác nhau (có thứ tự phân công nhiệm vụ), số cách chọn là chỉnh hợp:<br>A₃₅³ = 35 · 34 · 33 = 39.270 cách."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo số cách thích hợp vào chỗ trống cho nhóm gồm 10 bạn học sinh:<br>• Số cách xếp 10 bạn thành 1 hàng dọc là %%%SLOT_1%%%.<br>• Số cách chọn 3 bạn đi trực nhật (không phân biệt nhiệm vụ) là %%%SLOT_2%%%.<br>• Số cách trao 3 giải Nhất, Nhì, Ba cho 10 bạn là %%%SLOT_3%%%.",
+      "slots": [
+        "10! cách",
+        "C₁₀³ = 120 cách",
+        "A₁₀³ = 720 cách"
+      ],
+      "pool": [
+        "10! cách",
+        "C₁₀³ = 120 cách",
+        "A₁₀³ = 720 cách",
+        "30 cách",
+        "10³ cách"
+      ],
+      "exp": "• Xếp hàng: hoán vị 10!.<br>• Chọn trực nhật: tổ hợp C₁₀³ = 120.<br>• Giải Nhất, Nhì, Ba: chỉnh hợp A₁₀³ = 720."
+    },
+    {
+      "type": "mcq",
+      "q": "Giá trị của biểu thức C₇³ + C₇⁴ là:",
+      "opts": [
+        "70 (bằng C₈⁴)",
+        "35",
+        "140",
+        "21"
+      ],
+      "ans": 0,
+      "exp": "• Theo công thức Pascal: C_n^k + C_n^(k+1) = C_(n+1)^(k+1) ⇒ C₇³ + C₇⁴ = C₈⁴ = (8·7·6·5)/(4·3·2·1) = 70."
+    },
+    {
+      "type": "mcq",
+      "q": "Có bao nhiêu cách xếp 5 cuốn sách Toán khác nhau và 3 cuốn sách Văn khác nhau lên một giá sách nằm ngang sao cho các cuốn sách Toán luôn đứng cạnh nhau?",
+      "opts": [
+        "8.640 cách",
+        "40.320 cách",
+        "720 cách",
+        "120 cách"
+      ],
+      "ans": 0,
+      "exp": "• Buộc 5 cuốn Toán thành 1 khối: có 5! = 120 cách xếp nội bộ Toán.<br>• Xếp khối Toán và 3 cuốn Văn (coi như 4 phần tử): có 4! = 24 cách.<br>• Tổng số cách: 120 · 24 = 2.880 cách (nếu sách Văn cũng đứng cạnh nhau) hoặc 120 · 4! = 2.880 cách. Nếu tính 5! · 4! = 120 · 24 = 2.880 cách. Đáp số chính xác: 2.880 cách."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong giải bóng đá World Cup, một bảng đấu gồm 4 đội thi đấu vòng tròn một lượt (mỗi đội gặp nhau đúng 1 trận). Tổng số trận đấu trong bảng là:",
+      "opts": [
+        "C₄² = 6 trận",
+        "12 trận",
+        "4 trận",
+        "8 trận"
+      ],
+      "ans": 0,
+      "exp": "• Mỗi trận đấu là một cặp gồm 2 đội (không phân biệt thứ tự): C₄² = (4 · 3)/2 = 6 trận."
+    },
+    {
+      "type": "mcq",
+      "q": "Một bệnh viện có 8 bác sĩ hồi sức cấp cứu. Mỗi ca trực đêm cần một kíp trực gồm 3 bác sĩ. Có bao nhiêu cách phân công kíp trực đêm?",
+      "opts": [
+        "C₈³ = 56 cách",
+        "A₈³ = 336 cách",
+        "24 cách",
+        "512 cách"
+      ],
+      "ans": 0,
+      "exp": "• Chọn 3 người trong 8 người không phân biệt thứ tự: C₈³ = (8 · 7 · 6)/(3 · 2 · 1) = 56 cách."
+    },
+    {
+      "type": "mcq",
+      "q": "Một bàn đàm phán quốc tế có 6 đại biểu của 6 quốc gia. Có bao nhiêu cách xếp 6 đại biểu ngồi quanh một bàn tròn?",
+      "opts": [
+        "(6 - 1)! = 120 cách",
+        "6! = 720 cách",
+        "36 cách",
+        "60 cách"
+      ],
+      "ans": 0,
+      "exp": "• Số hoán vị vòng quanh (hoán vị tròn) của n phần tử là (n - 1)!.<br>• Với n = 6: (6 - 1)! = 5! = 120 cách."
+    }
+  ],
+  "25": [
+    {
+      "type": "mcq",
+      "q": "Khai triển nhị thức Newton (a + b)⁴ có bao nhiêu số hạng?",
+      "opts": [
+        "5 số hạng",
+        "4 số hạng",
+        "3 số hạng",
+        "16 số hạng"
+      ],
+      "ans": 0,
+      "exp": "• Khai triển nhị thức Newton (a + b)ⁿ luôn có n + 1 số hạng. Với n = 4 có 5 số hạng."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các dòng của tam giác Pascal (Cột A) với các hệ số nhị thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Dòng n = 1 (khai triển (a + b)¹)",
+          "b": "A. 1  1"
+        },
+        {
+          "a": "2. Dòng n = 2 (khai triển (a + b)²)",
+          "b": "B. 1  2  1"
+        },
+        {
+          "a": "3. Dòng n = 3 (khai triển (a + b)³)",
+          "b": "C. 1  3  3  1"
+        },
+        {
+          "a": "4. Dòng n = 4 (khai triển (a + b)⁴)",
+          "b": "D. 1  4  6  4  1"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các hệ số tam giác Pascal ứng với các bậc n = 1, 2, 3, 4."
+    },
+    {
+      "type": "tf",
+      "q": "Xét tính đúng - sai trong khai triển (a + b)⁵ = a⁵ + 5a⁴b + 10a³b² + 10a²b³ + 5ab⁴ + b⁵:",
+      "items": [
+        {
+          "text": "a) Số hạng đầu tiên là a⁵ và số hạng cuối cùng là b⁵.",
+          "ans": true,
+          "exp": "Đúng theo công thức khai triển (Đúng)."
+        },
+        {
+          "text": "b) Hệ số của số hạng thứ ba (chứa a³b²) là 10.",
+          "ans": true,
+          "exp": "C₅² = 10 (Đúng)."
+        },
+        {
+          "text": "c) Tổng các hệ số của khai triển bằng 32.",
+          "ans": true,
+          "exp": "Cho a = 1, b = 1 ta được (1 + 1)⁵ = 2⁵ = 32 (Đúng)."
+        },
+        {
+          "text": "d) Khai triển có tất cả 5 số hạng.",
+          "ans": false,
+          "exp": "Có n + 1 = 5 + 1 = 6 số hạng (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Khai triển biểu thức (x + 2)⁴ thành đa thức, hệ số của x³ là:",
+      "opts": [
+        "8",
+        "4",
+        "24",
+        "16"
+      ],
+      "ans": 0,
+      "exp": "• Số hạng chứa x³ là C₄¹ · x³ · 2¹ = 4 · x³ · 2 = 8x³. Hệ số là 8."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các hệ số thích hợp vào khai triển (x - 1)⁴:<br>• (x - 1)⁴ = x⁴ - %%%SLOT_1%%% x³ + %%%SLOT_2%%% x² - %%%SLOT_3%%% x + 1.",
+      "slots": [
+        "4",
+        "6",
+        "4"
+      ],
+      "pool": [
+        "4",
+        "6",
+        "1",
+        "8",
+        "-4"
+      ],
+      "exp": "• (x - 1)⁴ = x⁴ - 4x³ + 6x² - 4x + 1."
+    },
+    {
+      "type": "mcq",
+      "q": "Hệ số của x² trong khai triển của (2x + 1)⁴ là:",
+      "opts": [
+        "24",
+        "6",
+        "16",
+        "8"
+      ],
+      "ans": 0,
+      "exp": "• Số hạng chứa x²: C₄² · (2x)² · 1² = 6 · 4x² · 1 = 24x². Hệ số là 24."
+    },
+    {
+      "type": "mcq",
+      "q": "Số hạng không chứa x (số hạng tự do) trong khai triển của (x + 2/x)⁴ (với x ≠ 0) là:",
+      "opts": [
+        "24",
+        "16",
+        "6",
+        "8"
+      ],
+      "ans": 0,
+      "exp": "• Số hạng tổng quát: T_(k+1) = C₄^k · x^(4-k) · (2/x)^k = C₄^k · 2^k · x^(4-2k).<br>• Không chứa x ⇔ 4 - 2k = 0 ⇔ k = 2.<br>• Số hạng đó: C₄² · 2² = 6 · 4 = 24."
+    },
+    {
+      "type": "mcq",
+      "q": "Theo mô hình tăng trưởng dân số hoặc lãi kép, giá trị khoản đầu tư sau 4 năm với lãi suất r hàng năm là S = P(1 + r)⁴. Dùng nhị thức Newton khi lãi suất r rất nhỏ (r << 1), công thức xấp xỉ bậc nhất của khoản tiền là:",
+      "opts": [
+        "S ≈ P(1 + 4r)",
+        "S ≈ P(1 + r⁴)",
+        "S ≈ P(1 + 6r)",
+        "S ≈ 4Pr"
+      ],
+      "ans": 0,
+      "exp": "• Khai triển: (1 + r)⁴ = 1 + 4r + 6r² + 4r³ + r⁴.<br>• Khi r rất nhỏ, bỏ qua các bậc r², r³, r⁴ ta được công thức tuyến tính hoá kinh điển: S ≈ P(1 + 4r)."
+    },
+    {
+      "type": "mcq",
+      "q": "Xác suất để sinh được k bé trai trong một gia đình có 4 người con (xác suất sinh trai gái đều là 0,5) được tính bởi các số hạng trong khai triển (0,5 + 0,5)⁴. Xác suất để gia đình có đúng 2 trai và 2 gái là:",
+      "opts": [
+        "6/16 = 37,5%",
+        "4/16 = 25%",
+        "1/16 = 6,25%",
+        "50%"
+      ],
+      "ans": 0,
+      "exp": "• Số cách chọn 2 bé trai: C₄² = 6.<br>• Xác suất: C₄² · (0,5)² · (0,5)² = 6 · (1/16) = 6/16 = 37,5%."
+    },
+    {
+      "type": "mcq",
+      "q": "Một hệ thống truyền tin số gửi đi một chuỗi 5 bit (0 hoặc 1). Số chuỗi bit chứa đúng 3 bit 1 chính là hệ số của x³ trong khai triển (1 + x)⁵, bằng:",
+      "opts": [
+        "10",
+        "5",
+        "20",
+        "15"
+      ],
+      "ans": 0,
+      "exp": "• C₅³ = 10 chuỗi."
+    }
+  ],
+  "26": [
+    {
+      "type": "mcq",
+      "q": "Theo định nghĩa cổ điển, xác suất của biến cố E trong không gian mẫu Ω gồm các kết quả đồng khả năng là:",
+      "opts": [
+        "P(E) = n(E) / n(Ω)",
+        "P(E) = n(Ω) / n(E)",
+        "P(E) = n(E) · n(Ω)",
+        "P(E) = 1 - n(E)"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa xác suất cổ điển (SGK Toán 10): P(E) = n(E) / n(Ω)."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các loại biến cố (Cột A) với xác suất tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Biến cố chắc chắn (Ω)",
+          "b": "A. P(Ω) = 1"
+        },
+        {
+          "a": "2. Biến cố không thể (∅)",
+          "b": "B. P(∅) = 0"
+        },
+        {
+          "a": "3. Biến cố đối ¯E",
+          "b": "C. P(¯E) = 1 - P(E)"
+        },
+        {
+          "a": "4. Xác suất biến cố bất kì",
+          "b": "D. 0 ≤ P(E) ≤ 1"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các tính chất cơ bản của xác suất."
+    },
+    {
+      "type": "tf",
+      "q": "Gieo một con xúc xắc cân đối và đồng chất 6 mặt. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Không gian mẫu có số phần tử là n(Ω) = 6.",
+          "ans": true,
+          "exp": "Ω = {1, 2, 3, 4, 5, 6} có 6 phần tử (Đúng)."
+        },
+        {
+          "text": "b) Xác suất xuất hiện mặt chấm chẵn là 1/2.",
+          "ans": true,
+          "exp": "Biến cố chẵn E = {2, 4, 6} ⇒ P(E) = 3/6 = 1/2 (Đúng)."
+        },
+        {
+          "text": "c) Xác suất xuất hiện mặt có số chấm lớn hơn 4 là 1/3.",
+          "ans": true,
+          "exp": "Các mặt lớn hơn 4 là {5, 6} ⇒ P = 2/6 = 1/3 (Đúng)."
+        },
+        {
+          "text": "d) Xác suất xuất hiện mặt 7 chấm bằng 1/6.",
+          "ans": false,
+          "exp": "Xúc xắc chỉ có từ 1 đến 6 chấm nên biến cố mặt 7 chấm là biến cố không thể, P = 0 (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Gieo hai đồng xu cân đối đồng chất cùng lúc. Xác suất để có đúng một đồng xu xuất hiện mặt ngửa (N) là:",
+      "opts": [
+        "1/2",
+        "1/4",
+        "3/4",
+        "1"
+      ],
+      "ans": 0,
+      "exp": "• Ω = {SS, SN, NS, NN} có 4 phần tử.<br>• E = {SN, NS} có 2 phần tử.<br>• P(E) = 2/4 = 1/2."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo xác suất tương ứng khi rút ngẫu nhiên 1 lá bài từ bộ bài tú lơ khơ 52 lá:<br>• Rút được lá bài chất Át (A) có xác suất là %%%SLOT_1%%%.<br>• Rút được lá bài chất Cơ là %%%SLOT_2%%%.<br>• Rút được lá bài màu đỏ là %%%SLOT_3%%%.",
+      "slots": [
+        "1/13",
+        "1/4",
+        "1/2"
+      ],
+      "pool": [
+        "1/13",
+        "1/4",
+        "1/2",
+        "1/52",
+        "4/13"
+      ],
+      "exp": "• 4 lá Át: 4/52 = 1/13.<br>• 13 lá Cơ: 13/52 = 1/4.<br>• 26 lá Đỏ: 26/52 = 1/2."
+    },
+    {
+      "type": "mcq",
+      "q": "Gieo đồng thời hai con xúc xắc cân đối. Số phần tử của không gian mẫu n(Ω) là:",
+      "opts": [
+        "36",
+        "12",
+        "6",
+        "24"
+      ],
+      "ans": 0,
+      "exp": "• n(Ω) = 6 · 6 = 36."
+    },
+    {
+      "type": "mcq",
+      "q": "Gieo hai con xúc xắc cân đối. Xác suất để tổng số chấm trên hai con xúc xắc bằng 7 là:",
+      "opts": [
+        "1/6",
+        "1/12",
+        "7/36",
+        "5/36"
+      ],
+      "ans": 0,
+      "exp": "• Các cặp có tổng bằng 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) gồm 6 cặp.<br>• P = 6 / 36 = 1/6."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong hộp có 6 quả bóng đỏ và 4 quả bóng xanh có kích thước giống nhau. Lấy ngẫu nhiên 1 quả bóng. Xác suất lấy được bóng màu đỏ là:",
+      "opts": [
+        "6/10 = 0,6",
+        "4/10 = 0,4",
+        "1/6",
+        "1/10"
+      ],
+      "ans": 0,
+      "exp": "• Tổng số bóng: 6 + 4 = 10 quả.<br>• Số bóng đỏ: 6 quả.<br>• Xác suất: P = 6/10 = 0,6 = 60%."
+    },
+    {
+      "type": "mcq",
+      "q": "Một hộp linh kiện có 100 sản phẩm, trong đó có 5 sản phẩm lỗi. Nhân viên KCS lấy ngẫu nhiên 1 sản phẩm để kiểm tra. Xác suất chọn được sản phẩm <b>đạt chuẩn</b> là:",
+      "opts": [
+        "95% (0,95)",
+        "5% (0,05)",
+        "90%",
+        "99%"
+      ],
+      "ans": 0,
+      "exp": "• Số sản phẩm đạt chuẩn: 100 - 5 = 95 sản phẩm.<br>• P = 95 / 100 = 0,95 = 95%."
+    },
+    {
+      "type": "mcq",
+      "q": "Một lớp học có 20 nam và 25 nữ. Thầy giáo gọi ngẫu nhiên một bạn lên bảng làm bài tập. Xác suất bạn được gọi là nữ sinh bằng:",
+      "opts": [
+        "5/9 (≈ 55,6%)",
+        "4/9",
+        "1/25",
+        "20/45"
+      ],
+      "ans": 0,
+      "exp": "• Tổng số học sinh: 20 + 25 = 45 bạn.<br>• Số bạn nữ: 25 bạn.<br>• P = 25 / 45 = 5/9 ≈ 55,6%."
+    }
+  ],
+  "27": [
+    {
+      "type": "mcq",
+      "q": "Khi tính xác suất của biến cố A phức tạp, ta thường tính thông qua biến cố đối ¯A theo công thức:",
+      "opts": [
+        "P(A) = 1 - P(¯A)",
+        "P(A) = 1 + P(¯A)",
+        "P(A) = P(¯A)",
+        "P(A) = 1 / P(¯A)"
+      ],
+      "ans": 0,
+      "exp": "• Quy tắc biến cố đối: P(A) = 1 - P(¯A). Thường dùng khi đề bài xuất hiện từ khóa 'có ít nhất một'."
+    },
+    {
+      "type": "match",
+      "q": "Ghép bài toán xác suất (Cột A) với không gian mẫu tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Chọn 3 người từ nhóm 10 người",
+          "b": "A. n(Ω) = C₁₀³ = 120"
+        },
+        {
+          "a": "2. Gieo 3 đồng xu",
+          "b": "B. n(Ω) = 2³ = 8"
+        },
+        {
+          "a": "3. Rút 2 thẻ từ 20 thẻ",
+          "b": "C. n(Ω) = C₂₀² = 190"
+        },
+        {
+          "a": "4. Xếp 4 người vào 4 ghế thẳng",
+          "b": "D. n(Ω) = 4! = 24"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Cách xác định không gian mẫu bằng tổ hợp, chỉnh hợp, quy tắc nhân."
+    },
+    {
+      "type": "tf",
+      "q": "Một hộp đựng 5 viên bi đỏ và 3 viên bi xanh. Lấy ngẫu nhiên đồng thời 2 viên bi. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Số phần tử không gian mẫu là n(Ω) = C₈² = 28.",
+          "ans": true,
+          "exp": "C₈² = (8 · 7)/2 = 28 (Đúng)."
+        },
+        {
+          "text": "b) Xác suất lấy được 2 viên bi cùng màu đỏ là 10/28 = 5/14.",
+          "ans": true,
+          "exp": "C₅² / 28 = 10 / 28 = 5/14 (Đúng)."
+        },
+        {
+          "text": "c) Xác suất lấy được 2 viên bi cùng màu xanh là 3/28.",
+          "ans": true,
+          "exp": "C₃² / 28 = 3 / 28 (Đúng)."
+        },
+        {
+          "text": "d) Xác suất lấy được 2 viên bi khác màu là 1/2.",
+          "ans": false,
+          "exp": "Số cách lấy 1 đỏ 1 xanh: 5 · 3 = 15 ⇒ P = 15/28 ≠ 14/28 (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Một hộp có 10 viên bi, trong đó có 4 bi đỏ và 6 bi xanh. Lấy ngẫu nhiên 3 viên bi. Xác suất để lấy được <b>ít nhất một viên bi đỏ</b> là:",
+      "opts": [
+        "5/6 (≈ 83,3%)",
+        "1/6",
+        "1/2",
+        "2/3"
+      ],
+      "ans": 0,
+      "exp": "• n(Ω) = C₁₀³ = 120.<br>• Biến cố đối ¯A: \"Cả 3 viên bi lấy ra đều là màu xanh\": n(¯A) = C₆³ = 20.<br>• P(¯A) = 20 / 120 = 1/6.<br>• P(A) = 1 - P(¯A) = 1 - 1/6 = 5/6."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các giá trị xác suất vào chỗ trống khi chọn ngẫu nhiên 2 học sinh từ nhóm 4 nam và 6 nữ:<br>• n(Ω) = %%%SLOT_1%%%.<br>• Xác suất chọn được 2 học sinh nữ là %%%SLOT_2%%%.<br>• Xác suất chọn được 1 nam và 1 nữ là %%%SLOT_3%%%.",
+      "slots": [
+        "45",
+        "1/3",
+        "8/15"
+      ],
+      "pool": [
+        "45",
+        "1/3",
+        "8/15",
+        "15",
+        "1/2"
+      ],
+      "exp": "• n(Ω) = C₁₀² = 45.<br>• 2 nữ: C₆² / 45 = 15 / 45 = 1/3.<br>• 1 nam 1 nữ: (4 · 6) / 45 = 24 / 45 = 8/15."
+    },
+    {
+      "type": "mcq",
+      "q": "Chọn ngẫu nhiên 2 số nguyên dương phân biệt từ tập {1, 2, 3, 4, 5, 6, 7, 8, 9}. Xác suất để tích của hai số được chọn là một số chẵn là:",
+      "opts": [
+        "13/18 (≈ 72,2%)",
+        "5/18",
+        "1/2",
+        "2/3"
+      ],
+      "ans": 0,
+      "exp": "• n(Ω) = C₉² = 36.<br>• Tập gồm 5 số lẻ {1, 3, 5, 7, 9} và 4 số chẵn {2, 4, 6, 8}.<br>• Tích 2 số là số lẻ khi cả hai số đều lẻ: C₅² = 10 cách.<br>• Tích là số chẵn: 36 - 10 = 26 cách.<br>• P = 26 / 36 = 13/18."
+    },
+    {
+      "type": "mcq",
+      "q": "Có 4 tấm thẻ được đánh số 1, 2, 3, 4. Rút ngẫu nhiên lần lượt hai thẻ không hoàn lại. Xác suất để số ghi trên thẻ thứ nhất lớn hơn số ghi trên thẻ thứ hai là:",
+      "opts": [
+        "1/2",
+        "1/4",
+        "3/4",
+        "1/3"
+      ],
+      "ans": 0,
+      "exp": "• n(Ω) = A₄² = 12.<br>• Các cặp (thẻ 1 > thẻ 2): (2,1), (3,1), (3,2), (4,1), (4,2), (4,3) gồm 6 cặp.<br>• P = 6 / 12 = 1/2."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong một đợt kiểm tra chất lượng của nhà máy, một lô gồm 50 sản phẩm có 4 phế phẩm. Nhân viên KCS lấy ngẫu nhiên 2 sản phẩm. Xác suất để cả 2 sản phẩm đều là hàng tốt đạt chuẩn là:",
+      "opts": [
+        "1035/1225 ≈ 84,5%",
+        "90%",
+        "92%",
+        "78%"
+      ],
+      "ans": 0,
+      "exp": "• Hàng tốt: 50 - 4 = 46 sản phẩm.<br>• n(Ω) = C₅₀² = 1225.<br>• Cả 2 đều tốt: C₄₆² = (46 · 45)/2 = 1035.<br>• P = 1035 / 1225 ≈ 84,5%."
+    },
+    {
+      "type": "mcq",
+      "q": "Một ngân hàng mở chương trình quay số trúng thưởng với mã vé gồm 3 chữ số từ 000 đến 999. Khách hàng có vé mang số 688. Xác suất để khách hàng trúng giải đặc biệt (đúng chính xác 3 chữ số) là:",
+      "opts": [
+        "1/1000 = 0,1%",
+        "1/100 = 1%",
+        "3/1000",
+        "1/500"
+      ],
+      "ans": 0,
+      "exp": "• Tổng số vé: từ 000 đến 999 có 1000 vé.<br>• Duy nhất 1 vé trúng: P = 1/1000 = 0,001 = 0,1%."
+    },
+    {
+      "type": "mcq",
+      "q": "Một đội thanh niên tình nguyện gồm 6 bác sĩ và 4 điều dưỡng viên. Cần chọn một tổ công tác gồm 4 người đi hỗ trợ vùng sâu vùng xa. Xác suất để trong tổ công tác có <b>ít nhất 1 bác sĩ</b> là:",
+      "opts": [
+        "209/210 (≈ 99,5%)",
+        "1/210",
+        "4/5",
+        "90%"
+      ],
+      "ans": 0,
+      "exp": "• n(Ω) = C₁₀⁴ = 210.<br>• Biến cố đối: tổ không có bác sĩ nào (cả 4 người đều là điều dưỡng viên): C₄⁴ = 1.<br>• P(ít nhất 1 BS) = 1 - 1/210 = 209/210 ≈ 99,5%."
+    }
+  ]
+}

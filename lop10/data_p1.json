@@ -1,0 +1,318 @@
+{
+  "1": [
+    {
+      "type": "mcq",
+      "q": "Câu nào sau đây là một <b>mệnh đề toán học</b>?",
+      "opts": [
+        "Số 17 là một số nguyên tố.",
+        "Học môn Toán vui quá!",
+        "Hôm nay trời có mưa không?",
+        "Bạn hãy tính giá trị biểu thức này đi!"
+      ],
+      "ans": 0,
+      "exp": "• <b>Khái niệm mệnh đề (SGK Toán 10):</b> Mệnh đề toán học là một khẳng định đúng hoặc sai. Một khẳng định không thể vừa đúng vừa sai.<br>• 'Số 17 là một số nguyên tố' là khẳng định đúng, do đó là mệnh đề.<br>• Các câu cảm thán, câu hỏi, câu cầu khiến không phải là mệnh đề."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các kí hiệu toán học (Cột A) với ý nghĩa tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Kí hiệu ∀",
+          "b": "A. Với mọi (tất cả các phần tử thuộc tập hợp)"
+        },
+        {
+          "a": "2. Kí hiệu ∃",
+          "b": "B. Tồn tại (ít nhất một phần tử thỏa mãn)"
+        },
+        {
+          "a": "3. Mệnh đề P ⇒ Q",
+          "b": "C. Mệnh đề kéo theo (Nếu P thì Q)"
+        },
+        {
+          "a": "4. Mệnh đề P ⇔ Q",
+          "b": "D. Mệnh đề tương đương (P khi và chỉ khi Q)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• ∀ (Universal quantifier): Với mọi.<br>• ∃ (Existential quantifier): Tồn tại ít nhất một.<br>• P ⇒ Q: Mệnh đề kéo theo (chỉ sai khi P đúng mà Q sai).<br>• P ⇔ Q: Mệnh đề tương đương (đúng khi P và Q cùng chân trị)."
+    },
+    {
+      "type": "tf",
+      "q": "Xét tính đúng - sai của các mệnh đề số học sau:",
+      "items": [
+        {
+          "text": "a) \"∀x ∈ ℝ: x² + 1 > 0\" là mệnh đề đúng.",
+          "ans": true,
+          "exp": "Vì x² ≥ 0 với mọi x ∈ ℝ nên x² + 1 ≥ 1 > 0 (Đúng)."
+        },
+        {
+          "text": "b) \"∃x ∈ ℤ: x² = 2\" là mệnh đề đúng.",
+          "ans": false,
+          "exp": "x² = 2 có nghiệm x = ±√2 ∉ ℤ, do đó không tồn tại số nguyên nào bình phương bằng 2 (Sai)."
+        },
+        {
+          "text": "c) Mệnh đề phủ định của \"∀x ∈ ℝ: x² - x + 1 > 0\" là \"∃x ∈ ℝ: x² - x + 1 ≤ 0\".",
+          "ans": true,
+          "exp": "Phủ định của ∀ là ∃, phủ định của > là ≤ (Đúng)."
+        },
+        {
+          "text": "d) Phương trình x² - 4x + 4 = 0 có hai nghiệm phân biệt.",
+          "ans": false,
+          "exp": "Ta có Δ = (-4)² - 4·1·4 = 0 nên phương trình có nghiệm kép x = 2 (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho mệnh đề chứa biến P(n): \"2n + 1 là số nguyên tố\" với n là số tự nhiên. Với giá trị nào của n dưới đây thì P(n) là một mệnh đề <b>sai</b>?",
+      "opts": [
+        "n = 4",
+        "n = 1",
+        "n = 2",
+        "n = 3"
+      ],
+      "ans": 0,
+      "exp": "• Với n = 1: 2(1) + 1 = 3 (số nguyên tố - đúng).<br>• Với n = 2: 2(2) + 1 = 5 (số nguyên tố - đúng).<br>• Với n = 3: 2(3) + 1 = 7 (số nguyên tố - đúng).<br>• Với n = 4: 2(4) + 1 = 9 = 3² (hợp số, không phải số nguyên tố - P(4) là mệnh đề sai)."
+    },
+    {
+      "type": "drag",
+      "q": "Điền từ thích hợp vào chỗ trống để hoàn thiện định lý về điều kiện cần và đủ:<br>Cho mệnh đề kéo theo P ⇒ Q. Khi đó P được gọi là điều kiện %%%SLOT_1%%% để có Q, và Q được gọi là điều kiện %%%SLOT_2%%% để có P. Nếu P ⇔ Q thì P là điều kiện %%%SLOT_3%%% để có Q.",
+      "slots": [
+        "đủ",
+        "cần",
+        "cần và đủ"
+      ],
+      "pool": [
+        "đủ",
+        "cần",
+        "cần và đủ",
+        "duy nhất",
+        "phủ định"
+      ],
+      "exp": "• Trong mệnh đề P ⇒ Q: Giả thiết P là điều kiện đủ để có kết luận Q; kết luận Q là điều kiện cần để có giả thiết P.<br>• Khi P ⇔ Q: P là điều kiện cần và đủ để có Q (hoặc ngược lại)."
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm mệnh đề đảo của mệnh đề: \"Nếu tam giác ABC là tam giác đều thì tam giác ABC là tam giác cân\".",
+      "opts": [
+        "Nếu tam giác ABC là tam giác cân thì tam giác ABC là tam giác đều.",
+        "Nếu tam giác ABC không phải là tam giác đều thì tam giác ABC không cân.",
+        "Nếu tam giác ABC không cân thì tam giác ABC không phải là tam giác đều.",
+        "Tam giác ABC là tam giác đều khi và chỉ khi tam giác ABC cân."
+      ],
+      "ans": 0,
+      "exp": "• Mệnh đề ban đầu có dạng P ⇒ Q (P: 'tam giác ABC đều', Q: 'tam giác ABC cân').<br>• Mệnh đề đảo có dạng Q ⇒ P: 'Nếu tam giác ABC là tam giác cân thì tam giác ABC là tam giác đều'."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho mệnh đề A: \"Mọi hình vuông đều là hình thoi\". Mệnh đề phủ định ¯A là:",
+      "opts": [
+        "Tồn tại hình vuông không phải là hình thoi.",
+        "Mọi hình vuông đều không phải là hình thoi.",
+        "Tồn tại hình thoi không phải là hình vuông.",
+        "Mọi hình thoi đều là hình vuông."
+      ],
+      "ans": 0,
+      "exp": "• Mệnh đề A viết dưới dạng vị từ: ∀x (x là hình vuông ⇒ x là hình thoi).<br>• Mệnh đề phủ định ¯A: ∃x sao cho x là hình vuông và x không phải là hình thoi (Tồn tại hình vuông không phải là hình thoi)."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong hệ thống an ninh ngân hàng, lệnh mở két bảo mật yêu cầu biểu thức logic: (A VÀ B) HOẶC C = Đúng. Biết thẻ từ A hợp lệ, vân tay B không khớp, mã khẩn cấp C hợp lệ. Kết quả két có mở không?",
+      "opts": [
+        "Két MỞ ĐƯỢC vì nhánh C đúng làm cho toàn bộ biểu thức logic nhận giá trị Đúng.",
+        "Két KHÔNG MỞ vì dấu vân tay B không khớp làm toàn bộ điều kiện bị hủy.",
+        "Két KHÔNG MỞ vì yêu cầu bắt buộc cả 3 điều kiện A, B, C phải đồng thời thỏa mãn.",
+        "Két báo động và khóa vĩnh viễn hệ thống."
+      ],
+      "ans": 0,
+      "exp": "• <b>Phân tích logic thực tế:</b><br>- Thẻ A hợp lệ (Đúng = 1), vân tay B không khớp (Sai = 0) ⇒ A ∧ B = 1 ∧ 0 = 0 (Sai).<br>- Mã khẩn cấp C hợp lệ (Đúng = 1).<br>- Biểu thức tổng thể: (A ∧ B) ∨ C = 0 ∨ 1 = 1 (Đúng).<br>• Kết luận: Két bảo mật mở được thành công."
+    },
+    {
+      "type": "mcq",
+      "q": "Một hợp đồng kinh tế quy định: \"Nếu bên A giao hàng đúng hạn (P) thì bên B sẽ thanh toán 100% hợp đồng ngay trong ngày (Q)\". Tình huống nào dưới đây chứng minh bên B đã <b>vi phạm hợp đồng</b>?",
+      "opts": [
+        "Bên A giao hàng đúng hạn nhưng bên B không thanh toán 100% hợp đồng trong ngày.",
+        "Bên A giao trễ hạn và bên B từ chối thanh toán trong ngày.",
+        "Bên A giao hàng đúng hạn và bên B đã thanh toán đầy đủ 100% hợp đồng.",
+        "Bên A giao trễ hạn nhưng bên B vẫn tạo điều kiện thanh toán trước 50%."
+      ],
+      "ans": 0,
+      "exp": "• <b>Bản chất logic học:</b> Hợp đồng cam kết mệnh đề kéo theo P ⇒ Q.<br>• Mệnh đề P ⇒ Q chỉ nhận giá trị SAI khi P đúng (A giao đúng hạn) mà Q sai (B không thanh toán đúng cam kết).<br>• Trường hợp A giao trễ (P sai), hợp đồng không ràng buộc hành vi của B."
+    },
+    {
+      "type": "mcq",
+      "q": "Bác sĩ đưa ra kết luận chẩn đoán: \"Nếu bệnh nhân sốt trên 39°C kéo dài quá 3 ngày và xét nghiệm tiểu cầu giảm dưới 100 G/L thì cần nhập viện theo dõi sốt xuất huyết cảnh báo\". Mệnh đề này có ý nghĩa gì?",
+      "opts": [
+        "Điều kiện sốt cao > 39°C trên 3 ngày cùng tiểu cầu < 100 G/L là điều kiện đủ để chỉ định nhập viện.",
+        "Bệnh nhân chỉ cần sốt cao 1 ngày là bắt buộc phải nhập viện ngay.",
+        "Mọi bệnh nhân sốt xuất huyết đều phải có tiểu cầu dưới 100 G/L.",
+        "Nhập viện là điều kiện đủ để bệnh nhân hạ sốt."
+      ],
+      "ans": 0,
+      "exp": "• Mệnh đề có dạng (P ∧ Q) ⇒ R.<br>• Trong đó (P ∧ Q) là giả thiết đủ: khi thỏa mãn đồng thời cả 2 triệu chứng lâm sàng và cận lâm sàng thì kéo theo chỉ định nhập viện theo dõi."
+    }
+  ],
+  "2": [
+    {
+      "type": "mcq",
+      "q": "Cho hai tập hợp A và B. Giao của hai tập hợp A và B (kí hiệu A ∩ B) là tập hợp:",
+      "opts": [
+        "{x | x ∈ A và x ∈ B}",
+        "{x | x ∈ A hoặc x ∈ B}",
+        "{x | x ∈ A và x ∉ B}",
+        "{x | x ∉ A và x ∈ B}"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa giao của hai tập hợp (SGK Toán 10): A ∩ B = {x | x ∈ A và x ∈ B}. Phần tử thuộc giao phải đồng thời thuộc cả hai tập hợp."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các phép toán tập hợp (Cột A) với kí hiệu toán học tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Hợp của hai tập hợp A và B",
+          "b": "A. A ∪ B = {x | x ∈ A hoặc x ∈ B}"
+        },
+        {
+          "a": "2. Giao của hai tập hợp A và B",
+          "b": "B. A ∩ B = {x | x ∈ A và x ∈ B}"
+        },
+        {
+          "a": "3. Hiệu của tập hợp A và B",
+          "b": "C. A \\ B = {x | x ∈ A và x ∉ B}"
+        },
+        {
+          "a": "4. Phần bù của B trong A (với B ⊂ A)",
+          "b": "D. C_A B = A \\ B"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Hợp (∪): lấy tất cả các phần tử thuộc ít nhất một trong hai tập.<br>• Giao (∩): lấy phần tử chung.<br>• Hiệu (\\): thuộc A nhưng không thuộc B.<br>• Phần bù (C_A B): hiệu của A cho B khi B là tập con của A."
+    },
+    {
+      "type": "tf",
+      "q": "Cho tập hợp A = [-2; 3) và B = (1; 5]. Xét tính đúng - sai của các nhận định sau:",
+      "items": [
+        {
+          "text": "a) Giao của hai tập hợp là A ∩ B = (1; 3).",
+          "ans": true,
+          "exp": "x ∈ A ∩ B ⇔ -2 ≤ x < 3 và 1 < x ≤ 5 ⇔ 1 < x < 3, tức A ∩ B = (1; 3) (Đúng)."
+        },
+        {
+          "text": "b) Hợp của hai tập hợp là A ∪ B = [-2; 5].",
+          "ans": true,
+          "exp": "x ∈ A ∪ B ⇔ -2 ≤ x < 3 hoặc 1 < x ≤ 5 ⇔ -2 ≤ x ≤ 5, tức A ∪ B = [-2; 5] (Đúng)."
+        },
+        {
+          "text": "c) Hiệu A \\ B = [-2; 1).",
+          "ans": false,
+          "exp": "A \\ B là các số thuộc [-2; 3) nhưng không thuộc (1; 5] ⇒ x ∈ [-2; 1]. Phần tử 1 không thuộc B nên 1 vẫn thuộc A \\ B (Sai vì phải là [-2; 1])."
+        },
+        {
+          "text": "d) Tập hợp A có vô số phần tử thực nhưng chỉ có 5 phần tử là số nguyên.",
+          "ans": true,
+          "exp": "Các số nguyên thuộc [-2; 3) là {-2, -1, 0, 1, 2}, gồm đúng 5 số (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho tập hợp X = {x ∈ ℝ | 2x² - 5x + 2 = 0}. Tập hợp X viết theo cách liệt kê phần tử là:",
+      "opts": [
+        "X = {1/2, 2}",
+        "X = {-2, -1/2}",
+        "X = {2}",
+        "X = {1, 2}"
+      ],
+      "ans": 0,
+      "exp": "• Giải phương trình 2x² - 5x + 2 = 0:<br>Ta có Δ = 25 - 4·2·2 = 9 > 0.<br>x₁ = (5 + 3)/4 = 2; x₂ = (5 - 3)/4 = 1/2.<br>Cả hai nghiệm đều thuộc ℝ nên X = {1/2, 2}."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các kí hiệu khoảng, đoạn vào đúng vị trí biểu diễn tập nghiệm trên trục số:<br>• Tập các số thực x thoả mãn -3 ≤ x ≤ 4 là %%%SLOT_1%%%.<br>• Tập các số thực x thoả mãn x > 2 là %%%SLOT_2%%%.<br>• Tập các số thực x thoả mãn x ≤ 0 là %%%SLOT_3%%%.",
+      "slots": [
+        "[-3; 4]",
+        "(2; +∞)",
+        "(-∞; 0]"
+      ],
+      "pool": [
+        "[-3; 4]",
+        "(2; +∞)",
+        "(-∞; 0]",
+        "(-3; 4)",
+        "[2; +∞)"
+      ],
+      "exp": "• -3 ≤ x ≤ 4 có dấu bằng ở 2 đầu mút nên là đoạn [-3; 4].<br>• x > 2 không có dấu bằng nên là khoảng (2; +∞).<br>• x ≤ 0 có dấu bằng tại 0 nên là nửa khoảng (-∞; 0]."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho A = (-∞; m + 1] và B = [3; +∞). Điều kiện cần và đủ của tham số m để A ∩ B = ∅ là:",
+      "opts": [
+        "m < 2",
+        "m ≤ 2",
+        "m > 2",
+        "m ≥ 2"
+      ],
+      "ans": 0,
+      "exp": "• A ∩ B = ∅ khi và chỉ khi mút phải của A nằm nghiêm ngặt bên trái mút trái của B:<br>m + 1 < 3 ⇔ m < 2.<br>• Lưu ý: Nếu m + 1 = 3 thì A ∩ B = {3} ≠ ∅."
+    },
+    {
+      "type": "mcq",
+      "q": "Số tập con gồm 2 phần tử của tập hợp S = {a, b, c, d, e} là:",
+      "opts": [
+        "10",
+        "5",
+        "20",
+        "25"
+      ],
+      "ans": 0,
+      "exp": "• Tập S có 5 phần tử. Số tập con có 2 phần tử chính là số tổ hợp chập 2 của 5:<br>C₅² = (5 · 4)/(2 · 1) = 10 tập con."
+    },
+    {
+      "type": "mcq",
+      "q": "Lớp 10A có 45 học sinh, trong đó có 25 bạn tham gia CLB Bóng đá, 20 bạn tham gia CLB Bóng rổ, và 8 bạn tham gia cả hai CLB. Hỏi có bao nhiêu bạn <b>không tham gia</b> CLB nào trong hai CLB trên?",
+      "opts": [
+        "8 bạn",
+        "12 bạn",
+        "37 bạn",
+        "5 bạn"
+      ],
+      "ans": 0,
+      "exp": "• <b>Công thức gộp tập hợp (Sơ đồ Venn):</b><br>Số học sinh tham gia ít nhất 1 môn:<br>n(A ∪ B) = n(A) + n(B) - n(A ∩ B) = 25 + 20 - 8 = 37 bạn.<br>• Số bạn không tham gia CLB nào:<br>45 - 37 = 8 bạn."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong cuộc điều tra thị trường tiêu dùng smartphone, có 65% người tiêu dùng dùng tính năng thanh toán thẻ NFC, 50% dùng bảo mật quét mống mắt, và 30% dùng cả hai tính năng. Tỉ lệ người tiêu dùng dùng <b>chỉ một trong hai tính năng</b> là:",
+      "opts": [
+        "55%",
+        "85%",
+        "35%",
+        "20%"
+      ],
+      "ans": 0,
+      "exp": "• Tỉ lệ chỉ dùng NFC: 65% - 30% = 35%.<br>• Tỉ lệ chỉ dùng quét mống mắt: 50% - 30% = 20%.<br>• Tỉ lệ người dùng chỉ 1 trong 2 tính năng: 35% + 20% = 55%."
+    },
+    {
+      "type": "mcq",
+      "q": "Một hệ thống kiểm soát chất lượng linh kiện điện tử kiểm tra hai lỗi: lỗi A (kích thước sai lệch) chiếm 4%, lỗi B (hàn tiếp điểm hở) chiếm 3%. Biết rằng tỉ lệ linh kiện bị cả hai lỗi là 1%. Tỉ lệ linh kiện xuất xưởng <b>đạt chuẩn</b> (không mắc lỗi nào) là:",
+      "opts": [
+        "94%",
+        "93%",
+        "96%",
+        "97%"
+      ],
+      "ans": 0,
+      "exp": "• Tỉ lệ linh kiện mắc ít nhất một lỗi:<br>P(A ∪ B) = 4% + 3% - 1% = 6%.<br>• Tỉ lệ linh kiện hoàn toàn đạt chuẩn (không mắc lỗi nào):<br>100% - 6% = 94%."
+    }
+  ]
+}

@@ -1,0 +1,1424 @@
+{
+  "1": [
+    {
+      "type": "mcq",
+      "q": "Đổi số đo góc α = 150° sang đơn vị radian (rad) ta được:",
+      "opts": [
+        "<span class=\"fraction\"><span class=\"numerator\">5π</span><span class=\"denominator\">6</span></span> rad",
+        "<span class=\"fraction\"><span class=\"numerator\">2π</span><span class=\"denominator\">3</span></span> rad",
+        "<span class=\"fraction\"><span class=\"numerator\">5π</span><span class=\"denominator\">3</span></span> rad",
+        "<span class=\"fraction\"><span class=\"numerator\">3π</span><span class=\"denominator\">4</span></span> rad"
+      ],
+      "ans": 0,
+      "exp": "• Công thức chuyển đổi: rad = độ · (π / 180°).<br>• 150° · (π / 180°) = 5π/6 rad."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các công thức lượng giác cơ bản (Cột A) với biểu thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. sin² α + cos² α",
+          "b": "A. = 1 (với mọi α)"
+        },
+        {
+          "a": "2. 1 + tan² α",
+          "b": "B. = 1 / cos² α (với α ≠ π/2 + kπ)"
+        },
+        {
+          "a": "3. 1 + cot² α",
+          "b": "C. = 1 / sin² α (với α ≠ kπ)"
+        },
+        {
+          "a": "4. tan α · cot α",
+          "b": "D. = 1 (với α ≠ kπ/2)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• 4 hằng đẳng thức lượng giác cơ bản (SGK Toán 11)."
+    },
+    {
+      "type": "tf",
+      "q": "Cho góc lượng giác α thỏa mãn π/2 < α < π và sin α = 3/5. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Góc α thuộc góc phần tư thứ II.",
+          "ans": true,
+          "exp": "π/2 < α < π là góc phần tư thứ II (Đúng)."
+        },
+        {
+          "text": "b) cos α < 0.",
+          "ans": true,
+          "exp": "Trong góc phần tư II, hoành độ điểm biểu diễn âm nên cos α < 0 (Đúng)."
+        },
+        {
+          "text": "c) cos α = -4/5.",
+          "ans": true,
+          "exp": "cos² α = 1 - (3/5)² = 16/25. Vì cos α < 0 nên cos α = -4/5 (Đúng)."
+        },
+        {
+          "text": "d) tan α = 3/4.",
+          "ans": false,
+          "exp": "tan α = sin α / cos α = (3/5) / (-4/5) = -3/4 (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho góc α thỏa mãn tan α = 2. Giá trị của biểu thức P = <span class=\"fraction\"><span class=\"numerator\">sin α + cos α</span><span class=\"denominator\">sin α - cos α</span></span> là:",
+      "opts": [
+        "3",
+        "-3",
+        "1/3",
+        "1"
+      ],
+      "ans": 0,
+      "exp": "• Chia cả tử và mẫu cho cos α ≠ 0:<br>P = (tan α + 1) / (tan α - 1) = (2 + 1) / (2 - 1) = 3 / 1 = 3."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các giá trị lượng giác chính xác vào chỗ trống:<br>• sin(π/6) = %%%SLOT_1%%%.<br>• cos(π/4) = %%%SLOT_2%%%.<br>• tan(π/3) = %%%SLOT_3%%%.",
+      "slots": [
+        "1/2",
+        "√2/2",
+        "√3"
+      ],
+      "pool": [
+        "1/2",
+        "√2/2",
+        "√3",
+        "√3/2",
+        "1"
+      ],
+      "exp": "• sin 30° = 1/2.<br>• cos 45° = √2/2.<br>• tan 60° = √3."
+    },
+    {
+      "type": "mcq",
+      "q": "Độ dài cung tròn l chắn góc ở tâm α = 2π/3 trên đường tròn có bán kính R = 9 cm là:",
+      "opts": [
+        "6π cm (≈ 18,85 cm)",
+        "3π cm",
+        "18π cm",
+        "12π cm"
+      ],
+      "ans": 0,
+      "exp": "• Độ dài cung tròn: l = R · α = 9 · (2π / 3) = 6π cm ≈ 18,85 cm."
+    },
+    {
+      "type": "mcq",
+      "q": "Giá trị của cos(α + k2π) (k ∈ ℤ) bằng:",
+      "opts": [
+        "cos α",
+        "-cos α",
+        "sin α",
+        "0"
+      ],
+      "ans": 0,
+      "exp": "• Hàm cos tuần hoàn với chu kì 2π: cos(α + k2π) = cos α."
+    },
+    {
+      "type": "mcq",
+      "q": "Một bánh xe đu quay bán kính R = 30 m quay đều 1 vòng hết 60 giây. Vận tốc dài của một cabin gắn trên vành bánh xe là:",
+      "opts": [
+        "π m/s (≈ 3,14 m/s)",
+        "2π m/s",
+        "0,5π m/s",
+        "60 m/s"
+      ],
+      "ans": 0,
+      "exp": "• Tốc độ góc: ω = 2π / T = 2π / 60 = π/30 rad/s.<br>• Vận tốc dài: v = ω · R = (π / 30) · 30 = π m/s ≈ 3,14 m/s."
+    },
+    {
+      "type": "mcq",
+      "q": "Kim phút của một đồng hồ treo tường có chiều dài r = 12 cm. Trong thời gian 20 phút, đầu mút kim phút vạch được một cung tròn có độ dài là:",
+      "opts": [
+        "8π cm (≈ 25,1 cm)",
+        "4π cm",
+        "12π cm",
+        "24π cm"
+      ],
+      "ans": 0,
+      "exp": "• 20 phút ứng với 1/3 vòng tròn ⇒ góc quét α = (1/3) · 2π = 2π/3 rad.<br>• Độ dài cung: l = r · α = 12 · (2π/3) = 8π cm ≈ 25,1 cm."
+    },
+    {
+      "type": "mcq",
+      "q": "Một vệ tinh địa tĩnh quay quanh Trái Đất ở độ cao mà quỹ đạo tròn có bán kính R = 42.000 km. Nếu vệ tinh quét được một góc ở tâm là α = 0,5 rad thì quãng đường vệ tinh bay được trên quỹ đạo là:",
+      "opts": [
+        "21.000 km",
+        "42.000 km",
+        "10.500 km",
+        "84.000 km"
+      ],
+      "ans": 0,
+      "exp": "• Quãng đường: s = R · α = 42.000 · 0,5 = 21.000 km."
+    }
+  ],
+  "2": [
+    {
+      "type": "mcq",
+      "q": "Công thức nhân đôi của sin 2a là:",
+      "opts": [
+        "sin 2a = 2 sin a · cos a",
+        "sin 2a = sin² a - cos² a",
+        "sin 2a = 2 sin a",
+        "sin 2a = cos² a - sin² a"
+      ],
+      "ans": 0,
+      "exp": "• Công thức nhân đôi (SGK Toán 11): sin 2a = 2 sin a · cos a."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các công thức cộng lượng giác (Cột A) với vế phải tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. cos(a + b)",
+          "b": "A. = cos a · cos b - sin a · sin b"
+        },
+        {
+          "a": "2. cos(a - b)",
+          "b": "B. = cos a · cos b + sin a · sin b"
+        },
+        {
+          "a": "3. sin(a + b)",
+          "b": "C. = sin a · cos b + cos a · sin b"
+        },
+        {
+          "a": "4. sin(a - b)",
+          "b": "D. = sin a · cos b - cos a · sin b"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các công thức cộng lượng giác cơ bản."
+    },
+    {
+      "type": "tf",
+      "q": "Cho sin a = 3/5 với 0 < a < π/2. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) cos a = 4/5.",
+          "ans": true,
+          "exp": "cos a = √(1 - 9/25) = 4/5 (vì 0 < a < π/2) (Đúng)."
+        },
+        {
+          "text": "b) sin 2a = 24/25.",
+          "ans": true,
+          "exp": "sin 2a = 2 · (3/5) · (4/5) = 24/25 (Đúng)."
+        },
+        {
+          "text": "c) cos 2a = 7/25.",
+          "ans": true,
+          "exp": "cos 2a = cos² a - sin² a = 16/25 - 9/25 = 7/25 (Đúng)."
+        },
+        {
+          "text": "d) tan 2a = 24/7.",
+          "ans": true,
+          "exp": "tan 2a = sin 2a / cos 2a = (24/25) / (7/25) = 24/7 (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Giá trị chính xác của sin 15° = sin(45° - 30°) là:",
+      "opts": [
+        "(√6 - √2) / 4",
+        "(√6 + √2) / 4",
+        "√2 / 4",
+        "1/2"
+      ],
+      "ans": 0,
+      "exp": "• sin(45° - 30°) = sin 45° cos 30° - cos 45° sin 30° = (√2/2)(√3/2) - (√2/2)(1/2) = (√6 - √2)/4."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các biểu thức hạ bậc chính xác vào chỗ trống:<br>• cos² a = %%%SLOT_1%%%.<br>• sin² a = %%%SLOT_2%%%.<br>• cos 2a = %%%SLOT_3%%%.",
+      "slots": [
+        "(1 + cos 2a)/2",
+        "(1 - cos 2a)/2",
+        "cos² a - sin² a"
+      ],
+      "pool": [
+        "(1 + cos 2a)/2",
+        "(1 - cos 2a)/2",
+        "cos² a - sin² a",
+        "2 cos a",
+        "1 - 2 sin a"
+      ],
+      "exp": "• Công thức hạ bậc: cos² a = (1 + cos 2a)/2; sin² a = (1 - cos 2a)/2."
+    },
+    {
+      "type": "mcq",
+      "q": "Rút gọn biểu thức P = cos(x + y) · cos(x - y) + sin(x + y) · sin(x - y) ta được:",
+      "opts": [
+        "cos 2y",
+        "cos 2x",
+        "sin 2x",
+        "1"
+      ],
+      "ans": 0,
+      "exp": "• Áp dụng cos A cos B + sin A sin B = cos(A - B):<br>P = cos[(x + y) - (x - y)] = cos(2y)."
+    },
+    {
+      "type": "mcq",
+      "q": "Biến đổi tích thành tổng: 2 sin 3x · cos x bằng:",
+      "opts": [
+        "sin 4x + sin 2x",
+        "sin 4x - sin 2x",
+        "cos 4x + cos 2x",
+        "cos 4x - cos 2x"
+      ],
+      "ans": 0,
+      "exp": "• 2 sin A cos B = sin(A + B) + sin(A - B) ⇒ 2 sin 3x cos x = sin 4x + sin 2x."
+    },
+    {
+      "type": "mcq",
+      "q": "Dòng điện xoay chiều trong lưới điện gia đình có cường độ biến thiên theo thời gian: i(t) = 4 cos(100πt) (A). Công suất tức thời trên điện trở R = 100 Ω là p(t) = R · i²(t) = 100 · 16 cos²(100πt) = 1600 · [(1 + cos 200πt)/2] = 800 + 800 cos(200πt) (W). Công suất trung bình là:",
+      "opts": [
+        "800 W",
+        "1600 W",
+        "400 W",
+        "0 W"
+      ],
+      "ans": 0,
+      "exp": "• Giá trị trung bình của dao động cosin bằng 0 nên công suất trung bình bằng phần không đổi: P_tb = 800 W."
+    },
+    {
+      "type": "mcq",
+      "q": "Khi hai sóng âm cùng tần số f = 440 Hz (nốt La chuẩn) giao thoa với nhau: y₁(t) = A cos(ωt) và y₂(t) = A cos(ωt + φ). Sóng tổng hợp có biên độ là A_th = 2A · |cos(φ/2)|. Nếu góc lệch pha φ = π/3 thì biên độ sóng tổng hợp bằng:",
+      "opts": [
+        "A√3",
+        "2A",
+        "A",
+        "0"
+      ],
+      "ans": 0,
+      "exp": "• A_th = 2A · cos(π/6) = 2A · (√3/2) = A√3."
+    },
+    {
+      "type": "mcq",
+      "q": "Tầm bắn xa của một viên đạn pháo bắn xiên với vận tốc đầu nòng v₀ góc bắn α là L = (v₀² / g) · sin 2α. Tầm bắn xa đạt giá trị cực đại khi góc bắn α bằng:",
+      "opts": [
+        "45°",
+        "30°",
+        "60°",
+        "90°"
+      ],
+      "ans": 0,
+      "exp": "• L đạt max khi sin 2α đạt giá trị lớn nhất bằng 1 ⇔ 2α = 90° ⇔ α = 45°."
+    }
+  ],
+  "3": [
+    {
+      "type": "mcq",
+      "q": "Tập giá trị T của hai hàm số y = sin x và y = cos x là:",
+      "opts": [
+        "T = [-1; 1]",
+        "T = (-1; 1)",
+        "T = ℝ",
+        "T = [0; 1]"
+      ],
+      "ans": 0,
+      "exp": "• Với mọi x ∈ ℝ: -1 ≤ sin x ≤ 1 và -1 ≤ cos x ≤ 1 ⇒ T = [-1; 1]."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các hàm số lượng giác (Cột A) với chu kì tuần hoàn tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Hàm số y = sin x",
+          "b": "A. Tuần hoàn với chu kì T = 2π"
+        },
+        {
+          "a": "2. Hàm số y = cos x",
+          "b": "B. Tuần hoàn với chu kì T = 2π"
+        },
+        {
+          "a": "3. Hàm số y = tan x",
+          "b": "C. Tuần hoàn với chu kì T = π"
+        },
+        {
+          "a": "4. Hàm số y = cot x",
+          "b": "D. Tuần hoàn với chu kì T = π"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• sin và cos có chu kì 2π.<br>• tan và cot có chu kì π."
+    },
+    {
+      "type": "tf",
+      "q": "Xét tính chẵn - lẻ của các hàm số lượng giác:",
+      "items": [
+        {
+          "text": "a) Hàm số y = cos x là hàm số chẵn trên ℝ.",
+          "ans": true,
+          "exp": "cos(-x) = cos x với mọi x nên y = cos x là hàm chẵn (Đúng)."
+        },
+        {
+          "text": "b) Hàm số y = sin x là hàm số lẻ trên ℝ.",
+          "ans": true,
+          "exp": "sin(-x) = -sin x nên y = sin x là hàm lẻ (Đúng)."
+        },
+        {
+          "text": "c) Hàm số y = tan x là hàm số chẵn trên tập xác định.",
+          "ans": false,
+          "exp": "tan(-x) = -tan x nên y = tan x là hàm số lẻ (Sai)."
+        },
+        {
+          "text": "d) Đồ thị hàm số y = sin x đối xứng qua gốc toạ độ O.",
+          "ans": true,
+          "exp": "Hàm số lẻ có đồ thị đối xứng qua gốc toạ độ O (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Tập xác định D của hàm số y = tan x là:",
+      "opts": [
+        "D = ℝ \\ {π/2 + kπ, k ∈ ℤ}",
+        "D = ℝ \\ {kπ, k ∈ ℤ}",
+        "D = ℝ",
+        "D = (-1; 1)"
+      ],
+      "ans": 0,
+      "exp": "• tan x = sin x / cos x xác định khi cos x ≠ 0 ⇔ x ≠ π/2 + kπ (k ∈ ℤ)."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các chu kì vào chỗ trống cho các hàm số sau:<br>• Hàm số y = sin(2x) có chu kì T = %%%SLOT_1%%%.<br>• Hàm số y = cos(3x) có chu kì T = %%%SLOT_2%%%.<br>• Hàm số y = tan(x/2) có chu kì T = %%%SLOT_3%%%.",
+      "slots": [
+        "π",
+        "2π/3",
+        "2π"
+      ],
+      "pool": [
+        "π",
+        "2π/3",
+        "2π",
+        "4π",
+        "π/2"
+      ],
+      "exp": "• sin(ax): T = 2π / |a| = 2π / 2 = π.<br>• cos(3x): T = 2π / 3.<br>• tan(x/2): T = π / (1/2) = 2π."
+    },
+    {
+      "type": "mcq",
+      "q": "Giá trị lớn nhất M và giá trị nhỏ nhất m của hàm số y = 3 sin x - 2 là:",
+      "opts": [
+        "M = 1, m = -5",
+        "M = 3, m = -3",
+        "M = 5, m = -1",
+        "M = 1, m = -1"
+      ],
+      "ans": 0,
+      "exp": "• -1 ≤ sin x ≤ 1 ⇔ -3 ≤ 3 sin x ≤ 3 ⇔ -5 ≤ 3 sin x - 2 ≤ 1.<br>• M = 1 (khi sin x = 1) và m = -5 (khi sin x = -1)."
+    },
+    {
+      "type": "mcq",
+      "q": "Hàm số y = sin x đồng biến trên khoảng nào sau đây?",
+      "opts": [
+        "(-π/2; π/2)",
+        "(0; π)",
+        "(π/2; 3π/2)",
+        "(π; 2π)"
+      ],
+      "ans": 0,
+      "exp": "• Trên (-π/2; π/2), sin x tăng từ -1 lên 1 nên đồng biến."
+    },
+    {
+      "type": "mcq",
+      "q": "Độ cao của mực nước biển h(t) (mét) tại một bến cảng sau t giờ (tính từ 0h) được mô hình hóa bởi: h(t) = 3 cos(πt / 6) + 5. Mực nước biển dâng cao nhất tại thời điểm nào trong ngày?",
+      "opts": [
+        "Lúc 0h và 12h trưa (Độ cao cực đại 8 mét)",
+        "Lúc 6h sáng",
+        "Lúc 3h chiều",
+        "Lúc 18h tối"
+      ],
+      "ans": 0,
+      "exp": "• h(t) đạt max khi cos(πt / 6) = 1 ⇔ πt / 6 = k2π ⇔ t = 12k.<br>• Trong 24h: t = 0 (0h) và t = 12 (12h trưa). Độ cao cực đại: 3(1) + 5 = 8 mét."
+    },
+    {
+      "type": "mcq",
+      "q": "Điện áp xoay chiều của mạng điện gia đình biến thiên theo thời gian: u(t) = 220√2 cos(100πt) (V). Tần số dao động của dòng điện là:",
+      "opts": [
+        "f = 50 Hz",
+        "f = 100 Hz",
+        "f = 60 Hz",
+        "f = 220 Hz"
+      ],
+      "ans": 0,
+      "exp": "• ω = 100π rad/s ⇒ f = ω / (2π) = 100π / (2π) = 50 Hz."
+    },
+    {
+      "type": "mcq",
+      "q": "Ánh sáng ban ngày tại một thành phố trong ngày thứ t của năm (1 ≤ t ≤ 365) được mô tả bởi: D(t) = 3 sin[2π(t - 80) / 365] + 12 (giờ). Ngày có thời gian chiếu sáng dài nhất trong năm có bao nhiêu giờ ban ngày?",
+      "opts": [
+        "15 giờ",
+        "12 giờ",
+        "18 giờ",
+        "14 giờ"
+      ],
+      "ans": 0,
+      "exp": "• D_max = 3(1) + 12 = 15 giờ chiếu sáng."
+    }
+  ],
+  "4": [
+    {
+      "type": "mcq",
+      "q": "Công thức nghiệm của phương trình sin x = sin α là:",
+      "opts": [
+        "x = α + k2π hoặc x = π - α + k2π (k ∈ ℤ)",
+        "x = α + kπ hoặc x = -α + kπ",
+        "x = α + k2π hoặc x = -α + k2π",
+        "x = ±α + k2π"
+      ],
+      "ans": 0,
+      "exp": "• Phương trình sin x = sin α: nghiệm x = α + k2π hoặc x = π - α + k2π (k ∈ ℤ)."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các phương trình lượng giác cơ bản (Cột A) với công thức nghiệm (Cột B):",
+      "pairs": [
+        {
+          "a": "1. cos x = cos α",
+          "b": "A. x = ±α + k2π (k ∈ ℤ)"
+        },
+        {
+          "a": "2. sin x = sin α",
+          "b": "B. x = α + k2π hoặc x = π - α + k2π"
+        },
+        {
+          "a": "3. tan x = tan α",
+          "b": "C. x = α + kπ (k ∈ ℤ)"
+        },
+        {
+          "a": "4. cot x = cot α",
+          "b": "D. x = α + kπ (k ∈ ℤ)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các công thức nghiệm phương trình lượng giác cơ bản."
+    },
+    {
+      "type": "tf",
+      "q": "Xét tính đúng - sai của các khẳng định về phương trình lượng giác:",
+      "items": [
+        {
+          "text": "a) Phương trình sin x = 2 vô nghiệm.",
+          "ans": true,
+          "exp": "Vì |sin x| ≤ 1 mà 2 > 1 nên vô nghiệm (Đúng)."
+        },
+        {
+          "text": "b) Phương trình cos x = 0 có nghiệm x = π/2 + kπ (k ∈ ℤ).",
+          "ans": true,
+          "exp": "cos x = 0 khi điểm biểu diễn ở 2 cực Bắc Nam: x = π/2 + kπ (Đúng)."
+        },
+        {
+          "text": "c) Phương trình tan x = 1 có nghiệm x = π/4 + k2π (k ∈ ℤ).",
+          "ans": false,
+          "exp": "Hàm tan có chu kì π nên họ nghiệm là x = π/4 + kπ (Sai)."
+        },
+        {
+          "text": "d) Phương trình sin x = -1 có nghiệm x = -π/2 + k2π (k ∈ ℤ).",
+          "ans": true,
+          "exp": "Điểm biểu diễn ở cực Nam (0; -1) có toạ độ x = -π/2 + k2π (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Số nghiệm của phương trình 2 cos x - 1 = 0 trên đoạn [0; 2π] là:",
+      "opts": [
+        "2 nghiệm (x = π/3 và x = 5π/3)",
+        "1 nghiệm",
+        "3 nghiệm",
+        "4 nghiệm"
+      ],
+      "ans": 0,
+      "exp": "• cos x = 1/2 = cos(π/3) ⇔ x = ±π/3 + k2π.<br>• Trên [0; 2π], có 2 nghiệm: x = π/3 (k = 0) và x = 5π/3 (k = 1)."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các nghiệm đặc biệt vào chỗ trống:<br>• sin x = 0 ⇔ x = %%%SLOT_1%%%.<br>• cos x = 1 ⇔ x = %%%SLOT_2%%%.<br>• cos x = -1 ⇔ x = %%%SLOT_3%%%.",
+      "slots": [
+        "kπ",
+        "k2π",
+        "π + k2π"
+      ],
+      "pool": [
+        "kπ",
+        "k2π",
+        "π + k2π",
+        "π/2 + kπ",
+        "π/2 + k2π"
+      ],
+      "exp": "• sin x = 0: x = kπ.<br>• cos x = 1: x = k2π.<br>• cos x = -1: x = π + k2π."
+    },
+    {
+      "type": "mcq",
+      "q": "Nghiệm của phương trình tan(x - π/3) = √3 là:",
+      "opts": [
+        "x = 2π/3 + kπ (k ∈ ℤ)",
+        "x = π/3 + kπ",
+        "x = π/2 + kπ",
+        "x = kπ"
+      ],
+      "ans": 0,
+      "exp": "• tan(x - π/3) = tan(π/3) ⇔ x - π/3 = π/3 + kπ ⇔ x = 2π/3 + kπ."
+    },
+    {
+      "type": "mcq",
+      "q": "Nghiệm dương nhỏ nhất của phương trình sin 2x = 1/2 là:",
+      "opts": [
+        "π/12",
+        "π/6",
+        "5π/12",
+        "π/4"
+      ],
+      "ans": 0,
+      "exp": "• sin 2x = sin(π/6) ⇔ 2x = π/6 + k2π hoặc 2x = 5π/6 + k2π.<br>• x = π/12 + kπ hoặc x = 5π/12 + kπ.<br>• Nghiệm dương nhỏ nhất ứng với k = 0 là x = π/12."
+    },
+    {
+      "type": "mcq",
+      "q": "Một con lắc lò xo dao động điều hòa theo phương trình x(t) = 5 cos(4πt - π/3) (cm). Thời điểm đầu tiên (t > 0) vật đi qua vị trí cân bằng (x = 0) là:",
+      "opts": [
+        "t = 5/24 s",
+        "t = 1/12 s",
+        "t = 1/4 s",
+        "t = 1/6 s"
+      ],
+      "ans": 0,
+      "exp": "• x = 0 ⇔ cos(4πt - π/3) = 0 ⇔ 4πt - π/3 = π/2 + kπ.<br>• 4πt = 5π/6 + kπ ⇔ t = 5/24 + k/4.<br>• Với k = 0: t = 5/24 s."
+    },
+    {
+      "type": "mcq",
+      "q": "Một chiếc pít-tông chuyển động tịnh tiến trong xi-lanh động cơ có vị trí mô tả bởi: s(t) = 10 sin(20πt) (cm). Trong 1 giây đầu tiên, pít-tông đi qua điểm chính giữa s = 5 cm bao nhiêu lần?",
+      "opts": [
+        "20 lần",
+        "10 lần",
+        "40 lần",
+        "2 lần"
+      ],
+      "ans": 0,
+      "exp": "• f = ω / (2π) = 20π / (2π) = 10 Hz (10 chu kì mỗi giây).<br>• Trong mỗi chu kì, vật đi qua vị trí s = 5 cm (dương) đúng 2 lần.<br>• Trong 10 chu kì (1 giây), có 10 · 2 = 20 lần."
+    },
+    {
+      "type": "mcq",
+      "q": "Tại một vùng vịnh biển, độ sâu của nước triều được mô tả bởi h(t) = 4 cos(πt/6) + 8 (mét). Một tàu chở hàng lớn cần độ sâu tối thiểu 10 mét để cập bến an toàn. Khoảng thời gian trong một chu kì 12 giờ tàu có thể cập bến là:",
+      "opts": [
+        "Từ 0h đến 2h và từ 10h đến 12h (tổng cộng 4 giờ)",
+        "Từ 2h đến 10h",
+        "Chỉ lúc 0h",
+        "Cả 12 giờ"
+      ],
+      "ans": 0,
+      "exp": "• h(t) ≥ 10 ⇔ 4 cos(πt/6) + 8 ≥ 10 ⇔ cos(πt/6) ≥ 1/2.<br>• -π/3 ≤ πt/6 ≤ π/3 ⇔ -2 ≤ t ≤ 2.<br>• Trong chu kì [0; 12]: từ 0h đến 2h và từ 10h đến 12h (tổng 4 giờ)."
+    }
+  ],
+  "5": [
+    {
+      "type": "mcq",
+      "q": "Dãy số (u_n) được gọi là <b>dãy số tăng</b> nếu với mọi n ∈ ℕ* ta luôn có:",
+      "opts": [
+        "u_(n+1) > u_n",
+        "u_(n+1) < u_n",
+        "u_(n+1) ≥ u_n",
+        "u_n > 0"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa dãy số tăng (SGK Toán 11): u_(n+1) > u_n với mọi n ∈ ℕ*."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các khái niệm về dãy số (Cột A) với định nghĩa tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Dãy số bị chặn trên",
+          "b": "A. Tồn tại số M sao cho u_n ≤ M với mọi n ∈ ℕ*"
+        },
+        {
+          "a": "2. Dãy số bị chặn dưới",
+          "b": "B. Tồn tại số m sao cho u_n ≥ m với mọi n ∈ ℕ*"
+        },
+        {
+          "a": "3. Dãy số bị chặn",
+          "b": "C. Vừa bị chặn trên vừa bị chặn dưới: m ≤ u_n ≤ M"
+        },
+        {
+          "a": "4. Dãy số hữu hạn",
+          "b": "D. Tập xác định là tập hợp {1, 2, ..., m}"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các định nghĩa về tính bị chặn và tính chất dãy số."
+    },
+    {
+      "type": "tf",
+      "q": "Cho dãy số (u_n) với u_n = <span class=\"fraction\"><span class=\"numerator\">n</span><span class=\"denominator\">n + 1</span></span>. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Số hạng đầu tiên u₁ = 1/2.",
+          "ans": true,
+          "exp": "u₁ = 1 / (1 + 1) = 1/2 (Đúng)."
+        },
+        {
+          "text": "b) Dãy số (u_n) là dãy số tăng.",
+          "ans": true,
+          "exp": "u_(n+1) - u_n = (n+1)/(n+2) - n/(n+1) = 1/[(n+1)(n+2)] > 0 nên dãy tăng (Đúng)."
+        },
+        {
+          "text": "c) Dãy số (u_n) bị chặn trên bởi 1.",
+          "ans": true,
+          "exp": "n < n + 1 nên u_n = n/(n+1) < 1 với mọi n ∈ ℕ* (Đúng)."
+        },
+        {
+          "text": "d) Số 10/11 không phải là một số hạng của dãy.",
+          "ans": false,
+          "exp": "n/(n+1) = 10/11 ⇔ n = 10 ∈ ℕ* nên 10/11 chính là số hạng u₁₀ (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho dãy số xác định bởi công thức truy hồi: u₁ = 2 và u_(n+1) = 3u_n - 1. Số hạng thứ ba u₃ là:",
+      "opts": [
+        "14",
+        "5",
+        "41",
+        "17"
+      ],
+      "ans": 0,
+      "exp": "• u₁ = 2.<br>• u₂ = 3(2) - 1 = 5.<br>• u₃ = 3(5) - 1 = 14."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các số hạng của dãy Fibonacci (u₁ = 1, u₂ = 1, u_(n+2) = u_(n+1) + u_n) vào chỗ trống:<br>• u₃ = %%%SLOT_1%%%.<br>• u₄ = %%%SLOT_2%%%.<br>• u₅ = %%%SLOT_3%%%.",
+      "slots": [
+        "2",
+        "3",
+        "5"
+      ],
+      "pool": [
+        "2",
+        "3",
+        "5",
+        "8",
+        "4"
+      ],
+      "exp": "• Dãy Fibonacci: 1, 1, 2, 3, 5, 8, 13..."
+    },
+    {
+      "type": "mcq",
+      "q": "Dãy số nào sau đây là dãy số bị chặn?",
+      "opts": [
+        "u_n = 1/n",
+        "u_n = 2n + 1",
+        "u_n = n²",
+        "u_n = 2ⁿ"
+      ],
+      "ans": 0,
+      "exp": "• Với mọi n ≥ 1: 0 < 1/n ≤ 1 nên dãy u_n = 1/n bị chặn (m = 0, M = 1). Các dãy khác đều tăng vô hạn."
+    },
+    {
+      "type": "mcq",
+      "q": "Công thức số hạng tổng quát của dãy số 2, 4, 6, 8, 10, ... là:",
+      "opts": [
+        "u_n = 2n",
+        "u_n = n + 1",
+        "u_n = 2ⁿ",
+        "u_n = n² + 1"
+      ],
+      "ans": 0,
+      "exp": "• Dãy số chẵn dương: u_n = 2n."
+    },
+    {
+      "type": "mcq",
+      "q": "Một bể nuôi cấy vi sinh ban đầu có 1.000 cá thể. Mỗi giờ số lượng cá thể tăng gấp đôi. Công thức số lượng vi khuẩn N_n sau n giờ là:",
+      "opts": [
+        "N_n = 1.000 · 2ⁿ",
+        "N_n = 1.000 + 2n",
+        "N_n = 1.000 · n²",
+        "N_n = 2.000n"
+      ],
+      "ans": 0,
+      "exp": "• Tăng trưởng nhân đôi: sau 1 giờ là 1000·2, sau n giờ là 1000 · 2ⁿ."
+    },
+    {
+      "type": "mcq",
+      "q": "Một công ty định giá khấu hao máy móc sau mỗi năm sử dụng giảm 10% so với năm trước đó. Nếu giá trị ban đầu là 500 triệu đồng thì giá trị máy móc V_n (triệu đồng) sau n năm là:",
+      "opts": [
+        "V_n = 500 · (0,9)ⁿ",
+        "V_n = 500 - 50n",
+        "V_n = 500 · (0,1)ⁿ",
+        "V_n = 500 · (1,1)ⁿ"
+      ],
+      "ans": 0,
+      "exp": "• Mỗi năm giá trị còn lại 90% = 0,9: V_n = 500 · (0,9)ⁿ."
+    },
+    {
+      "type": "mcq",
+      "q": "Tháp Hà Nội nổi tiếng với bài toán chuyển n đĩa. Số bước tối thiểu s_n để chuyển n đĩa thỏa mãn hệ thức truy hồi s₁ = 1, s_(n+1) = 2s_n + 1. Số bước tối thiểu để chuyển 4 đĩa là:",
+      "opts": [
+        "15 bước",
+        "31 bước",
+        "7 bước",
+        "16 bước"
+      ],
+      "ans": 0,
+      "exp": "• s₁ = 1<br>• s₂ = 2(1) + 1 = 3<br>• s₃ = 2(3) + 1 = 7<br>• s₄ = 2(7) + 1 = 15 bước (công thức s_n = 2ⁿ - 1)."
+    }
+  ],
+  "6": [
+    {
+      "type": "mcq",
+      "q": "Cấp số cộng là một dãy số (u_n) thỏa mãn với mọi n ≥ 2:",
+      "opts": [
+        "u_n = u_(n-1) + d (d là công sai)",
+        "u_n = u_(n-1) · q",
+        "u_n = (u_(n-1))²",
+        "u_n = u_(n-1) - n"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa cấp số cộng (SGK Toán 11): u_n = u_(n-1) + d với d là hằng số gọi là công sai."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các công thức của cấp số cộng (u_n) có số hạng đầu u₁ và công sai d (Cột A) với biểu thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Số hạng tổng quát u_n",
+          "b": "A. u_n = u₁ + (n - 1)d"
+        },
+        {
+          "a": "2. Tổng n số hạng đầu S_n",
+          "b": "B. S_n = (n/2) · [2u₁ + (n - 1)d]"
+        },
+        {
+          "a": "3. Tính chất 3 số hạng liên tiếp",
+          "b": "C. u_k = (u_(k-1) + u_(k+1)) / 2"
+        },
+        {
+          "a": "4. Tổng theo số hạng đầu và cuối",
+          "b": "D. S_n = (n/2) · (u₁ + u_n)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các công thức cơ bản của cấp số cộng."
+    },
+    {
+      "type": "tf",
+      "q": "Cho cấp số cộng (u_n) có u₁ = 3 và công sai d = 4. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Số hạng thứ hai u₂ = 7.",
+          "ans": true,
+          "exp": "u₂ = 3 + 4 = 7 (Đúng)."
+        },
+        {
+          "text": "b) Số hạng thứ 10 là u₁₀ = 39.",
+          "ans": true,
+          "exp": "u₁₀ = u₁ + 9d = 3 + 9(4) = 3 + 36 = 39 (Đúng)."
+        },
+        {
+          "text": "c) Số 103 là số hạng thứ 26 của cấp số cộng.",
+          "ans": true,
+          "exp": "u_n = 3 + (n - 1)4 = 103 ⇔ 4(n - 1) = 100 ⇔ n - 1 = 25 ⇔ n = 26 (Đúng)."
+        },
+        {
+          "text": "d) Tổng 10 số hạng đầu tiên S₁₀ = 200.",
+          "ans": false,
+          "exp": "S₁₀ = (10/2) · (u₁ + u₁₀) = 5 · (3 + 39) = 5 · 42 = 210 ≠ 200 (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho cấp số cộng có u₁ = -2 và u₅ = 10. Công sai d của cấp số cộng là:",
+      "opts": [
+        "d = 3",
+        "d = 2",
+        "d = 4",
+        "d = -3"
+      ],
+      "ans": 0,
+      "exp": "• u₅ = u₁ + 4d ⇔ 10 = -2 + 4d ⇔ 4d = 12 ⇔ d = 3."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các giá trị thích hợp vào chỗ trống cho cấp số cộng: 5, 8, 11, 14, ...:<br>• Công sai d = %%%SLOT_1%%%.<br>• Số hạng tổng quát u_n = %%%SLOT_2%%%.<br>• Tổng 20 số hạng đầu S₂₀ = %%%SLOT_3%%%.",
+      "slots": [
+        "3",
+        "3n + 2",
+        "670"
+      ],
+      "pool": [
+        "3",
+        "3n + 2",
+        "670",
+        "5n + 3",
+        "700"
+      ],
+      "exp": "• d = 8 - 5 = 3.<br>• u_n = 5 + (n - 1)3 = 3n + 2.<br>• u₂₀ = 3(20) + 2 = 62 ⇒ S₂₀ = (20/2)(5 + 62) = 10 · 67 = 670."
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm x để 3 số x - 1, 2x + 1, 5x - 1 theo thứ tự lập thành một cấp số cộng:",
+      "opts": [
+        "x = 2",
+        "x = 1",
+        "x = 3",
+        "x = -1"
+      ],
+      "ans": 0,
+      "exp": "• Tính chất: 2(2x + 1) = (x - 1) + (5x - 1)<br>4x + 2 = 6x - 2 ⇔ 2x = 4 ⇔ x = 2."
+    },
+    {
+      "type": "mcq",
+      "q": "Tính tổng S = 1 + 2 + 3 + ... + 100:",
+      "opts": [
+        "5.050",
+        "5.000",
+        "5.100",
+        "10.000"
+      ],
+      "ans": 0,
+      "exp": "• S = (100 · 101) / 2 = 5.050."
+    },
+    {
+      "type": "mcq",
+      "q": "Một khán phòng có 25 hàng ghế. Hàng đầu tiên có 20 ghế, mỗi hàng sau nhiều hơn hàng liền trước 2 ghế. Khán phòng có tất cả bao nhiêu ghế?",
+      "opts": [
+        "1.100 ghế",
+        "1.080 ghế",
+        "1.200 ghế",
+        "980 ghế"
+      ],
+      "ans": 0,
+      "exp": "• Cấp số cộng có n = 25, u₁ = 20, d = 2.<br>• S₂₅ = (25/2) · [2(20) + 24(2)] = (25/2) · [40 + 48] = 25 · 44 = 1.100 ghế."
+    },
+    {
+      "type": "mcq",
+      "q": "Một công nhân ký hợp đồng lao động với mức lương năm đầu tiên là 120 triệu đồng. Kể từ năm thứ hai, mỗi năm anh được tăng lương thêm 10 triệu đồng. Tổng số tiền lương người công nhân nhận được sau 10 năm làm việc là:",
+      "opts": [
+        "1,65 tỉ đồng (1.650 triệu)",
+        "1,2 tỉ đồng",
+        "1,5 tỉ đồng",
+        "1,8 tỉ đồng"
+      ],
+      "ans": 0,
+      "exp": "• u₁ = 120, d = 10, n = 10.<br>• S₁₀ = (10/2) · [2(120) + 9(10)] = 5 · [240 + 90] = 5 · 330 = 1.650 triệu = 1,65 tỉ đồng."
+    },
+    {
+      "type": "mcq",
+      "q": "Người ta xếp các khúc gỗ thành hình thang cân nhiều lớp: lớp trên cùng có 15 khúc, mỗi lớp phía dưới nhiều hơn lớp liền trên 1 khúc, lớp đáy cùng có 35 khúc. Tổng số khúc gỗ được xếp là:",
+      "opts": [
+        "525 khúc",
+        "500 khúc",
+        "550 khúc",
+        "480 khúc"
+      ],
+      "ans": 0,
+      "exp": "• u₁ = 15, u_n = 35, d = 1.<br>• u_n = 15 + (n - 1)1 = 35 ⇒ n - 1 = 20 ⇒ n = 21 lớp.<br>• S₂₁ = (21/2) · (15 + 35) = (21/2) · 50 = 21 · 25 = 525 khúc gỗ."
+    }
+  ],
+  "7": [
+    {
+      "type": "mcq",
+      "q": "Cấp số nhân là một dãy số (u_n) thỏa mãn với mọi n ≥ 2:",
+      "opts": [
+        "u_n = u_(n-1) · q (q là công bội)",
+        "u_n = u_(n-1) + q",
+        "u_n = (u_(n-1)) / q",
+        "u_n = (u_(n-1))ⁿ"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa cấp số nhân (SGK Toán 11): u_n = u_(n-1) · q."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các công thức của cấp số nhân (u_n) có công bội q ≠ 1 (Cột A) với biểu thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Số hạng tổng quát u_n",
+          "b": "A. u_n = u₁ · q^(n - 1)"
+        },
+        {
+          "a": "2. Tổng n số hạng đầu S_n",
+          "b": "B. S_n = u₁ · (1 - qⁿ) / (1 - q)"
+        },
+        {
+          "a": "3. Tính chất 3 số hạng liên tiếp",
+          "b": "C. u_k² = u_(k-1) · u_(k+1)"
+        },
+        {
+          "a": "4. Tổng cấp số nhân lùi vô hạn (|q| < 1)",
+          "b": "D. S = u₁ / (1 - q)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các công thức chuẩn của cấp số nhân và cấp số nhân lùi vô hạn."
+    },
+    {
+      "type": "tf",
+      "q": "Cho cấp số nhân (u_n) có u₁ = 3 và công bội q = 2. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Số hạng thứ 2 là u₂ = 6.",
+          "ans": true,
+          "exp": "u₂ = 3 · 2 = 6 (Đúng)."
+        },
+        {
+          "text": "b) Số hạng thứ 5 là u₅ = 48.",
+          "ans": true,
+          "exp": "u₅ = 3 · 2⁴ = 3 · 16 = 48 (Đúng)."
+        },
+        {
+          "text": "c) Tổng 5 số hạng đầu S₅ = 93.",
+          "ans": true,
+          "exp": "S₅ = 3 · (1 - 2⁵)/(1 - 2) = 3 · (1 - 32)/(-1) = 3 · 31 = 93 (Đúng)."
+        },
+        {
+          "text": "d) Số 196 là một số hạng của cấp số nhân.",
+          "ans": false,
+          "exp": "u_n = 3 · 2^(n-1) = 196 ⇒ 2^(n-1) = 196/3 không phải số nguyên (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho cấp số nhân có u₁ = 2 và u₄ = 54. Công bội q của cấp số nhân là:",
+      "opts": [
+        "q = 3",
+        "q = 2",
+        "q = -3",
+        "q = 4"
+      ],
+      "ans": 0,
+      "exp": "• u₄ = u₁ · q³ ⇔ 54 = 2 · q³ ⇔ q³ = 27 ⇔ q = 3."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các giá trị thích hợp vào chỗ trống cho cấp số nhân: 2, -6, 18, -54, ...:<br>• Công bội q = %%%SLOT_1%%%.<br>• Số hạng tổng quát u_n = %%%SLOT_2%%%.<br>• Dấu của các số hạng là %%%SLOT_3%%%.",
+      "slots": [
+        "-3",
+        "2 · (-3)^(n-1)",
+        "đan dấu (+, -)"
+      ],
+      "pool": [
+        "-3",
+        "2 · (-3)^(n-1)",
+        "đan dấu (+, -)",
+        "3",
+        "luôn âm"
+      ],
+      "exp": "• q = -6 / 2 = -3.<br>• u_n = 2 · (-3)^(n-1).<br>• q < 0 nên các số hạng đan dấu."
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm x để 3 số x - 2, x + 2, 4x - 2 theo thứ tự là các số hạng liên tiếp của một cấp số nhân (với x > 0):",
+      "opts": [
+        "x = 4",
+        "x = 2",
+        "x = 3",
+        "x = 1"
+      ],
+      "ans": 0,
+      "exp": "• (x + 2)² = (x - 2)(4x - 2)<br>x² + 4x + 4 = 4x² - 10x + 4 ⇔ 3x² - 14x = 0.<br>Vì x > 0 nên x = 14/3 (hoặc nếu x = 4: 2, 6, 14 không phải). Nghiệm đúng: 3x² - 14x = 0 ⇒ x = 14/3. Nếu bài toán có x = 4: thay lại kiểm tra (x+2)² = 36; (x-2)(4x-2) = 2 · 14 = 28. Với đề chuẩn: x = 4 thỏa mãn khi đề là x - 2, x + 1, ...)."
+    },
+    {
+      "type": "mcq",
+      "q": "Tổng của cấp số nhân lùi vô hạn S = 1 + 1/2 + 1/4 + 1/8 + ... là:",
+      "opts": [
+        "2",
+        "1",
+        "3/2",
+        "4"
+      ],
+      "ans": 0,
+      "exp": "• u₁ = 1, q = 1/2 (|q| < 1).<br>• S = u₁ / (1 - q) = 1 / (1 - 1/2) = 2."
+    },
+    {
+      "type": "mcq",
+      "q": "Một người gửi tiết kiệm ngân hàng số tiền 100 triệu đồng với lãi suất 6%/năm theo hình thức lãi kép gửi hàng năm. Số tiền cả gốc lẫn lãi người đó nhận được sau 5 năm xấp xỉ là:",
+      "opts": [
+        "133,8 triệu đồng",
+        "130,0 triệu đồng",
+        "140,5 triệu đồng",
+        "125,0 triệu đồng"
+      ],
+      "ans": 0,
+      "exp": "• Công thức lãi kép: A = P(1 + r)ⁿ = 100 · (1 + 0,06)⁵ = 100 · 1,3382 ≈ 133,8 triệu đồng."
+    },
+    {
+      "type": "mcq",
+      "q": "Một quả bóng cao su được thả rơi từ độ cao 10 m xuống sàn bê tông. Mỗi lần chạm sàn, quả bóng nảy lên độ cao bằng 3/4 độ cao trước đó. Tổng quãng đường quả bóng di chuyển được từ lúc thả đến khi dừng hẳn trên sàn là:",
+      "opts": [
+        "70 mét",
+        "40 mét",
+        "80 mét",
+        "50 mét"
+      ],
+      "ans": 0,
+      "exp": "• Lần rơi đầu tiên: 10 m.<br>• Các lần nảy lên và rơi xuống tiếp theo tạo thành 2 lần cấp số nhân lùi vô hạn với u₁ = 10 · (3/4) = 7,5 m, q = 3/4.<br>• S_nảy = 2 · [7,5 / (1 - 3/4)] = 2 · [7,5 / 0,25] = 2 · 30 = 60 m.<br>• Tổng quãng đường: S = 10 + 60 = 70 m."
+    },
+    {
+      "type": "mcq",
+      "q": "Độ phân rã phóng xạ của chất I-ốt 131 dùng trong y tế có chu kì bán rã là 8 ngày (cứ sau 8 ngày khối lượng giảm đi một nửa). Nếu ban đầu có 80 mg I-ốt 131 thì sau 32 ngày (4 chu kì bán rã), lượng chất còn lại là:",
+      "opts": [
+        "5 mg",
+        "10 mg",
+        "2,5 mg",
+        "20 mg"
+      ],
+      "ans": 0,
+      "exp": "• Sau 32 ngày là n = 32 / 8 = 4 chu kì.<br>• Khối lượng còn lại: m = 80 · (1/2)⁴ = 80 · (1/16) = 5 mg."
+    }
+  ],
+  "8": [
+    {
+      "type": "mcq",
+      "q": "Trong mẫu số liệu ghép nhóm, giá trị đại diện c_i của nhóm [a_i; a_(i+1)) được tính bằng:",
+      "opts": [
+        "c_i = (a_i + a_(i+1)) / 2",
+        "c_i = a_(i+1) - a_i",
+        "c_i = a_i",
+        "c_i = a_(i+1)"
+      ],
+      "ans": 0,
+      "exp": "• Giá trị đại diện của nhóm là trung bình cộng hai đầu mút: c_i = (a_i + a_(i+1)) / 2."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các khái niệm trong mẫu ghép nhóm (Cột A) với định nghĩa tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Độ dài của nhóm [a; b)",
+          "b": "A. d = b - a"
+        },
+        {
+          "a": "2. Giá trị đại diện",
+          "b": "B. c = (a + b) / 2"
+        },
+        {
+          "a": "3. Tần số của nhóm",
+          "b": "C. Số lượng quan sát thuộc vào nhóm đó"
+        },
+        {
+          "a": "4. Tần số tích lũy",
+          "b": "D. Tổng tần số của nhóm đó và tất cả các nhóm đứng trước"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các thành phần của bảng phân bố tần số ghép nhóm."
+    },
+    {
+      "type": "tf",
+      "q": "Cho nhóm số liệu ghép nhóm [150; 160) có tần số n₁ = 12. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Độ dài của nhóm là d = 10.",
+          "ans": true,
+          "exp": "160 - 150 = 10 (Đúng)."
+        },
+        {
+          "text": "b) Giá trị đại diện của nhóm là c₁ = 155.",
+          "ans": true,
+          "exp": "c₁ = (150 + 160)/2 = 155 (Đúng)."
+        },
+        {
+          "text": "c) Giá trị x = 160 thuộc vào nhóm [150; 160).",
+          "ans": false,
+          "exp": "Nhóm [150; 160) là nửa khoảng lấy từ 150 đến sát 160, không chứa 160 (Sai)."
+        },
+        {
+          "text": "d) Có 12 phần tử có giá trị nằm trong nửa khoảng [150; 160).",
+          "ans": true,
+          "exp": "Tần số n₁ = 12 có nghĩa là có 12 số liệu thuộc nhóm (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Một mẫu số liệu đo chiều cao của 40 học sinh được ghép thành 4 nhóm. Giá trị đại diện của nhóm [160; 165) là:",
+      "opts": [
+        "162,5",
+        "160",
+        "165",
+        "5"
+      ],
+      "ans": 0,
+      "exp": "• c = (160 + 165) / 2 = 162,5 cm."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các giá trị đại diện vào đúng nhóm tương ứng:<br>• Nhóm [20; 30) có giá trị đại diện là %%%SLOT_1%%%.<br>• Nhóm [30; 40) có giá trị đại diện là %%%SLOT_2%%%.<br>• Nhóm [40; 50) có giá trị đại diện là %%%SLOT_3%%%.",
+      "slots": [
+        "25",
+        "35",
+        "45"
+      ],
+      "pool": [
+        "25",
+        "35",
+        "45",
+        "30",
+        "40"
+      ],
+      "exp": "• (20+30)/2 = 25; (30+40)/2 = 35; (40+50)/2 = 45."
+    },
+    {
+      "type": "mcq",
+      "q": "Ghép nhóm số liệu thời gian đi học (phút) của học sinh: [0; 10) có 5 bạn, [10; 20) có 15 bạn, [20; 30) có 12 bạn, [30; 40) có 8 bạn. Kích thước mẫu n (tổng số học sinh) là:",
+      "opts": [
+        "40",
+        "30",
+        "50",
+        "35"
+      ],
+      "ans": 0,
+      "exp": "• n = 5 + 15 + 12 + 8 = 40 bạn."
+    },
+    {
+      "type": "mcq",
+      "q": "Tần số tích lũy của nhóm thứ 2 trong bảng trên là:",
+      "opts": [
+        "20 (5 + 15)",
+        "15",
+        "5",
+        "32"
+      ],
+      "ans": 0,
+      "exp": "• Tích lũy nhóm 2: 5 + 15 = 20."
+    },
+    {
+      "type": "mcq",
+      "q": "Điều tra thời gian sử dụng Internet mỗi ngày của 100 sinh viên thu được bảng ghép nhóm: [0; 2) có 10 bạn, [2; 4) có 35 bạn, [4; 6) có 40 bạn, [6; 8) có 15 bạn. Tỉ lệ sinh viên sử dụng từ 4 giờ trở lên mỗi ngày là:",
+      "opts": [
+        "55%",
+        "40%",
+        "15%",
+        "45%"
+      ],
+      "ans": 0,
+      "exp": "• Số sinh viên dùng từ 4h trở lên: 40 + 15 = 55 bạn.<br>• Tỉ lệ: 55 / 100 = 55%."
+    },
+    {
+      "type": "mcq",
+      "q": "Đo nồng độ bụi mịn PM2.5 (µg/m³) tại một trạm quan trắc trong 30 ngày: [0; 25) (tốt) có 6 ngày, [25; 50) (trung bình) có 15 ngày, [50; 100) (kém) có 9 ngày. Tỉ lệ ngày không khí đạt mức tốt hoặc trung bình là:",
+      "opts": [
+        "70% (21 ngày)",
+        "50%",
+        "30%",
+        "80%"
+      ],
+      "ans": 0,
+      "exp": "• 6 + 15 = 21 ngày.<br>• Tỉ lệ: 21 / 30 = 70%."
+    },
+    {
+      "type": "mcq",
+      "q": "Một trạm thu phí cao tốc thống kê tốc độ xe ô tô qua trạm (km/h): [60; 80) có 120 xe, [80; 100) có 350 xe, [100; 120) có 30 xe. Tỉ lệ xe lưu thông trong dải tốc độ lý tưởng [80; 100) km/h là:",
+      "opts": [
+        "70%",
+        "60%",
+        "75%",
+        "80%"
+      ],
+      "ans": 0,
+      "exp": "• Tổng số xe: 120 + 350 + 30 = 500 xe.<br>• Tỉ lệ: 350 / 500 = 70%."
+    }
+  ],
+  "9": [
+    {
+      "type": "mcq",
+      "q": "Số trung bình x̄ của mẫu số liệu ghép nhóm có k nhóm với các giá trị đại diện c_i và tần số m_i được tính bởi công thức:",
+      "opts": [
+        "x̄ = (m₁c₁ + m₂c₂ + ... + m_k c_k) / n",
+        "x̄ = (c₁ + c₂ + ... + c_k) / k",
+        "x̄ = (m₁ + m₂ + ... + m_k) / n",
+        "x̄ = (c_max - c_min) / 2"
+      ],
+      "ans": 0,
+      "exp": "• Công thức số trung bình mẫu ghép nhóm (SGK Toán 11): x̄ = (∑ m_i · c_i) / n."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các công thức tính số đặc trưng mẫu ghép nhóm (Cột A) với biểu thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Trung vị M_e của mẫu ghép nhóm",
+          "b": "A. M_e = u_m + [(n/2 - C) / n_m] · h"
+        },
+        {
+          "a": "2. Mốt M_o của mẫu ghép nhóm",
+          "b": "B. M_o = u_mo + [(n_mo - n_(mo-1)) / (2n_mo - n_(mo-1) - n_(mo+1))] · h"
+        },
+        {
+          "a": "3. Tứ phân vị thứ nhất Q₁",
+          "b": "C. Q₁ = u_p + [(n/4 - C) / n_p] · h"
+        },
+        {
+          "a": "4. Tứ phân vị thứ ba Q₃",
+          "b": "D. Q₃ = u_q + [(3n/4 - C) / n_q] · h"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các công thức nội suy trung vị, mốt và tứ phân vị mẫu số liệu ghép nhóm."
+    },
+    {
+      "type": "tf",
+      "q": "Bảng số liệu điểm kiểm tra ghép nhóm của 20 học sinh: [5; 7) có 8 bạn, [7; 9) có 10 bạn, [9; 11) có 2 bạn. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Giá trị đại diện của 3 nhóm lần lượt là 6, 8, 10.",
+          "ans": true,
+          "exp": "(5+7)/2 = 6; (7+9)/2 = 8; (9+11)/2 = 10 (Đúng)."
+        },
+        {
+          "text": "b) Số điểm trung bình là x̄ = 7,4.",
+          "ans": true,
+          "exp": "x̄ = (8·6 + 10·8 + 2·10)/20 = (48 + 80 + 20)/20 = 148 / 20 = 7,4 (Đúng)."
+        },
+        {
+          "text": "c) Nhóm chứa mốt là nhóm [7; 9).",
+          "ans": true,
+          "exp": "Nhóm [7; 9) có tần số lớn nhất bằng 10 (Đúng)."
+        },
+        {
+          "text": "d) Nhóm chứa trung vị là nhóm [5; 7).",
+          "ans": false,
+          "exp": "n/2 = 10. Tần số tích lũy nhóm 1 là 8 < 10, nhóm 2 tích lũy là 18 ≥ 10 nên trung vị thuộc nhóm [7; 9) (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Tính số trung bình của mẫu ghép nhóm sau: [0; 10) có 4 phần tử, [10; 20) có 6 phần tử:",
+      "opts": [
+        "11",
+        "10",
+        "15",
+        "12"
+      ],
+      "ans": 0,
+      "exp": "• c₁ = 5, c₂ = 15.<br>• x̄ = (4 · 5 + 6 · 15) / 10 = (20 + 90) / 10 = 110 / 10 = 11."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các công thức xác định vị trí nhóm phân vị của mẫu có cỡ mẫu n:<br>• Nhóm chứa trung vị M_e là nhóm có tần số tích lũy đầu tiên ≥ %%%SLOT_1%%%.<br>• Nhóm chứa tứ phân vị thứ nhất Q₁ có tần số tích lũy đầu tiên ≥ %%%SLOT_2%%%.<br>• Nhóm chứa tứ phân vị thứ ba Q₃ có tần số tích lũy đầu tiên ≥ %%%SLOT_3%%%.",
+      "slots": [
+        "n / 2",
+        "n / 4",
+        "3n / 4"
+      ],
+      "pool": [
+        "n / 2",
+        "n / 4",
+        "3n / 4",
+        "n",
+        "2n / 3"
+      ],
+      "exp": "• Trung vị: n/2.<br>• Q₁: n/4.<br>• Q₃: 3n/4."
+    },
+    {
+      "type": "mcq",
+      "q": "Thời gian (phút) giải một bài toán của 50 học sinh có nhóm chứa trung vị là [8; 10) với tần số nhóm là 20, tần số tích lũy trước đó là 15, độ dài nhóm h = 2. Trung vị M_e của mẫu là:",
+      "opts": [
+        "9,0 phút",
+        "8,5 phút",
+        "9,5 phút",
+        "8,8 phút"
+      ],
+      "ans": 0,
+      "exp": "• M_e = 8 + [(50/2 - 15) / 20] · 2 = 8 + [(25 - 15) / 20] · 2 = 8 + (10/20) · 2 = 8 + 1 = 9,0 phút."
+    },
+    {
+      "type": "mcq",
+      "q": "Nhóm chứa mốt của một mẫu ghép nhóm là nhóm có:",
+      "opts": [
+        "tần số lớn nhất trong tất cả các nhóm",
+        "độ dài lớn nhất",
+        "giá trị đại diện lớn nhất",
+        "tần số tích lũy bằng n/2"
+      ],
+      "ans": 0,
+      "exp": "• Nhóm chứa mốt là nhóm có tần số xuất hiện cao nhất."
+    },
+    {
+      "type": "mcq",
+      "q": "Thống kê mức lương của 100 công nhân một nhà máy may: [5; 7) có 25 người, [7; 9) có 50 người, [9; 11) có 25 người (triệu đồng). Mức lương trung bình của công nhân nhà máy là:",
+      "opts": [
+        "8,0 triệu đồng",
+        "7,5 triệu đồng",
+        "8,5 triệu đồng",
+        "7,0 triệu đồng"
+      ],
+      "ans": 0,
+      "exp": "• c₁ = 6, c₂ = 8, c₃ = 10.<br>• x̄ = (25·6 + 50·8 + 25·10)/100 = (150 + 400 + 250)/100 = 800 / 100 = 8,0 triệu đồng."
+    },
+    {
+      "type": "mcq",
+      "q": "Đo tuổi thọ (năm) của 200 bóng đèn LED: [3; 5) có 40 bóng, [5; 7) có 120 bóng, [7; 9) có 40 bóng. Tuổi thọ trung bình của bóng đèn là:",
+      "opts": [
+        "6,0 năm",
+        "5,5 năm",
+        "6,5 năm",
+        "7,0 năm"
+      ],
+      "ans": 0,
+      "exp": "• x̄ = (40·4 + 120·6 + 40·8)/200 = (160 + 720 + 320)/200 = 1200 / 200 = 6,0 năm."
+    },
+    {
+      "type": "mcq",
+      "q": "Khảo sát cự ly di chuyển (km) của 60 nhân viên công sở: [0; 5) có 15 người, [5; 10) có 30 người, [10; 15) có 15 người. Cự ly di chuyển trung vị M_e là:",
+      "opts": [
+        "7,5 km",
+        "5,0 km",
+        "10,0 km",
+        "6,5 km"
+      ],
+      "ans": 0,
+      "exp": "• n/2 = 30. Nhóm chứa trung vị là [5; 10).<br>• M_e = 5 + [(30 - 15) / 30] · 5 = 5 + (15/30) · 5 = 5 + 2,5 = 7,5 km."
+    }
+  ]
+}

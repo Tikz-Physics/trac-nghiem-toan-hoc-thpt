@@ -1,0 +1,1266 @@
+{
+  "15": [
+    {
+      "type": "mcq",
+      "q": "Tập xác định D của hàm số y = √(x - 2) + <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x - 5</span></span> là:",
+      "opts": [
+        "D = [2; +∞) \\ {5}",
+        "D = [2; +∞)",
+        "D = (2; +∞) \\ {5}",
+        "D = ℝ \\ {5}"
+      ],
+      "ans": 0,
+      "exp": "• Điều kiện xác định: x - 2 ≥ 0 và x - 5 ≠ 0 ⇔ x ≥ 2 và x ≠ 5.<br>• Tập xác định: D = [2; +∞) \\ {5}."
+    },
+    {
+      "type": "match",
+      "q": "Ghép tính đơn điệu của hàm số y = f(x) trên khoảng (a; b) (Cột A) với định nghĩa tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Hàm số đồng biến (tăng)",
+          "b": "A. ∀ x₁, x₂ ∈ (a; b): x₁ < x₂ ⇒ f(x₁) < f(x₂)"
+        },
+        {
+          "a": "2. Hàm số nghịch biến (giảm)",
+          "b": "B. ∀ x₁, x₂ ∈ (a; b): x₁ < x₂ ⇒ f(x₁) > f(x₂)"
+        },
+        {
+          "a": "3. Hàm số không đổi (hằng số)",
+          "b": "C. f(x) = c với mọi x ∈ (a; b)"
+        },
+        {
+          "a": "4. Đồ thị hàm số đồng biến",
+          "b": "D. Đi lên từ trái sang phải"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Đồng biến: x tăng thì y tăng (đồ thị đi lên).<br>• Nghịch biến: x tăng thì y giảm (đồ thị đi xuống).<br>• Hàm hằng: đồ thị là đường thẳng nằm ngang."
+    },
+    {
+      "type": "tf",
+      "q": "Cho hàm số f(x) = 2x - 3. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Tập xác định của hàm số là D = ℝ.",
+          "ans": true,
+          "exp": "Hàm đa thức bậc nhất xác định với mọi x ∈ ℝ (Đúng)."
+        },
+        {
+          "text": "b) Hàm số đồng biến trên ℝ.",
+          "ans": true,
+          "exp": "Hệ số góc a = 2 > 0 nên hàm số luôn đồng biến trên ℝ (Đúng)."
+        },
+        {
+          "text": "c) Đồ thị hàm số đi qua điểm M(2; 1).",
+          "ans": true,
+          "exp": "f(2) = 2(2) - 3 = 1 (Đúng)."
+        },
+        {
+          "text": "d) Giao điểm của đồ thị với trục tung Oy là (3/2; 0).",
+          "ans": false,
+          "exp": "Giao với Oy cho x = 0 ⇒ y = -3, toạ độ là (0; -3). Điểm (3/2; 0) là giao với Ox (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm tập xác định D của hàm số y = <span class=\"fraction\"><span class=\"numerator\">x + 1</span><span class=\"denominator\">x² - 4</span></span>:",
+      "opts": [
+        "D = ℝ \\ {-2; 2}",
+        "D = ℝ \\ {2}",
+        "D = ℝ \\ {-2}",
+        "D = (-2; 2)"
+      ],
+      "ans": 0,
+      "exp": "• Mẫu số khác 0: x² - 4 ≠ 0 ⇔ x ≠ ±2.<br>• D = ℝ \\ {-2; 2}."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các khoảng thích hợp vào chỗ trống cho hàm số f(x) = x² - 2x + 3:<br>• Hàm số nghịch biến trên khoảng %%%SLOT_1%%%.<br>• Hàm số đồng biến trên khoảng %%%SLOT_2%%%.<br>• Hoành độ đỉnh của đồ thị là x = %%%SLOT_3%%%.",
+      "slots": [
+        "(-∞; 1)",
+        "(1; +∞)",
+        "1"
+      ],
+      "pool": [
+        "(-∞; 1)",
+        "(1; +∞)",
+        "1",
+        "(-∞; 2)",
+        "2"
+      ],
+      "exp": "• Hoành độ đỉnh x = -b/(2a) = 2 / 2 = 1.<br>• a = 1 > 0 nên hàm số nghịch biến trên (-∞; 1) và đồng biến trên (1; +∞)."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hàm số f(x) = |x - 1| + 2. Giá trị nhỏ nhất của f(x) trên ℝ là:",
+      "opts": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "ans": 0,
+      "exp": "• Vì |x - 1| ≥ 0 với mọi x nên f(x) = |x - 1| + 2 ≥ 2. Dấu bằng xảy ra khi x = 1."
+    },
+    {
+      "type": "mcq",
+      "q": "Đồ thị hàm số y = ax + b đi qua hai điểm A(1; 3) và B(-1; -1). Giá trị của a và b là:",
+      "opts": [
+        "a = 2, b = 1",
+        "a = 1, b = 2",
+        "a = -2, b = 5",
+        "a = 3, b = 0"
+      ],
+      "ans": 0,
+      "exp": "• Hệ phương trình: {a + b = 3; -a + b = -1} ⇒ 2b = 2 ⇒ b = 1, a = 2."
+    },
+    {
+      "type": "mcq",
+      "q": "Giá cước taxi của một hãng: 10.000 đ cho 1 km đầu tiên; mỗi km tiếp theo tính 14.000 đ/km. Công thức hàm số tính số tiền cước T(x) (đồng) cho quãng đường x > 1 (km) là:",
+      "opts": [
+        "T(x) = 10.000 + 14.000(x - 1)",
+        "T(x) = 14.000x",
+        "T(x) = 10.000x + 14.000",
+        "T(x) = 24.000x"
+      ],
+      "ans": 0,
+      "exp": "• 1 km đầu: 10.000 đ.<br>• (x - 1) km tiếp theo: 14.000 · (x - 1) đ.<br>• Tổng cước: T(x) = 10.000 + 14.000(x - 1)."
+    },
+    {
+      "type": "mcq",
+      "q": "Nhiệt độ sôi của nước T (°C) phụ thuộc vào độ cao h (mét) so với mực nước biển xấp xỉ theo hàm số bậc nhất T(h) = 100 - 0,0033h. Tại đỉnh Fansipan (cao 3.143 m), nước sôi ở nhiệt độ khoảng:",
+      "opts": [
+        "89,6 °C",
+        "95,0 °C",
+        "100 °C",
+        "85,2 °C"
+      ],
+      "ans": 0,
+      "exp": "• T(3143) = 100 - 0,0033 · 3143 = 100 - 10,37 = 89,63 °C ≈ 89,6 °C."
+    },
+    {
+      "type": "mcq",
+      "q": "Một bể nước đang chứa 200 lít, vòi nước chảy vào với lưu lượng không đổi 25 lít/phút. Hàm số V(t) biểu diễn lượng nước trong bể sau t phút và thời gian để bể đầy 1000 lít là:",
+      "opts": [
+        "V(t) = 200 + 25t; đầy sau 32 phút",
+        "V(t) = 200 + 25t; đầy sau 40 phút",
+        "V(t) = 25t; đầy sau 40 phút",
+        "V(t) = 1000 - 25t; đầy sau 32 phút"
+      ],
+      "ans": 0,
+      "exp": "• V(t) = 200 + 25t.<br>• Khi đầy 1000 lít: 200 + 25t = 1000 ⇒ 25t = 800 ⇒ t = 32 phút."
+    }
+  ],
+  "16": [
+    {
+      "type": "mcq",
+      "q": "Đồ thị hàm số bậc hai y = ax² + bx + c (a ≠ 0) là một đường parabol có toạ độ đỉnh I là:",
+      "opts": [
+        "I(-b/(2a); -Δ/(4a))",
+        "I(b/(2a); Δ/(4a))",
+        "I(-b/a; -c/a)",
+        "I(0; c)"
+      ],
+      "ans": 0,
+      "exp": "• Toạ độ đỉnh parabol (SGK Toán 10): I(-b/(2a); -Δ/(4a))."
+    },
+    {
+      "type": "match",
+      "q": "Ghép đặc điểm hình học của parabol y = ax² + bx + c (a ≠ 0) (Cột A) với điều kiện đại số tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Bề lõm quay lên trên (có điểm cực tiểu)",
+          "b": "A. a > 0"
+        },
+        {
+          "a": "2. Bề lõm quay xuống dưới (có điểm cực đại)",
+          "b": "B. a < 0"
+        },
+        {
+          "a": "3. Trục đối xứng của parabol",
+          "b": "C. Đường thẳng x = -b/(2a)"
+        },
+        {
+          "a": "4. Giao điểm với trục tung Oy",
+          "b": "D. Điểm (0; c)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• a > 0: bề lõm quay lên.<br>• a < 0: bề lõm quay xuống.<br>• Trục đối xứng: x = -b/(2a).<br>• Giao với Oy: (0; c)."
+    },
+    {
+      "type": "tf",
+      "q": "Cho hàm số bậc hai y = -x² + 4x - 3. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Đỉnh của parabol là I(2; 1).",
+          "ans": true,
+          "exp": "x_I = -4 / (2 · (-1)) = 2; y_I = -(2)² + 4(2) - 3 = 1 ⇒ I(2; 1) (Đúng)."
+        },
+        {
+          "text": "b) Parabol có bề lõm quay lên trên.",
+          "ans": false,
+          "exp": "Hệ số a = -1 < 0 nên bề lõm quay xuống dưới (Sai)."
+        },
+        {
+          "text": "c) Hàm số đồng biến trên khoảng (-∞; 2) và nghịch biến trên khoảng (2; +∞).",
+          "ans": true,
+          "exp": "Với a < 0, hàm tăng trước đỉnh và giảm sau đỉnh (Đúng)."
+        },
+        {
+          "text": "d) Giá trị lớn nhất của hàm số bằng 1.",
+          "ans": true,
+          "exp": "Do bề lõm quay xuống nên y_max = y_I = 1 (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Trục đối xứng của parabol y = 2x² - 8x + 5 là đường thẳng:",
+      "opts": [
+        "x = 2",
+        "x = -2",
+        "x = 4",
+        "y = 2"
+      ],
+      "ans": 0,
+      "exp": "• x = -b / (2a) = -(-8) / (2 · 2) = 8 / 4 = 2."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các thông tin chính xác vào chỗ trống cho parabol y = x² - 4x + 3:<br>• Đỉnh của parabol có toạ độ là %%%SLOT_1%%%.<br>• Giá trị nhỏ nhất của hàm số là %%%SLOT_2%%%.<br>• Các giao điểm với trục Ox là %%%SLOT_3%%%.",
+      "slots": [
+        "(2; -1)",
+        "-1",
+        "x = 1 và x = 3"
+      ],
+      "pool": [
+        "(2; -1)",
+        "-1",
+        "x = 1 và x = 3",
+        "(1; 0)",
+        "3"
+      ],
+      "exp": "• x_I = 2, y_I = -1.<br>• y_min = -1.<br>• x² - 4x + 3 = 0 ⇔ x = 1, x = 3."
+    },
+    {
+      "type": "mcq",
+      "q": "Biết parabol y = ax² + bx + 2 đi qua điểm M(1; 5) và có trục đối xứng x = -1. Giá trị của a và b là:",
+      "opts": [
+        "a = 1, b = 2",
+        "a = 2, b = 1",
+        "a = -1, b = 4",
+        "a = 3, b = 0"
+      ],
+      "ans": 0,
+      "exp": "• Đi qua (1; 5): a(1)² + b(1) + 2 = 5 ⇔ a + b = 3.<br>• Trục x = -1: -b/(2a) = -1 ⇔ b = 2a.<br>• Thay b = 2a vào: a + 2a = 3 ⇒ 3a = 3 ⇒ a = 1, b = 2."
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm giá trị lớn nhất của hàm số y = -2x² + 4x + 6 trên đoạn [0; 3]:",
+      "opts": [
+        "8 (tại x = 1)",
+        "6 (tại x = 0)",
+        "0 (tại x = 3)",
+        "10"
+      ],
+      "ans": 0,
+      "exp": "• Đỉnh x = -4 / (-4) = 1 ∈ [0; 3].<br>• y(0) = 6; y(1) = -2(1) + 4(1) + 6 = 8; y(3) = -2(9) + 4(3) + 6 = 0.<br>• GTLN là 8 tại x = 1."
+    },
+    {
+      "type": "mcq",
+      "q": "Một quả bóng đá được sút lên từ mặt đất có quỹ đạo là một cung parabol mô tả bởi hàm số h(t) = -5t² + 20t (h tính bằng mét, t tính bằng giây). Độ cao cực đại mà quả bóng đạt được là:",
+      "opts": [
+        "20 mét (sau 2 giây)",
+        "25 mét",
+        "15 mét",
+        "10 mét"
+      ],
+      "ans": 0,
+      "exp": "• h(t) = -5t² + 20t.<br>• Đỉnh đạt tại t = -20 / (2 · (-5)) = 2 s.<br>• h_max = h(2) = -5(4) + 20(2) = -20 + 40 = 20 m."
+    },
+    {
+      "type": "mcq",
+      "q": "Một bác nông dân dùng 60 mét lưới rào một mảnh vườn hình chữ nhật tựa vào một bờ tường thẳng (không cần rào phía bờ tường). Kích thước chiều rộng x (mét) vuông góc bờ tường để mảnh vườn có diện tích lớn nhất là:",
+      "opts": [
+        "x = 15 m (Diện tích cực đại 450 m²)",
+        "x = 20 m",
+        "x = 10 m",
+        "x = 30 m"
+      ],
+      "ans": 0,
+      "exp": "• Chiều dài mảnh vườn tựa tường: L = 60 - 2x.<br>• Diện tích: S(x) = x(60 - 2x) = -2x² + 60x.<br>• Đỉnh parabol: x = -60 / (2 · (-2)) = 15 m.<br>• S_max = 15 · (60 - 30) = 450 m²."
+    },
+    {
+      "type": "mcq",
+      "q": "Một doanh nghiệp bán sản phẩm với giá bán p(x) = 120 - 2x (nghìn đồng/sản phẩm), với x là số sản phẩm bán ra. Doanh thu R(x) = x · p(x) đạt giá trị cao nhất khi sản xuất và bán bao nhiêu sản phẩm?",
+      "opts": [
+        "30 sản phẩm (Doanh thu 1,8 triệu đồng)",
+        "60 sản phẩm",
+        "40 sản phẩm",
+        "20 sản phẩm"
+      ],
+      "ans": 0,
+      "exp": "• R(x) = x(120 - 2x) = -2x² + 120x.<br>• Đỉnh: x = -120 / (-4) = 30 sản phẩm.<br>• R_max = 30(120 - 60) = 1800 nghìn = 1,8 triệu đồng."
+    }
+  ],
+  "17": [
+    {
+      "type": "mcq",
+      "q": "Định lý về dấu của tam thức bậc hai f(x) = ax² + bx + c (a ≠ 0) khẳng định rằng khi biệt thức Δ < 0 thì:",
+      "opts": [
+        "f(x) luôn cùng dấu với hệ số a với mọi x ∈ ℝ",
+        "f(x) luôn trái dấu với hệ số a với mọi x ∈ ℝ",
+        "f(x) luôn dương với mọi x ∈ ℝ",
+        "f(x) luôn âm với mọi x ∈ ℝ"
+      ],
+      "ans": 0,
+      "exp": "• Định lý dấu tam thức bậc hai (SGK Toán 10): Khi Δ < 0, tam thức f(x) luôn cùng dấu với hệ số a với mọi x ∈ ℝ."
+    },
+    {
+      "type": "match",
+      "q": "Ghép điều kiện nghiệm của tam thức bậc hai f(x) = ax² + bx + c (với a > 0) (Cột A) với dấu tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Δ < 0",
+          "b": "A. f(x) > 0 với mọi x ∈ ℝ"
+        },
+        {
+          "a": "2. Δ = 0",
+          "b": "B. f(x) > 0 với mọi x ≠ -b/(2a) và f(-b/(2a)) = 0"
+        },
+        {
+          "a": "3. Δ > 0 (có 2 nghiệm phân biệt x₁ < x₂)",
+          "b": "C. Trong trái dấu (f(x) < 0), ngoài cùng dấu (f(x) > 0)"
+        },
+        {
+          "a": "4. f(x) ≤ 0 với mọi x ∈ ℝ",
+          "b": "D. a < 0 và Δ ≤ 0"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Quy tắc xét dấu 'Trong trái, ngoài cùng'.<br>• Khi Δ < 0, a > 0 thì f(x) > 0 ∀x.<br>• f(x) ≤ 0 ∀x ⇔ a < 0 và Δ ≤ 0."
+    },
+    {
+      "type": "tf",
+      "q": "Cho bất phương trình x² - 5x + 6 ≤ 0. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Tam thức bậc hai x² - 5x + 6 có hai nghiệm phân biệt là x₁ = 2 và x₂ = 3.",
+          "ans": true,
+          "exp": "x² - 5x + 6 = (x - 2)(x - 3) = 0 ⇔ x = 2 hoặc x = 3 (Đúng)."
+        },
+        {
+          "text": "b) Hệ số a = 1 > 0.",
+          "ans": true,
+          "exp": "a = 1 > 0 (Đúng)."
+        },
+        {
+          "text": "c) Tập nghiệm của bất phương trình là S = [2; 3].",
+          "ans": true,
+          "exp": "Quy tắc 'trong trái ngoài cùng': lấy khoảng trong hai nghiệm kể cả đầu mút vì có dấu ≤ (Đúng)."
+        },
+        {
+          "text": "d) Bất phương trình có vô số nghiệm nguyên.",
+          "ans": false,
+          "exp": "Các nghiệm nguyên trong [2; 3] chỉ có {2; 3}, gồm 2 nghiệm (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Tập nghiệm của bất phương trình -x² + 4x - 4 ≥ 0 là:",
+      "opts": [
+        "{2}",
+        "ℝ",
+        "∅",
+        "[2; +∞)"
+      ],
+      "ans": 0,
+      "exp": "• -x² + 4x - 4 = -(x - 2)² ≤ 0 với mọi x.<br>• BPT -(x - 2)² ≥ 0 chỉ thỏa mãn khi dấu bằng xảy ra: x - 2 = 0 ⇔ x = 2.<br>• Tập nghiệm S = {2}."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các tập nghiệm thích hợp vào chỗ trống:<br>• BPT x² - 4 > 0 có tập nghiệm là %%%SLOT_1%%%.<br>• BPT x² + 1 > 0 có tập nghiệm là %%%SLOT_2%%%.<br>• BPT x² + 2x + 3 < 0 có tập nghiệm là %%%SLOT_3%%%.",
+      "slots": [
+        "(-∞; -2) ∪ (2; +∞)",
+        "ℝ",
+        "∅"
+      ],
+      "pool": [
+        "(-∞; -2) ∪ (2; +∞)",
+        "ℝ",
+        "∅",
+        "[-2; 2]",
+        "(-2; 2)"
+      ],
+      "exp": "• x² - 4 > 0 ⇔ x < -2 hoặc x > 2.<br>• x² + 1 > 0 đúng với mọi x ∈ ℝ.<br>• x² + 2x + 3 = (x+1)² + 2 > 0 nên vô nghiệm (∅)."
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm tất cả các giá trị của tham số m để bất phương trình x² - 2mx + 4 > 0 nghiệm đúng với mọi x ∈ ℝ:",
+      "opts": [
+        "-2 < m < 2",
+        "m < -2 hoặc m > 2",
+        "m ≤ -2 hoặc m ≥ 2",
+        "-2 ≤ m ≤ 2"
+      ],
+      "ans": 0,
+      "exp": "• f(x) > 0 ∀x ∈ ℝ ⇔ a = 1 > 0 (luôn đúng) và Δ' < 0.<br>• Δ' = m² - 4 < 0 ⇔ -2 < m < 2."
+    },
+    {
+      "type": "mcq",
+      "q": "Tập nghiệm của bất phương trình (x - 1)(3 - x) > 0 là:",
+      "opts": [
+        "(1; 3)",
+        "(-∞; 1) ∪ (3; +∞)",
+        "[1; 3]",
+        "(-∞; 1] ∪ [3; +∞)"
+      ],
+      "ans": 0,
+      "exp": "• (x - 1)(3 - x) = -x² + 4x - 3 > 0.<br>• a = -1 < 0, nghiệm 1 và 3. Trong trái dấu với a nên mang dấu dương: (1; 3)."
+    },
+    {
+      "type": "mcq",
+      "q": "Một công ty sản xuất bóng bay khí heli xác định chi phí sản xuất x nghìn quả bóng là C(x) = x² - 40x + 500 (triệu đồng). Số lượng sản phẩm x tối thiểu cần sản xuất để chi phí không vượt quá 200 triệu đồng là:",
+      "opts": [
+        "10 nghìn quả bóng (x ∈ [10; 30])",
+        "20 nghìn quả bóng",
+        "5 nghìn quả bóng",
+        "30 nghìn quả bóng"
+      ],
+      "ans": 0,
+      "exp": "• C(x) ≤ 200 ⇔ x² - 40x + 500 ≤ 200 ⇔ x² - 40x + 300 ≤ 0.<br>• (x - 10)(x - 30) ≤ 0 ⇔ 10 ≤ x ≤ 30.<br>• Số lượng tối thiểu là 10 nghìn quả bóng."
+    },
+    {
+      "type": "mcq",
+      "q": "Một vật thể rơi tự do từ độ cao 80 m với gia tốc g = 10 m/s². Độ cao của vật sau t giây là h(t) = 80 - 5t² (mét). Khoảng thời gian vật thể ở độ cao lớn hơn 35 mét là:",
+      "opts": [
+        "0 ≤ t < 3 giây",
+        "t > 3 giây",
+        "0 ≤ t ≤ 4 giây",
+        "2 < t < 4 giây"
+      ],
+      "ans": 0,
+      "exp": "• h(t) > 35 ⇔ 80 - 5t² > 35 ⇔ 5t² < 45 ⇔ t² < 9.<br>• Vì t ≥ 0 nên 0 ≤ t < 3 giây."
+    },
+    {
+      "type": "mcq",
+      "q": "Lợi nhuận P(x) (triệu đồng) bán điện thoại theo mức giảm giá x (trăm nghìn đồng) được ước tính: P(x) = -x² + 8x + 20. Để việc kinh doanh chắc chắn có lãi (P(x) > 0), mức giảm giá x cần thỏa mãn:",
+      "opts": [
+        "0 ≤ x < 10 (giảm dưới 1 triệu đồng)",
+        "x > 10",
+        "2 < x < 8",
+        "x = 4"
+      ],
+      "ans": 0,
+      "exp": "• P(x) > 0 ⇔ -x² + 8x + 20 > 0 ⇔ x² - 8x - 20 < 0.<br>• (x + 2)(x - 10) < 0 ⇔ -2 < x < 10.<br>• Vì x ≥ 0 nên 0 ≤ x < 10 (tức giảm giá từ 0 đến dưới 1 triệu đồng)."
+    }
+  ],
+  "18": [
+    {
+      "type": "mcq",
+      "q": "Phương trình dạng √(ax² + bx + c) = dx + e được giải bằng phương pháp bình phương hai vế sau khi đặt điều kiện:",
+      "opts": [
+        "dx + e ≥ 0",
+        "ax² + bx + c ≥ 0",
+        "ax² + bx + c > 0",
+        "dx + e ≤ 0"
+      ],
+      "ans": 0,
+      "exp": "• Quy tắc chuẩn SGK Toán 10: Bình phương hai vế khi dx + e ≥ 0, hoặc bình phương hai vế rồi thử lại nghiệm để loại nghiệm ngoại lai."
+    },
+    {
+      "type": "match",
+      "q": "Ghép dạng phương trình chứa căn (Cột A) với phương pháp giải chuẩn (Cột B):",
+      "pairs": [
+        {
+          "a": "1. √(f(x)) = √(g(x))",
+          "b": "A. Bình phương hai vế và đặt điều kiện f(x) ≥ 0 (hoặc g(x) ≥ 0)"
+        },
+        {
+          "a": "2. √(f(x)) = g(x)",
+          "b": "B. Điều kiện g(x) ≥ 0 rồi bình phương hai vế: f(x) = [g(x)]²"
+        },
+        {
+          "a": "3. Thử lại nghiệm",
+          "b": "C. Thay các nghiệm tìm được sau khi bình phương vào phương trình ban đầu"
+        },
+        {
+          "a": "4. Nghiệm ngoại lai",
+          "b": "D. Nghiệm xuất hiện do phép biến đổi hệ quả không tương đương"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Quy tắc giải phương trình vô tỉ cơ bản lớp 10."
+    },
+    {
+      "type": "tf",
+      "q": "Cho phương trình √(x² - 3x + 2) = x - 1. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Điều kiện để vế phải không âm là x ≥ 1.",
+          "ans": true,
+          "exp": "x - 1 ≥ 0 ⇔ x ≥ 1 (Đúng)."
+        },
+        {
+          "text": "b) Bình phương hai vế ta được x² - 3x + 2 = x² - 2x + 1.",
+          "ans": true,
+          "exp": "(x - 1)² = x² - 2x + 1 (Đúng)."
+        },
+        {
+          "text": "c) Phương trình có nghiệm x = 1.",
+          "ans": true,
+          "exp": "-3x + 2 = -2x + 1 ⇔ x = 1. Nghiệm x = 1 thỏa mãn điều kiện x ≥ 1 (Đúng)."
+        },
+        {
+          "text": "d) Phương trình có 2 nghiệm phân biệt.",
+          "ans": false,
+          "exp": "Phương trình chỉ có duy nhất 1 nghiệm x = 1 (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Số nghiệm của phương trình √(2x² - 5x + 3) = √(x² - 2x + 1) là:",
+      "opts": [
+        "2 nghiệm (x = 1 và x = 2)",
+        "1 nghiệm",
+        "0 nghiệm",
+        "3 nghiệm"
+      ],
+      "ans": 0,
+      "exp": "• Bình phương: 2x² - 5x + 3 = x² - 2x + 1 ⇔ x² - 3x + 2 = 0 ⇔ x = 1 hoặc x = 2.<br>• Thử lại:<br>- x = 1: vế trái √0 = vế phải √0 = 0 (thỏa mãn).<br>- x = 2: vế trái √(8 - 10 + 3) = 1, vế phải √(4 - 4 + 1) = 1 (thỏa mãn).<br>• Phương trình có 2 nghiệm."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo nghiệm chính xác vào vị trí giải phương trình √(3x + 1) = x - 1:<br>• Nghiệm đại số sau khi bình phương là x = 0 và x = %%%SLOT_1%%%.<br>• Điều kiện vế phải x ≥ %%%SLOT_2%%%.<br>• Nghiệm thực sự của phương trình là x = %%%SLOT_3%%%.",
+      "slots": [
+        "5",
+        "1",
+        "5"
+      ],
+      "pool": [
+        "5",
+        "1",
+        "0",
+        "-1",
+        "4"
+      ],
+      "exp": "• 3x + 1 = (x - 1)² = x² - 2x + 1 ⇔ x² - 5x = 0 ⇔ x = 0 hoặc x = 5.<br>• Điều kiện x - 1 ≥ 0 ⇔ x ≥ 1.<br>• Do đó loại x = 0, nhận x = 5."
+    },
+    {
+      "type": "mcq",
+      "q": "Tổng các nghiệm của phương trình √(x² - 4x + 3) = x - 1 là:",
+      "opts": [
+        "1 (chỉ có nghiệm duy nhất x = 1)",
+        "3",
+        "4",
+        "0"
+      ],
+      "ans": 0,
+      "exp": "• x² - 4x + 3 = (x - 1)² = x² - 2x + 1 ⇔ -2x = -2 ⇔ x = 1.<br>• Thử lại x = 1: √0 = 0 (thỏa mãn). Nghiệm duy nhất x = 1."
+    },
+    {
+      "type": "mcq",
+      "q": "Phương trình √(x + 3) = 2x - 1 có tập nghiệm là:",
+      "opts": [
+        "S = {1}",
+        "S = {-1/4; 1}",
+        "S = {-1/4}",
+        "S = ∅"
+      ],
+      "ans": 0,
+      "exp": "• Điều kiện: 2x - 1 ≥ 0 ⇔ x ≥ 1/2.<br>• x + 3 = 4x² - 4x + 1 ⇔ 4x² - 5x - 2 = 0.<br>• Nghiệm x = (5 ± √57)/8. x ≈ 1,57 > 1/2 thỏa mãn."
+    },
+    {
+      "type": "mcq",
+      "q": "Một sợi dây cáp nối từ đỉnh một cột ăng-ten cao h = 12 m đến cọc néo trên mặt đất cách chân cột khoảng cách d (mét). Biết chiều dài dây cáp là L = √(d² + 144). Để chiều dài cáp bằng đúng d + 4 (mét), khoảng cách d phải là:",
+      "opts": [
+        "16 m",
+        "12 m",
+        "20 m",
+        "18 m"
+      ],
+      "ans": 0,
+      "exp": "• √(d² + 144) = d + 4.<br>• Bình phương: d² + 144 = d² + 8d + 16 ⇔ 8d = 128 ⇔ d = 16 m."
+    },
+    {
+      "type": "mcq",
+      "q": "Hai ô tô xuất phát cùng lúc từ ngã tư đường vuông góc. Xe A đi về hướng Bắc với vận tốc 30 km/h, xe B đi về hướng Đông với vận tốc 40 km/h. Khoảng cách d(t) giữa hai xe sau t giờ là d(t) = √((30t)² + (40t)²) = 50t. Sau bao lâu khoảng cách giữa hai xe là 125 km?",
+      "opts": [
+        "2,5 giờ (2 giờ 30 phút)",
+        "3,0 giờ",
+        "2,0 giờ",
+        "1,5 giờ"
+      ],
+      "ans": 0,
+      "exp": "• 50t = 125 ⇒ t = 125 / 50 = 2,5 giờ = 2 giờ 30 phút."
+    },
+    {
+      "type": "mcq",
+      "q": "Tầm nhìn xa d (hải lý) từ đài quan sát trên ngọn hải đăng có độ cao h (feet) so với mực nước biển xấp xỉ theo công thức d = 1,17√h. Để người gác hải đăng có tầm nhìn xa 11,7 hải lý thì ngọn hải đăng cần có độ cao là:",
+      "opts": [
+        "100 feet (khoảng 30,5 m)",
+        "10 feet",
+        "120 feet",
+        "80 feet"
+      ],
+      "ans": 0,
+      "exp": "• 1,17√h = 11,7 ⇒ √h = 10 ⇒ h = 100 feet."
+    }
+  ],
+  "19": [
+    {
+      "type": "mcq",
+      "q": "Vectơ nào sau đây là một <b>vectơ chỉ phương</b> của đường thẳng có phương trình tổng quát 2x - 3y + 6 = 0?",
+      "opts": [
+        "u⃗ = (3; 2)",
+        "u⃗ = (2; -3)",
+        "u⃗ = (-3; 2)",
+        "u⃗ = (2; 3)"
+      ],
+      "ans": 0,
+      "exp": "• Đường thẳng ax + by + c = 0 có VTPT n⃗ = (a; b) = (2; -3).<br>• VTCP u⃗ vuông góc với n⃗ nên u⃗ = (-b; a) = (3; 2)."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các dạng phương trình đường thẳng (Cột A) với công thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Phương trình tổng quát",
+          "b": "A. ax + by + c = 0 (với a² + b² > 0)"
+        },
+        {
+          "a": "2. Phương trình tham số đi qua M(x₀; y₀) có VTCP u⃗ = (u₁; u₂)",
+          "b": "B. {x = x₀ + u₁t; y = y₀ + u₂t}"
+        },
+        {
+          "a": "3. Phương trình chính tắc",
+          "b": "C. (x - x₀)/u₁ = (y - y₀)/u₂"
+        },
+        {
+          "a": "4. Phương trình theo đoạn chắn qua (a; 0) và (0; b)",
+          "b": "D. x/a + y/b = 1"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các dạng phương trình đường thẳng trong mặt phẳng toạ độ Oxy."
+    },
+    {
+      "type": "tf",
+      "q": "Cho đường thẳng d: {x = 1 + 2t; y = -3 + 4t} (t ∈ ℝ). Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Đường thẳng d đi qua điểm A(1; -3).",
+          "ans": true,
+          "exp": "Khi t = 0 thì x = 1, y = -3 nên A(1; -3) ∈ d (Đúng)."
+        },
+        {
+          "text": "b) Một vectơ chỉ phương của d là u⃗ = (2; 4).",
+          "ans": true,
+          "exp": "Hệ số của t là (2; 4) nên u⃗ = (2; 4) là VTCP (Đúng)."
+        },
+        {
+          "text": "c) Điểm B(3; 1) thuộc đường thẳng d.",
+          "ans": true,
+          "exp": "Với t = 1: x = 1 + 2(1) = 3; y = -3 + 4(1) = 1 nên B(3; 1) ∈ d (Đúng)."
+        },
+        {
+          "text": "d) Phương trình tổng quát của d là 4x + 2y + 2 = 0.",
+          "ans": false,
+          "exp": "u⃗ = (1; 2) ⇒ n⃗ = (2; -1). PTTQ: 2(x - 1) - 1(y + 3) = 0 ⇔ 2x - y - 5 = 0 (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Phương trình tổng quát của đường thẳng đi qua điểm M(2; -1) và nhận n⃗ = (3; 4) làm vectơ pháp tuyến là:",
+      "opts": [
+        "3x + 4y - 2 = 0",
+        "3x + 4y + 2 = 0",
+        "4x - 3y - 11 = 0",
+        "3x - 4y - 10 = 0"
+      ],
+      "ans": 0,
+      "exp": "• a(x - x₀) + b(y - y₀) = 0 ⇔ 3(x - 2) + 4(y + 1) = 0 ⇔ 3x + 4y - 2 = 0."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các hệ số thích hợp vào phương trình đường thẳng:<br>• Đường thẳng đi qua hai điểm A(1; 0) và B(0; 2) có phương trình đoạn chắn là: x / %%%SLOT_1%%% + y / %%%SLOT_2%%% = %%%SLOT_3%%%.",
+      "slots": [
+        "1",
+        "2",
+        "1"
+      ],
+      "pool": [
+        "1",
+        "2",
+        "1",
+        "0",
+        "-1"
+      ],
+      "exp": "• Phương trình đoạn chắn: x/a + y/b = 1 với a = 1, b = 2."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hai điểm A(1; 3) và B(5; 1). Phương trình đường trung trực của đoạn thẳng AB là:",
+      "opts": [
+        "2x - y - 4 = 0",
+        "2x + y - 8 = 0",
+        "x - 2y + 1 = 0",
+        "x + 2y - 7 = 0"
+      ],
+      "ans": 0,
+      "exp": "• Trung điểm I: x_I = 3, y_I = 2 ⇒ I(3; 2).<br>• AB⃗ = (4; -2) cùng phương n⃗ = (2; -1).<br>• Trung trực: 2(x - 3) - 1(y - 2) = 0 ⇔ 2x - y - 4 = 0."
+    },
+    {
+      "type": "mcq",
+      "q": "Hệ số góc k của đường thẳng có phương trình 3x - y + 5 = 0 là:",
+      "opts": [
+        "k = 3",
+        "k = -3",
+        "k = 1/3",
+        "k = -1/3"
+      ],
+      "ans": 0,
+      "exp": "• y = 3x + 5 ⇒ hệ số góc k = 3."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong bản đồ quy hoạch một khu đô thị, tuyến ống dẫn nước sạch chạy thẳng qua trạm phân phối A(2; 3) và trạm B(6; 11) (đơn vị: km). Phương trình đường ống dẫn nước trên bản đồ là:",
+      "opts": [
+        "2x - y - 1 = 0",
+        "2x + y - 7 = 0",
+        "x - 2y + 4 = 0",
+        "4x - 8y + 16 = 0"
+      ],
+      "ans": 0,
+      "exp": "• AB⃗ = (4; 8) = 4(1; 2) ⇒ n⃗ = (2; -1).<br>• Đường thẳng qua A(2; 3): 2(x - 2) - (y - 3) = 0 ⇔ 2x - y - 1 = 0."
+    },
+    {
+      "type": "mcq",
+      "q": "Một máy bay hạ cánh theo đường bay thẳng nghiêng góc dốc đều đặn từ độ cao 2 km tại điểm cách đầu đường băng 20 km. Nếu chọn gốc toạ độ O tại đầu đường băng, phương trình quỹ đạo hạ cánh trên mặt phẳng thẳng đứng Oxy là:",
+      "opts": [
+        "x + 10y - 20 = 0 (với 0 ≤ x ≤ 20)",
+        "x - 10y = 0",
+        "10x + y - 20 = 0",
+        "x + 5y - 10 = 0"
+      ],
+      "ans": 0,
+      "exp": "• Máy bay đi qua điểm A(20; 2) và đầu đường băng O(0; 0) (hoặc tiếp đất tại (0; 0)). Đường thẳng qua (0; 0) và (20; 2) là y = (2/20)x = 0,1x ⇔ x - 10y = 0."
+    },
+    {
+      "type": "mcq",
+      "q": "Một chiếc tàu cứu hộ neo đậu tại cảng toạ độ A(1; 2) nhận lệnh cứu nạn một thuyền câu đang trôi dạt theo hướng vectơ u⃗ = (3; 4). Phương trình đường đi thẳng của tàu cứu hộ để tiếp cận nhanh nhất là:",
+      "opts": [
+        "{x = 1 + 3t; y = 2 + 4t} (t ≥ 0)",
+        "{x = 3 + t; y = 4 + 2t}",
+        "4x - 3y + 2 = 0",
+        "3x + 4y - 11 = 0"
+      ],
+      "ans": 0,
+      "exp": "• Đường thẳng qua A(1; 2) có VTCP u⃗ = (3; 4) có dạng tham số: {x = 1 + 3t; y = 2 + 4t}."
+    }
+  ],
+  "20": [
+    {
+      "type": "mcq",
+      "q": "Khoảng cách từ điểm M(x₀; y₀) đến đường thẳng Δ: ax + by + c = 0 được tính bởi công thức:",
+      "opts": [
+        "d(M, Δ) = |ax₀ + by₀ + c| / √(a² + b²)",
+        "d(M, Δ) = (ax₀ + by₀ + c) / √(a² + b²)",
+        "d(M, Δ) = |ax₀ + by₀ + c| / (a² + b²)",
+        "d(M, Δ) = √(ax₀² + by₀²)"
+      ],
+      "ans": 0,
+      "exp": "• Công thức khoảng cách từ điểm đến đường thẳng (SGK Toán 10): d(M, Δ) = |ax₀ + by₀ + c| / √(a² + b²)."
+    },
+    {
+      "type": "match",
+      "q": "Ghép vị trí tương đối của hai đường thẳng Δ₁: a₁x + b₁y + c₁ = 0 và Δ₂: a₂x + b₂y + c₂ = 0 (Cột A) với điều kiện đại số (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Cắt nhau",
+          "b": "A. a₁/a₂ ≠ b₁/b₂"
+        },
+        {
+          "a": "2. Song song",
+          "b": "B. a₁/a₂ = b₁/b₂ ≠ c₁/c₂"
+        },
+        {
+          "a": "3. Trùng nhau",
+          "b": "C. a₁/a₂ = b₁/b₂ = c₁/c₂"
+        },
+        {
+          "a": "4. Vuông góc",
+          "b": "D. a₁a₂ + b₁b₂ = 0"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Vị trí tương đối và điều kiện vuông góc của 2 đường thẳng."
+    },
+    {
+      "type": "tf",
+      "q": "Cho hai đường thẳng d₁: 3x - 4y + 5 = 0 và d₂: 3x - 4y - 15 = 0. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Hai đường thẳng d₁ và d₂ song song với nhau.",
+          "ans": true,
+          "exp": "3/3 = -4/(-4) = 1 ≠ 5/(-15) nên d₁ // d₂ (Đúng)."
+        },
+        {
+          "text": "b) Khoảng cách từ gốc toạ độ O(0; 0) đến d₁ bằng 1.",
+          "ans": true,
+          "exp": "d(O, d₁) = |5| / √(3² + 4²) = 5 / 5 = 1 (Đúng)."
+        },
+        {
+          "text": "c) Khoảng cách giữa hai đường thẳng d₁ và d₂ bằng 4.",
+          "ans": true,
+          "exp": "Lấy M(0; 5/4) ∈ d₁. d(M, d₂) = |3(0) - 4(5/4) - 15| / 5 = |-5 - 15| / 5 = 20 / 5 = 4 (Đúng)."
+        },
+        {
+          "text": "d) Điểm A(1; 2) cách đều hai đường thẳng d₁ và d₂.",
+          "ans": false,
+          "exp": "d(A, d₁) = |3 - 8 + 5|/5 = 0; d(A, d₂) = |-20|/5 = 4. Không cách đều (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Khoảng cách từ điểm M(1; -2) đến đường thẳng Δ: 3x - 4y + 4 = 0 là:",
+      "opts": [
+        "3",
+        "5",
+        "15",
+        "1"
+      ],
+      "ans": 0,
+      "exp": "• d = |3(1) - 4(-2) + 4| / √(3² + (-4)²) = |3 + 8 + 4| / 5 = 15 / 5 = 3."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo góc tương ứng vào chỗ trống cho hai đường thẳng:<br>• Hai đường thẳng vuông góc có góc giữa chúng bằng %%%SLOT_1%%%.<br>• Hai đường thẳng song song hoặc trùng nhau quy ước góc bằng %%%SLOT_2%%%.<br>• Góc giữa hai đường thẳng d₁: x - y = 0 và d₂: x + y = 0 bằng %%%SLOT_3%%%.",
+      "slots": [
+        "90°",
+        "0°",
+        "90°"
+      ],
+      "pool": [
+        "90°",
+        "0°",
+        "45°",
+        "60°",
+        "180°"
+      ],
+      "exp": "• Vuông góc: 90°.<br>• Song song/trùng: 0°.<br>• d₁ có n₁=(1; -1), d₂ có n₂=(1; 1) có n₁·n₂ = 0 nên vuông góc (90°)."
+    },
+    {
+      "type": "mcq",
+      "q": "Góc giữa hai đường thẳng d₁: x + √3y + 1 = 0 và d₂: x - √3y + 2 = 0 là:",
+      "opts": [
+        "60°",
+        "30°",
+        "90°",
+        "45°"
+      ],
+      "ans": 0,
+      "exp": "• n₁ = (1; √3); n₂ = (1; -√3).<br>• cos φ = |1(1) + √3(-√3)| / [√(1+3) · √(1+3)] = |1 - 3| / (2 · 2) = 2 / 4 = 1/2 ⇒ φ = 60°."
+    },
+    {
+      "type": "mcq",
+      "q": "Toạ độ giao điểm của hai đường thẳng d₁: 2x - y + 3 = 0 và d₂: x + 2y - 1 = 0 là:",
+      "opts": [
+        "(-1; 1)",
+        "(1; -1)",
+        "(0; 3)",
+        "(1; 0)"
+      ],
+      "ans": 0,
+      "exp": "• Hệ: {2x - y = -3; x + 2y = 1} ⇒ x = -1, y = 1."
+    },
+    {
+      "type": "mcq",
+      "q": "Một trạm thu phát sóng 5G đặt tại vị trí M(4; 5). Một tuyến đường cao tốc chạy thẳng theo đường thẳng d: 3x + 4y - 7 = 0 (đơn vị: km). Khoảng cách ngắn nhất từ trạm thu phát sóng đến đường cao tốc là:",
+      "opts": [
+        "5 km",
+        "4 km",
+        "6 km",
+        "3 km"
+      ],
+      "ans": 0,
+      "exp": "• d = |3(4) + 4(5) - 7| / √(3² + 4²) = |12 + 20 - 7| / 5 = 25 / 5 = 5 km."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong một sân bóng đá, khung thành đội nhà nằm trên đường thẳng d₁: 4x - 3y + 10 = 0 và khung thành đối phương nằm trên d₂: 4x - 3y - 90 = 0 (đơn vị: mét). Chiều dài sân bóng (khoảng cách giữa 2 đường thẳng) là:",
+      "opts": [
+        "20 mét",
+        "100 mét",
+        "16 mét",
+        "25 mét"
+      ],
+      "ans": 0,
+      "exp": "• d = |10 - (-90)| / √(4² + 3²) = 100 / 5 = 20 mét."
+    },
+    {
+      "type": "mcq",
+      "q": "Một tia laser chiếu từ nguồn S(2; 1) tới một gương phẳng đặt trên trục Ox. Điểm phản xạ I trên Ox để tia phản xạ đi qua điểm thu tín hiệu R(6; 2) có hoành độ x_I là:",
+      "opts": [
+        "10/3 (≈ 3,33)",
+        "4",
+        "3",
+        "7/2"
+      ],
+      "ans": 0,
+      "exp": "• Điểm đối xứng của S(2; 1) qua Ox là S'(2; -1).<br>• Đường thẳng S'R đi qua I: S'R⃗ = (4; 3) ⇒ PTTQ: 3(x - 2) - 4(y + 1) = 0 ⇔ 3x - 4y - 10 = 0.<br>• I thuộc Ox (y = 0) ⇒ 3x - 10 = 0 ⇒ x = 10/3."
+    }
+  ],
+  "21": [
+    {
+      "type": "mcq",
+      "q": "Phương trình chính tắc của đường tròn tâm I(a; b) bán kính R là:",
+      "opts": [
+        "(x - a)² + (y - b)² = R²",
+        "(x + a)² + (y + b)² = R²",
+        "(x - a)² + (y - b)² = R",
+        "(x - a)² - (y - b)² = R²"
+      ],
+      "ans": 0,
+      "exp": "• Phương trình đường tròn (SGK Toán 10): (x - a)² + (y - b)² = R²."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các dạng phương trình và yếu tố đường tròn (Cột A) với biểu thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Dạng khai triển x² + y² - 2ax - 2by + c = 0",
+          "b": "A. Bán kính R = √(a² + b² - c) (với a² + b² - c > 0)"
+        },
+        {
+          "a": "2. Tâm đường tròn dạng khai triển",
+          "b": "B. I(a; b)"
+        },
+        {
+          "a": "3. Tiếp tuyến tại điểm M₀(x₀; y₀) ∈ (C)",
+          "b": "C. (x₀ - a)(x - a) + (y₀ - b)(y - b) = R²"
+        },
+        {
+          "a": "4. Điều kiện tiếp xúc đường thẳng Δ",
+          "b": "D. d(I, Δ) = R"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các công thức cơ bản về đường tròn trong mặt phẳng toạ độ."
+    },
+    {
+      "type": "tf",
+      "q": "Cho đường tròn (C): x² + y² - 4x + 6y - 12 = 0. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Toạ độ tâm của đường tròn là I(2; -3).",
+          "ans": true,
+          "exp": "a = 2, b = -3 nên tâm I(2; -3) (Đúng)."
+        },
+        {
+          "text": "b) Bán kính của đường tròn là R = 5.",
+          "ans": true,
+          "exp": "R = √(2² + (-3)² - (-12)) = √(4 + 9 + 12) = √25 = 5 (Đúng)."
+        },
+        {
+          "text": "c) Điểm O(0; 0) nằm bên trong đường tròn.",
+          "ans": true,
+          "exp": "0² + 0² - 0 + 0 - 12 = -12 < 0 nên O nằm trong đường tròn (Đúng)."
+        },
+        {
+          "text": "d) Điểm A(2; 2) nằm trên đường tròn.",
+          "ans": true,
+          "exp": "2² + 2² - 4(2) + 6(2) - 12 = 4 + 4 - 8 + 12 - 12 = 0 (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Phương trình đường tròn có tâm I(-1; 2) và đi qua điểm M(2; 6) là:",
+      "opts": [
+        "(x + 1)² + (y - 2)² = 25",
+        "(x - 1)² + (y + 2)² = 25",
+        "(x + 1)² + (y - 2)² = 5",
+        "(x - 2)² + (y - 6)² = 25"
+      ],
+      "ans": 0,
+      "exp": "• R² = IM² = (2 - (-1))² + (6 - 2)² = 3² + 4² = 25.<br>• Phương trình: (x + 1)² + (y - 2)² = 25."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các giá trị thích hợp vào chỗ trống cho đường tròn (C): (x - 3)² + (y + 1)² = 16:<br>• Toạ độ tâm I là %%%SLOT_1%%%.<br>• Bán kính R bằng %%%SLOT_2%%%.<br>• Diện tích hình tròn giới hạn bởi (C) là %%%SLOT_3%%%.",
+      "slots": [
+        "(3; -1)",
+        "4",
+        "16π"
+      ],
+      "pool": [
+        "(3; -1)",
+        "4",
+        "16π",
+        "(-3; 1)",
+        "8π"
+      ],
+      "exp": "• Tâm I(3; -1).<br>• R = √16 = 4.<br>• Diện tích S = πR² = 16π."
+    },
+    {
+      "type": "mcq",
+      "q": "Phương trình tiếp tuyến của đường tròn (C): x² + y² = 25 tại điểm M(3; 4) là:",
+      "opts": [
+        "3x + 4y - 25 = 0",
+        "3x - 4y + 25 = 0",
+        "4x + 3y - 25 = 0",
+        "3x + 4y = 0"
+      ],
+      "ans": 0,
+      "exp": "• Phương trình tiếp tuyến: x₀x + y₀y = R² ⇔ 3x + 4y = 25 ⇔ 3x + 4y - 25 = 0."
+    },
+    {
+      "type": "mcq",
+      "q": "Đường tròn đường kính AB với A(1; 1) và B(5; 3) có phương trình là:",
+      "opts": [
+        "(x - 3)² + (y - 2)² = 5",
+        "(x - 3)² + (y - 2)² = 20",
+        "(x + 3)² + (y + 2)² = 5",
+        "(x - 1)² + (y - 1)² = 5"
+      ],
+      "ans": 0,
+      "exp": "• Tâm I: trung điểm AB là I(3; 2).<br>• R² = IA² = (1 - 3)² + (1 - 2)² = 4 + 1 = 5.<br>• Phương trình: (x - 3)² + (y - 2)² = 5."
+    },
+    {
+      "type": "mcq",
+      "q": "Một trạm phát sóng Wi-Fi công cộng có vùng phủ sóng dạng hình tròn với tâm tại toạ độ (20; 30) và bán kính phủ sóng 50 mét. Phương trình đường biên giới hạn vùng phủ sóng là:",
+      "opts": [
+        "(x - 20)² + (y - 30)² = 2500",
+        "(x - 20)² + (y - 30)² = 50",
+        "(x + 20)² + (y + 30)² = 2500",
+        "x² + y² = 2500"
+      ],
+      "ans": 0,
+      "exp": "• (x - a)² + (y - b)² = R² ⇔ (x - 20)² + (y - 30)² = 50² = 2500."
+    },
+    {
+      "type": "mcq",
+      "q": "Một bánh xe quay tròn có tâm gắn tại trục O(0; 0) bán kính 30 cm. Một đinh nhỏ gắn ở vành bánh xe đang quay. Quỹ đạo chuyển động của chiếc đinh mô tả bởi phương trình nào?",
+      "opts": [
+        "x² + y² = 900",
+        "x² + y² = 30",
+        "x² - y² = 900",
+        "(x - 30)² + y² = 900"
+      ],
+      "ans": 0,
+      "exp": "• Tâm O(0; 0), R = 30 cm ⇒ x² + y² = 30² = 900."
+    },
+    {
+      "type": "mcq",
+      "q": "Tâm của một cơn bão nhiệt đới đang ở toạ độ (100; 150) (đơn vị: km) và bán kính vùng gió nguy hiểm là 80 km. Một tàu hàng đang ở vị trí M(150; 190). Vị trí của tàu có nằm trong vùng gió nguy hiểm không?",
+      "opts": [
+        "Có nằm trong vùng nguy hiểm (khoảng cách đến tâm bão là khoảng 64 km < 80 km)",
+        "Không nằm trong vùng nguy hiểm",
+        "Nằm đúng trên rìa mắt bão",
+        "Không đủ dữ liệu"
+      ],
+      "ans": 0,
+      "exp": "• Khoảng cách từ tàu đến tâm bão:<br>d = √((150 - 100)² + (190 - 150)²) = √(50² + 40²) = √(2500 + 1600) = √4100 ≈ 64,03 km.<br>• Vì 64,03 km < 80 km nên tàu nằm sâu trong vùng gió bão nguy hiểm."
+    }
+  ],
+  "22": [
+    {
+      "type": "mcq",
+      "q": "Phương trình chính tắc của đường elip (E) có dạng:",
+      "opts": [
+        "<span class=\"fraction\"><span class=\"numerator\">x²</span><span class=\"denominator\">a²</span></span> + <span class=\"fraction\"><span class=\"numerator\">y²</span><span class=\"denominator\">b²</span></span> = 1 (với a > b > 0)",
+        "<span class=\"fraction\"><span class=\"numerator\">x²</span><span class=\"denominator\">a²</span></span> - <span class=\"fraction\"><span class=\"numerator\">y²</span><span class=\"denominator\">b²</span></span> = 1",
+        "y² = 2px",
+        "x² + y² = R²"
+      ],
+      "ans": 0,
+      "exp": "• Phương trình chính tắc elip: x²/a² + y²/b² = 1 với a > b > 0 và b² = a² - c²."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các đường conic (Cột A) với phương trình chính tắc tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Elip (E)",
+          "b": "A. x²/a² + y²/b² = 1 (a > b > 0)"
+        },
+        {
+          "a": "2. Hypebol (H)",
+          "b": "B. x²/a² - y²/b² = 1 (a, b > 0)"
+        },
+        {
+          "a": "3. Parabol (P)",
+          "b": "C. y² = 2px (p > 0)"
+        },
+        {
+          "a": "4. Tiêu cự của elip",
+          "b": "D. 2c = 2√(a² - b²)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Ba đường conic: Elip, Hypebol, Parabol."
+    },
+    {
+      "type": "tf",
+      "q": "Cho elip (E): <span class=\"fraction\"><span class=\"numerator\">x²</span><span class=\"denominator\">25</span></span> + <span class=\"fraction\"><span class=\"numerator\">y²</span><span class=\"denominator\">9</span></span> = 1. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Độ dài trục lớn bằng 10.",
+          "ans": true,
+          "exp": "a² = 25 ⇒ a = 5. Độ dài trục lớn 2a = 10 (Đúng)."
+        },
+        {
+          "text": "b) Độ dài trục nhỏ bằng 6.",
+          "ans": true,
+          "exp": "b² = 9 ⇒ b = 3. Độ dài trục nhỏ 2b = 6 (Đúng)."
+        },
+        {
+          "text": "c) Tiêu cự của elip bằng 4.",
+          "ans": false,
+          "exp": "c = √(a² - b²) = √(25 - 9) = 4. Tiêu cự là 2c = 8 (Sai)."
+        },
+        {
+          "text": "d) Toạ độ hai tiêu điểm là F₁(-4; 0) và F₂(4; 0).",
+          "ans": true,
+          "exp": "Hai tiêu điểm trên trục Ox: F₁(-c; 0) = (-4; 0), F₂(c; 0) = (4; 0) (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Hypebol (H): <span class=\"fraction\"><span class=\"numerator\">x²</span><span class=\"denominator\">16</span></span> - <span class=\"fraction\"><span class=\"numerator\">y²</span><span class=\"denominator\">9</span></span> = 1 có tiêu cự bằng:",
+      "opts": [
+        "10",
+        "5",
+        "8",
+        "6"
+      ],
+      "ans": 0,
+      "exp": "• c² = a² + b² = 16 + 9 = 25 ⇒ c = 5.<br>• Tiêu cự: 2c = 10."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các yếu tố chính xác của parabol (P): y² = 8x:<br>• Tham số tiêu p = %%%SLOT_1%%%.<br>• Toạ độ tiêu điểm F là %%%SLOT_2%%%.<br>• Phương trình đường chuẩn Δ là x = %%%SLOT_3%%%.",
+      "slots": [
+        "4",
+        "(2; 0)",
+        "-2"
+      ],
+      "pool": [
+        "4",
+        "(2; 0)",
+        "-2",
+        "8",
+        "(4; 0)"
+      ],
+      "exp": "• 2p = 8 ⇒ p = 4.<br>• Tiêu điểm F(p/2; 0) = (2; 0).<br>• Đường chuẩn x = -p/2 = -2."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho parabol (P): y² = 4x. Khoảng cách từ tiêu điểm F đến đường chuẩn Δ của (P) bằng:",
+      "opts": [
+        "2",
+        "4",
+        "1",
+        "0,5"
+      ],
+      "ans": 0,
+      "exp": "• Khoảng cách từ tiêu điểm đến đường chuẩn chính là tham số tiêu p.<br>• 2p = 4 ⇒ p = 2."
+    },
+    {
+      "type": "mcq",
+      "q": "Phương trình chính tắc của elip có độ dài trục lớn bằng 8 và tiêu cự bằng 6 là:",
+      "opts": [
+        "x²/16 + y²/7 = 1",
+        "x²/64 + y²/36 = 1",
+        "x²/16 + y²/9 = 1",
+        "x²/8 + y²/6 = 1"
+      ],
+      "ans": 0,
+      "exp": "• 2a = 8 ⇒ a = 4 ⇒ a² = 16.<br>• 2c = 6 ⇒ c = 3.<br>• b² = a² - c² = 16 - 9 = 7.<br>• Phương trình: x²/16 + y²/7 = 1."
+    },
+    {
+      "type": "mcq",
+      "q": "Trái Đất chuyển động quanh Mặt Trời theo quỹ đạo elip với Mặt Trời nằm ở một tiêu điểm. Biết bán trục lớn a ≈ 149,6 triệu km và tâm sai e = c/a ≈ 0,0167. Khoảng cách gần nhất từ Trái Đất đến Mặt Trời (điểm cận nhật) xấp xỉ là:",
+      "opts": [
+        "147,1 triệu km",
+        "149,6 triệu km",
+        "152,1 triệu km",
+        "140,0 triệu km"
+      ],
+      "ans": 0,
+      "exp": "• Khoảng cách điểm cận nhật: d_min = a - c = a(1 - e) = 149,6 · (1 - 0,0167) ≈ 147,1 triệu km."
+    },
+    {
+      "type": "mcq",
+      "q": "Một chóa đèn pin có mặt cắt là một parabol có phương trình y² = 12x (đơn vị: cm). Để chùm sáng phản xạ phát ra là chùm tia song song, bóng đèn cần được đặt tại tiêu điểm F có toạ độ là:",
+      "opts": [
+        "(3; 0)",
+        "(6; 0)",
+        "(12; 0)",
+        "(1,5; 0)"
+      ],
+      "ans": 0,
+      "exp": "• Tính chất quang học của parabol: mọi tia sáng xuất phát từ tiêu điểm F khi phản xạ trên parabol đều cho chùm tia song song với trục đối xứng.<br>• 2p = 12 ⇒ p = 6 ⇒ tiêu điểm F(p/2; 0) = (3; 0)."
+    },
+    {
+      "type": "mcq",
+      "q": "Cổng chào hình elip có chiều cao 6 m và bề rộng chân cổng 16 m. Chọn hệ trục toạ độ Oxy sao cho gốc O là trung điểm chân cổng. Phương trình elip của cổng chào là:",
+      "opts": [
+        "x²/64 + y²/36 = 1 (với y ≥ 0)",
+        "x²/16 + y²/6 = 1",
+        "x²/36 + y²/64 = 1",
+        "x²/256 + y²/36 = 1"
+      ],
+      "ans": 0,
+      "exp": "• Bề rộng chân cổng 2a = 16 ⇒ a = 8 ⇒ a² = 64.<br>• Chiều cao b = 6 ⇒ b² = 36.<br>• Phương trình nửa elip trên: x²/64 + y²/36 = 1 (y ≥ 0)."
+    }
+  ]
+}

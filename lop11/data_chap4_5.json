@@ -1,0 +1,1266 @@
+{
+  "10": [
+    {
+      "type": "mcq",
+      "q": "Có bao nhiêu mặt phẳng đi qua 3 điểm phân biệt không thẳng hàng?",
+      "opts": [
+        "Duy nhất 1 mặt phẳng",
+        "2 mặt phẳng",
+        "Vô số mặt phẳng",
+        "Không có mặt phẳng nào"
+      ],
+      "ans": 0,
+      "exp": "• Tính chất thừa nhận 1 (SGK Toán 11): Có một và chỉ một mặt phẳng đi qua ba điểm không thẳng hàng."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các cách xác định mặt phẳng (Cột A) với điều kiện tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Qua 3 điểm",
+          "b": "A. Không thẳng hàng"
+        },
+        {
+          "a": "2. Qua 1 điểm và 1 đường thẳng",
+          "b": "B. Điểm không thuộc đường thẳng đó"
+        },
+        {
+          "a": "3. Qua 2 đường thẳng",
+          "b": "C. Cắt nhau hoặc song song"
+        },
+        {
+          "a": "4. Giao tuyến của hai mặt phẳng",
+          "b": "D. Đường thẳng chứa tất cả các điểm chung"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các cách xác định một mặt phẳng trong không gian."
+    },
+    {
+      "type": "tf",
+      "q": "Cho hình chóp S.ABCD có đáy ABCD là hình bình hành. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Điểm S không thuộc mặt phẳng (ABCD).",
+          "ans": true,
+          "exp": "S là đỉnh chóp nên S ∉ (ABCD) (Đúng)."
+        },
+        {
+          "text": "b) Giao tuyến của hai mặt phẳng (SAB) và (SCD) đi qua điểm S.",
+          "ans": true,
+          "exp": "S là điểm chung của hai mặt phẳng nên giao tuyến đi qua S (Đúng)."
+        },
+        {
+          "text": "c) Ba điểm S, A, B thẳng hàng.",
+          "ans": false,
+          "exp": "S, A, B tạo thành tam giác SAB nên không thẳng hàng (Sai)."
+        },
+        {
+          "text": "d) Bốn điểm S, A, B, C không đồng phẳng.",
+          "ans": true,
+          "exp": "S không thuộc mặt phẳng (ABC) nên 4 điểm không đồng phẳng (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho 4 điểm A, B, C, D không đồng phẳng. Có bao nhiêu mặt phẳng phân biệt tạo bởi 3 trong 4 điểm đó?",
+      "opts": [
+        "4 mặt phẳng (tạo thành hình tứ diện)",
+        "3 mặt phẳng",
+        "6 mặt phẳng",
+        "1 mặt phẳng"
+      ],
+      "ans": 0,
+      "exp": "• Số mặt phẳng là C₄³ = 4 mặt phẳng: (ABC), (ABD), (ACD), (BCD)."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các từ thích hợp vào chỗ trống:<br>• Nếu hai mặt phẳng phân biệt có một điểm chung thì chúng có một %%%SLOT_1%%% chung duy nhất đi qua điểm chung đó.<br>• Hình chóp tứ giác có đáy là tứ giác và %%%SLOT_2%%% mặt bên.<br>• Một tứ diện có tất cả %%%SLOT_3%%% cạnh.",
+      "slots": [
+        "đường thẳng",
+        "4",
+        "6"
+      ],
+      "pool": [
+        "đường thẳng",
+        "4",
+        "6",
+        "điểm",
+        "8"
+      ],
+      "exp": "• Giao tuyến là đường thẳng chung.<br>• Chóp tứ giác có 4 mặt bên.<br>• Tứ diện có 6 cạnh."
+    },
+    {
+      "type": "mcq",
+      "q": "Thiết diện của hình tứ diện ABCD khi cắt bởi một mặt phẳng có thể là hình gì?",
+      "opts": [
+        "Tam giác hoặc tứ giác",
+        "Ngũ giác",
+        "Chỉ có thể là tam giác",
+        "Hình bình hành"
+      ],
+      "ans": 0,
+      "exp": "• Mặt phẳng cắt tối đa 4 mặt của tứ diện nên thiết diện chỉ có thể có 3 cạnh (tam giác) hoặc 4 cạnh (tứ giác)."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho tứ diện ABCD. Gọi M, N lần lượt là trung điểm của AB và CD. Đoạn thẳng MN được gọi là:",
+      "opts": [
+        "Đoạn nối trung điểm hai cạnh đối diện của tứ diện",
+        "Đường cao của tứ diện",
+        "Cạnh của tứ diện",
+        "Đường chéo của tứ diện"
+      ],
+      "ans": 0,
+      "exp": "• MN nối trung điểm 2 cạnh đối diện AB và CD."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong thiết kế giá đỡ máy ảnh (chân máy Tripod), người ta luôn chế tạo giá đỡ có đúng 3 chân tiếp xúc mặt đất thay vì 4 chân. Nguyên lí toán học nào giải thích điều này?",
+      "opts": [
+        "Qua 3 điểm không thẳng hàng luôn xác định duy nhất 1 mặt phẳng (không bao giờ bị bập bênh)",
+        "3 chân nhẹ hơn 4 chân",
+        "Tam giác có diện tích nhỏ nhất",
+        "Quy tắc đòn bẩy"
+      ],
+      "ans": 0,
+      "exp": "• 3 điểm không thẳng hàng luôn xác định duy nhất một mặt phẳng, nên 3 chân đế luôn cùng nằm trên mặt đất dù nền gồ ghề, không bao giờ bị bập bênh."
+    },
+    {
+      "type": "mcq",
+      "q": "Khung giàn không gian của mái che sân vận động thường được cấu tạo từ các thanh thép ghép thành các hình tam giác (kết cấu giàn). Tính chất hình học nào đảm bảo độ vững chắc này?",
+      "opts": [
+        "Tam giác là hình học bất biến cứng vững (không bị biến dạng khi các cạnh cố định độ dài)",
+        "Tam giác có chu vi nhỏ nhất",
+        "Dễ thi công hơn hình vuông",
+        "Chịu lực uốn kém hơn"
+      ],
+      "ans": 0,
+      "exp": "• Tam giác có tính chất hình học cứng vững tuyệt đối: độ dài 3 cạnh xác định duy nhất 1 tam giác, không bị xô lệch hình dáng."
+    },
+    {
+      "type": "mcq",
+      "q": "Một người thợ hồ kiểm tra độ phẳng của bức tường gạch mới xây bằng cách dùng một thước nhôm thẳng dài 2 m áp sát tường ở nhiều góc khác nhau. Cơ sở toán học của phép đo là:",
+      "opts": [
+        "Nếu một đường thẳng có hai điểm thuộc mặt phẳng thì mọi điểm của đường thẳng đều nằm trong mặt phẳng đó",
+        "Hai mặt phẳng cắt nhau",
+        "Hình thang cân",
+        "Đường thẳng vuông góc"
+      ],
+      "ans": 0,
+      "exp": "• Tính chất thừa nhận: Nếu đường thẳng có 2 điểm thuộc mặt phẳng thì toàn bộ đường thẳng nằm trên mặt phẳng. Thước thẳng áp khít mọi nơi chứng tỏ mặt tường phẳng."
+    }
+  ],
+  "11": [
+    {
+      "type": "mcq",
+      "q": "Hai đường thẳng trong không gian được gọi là <b>chéo nhau</b> nếu chúng:",
+      "opts": [
+        "không cùng nằm trong một mặt phẳng nào",
+        "không có điểm chung",
+        "cắt nhau tại vô số điểm",
+        "vuông góc với nhau"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa hai đường thẳng chéo nhau (SGK Toán 11): Hai đường thẳng chéo nhau là hai đường thẳng không cùng nằm trong bất kì mặt phẳng nào."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các vị trí tương đối của hai đường thẳng a và b trong không gian (Cột A) với đặc điểm tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Trùng nhau",
+          "b": "A. Cùng thuộc một mặt phẳng và có vô số điểm chung"
+        },
+        {
+          "a": "2. Cắt nhau",
+          "b": "B. Cùng thuộc một mặt phẳng và có đúng 1 điểm chung"
+        },
+        {
+          "a": "3. Song song",
+          "b": "C. Cùng thuộc một mặt phẳng và không có điểm chung"
+        },
+        {
+          "a": "4. Chéo nhau",
+          "b": "D. Không đồng phẳng (không cùng nằm trong mặt phẳng nào)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• 4 vị trí tương đối giữa hai đường thẳng trong không gian."
+    },
+    {
+      "type": "tf",
+      "q": "Cho tứ diện ABCD. Xét tính đúng - sai về vị trí các cạnh:",
+      "items": [
+        {
+          "text": "a) Hai đường thẳng AB và CD chéo nhau.",
+          "ans": true,
+          "exp": "AB và CD là hai cạnh đối diện của tứ diện, không cùng nằm trong một mặt phẳng nào nên chéo nhau (Đúng)."
+        },
+        {
+          "text": "b) Hai đường thẳng AB và BC cắt nhau tại B.",
+          "ans": true,
+          "exp": "Cùng nằm trong mp(ABC) và có điểm chung B (Đúng)."
+        },
+        {
+          "text": "c) Hai đường thẳng AC và BD song song với nhau.",
+          "ans": false,
+          "exp": "AC và BD là hai cạnh đối diện của tứ diện nên chéo nhau (Sai)."
+        },
+        {
+          "text": "d) Gọi M, N là trung điểm của AB và AC thì MN // BC.",
+          "ans": true,
+          "exp": "MN là đường trung bình của tam giác ABC nên MN // BC (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Định lí về giao tuyến của ba mặt phẳng cắt nhau từng đôi một khẳng định rằng 3 giao tuyến đó:",
+      "opts": [
+        "hoặc đồng quy hoặc đôi một song song",
+        "luôn đồng quy tại 1 điểm",
+        "luôn đôi một song song",
+        "luôn trùng nhau"
+      ],
+      "ans": 0,
+      "exp": "• Định lí giao tuyến 3 mặt phẳng: Nếu 3 mặt phẳng cắt nhau theo 3 giao tuyến phân biệt thì 3 giao tuyến đó hoặc đồng quy hoặc đôi một song song."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo vị trí tương đối vào chỗ trống cho hình lập phương ABCD.A'B'C'D':<br>• Đường thẳng AB và C'D' là hai đường thẳng %%%SLOT_1%%%.<br>• Đường thẳng AB và B'C' là hai đường thẳng %%%SLOT_2%%%.<br>• Đường thẳng AA' và BB' là hai đường thẳng %%%SLOT_3%%%.",
+      "slots": [
+        "song song",
+        "chéo nhau",
+        "song song"
+      ],
+      "pool": [
+        "song song",
+        "chéo nhau",
+        "cắt nhau",
+        "trùng nhau",
+        "vuông góc"
+      ],
+      "exp": "• AB // CD mà CD // C'D' ⇒ AB // C'D'.<br>• AB và B'C' không đồng phẳng ⇒ chéo nhau.<br>• AA' // BB'."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hình chóp S.ABCD đáy là hình bình hành. Giao tuyến của hai mặt phẳng (SAB) và (SCD) là:",
+      "opts": [
+        "Đường thẳng d đi qua S và song song với AB và CD",
+        "Đoạn thẳng AC",
+        "Đoạn thẳng BD",
+        "Đường thẳng SO"
+      ],
+      "ans": 0,
+      "exp": "• Hai mp (SAB) và (SCD) chứa hai đường thẳng song song AB // CD và có điểm chung S ⇒ giao tuyến là đường thẳng d qua S và song song với AB, CD."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hai đường thẳng chéo nhau a và b. Có bao nhiêu mặt phẳng chứa đường thẳng a và song song với b?",
+      "opts": [
+        "Duy nhất 1 mặt phẳng",
+        "Vô số mặt phẳng",
+        "2 mặt phẳng",
+        "Không có mặt phẳng nào"
+      ],
+      "ans": 0,
+      "exp": "• Qua a kẻ đường thẳng b' // b. Mặt phẳng (a, b') là mặt phẳng duy nhất chứa a và // b."
+    },
+    {
+      "type": "mcq",
+      "q": "Hai cây cầu vượt bộ hành và đường cao tốc phía dưới không có điểm chung và nằm ở hai độ cao khác nhau theo hai hướng chéo nhau. Vị trí tương đối của hai tuyến đường trong không gian là:",
+      "opts": [
+        "Chéo nhau",
+        "Song song",
+        "Cắt nhau",
+        "Trùng nhau"
+      ],
+      "ans": 0,
+      "exp": "• Hai tuyến đường không cùng nằm trong một mặt phẳng và không giao nhau nên ở vị trí chéo nhau."
+    },
+    {
+      "type": "mcq",
+      "q": "Hai đường ray của một tuyến tàu hỏa trên một đoạn đường thẳng bằng phẳng biểu diễn hình ảnh của:",
+      "opts": [
+        "Hai đường thẳng song song",
+        "Hai đường thẳng chéo nhau",
+        "Hai đường thẳng cắt nhau",
+        "Hai mặt phẳng"
+      ],
+      "ans": 0,
+      "exp": "• Hai thanh ray cùng nằm trên mặt tà vẹt phẳng và cách đều nhau nên song song."
+    },
+    {
+      "type": "mcq",
+      "q": "Hai máy bay bay ở hai tầng cao khác nhau: máy bay A bay ở độ cao 10.000 m theo hướng Đông - Tây, máy bay B bay ở độ cao 11.000 m theo hướng Bắc - Nam. Đường bay của hai máy bay là:",
+      "opts": [
+        "Hai đường thẳng chéo nhau (đảm bảo an toàn không va chạm)",
+        "Hai đường thẳng cắt nhau",
+        "Hai đường thẳng song song",
+        "Hai đường thẳng trùng nhau"
+      ],
+      "ans": 0,
+      "exp": "• Hai đường bay ở hai độ cao khác nhau và không cùng phương nên là hai đường thẳng chéo nhau, đảm bảo cách ly an toàn bay."
+    }
+  ],
+  "12": [
+    {
+      "type": "mcq",
+      "q": "Đường thẳng a song song với mặt phẳng (P) (kí hiệu a // (P)) khi và chỉ khi:",
+      "opts": [
+        "a và (P) không có điểm chung nào",
+        "a vuông góc với (P)",
+        "a nằm trong (P)",
+        "a cắt (P) tại đúng 1 điểm"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa: a // (P) khi a và (P) không có điểm chung."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các định lý về đường thẳng song song mặt phẳng (Cột A) với nội dung (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Dấu hiệu nhận biết a // (P)",
+          "b": "A. a ⊄ (P) và a song song với một đường thẳng b nằm trong (P)"
+        },
+        {
+          "a": "2. Tính chất a // (P) và mp(Q) chứa a cắt (P)",
+          "b": "B. Giao tuyến của (P) và (Q) song song với a"
+        },
+        {
+          "a": "3. Hai mặt phẳng cùng song song với a",
+          "b": "C. Giao tuyến của chúng (nếu có) song song với a"
+        },
+        {
+          "a": "4. a // b và b ⊂ (P)",
+          "b": "D. a // (P) hoặc a ⊂ (P)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các định lý trọng tâm về đường thẳng và mặt phẳng song song."
+    },
+    {
+      "type": "tf",
+      "q": "Cho hình chóp S.ABCD đáy là hình bình hành ABCD. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Đường thẳng AB song song với mặt phẳng (SCD).",
+          "ans": true,
+          "exp": "AB ⊄ (SCD) và AB // CD (CD ⊂ (SCD)) nên AB // (SCD) (Đúng)."
+        },
+        {
+          "text": "b) Đường thẳng BC song song với mặt phẳng (SAD).",
+          "ans": true,
+          "exp": "BC // AD mà AD ⊂ (SAD) nên BC // (SAD) (Đúng)."
+        },
+        {
+          "text": "c) Đường thẳng SA song song với mặt phẳng (SBC).",
+          "ans": false,
+          "exp": "SA cắt (SBC) tại điểm S (Sai)."
+        },
+        {
+          "text": "d) Gọi M, N là trung điểm của SA, SB thì MN // (ABCD).",
+          "ans": true,
+          "exp": "MN // AB mà AB ⊂ (ABCD) nên MN // (ABCD) (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho đường thẳng d // (α). Khẳng định nào sau đây là <b>sai</b>?",
+      "opts": [
+        "d song song với mọi đường thẳng nằm trong (α)",
+        "d không có điểm chung với (α)",
+        "Nếu mặt phẳng (β) chứa d cắt (α) theo giao tuyến c thì d // c",
+        "Tồn tại vô số đường thẳng trong (α) chéo nhau với d"
+      ],
+      "ans": 0,
+      "exp": "• d // (α) không có nghĩa là d song song với mọi đường trong (α) (nó chéo nhau với hầu hết các đường trong (α)). Khẳng định này là sai."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các từ thích hợp vào định lý nhận biết d // (P):<br>• Nếu đường thẳng d không nằm trong mặt phẳng (P) và d song song với một đường thẳng d' %%%SLOT_1%%% (P) thì d %%%SLOT_2%%% với mặt phẳng (P).<br>• Qua 1 điểm ở ngoài mặt phẳng (P) có %%%SLOT_3%%% đường thẳng song song với (P).",
+      "slots": [
+        "nằm trong",
+        "song song",
+        "vô số"
+      ],
+      "pool": [
+        "nằm trong",
+        "song song",
+        "vô số",
+        "duy nhất 1",
+        "cắt"
+      ],
+      "exp": "• Dấu hiệu: d // d' ⊂ (P) ⇒ d // (P).<br>• Qua điểm ngoài mp có vô số đường thẳng song song mp đó (nằm trên mp song song)."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho tứ diện ABCD. Gọi G là trọng tâm tam giác ABD và M là điểm trên cạnh BC sao cho BM = 2MC. Đường thẳng GM song song với mặt phẳng nào sau đây?",
+      "opts": [
+        "(ACD)",
+        "(BCD)",
+        "(ABC)",
+        "(ABD)"
+      ],
+      "ans": 0,
+      "exp": "• Sử dụng định lý Thales đảo trong tam giác: GM // mp(ACD)."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hai đường thẳng chéo nhau a và b. Có bao nhiêu mặt phẳng chứa a và song song với b?",
+      "opts": [
+        "Duy nhất 1 mặt phẳng",
+        "2 mặt phẳng",
+        "Vô số mặt phẳng",
+        "Không có mặt phẳng nào"
+      ],
+      "ans": 0,
+      "exp": "• Duy nhất 1 mặt phẳng qua a và song song với b."
+    },
+    {
+      "type": "mcq",
+      "q": "Một thanh xà gồ đỡ mái tôn nằm ngang song song với mặt sàn nhà bê tông. Hình ảnh thanh xà gồ và mặt sàn nhà minh họa cho:",
+      "opts": [
+        "Đường thẳng song song với mặt phẳng",
+        "Hai mặt phẳng song song",
+        "Đường thẳng cắt mặt phẳng",
+        "Đường thẳng nằm trên mặt phẳng"
+      ],
+      "ans": 0,
+      "exp": "• Thanh xà gồ (đường thẳng) không cắt và cách đều sàn nhà (mặt phẳng) nên song song."
+    },
+    {
+      "type": "mcq",
+      "q": "Dây phơi quần áo căng thẳng giữa hai bức tường nhà cao tầng song song với mặt đất. Hình ảnh dây phơi minh họa cho:",
+      "opts": [
+        "Đường thẳng song song với mặt phẳng nằm ngang",
+        "Đường thẳng vuông góc",
+        "Hai đường thẳng chéo nhau",
+        "Đường thẳng cắt mặt phẳng"
+      ],
+      "ans": 0,
+      "exp": "• Dây phơi // mặt đất."
+    },
+    {
+      "type": "mcq",
+      "q": "Một cần cẩu tháp có cánh tay đòn quay tròn trong một mặt phẳng nằm ngang ở độ cao 40 m so với mặt đất. Tại mọi thời điểm làm việc, cánh tay đòn cần cẩu luôn:",
+      "opts": [
+        "Song song với mặt phẳng mặt đất",
+        "Cắt mặt đất",
+        "Vuông góc với mặt đất",
+        "Trùng với mặt đất"
+      ],
+      "ans": 0,
+      "exp": "• Cánh tay đòn luôn nằm ở độ cao không đổi h = 40 m nên luôn song song với mặt phẳng mặt đất."
+    }
+  ],
+  "13": [
+    {
+      "type": "mcq",
+      "q": "Hai mặt phẳng được gọi là <b>song song</b> với nhau (kí hiệu (P) // (Q)) nếu chúng:",
+      "opts": [
+        "không có điểm chung nào",
+        "có chung đúng 1 đường thẳng",
+        "có chung 1 điểm duy nhất",
+        "vuông góc với nhau"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa: (P) // (Q) khi (P) và (Q) không có điểm chung."
+    },
+    {
+      "type": "match",
+      "q": "Ghép định lý về hai mặt phẳng song song (Cột A) với nội dung (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Dấu hiệu nhận biết (P) // (Q)",
+          "b": "A. (P) chứa 2 đường thẳng cắt nhau a, b cùng song song với (Q)"
+        },
+        {
+          "a": "2. Mặt phẳng thứ ba (R) cắt (P) và (Q)",
+          "b": "B. Cho hai giao tuyến song song với nhau"
+        },
+        {
+          "a": "3. Qua điểm A ngoài (P)",
+          "b": "C. Có duy nhất 1 mặt phẳng song song với (P)"
+        },
+        {
+          "a": "4. Định lý Thales trong không gian",
+          "b": "D. Các mặt phẳng song song chắn trên hai cát tuyến các đoạn tương ứng tỉ lệ"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các định lý trọng tâm về hai mặt phẳng song song."
+    },
+    {
+      "type": "tf",
+      "q": "Cho hình lập phương ABCD.A'B'C'D'. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Mặt phẳng (ABCD) song song với mặt phẳng (A'B'C'D').",
+          "ans": true,
+          "exp": "Hai mặt đáy của hình lập phương song song với nhau (Đúng)."
+        },
+        {
+          "text": "b) Mặt phẳng (ABB'A') song song với mặt phẳng (CDD'C').",
+          "ans": true,
+          "exp": "Hai mặt bên đối diện của hình lập phương song song với nhau (Đúng)."
+        },
+        {
+          "text": "c) Mặt phẳng (BDA') song song với mặt phẳng (BDC').",
+          "ans": false,
+          "exp": "Hai mặt phẳng này cắt nhau theo giao tuyến BD (Sai)."
+        },
+        {
+          "text": "d) Khoảng cách giữa hai mặt phẳng đối diện là không đổi.",
+          "ans": true,
+          "exp": "Khoảng cách giữa hai mặt phẳng song song bằng độ dài cạnh hình lập phương (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Điều kiện cần và đủ để mặt phẳng (P) song song với mặt phẳng (Q) là:",
+      "opts": [
+        "(P) chứa hai đường thẳng cắt nhau cùng song song với (Q)",
+        "(P) chứa một đường thẳng song song với (Q)",
+        "(P) chứa hai đường thẳng phân biệt cùng song song với (Q)",
+        "(P) và (Q) cùng vuông góc với đường thẳng thứ ba"
+      ],
+      "ans": 0,
+      "exp": "• Định lý: Hai đường thẳng phải cắt nhau. Nếu chỉ song song nhau thì chưa đủ."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các từ thích hợp vào định lý Thales không gian:<br>• Ba mặt phẳng đôi một song song chắn trên hai cát tuyến bất kì những đoạn thẳng %%%SLOT_1%%%.<br>• Hình lăng trụ có hai đáy là hai đa giác bằng nhau nằm trên hai mặt phẳng %%%SLOT_2%%%.<br>• Các cạnh bên của hình lăng trụ đôi một %%%SLOT_3%%%.",
+      "slots": [
+        "tương ứng tỉ lệ",
+        "song song",
+        "song song và bằng nhau"
+      ],
+      "pool": [
+        "tương ứng tỉ lệ",
+        "song song",
+        "song song và bằng nhau",
+        "vuông góc",
+        "cắt nhau"
+      ],
+      "exp": "• Định lý Thales: tỉ lệ.<br>• Hai đáy lăng trụ //.<br>• Các cạnh bên // và bằng nhau."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hai mặt phẳng song song (P) và (Q). Đường thẳng a nằm trong (P) và b nằm trong (Q). Vị trí tương đối của a và b là:",
+      "opts": [
+        "Song song hoặc chéo nhau",
+        "Luôn song song",
+        "Luôn chéo nhau",
+        "Cắt nhau"
+      ],
+      "ans": 0,
+      "exp": "• a và b không có điểm chung (vì nằm trên 2 mp //) nên chúng hoặc song song hoặc chéo nhau."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hình chóp cụt tứ giác có hai đáy là hai hình vuông cạnh a và 2a. Tỉ số diện tích của đáy nhỏ so với đáy lớn là:",
+      "opts": [
+        "1/4",
+        "1/2",
+        "1/8",
+        "1/16"
+      ],
+      "ans": 0,
+      "exp": "• S₁ = a², S₂ = (2a)² = 4a² ⇒ S₁ / S₂ = 1/4."
+    },
+    {
+      "type": "mcq",
+      "q": "Các tầng của một tòa nhà chung cư cao tầng được thiết kế với sàn các tầng là các mặt phẳng nằm ngang. Mối quan hệ hình học giữa sàn tầng 5 và sàn tầng 6 là:",
+      "opts": [
+        "Hai mặt phẳng song song",
+        "Hai mặt phẳng cắt nhau",
+        "Hai mặt phẳng vuông góc",
+        "Hai mặt phẳng trùng nhau"
+      ],
+      "ans": 0,
+      "exp": "• Sàn các tầng là các mặt phẳng phẳng nằm ngang song song nhau."
+    },
+    {
+      "type": "mcq",
+      "q": "Một giàn giáo xây dựng gồm nhiều tầng sàn công tác bằng gỗ. Để đảm bảo an toàn chịu lực, các mặt sàn công tác luôn được gióng thăng bằng:",
+      "opts": [
+        "Song song với nhau và song song với mặt đất",
+        "Nghiêng đều",
+        "Vuông góc mặt đất",
+        "Chéo nhau"
+      ],
+      "ans": 0,
+      "exp": "• Các sàn giáo song song với nhau và song song mặt đất."
+    },
+    {
+      "type": "mcq",
+      "q": "Hai mặt của một tấm kính cửa sổ cường lực phẳng cách nhiệt 2 lớp là hai mặt phẳng phẳng cách đều nhau 12 mm. Hình ảnh hai mặt tấm kính là:",
+      "opts": [
+        "Hai mặt phẳng song song",
+        "Hai mặt phẳng chéo nhau",
+        "Hai mặt phẳng cắt nhau",
+        "Hình lăng trụ"
+      ],
+      "ans": 0,
+      "exp": "• Hai mặt phẳng song song cách đều nhau 12 mm."
+    }
+  ],
+  "14": [
+    {
+      "type": "mcq",
+      "q": "Phép chiếu song song theo phương l lên mặt phẳng chiếu (P) biến một đường thẳng song song với phương chiếu l thành:",
+      "opts": [
+        "Một điểm",
+        "Một đường thẳng",
+        "Một đoạn thẳng",
+        "Một tia"
+      ],
+      "ans": 0,
+      "exp": "• Nếu đường thẳng song song với phương chiếu thì mọi điểm trên đường thẳng đều chiếu về cùng 1 điểm trên mp chiếu."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các tính chất của phép chiếu song song (Cột A) với hình ảnh (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Biến hai đường thẳng song song",
+          "b": "A. Thành hai đường thẳng song song hoặc trùng nhau"
+        },
+        {
+          "a": "2. Biến đoạn thẳng AB",
+          "b": "B. Thành đoạn thẳng A'B'"
+        },
+        {
+          "a": "3. Giữ nguyên tỉ số",
+          "b": "C. Độ dài của hai đoạn thẳng cùng nằm trên một đường thẳng"
+        },
+        {
+          "a": "4. Biến tam giác",
+          "b": "D. Thành một tam giác (nếu không song song phương chiếu)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các tính chất bất biến của phép chiếu song song."
+    },
+    {
+      "type": "tf",
+      "q": "Xét tính đúng - sai về hình biểu diễn của các hình học phẳng qua phép chiếu song song:",
+      "items": [
+        {
+          "text": "a) Hình biểu diễn của một hình bình hành là một hình bình hành.",
+          "ans": true,
+          "exp": "Phép chiếu song song bảo toàn tính song song nên biến hình bình hành thành hình bình hành (Đúng)."
+        },
+        {
+          "text": "b) Hình biểu diễn của một hình tròn luôn luôn là một hình tròn.",
+          "ans": false,
+          "exp": "Hình biểu diễn của hình tròn nói chung là một đường elip (Sai)."
+        },
+        {
+          "text": "c) Hình biểu diễn của tam giác đều có thể là một tam giác thường.",
+          "ans": true,
+          "exp": "Phép chiếu song song không bảo toàn độ lớn góc nên tam giác đều chiếu thành tam giác thường (Đúng)."
+        },
+        {
+          "text": "d) Trung điểm của đoạn thẳng biến thành trung điểm của đoạn thẳng biểu diễn.",
+          "ans": true,
+          "exp": "Bảo toàn tỉ số đoạn thẳng nên trung điểm biến thành trung điểm (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Hình biểu diễn của một hình thang ABCD (AB // CD, CD = 2AB) qua phép chiếu song song là một hình thang A'B'C'D' có:",
+      "opts": [
+        "A'B' // C'D' và C'D' = 2A'B'",
+        "A'B' // C'D' và C'D' = A'B'",
+        "Hình bình hành",
+        "Hình chữ nhật"
+      ],
+      "ans": 0,
+      "exp": "• Phép chiếu song song bảo toàn tính song song và tỉ số độ dài của hai đoạn thẳng song song: A'B' // C'D' và C'D' = 2A'B'."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các hình biểu diễn chính xác vào chỗ trống:<br>• Hình biểu diễn của hình chữ nhật là %%%SLOT_1%%%.<br>• Hình biểu diễn của hình thoi là %%%SLOT_2%%%.<br>• Hình biểu diễn của đường tròn thường là %%%SLOT_3%%%.",
+      "slots": [
+        "hình bình hành",
+        "hình bình hành",
+        "đường elip"
+      ],
+      "pool": [
+        "hình bình hành",
+        "hình bình hành",
+        "đường elip",
+        "hình tròn",
+        "hình chữ nhật"
+      ],
+      "exp": "• Góc vuông không được bảo toàn nên hình chữ nhật và hình thoi đều vẽ thành hình bình hành.<br>• Đường tròn chiếu thành elip."
+    },
+    {
+      "type": "mcq",
+      "q": "Phép chiếu song song KHÔNG bảo toàn tính chất nào sau đây?",
+      "opts": [
+        "Độ lớn của góc và độ dài đoạn thẳng",
+        "Tính thẳng hàng của 3 điểm",
+        "Tính song song của hai đường thẳng",
+        "Tỉ số của hai đoạn thẳng cùng nằm trên 1 đường thẳng"
+      ],
+      "ans": 0,
+      "exp": "• Độ lớn góc và độ dài tuyệt đối của đoạn thẳng không được bảo toàn qua phép chiếu song song."
+    },
+    {
+      "type": "mcq",
+      "q": "Khi vẽ hình biểu diễn của khối lập phương trên giấy vẽ kĩ thuật (hình chiếu trục đo), các mặt hình vuông ở mặt bên thường được biểu diễn bằng:",
+      "opts": [
+        "Hình bình hành",
+        "Hình chữ nhật",
+        "Hình thang",
+        "Tam giác"
+      ],
+      "ans": 0,
+      "exp": "• Mặt vuông bị nghiêng góc nên vẽ thành hình bình hành."
+    },
+    {
+      "type": "mcq",
+      "q": "Vào buổi trưa nắng gắt khi ánh sáng mặt trời chiếu song song, bóng của một cột cờ cao 8 m in trên sân trường bằng phẳng dài 6 m. Cùng thời điểm đó, bóng của một toà nhà học đường dài 24 m. Chiều cao của toà nhà là:",
+      "opts": [
+        "32 m",
+        "24 m",
+        "18 m",
+        "40 m"
+      ],
+      "ans": 0,
+      "exp": "• Ánh sáng mặt trời tạo phép chiếu song song: tỉ số giữa chiều cao vật và bóng nắng là không đổi.<br>• h_nhà / L_nhà = h_cột / L_cột ⇒ h_nhà = (8 / 6) · 24 = 32 m."
+    },
+    {
+      "type": "mcq",
+      "q": "Một khung ảnh hình vuông treo nghiêng tạo bóng nắng in trên sàn nhà dưới ánh đèn trần song song. Bóng in trên sàn nhà có dạng hình gì?",
+      "opts": [
+        "Hình bình hành",
+        "Hình vuông",
+        "Hình thang",
+        "Đường tròn"
+      ],
+      "ans": 0,
+      "exp": "• Hình vuông chiếu song song tạo thành hình bình hành."
+    },
+    {
+      "type": "mcq",
+      "q": "Đồng hồ mặt trời (Sundial) hoạt động dựa trên nguyên lí nào?",
+      "opts": [
+        "Phép chiếu song song của ánh sáng mặt trời tạo bóng kim thay đổi góc theo thời gian trong ngày",
+        "Phép quay",
+        "Phép vị tự",
+        "Phép đối xứng"
+      ],
+      "ans": 0,
+      "exp": "• Mặt Trời ở rất xa, chùm tia sáng song song chiếu bóng của kim gnomon lên mặt số đồng hồ."
+    }
+  ],
+  "15": [
+    {
+      "type": "mcq",
+      "q": "Giới hạn của dãy số u_n = 1/n khi n tiến ra vô cực là:",
+      "opts": [
+        "lim (1/n) = 0",
+        "lim (1/n) = 1",
+        "lim (1/n) = +∞",
+        "lim (1/n) = -1"
+      ],
+      "ans": 0,
+      "exp": "• Giới hạn cơ bản (SGK Toán 11): lim (1/n^k) = 0 với k > 0."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các giới hạn cơ bản (Cột A) với kết quả tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. lim qⁿ với |q| < 1",
+          "b": "A. = 0"
+        },
+        {
+          "a": "2. lim qⁿ với q > 1",
+          "b": "B. = +∞"
+        },
+        {
+          "a": "3. lim c (hằng số)",
+          "b": "C. = c"
+        },
+        {
+          "a": "4. lim n^k (k nguyên dương)",
+          "b": "D. = +∞"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các giới hạn dãy số kinh điển."
+    },
+    {
+      "type": "tf",
+      "q": "Xét tính đúng - sai của các giới hạn sau:",
+      "items": [
+        {
+          "text": "a) lim <span class=\"fraction\"><span class=\"numerator\">2n + 1</span><span class=\"denominator\">n + 3</span></span> = 2.",
+          "ans": true,
+          "exp": "Chia cả tử và mẫu cho n: lim (2 + 1/n)/(1 + 3/n) = 2/1 = 2 (Đúng)."
+        },
+        {
+          "text": "b) lim <span class=\"fraction\"><span class=\"numerator\">n² - 3</span><span class=\"denominator\">2n² + 5</span></span> = 1/2.",
+          "ans": true,
+          "exp": "Bậc tử bằng bậc mẫu, hệ số cao nhất là 1/2 (Đúng)."
+        },
+        {
+          "text": "c) lim (0,5)ⁿ = +∞.",
+          "ans": false,
+          "exp": "Vì |0,5| < 1 nên lim (0,5)ⁿ = 0 (Sai)."
+        },
+        {
+          "text": "d) lim (n² - n) = +∞.",
+          "ans": true,
+          "exp": "n² - n = n²(1 - 1/n) → +∞ · 1 = +∞ (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Giá trị của lim <span class=\"fraction\"><span class=\"numerator\">3n² + 4n - 1</span><span class=\"denominator\">2n² - 5</span></span> là:",
+      "opts": [
+        "3/2",
+        "2/3",
+        "+∞",
+        "0"
+      ],
+      "ans": 0,
+      "exp": "• Chia cả tử và mẫu cho n²: lim (3 + 4/n - 1/n²) / (2 - 5/n²) = 3/2."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các kết quả giới hạn vào chỗ trống:<br>• lim <span class=\"fraction\"><span class=\"numerator\">5</span><span class=\"denominator\">n² + 1</span></span> = %%%SLOT_1%%%.<br>• lim <span class=\"fraction\"><span class=\"numerator\">4n³ + 1</span><span class=\"denominator\">n² + 2</span></span> = %%%SLOT_2%%%.<br>• lim <span class=\"fraction\"><span class=\"numerator\">2ⁿ⁺¹</span><span class=\"denominator\">2ⁿ + 1</span></span> = %%%SLOT_3%%%.",
+      "slots": [
+        "0",
+        "+∞",
+        "2"
+      ],
+      "pool": [
+        "0",
+        "+∞",
+        "2",
+        "4",
+        "1"
+      ],
+      "exp": "• Bậc tử < mẫu: 0.<br>• Bậc tử > mẫu: +∞.<br>• 2ⁿ⁺¹ / 2ⁿ = 2."
+    },
+    {
+      "type": "mcq",
+      "q": "Tính giới hạn lim (√(n² + 2n) - n):",
+      "opts": [
+        "1",
+        "0",
+        "2",
+        "+∞"
+      ],
+      "ans": 0,
+      "exp": "• Nhân lượng liên hợp: [(n² + 2n) - n²] / [√(n² + 2n) + n] = 2n / [n(√(1 + 2/n) + 1)] = 2 / 2 = 1."
+    },
+    {
+      "type": "mcq",
+      "q": "Tổng của cấp số nhân lùi vô hạn S = 2 + 2/3 + 2/9 + ... + 2/3ⁿ⁻¹ + ... là:",
+      "opts": [
+        "3",
+        "2",
+        "6",
+        "4"
+      ],
+      "ans": 0,
+      "exp": "• u₁ = 2, q = 1/3.<br>• S = u₁ / (1 - q) = 2 / (1 - 1/3) = 2 / (2/3) = 3."
+    },
+    {
+      "type": "mcq",
+      "q": "Một giọt thuốc kháng sinh tiêm vào cơ thể: liều đầu 100 mg, sau đó cứ mỗi ngày cơ thể đào thải 50% lượng thuốc còn lại và bệnh nhân được tiêm bổ sung liều duy trì 50 mg. Sau một thời gian dài (n ngày, n → ∞), lượng thuốc tích lũy ổn định trong cơ thể tiến tới:",
+      "opts": [
+        "100 mg",
+        "150 mg",
+        "200 mg",
+        "50 mg"
+      ],
+      "ans": 0,
+      "exp": "• Lượng thuốc ổn định thỏa mãn: C_∞ = 0,5 C_∞ + 50 ⇒ 0,5 C_∞ = 50 ⇒ C_∞ = 100 mg."
+    },
+    {
+      "type": "mcq",
+      "q": "Một hình vuông có cạnh bằng 1. Người ta dựng hình vuông thứ hai bằng cách nối trung điểm các cạnh hình vuông thứ nhất, và lặp lại vô hạn lần. Tổng diện tích của tất cả các hình vuông là:",
+      "opts": [
+        "2",
+        "1,5",
+        "4",
+        "3"
+      ],
+      "ans": 0,
+      "exp": "• S₁ = 1.<br>• Cạnh hình thứ hai bằng a/√2 ⇒ S₂ = 1/2.<br>• Dãy diện tích là cấp số nhân lùi vô hạn: u₁ = 1, q = 1/2 ⇒ S = 1 / (1 - 1/2) = 2."
+    },
+    {
+      "type": "mcq",
+      "q": "Nghịch lý Zeno về chàng Achilles đuổi rùa: rùa chạy trước 100 m với vận tốc 1 m/s, Achilles chạy với vận tốc 10 m/s. Tổng thời gian Achilles đuổi kịp rùa là tổng cấp số nhân lùi vô hạn: T = 10 + 1 + 0,1 + 0,01 + ... (giây), bằng:",
+      "opts": [
+        "100/9 s (≈ 11,11 giây)",
+        "10 s",
+        "12 s",
+        "Vô hạn"
+      ],
+      "ans": 0,
+      "exp": "• u₁ = 10, q = 0,1.<br>• T = 10 / (1 - 0,1) = 10 / 0,9 = 100/9 s ≈ 11,11 giây. Achilles đuổi kịp rùa sau đúng 11,11 s."
+    }
+  ],
+  "16": [
+    {
+      "type": "mcq",
+      "q": "Giới hạn lim_(x → 2) (3x² - 2x + 1) bằng:",
+      "opts": [
+        "9",
+        "7",
+        "5",
+        "11"
+      ],
+      "ans": 0,
+      "exp": "• Thay trực tiếp x = 2: 3(2)² - 2(2) + 1 = 12 - 4 + 1 = 9."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các dạng vô định của giới hạn hàm số (Cột A) với phương pháp khử tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Dạng vô định 0/0 chứa đa thức",
+          "b": "A. Phân tích nhân tử (x - x₀) để rút gọn"
+        },
+        {
+          "a": "2. Dạng vô định 0/0 chứa căn thức",
+          "b": "B. Nhân chia biểu thức liên hợp"
+        },
+        {
+          "a": "3. Dạng vô định ∞/∞ khi x → ∞",
+          "b": "C. Chia cả tử và mẫu cho lũy thừa bậc cao nhất của x"
+        },
+        {
+          "a": "4. Dạng vô định ∞ - ∞",
+          "b": "D. Nhân liên hợp hoặc quy đồng mẫu số"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• 4 dạng vô định kinh điển và kĩ thuật khử vô định."
+    },
+    {
+      "type": "tf",
+      "q": "Xét tính đúng - sai của các giới hạn hàm số sau:",
+      "items": [
+        {
+          "text": "a) lim_(x → 1) <span class=\"fraction\"><span class=\"numerator\">x² - 1</span><span class=\"denominator\">x - 1</span></span> = 2.",
+          "ans": true,
+          "exp": "(x² - 1)/(x - 1) = x + 1 → 1 + 1 = 2 (Đúng)."
+        },
+        {
+          "text": "b) lim_(x → 0) (1/x) = 0.",
+          "ans": false,
+          "exp": "1/x tiến ra vô cực (không tồn tại giới hạn hữu hạn) (Sai)."
+        },
+        {
+          "text": "c) lim_(x → +∞) <span class=\"fraction\"><span class=\"numerator\">2x + 3</span><span class=\"denominator\">x - 1</span></span> = 2.",
+          "ans": true,
+          "exp": "Bậc tử bằng mẫu, tỉ số hệ số 2/1 = 2 (Đúng)."
+        },
+        {
+          "text": "d) lim_(x → 3⁺) <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x - 3</span></span> = +∞.",
+          "ans": true,
+          "exp": "Tử dương (1), mẫu tiến về 0 từ phía dương nên kết quả là +∞ (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Tính giới hạn lim_(x → 3) <span class=\"fraction\"><span class=\"numerator\">x² - 9</span><span class=\"denominator\">x - 3</span></span>:",
+      "opts": [
+        "6",
+        "0",
+        "3",
+        "∞"
+      ],
+      "ans": 0,
+      "exp": "• (x - 3)(x + 3) / (x - 3) = x + 3 → 3 + 3 = 6."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo kết quả giới hạn thích hợp vào chỗ trống:<br>• lim_(x → 0) <span class=\"fraction\"><span class=\"numerator\">√(x + 4) - 2</span><span class=\"denominator\">x</span></span> = %%%SLOT_1%%%.<br>• lim_(x → +∞) <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x²</span></span> = %%%SLOT_2%%%.<br>• lim_(x → 1⁻) <span class=\"fraction\"><span class=\"numerator\">-2</span><span class=\"denominator\">x - 1</span></span> = %%%SLOT_3%%%.",
+      "slots": [
+        "1/4",
+        "0",
+        "+∞"
+      ],
+      "pool": [
+        "1/4",
+        "0",
+        "+∞",
+        "-∞",
+        "1/2"
+      ],
+      "exp": "• Nhân liên hợp: x / [x(√(x+4)+2)] = 1/4.<br>• 1/x² → 0.<br>• -2 / (0⁻) = +∞."
+    },
+    {
+      "type": "mcq",
+      "q": "Tính giới hạn lim_(x → -∞) <span class=\"fraction\"><span class=\"numerator\">√(4x² + 1)</span><span class=\"denominator\">x + 1</span></span>:",
+      "opts": [
+        "-2",
+        "2",
+        "4",
+        "-4"
+      ],
+      "ans": 0,
+      "exp": "• Khi x → -∞, √(x²) = |x| = -x.<br>• Tử số = -x √(4 + 1/x²). Mẫu số = x(1 + 1/x).<br>• Giới hạn: -√4 / 1 = -2."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hàm số f(x) = (x² - 4)/(x - 2) khi x ≠ 2 và f(2) = m. Giá trị m để hàm số có giới hạn tại x = 2 bằng f(2) là:",
+      "opts": [
+        "m = 4",
+        "m = 2",
+        "m = 0",
+        "m = -4"
+      ],
+      "ans": 0,
+      "exp": "• lim_(x → 2) f(x) = lim (x + 2) = 4. Để bằng f(2) thì m = 4."
+    },
+    {
+      "type": "mcq",
+      "q": "Vận tốc tức thời của một chất điểm rơi tự do s(t) = 4,9t² tại thời điểm t₀ = 3 giây được tính bằng giới hạn v(3) = lim_(Δt → 0) [s(3 + Δt) - s(3)] / Δt. Kết quả vận tốc là:",
+      "opts": [
+        "29,4 m/s",
+        "14,7 m/s",
+        "44,1 m/s",
+        "9,8 m/s"
+      ],
+      "ans": 0,
+      "exp": "• Đạo hàm s'(3) = 9,8 · 3 = 29,4 m/s."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong mạch điện tử, điện tích phóng qua tụ điện theo thời gian là q(t) = Q₀(1 - e^(-t/RC)). Cường độ dòng điện ban đầu khi mới đóng mạch t → 0⁺ là i₀ = lim_(t → 0⁺) dq/dt, bằng:",
+      "opts": [
+        "Q₀ / (RC)",
+        "0",
+        "+∞",
+        "Q₀"
+      ],
+      "ans": 0,
+      "exp": "• i(0) = Q₀ / (RC) (dòng nạp cực đại ban đầu)."
+    },
+    {
+      "type": "mcq",
+      "q": "Chi phí trung bình để sản xuất x đơn vị sản phẩm là C̄(x) = (5000 + 20x) / x (nghìn đồng/sản phẩm). Khi quy mô sản xuất mở rộng vô hạn (x → +∞), chi phí trung bình trên mỗi sản phẩm tiến về:",
+      "opts": [
+        "20 nghìn đồng (chi phí biên cố định)",
+        "0",
+        "5000 nghìn đồng",
+        "+∞"
+      ],
+      "ans": 0,
+      "exp": "• lim_(x → +∞) (5000/x + 20) = 0 + 20 = 20 nghìn đồng/sản phẩm."
+    }
+  ],
+  "17": [
+    {
+      "type": "mcq",
+      "q": "Hàm số y = f(x) được gọi là <b>liên tục tại điểm x₀</b> thuộc tập xác định nếu:",
+      "opts": [
+        "lim_(x → x₀) f(x) = f(x₀)",
+        "lim_(x → x₀) f(x) = 0",
+        "f(x₀) > 0",
+        "f(x) xác định tại mọi x"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa hàm số liên tục tại điểm (SGK Toán 11): lim_(x → x₀) f(x) = f(x₀)."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các định lý về hàm số liên tục (Cột A) với nội dung (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Hàm đa thức",
+          "b": "A. Liên tục trên toàn bộ tập số thực ℝ"
+        },
+        {
+          "a": "2. Hàm phân thức hữu tỉ và lượng giác",
+          "b": "B. Liên tục trên từng khoảng của tập xác định"
+        },
+        {
+          "a": "3. Định lý giá trị trung gian",
+          "b": "C. f liên tục trên [a; b] và f(a)·f(b) < 0 thì tồn tại c ∈ (a; b) sao cho f(c) = 0"
+        },
+        {
+          "a": "4. Đồ thị hàm số liên tục trên một khoảng",
+          "b": "D. Là một đường liền nét không bị đứt đoạn"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các định lý nền tảng về tính liên tục và nghiệm của phương trình."
+    },
+    {
+      "type": "tf",
+      "q": "Xét tính liên tục của hàm số f(x) = (x² - 1)/(x - 1) khi x ≠ 1 và f(1) = 2:",
+      "items": [
+        {
+          "text": "a) lim_(x → 1) f(x) = 2.",
+          "ans": true,
+          "exp": "lim (x + 1) = 2 (Đúng)."
+        },
+        {
+          "text": "b) f(1) = 2.",
+          "ans": true,
+          "exp": "Theo định nghĩa hàm số f(1) = 2 (Đúng)."
+        },
+        {
+          "text": "c) Hàm số liên tục tại x = 1.",
+          "ans": true,
+          "exp": "lim f(x) = f(1) = 2 nên hàm số liên tục tại x = 1 (Đúng)."
+        },
+        {
+          "text": "d) Đồ thị của hàm số bị thủng tại điểm (1; 2).",
+          "ans": false,
+          "exp": "Vì hàm số liên tục nên đồ thị là một đường thẳng liền nét, không có lỗ thủng (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm m để hàm số f(x) = { (x² - 4)/(x - 2) khi x ≠ 2; m khi x = 2 } liên tục tại x = 2:",
+      "opts": [
+        "m = 4",
+        "m = 2",
+        "m = 0",
+        "m = 1"
+      ],
+      "ans": 0,
+      "exp": "• lim_(x → 2) (x + 2) = 4. Để liên tục thì f(2) = m = 4."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các từ thích hợp vào định lý Bolzano về nghiệm phương trình:<br>• Cho hàm số f(x) %%%SLOT_1%%% trên đoạn [a; b].<br>• Nếu f(a) · f(b) %%%SLOT_2%%% 0 thì phương trình f(x) = 0 có %%%SLOT_3%%% một nghiệm nằm trong khoảng (a; b).",
+      "slots": [
+        "liên tục",
+        "<",
+        "ít nhất"
+      ],
+      "pool": [
+        "liên tục",
+        "<",
+        "ít nhất",
+        ">",
+        "duy nhất"
+      ],
+      "exp": "• Định lý Bolzano: liên tục trên [a; b] và f(a)f(b) < 0 thì có ít nhất 1 nghiệm trong (a; b)."
+    },
+    {
+      "type": "mcq",
+      "q": "Chứng minh phương trình x³ + 2x - 5 = 0 có nghiệm trong khoảng nào sau đây?",
+      "opts": [
+        "(1; 2)",
+        "(0; 1)",
+        "(2; 3)",
+        "(-1; 0)"
+      ],
+      "ans": 0,
+      "exp": "• f(x) = x³ + 2x - 5 liên tục trên ℝ.<br>• f(1) = 1 + 2 - 5 = -2 < 0.<br>• f(2) = 8 + 4 - 5 = 7 > 0.<br>• f(1) · f(2) = -14 < 0 nên phương trình có ít nhất 1 nghiệm trong (1; 2)."
+    },
+    {
+      "type": "mcq",
+      "q": "Hàm số nào sau đây <b>gián đoạn</b> tại điểm x = 3?",
+      "opts": [
+        "y = 1 / (x - 3)",
+        "y = x² + 3",
+        "y = sin x",
+        "y = √(x + 1)"
+      ],
+      "ans": 0,
+      "exp": "• y = 1/(x - 3) không xác định tại x = 3 nên gián đoạn tại x = 3."
+    },
+    {
+      "type": "mcq",
+      "q": "Một lò nướng bánh được lập trình gia nhiệt: nhiệt độ T(t) (°C) là một hàm số liên tục theo thời gian t. Ban đầu lúc t = 0 lò ở 25°C, sau 10 phút lò đạt 200°C. Khẳng định nào sau đây là chắc chắn đúng theo định lý giá trị trung gian?",
+      "opts": [
+        "Có ít nhất một thời điểm trong 10 phút đầu lò nướng đạt đúng 150°C",
+        "Lò nướng luôn tăng nhiệt độ đều đặn",
+        "Nhiệt độ lò không bao giờ vượt quá 200°C",
+        "Lò đạt 150°C đúng tại phút thứ 5"
+      ],
+      "ans": 0,
+      "exp": "• Do T(t) liên tục trên [0; 10] và 25 < 150 < 200 nên theo định lý giá trị trung gian, luôn tồn tại thời điểm c ∈ (0; 10) sao cho T(c) = 150°C."
+    },
+    {
+      "type": "mcq",
+      "q": "Một chiếc xe ô tô chạy thử nghiệm tăng tốc từ 0 đến 100 km/h trong thời gian 4 giây. Giả sử đồng hồ tốc độ là hàm liên tục theo thời gian. Khi đó trên đường chạy:",
+      "opts": [
+        "Chắc chắn có thời điểm xe đạt tốc độ đúng 60 km/h",
+        "Xe chạy với gia tốc không đổi",
+        "Xe đạt 60 km/h ở giây thứ 2,4",
+        "Tốc độ xe luôn tăng"
+      ],
+      "ans": 0,
+      "exp": "• v(0) = 0 và v(4) = 100. Vì 0 < 60 < 100 và hàm vận tốc liên tục nên chắc chắn có thời điểm v = 60 km/h."
+    },
+    {
+      "type": "mcq",
+      "q": "Độ cao của một người đi cáp treo từ chân núi (độ cao 200 m) lên đỉnh núi (độ cao 1.500 m) là một hàm liên tục theo thời gian. Trên hành trình, người đó có bao giờ ở đúng độ cao 1.000 m không?",
+      "opts": [
+        "Chắc chắn có ít nhất một lần",
+        "Không bao giờ",
+        "Chỉ khi cáp treo dừng lại",
+        "Không thể kết luận"
+      ],
+      "ans": 0,
+      "exp": "• Độ cao biến thiên liên tục từ 200 m lên 1500 m nên bắt buộc phải đi qua mọi độ cao trung gian, bao gồm 1000 m."
+    }
+  ]
+}

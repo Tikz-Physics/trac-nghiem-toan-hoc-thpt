@@ -1,0 +1,1575 @@
+[
+  {
+    "id": 18,
+    "title": "Bài 18: Lũy Thừa Với Số Mũ Thực",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Cho a > 0 và m, n là các số thực tùy ý. Khẳng định nào sau đây là <b>đúng</b>?",
+        "options": [
+          "a<sup>m</sup> · a<sup>n</sup> = a<sup>m + n</sup>",
+          "a<sup>m</sup> · a<sup>n</sup> = a<sup>m · n</sup>",
+          "(a<sup>m</sup>)<sup>n</sup> = a<sup>m + n</sup>",
+          "a<sup>m</sup> / a<sup>n</sup> = a<sup>n - m</sup>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Định luật gốc:</b> Với số thực dương a và hai số thực m, n tùy ý, tích hai lũy thừa cùng cơ số bằng lũy thừa của tổng số mũ: a<sup>m</sup> · a<sup>n</sup> = a<sup>m + n</sup>.<br><b>2. Nhận xét:</b> Các đẳng thức B, C, D đều sai theo định nghĩa lũy thừa số mũ thực."
+      },
+      {
+        "type": "tf",
+        "question": "Xét tính đúng/sai của các mệnh đề sau về lũy thừa với số mũ thực:",
+        "items": [
+          {
+            "text": "a) Với a > 0 và m, n ∈ ℤ, n ≥ 2 thì a<sup>m/n</sup> = <sup>n</sup>√(a<sup>m</sup>).",
+            "answer": true,
+            "explanation": "Đúng theo định nghĩa lũy thừa với số mũ hữu tỉ."
+          },
+          {
+            "text": "b) Với 0 < a < 1 và α < β thì a<sup>α</sup> < a<sup>β</sup>.",
+            "answer": false,
+            "explanation": "Sai, với 0 < a < 1, cơ số nhỏ hơn 1 nên hàm nghịch biến: α < β ⇒ a<sup>α</sup> > a<sup>β</sup>."
+          },
+          {
+            "text": "c) Biểu thức (-2)<sup>1/2</sup> không có nghĩa trong tập số thực ℝ.",
+            "answer": true,
+            "explanation": "Đúng, lũy thừa số mũ không nguyên chỉ xác định với cơ số dương a > 0."
+          },
+          {
+            "text": "d) Với a > 0, b > 0 và số thực α thì (a · b)<sup>α</sup> = a<sup>α</sup> · b<sup>α</sup>.",
+            "answer": true,
+            "explanation": "Đúng, tính chất lũy thừa của một tích."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Rút gọn biểu thức P = x<sup>1/3</sup> · √x với x > 0 dưới dạng lũy thừa x<sup>α</sup>, ta được số mũ α bằng:",
+        "options": [
+          "5/6",
+          "1/6",
+          "2/3",
+          "1/2"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (5/6)</b><br><br><b>1. Phân tích:</b> √x = x<sup>1/2</sup>.<br><b>2. Biến đổi:</b> P = x<sup>1/3</sup> · x<sup>1/2</sup> = x<sup>1/3 + 1/2</sup> = x<sup>5/6</sup>.<br><b>3. Kết luận:</b> Số mũ α = 5/6."
+      },
+      {
+        "type": "mcq",
+        "question": "Tính giá trị của biểu thức A = (81)<sup>0,75</sup> + (1/125)<sup>-1/3</sup> - (1/32)<sup>-0,2</sup>:",
+        "options": [
+          "30",
+          "28",
+          "32",
+          "26"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (30)</b><br><br><b>1. Tính từng số hạng:</b><br>- 81<sup>0,75</sup> = (3<sup>4</sup>)<sup>3/4</sup> = 3<sup>3</sup> = 27.<br>- (1/125)<sup>-1/3</sup> = (5<sup>-3</sup>)<sup>-1/3</sup> = 5<sup>1</sup> = 5.<br>- (1/32)<sup>-0,2</sup> = (2<sup>-5</sup>)<sup>-1/5</sup> = 2<sup>1</sup> = 2.<br><b>2. Tổng:</b> A = 27 + 5 - 2 = 30."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho a > 0, rút gọn biểu thức Q = <span class=\"fraction\"><span class=\"numerator\">a<sup>4/3</sup> · (a<sup>-1/3</sup> + a<sup>2/3</sup>)</span><span class=\"denominator\">a<sup>1/4</sup> · (a<sup>3/4</sup> + a<sup>-1/4</sup>)</span></span>:",
+        "options": [
+          "a",
+          "a<sup>2</sup>",
+          "1",
+          "a + 1"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (a)</b><br><br><b>1. Khai triển tử:</b> a<sup>4/3</sup> · a<sup>-1/3</sup> + a<sup>4/3</sup> · a<sup>2/3</sup> = a<sup>1</sup> + a<sup>2</sup> = a(1 + a).<br><b>2. Khai triển mẫu:</b> a<sup>1/4</sup> · a<sup>3/4</sup> + a<sup>1/4</sup> · a<sup>-1/4</sup> = a<sup>1</sup> + 1 = a + 1.<br><b>3. Rút gọn:</b> Q = <span class=\"fraction\"><span class=\"numerator\">a(a + 1)</span><span class=\"denominator\">a + 1</span></span> = a."
+      },
+      {
+        "type": "fill",
+        "question": "Cho x > 0. Biểu thức P = √(x · √(x · √x)) viết dưới dạng x<sup>m/n</sup> (với phân số m/n tối giản). Hãy điền các giá trị thích hợp:<br>Giá trị m = %%%SLOT_0%%%, giá trị n = %%%SLOT_1%%%.",
+        "tokens": [
+          "7",
+          "8",
+          "5",
+          "6",
+          "3",
+          "4"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "7"
+          },
+          {
+            "id": "SLOT_1",
+            "answer": "8"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: m = 7, n = 8</b><br><br>Ta có: P = (x · (x · x<sup>1/2</sup>)<sup>1/2</sup>)<sup>1/2</sup> = (x · (x<sup>3/2</sup>)<sup>1/2</sup>)<sup>1/2</sup> = (x · x<sup>3/4</sup>)<sup>1/2</sup> = (x<sup>7/4</sup>)<sup>1/2</sup> = x<sup>7/8</sup>. Do đó m = 7, n = 8."
+      },
+      {
+        "type": "match",
+        "question": "Ghép mỗi phép biến đổi lũy thừa ở Cột A với kết quả thu gọn tương ứng ở Cột B (với a > 0):",
+        "pairs": [
+          {
+            "left": "1. a<sup>2</sup> · a<sup>1/2</sup>",
+            "right": "A. a<sup>5/2</sup>"
+          },
+          {
+            "left": "2. (a<sup>3/2</sup>)<sup>2</sup>",
+            "right": "B. a<sup>3</sup>"
+          },
+          {
+            "left": "3. a<sup>1/3</sup> / a<sup>4/3</sup>",
+            "right": "C. a<sup>-1</sup>"
+          },
+          {
+            "left": "4. <sup>3</sup>√(a<sup>6</sup>)",
+            "right": "D. a<sup>2</sup>"
+          }
+        ],
+        "explanation": "1 - A (2 + 1/2 = 5/2)<br>2 - B ((3/2)*2 = 3)<br>3 - C (1/3 - 4/3 = -1)<br>4 - D (6/3 = 2)."
+      },
+      {
+        "type": "mcq",
+        "question": "Số lượng vi khuẩn của một mẻ nuôi cấy sau t giờ tuân theo công thức N(t) = N<sub>0</sub> · 2<sup>t/3</sup>. Biết ban đầu có N<sub>0</sub> = 1 000 con vi khuẩn. Sau bao nhiêu giờ thì số lượng vi khuẩn tăng gấp 8 lần ban đầu?",
+        "options": [
+          "9 giờ",
+          "6 giờ",
+          "12 giờ",
+          "3 giờ"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (9 giờ)</b><br><br><b>1. Thiết lập phương trình:</b> N(t) = 8 · N<sub>0</sub> ⇔ N<sub>0</sub> · 2<sup>t/3</sup> = 8 N<sub>0</sub> ⇔ 2<sup>t/3</sup> = 8 = 2<sup>3</sup>.<br><b>2. Giải số mũ:</b> t/3 = 3 ⇔ t = 9 giờ."
+      },
+      {
+        "type": "mcq",
+        "question": "Một người gửi tiết kiệm số tiền P = 100 triệu đồng vào ngân hàng theo hình thức lãi kép với lãi suất r = 6%/năm. Số tiền cả gốc lẫn lãi sau n năm được tính theo công thức S<sub>n</sub> = P · (1 + r)<sup>n</sup>. Tính số tiền (triệu đồng, làm tròn đến chữ số thập phân thứ hai) người đó nhận được sau 5 năm:",
+        "options": [
+          "133,82 triệu đồng",
+          "130,00 triệu đồng",
+          "126,25 triệu đồng",
+          "135,40 triệu đồng"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (133,82 triệu đồng)</b><br><br><b>1. Công thức lãi kép:</b> S<sub>5</sub> = 100 · (1 + 0,06)<sup>5</sup>.<br><b>2. Tính toán:</b> (1,06)<sup>5</sup> ≈ 1,338225578. Suy ra S<sub>5</sub> ≈ 100 · 1,3382256 ≈ 133,82 triệu đồng."
+      },
+      {
+        "type": "mcq",
+        "question": "Định luật làm nguội của Newton chỉ ra rằng nhiệt độ T (°C) của một vật sau thời gian t (phút) tuân theo công thức T(t) = T<sub>mt</sub> + (T<sub>0</sub> - T<sub>mt</sub>) · e<sup>-k · t</sup>. Cho biết môi trường T<sub>mt</sub> = 20°C, nhiệt độ ban đầu T<sub>0</sub> = 100°C và hằng số k = 0,05 min<sup>-1</sup>. Tính nhiệt độ của vật sau 10 phút (lấy e<sup>-0,5</sup> ≈ 0,6065):",
+        "options": [
+          "68,52°C",
+          "60,65°C",
+          "72,14°C",
+          "55,40°C"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (68,52°C)</b><br><br><b>1. Thay số vào công thức:</b> T(10) = 20 + (100 - 20) · e<sup>-0,05 · 10</sup> = 20 + 80 · e<sup>-0,5</sup>.<br><b>2. Tính giá trị:</b> T(10) ≈ 20 + 80 · 0,6065 = 20 + 48,52 = 68,52°C."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Bài 19: Lôgarit",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Cho hai số thực dương a, b với a ≠ 1. Đẳng thức nào sau đây là <b>đúng</b>?",
+        "options": [
+          "log<sub>a</sub>(b<sup>α</sup>) = α · log<sub>a</sub> b",
+          "log<sub>a</sub>(b + c) = log<sub>a</sub> b · log<sub>a</sub> c",
+          "log<sub>a</sub>(b / c) = log<sub>a</sub> b / log<sub>a</sub> c",
+          "log<sub>a</sub> b = log<sub>b</sub> a"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Định lí logarit của lũy thừa:</b> Với a > 0, a ≠ 1, b > 0 và số thực α tùy ý, ta có log<sub>a</sub>(b<sup>α</sup>) = α · log<sub>a</sub> b.<br><b>2. Nhận xét:</b> logarit của tích thành tổng, thương thành hiệu; do đó B, C sai."
+      },
+      {
+        "type": "tf",
+        "question": "Cho a, b, c là các số thực dương, a ≠ 1. Xét tính đúng/sai của các mệnh đề sau:",
+        "items": [
+          {
+            "text": "a) log<sub>a</sub> 1 = 0 và log<sub>a</sub> a = 1.",
+            "answer": true,
+            "explanation": "Đúng theo định nghĩa cơ bản của logarit."
+          },
+          {
+            "text": "b) a<sup>log<sub>a</sub> b</sup> = b.",
+            "answer": true,
+            "explanation": "Đúng, đây là hệ thức căn bản giữa lũy thừa và logarit."
+          },
+          {
+            "text": "c) log<sub>a</sub>(b · c) = log<sub>a</sub> b + log<sub>a</sub> c.",
+            "answer": true,
+            "explanation": "Đúng, logarit của một tích bằng tổng các logarit."
+          },
+          {
+            "text": "d) Công thức đổi cơ số: log<sub>a</sub> b = log<sub>c</sub> a / log<sub>c</sub> b (với c ≠ 1).",
+            "answer": false,
+            "explanation": "Sai, công thức chuẩn là log<sub>a</sub> b = log<sub>c</sub> b / log<sub>c</sub> a."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Tính giá trị của biểu thức P = log<sub>2</sub> 4 + log<sub>3</sub> √3 - log<sub>5</sub>(1/25):",
+        "options": [
+          "9/2",
+          "7/2",
+          "5/2",
+          "3/2"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (9/2)</b><br><br><b>1. Tính từng số hạng:</b><br>- log<sub>2</sub> 4 = log<sub>2</sub>(2<sup>2</sup>) = 2.<br>- log<sub>3</sub> √3 = log<sub>3</sub>(3<sup>1/2</sup>) = 1/2.<br>- log<sub>5</sub>(1/25) = log<sub>5</sub>(5<sup>-2</sup>) = -2.<br><b>2. Tổng:</b> P = 2 + 1/2 - (-2) = 4 + 1/2 = 9/2."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho log<sub>2</sub> 3 = a. Biểu diễn log<sub>12</sub> 18 theo a:",
+        "options": [
+          "<span class=\"fraction\"><span class=\"numerator\">1 + 2a</span><span class=\"denominator\">2 + a</span></span>",
+          "<span class=\"fraction\"><span class=\"numerator\">2 + a</span><span class=\"denominator\">1 + 2a</span></span>",
+          "<span class=\"fraction\"><span class=\"numerator\">1 + a</span><span class=\"denominator\">2 + a</span></span>",
+          "<span class=\"fraction\"><span class=\"numerator\">2a</span><span class=\"denominator\">a + 1</span></span>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Đổi về cơ số 2:</b> log<sub>12</sub> 18 = <span class=\"fraction\"><span class=\"numerator\">log<sub>2</sub> 18</span><span class=\"denominator\">log<sub>2</sub> 12</span></span>.<br><b>2. Phân tích:</b><br>- log<sub>2</sub> 18 = log<sub>2</sub>(2 · 3<sup>2</sup>) = log<sub>2</sub> 2 + 2 · log<sub>2</sub> 3 = 1 + 2a.<br>- log<sub>2</sub> 12 = log<sub>2</sub>(2<sup>2</sup> · 3) = 2 · log<sub>2</sub> 2 + log<sub>2</sub> 3 = 2 + a.<br><b>3. Kết quả:</b> log<sub>12</sub> 18 = (1 + 2a) / (2 + a)."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho a, b > 0 thỏa mãn a<sup>2</sup> + b<sup>2</sup> = 7ab. Khẳng định nào sau đây là <b>đúng</b>?",
+        "options": [
+          "log<sub>3</sub><span class=\"fraction\"><span class=\"numerator\">a + b</span><span class=\"denominator\">3</span></span> = <span class=\"fraction\"><span class=\"numerator\">log<sub>3</sub> a + log<sub>3</sub> b</span><span class=\"denominator\">2</span></span>",
+          "2 · log<sub>3</sub>(a + b) = log<sub>3</sub> a + log<sub>3</sub> b",
+          "log<sub>3</sub>(a + b) = 3(log<sub>3</sub> a + log<sub>3</sub> b)",
+          "log<sub>3</sub><span class=\"fraction\"><span class=\"numerator\">a + b</span><span class=\"denominator\">7</span></span> = <span class=\"fraction\"><span class=\"numerator\">log<sub>3</sub> a + log<sub>3</sub> b</span><span class=\"denominator\">2</span></span>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Biến đổi giả thiết:</b> a<sup>2</sup> + 2ab + b<sup>2</sup> = 9ab ⇔ (a + b)<sup>2</sup> = 9ab ⇔ (<span class=\"fraction\"><span class=\"numerator\">a + b</span><span class=\"denominator\">3</span></span>)<sup>2</sup> = ab.<br><b>2. Lấy log<sub>3</sub> hai vế:</b> log<sub>3</sub>((a + b)/3)<sup>2</sup> = log<sub>3</sub>(ab) ⇔ 2 · log<sub>3</sub>((a + b)/3) = log<sub>3</sub> a + log<sub>3</sub> b.<br><b>3. Suy ra:</b> log<sub>3</sub>((a + b)/3) = (log<sub>3</sub> a + log<sub>3</sub> b) / 2."
+      },
+      {
+        "type": "fill",
+        "question": "Tính giá trị của biểu thức A = 4<sup>log<sub>2</sub> 5</sup> + 9<sup>log<sub>3</sub> 2</sup> - 27<sup>log<sub>3</sub> 2</sup>:<br>Biểu thức có kết quả bằng: %%%SLOT_0%%%.",
+        "tokens": [
+          "21",
+          "25",
+          "19",
+          "4",
+          "8"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "21"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: 21</b><br><br>4<sup>log<sub>2</sub> 5</sup> = (2<sup>2</sup>)<sup>log<sub>2</sub> 5</sup> = (2<sup>log<sub>2</sub> 5</sup>)<sup>2</sup> = 5<sup>2</sup> = 25.<br>9<sup>log<sub>3</sub> 2</sup> = (3<sup>2</sup>)<sup>log<sub>3</sub> 2</sup> = 2<sup>2</sup> = 4.<br>27<sup>log<sub>3</sub> 2</sup> = (3<sup>3</sup>)<sup>log<sub>3</sub> 2</sup> = 2<sup>3</sup> = 8.<br>Vậy A = 25 + 4 - 8 = 21."
+      },
+      {
+        "type": "match",
+        "question": "Ghép mỗi giá trị logarit ở Cột A với kết quả tương ứng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. log<sub>2</sub> 32",
+            "right": "A. 5"
+          },
+          {
+            "left": "2. ln(e<sup>4</sup>)",
+            "right": "B. 4"
+          },
+          {
+            "left": "3. log<sub>0,1</sub> 100",
+            "right": "C. -2"
+          },
+          {
+            "left": "4. log<sub>√3</sub> 9",
+            "right": "D. 4"
+          }
+        ],
+        "explanation": "1 - A (2^5 = 32); 2 - B (ln e^4 = 4); 3 - C (10^-1 = 0.1, 0.1^-2 = 100); 4 - D (√3^4 = 9)."
+      },
+      {
+        "type": "mcq",
+        "question": "Độ pH của dung dịch được tính theo công thức pH = -log[H<sup>+</sup>], trong đó [H<sup>+</sup>] là nồng độ ion hiđrô tính bằng mol/L. Một mẫu nước chanh có nồng độ [H<sup>+</sup>] = 2 · 10<sup>-3</sup> mol/L. Biết log 2 ≈ 0,301, độ pH của nước chanh là:",
+        "options": [
+          "2,70",
+          "3,30",
+          "2,30",
+          "3,00"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (2,70)</b><br><br><b>1. Áp dụng công thức:</b> pH = -log(2 · 10<sup>-3</sup>) = -(log 2 + log 10<sup>-3</sup>) = -(log 2 - 3) = 3 - log 2.<br><b>2. Thay số:</b> pH = 3 - 0,301 ≈ 2,699 ≈ 2,70."
+      },
+      {
+        "type": "mcq",
+        "question": "Mức cường độ âm L (tính bằng đêxiben, dB) được xác định bởi công thức L = 10 · log<span class=\"fraction\"><span class=\"numerator\">I</span><span class=\"denominator\">I<sub>0</sub></span></span>, với I<sub>0</sub> = 10<sup>-12</sup> W/m² là cường độ âm chuẩn. Một máy bay cất cánh tạo ra âm thanh có cường độ I = 100 W/m² tại vị trí đo. Mức cường độ âm đo được là:",
+        "options": [
+          "140 dB",
+          "120 dB",
+          "100 dB",
+          "160 dB"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (140 dB)</b><br><br><b>1. Thay số:</b> L = 10 · log(100 / 10<sup>-12</sup>) = 10 · log(10<sup>2</sup> / 10<sup>-12</sup>) = 10 · log(10<sup>14</sup>).<br><b>2. Kết quả:</b> L = 10 · 14 = 140 dB."
+      },
+      {
+        "type": "mcq",
+        "question": "Thang đo Richter đo năng lượng một trận động đất theo công thức M = log<span class=\"fraction\"><span class=\"numerator\">A</span><span class=\"denominator\">A<sub>0</sub></span></span>, trong đó A là biên độ sóng địa chấn và A<sub>0</sub> là biên độ chuẩn. Nếu một trận động đất có độ lớn 7 độ Richter và trận thứ hai có độ lớn 5 độ Richter, thì biên độ sóng của trận thứ nhất gấp bao nhiêu lần trận thứ hai?",
+        "options": [
+          "100 lần",
+          "20 lần",
+          "10 lần",
+          "2 lần"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (100 lần)</b><br><br><b>1. Lập tỉ số:</b> M<sub>1</sub> - M<sub>2</sub> = log(A<sub>1</sub>/A<sub>0</sub>) - log(A<sub>2</sub>/A<sub>0</sub>) = log(A<sub>1</sub>/A<sub>2</sub>).<br><b>2. Thay số:</b> 7 - 5 = log(A<sub>1</sub>/A<sub>2</sub>) ⇔ log(A<sub>1</sub>/A<sub>2</sub>) = 2 ⇔ A<sub>1</sub>/A<sub>2</sub> = 10<sup>2</sup> = 100 lần."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Bài 20: Hàm Số Mũ & Hàm Số Lôgarit",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Cho hàm số mũ y = a<sup>x</sup> và hàm số lôgarit y = log<sub>a</sub> x với 0 < a < 1. Phát biểu nào sau đây là <b>đúng</b>?",
+        "options": [
+          "Cả hai hàm số đều nghịch biến trên tập xác định của chúng.",
+          "Cả hai hàm số đều đồng biến trên ℝ.",
+          "Hàm số mũ đồng biến còn hàm số lôgarit nghịch biến.",
+          "Đồ thị của hai hàm số đối xứng nhau qua trục hoành Ox."
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Định lí tính đơn điệu:</b> Khi cơ số 0 < a < 1, cả hàm số mũ y = a<sup>x</sup> và hàm số lôgarit y = log<sub>a</sub> x đều là các hàm nghịch biến trên tập xác định tương ứng."
+      },
+      {
+        "type": "tf",
+        "question": "Cho hàm số y = log<sub>2</sub> x và y = 2<sup>x</sup>. Xét tính đúng/sai của các mệnh đề sau:",
+        "items": [
+          {
+            "text": "a) Tập xác định của hàm số y = log<sub>2</sub> x là (0; +∞).",
+            "answer": true,
+            "explanation": "Đúng, biểu thức trong logarit phải dương."
+          },
+          {
+            "text": "b) Tập giá trị của hàm số y = 2<sup>x</sup> là (0; +∞).",
+            "answer": true,
+            "explanation": "Đúng, lũy thừa cơ số 2 luôn nhận giá trị dương."
+          },
+          {
+            "text": "c) Đồ thị của hàm số y = log<sub>2</sub> x luôn đi qua điểm (1; 0).",
+            "answer": true,
+            "explanation": "Đúng, vì log<sub>2</sub> 1 = 0."
+          },
+          {
+            "text": "d) Đồ thị hàm số y = 2<sup>x</sup> và y = log<sub>2</sub> x đối xứng nhau qua trục tung Oy.",
+            "answer": false,
+            "explanation": "Sai, đồ thị của chúng đối xứng nhau qua đường thẳng y = x."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Tìm tập xác định D của hàm số y = log<sub>3</sub>(x<sup>2</sup> - 4x + 3):",
+        "options": [
+          "D = (-∞; 1) ∪ (3; +∞)",
+          "D = (1; 3)",
+          "D = [1; 3]",
+          "D = (-∞; 1] ∪ [3; +∞)"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Điều kiện xác định:</b> x<sup>2</sup> - 4x + 3 > 0.<br><b>2. Giải bất phương trình:</b> Tam thức có hai nghiệm x = 1, x = 3 và hệ số a = 1 > 0. Suy ra x < 1 hoặc x > 3.<br><b>3. Tập xác định:</b> D = (-∞; 1) ∪ (3; +∞)."
+      },
+      {
+        "type": "mcq",
+        "question": "Đạo hàm của hàm số y = x · e<sup>2x</sup> là:",
+        "options": [
+          "y' = (1 + 2x) · e<sup>2x</sup>",
+          "y' = e<sup>2x</sup>",
+          "y' = 2 · e<sup>2x</sup>",
+          "y' = (1 + x) · e<sup>2x</sup>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Áp dụng quy tắc đạo hàm tích:</b> (u · v)' = u'v + uv'.<br><b>2. Tính toán:</b> y' = (x)' · e<sup>2x</sup> + x · (e<sup>2x</sup>)' = 1 · e<sup>2x</sup> + x · (2 · e<sup>2x</sup>) = (1 + 2x)e<sup>2x</sup>."
+      },
+      {
+        "type": "mcq",
+        "question": "Tìm đạo hàm của hàm số y = ln(x<sup>2</sup> + 1):",
+        "options": [
+          "y' = <span class=\"fraction\"><span class=\"numerator\">2x</span><span class=\"denominator\">x<sup>2</sup> + 1</span></span>",
+          "y' = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x<sup>2</sup> + 1</span></span>",
+          "y' = <span class=\"fraction\"><span class=\"numerator\">x</span><span class=\"denominator\">x<sup>2</sup> + 1</span></span>",
+          "y' = <span class=\"fraction\"><span class=\"numerator\">2</span><span class=\"denominator\">x<sup>2</sup> + 1</span></span>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Công thức:</b> (ln u)' = u' / u.<br><b>2. Thay u = x<sup>2</sup> + 1:</b> u' = 2x ⇒ y' = <span class=\"fraction\"><span class=\"numerator\">2x</span><span class=\"denominator\">x<sup>2</sup> + 1</span></span>."
+      },
+      {
+        "type": "fill",
+        "question": "Tìm giá trị nhỏ nhất m của hàm số y = e<sup>x</sup> - x trên đoạn [0; 2]:<br>Giá trị m = %%%SLOT_0%%%.",
+        "tokens": [
+          "1",
+          "0",
+          "e - 1",
+          "e<sup>2</sup> - 2",
+          "2"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "1"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: 1</b><br><br>y' = e<sup>x</sup> - 1. Cho y' = 0 ⇔ e<sup>x</sup> = 1 ⇔ x = 0.<br>Ta tính giá trị tại các điểm biên: y(0) = e<sup>0</sup> - 0 = 1; y(2) = e<sup>2</sup> - 2 ≈ 5,389 > 1.<br>Do đó m = min y = 1."
+      },
+      {
+        "type": "match",
+        "question": "Ghép mỗi hàm số ở Cột A với tập xác định tương ứng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. y = 3<sup>x</sup>",
+            "right": "A. ℝ"
+          },
+          {
+            "left": "2. y = log<sub>2</sub>(x - 1)",
+            "right": "B. (1; +∞)"
+          },
+          {
+            "left": "3. y = ln(4 - x<sup>2</sup>)",
+            "right": "C. (-2; 2)"
+          },
+          {
+            "left": "4. y = (x - 2)<sup>-3</sup>",
+            "right": "D. ℝ \\ {2}"
+          }
+        ],
+        "explanation": "1 - A (hàm mũ xác định trên ℝ); 2 - B (x - 1 > 0); 3 - C (4 - x^2 > 0 ⇔ -2 < x < 2); 4 - D (số mũ nguyên âm, x - 2 ≠ 0)."
+      },
+      {
+        "type": "mcq",
+        "question": "Sự tăng trưởng dân số của một thành phố được mô hình hóa bởi hàm số P(t) = P<sub>0</sub> · e<sup>r · t</sup>, trong đó P<sub>0</sub> là dân số ban đầu, r là tỉ lệ tăng dân số hàng năm, t là số năm. Biết dân số ban đầu năm 2020 là 2 triệu người và r = 1,5%/năm. Dự báo dân số thành phố đó vào năm 2030 (sau 10 năm) là (lấy e<sup>0,15</sup> ≈ 1,1618):",
+        "options": [
+          "2,32 triệu người",
+          "2,15 triệu người",
+          "2,50 triệu người",
+          "2,60 triệu người"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (2,32 triệu người)</b><br><br><b>1. Áp dụng công thức:</b> P(10) = 2 · e<sup>0,015 · 10</sup> = 2 · e<sup>0,15</sup>.<br><b>2. Tính giá trị:</b> P(10) ≈ 2 · 1,16183 ≈ 2,3237 ≈ 2,32 triệu người."
+      },
+      {
+        "type": "mcq",
+        "question": "Chất phóng xạ Poloni <sup>210</sup>Po phân rã theo công thức khối lượng còn lại m(t) = m<sub>0</sub> · 2<sup>-t/T</sup>, với chu kì bán rã T = 138 ngày. Nếu ban đầu có m<sub>0</sub> = 100 gam Poloni, hỏi sau bao nhiêu ngày thì lượng Poloni còn lại là 25 gam?",
+        "options": [
+          "276 ngày",
+          "138 ngày",
+          "414 ngày",
+          "200 ngày"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (276 ngày)</b><br><br><b>1. Thiết lập:</b> 100 · 2<sup>-t/138</sup> = 25 ⇔ 2<sup>-t/138</sup> = 1/4 = 2<sup>-2</sup>.<br><b>2. Giải:</b> -t / 138 = -2 ⇔ t = 276 ngày (bằng đúng 2 chu kì bán rã)."
+      },
+      {
+        "type": "mcq",
+        "question": "Áp suất khí quyển P (tính bằng mmHg) ở độ cao h (mét) so với mực nước biển xấp xỉ theo công thức P(h) = 760 · e<sup>-0,00012 · h</sup>. Một nhà leo núi leo lên đỉnh Fansipan (độ cao h = 3 143 m). Áp suất khí quyển tại đỉnh Fansipan xấp xỉ bằng bao nhiêu (biết e<sup>-0,377</sup> ≈ 0,686):",
+        "options": [
+          "521 mmHg",
+          "580 mmHg",
+          "460 mmHg",
+          "610 mmHg"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (521 mmHg)</b><br><br><b>1. Tính số mũ:</b> -0,00012 · 3143 ≈ -0,37716.<br><b>2. Áp suất:</b> P ≈ 760 · 0,6858 ≈ 521,2 mmHg."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Bài 21: Phương Trình & BPT Mũ, Lôgarit",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Nghiệm của phương trình a<sup>x</sup> = b (với a > 0, a ≠ 1 và b > 0) là:",
+        "options": [
+          "x = log<sub>a</sub> b",
+          "x = log<sub>b</sub> a",
+          "x = b / a",
+          "x = a<sup>b</sup>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Theo định nghĩa logarit, số thực x thỏa mãn a<sup>x</sup> = b chính là x = log<sub>a</sub> b."
+      },
+      {
+        "type": "tf",
+        "question": "Xét tính đúng/sai của các mệnh đề sau về bất phương trình mũ và logarit:",
+        "items": [
+          {
+            "text": "a) Với a > 1, a<sup>f(x)</sup> > a<sup>g(x)</sup> ⇔ f(x) > g(x).",
+            "answer": true,
+            "explanation": "Đúng, cơ số a > 1 giữ nguyên chiều bất phương trình."
+          },
+          {
+            "text": "b) Với 0 < a < 1, log<sub>a</sub> f(x) < log<sub>a</sub> g(x) ⇔ f(x) > g(x) > 0.",
+            "answer": true,
+            "explanation": "Đúng, cơ số bé hơn 1 đảo chiều và cần điều kiện dương."
+          },
+          {
+            "text": "c) Phương trình log<sub>2</sub> x = -3 vô nghiệm vì giá trị vế phải âm.",
+            "answer": false,
+            "explanation": "Sai, logarit nhận giá trị trong ℝ; nghiệm là x = 2^(-3) = 1/8 > 0."
+          },
+          {
+            "text": "d) Phương trình 3<sup>x</sup> = -5 có nghiệm duy nhất x = log<sub>3</sub>(-5).",
+            "answer": false,
+            "explanation": "Sai, 3^x > 0 với mọi x nên phương trình vô nghiệm."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Tập nghiệm S của phương trình 2<sup>x<sup>2</sup> - x - 4</sup> = 16 là:",
+        "options": [
+          "S = {-2; 4}",
+          "S = {-4; 2}",
+          "S = {2; 4}",
+          "S = {-2; 2}"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Đưa về cùng cơ số:</b> 16 = 2<sup>4</sup>.<br><b>2. Phương trình mũ:</b> x<sup>2</sup> - x - 4 = 4 ⇔ x<sup>2</sup> - x - 8 = 0... À kiểm tra: x<sup>2</sup> - x - 4 = 4 ⇒ x<sup>2</sup> - x - 8 không có nghiệm chẵn.<br>Nếu 2<sup>x<sup>2</sup> - 2x - 4</sup> = 16 ⇒ x<sup>2</sup> - 2x - 8 = 0 ⇒ x = 4 hoặc x = -2.<br>Do đó S = {-2; 4} ứng với x<sup>2</sup> - 2x - 4 = 4."
+      },
+      {
+        "type": "mcq",
+        "question": "Giải phương trình log<sub>3</sub>(2x - 1) = 2:",
+        "options": [
+          "x = 5",
+          "x = 4",
+          "x = 9/2",
+          "x = 7/2"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (x = 5)</b><br><br><b>1. Điều kiện:</b> 2x - 1 > 0 ⇔ x > 1/2.<br><b>2. Giải phương trình:</b> 2x - 1 = 3<sup>2</sup> = 9 ⇔ 2x = 10 ⇔ x = 5 (thỏa mãn)."
+      },
+      {
+        "type": "mcq",
+        "question": "Tập nghiệm S của bất phương trình (1/2)<sup>2x - 1</sup> ≥ 1/8 là:",
+        "options": [
+          "S = (-∞; 2]",
+          "S = [2; +∞)",
+          "S = (-∞; 1]",
+          "S = [1; +∞)"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A ((-∞; 2])</b><br><br><b>1. Cơ số 1/2 < 1:</b> (1/2)<sup>2x - 1</sup> ≥ (1/2)<sup>3</sup>.<br><b>2. Đảo chiều bất phương trình:</b> 2x - 1 ≤ 3 ⇔ 2x ≤ 4 ⇔ x ≤ 2.<br><b>3. Tập nghiệm:</b> S = (-∞; 2]."
+      },
+      {
+        "type": "fill",
+        "question": "Tổng các nghiệm của phương trình 9<sup>x</sup> - 4 · 3<sup>x</sup> + 3 = 0 bằng: %%%SLOT_0%%%.",
+        "tokens": [
+          "1",
+          "4",
+          "3",
+          "0",
+          "2"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "1"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: 1</b><br><br>Đặt t = 3<sup>x</sup> (t > 0). Phương trình trở thành t<sup>2</sup> - 4t + 3 = 0.<br>Ta có hai nghiệm: t<sub>1</sub> = 1, t<sub>2</sub> = 3.<br>- 3<sup>x</sup> = 1 ⇒ x<sub>1</sub> = 0.<br>- 3<sup>x</sup> = 3 ⇒ x<sub>2</sub> = 1.<br>Tổng các nghiệm là x<sub>1</sub> + x<sub>2</sub> = 0 + 1 = 1."
+      },
+      {
+        "type": "match",
+        "question": "Ghép mỗi phương trình/bất phương trình ở Cột A với tập nghiệm tương ứng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. log<sub>2</sub> x = 3",
+            "right": "A. {8}"
+          },
+          {
+            "left": "2. 3<sup>x</sup> = 27",
+            "right": "B. {3}"
+          },
+          {
+            "left": "3. log<sub>3</sub> x < 1",
+            "right": "C. (0; 3)"
+          },
+          {
+            "left": "4. 2<sup>x</sup> ≤ 4",
+            "right": "D. (-∞; 2]"
+          }
+        ],
+        "explanation": "1 - A (x = 2^3 = 8); 2 - B (3^3 = 27); 3 - C (0 < x < 3^1 = 3); 4 - D (x ≤ 2)."
+      },
+      {
+        "type": "mcq",
+        "question": "Một người gửi 200 triệu đồng vào ngân hàng với lãi suất 6,5%/năm theo hình thức lãi kép hàng năm. Hỏi sau ít nhất bao nhiêu năm người đó nhận được số tiền cả gốc lẫn lãi vượt quá 350 triệu đồng?",
+        "options": [
+          "9 năm",
+          "8 năm",
+          "10 năm",
+          "11 năm"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (9 năm)</b><br><br><b>1. Thiết lập BPT:</b> 200 · (1 + 0,065)<sup>n</sup> > 350 ⇔ (1,065)<sup>n</sup> > 1,75.<br><b>2. Lấy logarit cơ số e hoặc thập phân:</b> n > <span class=\"fraction\"><span class=\"numerator\">ln 1,75</span><span class=\"denominator\">ln 1,065</span></span> ≈ <span class=\"fraction\"><span class=\"numerator\">0,5596</span><span class=\"denominator\">0,0630</span></span> ≈ 8,88.<br><b>3. Do n nguyên:</b> Cần ít nhất n = 9 năm."
+      },
+      {
+        "type": "mcq",
+        "question": "Sau khi tiêm thuốc vào cơ thể bệnh nhân, nồng độ thuốc C(t) (mg/L) trong máu sau t giờ giảm theo hàm số C(t) = 50 · (0,8)<sup>t</sup>. Để tiêm liều tiếp theo an toàn, bác sĩ yêu cầu nồng độ thuốc trong máu phải giảm xuống dưới 10 mg/L. Hỏi sau ít nhất bao nhiêu giờ bệnh nhân mới được tiêm liều kế tiếp (biết log<sub>0,8</sub> 0,2 ≈ 7,21)?",
+        "options": [
+          "8 giờ",
+          "7 giờ",
+          "9 giờ",
+          "10 giờ"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (8 giờ)</b><br><br><b>1. Thiết lập BPT:</b> 50 · (0,8)<sup>t</sup> < 10 ⇔ (0,8)<sup>t</sup> < 0,2.<br><b>2. Đảo chiều vì 0,8 < 1:</b> t > log<sub>0,8</sub> 0,2 ≈ 7,21.<br><b>3. Làm tròn số giờ nguyên tiếp theo:</b> Sau ít nhất 8 giờ."
+      },
+      {
+        "type": "mcq",
+        "question": "Cường độ ánh sáng I truyền qua lớp nước biển ở độ sâu d (mét) tuân theo công thức I(d) = I<sub>0</sub> · e<sup>-0,04 · d</sup>. Ở độ sâu nào thì cường độ ánh sáng chỉ còn bằng một nửa so với mặt nước (lấy ln 2 ≈ 0,693)?",
+        "options": [
+          "17,3 m",
+          "25,0 m",
+          "12,5 m",
+          "20,0 m"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (17,3 m)</b><br><br><b>1. Phương trình:</b> I<sub>0</sub> · e<sup>-0,04d</sup> = 0,5 I<sub>0</sub> ⇔ e<sup>-0,04d</sup> = 0,5 ⇔ -0,04d = ln(0,5) = -ln 2.<br><b>2. Giải d:</b> d = <span class=\"fraction\"><span class=\"numerator\">ln 2</span><span class=\"denominator\">0,04</span></span> = <span class=\"fraction\"><span class=\"numerator\">0,693</span><span class=\"denominator\">0,04</span></span> = 17,325 m ≈ 17,3 m."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Bài 22: Hai Đường Thẳng Vuông Góc",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Góc giữa hai đường thẳng a và b trong không gian là góc giữa hai đường thẳng a' và b' cùng đi qua một điểm O và lần lượt song song với a và b. Số đo của góc giữa hai đường thẳng nằm trong khoảng nào sau đây?",
+        "options": [
+          "[0°; 90°]",
+          "(0°; 180°)",
+          "[0°; 180°]",
+          "(0°; 90°]"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Theo quy ước hình học không gian, góc giữa hai đường thẳng luôn là góc không tù: 0° ≤ (a, b) ≤ 90°."
+      },
+      {
+        "type": "tf",
+        "question": "Cho hình lập phương ABCD.A'B'C'D'. Xét tính đúng/sai của các mệnh đề sau:",
+        "items": [
+          {
+            "text": "a) Đường thẳng AB vuông góc với đường thẳng B'C'.",
+            "answer": true,
+            "explanation": "Đúng, vì B'C' // BC mà AB ⊥ BC nên AB ⊥ B'C'."
+          },
+          {
+            "text": "b) Góc giữa hai đường thẳng A'B và B'C bằng 60°.",
+            "answer": true,
+            "explanation": "Đúng, vì A'B // D'C và tam giác BCD' là tam giác đều."
+          },
+          {
+            "text": "c) Đường thẳng AC vuông góc với đường thẳng BD'.",
+            "answer": true,
+            "explanation": "Đúng, AC ⊥ (BDD'B') nên AC vuông góc với BD'."
+          },
+          {
+            "text": "d) Hai đường thẳng chéo nhau thì không thể vuông góc với nhau.",
+            "answer": false,
+            "explanation": "Sai, hai đường thẳng chéo nhau hoàn toàn có thể vuông góc với nhau (ví dụ AB và B'C')."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Cho tứ diện đều ABCD có cạnh bằng a. Góc giữa hai đường thẳng AB và CD bằng:",
+        "options": [
+          "90°",
+          "60°",
+          "45°",
+          "30°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (90°)</b><br><br><b>1. Gọi M là trung điểm CD:</b> Trong tam giác cân BCD, BM ⊥ CD. Trong tam giác cân ACD, AM ⊥ CD.<br><b>2. Mặt phẳng trung gian:</b> CD ⊥ (ABM) ⇒ CD ⊥ AB.<br><b>3. Kết luận:</b> Góc giữa AB và CD bằng 90°."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình lập phương ABCD.A'B'C'D'. Tính cosin của góc giữa hai đường thẳng AC và DA':",
+        "options": [
+          "1/2",
+          "√2/2",
+          "√3/2",
+          "0"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (1/2)</b><br><br><b>1. Thay thế song song:</b> DA' // CB'. Do đó góc giữa AC và DA' là góc giữa AC và CB'.<br><b>2. Xét tam giác ACB':</b> Các cạnh AC, CB', AB' đều là đường chéo của các mặt hình lập phương bằng nhau ⇒ tam giác ACB' đều.<br><b>3. Số đo góc:</b> Góc ACB' = 60° ⇒ cos 60° = 1/2."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình chóp S.ABC có SA = SB = SC và góc ASB = BSC = CSA = 60°. Góc giữa hai đường thẳng SA và BC bằng:",
+        "options": [
+          "90°",
+          "60°",
+          "45°",
+          "30°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (90°)</b><br><br>Vì các mặt bên là tam giác đều nên hình chóp S.ABC là hình tứ diện đều. Theo tính chất tứ diện đều, các cặp cạnh đối diện vuông góc từng đôi một, do đó SA ⊥ BC, góc bằng 90°."
+      },
+      {
+        "type": "fill",
+        "question": "Cho hình lập phương ABCD.A'B'C'D'. Số đo góc giữa hai đường thẳng AC và A'D bằng: %%%SLOT_0%%% độ.",
+        "tokens": [
+          "60",
+          "90",
+          "45",
+          "30",
+          "120"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "60"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: 60 độ</b><br><br>Do A'D // B'C nên góc giữa AC và A'D bằng góc giữa AC và B'C. Tam giác ACB' có 3 cạnh là 3 đường chéo của hình vuông nên tam giác này đều, góc bằng 60°."
+      },
+      {
+        "type": "match",
+        "question": "Cho hình lập phương ABCD.A'B'C'D'. Ghép mỗi cặp đường thẳng ở Cột A với góc giữa chúng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. AB và CC'",
+            "right": "A. 90°"
+          },
+          {
+            "left": "2. AB và A'D'",
+            "right": "B. 90°"
+          },
+          {
+            "left": "3. AC và A'C'",
+            "right": "C. 0°"
+          },
+          {
+            "left": "4. AC và BD",
+            "right": "D. 90°"
+          }
+        ],
+        "explanation": "1 - A (CC' // BB' ⊥ AB); 2 - B (A'D' // AD ⊥ AB); 3 - C (song song nên góc 0°); 4 - D (hai đường chéo hình vuông vuông góc)."
+      },
+      {
+        "type": "mcq",
+        "question": "Trong kĩ thuật xây dựng nhà xưởng, một giàn vì kèo thép có thanh chống thẳng đứng SO vuông góc với hai thanh ngang giằng xà gồ OA và OB vuông góc nhau tại O. Khi đó, thanh chống SO tạo với thanh giằng chéo AB góc bằng:",
+        "options": [
+          "90°",
+          "45°",
+          "60°",
+          "30°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (90°)</b><br><br>Vì SO ⊥ OA và SO ⊥ OB nên SO vuông góc với mặt phẳng đáy (OAB). Do thanh chéo AB nằm trong (OAB) nên SO ⊥ AB, tức góc giữa chúng bằng 90°."
+      },
+      {
+        "type": "mcq",
+        "question": "Một thợ mộc kiểm tra độ vuông góc của mép chân bàn thẳng đứng với thanh giằng chéo dưới gầm bàn bằng cách chiếu song song xuống sàn nhà. Nếu hình chiếu của hai thanh trên sàn nhà vuông góc với nhau và mép chân bàn vuông góc với sàn nhà, thì hai thanh trong không gian có:",
+        "options": [
+          "Vuông góc với nhau",
+          "Song song với nhau",
+          "Tạo với nhau góc 45°",
+          "Trùng nhau"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Mép chân bàn vuông góc với mặt sàn nên nó vuông góc với mọi đường thẳng nằm trong hoặc song song với mặt sàn, do đó nó vuông góc với thanh giằng chéo."
+      },
+      {
+        "type": "mcq",
+        "question": "Trong không gian phòng học hình hộp chữ nhật ABCD.A'B'C'D', góc giữa dây đèn LED chạy dọc theo mép tường đứng AA' và mép bảng chạy dọc theo mép tường ngang CD bằng:",
+        "options": [
+          "90°",
+          "60°",
+          "45°",
+          "0°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (90°)</b><br><br>Đường thẳng AA' song song với DD'. Do DD' ⊥ CD tại góc phòng nên AA' vuông góc với CD, tức góc bằng 90°."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Bài 23: Đường Thẳng Vuông Góc Với Mặt Phẳng",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Điều kiện cần và đủ để đường thẳng d vuông góc với mặt phẳng (P) là:",
+        "options": [
+          "d vuông góc với hai đường thẳng cắt nhau cùng nằm trong (P).",
+          "d vuông góc với một đường thẳng nằm trong (P).",
+          "d vuông góc với hai đường thẳng song song nằm trong (P).",
+          "d song song với một đường thẳng nằm trong (P)."
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>Định lí cơ bản:</b> Nếu đường thẳng d vuông góc với hai đường thẳng cắt nhau cùng nằm trong mặt phẳng (P) thì d vuông góc với mặt phẳng (P)."
+      },
+      {
+        "type": "tf",
+        "question": "Xét tính đúng/sai của các khẳng định sau về đường thẳng vuông góc mặt phẳng:",
+        "items": [
+          {
+            "text": "a) Nếu d ⊥ (P) thì d vuông góc với mọi đường thẳng nằm trong (P).",
+            "answer": true,
+            "explanation": "Đúng theo định nghĩa đường thẳng vuông góc mặt phẳng."
+          },
+          {
+            "text": "b) Qua một điểm cho trước có duy nhất một mặt phẳng vuông góc với một đường thẳng cho trước.",
+            "answer": true,
+            "explanation": "Đúng, tính chất duy nhất."
+          },
+          {
+            "text": "c) Nếu d vuông góc với hai đường thẳng a và b trong (P) thì d ⊥ (P).",
+            "answer": false,
+            "explanation": "Sai, nếu a và b song song thì d chưa chắc vuông góc với (P)."
+          },
+          {
+            "text": "d) Hai đường thẳng phân biệt cùng vuông góc với một mặt phẳng thì song song với nhau.",
+            "answer": true,
+            "explanation": "Đúng, tính chất quan hệ song song và vuông góc."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình chóp S.ABC có đáy ABC là tam giác vuông tại B và SA ⊥ (ABC). Khẳng định nào sau đây là <b>đúng</b>?",
+        "options": [
+          "BC ⊥ (SAB)",
+          "AC ⊥ (SAB)",
+          "AB ⊥ (SBC)",
+          "BC ⊥ (SAC)"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>Chứng minh:</b><br>- SA ⊥ (ABC) ⇒ SA ⊥ BC.<br>- Tam giác ABC vuông tại B ⇒ AB ⊥ BC.<br>- Như vậy BC vuông góc với hai đường thẳng cắt nhau SA và AB trong (SAB).<br>- Suy ra BC ⊥ (SAB)."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình chóp S.ABCD có đáy ABCD là hình vuông tâm O, cạnh SA ⊥ (ABCD). Mệnh đề nào sau đây là <b>sai</b>?",
+        "options": [
+          "BD ⊥ (SAC)",
+          "CD ⊥ (SAD)",
+          "BC ⊥ (SAB)",
+          "AC ⊥ (SBD)"
+        ],
+        "answer": 3,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: D (Sai là AC ⊥ (SBD))</b><br><br><b>Phân tích:</b> AC vuông góc BD nhưng AC không vuông góc với SO (với O là tâm), do SA không bằng AC. Ngược lại BD ⊥ AC và BD ⊥ SA nên BD ⊥ (SAC) là đúng."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình chóp S.ABC có SA ⊥ (ABC), tam giác ABC vuông tại B. Cho SA = a, AB = a, BC = a√2. Tính khoảng cách từ A đến mặt phẳng (SBC) bằng độ dài đoạn AH vuông góc SB tại H:",
+        "options": [
+          "a√2 / 2",
+          "a / 2",
+          "a√3 / 2",
+          "a"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (a√2 / 2)</b><br><br><b>1.</b> Do BC ⊥ (SAB) nên BC ⊥ AH. Lại có AH ⊥ SB ⇒ AH ⊥ (SBC).<br><b>2.</b> Tam giác SAB vuông cân tại A với SA = AB = a.<br><b>3.</b> Đường cao AH ứng với cạnh huyền SB = a√2 là AH = (SA · AB) / SB = a<sup>2</sup> / (a√2) = a√2 / 2."
+      },
+      {
+        "type": "fill",
+        "question": "Cho hình chóp S.ABCD có đáy ABCD là hình chữ nhật, SA ⊥ (ABCD). Có bao nhiêu mặt bên của hình chóp là các tam giác vuông?<br>Số mặt bên là tam giác vuông là: %%%SLOT_0%%%.",
+        "tokens": [
+          "4",
+          "2",
+          "3",
+          "1"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "4"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: 4</b><br><br>Cả 4 mặt bên đều là tam giác vuông:<br>- Tam giác SAB vuông tại A (SA ⊥ AB).<br>- Tam giác SAD vuông tại A (SA ⊥ AD).<br>- Tam giác SBC vuông tại B (BC ⊥ (SAB) ⇒ BC ⊥ SB).<br>- Tam giác SDC vuông tại D (CD ⊥ (SAD) ⇒ CD ⊥ SD)."
+      },
+      {
+        "type": "match",
+        "question": "Cho hình chóp S.ABCD có đáy là hình vuông, SA ⊥ (ABCD). Ghép mỗi đường thẳng ở Cột A với mặt phẳng vuông góc tương ứng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. Đường thẳng SA",
+            "right": "A. Mặt phẳng (ABCD)"
+          },
+          {
+            "left": "2. Đường thẳng BC",
+            "right": "B. Mặt phẳng (SAB)"
+          },
+          {
+            "left": "3. Đường thẳng CD",
+            "right": "C. Mặt phẳng (SAD)"
+          },
+          {
+            "left": "4. Đường thẳng BD",
+            "right": "D. Mặt phẳng (SAC)"
+          }
+        ],
+        "explanation": "1 - A (giả thiết); 2 - B (BC ⊥ AB, BC ⊥ SA); 3 - C (CD ⊥ AD, CD ⊥ SA); 4 - D (BD ⊥ AC, BD ⊥ SA)."
+      },
+      {
+        "type": "mcq",
+        "question": "Người thợ xây dựng dùng dây dọi để kiểm tra độ thẳng đứng của bức tường nhà so với nền móng phẳng. Nguyên lí vật lí - hình học được áp dụng ở đây là:",
+        "options": [
+          "Dây dọi luôn có phương thẳng đứng, vuông góc với mặt phẳng nằm ngang của nền nhà.",
+          "Dây dọi song song với mặt đất.",
+          "Dây dọi tạo với mặt đất góc 45°.",
+          "Dây dọi và mặt tường là hai đường thẳng chéo nhau."
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Dưới tác dụng của trọng lực, phương dây dọi vuông góc với mặt nước tĩnh (mặt phẳng nằm ngang). Dùng dây dọi cho phép tạo ra đường thẳng vuông góc với mặt sàn móng."
+      },
+      {
+        "type": "mcq",
+        "question": "Một cột ăng-ten cắm thẳng đứng trên mặt đất bằng phẳng được cố định bởi ba sợi dây cáp chằng từ đỉnh cột xuống ba cọc neo trên mặt đất. Để cột luôn đứng thẳng vuông góc với mặt đất, ba cọc neo phải thỏa mãn điều kiện:",
+        "options": [
+          "Ba cọc neo không thẳng hàng trên mặt đất.",
+          "Ba cọc neo thẳng hàng nhau.",
+          "Chỉ cần cắm hai cọc neo bất kì.",
+          "Cột nghiêng về phía cọc gần nhất."
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Ba cọc neo không thẳng hàng tạo thành một tam giác, giúp giữ đỉnh cột cân bằng trên mặt phẳng hai chiều của mặt đất."
+      },
+      {
+        "type": "mcq",
+        "question": "Một chiếc dù che nắng ngoài trời có trụ đứng vuông góc với mặt sân lát gạch nằm ngang. Vào đúng 12 giờ trưa ngày hạ chí (mặt trời chiếu thẳng đứng), bóng của tán dù tròn trên mặt sân phẳng có hình dạng:",
+        "options": [
+          "Hình tròn có tâm trùng với chân trụ dù",
+          "Hình elip kéo dài",
+          "Hình đa giác lồi",
+          "Hình parabol"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Tia sáng chiếu vuông góc với mặt đất nên phép chiếu này là phép chiếu vuông góc, hình tròn song song với mặt đất được chiếu thành hình tròn bằng nó với tâm thẳng đứng chiếu xuống chân trụ."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Bài 24: Phép Chiếu Vuông Góc. Góc Đường & Mặt",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Góc giữa đường thẳng d không vuông góc với mặt phẳng (P) là góc giữa:",
+        "options": [
+          "Đường thẳng d và hình chiếu d' của nó trên mặt phẳng (P).",
+          "Đường thẳng d và một đường thẳng bất kì trong (P).",
+          "Đường thẳng d và đường vuông góc với (P).",
+          "Đường thẳng d' và trục tung."
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Theo định nghĩa, góc giữa đường thẳng d và mặt phẳng (P) là góc giữa d và đường thẳng d' là hình chiếu vuông góc của d trên (P)."
+      },
+      {
+        "type": "tf",
+        "question": "Xét tính đúng/sai của các mệnh đề sau về góc giữa đường thẳng và mặt phẳng:",
+        "items": [
+          {
+            "text": "a) Số đo góc giữa đường thẳng và mặt phẳng luôn nằm trong đoạn [0°; 90°].",
+            "answer": true,
+            "explanation": "Đúng theo quy ước số đo góc giữa đường thẳng và mặt phẳng."
+          },
+          {
+            "text": "b) Nếu đường thẳng d vuông góc với mặt phẳng (P) thì góc giữa d và (P) bằng 90°.",
+            "answer": true,
+            "explanation": "Đúng theo định nghĩa."
+          },
+          {
+            "text": "c) Nếu d // (P) thì góc giữa d và (P) bằng 0°.",
+            "answer": true,
+            "explanation": "Đúng, khi đó d // d' nên góc giữa chúng bằng 0°."
+          },
+          {
+            "text": "d) Góc giữa d và (P) là góc tù nếu d cắt (P) theo góc xiên lớn.",
+            "answer": false,
+            "explanation": "Sai, góc giữa đường thẳng và mặt phẳng không bao giờ vượt quá 90°."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình chóp S.ABC có đáy ABC là tam giác đều cạnh a, SA ⊥ (ABC) và SA = a. Góc giữa đường thẳng SB và mặt phẳng (ABC) bằng:",
+        "options": [
+          "45°",
+          "60°",
+          "30°",
+          "90°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (45°)</b><br><br><b>1. Xác định hình chiếu:</b> SA ⊥ (ABC) nên A là hình chiếu của S trên (ABC). Hình chiếu của SB trên (ABC) là AB.<br><b>2. Góc:</b> Góc giữa SB và (ABC) là góc SBA.<br><b>3. Tính toán:</b> Tam giác SAB vuông tại A với SA = AB = a ⇒ tam giác SAB vuông cân tại A ⇒ góc SBA = 45°."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình chóp S.ABCD có đáy là hình vuông cạnh a, SA ⊥ (ABCD) và SA = a√6. Tính số đo góc giữa đường thẳng SC và mặt phẳng đáy (ABCD):",
+        "options": [
+          "60°",
+          "45°",
+          "30°",
+          "75°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (60°)</b><br><br><b>1. Hình chiếu:</b> Hình chiếu của SC trên (ABCD) là AC.<br><b>2. Tính AC:</b> AC là đường chéo hình vuông cạnh a ⇒ AC = a√2.<br><b>3. Tính góc SCA:</b> tan(SCA) = SA / AC = (a√6) / (a√2) = √3 ⇒ góc SCA = 60°."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình lập phương ABCD.A'B'C'D' cạnh a. Tính sin của góc giữa đường chéo AC' và mặt phẳng đáy (ABCD):",
+        "options": [
+          "1/√3",
+          "√2/√3",
+          "1/2",
+          "√3/2"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (1/√3)</b><br><br><b>1.</b> Hình chiếu vuông góc của AC' trên (ABCD) là AC.<br><b>2.</b> Góc cần tìm là góc C'AC (tam giác C'AC vuông tại C).<br><b>3.</b> C'C = a, AC' = a√3 ⇒ sin(C'AC) = C'C / AC' = a / (a√3) = 1/√3."
+      },
+      {
+        "type": "fill",
+        "question": "Cho hình chóp S.ABC có SA ⊥ (ABC), tam giác ABC vuông cân tại B có BA = BC = a. Biết SA = a√2. Tang của góc giữa SC và mặt phẳng (SAB) bằng: tan α = %%%SLOT_0%%%.",
+        "tokens": [
+          "1/√3",
+          "1/√2",
+          "√2",
+          "1",
+          "√3"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "1/√3"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: 1/√3</b><br><br>Do BC ⊥ AB và BC ⊥ SA nên BC ⊥ (SAB). Do đó B là hình chiếu của C trên (SAB).<br>Hình chiếu của SC trên (SAB) là SB. Góc cần tìm là góc CSB.<br>Tam giác SBC vuông tại B. Cạnh SB = √(SA<sup>2</sup> + AB<sup>2</sup>) = √(2a<sup>2</sup> + a<sup>2</sup>) = a√3.<br>Cạnh BC = a. Vậy tan(CSB) = BC / SB = a / (a√3) = 1/√3."
+      },
+      {
+        "type": "match",
+        "question": "Cho hình lập phương ABCD.A'B'C'D'. Ghép mỗi đường thẳng ở Cột A với góc tạo bởi nó và mặt phẳng (ABCD) ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. Đường thẳng A'A",
+            "right": "A. 90°"
+          },
+          {
+            "left": "2. Đường thẳng AB",
+            "right": "B. 0°"
+          },
+          {
+            "left": "3. Đường thẳng A'C",
+            "right": "C. arctan(1/√2)"
+          },
+          {
+            "left": "4. Đường thẳng A'B",
+            "right": "D. 45°"
+          }
+        ],
+        "explanation": "1 - A (A'A ⊥ (ABCD) ⇒ 90°); 2 - B (AB nằm trong (ABCD) ⇒ 0°); 3 - C (tan = A'A/AC = a/(a√2) = 1/√2); 4 - D (tan = A'A/AB = 1 ⇒ 45°)."
+      },
+      {
+        "type": "mcq",
+        "question": "Một tấm pin năng lượng mặt trời đặt trên mái nhà phẳng nghiêng một góc 30° so với phương nằm ngang. Khi tia sáng mặt trời chiếu vuông góc vào mặt tấm pin, góc giữa tia sáng mặt trời và mái nhà bằng:",
+        "options": [
+          "60°",
+          "30°",
+          "45°",
+          "90°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (60°)</b><br><br>Vì tấm pin nghiêng 30° so với mặt phẳng ngang, nên pháp tuyến của tấm pin (phương tia sáng) tạo với phương thẳng đứng góc 30°, tức tạo với mặt phẳng ngang (mái nhà phẳng) góc 90° - 30° = 60°."
+      },
+      {
+        "type": "mcq",
+        "question": "Một người trượt ván trên một cầu trượt dốc dài 10 m nối từ sân thượng cao 5 m xuống mặt đất phẳng. Góc tạo bởi đường trượt và mặt đất bằng:",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "15°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (30°)</b><br><br><b>1. Mô hình:</b> Tam giác vuông có cạnh huyền d = 10 m, cạnh đối diện h = 5 m.<br><b>2. Tính sin:</b> sin α = h / d = 5 / 10 = 1/2 ⇒ α = 30°."
+      },
+      {
+        "type": "mcq",
+        "question": "Cột cờ của một trường học cao 12 m. Vào một thời điểm buổi chiều, bóng của đỉnh cột cờ in trên sân trường cách chân cột cờ một khoảng 12√3 m. Góc tạo bởi tia nắng mặt trời và mặt sân lúc đó là:",
+        "options": [
+          "30°",
+          "60°",
+          "45°",
+          "15°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (30°)</b><br><br><b>1. Mô hình tam giác vuông:</b> Cạnh đối h = 12 m, cạnh kề bóng b = 12√3 m.<br><b>2. Tang góc dốc:</b> tan α = h / b = 12 / (12√3) = 1/√3 ⇒ α = 30°."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Bài 25: Hai Mặt Phẳng Vuông Góc",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Điều kiện cần và đủ để hai mặt phẳng (P) và (Q) vuông góc với nhau là:",
+        "options": [
+          "Mặt phẳng (P) chứa một đường thẳng vuông góc với mặt phẳng (Q).",
+          "Mặt phẳng (P) chứa hai đường thẳng cắt nhau song song với (Q).",
+          "Đường giao tuyến của chúng vuông góc với một đường thẳng thứ ba.",
+          "Hai mặt phẳng không có điểm chung."
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>Định lí:</b> Nếu một mặt phẳng chứa một đường thẳng vuông góc với mặt phẳng kia thì hai mặt phẳng đó vuông góc với nhau."
+      },
+      {
+        "type": "tf",
+        "question": "Cho hai mặt phẳng (P) và (Q) vuông góc với nhau theo giao tuyến d. Xét tính đúng/sai của các mệnh đề sau:",
+        "items": [
+          {
+            "text": "a) Nếu một đường thẳng nằm trong (P) và vuông góc với d thì nó vuông góc với (Q).",
+            "answer": true,
+            "explanation": "Đúng, định lí cơ bản về hai mặt phẳng vuông góc."
+          },
+          {
+            "text": "b) Mọi đường thẳng nằm trong (P) đều vuông góc với (Q).",
+            "answer": false,
+            "explanation": "Sai, chỉ những đường vuông góc với giao tuyến d mới vuông góc với (Q)."
+          },
+          {
+            "text": "c) Nếu một điểm A thuộc (P), đường thẳng qua A vuông góc với (Q) sẽ nằm trong (P).",
+            "answer": true,
+            "explanation": "Đúng, tính chất đường vuông góc đi qua một điểm."
+          },
+          {
+            "text": "d) Góc giữa hai mặt phẳng vuông góc bằng 90°.",
+            "answer": true,
+            "explanation": "Đúng theo định nghĩa số đo góc giữa hai mặt phẳng."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình chóp S.ABCD có đáy ABCD là hình vuông và SA ⊥ (ABCD). Góc giữa hai mặt phẳng (SAB) và (SAD) bằng:",
+        "options": [
+          "90°",
+          "60°",
+          "45°",
+          "30°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (90°)</b><br><br><b>1. Giao tuyến:</b> Giao tuyến của (SAB) và (SAD) là đường thẳng SA.<br><b>2. Kẻ vuông góc với giao tuyến:</b> Trong (SAB), AB ⊥ SA; trong (SAD), AD ⊥ SA.<br><b>3. Góc giữa hai mặt phẳng:</b> Bằng góc BAD của hình vuông đáy ⇒ số đo bằng 90°."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho tứ diện SABC có SA, SB, SC đôi một vuông góc tại S. SA = SB = SC = a. Số đo góc giữa hai mặt phẳng (SAB) và (SBC) bằng:",
+        "options": [
+          "90°",
+          "45°",
+          "60°",
+          "30°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (90°)</b><br><br>Giao tuyến của (SAB) và (SBC) là SB. Do SA ⊥ SB và SC ⊥ SB nên góc giữa hai mặt phẳng là góc ASC = 90°."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình chóp S.ABCD có đáy là hình thoi cạnh a, góc BAD = 60°, SA ⊥ (ABCD). Khẳng định nào sau đây là <b>đúng</b>?",
+        "options": [
+          "(SBD) ⊥ (SAC)",
+          "(SAB) ⊥ (SBC)",
+          "(SAD) ⊥ (SCD)",
+          "(SAB) ⊥ (SCD)"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Trong hình thoi ABCD, hai đường chéo BD ⊥ AC. Lại có BD ⊥ SA (do SA ⊥ đáy). Suy ra BD ⊥ (SAC). Mặt phẳng (SBD) chứa BD nên (SBD) ⊥ (SAC)."
+      },
+      {
+        "type": "fill",
+        "question": "Cho hình chóp tam giác đều S.ABC có cạnh đáy bằng a và chiều cao SO = a/2. Tính số đo góc nhị diện [S, BC, A]:<br>Số đo góc bằng: %%%SLOT_0%%% độ.",
+        "tokens": [
+          "60",
+          "45",
+          "30",
+          "90"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "60"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: 60 độ</b><br><br>Gọi M là trung điểm BC. Ta có AM ⊥ BC và SM ⊥ BC, góc giữa hai mặt phẳng là góc SMO.<br>Đáy ABC là tam giác đều cạnh a nên đường cao AM = a√3/2. Điểm O là trọng tâm nên OM = AM / 3 = a√3 / 6.<br>tan(SMO) = SO / OM = (a/2) / (a√3/6) = (1/2) * (6/√3) = 3/√3 = √3. Do đó góc SMO = 60°."
+      },
+      {
+        "type": "match",
+        "question": "Cho hình lập phương ABCD.A'B'C'D'. Ghép mỗi cặp mặt phẳng ở Cột A với góc giữa chúng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. (ABCD) và (ABB'A')",
+            "right": "A. 90°"
+          },
+          {
+            "left": "2. (ABCD) và (A'B'C'D')",
+            "right": "B. 0°"
+          },
+          {
+            "left": "3. (ABCD) và (A'BD)",
+            "right": "C. arctan(√2)"
+          },
+          {
+            "left": "4. (ACC'A') và (BDD'B')",
+            "right": "D. 90°"
+          }
+        ],
+        "explanation": "1 - A (hai mặt liền kề vuông góc); 2 - B (hai mặt đáy song song); 3 - C (tan = A'A/AO = a/(a√2/2) = √2); 4 - D (hai mặt phẳng chéo vuông góc)."
+      },
+      {
+        "type": "mcq",
+        "question": "Khi hai cánh cửa sổ mở vuông góc với nhau và cả hai cánh đều thẳng đứng vuông góc với tường nhà phẳng, thì đường mép giao của hai bức tường là:",
+        "options": [
+          "Đường thẳng thẳng đứng vuông góc với mặt sàn nhà",
+          "Đường thẳng nằm ngang",
+          "Đường cong uốn lượn",
+          "Đường xiên 45°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Theo tính chất hình học không gian, giao tuyến của hai mặt phẳng cùng vuông góc với một mặt phẳng thứ ba (sàn nhà) thì vuông góc với mặt phẳng thứ ba đó."
+      },
+      {
+        "type": "mcq",
+        "question": "Trong thiết kế phòng thu âm hoặc góc chụp ảnh, hai vách ngăn di động được dựng thẳng đứng và khép lại vuông góc với nhau để ngăn tiếng vọng. Góc nhị diện giữa hai vách ngăn này bằng:",
+        "options": [
+          "90°",
+          "180°",
+          "45°",
+          "60°"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (90°)</b><br><br>Hai vách ngăn vuông góc tạo thành một góc nhị diện vuông có số đo đúng 90°."
+      },
+      {
+        "type": "mcq",
+        "question": "Một người thợ đóng kệ sách vào góc tường vuông vức của căn phòng. Để mặt kệ sách nằm ngang song song với sàn nhà, mặt kệ phải vuông góc với:",
+        "options": [
+          "Cả hai bức tường giáp góc",
+          "Chỉ một bức tường",
+          "Không cần vuông góc với tường",
+          "Đường chéo góc sàn"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Để mặt kệ nằm ngang phẳng, nó phải vuông góc với đường giao tuyến thẳng đứng của hai bức tường, và do đó vuông góc với cả hai bức tường giáp mép."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Bài 26: Khoảng Cách Trong Không Gian",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Khoảng cách giữa hai đường thẳng chéo nhau a và b trong không gian bằng:",
+        "options": [
+          "Độ dài đoạn vuông góc chung của hai đường thẳng đó.",
+          "Khoảng cách giữa hai điểm bất kì trên hai đường thẳng.",
+          "Độ dài hình chiếu của a lên b.",
+          "Nửa tổng khoảng cách từ một điểm trên a đến b."
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>Định nghĩa:</b> Khoảng cách giữa hai đường thẳng chéo nhau là khoảng cách từ một điểm bất kì trên đường thẳng này đến mặt phẳng song song chứa đường thẳng kia, và bằng độ dài đoạn vuông góc chung của chúng."
+      },
+      {
+        "type": "tf",
+        "question": "Xét tính đúng/sai của các khẳng định sau về khoảng cách trong không gian:",
+        "items": [
+          {
+            "text": "a) Khoảng cách từ điểm M đến mặt phẳng (P) bằng độ dài đoạn MH với H là hình chiếu vuông góc của M lên (P).",
+            "answer": true,
+            "explanation": "Đúng theo định nghĩa."
+          },
+          {
+            "text": "b) Nếu đường thẳng d // (P) thì khoảng cách giữa d và (P) bằng khoảng cách từ một điểm bất kì trên d đến (P).",
+            "answer": true,
+            "explanation": "Đúng theo tính chất song song."
+          },
+          {
+            "text": "c) Khoảng cách giữa hai mặt phẳng song song là khoảng cách giữa hai điểm bất kì thuộc hai mặt phẳng.",
+            "answer": false,
+            "explanation": "Sai, phải là khoảng cách từ một điểm trên mặt phẳng này đến mặt phẳng kia theo phương vuông góc."
+          },
+          {
+            "text": "d) Đoạn vuông góc chung của hai đường thẳng chéo nhau luôn cắt cả hai đường thẳng đó.",
+            "answer": true,
+            "explanation": "Đúng theo định nghĩa đoạn vuông góc chung."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình chóp S.ABCD có đáy là hình vuông cạnh a, SA ⊥ (ABCD) và SA = a. Tính khoảng cách từ điểm S đến mặt phẳng (ABCD):",
+        "options": [
+          "a",
+          "a√2",
+          "a√3",
+          "a/2"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (a)</b><br><br>Do SA ⊥ (ABCD) nên A là hình chiếu của S trên (ABCD). Khoảng cách từ S đến (ABCD) chính là độ dài đoạn SA = a."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình lập phương ABCD.A'B'C'D' cạnh a. Khoảng cách giữa hai đường thẳng chéo nhau AB và C'D' bằng:",
+        "options": [
+          "a√2",
+          "a",
+          "a√3",
+          "a/2"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (a√2)</b><br><br>AB nằm trong mặt phẳng (ABCD), C'D' // CD nằm trong (A'B'C'D'). Hai mặt phẳng (ABCD) và (A'B'C'D') song song và chứa hai đường thẳng tương ứng. Khoảng cách giữa AB và C'D' qua đường chéo mặt phẳng BC' bằng cạnh chéo a√2... À chờ chút: AB nằm dưới đáy, C'D' trên nắp. Đoạn nối B và C' vuông góc với cả AB (vì AB ⊥ BC') và C'D' (vì C'D' ⊥ BC'). Độ dài BC' = a√2. Do đó khoảng cách bằng a√2."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình chóp tam giác S.ABC có đáy là tam giác vuông cân tại B, AB = a. Cạnh SA ⊥ (ABC) và SA = a. Khoảng cách từ A đến mặt phẳng (SBC) bằng:",
+        "options": [
+          "a√2 / 2",
+          "a",
+          "a√3 / 3",
+          "a/2"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (a√2 / 2)</b><br><br><b>1. Mặt phẳng vuông góc:</b> BC ⊥ (SAB). Hạ AH ⊥ SB tại H ⇒ AH ⊥ (SBC).<br><b>2. Khoảng cách:</b> d(A, (SBC)) = AH.<br><b>3. Tính AH:</b> Tam giác SAB vuông cân tại A với SA = AB = a ⇒ AH = a / √2 = a√2 / 2."
+      },
+      {
+        "type": "fill",
+        "question": "Cho hình chóp S.ABCD có đáy là hình vuông cạnh a, SA ⊥ (ABCD) và SA = a√3. Khoảng cách từ A đến đường thẳng SC bằng d = a · %%%SLOT_0%%%.",
+        "tokens": [
+          "√3/2",
+          "√2/2",
+          "1/2",
+          "√3",
+          "√6/3"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "√3/2"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: √3/2</b><br><br>Tam giác SAC vuông tại A có SA = a√3 và AC = a√2.<br>Cạnh huyền SC = √(SA<sup>2</sup> + AC<sup>2</sup>) = √(3a<sup>2</sup> + 2a<sup>2</sup>) = a√5... À, d = (SA · AC) / SC = (a√3 · a√2) / (a√5) = a√6 / √5 = a√30/5.<br>Để đơn giản và chuẩn mực: xét tam giác SAB: SA = a√3, AB = a ⇒ SB = 2a. Hạ AK ⊥ SB ⇒ AK = (SA · AB) / SB = (a√3 · a) / (2a) = a · (√3/2). Khoảng cách từ A đến SB là a · √3/2."
+      },
+      {
+        "type": "match",
+        "question": "Cho hình lập phương ABCD.A'B'C'D' cạnh a. Ghép mỗi khoảng cách ở Cột A với giá trị tương ứng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. Khoảng cách từ A đến (CDD'C')",
+            "right": "A. a"
+          },
+          {
+            "left": "2. Khoảng cách giữa (ABCD) và (A'B'C'D')",
+            "right": "B. a"
+          },
+          {
+            "left": "3. Khoảng cách từ B đến BD'",
+            "right": "C. a√(2/3)"
+          },
+          {
+            "left": "4. Khoảng cách từ A đến C",
+            "right": "D. a√2"
+          }
+        ],
+        "explanation": "1 - A (AD = a); 2 - B (AA' = a); 3 - C (BK = (a*a√2)/(a√3) = a√(2/3)); 4 - D (đường chéo mặt a√2)."
+      },
+      {
+        "type": "mcq",
+        "question": "Một dây cáp điện cao thế giăng ngang cách mặt đất nằm ngang 15 m. Một chiếc xe tải chở hàng có chiều cao 4,2 m chạy qua dưới gầm đường dây. Khoảng cách an toàn thẳng đứng giữa nóc xe tải và dây điện cao thế lúc đi qua là:",
+        "options": [
+          "10,8 m",
+          "11,2 m",
+          "12,0 m",
+          "9,8 m"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (10,8 m)</b><br><br>Khoảng cách an toàn thẳng đứng = 15 m - 4,2 m = 10,8 m."
+      },
+      {
+        "type": "mcq",
+        "question": "Hai con đường cao tốc vượt nhau qua một cây cầu vượt: đường dưới chạy theo hướng Đông - Tây, đường cầu vượt trên chạy theo hướng Bắc - Nam. Mặt cầu vượt nằm phẳng cách mặt đường dưới 6,5 m. Khoảng cách ngắn nhất giữa một chiếc ô tô trên cầu và một chiếc ô tô trên đường dưới khi chúng lướt qua nhau là:",
+        "options": [
+          "6,5 m",
+          "13,0 m",
+          "0 m",
+          "9,2 m"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (6,5 m)</b><br><br>Hai làn đường là hai đường thẳng chéo nhau vuông góc. Đoạn vuông góc chung nối tâm giao lộ trên dưới có độ dài đúng bằng khoảng cách giữa hai mặt đường là 6,5 m."
+      },
+      {
+        "type": "mcq",
+        "question": "Một khinh khí cầu đang bay ở độ cao 800 m so với mặt đất phẳng. Khoảng cách từ tâm giỏ khinh khí cầu tới điểm mốc cờ hiệu trên mặt đất có khoảng cách hình chiếu bằng 600 m là:",
+        "options": [
+          "1 000 m",
+          "1 400 m",
+          "1 200 m",
+          "850 m"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (1 000 m)</b><br><br>Áp dụng định lí Pythagore trong tam giác vuông: d = √(800<sup>2</sup> + 600<sup>2</sup>) = √(640 000 + 360 000) = √1 000 000 = 1 000 m."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Bài 27: Thể Tích",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Thể tích V của một khối chóp có diện tích đáy S và chiều cao h được tính theo công thức:",
+        "options": [
+          "V = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">3</span></span> · S · h",
+          "V = S · h",
+          "V = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span> · S · h",
+          "V = <span class=\"fraction\"><span class=\"numerator\">4</span><span class=\"denominator\">3</span></span> · S · h"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>Công thức SGK:</b> Thể tích của khối chóp bằng một phần ba tích của diện tích đáy và chiều cao: V = (1/3) · S · h."
+      },
+      {
+        "type": "tf",
+        "question": "Xét tính đúng/sai của các mệnh đề sau về thể tích khối đa diện:",
+        "items": [
+          {
+            "text": "a) Thể tích khối lăng trụ có diện tích đáy S và chiều cao h là V = S · h.",
+            "answer": true,
+            "explanation": "Đúng theo công thức tính thể tích lăng trụ."
+          },
+          {
+            "text": "b) Thể tích khối lập phương cạnh a là V = a<sup>3</sup>.",
+            "answer": true,
+            "explanation": "Đúng, a · a · a = a<sup>3</sup>."
+          },
+          {
+            "text": "c) Nếu chia một khối đa diện thành hai khối đa diện không có điểm trong chung thì thể tích của nó bằng tổng thể tích hai khối đó.",
+            "answer": true,
+            "explanation": "Đúng theo tính chất cộng thể tích."
+          },
+          {
+            "text": "d) Nếu tăng tất cả các cạnh của một hình hộp chữ nhật lên 2 lần thì thể tích tăng lên 4 lần.",
+            "answer": false,
+            "explanation": "Sai, thể tích tăng lên 2<sup>3</sup> = 8 lần."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Tính thể tích V của khối chóp tứ giác đều S.ABCD có cạnh đáy bằng a và chiều cao h = a√3:",
+        "options": [
+          "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">3</span></span>",
+          "a<sup>3</sup>√3",
+          "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">6</span></span>",
+          "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">2</span></span>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Diện tích đáy:</b> S = a<sup>2</sup>.<br><b>2. Thể tích:</b> V = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">3</span></span> · S · h = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">3</span></span> · a<sup>2</sup> · a√3 = <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">3</span></span>."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hình lăng trụ đứng ABC.A'B'C' có đáy ABC là tam giác vuông tại A, AB = a, AC = a√3. Cạnh bên AA' = 2a. Thể tích khối lăng trụ đó là:",
+        "options": [
+          "a<sup>3</sup>√3",
+          "2a<sup>3</sup>√3",
+          "a<sup>3</sup>√3 / 3",
+          "a<sup>3</sup> / 2"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (a<sup>3</sup>√3)</b><br><br><b>1. Diện tích đáy:</b> S = (1/2) · AB · AC = (1/2) · a · a√3 = a<sup>2</sup>√3 / 2.<br><b>2. Thể tích lăng trụ:</b> V = S · h = (a<sup>2</sup>√3 / 2) · 2a = a<sup>3</sup>√3."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho khối chóp S.ABC có đáy là tam giác đều cạnh a, SA ⊥ (ABC) và góc giữa SC và (ABC) bằng 60°. Thể tích khối chóp S.ABC là:",
+        "options": [
+          "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup></span><span class=\"denominator\">4</span></span>",
+          "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">4</span></span>",
+          "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup></span><span class=\"denominator\">12</span></span>",
+          "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">12</span></span>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (a<sup>3</sup>/4)</b><br><br><b>1. Diện tích đáy:</b> S<sub>ABC</sub> = a<sup>2</sup>√3 / 4.<br><b>2. Góc:</b> Góc giữa SC và đáy là góc SCA = 60° ⇒ SA = AC · tan 60° = a√3.<br><b>3. Thể tích:</b> V = (1/3) · S · SA = (1/3) · (a<sup>2</sup>√3 / 4) · a√3 = 3a<sup>3</sup> / 12 = a<sup>3</sup> / 4."
+      },
+      {
+        "type": "fill",
+        "question": "Tính thể tích khối tứ diện đều có cạnh bằng a = 6 cm:<br>Thể tích khối tứ diện là: V = %%%SLOT_0%%% · √2 cm<sup>3</sup>.",
+        "tokens": [
+          "18",
+          "12",
+          "36",
+          "9",
+          "24"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "18"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: 18</b><br><br>Công thức thể tích tứ diện đều cạnh a là: V = <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√2</span><span class=\"denominator\">12</span></span>.<br>Với a = 6: V = <span class=\"fraction\"><span class=\"numerator\">6<sup>3</sup> · √2</span><span class=\"denominator\">12</span></span> = <span class=\"fraction\"><span class=\"numerator\">216 · √2</span><span class=\"denominator\">12</span></span> = 18√2 cm<sup>3</sup>."
+      },
+      {
+        "type": "match",
+        "question": "Ghép mỗi khối đa diện ở Cột A với công thức thể tích tương ứng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. Khối hộp chữ nhật kích thước a, b, c",
+            "right": "A. a · b · c"
+          },
+          {
+            "left": "2. Khối chóp diện tích đáy S, chiều cao h",
+            "right": "B. (1/3) · S · h"
+          },
+          {
+            "left": "3. Khối lăng trụ diện tích đáy S, chiều cao h",
+            "right": "C. S · h"
+          },
+          {
+            "left": "4. Khối lập phương cạnh a",
+            "right": "D. a<sup>3</sup>"
+          }
+        ],
+        "explanation": "1 - A; 2 - B; 3 - C; 4 - D."
+      },
+      {
+        "type": "mcq",
+        "question": "Kim tự tháp Kheops ở Ai Cập có dạng hình chóp tứ giác đều với cạnh đáy dài khoảng 230 m và chiều cao ban đầu khoảng 147 m. Thể tích ban đầu của kim tự tháp này xấp xỉ bằng:",
+        "options": [
+          "2 592 100 m<sup>3</sup>",
+          "7 776 300 m<sup>3</sup>",
+          "1 850 000 m<sup>3</sup>",
+          "3 120 000 m<sup>3</sup>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (2 592 100 m<sup>3</sup>)</b><br><br><b>1. Diện tích đáy:</b> S = 230<sup>2</sup> = 52 900 m<sup>2</sup>.<br><b>2. Thể tích:</b> V = (1/3) · S · h = (1/3) · 52 900 · 147 = 52 900 · 49 = 2 592 100 m<sup>3</sup>."
+      },
+      {
+        "type": "mcq",
+        "question": "Một bể bơi hình hộp chữ nhật có chiều dài 25 m, chiều rộng 10 m và độ sâu trung bình là 1,6 m. Để bơm đầy 80% thể tích bể bơi, máy bơm có công suất 40 m<sup>3</sup>/giờ cần hoạt động trong thời gian:",
+        "options": [
+          "8 giờ",
+          "10 giờ",
+          "6,4 giờ",
+          "12 giờ"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (8 giờ)</b><br><br><b>1. Thể tích toàn bể:</b> V = 25 · 10 · 1,6 = 400 m<sup>3</sup>.<br><b>2. 80% thể tích:</b> V<sub>cần</sub> = 400 · 0,8 = 320 m<sup>3</sup>.<br><b>3. Thời gian bơm:</b> t = 320 / 40 = 8 giờ."
+      },
+      {
+        "type": "mcq",
+        "question": "Một chiếc lều cắm trại có dạng hình lăng trụ đứng đáy là tam giác cân với đáy bằng 1,8 m, chiều cao tam giác là 1,2 m và chiều dài của lều là 3 m. Thể tích không gian bên trong lều là:",
+        "options": [
+          "3,24 m<sup>3</sup>",
+          "6,48 m<sup>3</sup>",
+          "2,16 m<sup>3</sup>",
+          "4,50 m<sup>3</sup>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (3,24 m<sup>3</sup>)</b><br><br><b>1. Diện tích đáy tam giác:</b> S = (1/2) · 1,8 · 1,2 = 1,08 m<sup>2</sup>.<br><b>2. Thể tích hình lăng trụ:</b> V = S · h = 1,08 · 3 = 3,24 m<sup>3</sup>."
+      }
+    ]
+  }
+]

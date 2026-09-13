@@ -1,0 +1,1266 @@
+{
+  "7": [
+    {
+      "type": "mcq",
+      "q": "Vectơ là một đoạn thẳng có:",
+      "opts": [
+        "hướng (xác định rõ điểm đầu và điểm cuối)",
+        "độ dài không đổi",
+        "phương thẳng đứng",
+        "hai đầu mút trùng nhau"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa vectơ (SGK Toán 10): Vectơ là một đoạn thẳng có hướng, nghĩa là trong hai điểm mút đã chỉ rõ điểm nào là điểm đầu, điểm nào là điểm cuối."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các khái niệm về vectơ (Cột A) với định nghĩa tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Giá của vectơ",
+          "b": "A. Đường thẳng đi qua điểm đầu và điểm cuối của vectơ"
+        },
+        {
+          "a": "2. Hai vectơ cùng phương",
+          "b": "B. Giá của chúng song song hoặc trùng nhau"
+        },
+        {
+          "a": "3. Hai vectơ bằng nhau",
+          "b": "C. Cùng hướng và có cùng độ dài"
+        },
+        {
+          "a": "4. Vectơ-không (kí hiệu 0⃗)",
+          "b": "D. Có điểm đầu và điểm cuối trùng nhau, độ dài bằng 0"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Giá: đường thẳng chứa vectơ.<br>• Cùng phương: giá song song hoặc trùng.<br>• Bằng nhau: cùng hướng + cùng độ dài.<br>• Vectơ-không: độ dài 0, cùng hướng với mọi vectơ."
+    },
+    {
+      "type": "tf",
+      "q": "Cho hình bình hành ABCD tâm O. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Vectơ AB⃗ và DC⃗ là hai vectơ bằng nhau.",
+          "ans": true,
+          "exp": "AB và DC song song, cùng chiều và AB = DC nên AB⃗ = DC⃗ (Đúng)."
+        },
+        {
+          "text": "b) Vectơ AD⃗ và CB⃗ là hai vectơ bằng nhau.",
+          "ans": false,
+          "exp": "AD và CB có hướng ngược nhau nên AD⃗ = -CB⃗ = BC⃗ (Sai)."
+        },
+        {
+          "text": "c) Vectơ AO⃗ và OC⃗ là hai vectơ bằng nhau.",
+          "ans": true,
+          "exp": "O là trung điểm AC nên AO = OC và cùng hướng A → C, tức AO⃗ = OC⃗ (Đúng)."
+        },
+        {
+          "text": "d) Độ dài |AC⃗| bằng độ dài |BD⃗|.",
+          "ans": false,
+          "exp": "Trong hình bình hành nói chung, độ dài 2 đường chéo không bằng nhau (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hình vuông ABCD cạnh a. Độ dài của vectơ AC⃗ là:",
+      "opts": [
+        "a√2",
+        "a",
+        "2a",
+        "a√3"
+      ],
+      "ans": 0,
+      "exp": "• Độ dài vectơ AC⃗ chính là độ dài đoạn thẳng AC.<br>• Trong hình vuông cạnh a, đường chéo AC = √(a² + a²) = a√2."
+    },
+    {
+      "type": "drag",
+      "q": "Điền vào chỗ trống định nghĩa về hướng của hai vectơ:<br>• Hai vectơ cùng phương thì hoặc %%%SLOT_1%%% hoặc %%%SLOT_2%%%.<br>• Vectơ-không được coi là cùng phương, cùng hướng với %%%SLOT_3%%%.",
+      "slots": [
+        "cùng hướng",
+        "ngược hướng",
+        "mọi vectơ"
+      ],
+      "pool": [
+        "cùng hướng",
+        "ngược hướng",
+        "mọi vectơ",
+        "vuông góc",
+        "không có hướng"
+      ],
+      "exp": "• Hai vectơ cùng phương có thể cùng hướng hoặc ngược hướng.<br>• Vectơ 0⃗ quy ước cùng phương cùng hướng với mọi vectơ."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho tam giác ABC đều cạnh 4 cm. Độ dài vectơ AB⃗ là:",
+      "opts": [
+        "4 cm",
+        "2 cm",
+        "4√3 cm",
+        "2√3 cm"
+      ],
+      "ans": 0,
+      "exp": "• |AB⃗| = AB = 4 cm."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho 3 điểm phân biệt A, B, C thẳng hàng. Điều kiện cần và đủ để hai vectơ AB⃗ và AC⃗ cùng hướng là:",
+      "opts": [
+        "Điểm A nằm ngoài đoạn thẳng BC và gần B hơn C (hoặc B nằm giữa A và C)",
+        "Điểm A nằm giữa hai điểm B và C",
+        "Điểm B là trung điểm của AC",
+        "Điểm C là trung điểm của AB"
+      ],
+      "ans": 0,
+      "exp": "• AB⃗ và AC⃗ cùng hướng khi và chỉ khi hai tia AB và AC trùng nhau, tức A không nằm giữa B và C."
+    },
+    {
+      "type": "mcq",
+      "q": "Một máy bay chở khách đang bay theo hướng Tây sang Đông với vận tốc 700 km/h. Vectơ vận tốc v⃗ của máy bay được biểu diễn bằng một mũi tên:",
+      "opts": [
+        "Nằm ngang, hướng từ trái sang phải, có độ dài biểu diễn 700 km/h",
+        "Thẳng đứng hướng lên trên",
+        "Nằm ngang, hướng từ phải sang trái",
+        "Nghiêng 45° so với phương ngang"
+      ],
+      "ans": 0,
+      "exp": "• Trên bản đồ quy ước: Bắc ở trên, Nam ở dưới, Tây ở bên trái, Đông ở bên phải.<br>• Bay từ Tây sang Đông ứng với hướng từ trái sang phải, độ lớn 700 km/h."
+    },
+    {
+      "type": "mcq",
+      "q": "Một con thuyền chuyển động trên mặt hồ phẳng lặng với vận tốc không đổi v⃗ = 15 km/h theo hướng Đông Bắc (hợp với hướng Đông góc 45°). Phát biểu nào sau đây là đúng về vận tốc của thuyền?",
+      "opts": [
+        "Vận tốc là một đại lượng vectơ xác định bởi cả hướng di chuyển (Đông Bắc) và tốc độ (15 km/h)",
+        "Vận tốc thuyền chỉ là con số 15 km/h không cần quan tâm đến hướng",
+        "Thuyền đang di chuyển theo hướng chính Bắc",
+        "Độ dời của thuyền sau 1 giờ là 30 km"
+      ],
+      "ans": 0,
+      "exp": "• Vận tốc là đại lượng vectơ có độ lớn (tốc độ 15 km/h) và hướng chuyển động (hướng Đông Bắc)."
+    },
+    {
+      "type": "mcq",
+      "q": "Một quả bóng bàn rơi tự do xuống đất rồi nảy ngược thẳng đứng lên trên với cùng độ lớn vận tốc 4 m/s. Gọi v₁⃗ là vectơ vận tốc ngay trước khi chạm đất và v₂⃗ là vectơ vận tốc ngay sau khi bật lên. Mối quan hệ giữa hai vectơ là:",
+      "opts": [
+        "v₂⃗ = -v₁⃗ (hai vectơ đối nhau)",
+        "v₂⃗ = v₁⃗ (hai vectơ bằng nhau)",
+        "v₂⃗ = 2v₁⃗",
+        "v₂⃗ vuông góc với v₁⃗"
+      ],
+      "ans": 0,
+      "exp": "• v₁⃗ hướng thẳng đứng xuống dưới, v₂⃗ hướng thẳng đứng lên trên.<br>• Cùng độ lớn 4 m/s và ngược hướng nên v₂⃗ = -v₁⃗ (hai vectơ đối nhau)."
+    }
+  ],
+  "8": [
+    {
+      "type": "mcq",
+      "q": "Quy tắc 3 điểm đối với phép cộng vectơ khẳng định rằng với 3 điểm A, B, C bất kì ta luôn có:",
+      "opts": [
+        "AB⃗ + BC⃗ = AC⃗",
+        "AB⃗ + AC⃗ = BC⃗",
+        "AB⃗ - BC⃗ = AC⃗",
+        "AB⃗ + BC⃗ = CA⃗"
+      ],
+      "ans": 0,
+      "exp": "• Quy tắc 3 điểm (nối đuôi): AB⃗ + BC⃗ = AC⃗."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các quy tắc toán học về vectơ (Cột A) với công thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Quy tắc hình bình hành ABCD",
+          "b": "A. AB⃗ + AD⃗ = AC⃗"
+        },
+        {
+          "a": "2. Quy tắc trừ (chung gốc)",
+          "b": "B. OB⃗ - OA⃗ = AB⃗"
+        },
+        {
+          "a": "3. Tính chất trung điểm I của đoạn AB",
+          "b": "C. IA⃗ + IB⃗ = 0⃗"
+        },
+        {
+          "a": "4. Tính chất trọng tâm G tam giác ABC",
+          "b": "D. GA⃗ + GB⃗ + GC⃗ = 0⃗"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Hình bình hành: AB⃗ + AD⃗ = AC⃗.<br>• Phép trừ: OB⃗ - OA⃗ = AB⃗.<br>• Trung điểm: IA⃗ + IB⃗ = 0⃗.<br>• Trọng tâm: GA⃗ + GB⃗ + GC⃗ = 0⃗."
+    },
+    {
+      "type": "tf",
+      "q": "Cho hình vuông ABCD cạnh a tâm O. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) AB⃗ + AD⃗ = AC⃗.",
+          "ans": true,
+          "exp": "Theo quy tắc hình bình hành: AB⃗ + AD⃗ = AC⃗ (Đúng)."
+        },
+        {
+          "text": "b) Độ dài |AB⃗ + AD⃗| = a√2.",
+          "ans": true,
+          "exp": "|AB⃗ + AD⃗| = |AC⃗| = AC = a√2 (Đúng)."
+        },
+        {
+          "text": "c) AB⃗ - AD⃗ = DB⃗.",
+          "ans": true,
+          "exp": "AB⃗ - AD⃗ = DB⃗ (theo quy tắc trừ chung gốc A) (Đúng)."
+        },
+        {
+          "text": "d) OA⃗ + OB⃗ + OC⃗ + OD⃗ = a√2.",
+          "ans": false,
+          "exp": "OA⃗ + OC⃗ = 0⃗ và OB⃗ + OD⃗ = 0⃗, tổng là 0⃗, độ dài bằng 0 (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho tam giác ABC đều cạnh a. Độ dài của tổng vectơ |AB⃗ + AC⃗| bằng:",
+      "opts": [
+        "a√3",
+        "2a",
+        "a",
+        "a√3/2"
+      ],
+      "ans": 0,
+      "exp": "• Gọi M là trung điểm BC thì AB⃗ + AC⃗ = 2AM⃗.<br>• Trong tam giác đều cạnh a, đường cao AM = a√3/2.<br>• Độ dài: |AB⃗ + AC⃗| = 2 · (a√3/2) = a√3."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các kết quả chính xác vào vị trí biểu thức:<br>• Với điểm M bất kì và I là trung điểm AB: MA⃗ + MB⃗ = %%%SLOT_1%%%.<br>• Với điểm M bất kì và G là trọng tâm tam giác ABC: MA⃗ + MB⃗ + MC⃗ = %%%SLOT_2%%%.<br>• Hiệu hai vectơ đối nhau a⃗ - (-a⃗) = %%%SLOT_3%%%.",
+      "slots": [
+        "2MI⃗",
+        "3MG⃗",
+        "2a⃗"
+      ],
+      "pool": [
+        "2MI⃗",
+        "3MG⃗",
+        "2a⃗",
+        "0⃗",
+        "MG⃗"
+      ],
+      "exp": "• MA⃗ + MB⃗ = 2MI⃗.<br>• MA⃗ + MB⃗ + MC⃗ = 3MG⃗.<br>• a⃗ - (-a⃗) = a⃗ + a⃗ = 2a⃗."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hình chữ nhật ABCD có AB = 3, BC = 4. Độ dài của vectơ AB⃗ + AD⃗ là:",
+      "opts": [
+        "5",
+        "7",
+        "1",
+        "25"
+      ],
+      "ans": 0,
+      "exp": "• Theo quy tắc hình bình hành: AB⃗ + AD⃗ = AC⃗.<br>• Độ dài: AC = √(AB² + BC²) = √(3² + 4²) = 5."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hai vectơ a⃗ và b⃗ vuông góc với nhau và có độ lớn |a⃗| = 6, |b⃗| = 8. Độ lớn của vectơ tổng |a⃗ + b⃗| là:",
+      "opts": [
+        "10",
+        "14",
+        "2",
+        "48"
+      ],
+      "ans": 0,
+      "exp": "• Do a⃗ ⊥ b⃗ nên |a⃗ + b⃗|² = 6² + 8² = 100 ⇒ |a⃗ + b⃗| = 10."
+    },
+    {
+      "type": "mcq",
+      "q": "Hai lực F₁⃗ và F₂⃗ cùng tác dụng vào một chất điểm tại điểm O, có độ lớn |F₁⃗| = 40 N và |F₂⃗| = 30 N, hai lực hợp với nhau một góc 90°. Hợp lực F⃗ = F₁⃗ + F₂⃗ có độ lớn là:",
+      "opts": [
+        "50 N",
+        "70 N",
+        "10 N",
+        "1200 N"
+      ],
+      "ans": 0,
+      "exp": "• Hai lực vuông góc: F² = 40² + 30² = 2500 ⇒ F = 50 N."
+    },
+    {
+      "type": "mcq",
+      "q": "Một chiếc ca nô chạy xuôi dòng với vận tốc riêng đối với nước là 25 km/h, vận tốc dòng nước chảy là 5 km/h. Vận tốc của ca nô đối với bờ sông khi xuôi dòng là:",
+      "opts": [
+        "30 km/h",
+        "20 km/h",
+        "25,5 km/h",
+        "15 km/h"
+      ],
+      "ans": 0,
+      "exp": "• Vận tốc xuôi dòng: v = 25 + 5 = 30 km/h."
+    },
+    {
+      "type": "mcq",
+      "q": "Một con tàu chịu tác dụng của hai lực kéo: tàu kéo 1 kéo với lực 5000 N theo hướng chính Bắc, tàu kéo 2 kéo với lực 5000 N theo hướng chính Đông. Hợp lực tác dụng lên con tàu hướng về:",
+      "opts": [
+        "Hướng Đông Bắc (hợp với hướng Đông một góc 45°)",
+        "Hướng Tây Bắc",
+        "Hướng Đông Nam",
+        "Chính Bắc"
+      ],
+      "ans": 0,
+      "exp": "• Hai lực kéo bằng nhau và vuông góc theo hướng Bắc và Đông tạo thành đường chéo hình vuông hướng Đông Bắc."
+    }
+  ],
+  "9": [
+    {
+      "type": "mcq",
+      "q": "Cho số thực k và vectơ a⃗ ≠ 0⃗. Vectơ k·a⃗ cùng hướng với a⃗ khi và chỉ khi:",
+      "opts": [
+        "k > 0",
+        "k < 0",
+        "k = 0",
+        "k tùy ý"
+      ],
+      "ans": 0,
+      "exp": "• Tích vectơ với một số k: cùng hướng khi k > 0, ngược hướng khi k < 0."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các phép biến đổi vectơ (Cột A) với đẳng thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Điểm M là trung điểm đoạn AB",
+          "b": "A. MA⃗ + MB⃗ = 0⃗ hay AM⃗ = (1/2)AB⃗"
+        },
+        {
+          "a": "2. Điểm G là trọng tâm tam giác ABC",
+          "b": "B. AG⃗ = (2/3)AM⃗ (M là trung điểm BC)"
+        },
+        {
+          "a": "3. Điểm B nằm giữa A và C với AB = 2BC",
+          "b": "C. AB⃗ = 2BC⃗"
+        },
+        {
+          "a": "4. Hai vectơ cùng phương",
+          "b": "D. a⃗ = k·b⃗ (với b⃗ ≠ 0⃗)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Trung điểm: AM⃗ = 1/2 AB⃗.<br>• Trọng tâm: AG⃗ = 2/3 AM⃗.<br>• Tỉ lệ đoạn thẳng: AB⃗ = 2BC⃗.<br>• Cùng phương: a⃗ = k·b⃗."
+    },
+    {
+      "type": "tf",
+      "q": "Cho đoạn thẳng AB có độ dài 6 cm và I là trung điểm của AB. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) AI⃗ = (1/2)AB⃗.",
+          "ans": true,
+          "exp": "AI và AB cùng hướng, AI = 3 = (1/2)AB nên AI⃗ = (1/2)AB⃗ (Đúng)."
+        },
+        {
+          "text": "b) IB⃗ = -IA⃗.",
+          "ans": true,
+          "exp": "IB và IA đối nhau nên IB⃗ = -IA⃗ (Đúng)."
+        },
+        {
+          "text": "c) Độ dài |2AB⃗| = 12 cm.",
+          "ans": true,
+          "exp": "|2AB⃗| = 2 · 6 = 12 cm (Đúng)."
+        },
+        {
+          "text": "d) Vectơ -3AI⃗ có độ dài bằng -9 cm.",
+          "ans": false,
+          "exp": "Độ dài vectơ luôn không âm: |-3AI⃗| = 3 · 3 = 9 cm (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho tam giác ABC có trọng tâm G và M là trung điểm BC. Biểu diễn vectơ AG⃗ theo hai vectơ AB⃗ và AC⃗ là:",
+      "opts": [
+        "AG⃗ = (1/3)AB⃗ + (1/3)AC⃗",
+        "AG⃗ = (1/2)AB⃗ + (1/2)AC⃗",
+        "AG⃗ = (2/3)AB⃗ + (2/3)AC⃗",
+        "AG⃗ = AB⃗ + AC⃗"
+      ],
+      "ans": 0,
+      "exp": "• AM⃗ = (1/2)(AB⃗ + AC⃗) ⇒ AG⃗ = (2/3)AM⃗ = (1/3)AB⃗ + (1/3)AC⃗."
+    },
+    {
+      "type": "drag",
+      "q": "Điền hệ số thích hợp vào đẳng thức vectơ:<br>• Cho điểm C thuộc đoạn AB sao cho AC = 3CB. Khi đó AC⃗ = %%%SLOT_1%%% AB⃗.<br>• Vectơ CA⃗ = %%%SLOT_2%%% CB⃗.<br>• Với điểm O bất kì: OC⃗ = %%%SLOT_3%%% OA⃗ + (3/4)OB⃗.",
+      "slots": [
+        "3/4",
+        "-3",
+        "1/4"
+      ],
+      "pool": [
+        "3/4",
+        "-3",
+        "1/4",
+        "4/3",
+        "3"
+      ],
+      "exp": "• AC = (3/4)AB ⇒ AC⃗ = (3/4)AB⃗.<br>• CA⃗ = -3CB⃗.<br>• OC⃗ = (1/4)OA⃗ + (3/4)OB⃗."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho tam giác ABC. Điểm N thỏa mãn NA⃗ + 2NB⃗ = 0⃗. Vị trí của điểm N là:",
+      "opts": [
+        "N nằm trên đoạn thẳng AB và NB = (1/2)NA",
+        "N là trung điểm AB",
+        "N nằm ngoài đoạn thẳng AB",
+        "N trùng với điểm A"
+      ],
+      "ans": 0,
+      "exp": "• NA⃗ = -2NB⃗ ⇒ N nằm giữa A và B, NA = 2NB."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hai vectơ a⃗ và b⃗ không cùng phương. Vectơ u⃗ = 2a⃗ - 3b⃗ và v⃗ = ka⃗ + 6b⃗ cùng phương khi giá trị k bằng:",
+      "opts": [
+        "-4",
+        "4",
+        "-1",
+        "-9"
+      ],
+      "ans": 0,
+      "exp": "• k / 2 = 6 / (-3) = -2 ⇒ k = -4."
+    },
+    {
+      "type": "mcq",
+      "q": "Một hệ thống đòn bẩy có điểm tựa O nằm giữa hai đầu A và B. Một vật nặng treo ở A sinh lực F₁ = 60 N, một vật nặng treo ở B sinh lực F₂ = 20 N để đòn bẩy cân bằng. Mối quan hệ vectơ vị trí OA⃗ và OB⃗ là:",
+      "opts": [
+        "OA⃗ = -(1/3)OB⃗",
+        "OA⃗ = -3OB⃗",
+        "OA⃗ = (1/3)OB⃗",
+        "OA⃗ = OB⃗"
+      ],
+      "ans": 0,
+      "exp": "• F₁ · OA = F₂ · OB ⇒ 60 OA = 20 OB ⇒ OA = 1/3 OB.<br>• O nằm giữa nên ngược hướng ⇒ OA⃗ = -(1/3)OB⃗."
+    },
+    {
+      "type": "mcq",
+      "q": "Một vệ tinh viễn thông bay ở quỹ đạo địa tĩnh với bán kính r₂ = 42.164 km từ tâm Trái Đất, trong khi một vệ tinh tầm thấp bay ở bán kính r₁ = 7.000 km. Tỉ số bán kính vị trí vectơ r₂⃗ so với r₁⃗ khi hai vệ tinh nằm trên cùng một tia xuất phát từ tâm Trái Đất là:",
+      "opts": [
+        "r₂⃗ ≈ 6,02 · r₁⃗",
+        "r₂⃗ ≈ 0,16 · r₁⃗",
+        "r₂⃗ = -6,02 · r₁⃗",
+        "r₂⃗ = 12 · r₁⃗"
+      ],
+      "ans": 0,
+      "exp": "• r₂ / r₁ = 42.164 / 7.000 ≈ 6,02 ⇒ r₂⃗ ≈ 6,02 · r₁⃗."
+    },
+    {
+      "type": "mcq",
+      "q": "Trọng tâm G của một con tàu chở hàng ba khoang A, B, C có khối lượng bằng nhau được mô tả bởi công thức vị trí đối với gốc toạ độ hải đăng O: OG⃗ = (1/3)(OA⃗ + OB⃗ + OC⃗). Nếu khoang A có toạ độ (10; 20), khoang B có (40; 50), khoang C có (70; 20) (đơn vị: mét). Toạ độ trọng tâm G là:",
+      "opts": [
+        "(40; 30)",
+        "(30; 40)",
+        "(120; 90)",
+        "(60; 45)"
+      ],
+      "ans": 0,
+      "exp": "• x_G = (10 + 40 + 70)/3 = 40; y_G = (20 + 50 + 20)/3 = 30 ⇒ G(40; 30)."
+    }
+  ],
+  "10": [
+    {
+      "type": "mcq",
+      "q": "Trong mặt phẳng toạ độ Oxy, toạ độ của vectơ u⃗ = x·i⃗ + y·j⃗ (với i⃗, j⃗ là các vectơ đơn vị trên Ox, Oy) là:",
+      "opts": [
+        "u⃗ = (x; y)",
+        "u⃗ = (y; x)",
+        "u⃗ = (x + y; 0)",
+        "u⃗ = (1; 1)"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa: u⃗ = x·i⃗ + y·j⃗ ⇔ u⃗ = (x; y)."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các công thức toạ độ vectơ và điểm (Cột A) với biểu thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Vectơ AB⃗ nối hai điểm A(x_A; y_A), B(x_B; y_B)",
+          "b": "A. AB⃗ = (x_B - x_A; y_B - y_A)"
+        },
+        {
+          "a": "2. Trung điểm I của đoạn thẳng AB",
+          "b": "B. x_I = (x_A + x_B)/2; y_I = (y_A + y_B)/2"
+        },
+        {
+          "a": "3. Trọng tâm G của tam giác ABC",
+          "b": "C. x_G = (x_A + x_B + x_C)/3; y_G = (y_A + y_B + y_C)/3"
+        },
+        {
+          "a": "4. Độ dài của vectơ u⃗ = (x; y)",
+          "b": "D. |u⃗| = √(x² + y²)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Toạ độ vectơ: cuối trừ đầu.<br>• Trung điểm: trung bình cộng 2 điểm.<br>• Trọng tâm: trung bình cộng 3 điểm.<br>• Độ dài: căn tổng bình phương."
+    },
+    {
+      "type": "tf",
+      "q": "Cho hai điểm A(2; -3) và B(4; 1). Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Vectơ AB⃗ có toạ độ là (2; 4).",
+          "ans": true,
+          "exp": "AB⃗ = (4 - 2; 1 - (-3)) = (2; 4) (Đúng)."
+        },
+        {
+          "text": "b) Trung điểm I của đoạn AB có toạ độ là (3; -1).",
+          "ans": true,
+          "exp": "x_I = (2 + 4)/2 = 3; y_I = (-3 + 1)/2 = -1 (Đúng)."
+        },
+        {
+          "text": "c) Độ dài đoạn thẳng AB bằng 2√5.",
+          "ans": true,
+          "exp": "AB = √(2² + 4²) = √20 = 2√5 (Đúng)."
+        },
+        {
+          "text": "d) Vectơ đối của AB⃗ là (-2; 4).",
+          "ans": false,
+          "exp": "-AB⃗ = (-2; -4) (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho u⃗ = (2; -1) và v⃗ = (-3; 4). Toạ độ của vectơ tổng 2u⃗ + v⃗ là:",
+      "opts": [
+        "(1; 2)",
+        "(-1; 2)",
+        "(1; 7)",
+        "(7; -2)"
+      ],
+      "ans": 0,
+      "exp": "• 2u⃗ = (4; -2) ⇒ 2u⃗ + v⃗ = (4 - 3; -2 + 4) = (1; 2)."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các giá trị toạ độ vào chỗ trống cho tam giác có 3 đỉnh A(1; 2), B(-2; 3), C(4; 1):<br>• Trọng tâm G có toạ độ là %%%SLOT_1%%%.<br>• Vectơ AC⃗ có toạ độ là %%%SLOT_2%%%.<br>• Độ dài cạnh AC là %%%SLOT_3%%%.",
+      "slots": [
+        "(1; 2)",
+        "(3; -1)",
+        "√10"
+      ],
+      "pool": [
+        "(1; 2)",
+        "(3; -1)",
+        "√10",
+        "(3; 6)",
+        "10"
+      ],
+      "exp": "• G = ( (1-2+4)/3; (2+3+1)/3 ) = (1; 2).<br>• AC⃗ = (4-1; 1-2) = (3; -1).<br>• AC = √(3² + (-1)²) = √10."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho u⃗ = (x; 2) và v⃗ = (6; -3). Hai vectơ u⃗ và v⃗ cùng phương khi x nhận giá trị:",
+      "opts": [
+        "-4",
+        "4",
+        "-3",
+        "6"
+      ],
+      "ans": 0,
+      "exp": "• x / 6 = 2 / (-3) ⇒ x = -4."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho điểm A(-1; 2), B(3; 4), C(5; -1). Toạ độ đỉnh D để tứ giác ABCD là hình bình hành là:",
+      "opts": [
+        "(1; -3)",
+        "(-3; 1)",
+        "(9; 1)",
+        "(7; 5)"
+      ],
+      "ans": 0,
+      "exp": "• AD⃗ = BC⃗ = (2; -5) ⇒ x_D + 1 = 2, y_D - 2 = -5 ⇒ D(1; -3)."
+    },
+    {
+      "type": "mcq",
+      "q": "Màn hình radar trắc địa có gốc toạ độ tại trạm điều khiển O(0; 0). Một flycam đang bay ở vị trí A(6; 8) (đơn vị: km). Khoảng cách từ trạm điều khiển đến flycam là:",
+      "opts": [
+        "10 km",
+        "14 km",
+        "100 km",
+        "7 km"
+      ],
+      "ans": 0,
+      "exp": "• OA = √(6² + 8²) = 10 km."
+    },
+    {
+      "type": "mcq",
+      "q": "Một robot hút bụi tự hành di chuyển từ điểm A(1; 2) đến điểm B(4; 6) (đơn vị: mét) trong thời gian 5 giây. Tốc độ trung bình của robot là:",
+      "opts": [
+        "1,0 m/s",
+        "1,4 m/s",
+        "5,0 m/s",
+        "0,8 m/s"
+      ],
+      "ans": 0,
+      "exp": "• AB = √(3² + 4²) = 5 m.<br>• v = 5 m / 5 s = 1,0 m/s."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong bản đồ số nông nghiệp thông minh, một thửa ruộng hình bình hành có 3 góc đã cắm cọc cảm biến đo độ ẩm tại A(2; 1), B(8; 3), C(10; 7). Để phủ sóng đều, cọc cảm biến thứ 4 tại D cần cắm ở toạ độ:",
+      "opts": [
+        "D(4; 5)",
+        "D(16; 9)",
+        "D(0; 5)",
+        "D(6; 4)"
+      ],
+      "ans": 0,
+      "exp": "• AD⃗ = BC⃗ = (2; 4) ⇒ D(2 + 2; 1 + 4) = D(4; 5)."
+    }
+  ],
+  "11": [
+    {
+      "type": "mcq",
+      "q": "Tích vô hướng của hai vectơ a⃗ và b⃗ đều khác 0⃗ được tính bởi công thức:",
+      "opts": [
+        "a⃗ · b⃗ = |a⃗| · |b⃗| · cos(a⃗, b⃗)",
+        "a⃗ · b⃗ = |a⃗| · |b⃗| · sin(a⃗, b⃗)",
+        "a⃗ · b⃗ = |a⃗| · |b⃗|",
+        "a⃗ · b⃗ = |a⃗ + b⃗| · cos(a⃗, b⃗)"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa: a⃗ · b⃗ = |a⃗| · |b⃗| · cos(a⃗, b⃗)."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các tính chất của tích vô hướng (Cột A) với biểu thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Hai vectơ vuông góc a⃗ ⊥ b⃗",
+          "b": "A. a⃗ · b⃗ = 0"
+        },
+        {
+          "a": "2. Bình phương vô hướng a⃗²",
+          "b": "B. = |a⃗|² (bằng bình phương độ dài)"
+        },
+        {
+          "a": "3. Biểu thức toạ độ khi a⃗ = (x₁; y₁), b⃗ = (x₂; y₂)",
+          "b": "C. a⃗ · b⃗ = x₁x₂ + y₁y₂"
+        },
+        {
+          "a": "4. Cosin của góc giữa hai vectơ",
+          "b": "D. cos(a⃗, b⃗) = (x₁x₂ + y₁y₂) / [√(x₁² + y₁²) · √(x₂² + y₂²)]"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Vuông góc ⇔ tích vô hướng bằng 0.<br>• Bình phương vô hướng = bình phương độ dài.<br>• Toạ độ: x₁x₂ + y₁y₂.<br>• Cosin góc."
+    },
+    {
+      "type": "tf",
+      "q": "Cho hai vectơ u⃗ = (1; 2) và v⃗ = (-2; 1). Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Tích vô hướng u⃗ · v⃗ = 0.",
+          "ans": true,
+          "exp": "u⃗ · v⃗ = 1(-2) + 2(1) = 0 (Đúng)."
+        },
+        {
+          "text": "b) Hai vectơ u⃗ và v⃗ vuông góc với nhau.",
+          "ans": true,
+          "exp": "u⃗ · v⃗ = 0 ⇒ u⃗ ⊥ v⃗ (Đúng)."
+        },
+        {
+          "text": "c) Độ dài |u⃗| = |v⃗| = √5.",
+          "ans": true,
+          "exp": "√(1² + 2²) = √5 (Đúng)."
+        },
+        {
+          "text": "d) Góc giữa u⃗ và v⃗ là 0°.",
+          "ans": false,
+          "exp": "Góc giữa chúng là 90° (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho tam giác đều ABC cạnh a. Tích vô hướng AB⃗ · AC⃗ có giá trị là:",
+      "opts": [
+        "a²/2",
+        "a²",
+        "a²√3/2",
+        "-a²/2"
+      ],
+      "ans": 0,
+      "exp": "• AB⃗ · AC⃗ = a · a · cos 60° = a²/2."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các giá trị thích hợp vào chỗ trống cho hai vectơ a⃗ = (3; 4) và b⃗ = (4; -3):<br>• Tích vô hướng a⃗ · b⃗ = %%%SLOT_1%%%.<br>• Góc giữa hai vectơ là %%%SLOT_2%%%.<br>• Bình phương vô hướng a⃗² = %%%SLOT_3%%%.",
+      "slots": [
+        "0",
+        "90°",
+        "25"
+      ],
+      "pool": [
+        "0",
+        "90°",
+        "25",
+        "24",
+        "45°"
+      ],
+      "exp": "• a⃗ · b⃗ = 3(4) + 4(-3) = 0.<br>• Góc = 90°.<br>• a⃗² = 3² + 4² = 25."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho hai vectơ a⃗ = (2; 1) và b⃗ = (1; 3). Cosin của góc giữa hai vectơ là:",
+      "opts": [
+        "1/√2 (tức góc 45°)",
+        "√3/2",
+        "1/2",
+        "0"
+      ],
+      "ans": 0,
+      "exp": "• a⃗ · b⃗ = 5; |a⃗| = √5; |b⃗| = √10 ⇒ cos = 5 / (√5√10) = 1/√2."
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm m để hai vectơ u⃗ = (m; 3) và v⃗ = (2; -4) vuông góc với nhau:",
+      "opts": [
+        "m = 6",
+        "m = -6",
+        "m = 3",
+        "m = -3"
+      ],
+      "ans": 0,
+      "exp": "• 2m + 3(-4) = 0 ⇒ 2m = 12 ⇒ m = 6."
+    },
+    {
+      "type": "mcq",
+      "q": "Một công nhân tác dụng lực kéo F⃗ không đổi có độ lớn 120 N để kéo một thùng hàng di chuyển quãng đường s = 25 m trên sàn phẳng. Lực F⃗ hợp với hướng chuyển động góc 60°. Công cơ học thực hiện bởi lực kéo là:",
+      "opts": [
+        "1.500 J",
+        "3.000 J",
+        "2.598 J",
+        "750 J"
+      ],
+      "ans": 0,
+      "exp": "• A = F · s · cos 60° = 120 · 25 · 0,5 = 1500 J."
+    },
+    {
+      "type": "mcq",
+      "q": "Một cần cẩu nâng một khối bê tông lên cao theo phương thẳng đứng với lực nâng F⃗ có độ lớn 8000 N, độ dời h = 10 m. Góc giữa lực nâng và hướng chuyển động là 0°. Công của lực nâng cần cẩu là:",
+      "opts": [
+        "80.000 J",
+        "0 J",
+        "40.000 J",
+        "-80.000 J"
+      ],
+      "ans": 0,
+      "exp": "• A = 8000 · 10 · cos 0° = 80.000 J."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong đồ họa máy tính 3D, kiểm tra xem bề mặt vật thể có quay về phía camera hay không bằng tích vô hướng giữa vectơ pháp tuyến mặt n⃗ và vectơ hướng nhìn v⃗. Nếu n⃗ = (0,6; 0,8) và v⃗ = (-0,8; 0,6) thì góc giữa hai vectơ là:",
+      "opts": [
+        "90° (vuông góc, mặt phẳng nằm nghiêng tiếp tuyến góc nhìn)",
+        "0°",
+        "180°",
+        "45°"
+      ],
+      "ans": 0,
+      "exp": "• n⃗ · v⃗ = 0,6(-0,8) + 0,8(0,6) = 0 ⇒ góc 90°."
+    }
+  ],
+  "12": [
+    {
+      "type": "mcq",
+      "q": "Nếu a là số gần đúng của số đúng ā thì sai số tuyệt đối của số gần đúng a được định nghĩa là:",
+      "opts": [
+        "Δ_a = |ā - a|",
+        "Δ_a = ā - a",
+        "Δ_a = a / ā",
+        "Δ_a = |ā + a|"
+      ],
+      "ans": 0,
+      "exp": "• Sai số tuyệt đối: Δ_a = |ā - a|."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các khái niệm về sai số (Cột A) với định nghĩa tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Độ chính xác d của số gần đúng a",
+          "b": "A. Giới hạn trên của sai số tuyệt đối: Δ_a ≤ d"
+        },
+        {
+          "a": "2. Sai số tương đối δ_a",
+          "b": "B. Tỉ số giữa sai số tuyệt đối và giá trị tuyệt đối số gần đúng: δ_a = Δ_a / |a|"
+        },
+        {
+          "a": "3. Quy tròn đến hàng chục",
+          "b": "C. Chữ số hàng đơn vị nếu < 5 thì thay bằng 0; nếu ≥ 5 thì cộng 1 vào hàng chục"
+        },
+        {
+          "a": "4. Chữ số chắc (đáng tin)",
+          "b": "D. Chữ số mà sai số tuyệt đối không vượt quá nửa đơn vị của hàng đó"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Độ chính xác d: |ā - a| ≤ d.<br>• Sai số tương đối.<br>• Quy tròn.<br>• Chữ số chắc."
+    },
+    {
+      "type": "tf",
+      "q": "Cho số đúng ā = 3,14159265... Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Số quy tròn của ā đến hàng phần trăm là a = 3,14.",
+          "ans": true,
+          "exp": "Chữ số sau 4 là 1 < 5 nên giữ nguyên 3,14 (Đúng)."
+        },
+        {
+          "text": "b) Sai số tuyệt đối khi lấy a = 3,14 không vượt quá 0,005.",
+          "ans": true,
+          "exp": "|3,14159... - 3,14| = 0,00159... < 0,005 (Đúng)."
+        },
+        {
+          "text": "c) Số quy tròn của ā đến hàng phần mười là 3,2.",
+          "ans": false,
+          "exp": "Chữ số sau 1 là 4 < 5 nên làm tròn là 3,1 (Sai)."
+        },
+        {
+          "text": "d) Sai số tương đối càng nhỏ thì phép đo càng chính xác.",
+          "ans": true,
+          "exp": "Sai số tương đối đo độ tin cậy của phép đo (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho số gần đúng a = 12 354 với độ chính xác d = 50. Số quy tròn của a là:",
+      "opts": [
+        "12 400",
+        "12 350",
+        "12 000",
+        "12 300"
+      ],
+      "ans": 0,
+      "exp": "• d = 50 (hàng chục) nên quy tròn đến hàng trăm.<br>• Hàng chục là 5 ≥ 5 nên tăng hàng trăm lên 1: 12 400."
+    },
+    {
+      "type": "drag",
+      "q": "Điền vào chỗ trống kết quả làm tròn các số đo:<br>• Số 45,678 làm tròn đến hàng phần mười là %%%SLOT_1%%%.<br>• Số 3,14159 làm tròn đến 3 chữ số thập phân là %%%SLOT_2%%%.<br>• Số 128 450 làm tròn đến hàng nghìn là %%%SLOT_3%%%.",
+      "slots": [
+        "45,7",
+        "3,142",
+        "128 000"
+      ],
+      "pool": [
+        "45,7",
+        "3,142",
+        "128 000",
+        "45,6",
+        "129 000"
+      ],
+      "exp": "• 45,678 → 45,7.<br>• 3,14159 → 3,142.<br>• 128 450 → 128 000."
+    },
+    {
+      "type": "mcq",
+      "q": "Một sợi dây có chiều dài đúng l thỏa mãn 5,4 m ≤ l ≤ 5,6 m. Khi lấy chiều dài gần đúng là 5,5 m thì sai số tuyệt đối không vượt quá:",
+      "opts": [
+        "0,1 m",
+        "0,2 m",
+        "0,05 m",
+        "0,5 m"
+      ],
+      "ans": 0,
+      "exp": "• |l - 5,5| ≤ 0,1 m."
+    },
+    {
+      "type": "mcq",
+      "q": "Tính sai số tương đối δ của kết quả đo khối lượng m = (12,5 ± 0,1) kg:",
+      "opts": [
+        "0,8%",
+        "0,1%",
+        "1,25%",
+        "8%"
+      ],
+      "ans": 0,
+      "exp": "• δ = 0,1 / 12,5 = 0,008 = 0,8%."
+    },
+    {
+      "type": "mcq",
+      "q": "Một thửa đất hình chữ nhật có kích thước đo được là chiều dài a = (40 ± 0,2) m và chiều rộng b = (25 ± 0,1) m. Chu vi thửa đất P = 2(a + b) có độ chính xác là:",
+      "opts": [
+        "d_P = 0,6 m",
+        "d_P = 0,3 m",
+        "d_P = 0,2 m",
+        "d_P = 0,02 m"
+      ],
+      "ans": 0,
+      "exp": "• d_P = 2 · (d_a + d_b) = 2 · (0,2 + 0,1) = 0,6 m."
+    },
+    {
+      "type": "mcq",
+      "q": "Đồng hồ đo tốc độ của xe ô tô chỉ v = 85 km/h với sai số cho phép ±2 km/h. Tốc độ thực tế v_tt của xe nằm trong khoảng nào?",
+      "opts": [
+        "[83; 87] km/h",
+        "[80; 90] km/h",
+        "[84; 86] km/h",
+        "[83; 85] km/h"
+      ],
+      "ans": 0,
+      "exp": "• 85 - 2 ≤ v_tt ≤ 85 + 2 ⇔ [83; 87] km/h."
+    },
+    {
+      "type": "mcq",
+      "q": "Một kĩ sư gia công trục máy tiện yêu cầu đường kính d = 50 mm với dung sai ±0,02 mm. Kết quả đo kiểm tra nào sau đây khiến chi tiết <b>bị loại</b> (không đạt chuẩn)?",
+      "opts": [
+        "50,035 mm",
+        "50,015 mm",
+        "49,985 mm",
+        "50,000 mm"
+      ],
+      "ans": 0,
+      "exp": "• Dung sai cho phép: [49,98; 50,02] mm. Chi tiết 50,035 mm > 50,02 mm nên bị loại."
+    }
+  ],
+  "13": [
+    {
+      "type": "mcq",
+      "q": "Trung vị (M_e) của một mẫu số liệu là giá trị:",
+      "opts": [
+        "chia mẫu số liệu đã sắp xếp thành hai phần bằng nhau về số lượng",
+        "xuất hiện nhiều lần nhất trong mẫu",
+        "trung bình cộng của tất cả các giá trị",
+        "lớn nhất trừ đi giá trị nhỏ nhất"
+      ],
+      "ans": 0,
+      "exp": "• Trung vị M_e: giá trị ở vị trí chính giữa của mẫu số liệu sau khi sắp xếp theo thứ tự không giảm."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các số đặc trưng đo xu thế trung tâm (Cột A) với ý nghĩa tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Số trung bình (x̄)",
+          "b": "A. Đại diện cho giá trị trung bình cộng của cả mẫu"
+        },
+        {
+          "a": "2. Trung vị (M_e hay Q₂)",
+          "b": "B. Không bị ảnh hưởng bởi các giá trị bất thường (quá lớn hoặc quá bé)"
+        },
+        {
+          "a": "3. Mốt (M_o)",
+          "b": "C. Giá trị có tần số xuất hiện lớn nhất trong mẫu"
+        },
+        {
+          "a": "4. Tứ phân vị (Q₁, Q₂, Q₃)",
+          "b": "D. Chia mẫu số liệu đã sắp xếp thành 4 phần bằng nhau"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Trung bình: nhạy cảm với ngoại lai.<br>• Trung vị: chống chịu tốt ngoại lai.<br>• Mốt: thị hiếu phổ biến nhất.<br>• Tứ phân vị: phân vị 25%, 50%, 75%."
+    },
+    {
+      "type": "tf",
+      "q": "Cho mẫu số liệu điểm kiểm tra: 6, 7, 7, 8, 8, 8, 9, 10 (n = 8). Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Số trung bình x̄ = 7,875.",
+          "ans": true,
+          "exp": "Tổng = 63. x̄ = 63 / 8 = 7,875 (Đúng)."
+        },
+        {
+          "text": "b) Mốt của mẫu số liệu là M_o = 8.",
+          "ans": true,
+          "exp": "Điểm 8 xuất hiện 3 lần (nhiều nhất) (Đúng)."
+        },
+        {
+          "text": "c) Trung vị M_e = 8.",
+          "ans": true,
+          "exp": "M_e = (8 + 8)/2 = 8 (Đúng)."
+        },
+        {
+          "text": "d) Tứ phân vị thứ nhất Q₁ = 6,5.",
+          "ans": false,
+          "exp": "Nửa dưới {6, 7, 7, 8} có Q₁ = (7 + 7)/2 = 7 (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm trung vị của mẫu số liệu sau: 3, 5, 8, 10, 12, 15, 18:",
+      "opts": [
+        "10",
+        "8",
+        "12",
+        "10,1"
+      ],
+      "ans": 0,
+      "exp": "• n = 7 (lẻ). Số thứ 4 là 10 ⇒ M_e = 10."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các giá trị thích hợp vào chỗ trống cho mẫu số liệu: 2, 4, 6, 8, 10:<br>• Số trung bình x̄ = %%%SLOT_1%%%.<br>• Trung vị M_e = %%%SLOT_2%%%.<br>• Khoảng biến thiên R = %%%SLOT_3%%%.",
+      "slots": [
+        "6",
+        "6",
+        "8"
+      ],
+      "pool": [
+        "6",
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "exp": "• x̄ = 30 / 5 = 6.<br>• M_e = 6.<br>• R = 10 - 2 = 8."
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm mốt của dãy điểm thi môn Toán: 5, 6, 7, 7, 8, 8, 8, 9, 9, 10:",
+      "opts": [
+        "8 (tần số 3)",
+        "7",
+        "9",
+        "Không có mốt"
+      ],
+      "ans": 0,
+      "exp": "• Điểm 8 xuất hiện 3 lần, nhiều nhất nên M_o = 8."
+    },
+    {
+      "type": "mcq",
+      "q": "Mẫu số liệu 1, 2, 3, 4, 5, 6, 7, 8 có tứ phân vị thứ nhất Q₁ và thứ ba Q₃ lần lượt là:",
+      "opts": [
+        "Q₁ = 2,5; Q₃ = 6,5",
+        "Q₁ = 2; Q₃ = 7",
+        "Q₁ = 3; Q₃ = 6",
+        "Q₁ = 2,5; Q₃ = 7,5"
+      ],
+      "ans": 0,
+      "exp": "• Nửa dưới {1, 2, 3, 4} có Q₁ = 2,5.<br>• Nửa trên {5, 6, 7, 8} có Q₃ = 6,5."
+    },
+    {
+      "type": "mcq",
+      "q": "Bảng lương hàng tháng của một xí nghiệp may: 1 giám đốc lương 80 triệu, 2 phó giám đốc 30 triệu, 40 công nhân lương 8 triệu. Số đặc trưng nào phản ánh sát nhất thu nhập thực tế của đa số người lao động?",
+      "opts": [
+        "Trung vị (8 triệu đồng)",
+        "Số trung bình (khoảng 10,2 triệu đồng)",
+        "Số lớn nhất (80 triệu)",
+        "Khoảng biến thiên"
+      ],
+      "ans": 0,
+      "exp": "• Trung vị = 8 triệu đồng phản ánh trung thực mức thu nhập của đa số công nhân."
+    },
+    {
+      "type": "mcq",
+      "q": "Một cửa hàng giày thể thao theo dõi kích cỡ (size) giày nam bán ra trong tháng: size 39 (15 đôi), size 40 (45 đôi), size 41 (80 đôi), size 42 (50 đôi), size 43 (10 đôi). Chủ cửa hàng nên ưu tiên nhập nhiều nhất size giày nào?",
+      "opts": [
+        "Size 41 (ứng với Mốt của mẫu số liệu)",
+        "Size 40",
+        "Size 42",
+        "Size trung bình 40,8"
+      ],
+      "ans": 0,
+      "exp": "• Mốt M_o = 41 (bán được nhiều nhất với 80 đôi) thể hiện thị hiếu số đông khách hàng."
+    },
+    {
+      "type": "mcq",
+      "q": "Thời gian hoàn thành một bài test tuyển dụng của 5 ứng viên là: 18, 22, 25, 27, 38 phút. Sau khi kiểm tra lại, ứng viên 38 phút thực tế chỉ mất 28 phút. Đại lượng nào sau đây <b>không thay đổi</b>?",
+      "opts": [
+        "Trung vị (vẫn là 25 phút)",
+        "Số trung bình",
+        "Khoảng biến thiên",
+        "Tổng thời gian"
+      ],
+      "ans": 0,
+      "exp": "• Dãy cũ: 18, 22, 25, 27, 38 (M_e = 25). Dãy mới: 18, 22, 25, 27, 28 (M_e vẫn là 25)."
+    }
+  ],
+  "14": [
+    {
+      "type": "mcq",
+      "q": "Khoảng biến thiên R của một mẫu số liệu được định nghĩa là:",
+      "opts": [
+        "Hiệu giữa giá trị lớn nhất và giá trị nhỏ nhất: R = x_max - x_min",
+        "Tích giữa x_max và x_min",
+        "Tổng giữa x_max và x_min",
+        "Hiệu giữa Q₃ và Q₁"
+      ],
+      "ans": 0,
+      "exp": "• Khoảng biến thiên: R = x_max - x_min."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các số đặc trưng đo độ phân tán (Cột A) với công thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Khoảng tứ phân vị Δ_Q",
+          "b": "A. Δ_Q = Q₃ - Q₁"
+        },
+        {
+          "a": "2. Phương sai s²",
+          "b": "B. s² = (1/n) · ∑ (x_i - x̄)²"
+        },
+        {
+          "a": "3. Độ lệch chuẩn s",
+          "b": "C. s = √(s²)"
+        },
+        {
+          "a": "4. Giá trị ngoại lệ (bất thường)",
+          "b": "D. Nhỏ hơn Q₁ - 1,5·Δ_Q hoặc lớn hơn Q₃ + 1,5·Δ_Q"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Khoảng tứ phân vị: Q₃ - Q₁.<br>• Phương sai: trung bình bình phương độ lệch.<br>• Độ lệch chuẩn: căn bậc hai của phương sai.<br>• Tiêu chuẩn rào Tukey phát hiện ngoại lai."
+    },
+    {
+      "type": "tf",
+      "q": "Cho mẫu số liệu: 4, 6, 8, 10, 12. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Khoảng biến thiên R = 8.",
+          "ans": true,
+          "exp": "R = 12 - 4 = 8 (Đúng)."
+        },
+        {
+          "text": "b) Số trung bình x̄ = 8.",
+          "ans": true,
+          "exp": "x̄ = (4 + 6 + 8 + 10 + 12)/5 = 40 / 5 = 8 (Đúng)."
+        },
+        {
+          "text": "c) Phương sai s² = 8.",
+          "ans": true,
+          "exp": "s² = [(-4)² + (-2)² + 0² + 2² + 4²] / 5 = [16 + 4 + 0 + 4 + 16]/5 = 40 / 5 = 8 (Đúng)."
+        },
+        {
+          "text": "d) Độ lệch chuẩn s = 8.",
+          "ans": false,
+          "exp": "Độ lệch chuẩn s = √8 = 2√2 ≈ 2,83 (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Độ lệch chuẩn s của mẫu số liệu đo lường mức độ:",
+      "opts": [
+        "phân tán của các số liệu quanh số trung bình",
+        "chính xác của giá trị trung vị",
+        "xuất hiện nhiều lần của mốt",
+        "lớn nhất của mẫu số liệu"
+      ],
+      "ans": 0,
+      "exp": "• Phương sai và độ lệch chuẩn đo mức độ phân tán của các giá trị trong mẫu quanh giá trị trung bình."
+    },
+    {
+      "type": "drag",
+      "q": "Điền vào chỗ trống công thức xác định giá trị ngoại lệ của mẫu số liệu:<br>• Rào dưới: x < %%%SLOT_1%%% - 1,5 · Δ_Q.<br>• Rào trên: x > %%%SLOT_2%%% + 1,5 · Δ_Q.<br>• Khoảng tứ phân vị Δ_Q = %%%SLOT_3%%%.",
+      "slots": [
+        "Q₁",
+        "Q₃",
+        "Q₃ - Q₁"
+      ],
+      "pool": [
+        "Q₁",
+        "Q₃",
+        "Q₃ - Q₁",
+        "x̄",
+        "R"
+      ],
+      "exp": "• Rào dưới: Q₁ - 1,5·Δ_Q.<br>• Rào trên: Q₃ + 1,5·Δ_Q.<br>• Δ_Q = Q₃ - Q₁."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho mẫu số liệu có phương sai s² = 16. Độ lệch chuẩn s bằng:",
+      "opts": [
+        "4",
+        "256",
+        "8",
+        "2"
+      ],
+      "ans": 0,
+      "exp": "• s = √16 = 4."
+    },
+    {
+      "type": "mcq",
+      "q": "Tính khoảng tứ phân vị Δ_Q của mẫu số liệu: 10, 15, 20, 25, 30, 35, 40, 45:",
+      "opts": [
+        "20",
+        "35",
+        "15",
+        "10"
+      ],
+      "ans": 0,
+      "exp": "• Q₁ = 17,5; Q₃ = 37,5 ⇒ Δ_Q = 37,5 - 17,5 = 20."
+    },
+    {
+      "type": "mcq",
+      "q": "Hai xạ thủ A và B bắn mỗi người 10 viên đạn vào bia. Cả hai đều có điểm trung bình là 9,0 điểm. Độ lệch chuẩn điểm số của xạ thủ A là s_A = 0,6 điểm, của xạ thủ B là s_B = 1,4 điểm. Nhận định nào đúng?",
+      "opts": [
+        "Xạ thủ A bắn ổn định và đều tay hơn xạ thủ B",
+        "Xạ thủ B bắn ổn định hơn xạ thủ A",
+        "Hai xạ thủ bắn ổn định như nhau vì cùng điểm trung bình",
+        "Không thể so sánh"
+      ],
+      "ans": 0,
+      "exp": "• s_A = 0,6 < s_B = 1,4 nên xạ thủ A bắn ổn định hơn."
+    },
+    {
+      "type": "mcq",
+      "q": "Giá cổ phiếu của hai công ty X và Y trong 30 ngày giao dịch đều có mức giá trung bình 50.000 đ/cổ phiếu. Độ lệch chuẩn giá cổ phiếu X là 1.500 đ, cổ phiếu Y là 8.500 đ. Nhà đầu tư thích mức độ an toàn ít rủi ro nên chọn cổ phiếu nào?",
+      "opts": [
+        "Cổ phiếu X vì biên độ dao động giá thấp hơn nhiều",
+        "Cổ phiếu Y vì dao động mạnh hơn",
+        "Cả hai như nhau",
+        "Không đầu tư"
+      ],
+      "ans": 0,
+      "exp": "• Cổ phiếu X có độ lệch chuẩn nhỏ hơn nên giá ít biến động sốc hơn."
+    },
+    {
+      "type": "mcq",
+      "q": "Kiểm tra khối lượng 5 gói mì tôm (gam): 80, 81, 79, 80, 80. Độ lệch chuẩn khối lượng của 5 gói mì tôm là:",
+      "opts": [
+        "0,63 gam",
+        "1,2 gam",
+        "0 gam",
+        "2,5 gam"
+      ],
+      "ans": 0,
+      "exp": "• x̄ = 80; s² = 0,4 ⇒ s = √0,4 ≈ 0,63 gam."
+    }
+  ]
+}

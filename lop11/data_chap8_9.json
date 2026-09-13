@@ -1,0 +1,791 @@
+[
+  {
+    "id": 28,
+    "title": "Bài 28: Biến Cố Hợp, Biến Cố Giao, Biến Cố Độc Lập",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Cho hai biến cố A và B của một phép thử. Biến cố \"A hoặc B xảy ra\" được gọi là:",
+        "options": [
+          "Biến cố hợp của A và B, kí hiệu là A ∪ B.",
+          "Biến cố giao của A và B, kí hiệu là AB.",
+          "Biến cố đối của A.",
+          "Biến cố chắc chắn."
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>Định nghĩa:</b> Biến cố \"A hoặc B xảy ra\" được gọi là biến cố hợp của A và B, kí hiệu là A ∪ B."
+      },
+      {
+        "type": "tf",
+        "question": "Xét tính đúng/sai của các phát biểu sau về các loại biến cố trong xác suất:",
+        "items": [
+          {
+            "text": "a) Biến cố giao của A và B xảy ra khi và chỉ khi cả A và B cùng xảy ra.",
+            "answer": true,
+            "explanation": "Đúng theo định nghĩa biến cố giao AB (hoặc A ∩ B)."
+          },
+          {
+            "text": "b) Hai biến cố A và B được gọi là xung khắc nếu chúng không bao giờ cùng xảy ra, tức A ∩ B = ∅.",
+            "answer": true,
+            "explanation": "Đúng theo định nghĩa hai biến cố xung khắc."
+          },
+          {
+            "text": "c) Hai biến cố A và B độc lập nếu việc biến cố này xảy ra hay không không ảnh hưởng đến xác suất xảy ra biến cố kia.",
+            "answer": true,
+            "explanation": "Đúng theo định nghĩa hai biến cố độc lập."
+          },
+          {
+            "text": "d) Nếu hai biến cố xung khắc thì chúng luôn luôn độc lập với nhau.",
+            "answer": false,
+            "explanation": "Sai, hai biến cố xung khắc có xác suất dương thì phụ thuộc lẫn nhau vì nếu một biến cố xảy ra thì biến cố kia chắc chắn không xảy ra."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Gieo một con xúc xắc cân đối và đồng chất một lần. Gọi A là biến cố \"Số chấm xuất hiện là số chẵn\", B là biến cố \"Số chấm xuất hiện lớn hơn 3\". Số phần tử của biến cố giao A ∩ B là:",
+        "options": [
+          "2",
+          "3",
+          "1",
+          "4"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (2)</b><br><br><b>1. Liệt kê không gian mẫu:</b> Ω = {1, 2, 3, 4, 5, 6}.<br><b>2. Tập biến cố:</b> A = {2, 4, 6}, B = {4, 5, 6}.<br><b>3. Giao:</b> A ∩ B = {4, 6}, gồm 2 phần tử."
+      },
+      {
+        "type": "mcq",
+        "question": "Gieo đồng thời hai đồng xu cân đối, đồng chất. Gọi E là biến cố \"Đồng xu thứ nhất ra mặt ngửa\", F là biến cố \"Đồng xu thứ hai ra mặt ngửa\". Khẳng định nào sau đây là <b>đúng</b>?",
+        "options": [
+          "E và F là hai biến cố độc lập.",
+          "E và F là hai biến cố xung khắc.",
+          "E và F là hai biến cố đối nhau.",
+          "E ∪ F là biến cố không thể."
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Kết quả xuất hiện của đồng xu thứ nhất không ảnh hưởng đến xác suất xuất hiện của đồng xu thứ hai, do đó E và F là hai biến cố độc lập."
+      },
+      {
+        "type": "mcq",
+        "question": "Chọn ngẫu nhiên một số tự nhiên từ 1 đến 20. Gọi A là biến cố \"Số được chọn chia hết cho 3\", B là biến cố \"Số được chọn chia hết cho 5\". Số phần tử của biến cố hợp A ∪ B là:",
+        "options": [
+          "9",
+          "10",
+          "8",
+          "7"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (9)</b><br><br><b>1. Số chia hết cho 3:</b> A = {3, 6, 9, 12, 15, 18} (6 phần tử).<br><b>2. Số chia hết cho 5:</b> B = {5, 10, 15, 20} (4 phần tử).<br><b>3. Giao:</b> A ∩ B = {15} (1 phần tử chia hết cho cả 3 và 5).<br><b>4. Hợp:</b> n(A ∪ B) = n(A) + n(B) - n(A ∩ B) = 6 + 4 - 1 = 9."
+      },
+      {
+        "type": "fill",
+        "question": "Gieo hai con xúc xắc cân đối và đồng chất. Gọi A là biến cố \"Tổng số chấm xuất hiện bằng 7\", B là biến cố \"Tổng số chấm xuất hiện bằng 11\". Số phần tử của biến cố hợp A ∪ B là: %%%SLOT_0%%%.",
+        "tokens": [
+          "8",
+          "6",
+          "2",
+          "10",
+          "12"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "8"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: 8</b><br><br>A = {(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)} ⇒ n(A) = 6.<br>B = {(5,6), (6,5)} ⇒ n(B) = 2.<br>Vì tổng số chấm không thể vừa bằng 7 vừa bằng 11 nên A và B xung khắc (A ∩ B = ∅).<br>Vậy n(A ∪ B) = 6 + 2 = 8."
+      },
+      {
+        "type": "match",
+        "question": "Gieo một con xúc xắc. Ghép mỗi cặp biến cố ở Cột A với mối quan hệ tương ứng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. \"Số chẵn\" và \"Số lẻ\"",
+            "right": "A. Xung khắc và đối nhau"
+          },
+          {
+            "left": "2. \"Số chẵn\" và \"Số chia hết cho 3\"",
+            "right": "B. Không xung khắc"
+          },
+          {
+            "left": "3. \"Lớn hơn 4\" và \"Bé hơn 2\"",
+            "right": "C. Xung khắc nhưng không đối"
+          },
+          {
+            "left": "4. \"Lớn hơn 0\" và \"Bé hơn 7\"",
+            "right": "D. Biến cố chắc chắn"
+          }
+        ],
+        "explanation": "1 - A; 2 - B (giao là {6}); 3 - C ({5,6} và {1} rời nhau nhưng hợp không bằng không gian mẫu); 4 - D."
+      },
+      {
+        "type": "mcq",
+        "question": "Hai xạ thủ độc lập cùng bắn vào một tấm bia, mỗi người bắn một viên đạn. Gọi A là biến cố \"Xạ thủ thứ nhất bắn trúng\" và B là biến cố \"Xạ thủ thứ hai bắn trúng\". Biến cố \"Có ít nhất một xạ thủ bắn trúng bia\" được biểu diễn bằng:",
+        "options": [
+          "A ∪ B",
+          "A ∩ B",
+          "A \\ B",
+          "Biến cố đối của A ∪ B"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (A ∪ B)</b><br><br>\"Có ít nhất một người bắn trúng\" có nghĩa là người thứ nhất bắn trúng HOẶC người thứ hai bắn trúng, chính là biến cố hợp A ∪ B."
+      },
+      {
+        "type": "mcq",
+        "question": "Một hệ thống điện tử gồm hai bóng đèn mắc song song. Hệ thống hoạt động tốt nếu có ít nhất một bóng đèn sáng. Gọi A là biến cố \"Bóng 1 bị hỏng\" và B là biến cố \"Bóng 2 bị hỏng\". Biến cố \"Cả hệ thống bị hỏng hoàn toàn\" là:",
+        "options": [
+          "A ∩ B",
+          "A ∪ B",
+          "A đối",
+          "B đối"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (A ∩ B)</b><br><br>Vì hai bóng mắc song song, hệ thống chỉ hỏng hoàn toàn khi cả bóng 1 bị hỏng VÀ bóng 2 bị hỏng, tức biến cố giao A ∩ B."
+      },
+      {
+        "type": "mcq",
+        "question": "Một sinh viên dự thi hai môn Toán và Tiếng Anh độc lập nhau. Khả năng bạn đó đậu môn Toán không ảnh hưởng tới kết quả môn Tiếng Anh. Đây là ví dụ tiêu biểu về:",
+        "options": [
+          "Hai biến cố độc lập",
+          "Hai biến cố xung khắc",
+          "Hai biến cố đối nhau",
+          "Biến cố không thể"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Vì kết quả của môn này không làm thay đổi xác suất đậu của môn kia nên hai biến cố là độc lập."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Bài 29: Công Thức Cộng Xác Suất",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Cho hai biến cố xung khắc A và B. Công thức cộng xác suất nào sau đây là <b>đúng</b>?",
+        "options": [
+          "P(A ∪ B) = P(A) + P(B)",
+          "P(A ∪ B) = P(A) · P(B)",
+          "P(A ∪ B) = P(A) + P(B) - P(A ∩ B)",
+          "P(A ∪ B) = 1 - P(A)"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>Định lí:</b> Với hai biến cố xung khắc A và B, do A ∩ B = ∅ nên P(A ∪ B) = P(A) + P(B)."
+      },
+      {
+        "type": "tf",
+        "question": "Cho hai biến cố A và B bất kì của cùng một phép thử. Xét tính đúng/sai của các khẳng định sau:",
+        "items": [
+          {
+            "text": "a) Với hai biến cố bất kì: P(A ∪ B) = P(A) + P(B) - P(A ∩ B).",
+            "answer": true,
+            "explanation": "Đúng, đây là công thức cộng tổng quát."
+          },
+          {
+            "text": "b) Xác suất của biến cố đối A là P(A) = 1 - P(A).",
+            "answer": true,
+            "explanation": "Đúng theo tính chất của biến cố đối."
+          },
+          {
+            "text": "c) Xác suất của biến cố hợp luôn bằng tổng xác suất của từng biến cố.",
+            "answer": false,
+            "explanation": "Sai, chỉ đúng khi hai biến cố xung khắc."
+          },
+          {
+            "text": "d) Luôn có 0 ≤ P(A ∪ B) ≤ 1.",
+            "answer": true,
+            "explanation": "Đúng, xác suất của mọi biến cố luôn nằm trong đoạn [0; 1]."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hai biến cố xung khắc A và B với P(A) = 0,35 và P(B) = 0,45. Tính P(A ∪ B):",
+        "options": [
+          "0,80",
+          "0,1575",
+          "0,10",
+          "0,70"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (0,80)</b><br><br>Do A và B xung khắc nên P(A ∪ B) = P(A) + P(B) = 0,35 + 0,45 = 0,80."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hai biến cố A và B có P(A) = 0,6; P(B) = 0,5 và P(A ∩ B) = 0,3. Tính xác suất P(A ∪ B):",
+        "options": [
+          "0,8",
+          "0,7",
+          "0,9",
+          "1,1"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (0,8)</b><br><br>Áp dụng công thức cộng tổng quát:<br>P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0,6 + 0,5 - 0,3 = 0,8."
+      },
+      {
+        "type": "mcq",
+        "question": "Rút ngẫu nhiên một lá bài từ bộ bài tây 52 lá. Tính xác suất để rút được lá Át (A) hoặc lá Cơ (♥):",
+        "options": [
+          "4/13",
+          "17/52",
+          "1/4",
+          "1/13"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (4/13)</b><br><br><b>1.</b> Số lá Át: n(A) = 4 ⇒ P(A) = 4/52.<br><b>2.</b> Số lá Cơ: n(B) = 13 ⇒ P(B) = 13/52.<br><b>3.</b> Lá Át Cơ: n(A ∩ B) = 1 ⇒ P(A ∩ B) = 1/52.<br><b>4.</b> P(A ∪ B) = 4/52 + 13/52 - 1/52 = 16/52 = 4/13."
+      },
+      {
+        "type": "fill",
+        "question": "Một hộp có 10 quả cầu đỏ, 8 quả cầu xanh và 6 quả cầu vàng. Lấy ngẫu nhiên 1 quả. Xác suất lấy được quả cầu đỏ hoặc vàng là phân số tối giản a/b.<br>Giá trị tử số a = %%%SLOT_0%%%, mẫu số b = %%%SLOT_1%%%.",
+        "tokens": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "16",
+          "24"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "2"
+          },
+          {
+            "id": "SLOT_1",
+            "answer": "3"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: a = 2, b = 3</b><br><br>Tổng số quả cầu: 10 + 8 + 6 = 24.<br>Số quả đỏ hoặc vàng: 10 + 6 = 16.<br>Xác suất: P = 16/24 = 2/3. Do đó a = 2, b = 3."
+      },
+      {
+        "type": "match",
+        "question": "Ghép mỗi tình huống ở Cột A với xác suất tương ứng ở Cột B (gieo một con xúc xắc 6 mặt):",
+        "pairs": [
+          {
+            "left": "1. Xuất hiện mặt 1 hoặc mặt 6",
+            "right": "A. 1/3"
+          },
+          {
+            "left": "2. Xuất hiện số chẵn hoặc số 5",
+            "right": "B. 2/3"
+          },
+          {
+            "left": "3. Xuất hiện số nguyên tố hoặc số chia hết cho 2",
+            "right": "C. 5/6"
+          },
+          {
+            "left": "4. Xuất hiện mặt lớn hơn 6",
+            "right": "D. 0"
+          }
+        ],
+        "explanation": "1 - A (2/6 = 1/3); 2 - B ({2,4,6,5} gồm 4/6 = 2/3); 3 - C ({2,3,5} ∪ {2,4,6} = {2,3,4,5,6} gồm 5/6); 4 - D (biến cố không thể)."
+      },
+      {
+        "type": "mcq",
+        "question": "Tại một hội thảo có 100 đại biểu, trong đó 60 đại biểu biết tiếng Anh, 40 đại biểu biết tiếng Pháp và 20 đại biểu biết cả hai thứ tiếng. Chọn ngẫu nhiên một đại biểu. Xác suất để đại biểu đó biết ít nhất một trong hai thứ tiếng là:",
+        "options": [
+          "0,80",
+          "0,60",
+          "1,00",
+          "0,70"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (0,80)</b><br><br>P(Anh ∪ Pháp) = P(Anh) + P(Pháp) - P(Anh ∩ Pháp) = 0,60 + 0,40 - 0,20 = 0,80."
+      },
+      {
+        "type": "mcq",
+        "question": "Một trạm kiểm soát giao thông ghi nhận: xác suất một tài xế vi phạm lỗi quá tốc độ là 0,15; vi phạm lỗi nồng độ cồn là 0,08; vi phạm cả hai lỗi là 0,03. Xác suất để một tài xế bị dừng kiểm tra vi phạm ít nhất một trong hai lỗi trên là:",
+        "options": [
+          "0,20",
+          "0,23",
+          "0,26",
+          "0,17"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (0,20)</b><br><br>P(T ∪ C) = P(T) + P(C) - P(T ∩ C) = 0,15 + 0,08 - 0,03 = 0,20."
+      },
+      {
+        "type": "mcq",
+        "question": "Một bệnh viện tiến hành sàng lọc sức khỏe cho người cao tuổi. Xác suất một người mắc bệnh tiểu đường là 0,18; mắc bệnh cao huyết áp là 0,32; mắc cả hai bệnh là 0,10. Xác suất để một người cao tuổi được khám không mắc cả hai bệnh trên là:",
+        "options": [
+          "0,60",
+          "0,40",
+          "0,50",
+          "0,70"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (0,60)</b><br><br><b>1. Xác suất mắc ít nhất một bệnh:</b> P(Đ ∪ H) = 0,18 + 0,32 - 0,10 = 0,40.<br><b>2. Biến cố đối (không mắc bệnh nào):</b> P = 1 - 0,40 = 0,60."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Bài 30: Công Thức Nhân Cho Hai Biến Cố Độc Lập",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Cho hai biến cố độc lập A và B. Công thức nhân xác suất nào sau đây là <b>đúng</b>?",
+        "options": [
+          "P(A ∩ B) = P(A) · P(B)",
+          "P(A ∩ B) = P(A) + P(B)",
+          "P(A ∩ B) = P(A) / P(B)",
+          "P(A ∩ B) = P(A) + P(B) - 1"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>Định lí:</b> Nếu hai biến cố A và B độc lập với nhau thì xác suất xảy ra đồng thời cả hai biến cố bằng tích xác suất của chúng: P(A ∩ B) = P(A) · P(B)."
+      },
+      {
+        "type": "tf",
+        "question": "Cho hai biến cố độc lập A và B. Xét tính đúng/sai của các mệnh đề sau:",
+        "items": [
+          {
+            "text": "a) P(A ∩ B) = P(A) · P(B).",
+            "answer": true,
+            "explanation": "Đúng theo công thức nhân xác suất biến cố độc lập."
+          },
+          {
+            "text": "b) Hai biến cố A và biến cố đối B̄ cũng độc lập với nhau.",
+            "answer": true,
+            "explanation": "Đúng, nếu A và B độc lập thì A và B̄, Ā và B, Ā và B̄ cũng độc lập."
+          },
+          {
+            "text": "c) Xác suất để cả hai biến cố cùng không xảy ra là P(Ā ∩ B̄) = (1 - P(A)) · (1 - P(B)).",
+            "answer": true,
+            "explanation": "Đúng theo tính chất độc lập của biến cố đối."
+          },
+          {
+            "text": "d) Nếu P(A ∩ B) = P(A) · P(B) thì A và B luôn xung khắc nhau.",
+            "answer": false,
+            "explanation": "Sai, xung khắc yêu cầu P(AB) = 0."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hai biến cố độc lập A và B với P(A) = 0,7 và P(B) = 0,8. Tính P(A ∩ B):",
+        "options": [
+          "0,56",
+          "0,15",
+          "0,94",
+          "0,75"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (0,56)</b><br><br>Do A và B độc lập nên P(A ∩ B) = P(A) · P(B) = 0,7 · 0,8 = 0,56."
+      },
+      {
+        "type": "mcq",
+        "question": "Gieo hai con xúc xắc cân đối và đồng chất. Xác suất để cả hai con cùng xuất hiện mặt 6 chấm là:",
+        "options": [
+          "1/36",
+          "1/6",
+          "1/18",
+          "1/12"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (1/36)</b><br><br>Kết quả gieo hai con xúc xắc là độc lập. P = (1/6) · (1/6) = 1/36."
+      },
+      {
+        "type": "mcq",
+        "question": "Hai bạn An và Bình độc lập cùng ném bóng vào rổ. Xác suất ném trúng của An là 0,8; của Bình là 0,7. Xác suất để có đúng một bạn ném trúng rổ là:",
+        "options": [
+          "0,38",
+          "0,56",
+          "0,42",
+          "0,24"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (0,38)</b><br><br><b>1. An trúng và Bình trượt:</b> 0,8 · (1 - 0,7) = 0,8 · 0,3 = 0,24.<br><b>2. An trượt và Bình trúng:</b> (1 - 0,8) · 0,7 = 0,2 · 0,7 = 0,14.<br><b>3. Tổng xác suất:</b> P = 0,24 + 0,14 = 0,38."
+      },
+      {
+        "type": "fill",
+        "question": "Một bài thi trắc nghiệm gồm 4 câu hỏi độc lập, mỗi câu có 4 phương án và chỉ có 1 phương án đúng. Một học sinh chọn ngẫu nhiên cả 4 câu. Xác suất để học sinh đó trả lời đúng cả 4 câu là phân số 1/%%%SLOT_0%%%.",
+        "tokens": [
+          "256",
+          "64",
+          "16",
+          "1024"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "256"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: 256</b><br><br>Mỗi câu có xác suất chọn đúng là 1/4. Vì 4 câu độc lập nên xác suất đúng cả 4 câu là: P = (1/4)<sup>4</sup> = 1/256."
+      },
+      {
+        "type": "match",
+        "question": "Cho hai biến cố độc lập A, B với P(A) = 0,6 và P(B) = 0,5. Ghép mỗi biến cố ở Cột A với xác suất tương ứng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. P(A ∩ B)",
+            "right": "A. 0,30"
+          },
+          {
+            "left": "2. P(A ∩ B̄)",
+            "right": "B. 0,30"
+          },
+          {
+            "left": "3. P(Ā ∩ B̄)",
+            "right": "C. 0,20"
+          },
+          {
+            "left": "4. P(A ∪ B)",
+            "right": "D. 0,80"
+          }
+        ],
+        "explanation": "1 - A (0.6*0.5 = 0.3); 2 - B (0.6*0.5 = 0.3); 3 - C (0.4*0.5 = 0.2); 4 - D (0.6 + 0.5 - 0.3 = 0.8)."
+      },
+      {
+        "type": "mcq",
+        "question": "Một tên lửa phòng không bắn hai quả tên lửa độc lập vào một mục tiêu bay. Xác suất bắn trúng mục tiêu của quả thứ nhất là 0,8; quả thứ hai là 0,7. Xác suất để mục tiêu bị tiêu diệt (bị trúng ít nhất một quả tên lửa) là:",
+        "options": [
+          "0,94",
+          "0,86",
+          "0,56",
+          "0,75"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (0,94)</b><br><br><b>1. Xác suất cả hai quả cùng trượt:</b> P(trượt cả hai) = (1 - 0,8) · (1 - 0,7) = 0,2 · 0,3 = 0,06.<br><b>2. Biến cố đối (trúng ít nhất một quả):</b> P = 1 - 0,06 = 0,94."
+      },
+      {
+        "type": "mcq",
+        "question": "Một mạch điện gồm hai linh kiện R<sub>1</sub> và R<sub>2</sub> mắc nối tiếp nhau. Mạch hoạt động tốt khi và chỉ khi cả hai linh kiện cùng hoạt động tốt. Xác suất hỏng của R<sub>1</sub> trong 1 năm là 0,05; của R<sub>2</sub> là 0,02 (hai linh kiện hỏng độc lập nhau). Xác suất mạch hoạt động tốt trong 1 năm là:",
+        "options": [
+          "0,931",
+          "0,950",
+          "0,980",
+          "0,900"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (0,931)</b><br><br><b>1. Xác suất R<sub>1</sub> tốt:</b> 1 - 0,05 = 0,95.<br><b>2. Xác suất R<sub>2</sub> tốt:</b> 1 - 0,02 = 0,98.<br><b>3. Cả hai cùng tốt:</b> P = 0,95 · 0,98 = 0,931."
+      },
+      {
+        "type": "mcq",
+        "question": "Hai bác sĩ chẩn đoán độc lập cho một bệnh nhân. Xác suất chẩn đoán đúng bệnh của bác sĩ A là 0,85; của bác sĩ B là 0,90. Xác suất để ít nhất một trong hai bác sĩ chẩn đoán đúng bệnh là:",
+        "options": [
+          "0,985",
+          "0,950",
+          "0,765",
+          "0,875"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (0,985)</b><br><br><b>1. Xác suất cả hai chẩn đoán sai:</b> (1 - 0,85) · (1 - 0,90) = 0,15 · 0,10 = 0,015.<br><b>2. Xác suất ít nhất một bác sĩ đúng:</b> P = 1 - 0,015 = 0,985."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Bài 31: Định Nghĩa & Ý Nghĩa Của Đạo Hàm",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Đạo hàm của hàm số y = f(x) tại điểm x<sub>0</sub> (nếu tồn tại) là giới hạn hữu hạn của tỉ số nào sau đây khi x dần tới x<sub>0</sub>?",
+        "options": [
+          "lim<sub>x → x<sub>0</sub></sub> <span class=\"fraction\"><span class=\"numerator\">f(x) - f(x<sub>0</sub>)</span><span class=\"denominator\">x - x<sub>0</sub></span></span>",
+          "lim<sub>x → x<sub>0</sub></sub> <span class=\"fraction\"><span class=\"numerator\">f(x) + f(x<sub>0</sub>)</span><span class=\"denominator\">x - x<sub>0</sub></span></span>",
+          "lim<sub>x → x<sub>0</sub></sub> <span class=\"fraction\"><span class=\"numerator\">f(x) - f(x<sub>0</sub>)</span><span class=\"denominator\">x + x<sub>0</sub></span></span>",
+          "lim<sub>x → 0</sub> <span class=\"fraction\"><span class=\"numerator\">f(x)</span><span class=\"denominator\">x</span></span>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>Định nghĩa SGK:</b> Đạo hàm của f(x) tại x<sub>0</sub> là f'(x<sub>0</sub>) = lim<sub>x → x<sub>0</sub></sub> <span class=\"fraction\"><span class=\"numerator\">f(x) - f(x<sub>0</sub>)</span><span class=\"denominator\">x - x<sub>0</sub></span></span> = lim<sub>Δx → 0</sub> <span class=\"fraction\"><span class=\"numerator\">Δy</span><span class=\"denominator\">Δx</span></span>."
+      },
+      {
+        "type": "tf",
+        "question": "Xét tính đúng/sai của các mệnh đề sau về đạo hàm và ý nghĩa hình học, vật lí của đạo hàm:",
+        "items": [
+          {
+            "text": "a) Hệ số góc của tiếp tuyến của đồ thị hàm số y = f(x) tại điểm M(x<sub>0</sub>; y<sub>0</sub>) là k = f'(x<sub>0</sub>).",
+            "answer": true,
+            "explanation": "Đúng theo ý nghĩa hình học của đạo hàm."
+          },
+          {
+            "text": "b) Vận tốc tức thời của chuyển động s = s(t) tại thời điểm t<sub>0</sub> là v(t<sub>0</sub>) = s'(t<sub>0</sub>).",
+            "answer": true,
+            "explanation": "Đúng theo ý nghĩa vật lí của đạo hàm."
+          },
+          {
+            "text": "c) Nếu hàm số y = f(x) có đạo hàm tại x<sub>0</sub> thì nó liên tục tại x<sub>0</sub>.",
+            "answer": true,
+            "explanation": "Đúng, có đạo hàm thì ắt liên tục."
+          },
+          {
+            "text": "d) Nếu hàm số y = f(x) liên tục tại x<sub>0</sub> thì chắc chắn có đạo hàm tại x<sub>0</sub>.",
+            "answer": false,
+            "explanation": "Sai, ví dụ hàm y = |x| liên tục tại x = 0 nhưng không có đạo hàm tại đó."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Tính đạo hàm của hàm số f(x) = x<sup>2</sup> - 3x tại điểm x<sub>0</sub> = 2 bằng định nghĩa:",
+        "options": [
+          "1",
+          "4",
+          "-1",
+          "2"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (1)</b><br><br><b>1. Tính số gia hàm số:</b> f(2) = 2<sup>2</sup> - 3·2 = -2. f(2 + Δx) = (2 + Δx)<sup>2</sup> - 3(2 + Δx) = 4 + 4Δx + (Δx)<sup>2</sup> - 6 - 3Δx = -2 + Δx + (Δx)<sup>2</sup>.<br><b>2. Tỉ số:</b> Δy / Δx = (Δx + (Δx)<sup>2</sup>) / Δx = 1 + Δx.<br><b>3. Giới hạn:</b> f'(2) = lim<sub>Δx → 0</sub> (1 + Δx) = 1."
+      },
+      {
+        "type": "mcq",
+        "question": "Phương trình tiếp tuyến của đồ thị hàm số y = x<sup>3</sup> - 2x + 1 tại điểm M(1; 0) là:",
+        "options": [
+          "y = x - 1",
+          "y = 3x - 3",
+          "y = -x + 1",
+          "y = 2x - 2"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (y = x - 1)</b><br><br><b>1. Đạo hàm:</b> y' = 3x<sup>2</sup> - 2.<br><b>2. Hệ số góc:</b> k = y'(1) = 3(1)<sup>2</sup> - 2 = 1.<br><b>3. Phương trình tiếp tuyến:</b> y - y<sub>0</sub> = k(x - x<sub>0</sub>) ⇔ y - 0 = 1(x - 1) ⇔ y = x - 1."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hàm số f(x) = √x. Tính f'(4):",
+        "options": [
+          "1/4",
+          "1/2",
+          "2",
+          "1/8"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (1/4)</b><br><br>Công thức đạo hàm căn bậc hai: f'(x) = 1 / (2√x).<br>Tại x = 4: f'(4) = 1 / (2√4) = 1 / 4."
+      },
+      {
+        "type": "fill",
+        "question": "Cho hàm số y = <span class=\"fraction\"><span class=\"numerator\">2x + 1</span><span class=\"denominator\">x - 1</span></span>. Hệ số góc tiếp tuyến của đồ thị tại điểm có hoành độ x<sub>0</sub> = 2 bằng: k = %%%SLOT_0%%%.",
+        "tokens": [
+          "-3",
+          "3",
+          "-1",
+          "1",
+          "5"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "-3"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: -3</b><br><br>y' = (2(x - 1) - 1(2x + 1)) / (x - 1)<sup>2</sup> = (2x - 2 - 2x - 1) / (x - 1)<sup>2</sup> = -3 / (x - 1)<sup>2</sup>.<br>Tại x<sub>0</sub> = 2: k = y'(2) = -3 / (2 - 1)<sup>2</sup> = -3."
+      },
+      {
+        "type": "match",
+        "question": "Ghép mỗi hàm số f(x) ở Cột A với giá trị đạo hàm f'(1) tương ứng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. f(x) = x<sup>4</sup>",
+            "right": "A. 4"
+          },
+          {
+            "left": "2. f(x) = 1/x",
+            "right": "B. -1"
+          },
+          {
+            "left": "3. f(x) = 3x - 5",
+            "right": "C. 3"
+          },
+          {
+            "left": "4. f(x) = x<sup>2</sup> + 2x",
+            "right": "D. 4"
+          }
+        ],
+        "explanation": "1 - A (4*1^3 = 4); 2 - B (-1/1^2 = -1); 3 - C ((3x-5)' = 3); 4 - D (2x+2 tại x=1 là 4)."
+      },
+      {
+        "type": "mcq",
+        "question": "Một vật rơi tự do từ độ cao h có phương trình quãng đường s(t) = 5t<sup>2</sup> (s tính bằng mét, t tính bằng giây). Vận tốc tức thời của vật tại thời điểm t = 3 giây là:",
+        "options": [
+          "30 m/s",
+          "45 m/s",
+          "15 m/s",
+          "60 m/s"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (30 m/s)</b><br><br><b>1. Vận tốc tức thời:</b> v(t) = s'(t) = (5t<sup>2</sup>)' = 10t.<br><b>2. Tại t = 3 s:</b> v(3) = 10 · 3 = 30 m/s."
+      },
+      {
+        "type": "mcq",
+        "question": "Điện lượng truyền trong dây dẫn tuân theo quy luật Q(t) = 2t<sup>2</sup> + 3t (Q tính bằng Culông, t tính bằng giây). Cường độ dòng điện tức thời I(t) tại thời điểm t = 2 giây là:",
+        "options": [
+          "11 A",
+          "14 A",
+          "8 A",
+          "7 A"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (11 A)</b><br><br><b>1. Cường độ tức thời:</b> I(t) = Q'(t) = (2t<sup>2</sup> + 3t)' = 4t + 3.<br><b>2. Tại t = 2 s:</b> I(2) = 4 · 2 + 3 = 11 A."
+      },
+      {
+        "type": "mcq",
+        "question": "Chi phí sản xuất x đơn vị sản phẩm của một doanh nghiệp là C(x) = 0,02x<sup>2</sup> + 40x + 5 000 (nghìn đồng). Chi phí biên (chi phí phát sinh xấp xỉ khi sản xuất thêm đơn vị thứ 101) tại mức x = 100 sản phẩm là:",
+        "options": [
+          "44 nghìn đồng",
+          "40 nghìn đồng",
+          "42 nghìn đồng",
+          "48 nghìn đồng"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (44 nghìn đồng)</b><br><br><b>1. Chi phí biên:</b> C'(x) = 0,04x + 40.<br><b>2. Tại x = 100:</b> C'(100) = 0,04 · 100 + 40 = 4 + 40 = 44 nghìn đồng."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Bài 32: Các Quy Tắc Tính Đạo Hàm",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Cho hai hàm số u = u(x) và v = v(x) có đạo hàm. Đạo hàm của thương (u / v) (với v ≠ 0) là:",
+        "options": [
+          "(u / v)' = <span class=\"fraction\"><span class=\"numerator\">u'v - uv'</span><span class=\"denominator\">v<sup>2</sup></span></span>",
+          "(u / v)' = <span class=\"fraction\"><span class=\"numerator\">u'v + uv'</span><span class=\"denominator\">v<sup>2</sup></span></span>",
+          "(u / v)' = u' / v'",
+          "(u / v)' = <span class=\"fraction\"><span class=\"numerator\">uv' - u'v</span><span class=\"denominator\">v<sup>2</sup></span></span>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>Quy tắc đạo hàm thương:</b> (u / v)' = <span class=\"fraction\"><span class=\"numerator\">u'v - uv'</span><span class=\"denominator\">v<sup>2</sup></span></span>."
+      },
+      {
+        "type": "tf",
+        "question": "Xét tính đúng/sai của các công thức tính đạo hàm cơ bản sau:",
+        "items": [
+          {
+            "text": "a) (sin x)' = cos x và (cos x)' = -sin x.",
+            "answer": true,
+            "explanation": "Đúng theo bảng đạo hàm lượng giác cơ bản."
+          },
+          {
+            "text": "b) (tan x)' = 1 / cos<sup>2</sup> x = 1 + tan<sup>2</sup> x.",
+            "answer": true,
+            "explanation": "Đúng theo công thức đạo hàm hàm tang."
+          },
+          {
+            "text": "c) Đạo hàm hàm hợp: Nếu y = f(u) và u = u(x) thì y'<sub>x</sub> = y'<sub>u</sub> · u'<sub>x</sub>.",
+            "answer": true,
+            "explanation": "Đúng theo quy tắc chuỗi tính đạo hàm hàm hợp."
+          },
+          {
+            "text": "d) (e<sup>x</sup>)' = x · e<sup>x - 1</sup>.",
+            "answer": false,
+            "explanation": "Sai, đạo hàm của hàm mũ e^x là chính nó: (e<sup>x</sup>)' = e<sup>x</sup>."
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "question": "Đạo hàm của hàm số y = (2x + 1)<sup>5</sup> là:",
+        "options": [
+          "y' = 10(2x + 1)<sup>4</sup>",
+          "y' = 5(2x + 1)<sup>4</sup>",
+          "y' = 2(2x + 1)<sup>4</sup>",
+          "y' = 10(2x + 1)<sup>5</sup>"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>Áp dụng quy tắc đạo hàm hàm hợp: (u<sup>n</sup>)' = n · u<sup>n - 1</sup> · u'.<br>Ở đây u = 2x + 1 ⇒ u' = 2. Do đó y' = 5 · (2x + 1)<sup>4</sup> · 2 = 10(2x + 1)<sup>4</sup>."
+      },
+      {
+        "type": "mcq",
+        "question": "Tính đạo hàm của hàm số y = sin(3x - π/4):",
+        "options": [
+          "y' = 3 · cos(3x - π/4)",
+          "y' = cos(3x - π/4)",
+          "y' = -3 · cos(3x - π/4)",
+          "y' = 3 · sin(3x - π/4)"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br>(sin u)' = u' · cos u. Với u = 3x - π/4 ⇒ u' = 3. Vậy y' = 3 · cos(3x - π/4)."
+      },
+      {
+        "type": "mcq",
+        "question": "Cho hàm số y = <span class=\"fraction\"><span class=\"numerator\">x<sup>2</sup> - 3x + 2</span><span class=\"denominator\">x + 1</span></span>. Tính y'(0):",
+        "options": [
+          "-5",
+          "5",
+          "-3",
+          "1"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (-5)</b><br><br><b>1. Tính đạo hàm:</b> y' = <span class=\"fraction\"><span class=\"numerator\">(2x - 3)(x + 1) - (x<sup>2</sup> - 3x + 2)·1</span><span class=\"denominator\">(x + 1)<sup>2</sup></span></span> = <span class=\"fraction\"><span class=\"numerator\">x<sup>2</sup> + 2x - 5</span><span class=\"denominator\">(x + 1)<sup>2</sup></span></span>.<br><b>2. Thay x = 0:</b> y'(0) = (0 + 0 - 5) / (0 + 1)<sup>2</sup> = -5."
+      },
+      {
+        "type": "fill",
+        "question": "Đạo hàm của hàm số y = x · cos x có giá trị tại x = π bằng: y'(π) = %%%SLOT_0%%%.",
+        "tokens": [
+          "-1",
+          "1",
+          "0",
+          "π",
+          "-π"
+        ],
+        "slots": [
+          {
+            "id": "SLOT_0",
+            "answer": "-1"
+          }
+        ],
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: -1</b><br><br>y' = (x)' cos x + x (cos x)' = cos x - x sin x.<br>Tại x = π: y'(π) = cos(π) - π · sin(π) = -1 - 0 = -1."
+      },
+      {
+        "type": "match",
+        "question": "Ghép mỗi hàm số ở Cột A với đạo hàm tương ứng ở Cột B:",
+        "pairs": [
+          {
+            "left": "1. y = x<sup>3</sup> - 4x",
+            "right": "A. 3x<sup>2</sup> - 4"
+          },
+          {
+            "left": "2. y = cos(2x)",
+            "right": "B. -2 · sin(2x)"
+          },
+          {
+            "left": "3. y = e<sup>3x</sup>",
+            "right": "C. 3 · e<sup>3x</sup>"
+          },
+          {
+            "left": "4. y = ln(2x)",
+            "right": "D. 1/x"
+          }
+        ],
+        "explanation": "1 - A; 2 - B; 3 - C; 4 - D ((ln 2x)' = 2/(2x) = 1/x)."
+      },
+      {
+        "type": "mcq",
+        "question": "Một quả bóng được ném thẳng đứng lên cao từ mặt đất với vận tốc ban đầu v<sub>0</sub> = 20 m/s. Bỏ qua sức cản không khí, độ cao của quả bóng sau t giây được tính theo công thức h(t) = 20t - 5t<sup>2</sup> (h tính bằng mét). Thời điểm quả bóng đạt độ cao lớn nhất là khi vận tốc tức thời v(t) = 0, tức sau:",
+        "options": [
+          "2 giây",
+          "1 giây",
+          "4 giây",
+          "3 giây"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (2 giây)</b><br><br><b>1. Vận tốc tức thời:</b> v(t) = h'(t) = 20 - 10t.<br><b>2. Tại điểm cao nhất:</b> v(t) = 0 ⇔ 20 - 10t = 0 ⇔ t = 2 giây."
+      },
+      {
+        "type": "mcq",
+        "question": "Nhiệt độ T (°C) của một phản ứng hóa học sau t phút được cho bởi hàm số T(t) = -t<sup>3</sup> + 9t<sup>2</sup> + 20 (với 0 ≤ t ≤ 8). Tốc độ thay đổi nhiệt độ của phản ứng tại thời điểm t = 2 phút là:",
+        "options": [
+          "24°C/phút",
+          "32°C/phút",
+          "18°C/phút",
+          "20°C/phút"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (24°C/phút)</b><br><br><b>1. Tốc độ thay đổi nhiệt độ:</b> T'(t) = -3t<sup>2</sup> + 18t.<br><b>2. Tại t = 2 phút:</b> T'(2) = -3(2<sup>2</sup>) + 18(2) = -12 + 36 = 24°C/phút."
+      },
+      {
+        "type": "mcq",
+        "question": "Doanh thu R(x) (triệu đồng) bán được x tấn nông sản là R(x) = 120x - x<sup>2</sup>. Doanh thu biên (tốc độ gia tăng doanh thu khi tăng sản lượng bán) tại x = 50 tấn bằng:",
+        "options": [
+          "20 triệu đồng/tấn",
+          "70 triệu đồng/tấn",
+          "10 triệu đồng/tấn",
+          "0 triệu đồng/tấn"
+        ],
+        "answer": 0,
+        "explanation": "<b>ĐÁP ÁN ĐÚNG: A (20 triệu đồng/tấn)</b><br><br><b>1. Doanh thu biên:</b> R'(x) = 120 - 2x.<br><b>2. Tại x = 50:</b> R'(50) = 120 - 2 · 50 = 20 triệu đồng/tấn."
+      }
+    ]
+  }
+]

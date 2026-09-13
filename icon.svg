@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="mathBgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="60%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#070a14"/>
+    </radialGradient>
+    <linearGradient id="mathGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="mathGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="mathGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="mathGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background with rounded squircle corners -->
+  <rect width="512" height="512" rx="112" fill="url(#mathBgGlow)"/>
+  <rect width="508" height="508" x="2" y="2" rx="110" fill="none" stroke="rgba(56, 189, 248, 0.35)" stroke-width="2.5"/>
+
+  <!-- Geometric Grid Background lines -->
+  <g stroke="rgba(255, 255, 255, 0.06)" stroke-width="1.5">
+    <line x1="80" y1="256" x2="432" y2="256"/>
+    <line x1="256" y1="80" x2="256" y2="432"/>
+    <circle cx="256" cy="256" r="160" fill="none" stroke="rgba(56, 189, 248, 0.15)" stroke-dasharray="6,6"/>
+    <circle cx="256" cy="256" r="110" fill="none" stroke="rgba(129, 140, 248, 0.15)"/>
+  </g>
+
+  <!-- Mathematical Sine/Cubic Waves -->
+  <g filter="url(#mathGlow)">
+    <!-- Cubic curve -->
+    <path d="M 90,360 C 170,100 210,130 256,256 C 300,380 340,120 422,150" fill="none" stroke="url(#mathGrad1)" stroke-width="9" stroke-linecap="round"/>
+    
+    <!-- Secondary parabola wave -->
+    <path d="M 120,380 Q 256,120 392,380" fill="none" stroke="url(#mathGrad2)" stroke-width="4.5" stroke-dasharray="8,6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Central Sigma & Integral Symbol Accents -->
+  <!-- Integral Symbol ∫ -->
+  <path d="M 230,120 C 230,95 210,95 195,105 C 180,115 185,135 190,155 L 205,295 C 210,345 200,385 170,395 C 150,400 135,385 140,365" fill="none" stroke="#38bdf8" stroke-width="7" stroke-linecap="round" filter="url(#mathGlow)"/>
+
+  <!-- Function f(x) accent text -->
+  <text x="310" y="240" fill="#fbbf24" font-family="'Cambria Math', serif" font-style="italic" font-size="52" font-weight="bold" filter="url(#mathGlow)">f(x)</text>
+
+  <!-- Coordinate Arrows -->
+  <polygon points="436,256 422,250 422,262" fill="#38bdf8"/>
+  <polygon points="256,76 250,90 262,90" fill="#38bdf8"/>
+  <text x="430" y="280" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="bold">x</text>
+  <text x="270" y="85" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="bold">y</text>
+
+  <!-- Extreme Points with glowing dots -->
+  <circle cx="178" cy="180" r="9" fill="#34d399" filter="url(#mathGlow)"/>
+  <circle cx="334" cy="330" r="9" fill="#f43f5e" filter="url(#mathGlow)"/>
+</svg>

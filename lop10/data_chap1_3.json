@@ -1,0 +1,950 @@
+{
+  "1": [
+    {
+      "type": "mcq",
+      "q": "Câu nào sau đây là một <b>mệnh đề toán học</b>?",
+      "opts": [
+        "Số 17 là một số nguyên tố.",
+        "Học môn Toán vui quá!",
+        "Hôm nay trời có mưa không?",
+        "Bạn hãy tính giá trị biểu thức này đi!"
+      ],
+      "ans": 0,
+      "exp": "• Mệnh đề toán học là khẳng định đúng hoặc sai.<br>• 'Số 17 là số nguyên tố' là khẳng định đúng, do đó là mệnh đề.<br>• Các câu cảm thán, câu hỏi, câu cầu khiến không phải là mệnh đề."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các kí hiệu toán học (Cột A) với ý nghĩa tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Kí hiệu ∀",
+          "b": "A. Với mọi (tất cả các phần tử thuộc tập hợp)"
+        },
+        {
+          "a": "2. Kí hiệu ∃",
+          "b": "B. Tồn tại (ít nhất một phần tử thỏa mãn)"
+        },
+        {
+          "a": "3. Mệnh đề P ⇒ Q",
+          "b": "C. Mệnh đề kéo theo (Nếu P thì Q)"
+        },
+        {
+          "a": "4. Mệnh đề P ⇔ Q",
+          "b": "D. Mệnh đề tương đương (P khi và chỉ khi Q)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• ∀: Với mọi.<br>• ∃: Tồn tại ít nhất một.<br>• P ⇒ Q: Mệnh đề kéo theo.<br>• P ⇔ Q: Mệnh đề tương đương."
+    },
+    {
+      "type": "tf",
+      "q": "Xét tính đúng - sai của các mệnh đề số học sau:",
+      "items": [
+        {
+          "text": "a) \"∀x ∈ ℝ: x² + 1 > 0\" là mệnh đề đúng.",
+          "ans": true,
+          "exp": "Vì x² ≥ 0 với mọi x ∈ ℝ nên x² + 1 ≥ 1 > 0 (Đúng)."
+        },
+        {
+          "text": "b) \"∃x ∈ ℤ: x² = 2\" là mệnh đề đúng.",
+          "ans": false,
+          "exp": "x² = 2 có nghiệm x = ±√2 ∉ ℤ, không có nghiệm nguyên (Sai)."
+        },
+        {
+          "text": "c) Mệnh đề phủ định của \"∀x ∈ ℝ: x² - x + 1 > 0\" là \"∃x ∈ ℝ: x² - x + 1 ≤ 0\".",
+          "ans": true,
+          "exp": "Phủ định của ∀ là ∃, phủ định của > là ≤ (Đúng)."
+        },
+        {
+          "text": "d) Phương trình x² - 4x + 4 = 0 có hai nghiệm phân biệt.",
+          "ans": false,
+          "exp": "Δ = 16 - 16 = 0 nên phương trình có nghiệm kép x = 2 (Sai)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho mệnh đề chứa biến P(n): \"2n + 1 là số nguyên tố\" với n là số tự nhiên. Với giá trị nào của n dưới đây thì P(n) là một mệnh đề <b>sai</b>?",
+      "opts": [
+        "n = 4",
+        "n = 1",
+        "n = 2",
+        "n = 3"
+      ],
+      "ans": 0,
+      "exp": "• n = 1: 2(1) + 1 = 3 (số nguyên tố).<br>• n = 2: 2(2) + 1 = 5 (số nguyên tố).<br>• n = 3: 2(3) + 1 = 7 (số nguyên tố).<br>• n = 4: 2(4) + 1 = 9 = 3² (hợp số ⇒ P(4) sai)."
+    },
+    {
+      "type": "drag",
+      "q": "Điền từ thích hợp vào chỗ trống để hoàn thiện định lý về điều kiện cần và đủ:<br>Cho mệnh đề kéo theo P ⇒ Q. Khi đó P được gọi là điều kiện %%%SLOT_1%%% để có Q, và Q được gọi là điều kiện %%%SLOT_2%%% để có P. Nếu P ⇔ Q thì P là điều kiện %%%SLOT_3%%% để có Q.",
+      "slots": [
+        "đủ",
+        "cần",
+        "cần và đủ"
+      ],
+      "pool": [
+        "đủ",
+        "cần",
+        "cần và đủ",
+        "duy nhất",
+        "phủ định"
+      ],
+      "exp": "• P là điều kiện đủ để có Q.<br>• Q là điều kiện cần để có P.<br>• P ⇔ Q: P là điều kiện cần và đủ để có Q."
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm mệnh đề đảo của mệnh đề: \"Nếu tam giác ABC là tam giác đều thì tam giác ABC là tam giác cân\".",
+      "opts": [
+        "Nếu tam giác ABC là tam giác cân thì tam giác ABC là tam giác đều.",
+        "Nếu tam giác ABC không phải là tam giác đều thì tam giác ABC không cân.",
+        "Nếu tam giác ABC không cân thì tam giác ABC không phải là tam giác đều.",
+        "Tam giác ABC là tam giác đều khi và chỉ khi tam giác ABC cân."
+      ],
+      "ans": 0,
+      "exp": "• Mệnh đề ban đầu có dạng P ⇒ Q.<br>• Mệnh đề đảo có dạng Q ⇒ P: 'Nếu tam giác ABC là tam giác cân thì tam giác ABC là tam giác đều'."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho mệnh đề A: \"Mọi hình vuông đều là hình thoi\". Mệnh đề phủ định ¯A là:",
+      "opts": [
+        "Tồn tại hình vuông không phải là hình thoi.",
+        "Mọi hình vuông đều không phải là hình thoi.",
+        "Tồn tại hình thoi không phải là hình vuông.",
+        "Mọi hình thoi đều là hình vuông."
+      ],
+      "ans": 0,
+      "exp": "• Phủ định của \"Mọi X đều là Y\" là \"Tồn tại X không phải là Y\"."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong hệ thống an ninh ngân hàng, lệnh mở két bảo mật yêu cầu biểu thức logic: (A VÀ B) HOẶC C = Đúng. Biết thẻ từ A hợp lệ, vân tay B không khớp, mã khẩn cấp C hợp lệ. Kết quả két có mở không?",
+      "opts": [
+        "Két MỞ ĐƯỢC vì nhánh C đúng làm cho toàn bộ biểu thức logic nhận giá trị Đúng.",
+        "Két KHÔNG MỞ vì dấu vân tay B không khớp làm toàn bộ điều kiện bị hủy.",
+        "Két KHÔNG MỞ vì yêu cầu bắt buộc cả 3 điều kiện A, B, C phải đồng thời thỏa mãn.",
+        "Két báo động và khóa vĩnh viễn hệ thống."
+      ],
+      "ans": 0,
+      "exp": "• Thẻ A đúng (1), vân tay B sai (0) ⇒ A ∧ B = 0.<br>• Mã C đúng (1).<br>• (A ∧ B) ∨ C = 0 ∨ 1 = 1 (Đúng) ⇒ Két mở được."
+    },
+    {
+      "type": "mcq",
+      "q": "Một hợp đồng kinh tế quy định: \"Nếu bên A giao hàng đúng hạn (P) thì bên B sẽ thanh toán 100% hợp đồng ngay trong ngày (Q)\". Tình huống nào dưới đây chứng minh bên B đã <b>vi phạm hợp đồng</b>?",
+      "opts": [
+        "Bên A giao hàng đúng hạn nhưng bên B không thanh toán 100% hợp đồng trong ngày.",
+        "Bên A giao trễ hạn và bên B từ chối thanh toán trong ngày.",
+        "Bên A giao hàng đúng hạn và bên B đã thanh toán đầy đủ 100% hợp đồng.",
+        "Bên A giao trễ hạn nhưng bên B vẫn tạo điều kiện thanh toán trước 50%."
+      ],
+      "ans": 0,
+      "exp": "• Mệnh đề kéo theo P ⇒ Q chỉ sai khi P đúng mà Q sai: Bên A giao đúng hạn nhưng Bên B không thanh toán như cam kết."
+    },
+    {
+      "type": "mcq",
+      "q": "Bác sĩ đưa ra chẩn đoán: \"Nếu bệnh nhân sốt trên 39°C kéo dài quá 3 ngày và xét nghiệm tiểu cầu giảm dưới 100 G/L thì cần nhập viện theo dõi sốt xuất huyết cảnh báo\". Mệnh đề này có ý nghĩa gì?",
+      "opts": [
+        "Điều kiện sốt cao > 39°C trên 3 ngày cùng tiểu cầu < 100 G/L là điều kiện đủ để chỉ định nhập viện.",
+        "Bệnh nhân chỉ cần sốt cao 1 ngày là bắt buộc phải nhập viện ngay.",
+        "Mọi bệnh nhân sốt xuất huyết đều phải có tiểu cầu dưới 100 G/L.",
+        "Nhập viện là điều kiện đủ để bệnh nhân hạ sốt."
+      ],
+      "ans": 0,
+      "exp": "• Điều kiện giả thiết (P ∧ Q) là điều kiện đủ để thực hiện kết luận R (nhập viện)."
+    }
+  ],
+  "2": [
+    {
+      "type": "mcq",
+      "q": "Cho hai tập hợp A và B. Giao của hai tập hợp A và B (kí hiệu A ∩ B) là tập hợp:",
+      "opts": [
+        "{x | x ∈ A và x ∈ B}",
+        "{x | x ∈ A hoặc x ∈ B}",
+        "{x | x ∈ A và x ∉ B}",
+        "{x | x ∉ A và x ∈ B}"
+      ],
+      "ans": 0,
+      "exp": "• Giao của hai tập hợp: A ∩ B = {x | x ∈ A và x ∈ B}."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các phép toán tập hợp (Cột A) với kí hiệu toán học tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Hợp của hai tập hợp A và B",
+          "b": "A. A ∪ B = {x | x ∈ A hoặc x ∈ B}"
+        },
+        {
+          "a": "2. Giao của hai tập hợp A và B",
+          "b": "B. A ∩ B = {x | x ∈ A và x ∈ B}"
+        },
+        {
+          "a": "3. Hiệu của tập hợp A và B",
+          "b": "C. A \\ B = {x | x ∈ A và x ∉ B}"
+        },
+        {
+          "a": "4. Phần bù của B trong A (với B ⊂ A)",
+          "b": "D. C_A B = A \\ B"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Hợp: x ∈ A hoặc x ∈ B.<br>• Giao: x ∈ A và x ∈ B.<br>• Hiệu: x ∈ A và x ∉ B.<br>• Phần bù: hiệu A \\ B khi B ⊂ A."
+    },
+    {
+      "type": "tf",
+      "q": "Cho tập hợp A = [-2; 3) và B = (1; 5]. Xét tính đúng - sai của các nhận định sau:",
+      "items": [
+        {
+          "text": "a) Giao của hai tập hợp là A ∩ B = (1; 3).",
+          "ans": true,
+          "exp": "x ∈ A ∩ B ⇔ -2 ≤ x < 3 và 1 < x ≤ 5 ⇔ 1 < x < 3, tức A ∩ B = (1; 3) (Đúng)."
+        },
+        {
+          "text": "b) Hợp của hai tập hợp là A ∪ B = [-2; 5].",
+          "ans": true,
+          "exp": "x ∈ A ∪ B ⇔ -2 ≤ x < 3 hoặc 1 < x ≤ 5 ⇔ -2 ≤ x ≤ 5, tức A ∪ B = [-2; 5] (Đúng)."
+        },
+        {
+          "text": "c) Hiệu A \\ B = [-2; 1).",
+          "ans": false,
+          "exp": "A \\ B là x ∈ [-2; 1]. Phần tử 1 không thuộc B nên 1 thuộc A \\ B, tức [-2; 1] (Sai)."
+        },
+        {
+          "text": "d) Tập hợp A có đúng 5 phần tử là số nguyên.",
+          "ans": true,
+          "exp": "Các số nguyên thuộc [-2; 3) là {-2, -1, 0, 1, 2}, gồm 5 số (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho tập hợp X = {x ∈ ℝ | 2x² - 5x + 2 = 0}. Tập hợp X viết theo cách liệt kê phần tử là:",
+      "opts": [
+        "X = {1/2, 2}",
+        "X = {-2, -1/2}",
+        "X = {2}",
+        "X = {1, 2}"
+      ],
+      "ans": 0,
+      "exp": "• Giải 2x² - 5x + 2 = 0: nghiệm x = 2 và x = 1/2. Cả hai thuộc ℝ nên X = {1/2, 2}."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các kí hiệu khoảng, đoạn vào đúng vị trí biểu diễn tập nghiệm trên trục số:<br>• Tập các số thực x thoả mãn -3 ≤ x ≤ 4 là %%%SLOT_1%%%.<br>• Tập các số thực x thoả mãn x > 2 là %%%SLOT_2%%%.<br>• Tập các số thực x thoả mãn x ≤ 0 là %%%SLOT_3%%%.",
+      "slots": [
+        "[-3; 4]",
+        "(2; +∞)",
+        "(-∞; 0]"
+      ],
+      "pool": [
+        "[-3; 4]",
+        "(2; +∞)",
+        "(-∞; 0]",
+        "(-3; 4)",
+        "[2; +∞)"
+      ],
+      "exp": "• -3 ≤ x ≤ 4 là đoạn [-3; 4].<br>• x > 2 là khoảng (2; +∞).<br>• x ≤ 0 là nửa khoảng (-∞; 0]."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho A = (-∞; m + 1] và B = [3; +∞). Điều kiện cần và đủ của tham số m để A ∩ B = ∅ là:",
+      "opts": [
+        "m < 2",
+        "m ≤ 2",
+        "m > 2",
+        "m ≥ 2"
+      ],
+      "ans": 0,
+      "exp": "• A ∩ B = ∅ khi m + 1 < 3 ⇔ m < 2. Nếu m + 1 = 3 thì giao là {3}."
+    },
+    {
+      "type": "mcq",
+      "q": "Số tập con gồm 2 phần tử của tập hợp S = {a, b, c, d, e} là:",
+      "opts": [
+        "10",
+        "5",
+        "20",
+        "25"
+      ],
+      "ans": 0,
+      "exp": "• Số tập con 2 phần tử của tập 5 phần tử: C₅² = (5 · 4)/(2 · 1) = 10."
+    },
+    {
+      "type": "mcq",
+      "q": "Lớp 10A có 45 học sinh, trong đó có 25 bạn tham gia CLB Bóng đá, 20 bạn tham gia CLB Bóng rổ, và 8 bạn tham gia cả hai CLB. Hỏi có bao nhiêu bạn <b>không tham gia</b> CLB nào trong hai CLB trên?",
+      "opts": [
+        "8 bạn",
+        "12 bạn",
+        "37 bạn",
+        "5 bạn"
+      ],
+      "ans": 0,
+      "exp": "• Số bạn tham gia ít nhất một môn: n(A ∪ B) = 25 + 20 - 8 = 37 bạn.<br>• Số bạn không tham gia môn nào: 45 - 37 = 8 bạn."
+    },
+    {
+      "type": "mcq",
+      "q": "Trong cuộc điều tra thị trường smartphone, có 65% người dùng tính năng thanh toán thẻ NFC, 50% dùng quét mống mắt, và 30% dùng cả hai tính năng. Tỉ lệ người tiêu dùng dùng <b>chỉ một trong hai tính năng</b> là:",
+      "opts": [
+        "55%",
+        "85%",
+        "35%",
+        "20%"
+      ],
+      "ans": 0,
+      "exp": "• Chỉ NFC: 65% - 30% = 35%.<br>• Chỉ mống mắt: 50% - 30% = 20%.<br>• Chỉ 1 trong 2: 35% + 20% = 55%."
+    },
+    {
+      "type": "mcq",
+      "q": "Một hệ thống kiểm tra chất lượng linh kiện điện tử: lỗi A (kích thước sai lệch) chiếm 4%, lỗi B (tiếp điểm hở) chiếm 3%. Biết rằng 1% linh kiện bị cả hai lỗi. Tỉ lệ linh kiện xuất xưởng <b>đạt chuẩn</b> (không lỗi nào) là:",
+      "opts": [
+        "94%",
+        "93%",
+        "96%",
+        "97%"
+      ],
+      "ans": 0,
+      "exp": "• Bị ít nhất một lỗi: P(A ∪ B) = 4% + 3% - 1% = 6%.<br>• Đạt chuẩn hoàn hảo: 100% - 6% = 94%."
+    }
+  ],
+  "3": [
+    {
+      "type": "mcq",
+      "q": "Bất phương trình nào sau đây là <b>bất phương trình bậc nhất hai ẩn</b> x và y?",
+      "opts": [
+        "2x - 3y + 5 > 0",
+        "2x² + 3y ≤ 4",
+        "xy - 2x + 1 ≥ 0",
+        "3x + 2y - z < 0"
+      ],
+      "ans": 0,
+      "exp": "• Bất phương trình bậc nhất hai ẩn x, y có dạng ax + by + c > 0 (hoặc ≥, <, ≤) với a, b không đồng thời bằng 0.<br>• 2x - 3y + 5 > 0 có bậc 1 đối với cả x và y."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các cặp số (x; y) (Cột A) với vị trí đối với miền nghiệm của bất phương trình 2x + y - 4 ≤ 0 (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Điểm O(0; 0)",
+          "b": "A. Thuộc miền nghiệm (thỏa mãn 2(0) + 0 - 4 = -4 ≤ 0)"
+        },
+        {
+          "a": "2. Điểm A(2; 0)",
+          "b": "B. Nằm trên đường thẳng biên 2x + y - 4 = 0"
+        },
+        {
+          "a": "3. Điểm B(3; 2)",
+          "b": "C. Không thuộc miền nghiệm (2(3) + 2 - 4 = 4 > 0)"
+        },
+        {
+          "a": "4. Điểm C(1; 1)",
+          "b": "D. Thuộc miền nghiệm (2(1) + 1 - 4 = -1 ≤ 0)"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Thay toạ độ từng điểm vào biểu thức f(x, y) = 2x + y - 4 để kiểm tra dấu so với 0."
+    },
+    {
+      "type": "tf",
+      "q": "Cho bất phương trình x - 2y + 4 ≥ 0 (miền nghiệm D). Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Gốc toạ độ O(0; 0) thuộc miền nghiệm D.",
+          "ans": true,
+          "exp": "0 - 2(0) + 4 = 4 ≥ 0 (Đúng)."
+        },
+        {
+          "text": "b) Đường thẳng d: x - 2y + 4 = 0 là bờ của miền nghiệm D.",
+          "ans": true,
+          "exp": "Đường thẳng ax + by + c = 0 luôn là bờ phân chia mặt phẳng (Đúng)."
+        },
+        {
+          "text": "c) Miền nghiệm D chứa điểm M(1; 3).",
+          "ans": false,
+          "exp": "1 - 2(3) + 4 = 1 - 6 + 4 = -1 < 0 (Sai, không thuộc D)."
+        },
+        {
+          "text": "d) Điểm N(-4; 0) nằm trên bờ của miền nghiệm.",
+          "ans": true,
+          "exp": "-4 - 2(0) + 4 = 0 thỏa mãn phương trình bờ (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Miền nghiệm của bất phương trình x - y > 0 là nửa mặt phẳng chứa điểm nào sau đây?",
+      "opts": [
+        "(2; 1)",
+        "(1; 2)",
+        "(0; 0)",
+        "(-1; 1)"
+      ],
+      "ans": 0,
+      "exp": "• Điểm (2; 1): 2 - 1 = 1 > 0 (thỏa mãn).<br>• Điểm (1; 2): 1 - 2 = -1 < 0.<br>• Điểm (0; 0): 0 - 0 = 0 không thỏa mãn dấu >.<br>• Điểm (-1; 1): -1 - 1 = -2 < 0."
+    },
+    {
+      "type": "drag",
+      "q": "Hoàn thiện các bước biểu diễn miền nghiệm của ax + by + c ≤ 0 trên mặt phẳng toạ độ Oxy:<br>• Bước 1: Vẽ đường thẳng bờ d: %%%SLOT_1%%%.<br>• Bước 2: Lấy một điểm M(x₀; y₀) %%%SLOT_2%%% đường thẳng d và tính ax₀ + by₀ + c.<br>• Bước 3: Nếu ax₀ + by₀ + c < 0 thì nửa mặt phẳng chứa M là miền nghiệm; miền nghiệm kể cả bờ d vì có dấu %%%SLOT_3%%%.",
+      "slots": [
+        "ax + by + c = 0",
+        "không nằm trên",
+        "bằng"
+      ],
+      "pool": [
+        "ax + by + c = 0",
+        "không nằm trên",
+        "bằng",
+        "nằm trên",
+        "lớn hơn"
+      ],
+      "exp": "• Vẽ bờ ax + by + c = 0.<br>• Chọn điểm thử không thuộc bờ.<br>• BPT có dấu ≤ nên nhận cả đường thẳng bờ."
+    },
+    {
+      "type": "mcq",
+      "q": "Cặp số (x; y) nào sau đây là một nghiệm của bất phương trình 3x - 4y + 12 < 0?",
+      "opts": [
+        "(-5; 0)",
+        "(0; 0)",
+        "(1; 1)",
+        "(0; 2)"
+      ],
+      "ans": 0,
+      "exp": "• Với (-5; 0): 3(-5) - 4(0) + 12 = -15 + 12 = -3 < 0 (thỏa mãn).<br>• (0; 0): 12 > 0.<br>• (1; 1): 11 > 0.<br>• (0; 2): 4 > 0."
+    },
+    {
+      "type": "mcq",
+      "q": "Bất phương trình nào dưới đây nhận nửa mặt phẳng bờ d: 2x - y + 1 = 0 không chứa gốc toạ độ O(0; 0) làm miền nghiệm (không kể bờ)?",
+      "opts": [
+        "2x - y + 1 < 0",
+        "2x - y + 1 > 0",
+        "2x - y + 1 ≥ 0",
+        "2x - y + 1 ≤ 0"
+      ],
+      "ans": 0,
+      "exp": "• Thay O(0; 0) vào: 2(0) - 0 + 1 = 1 > 0.<br>• Để miền nghiệm KHÔNG chứa O(0; 0) và không kể bờ, dấu bất phương trình phải là < 0: 2x - y + 1 < 0."
+    },
+    {
+      "type": "mcq",
+      "q": "Một xưởng thủ công sản xuất hai loại rổ mây: loại I cần 2 mét dây mây, loại II cần 3 mét dây mây. Biết tổng số dây mây xưởng có không quá 120 mét. Gọi x, y lần lượt là số rổ loại I và II sản xuất. Bất phương trình mô tả ràng buộc nguyên liệu là:",
+      "opts": [
+        "2x + 3y ≤ 120 (với x, y ≥ 0, x, y ∈ ℤ)",
+        "2x + 3y ≥ 120 (với x, y ≥ 0)",
+        "3x + 2y ≤ 120 (với x, y ≥ 0)",
+        "2x + 3y < 120 (với x, y ≥ 0)"
+      ],
+      "ans": 0,
+      "exp": "• Số mét dây dùng cho rổ loại I là 2x, loại II là 3y.<br>• Tổng nguyên liệu không vượt quá 120 m: 2x + 3y ≤ 120, kèm điều kiện x, y ≥ 0, x, y ∈ ℤ."
+    },
+    {
+      "type": "mcq",
+      "q": "Bạn An có 200.000 đồng đi nhà sách mua vở (giá 12.000 đ/cuốn) và bút bi (giá 5.000 đ/cây). Gọi x là số cuốn vở và y là số cây bút bi An mua. Cặp số nào sau đây <b>vượt quá</b> số tiền An có?",
+      "opts": [
+        "Mua 15 cuốn vở và 6 cây bút bi",
+        "Mua 10 cuốn vở và 10 cây bút bi",
+        "Mua 12 cuốn vở và 8 cây bút bi",
+        "Mua 8 cuốn vở và 20 cây bút bi"
+      ],
+      "ans": 0,
+      "exp": "• BPT ngân sách: 12.000x + 5.000y ≤ 200.000 ⇔ 12x + 5y ≤ 200.<br>• Với x = 15, y = 6: 12(15) + 5(6) = 180 + 30 = 210 > 200 (vượt quá ngân sách 200.000 đ)."
+    },
+    {
+      "type": "mcq",
+      "q": "Một xe tải chở hai loại kiện hàng A (nặng 40 kg/kiện) và B (nặng 25 kg/kiện). Tải trọng cho phép tối đa của xe là 1,2 tấn (1200 kg). Nếu xe đã chở 20 kiện hàng loại A thì có thể chở thêm tối đa bao nhiêu kiện hàng loại B?",
+      "opts": [
+        "16 kiện",
+        "20 kiện",
+        "15 kiện",
+        "18 kiện"
+      ],
+      "ans": 0,
+      "exp": "• Khối lượng kiện hàng A: 20 · 40 = 800 kg.<br>• Tải trọng còn lại cho kiện hàng B: 1200 - 800 = 400 kg.<br>• Số kiện B tối đa: 400 / 25 = 16 kiện."
+    }
+  ],
+  "4": [
+    {
+      "type": "mcq",
+      "q": "Hệ bất phương trình nào sau đây là <b>hệ bất phương trình bậc nhất hai ẩn</b>?",
+      "opts": [
+        "{x + y - 2 ≤ 0; 2x - 3y + 1 > 0}",
+        "{x² + y ≤ 1; x - y ≥ 0}",
+        "{x + y - z > 0; 2x - y ≤ 1}",
+        "{xy + 1 ≤ 0; x - y > 2}"
+      ],
+      "ans": 0,
+      "exp": "• Hệ BPT bậc nhất hai ẩn gồm các bất phương trình bậc nhất đối với hai ẩn x và y.<br>• {x + y - 2 ≤ 0; 2x - 3y + 1 > 0} là hệ bậc nhất 2 ẩn."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các khái niệm trong bài toán quy hoạch tuyến tính (Cột A) với định nghĩa tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Miền nghiệm của hệ BPT",
+          "b": "A. Miền đa giác giao của tất cả các nửa mặt phẳng nghiệm"
+        },
+        {
+          "a": "2. Hàm mục tiêu F(x, y) = ax + by",
+          "b": "B. Biểu thức cần tìm giá trị lớn nhất hoặc nhỏ nhất"
+        },
+        {
+          "a": "3. Điểm tối ưu của hàm mục tiêu",
+          "b": "C. Luôn đạt được tại một trong các đỉnh của miền đa giác nghiệm"
+        },
+        {
+          "a": "4. Các đỉnh của miền đa giác",
+          "b": "D. Giao điểm của các cặp đường thẳng bờ tương ứng"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Định lý quy hoạch tuyến tính: Giá trị lớn nhất hoặc nhỏ nhất của hàm F(x, y) = ax + by trên miền đa giác lồi luôn đạt tại ít nhất một đỉnh của đa giác đó."
+    },
+    {
+      "type": "tf",
+      "q": "Cho hệ BPT: {x ≥ 0; y ≥ 0; x + y ≤ 4; 2x + y ≤ 6}. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Gốc toạ độ O(0; 0) thuộc miền nghiệm của hệ.",
+          "ans": true,
+          "exp": "O(0; 0) thỏa mãn cả 4 BPT (Đúng)."
+        },
+        {
+          "text": "b) Điểm M(3; 2) thuộc miền nghiệm của hệ.",
+          "ans": false,
+          "exp": "Thay vào BPT x + y ≤ 4: 3 + 2 = 5 > 4 (Sai, không thuộc)."
+        },
+        {
+          "text": "c) Miền nghiệm của hệ là một miền tứ giác lồi.",
+          "ans": true,
+          "exp": "Miền nghiệm giới hạn bởi các đỉnh O(0; 0), A(3; 0), B(2; 2), C(0; 4) là tứ giác lồi (Đúng)."
+        },
+        {
+          "text": "d) Điểm B(2; 2) là giao điểm của hai đường thẳng x + y = 4 và 2x + y = 6.",
+          "ans": true,
+          "exp": "Giải hệ: (2x + y) - (x + y) = 6 - 4 ⇒ x = 2, y = 2 (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho miền nghiệm của hệ BPT là đa giác có các đỉnh O(0; 0), A(4; 0), B(3; 2), C(0; 3). Giá trị lớn nhất của biểu thức F(x, y) = 3x + 2y trên miền nghiệm này là:",
+      "opts": [
+        "13 (tại B(3; 2))",
+        "12 (tại A(4; 0))",
+        "6 (tại C(0; 3))",
+        "0 (tại O(0; 0))"
+      ],
+      "ans": 0,
+      "exp": "• Tính giá trị F(x, y) = 3x + 2y tại 4 đỉnh:<br>- F(O) = 0<br>- F(A) = 3(4) + 2(0) = 12<br>- F(B) = 3(3) + 2(2) = 9 + 4 = 13<br>- F(C) = 3(0) + 2(3) = 6<br>• Giá trị lớn nhất là 13 đạt tại điểm B(3; 2)."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các toạ độ đỉnh vào đúng vị trí của miền nghiệm hệ: {x ≥ 0; y ≥ 0; x + y ≤ 3}:<br>• Giao điểm với trục hoành Ox là %%%SLOT_1%%%.<br>• Giao điểm với trục tung Oy là %%%SLOT_2%%%.<br>• Điểm gốc toạ độ là %%%SLOT_3%%%.",
+      "slots": [
+        "(3; 0)",
+        "(0; 3)",
+        "(0; 0)"
+      ],
+      "pool": [
+        "(3; 0)",
+        "(0; 3)",
+        "(0; 0)",
+        "(3; 3)",
+        "(1; 2)"
+      ],
+      "exp": "• Trục Ox (y = 0) giao với x + y = 3 tại (3; 0).<br>• Trục Oy (x = 0) giao với x + y = 3 tại (0; 3).<br>• Gốc toạ độ là (0; 0)."
+    },
+    {
+      "type": "mcq",
+      "q": "Tìm giá trị nhỏ nhất của F(x, y) = 2x - y trên miền tứ giác có 4 đỉnh: (0; 1), (2; 0), (3; 3), (1; 4):",
+      "opts": [
+        "-2 (tại (1; 4))",
+        "-1 (tại (0; 1))",
+        "4 (tại (2; 0))",
+        "3 (tại (3; 3))"
+      ],
+      "ans": 0,
+      "exp": "• F(0, 1) = -1<br>• F(2, 0) = 4<br>• F(3, 3) = 2(3) - 3 = 3<br>• F(1, 4) = 2(1) - 4 = -2 (giá trị nhỏ nhất)."
+    },
+    {
+      "type": "mcq",
+      "q": "Cặp số (x; y) nào sau đây là nghiệm của hệ: {2x + 3y ≤ 12; x - y ≥ 1; x ≥ 0; y ≥ 0}?",
+      "opts": [
+        "(2; 1)",
+        "(1; 2)",
+        "(4; 2)",
+        "(0; 3)"
+      ],
+      "ans": 0,
+      "exp": "• Kiểm tra (2; 1):<br>2(2) + 3(1) = 7 ≤ 12 (đúng); 2 - 1 = 1 ≥ 1 (đúng); 2 ≥ 0, 1 ≥ 0 (đúng).<br>• (1; 2) có x - y = -1 < 1 (sai)."
+    },
+    {
+      "type": "mcq",
+      "q": "Một công ty sản xuất hai loại nước ngọt A và B. Mỗi thùng loại A lãi 40.000 đ, loại B lãi 30.000 đ. Biết lượng đường và hương liệu khống chế miền sản xuất trong tứ giác có các đỉnh (0; 0), (50; 0), (40; 30), (0; 45). Lợi nhuận tối đa công ty có thể đạt được là:",
+      "opts": [
+        "2.500.000 đồng",
+        "2.000.000 đồng",
+        "1.350.000 đồng",
+        "2.200.000 đồng"
+      ],
+      "ans": 0,
+      "exp": "• Hàm lợi nhuận F(x, y) = 40x + 30y (nghìn đồng).<br>• Tại (0; 0): F = 0.<br>• Tại (50; 0): F = 40(50) = 2.000 nghìn = 2.000.000 đ.<br>• Tại (40; 30): F = 40(40) + 30(30) = 1.600 + 900 = 2.500 nghìn = 2.500.000 đ.<br>• Tại (0; 45): F = 30(45) = 1.350 nghìn = 1.350.000 đ.<br>• Lợi nhuận tối đa là 2.500.000 đồng tại phương án sản xuất (40 thùng A; 30 thùng B)."
+    },
+    {
+      "type": "mcq",
+      "q": "Một bác nông dân có 10 ha đất trồng cam và bưởi. Vốn đầu tư cho 1 ha cam là 20 triệu đ, 1 ha bưởi là 30 triệu đ. Tổng vốn tối đa là 240 triệu đ. Hệ bất phương trình mô tả diện tích x (ha cam) và y (ha bưởi) là:",
+      "opts": [
+        "{x + y ≤ 10; 2x + 3y ≤ 24; x ≥ 0; y ≥ 0}",
+        "{x + y ≤ 10; 3x + 2y ≤ 24; x ≥ 0; y ≥ 0}",
+        "{x + y ≥ 10; 2x + 3y ≤ 24; x ≥ 0; y ≥ 0}",
+        "{x + y ≤ 10; 20x + 30y ≥ 240; x ≥ 0; y ≥ 0}"
+      ],
+      "ans": 0,
+      "exp": "• Ràng buộc quỹ đất: x + y ≤ 10 (ha).<br>• Ràng buộc vốn: 20x + 30y ≤ 240 ⇔ 2x + 3y ≤ 24 (triệu đ).<br>• Điều kiện không âm: x ≥ 0, y ≥ 0."
+    },
+    {
+      "type": "mcq",
+      "q": "Một xưởng gỗ gia công bàn (x) và ghế (y). Mỗi chiếc bàn cần 3 giờ cưa và 1 giờ chà nhám; mỗi ghế cần 1 giờ cưa và 1 giờ chà nhám. Tổng quỹ thời gian máy cưa không quá 9 giờ/ngày, máy nhám không quá 5 giờ/ngày. Số bàn và ghế tối đa xưởng nên làm để đạt lợi nhuận cao nhất biết mỗi bàn lãi 500k, mỗi ghế lãi 300k:",
+      "opts": [
+        "2 bàn và 3 ghế (Lãi 1,9 triệu đồng)",
+        "3 bàn và 0 ghế (Lãi 1,5 triệu đồng)",
+        "0 bàn và 5 ghế (Lãi 1,5 triệu đồng)",
+        "1 bàn và 4 ghế (Lãi 1,7 triệu đồng)"
+      ],
+      "ans": 0,
+      "exp": "• Hệ ràng buộc: {3x + y ≤ 9; x + y ≤ 5; x ≥ 0; y ≥ 0}.<br>• Giao điểm của 3x + y = 9 và x + y = 5: 2x = 4 ⇒ x = 2, y = 3.<br>• Các đỉnh miền nghiệm: (0; 0), (3; 0), (2; 3), (0; 5).<br>• F(x, y) = 500x + 300y:<br>- F(3, 0) = 1.500k<br>- F(0, 5) = 1.500k<br>- F(2, 3) = 500(2) + 300(3) = 1.900k = 1,9 triệu đồng (tối ưu nhất)."
+    }
+  ],
+  "5": [
+    {
+      "type": "mcq",
+      "q": "Trên nửa đường tròn đơn vị, toạ độ của điểm M ứng với góc α (0° ≤ α ≤ 180°) là:",
+      "opts": [
+        "M(cos α; sin α)",
+        "M(sin α; cos α)",
+        "M(tan α; cot α)",
+        "M(cos α; -sin α)"
+      ],
+      "ans": 0,
+      "exp": "• Định nghĩa trên nửa đường tròn đơn vị: hoành độ của điểm M là cos α, tung độ của điểm M là sin α ⇒ M(cos α; sin α)."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các góc bù nhau (Cột A) với quan hệ lượng giác tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. sin(180° - α)",
+          "b": "A. = sin α"
+        },
+        {
+          "a": "2. cos(180° - α)",
+          "b": "B. = -cos α"
+        },
+        {
+          "a": "3. tan(180° - α) (với α ≠ 90°)",
+          "b": "C. = -tan α"
+        },
+        {
+          "a": "4. cot(180° - α) (với 0° < α < 180°)",
+          "b": "D. = -cot α"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Hai góc bù nhau: sin bù (sin bằng nhau, các giá trị cos, tan, cot đối nhau)."
+    },
+    {
+      "type": "tf",
+      "q": "Xét tính đúng - sai của các khẳng định lượng giác với góc tù α (90° < α < 180°):",
+      "items": [
+        {
+          "text": "a) sin α > 0.",
+          "ans": true,
+          "exp": "Với mọi 0° < α < 180°, tung độ điểm M luôn dương nên sin α > 0 (Đúng)."
+        },
+        {
+          "text": "b) cos α > 0.",
+          "ans": false,
+          "exp": "Khi 90° < α < 180°, điểm M có hoành độ âm nên cos α < 0 (Sai)."
+        },
+        {
+          "text": "c) tan α < 0.",
+          "ans": true,
+          "exp": "tan α = sin α / cos α; tử dương mẫu âm nên tan α < 0 (Đúng)."
+        },
+        {
+          "text": "d) sin² α + cos² α = 1.",
+          "ans": true,
+          "exp": "Hệ thức cơ bản sin² α + cos² α = 1 luôn đúng với mọi góc α (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Giá trị của biểu thức P = sin 30° + cos 60° - tan 45° là:",
+      "opts": [
+        "0",
+        "1",
+        "1/2",
+        "-1"
+      ],
+      "ans": 0,
+      "exp": "• sin 30° = 1/2.<br>• cos 60° = 1/2.<br>• tan 45° = 1.<br>• P = 1/2 + 1/2 - 1 = 0."
+    },
+    {
+      "type": "drag",
+      "q": "Kéo các giá trị lượng giác chính xác vào chỗ trống:<br>• cos 120° = %%%SLOT_1%%%.<br>• sin 135° = %%%SLOT_2%%%.<br>• cos 0° = %%%SLOT_3%%%.",
+      "slots": [
+        "-1/2",
+        "√2/2",
+        "1"
+      ],
+      "pool": [
+        "-1/2",
+        "√2/2",
+        "1",
+        "1/2",
+        "-√2/2"
+      ],
+      "exp": "• cos 120° = -cos 60° = -1/2.<br>• sin 135° = sin 45° = √2/2.<br>• cos 0° = 1."
+    },
+    {
+      "type": "mcq",
+      "q": "Cho biết cos α = -3/5 với 90° < α < 180°. Giá trị của sin α là:",
+      "opts": [
+        "4/5",
+        "-4/5",
+        "16/25",
+        "2/5"
+      ],
+      "ans": 0,
+      "exp": "• Áp dụng sin² α + cos² α = 1 ⇒ sin² α = 1 - (-3/5)² = 1 - 9/25 = 16/25.<br>• Do 90° < α < 180° nên sin α > 0 ⇒ sin α = √(16/25) = 4/5."
+    },
+    {
+      "type": "mcq",
+      "q": "Tính giá trị của tan 150°:",
+      "opts": [
+        "-√3/3",
+        "√3/3",
+        "-√3",
+        "√3"
+      ],
+      "ans": 0,
+      "exp": "• tan 150° = tan(180° - 30°) = -tan 30° = -1/√3 = -√3/3."
+    },
+    {
+      "type": "mcq",
+      "q": "Một sườn đồi dốc tạo với phương nằm ngang một góc α = 30°. Một người đi bộ lên dốc quãng đường 400 m. Độ cao thẳng đứng h mà người đó đạt được so với chân dốc là:",
+      "opts": [
+        "200 m",
+        "346 m",
+        "150 m",
+        "250 m"
+      ],
+      "ans": 0,
+      "exp": "• Tam giác vuông có cạnh huyền L = 400 m, góc nghiêng α = 30°.<br>• Chiều cao: h = L · sin α = 400 · sin 30° = 400 · (1/2) = 200 m."
+    },
+    {
+      "type": "mcq",
+      "q": "Một tấm pin năng lượng mặt trời lắp trên mái nhà nghiêng một góc 45° so với phương ngang. Vào buổi trưa, tia nắng mặt trời chiếu thẳng đứng. Nếu diện tích tấm pin là 2 m² thì diện tích bóng của tấm pin in trên mặt phẳng nằm ngang là:",
+      "opts": [
+        "√2 m² (≈ 1,41 m²)",
+        "2 m²",
+        "1 m²",
+        "2√2 m²"
+      ],
+      "ans": 0,
+      "exp": "• Công thức chiếu diện tích: S_bóng = S · cos α = 2 · cos 45° = 2 · (√2/2) = √2 m² ≈ 1,41 m²."
+    },
+    {
+      "type": "mcq",
+      "q": "Lực kéo F = 150 N tác dụng lên một toa xe trượt theo phương hợp với hướng chuyển động một góc α = 60°. Độ lớn thành phần lực hữu ích sinh công kéo xe di chuyển theo phương ngang là:",
+      "opts": [
+        "75 N",
+        "129,9 N",
+        "150 N",
+        "100 N"
+      ],
+      "ans": 0,
+      "exp": "• Thành phần lực theo phương chuyển động nằm ngang:<br>F_kéo = F · cos α = 150 · cos 60° = 150 · 0,5 = 75 N."
+    }
+  ],
+  "6": [
+    {
+      "type": "mcq",
+      "q": "Trong tam giác ABC với các cạnh a, b, c và các góc A, B, C tương ứng. Khẳng định nào sau đây là <b>Định lí Cosin</b>?",
+      "opts": [
+        "a² = b² + c² - 2bc · cos A",
+        "a² = b² + c² + 2bc · cos A",
+        "a² = b² + c² - bc · cos A",
+        "a² = b² + c² - 2bc · sin A"
+      ],
+      "ans": 0,
+      "exp": "• Định lí Cosin (SGK Toán 10): a² = b² + c² - 2bc · cos A."
+    },
+    {
+      "type": "match",
+      "q": "Ghép các công thức tính diện tích tam giác ABC (Cột A) với biểu thức tương ứng (Cột B):",
+      "pairs": [
+        {
+          "a": "1. Theo cạnh đáy và đường cao tương ứng",
+          "b": "A. S = (1/2) · a · h_a"
+        },
+        {
+          "a": "2. Theo hai cạnh và sin góc xen giữa",
+          "b": "B. S = (1/2) · b · c · sin A"
+        },
+        {
+          "a": "3. Theo 3 cạnh và bán kính đường tròn ngoại tiếp R",
+          "b": "C. S = (abc) / (4R)"
+        },
+        {
+          "a": "4. Theo nửa chu vi p và bán kính nội tiếp r",
+          "b": "D. S = p · r"
+        }
+      ],
+      "ans": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      },
+      "exp": "• Các công thức diện tích tam giác: S = 1/2 a·h = 1/2 bc·sin A = abc/(4R) = p·r = √[p(p-a)(p-b)(p-c)]."
+    },
+    {
+      "type": "tf",
+      "q": "Cho tam giác ABC có a = 6, b = 8, c = 10. Xét tính đúng - sai:",
+      "items": [
+        {
+          "text": "a) Tam giác ABC là tam giác vuông tại A.",
+          "ans": false,
+          "exp": "Ta có 6² + 8² = 36 + 64 = 100 = 10² nên tam giác vuông tại C (cạnh huyền c = 10, góc C = 90°) (Sai)."
+        },
+        {
+          "text": "b) Diện tích tam giác ABC là S = 24.",
+          "ans": true,
+          "exp": "Tam giác vuông có hai cạnh góc vuông a = 6, b = 8: S = (1/2) · 6 · 8 = 24 (Đúng)."
+        },
+        {
+          "text": "c) Bán kính đường tròn ngoại tiếp là R = 5.",
+          "ans": true,
+          "exp": "Trong tam giác vuông, tâm ngoại tiếp là trung điểm cạnh huyền: R = c / 2 = 10 / 2 = 5 (Đúng)."
+        },
+        {
+          "text": "d) Bán kính đường tròn nội tiếp r = 2.",
+          "ans": true,
+          "exp": "Nửa chu vi p = (6 + 8 + 10)/2 = 12. Bán kính nội tiếp r = S / p = 24 / 12 = 2 (Đúng)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "q": "Cho tam giác ABC có b = 7, c = 5, góc A = 60°. Độ dài cạnh a là:",
+      "opts": [
+        "√39",
+        "39",
+        "√49",
+        "√19"
+      ],
+      "ans": 0,
+      "exp": "• Áp dụng định lí Cosin: a² = b² + c² - 2bc · cos A<br>a² = 7² + 5² - 2 · 7 · 5 · cos 60° = 49 + 25 - 70 · (1/2) = 74 - 35 = 39.<br>⇒ a = √39."
+    },
+    {
+      "type": "drag",
+      "q": "Điền vào chỗ trống công thức Định lí Sin trong tam giác ABC:<br>• Tỉ số giữa mỗi cạnh và sin của góc đối diện luôn bằng đường kính đường tròn ngoại tiếp:<br><span class=\"fraction\"><span class=\"numerator\">a</span><span class=\"denominator\">sin A</span></span> = <span class=\"fraction\"><span class=\"numerator\">b</span><span class=\"denominator\">%%%SLOT_1%%%</span></span> = <span class=\"fraction\"><span class=\"numerator\">c</span><span class=\"denominator\">%%%SLOT_2%%%</span></span> = %%%SLOT_3%%%",
+      "slots": [
+        "sin B",
+        "sin C",
+        "2R"
+      ],
+      "pool": [
+        "sin B",
+        "sin C",
+        "2R",
+        "R",
+        "cos B"
+      ],
+      "exp": "• Định lí Sin: a/sin A = b/sin B = c/sin C = 2R."
+    },
+    {
+      "type": "mcq",
+      "q": "Tam giác ABC có a = 10 và góc A = 30°. Bán kính đường tròn ngoại tiếp R của tam giác là:",
+      "opts": [
+        "10",
+        "5",
+        "20",
+        "15"
+      ],
+      "ans": 0,
+      "exp": "• Theo định lí Sin: 2R = a / sin A = 10 / sin 30° = 10 / 0,5 = 20.<br>⇒ R = 20 / 2 = 10."
+    },
+    {
+      "type": "mcq",
+      "q": "Tam giác ABC có 3 cạnh a = 4, b = 5, c = 7. Nửa chu vi p và diện tích S theo công thức Heron là:",
+      "opts": [
+        "p = 8, S = 4√6",
+        "p = 16, S = 8√6",
+        "p = 8, S = 12",
+        "p = 7, S = 4√5"
+      ],
+      "ans": 0,
+      "exp": "• p = (4 + 5 + 7)/2 = 8.<br>• S = √[8 · (8 - 4) · (8 - 5) · (8 - 7)] = √[8 · 4 · 3 · 1] = √96 = 4√6."
+    },
+    {
+      "type": "mcq",
+      "q": "Để đo khoảng cách từ một vị trí A trên bờ đến một con tàu C ngoài khơi, kĩ sư đo một đoạn mốc AB = 200 m trên bờ, đo được các góc ∠CAB = 70° và ∠CBA = 65°. Khoảng cách AC từ bờ tới tàu xấp xỉ là:",
+      "opts": [
+        "255,8 m",
+        "275,3 m",
+        "180,5 m",
+        "310,2 m"
+      ],
+      "ans": 0,
+      "exp": "• Trong tam giác ABC: góc C = 180° - (70° + 65°) = 45°.<br>• Áp dụng định lí Sin: AC / sin B = AB / sin C<br>⇒ AC = (AB · sin 65°) / sin 45° = (200 · 0,9063) / 0,7071 ≈ 255,8 m."
+    },
+    {
+      "type": "mcq",
+      "q": "Một ngọn hải đăng cao 80 m so với mực nước biển. Từ đỉnh ngọn hải đăng, người quan sát nhìn thấy một chiếc thuyền cứu hộ dưới góc hạ 22° so với phương ngang. Khoảng cách từ chân hải đăng đến con thuyền là:",
+      "opts": [
+        "198 m",
+        "180 m",
+        "213 m",
+        "86 m"
+      ],
+      "ans": 0,
+      "exp": "• Góc hạ 22° bằng góc nâng nhìn từ thuyền lên đỉnh hải đăng.<br>• Tam giác vuông tại chân hải đăng: d = h / tan 22° = 80 / tan 22° = 80 / 0,4040 ≈ 198 m."
+    },
+    {
+      "type": "mcq",
+      "q": "Hai người cùng xuất phát từ ngã ba đường O đi theo hai hướng tạo với nhau một góc 60°. Người thứ nhất đi với vận tốc 12 km/h, người thứ hai đi với vận tốc 16 km/h. Sau 1,5 giờ, khoảng cách giữa hai người là:",
+      "opts": [
+        "21,8 km",
+        "25,0 km",
+        "30,0 km",
+        "18,5 km"
+      ],
+      "ans": 0,
+      "exp": "• Quãng đường người 1 đi: OA = 12 · 1,5 = 18 km.<br>• Quãng đường người 2 đi: OB = 16 · 1,5 = 24 km.<br>• Áp dụng định lí Cosin cho tam giác OAB: AB² = OA² + OB² - 2 · OA · OB · cos 60°<br>AB² = 18² + 24² - 2 · 18 · 24 · 0,5 = 324 + 576 - 432 = 468.<br>⇒ AB = √468 ≈ 21,63 km (khoảng 21,8 km)."
+    }
+  ]
+}

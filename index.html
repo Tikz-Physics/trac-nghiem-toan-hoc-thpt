@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes" />
+  <title>Hệ Thống Trắc Nghiệm Tương Tác Toán Học THPT • Thầy Trần Mạnh Tùng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#070a14" />
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="apple-touch-icon" href="./icon.svg">
+  <style>
+    :root {
+      --bg: #070a14;
+      --surface: rgba(18, 25, 44, 0.85);
+      --border: rgba(255, 255, 255, 0.12);
+      --primary: #38bdf8;
+      --accent1: #818cf8;
+      --accent2: #34d399;
+      --accent3: #f43f5e;
+      --text: #ffffff;
+      --text-sub: #94a3b8;
+      --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    *, button, input, select, textarea {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-family) !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #070a14 70%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px 40px;
+    }
+    .header-banner {
+      text-align: center;
+      max-width: 960px;
+      margin-bottom: 28px;
+    }
+    .badge-teacher {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 6px 18px;
+      border-radius: 999px;
+      color: #38bdf8;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.5rem);
+      font-weight: 900;
+      line-height: 1.25;
+      background: linear-gradient(135deg, #ffffff 0%, #bae6fd 60%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+    .sub-title {
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      color: var(--text-sub);
+      line-height: 1.5;
+    }
+
+    /* PWA Install & Offline Styles */
+    .pwa-controls-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 18px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-pwa-install {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 0.92rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
+      transition: all 0.25s ease;
+      animation: pwaPulse 2.5s infinite;
+    }
+    .btn-pwa-install:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.6);
+    }
+    @keyframes pwaPulse {
+      0%, 100% { box-shadow: 0 0 15px rgba(56, 189, 248, 0.3); }
+      50% { box-shadow: 0 0 25px rgba(56, 189, 248, 0.7); }
+    }
+    .offline-status-badge {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid #f59e0b;
+      color: #fbbf24;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 999px;
+    }
+    .offline-status-badge.active { display: inline-flex; }
+
+    /* Arena Feature Card */
+    .arena-feature-card {
+      width: 100%;
+      max-width: 1080px;
+      background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.18) 0%, rgba(15, 23, 42, 0.85) 60%), #0f172a;
+      border: 1.5px solid rgba(245, 158, 11, 0.45);
+      border-radius: 22px;
+      padding: 24px 30px;
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 30px rgba(245, 158, 11, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    @media (max-width: 800px) {
+      .arena-feature-card { flex-direction: column; align-items: stretch; text-align: center; }
+    }
+    .arena-badge {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid #f59e0b;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .arena-title {
+      font-size: 1.45rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #f59e0b, #ef4444, #f43f5e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .arena-desc {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+      max-width: 680px;
+    }
+    .btn-enter-arena {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #000000;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.05rem;
+      padding: 14px 26px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 22px rgba(245, 158, 11, 0.45);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-enter-arena:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(245, 158, 11, 0.65);
+      filter: brightness(1.1);
+    }
+
+    /* 3 Grades Grid */
+    .grades-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 22px;
+      width: 100%;
+      max-width: 1080px;
+      margin-bottom: 36px;
+    }
+    .grade-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      color: inherit;
+    }
+    .grade-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+    .grade-card.card-10:hover { border-color: #38bdf8; box-shadow: 0 15px 35px rgba(56, 189, 248, 0.25); }
+    .grade-card.card-11:hover { border-color: #34d399; box-shadow: 0 15px 35px rgba(52, 211, 153, 0.25); }
+    .grade-card.card-12:hover { border-color: #f43f5e; box-shadow: 0 15px 35px rgba(244, 63, 94, 0.25); }
+
+    .grade-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .grade-pill {
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .card-10 .grade-pill { background: rgba(56, 189, 248, 0.18); color: #38bdf8; }
+    .card-11 .grade-pill { background: rgba(52, 211, 153, 0.18); color: #34d399; }
+    .card-12 .grade-pill { background: rgba(244, 63, 94, 0.18); color: #f43f5e; }
+
+    .grade-icon { font-size: 2.2rem; }
+    .grade-title { font-size: 1.5rem; font-weight: 900; margin-bottom: 6px; }
+    .grade-desc { font-size: 0.88rem; color: var(--text-sub); line-height: 1.5; margin-bottom: 18px; flex: 1; }
+
+    .stats-row {
+      display: flex;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 18px;
+    }
+    .stat-item { flex: 1; text-align: center; }
+    .stat-num { font-size: 1.2rem; font-weight: 800; color: #f8fafc; }
+    .stat-label { font-size: 0.72rem; color: var(--text-sub); font-weight: 600; text-transform: uppercase; }
+
+    .grade-btn-group {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-enter {
+      flex: 1.4;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      border: none;
+      text-decoration: none;
+    }
+    .card-10 .btn-enter { background: linear-gradient(135deg, #0284c7, #38bdf8); color: #ffffff; }
+    .card-11 .btn-enter { background: linear-gradient(135deg, #059669, #34d399); color: #ffffff; }
+    .card-12 .btn-enter { background: linear-gradient(135deg, #e11d48, #f43f5e); color: #ffffff; }
+    .btn-enter:hover { filter: brightness(1.15); transform: translateY(-1px); }
+
+    .btn-view-lessons {
+      flex: 1;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #e2e8f0;
+      transition: all 0.2s ease;
+    }
+    .btn-view-lessons:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Features section */
+    .features-card {
+      width: 100%;
+      max-width: 1080px;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+    .features-card h2 { font-size: 1.2rem; font-weight: 800; color: #38bdf8; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+    .feature-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .feature-box b { color: #f8fafc; display: block; font-size: 0.95rem; margin-bottom: 6px; }
+    .feature-box p { font-size: 0.84rem; color: var(--text-sub); line-height: 1.5; }
+
+    /* Guide section */
+    .guide-card {
+      width: 100%;
+      max-width: 1080px;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: left;
+    }
+    .guide-card h3 { font-size: 1.15rem; color: #38bdf8; font-weight: 800; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .guide-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .guide-step { background: rgba(0, 0, 0, 0.3); border-radius: 12px; padding: 14px 16px; font-size: 0.86rem; line-height: 1.55; color: #cbd5e1; }
+    .guide-step b { color: #ffffff; }
+
+    footer { margin-top: 36px; font-size: 0.85rem; color: #64748b; text-align: center; line-height: 1.6; }
+
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-card {
+      background: #0f172a;
+      border: 1.5px solid rgba(56, 189, 248, 0.4);
+      border-radius: 22px;
+      max-width: 780px;
+      width: 100%;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.85);
+      overflow: hidden;
+    }
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .modal-title { font-size: 1.25rem; font-weight: 800; color: #f8fafc; }
+    .btn-close { background: none; border: none; font-size: 1.6rem; color: #94a3b8; cursor: pointer; }
+    
+    .modal-controls {
+      padding: 14px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .search-input {
+      flex: 1;
+      min-width: 220px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      padding: 10px 14px;
+      color: #fff;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .search-input:focus { border-color: #38bdf8; }
+
+    .filter-tabs { display: flex; gap: 6px; }
+    .filter-tab {
+      padding: 8px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .filter-tab.active { background: #38bdf8; color: #0f172a; border-color: #38bdf8; }
+
+    .modal-body {
+      padding: 16px 24px;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+    }
+    .lesson-link-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: #f8fafc;
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+    .lesson-link-card:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: #38bdf8;
+      transform: translateX(4px);
+    }
+    .lesson-badge-pill {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 6px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .badge-g10 { background: rgba(56, 189, 248, 0.2); color: #38bdf8; }
+    .badge-g11 { background: rgba(52, 211, 153, 0.2); color: #34d399; }
+    .badge-g12 { background: rgba(244, 63, 94, 0.2); color: #f43f5e; }
+  </style>
+</head>
+<body>
+
+  <div class="header-banner">
+    <div class="badge-teacher">👨‍🏫 Thầy Trần Mạnh Tùng • Chuyên Gia Giáo Dục Toán Học</div>
+    <h1>HỆ THỐNG TRẮC NGHIỆM TƯƠNG TÁC TOÁN HỌC THPT</h1>
+    <p class="sub-title">Chương trình GDPT 2018 – Bộ sách Kết nối tri thức với cuộc sống<br>Đầy đủ 78 bài học • 780 câu hỏi đánh giá năng lực • Tối ưu 100% cho mọi thiết bị di động & máy tính</p>
+  
+    <div class="pwa-controls-row">
+      <button class="btn-pwa-install" id="btnPwaInstall" onclick="handlePwaInstallClick()">
+        <span>📲</span> Cài Đặt App (Dùng Offline 100%)
+      </button>
+      <div class="offline-status-badge" id="offlineBadge">
+        <span>⚡</span> Đang chạy chế độ Ngoại Tuyến (Offline)
+      </div>
+    </div>
+  </div>
+
+  <!-- Arena Feature Card -->
+  <div class="arena-feature-card">
+    <div class="arena-info">
+      <div class="arena-badge">🔥 TÍNH NĂNG MỚI • HOẠT ĐỘNG NHÓM TRÊN LỚP</div>
+      <h2 class="arena-title">⚔️ ĐẤU TRƯỜNG TOÁN HỌC LIÊN NHÓM (THI ĐẤU 4 TỔ)</h2>
+      <p class="arena-desc">Mô hình Gameshow tương tác chuyên dụng cho Máy chiếu & Bảng tương tác thông minh. Học sinh dùng điện thoại quét mã QR để bấm chuông không dây siêu tốc, tích hợp trọn bộ 78 bài học chuẩn SGK mới.</p>
+    </div>
+    <a href="./dau-truong-toan-hoc.html" class="btn-enter-arena">
+      <span>⚡</span> Vào Đấu Trường Ngay ➔
+    </a>
+  </div>
+
+  <!-- 3 Grades Grid -->
+  <div class="grades-grid">
+    <!-- Grade 10 -->
+    <div class="grade-card card-10">
+      <div class="grade-header">
+        <span class="grade-pill">Chương Trình Mới</span>
+        <span class="grade-icon">📐</span>
+      </div>
+      <div class="grade-title">Toán Học 10</div>
+      <div class="grade-desc">Mệnh đề & tập hợp, bất phương trình bậc nhất hai ẩn, hệ thức lượng tam giác, vectơ, số đặc trưng và xác suất cổ điển.</div>
+      <div class="stats-row">
+        <div class="stat-item"><div class="stat-num">9</div><div class="stat-label">Chương</div></div>
+        <div class="stat-item"><div class="stat-num">27</div><div class="stat-label">Bài học</div></div>
+        <div class="stat-item"><div class="stat-num">270</div><div class="stat-label">Câu hỏi</div></div>
+      </div>
+      <div class="grade-btn-group">
+        <a href="./lop10/" class="btn-enter">Vào Học & Thi ➔</a>
+        <button class="btn-view-lessons" onclick="openLessonsModal('10')">Xem 27 bài ⌄</button>
+      </div>
+    </div>
+
+    <!-- Grade 11 -->
+    <div class="grade-card card-11">
+      <div class="grade-header">
+        <span class="grade-pill">Chương Trình Mới</span>
+        <span class="grade-icon">📊</span>
+      </div>
+      <div class="grade-title">Toán Học 11</div>
+      <div class="grade-desc">Hàm số & phương trình lượng giác, cấp số cộng/nhân, hình học không gian, mũ & lôgarit, giới hạn và đạo hàm.</div>
+      <div class="stats-row">
+        <div class="stat-item"><div class="stat-num">9</div><div class="stat-label">Chương</div></div>
+        <div class="stat-item"><div class="stat-num">32</div><div class="stat-label">Bài học</div></div>
+        <div class="stat-item"><div class="stat-num">320</div><div class="stat-label">Câu hỏi</div></div>
+      </div>
+      <div class="grade-btn-group">
+        <a href="./lop11/" class="btn-enter">Vào Học & Thi ➔</a>
+        <button class="btn-view-lessons" onclick="openLessonsModal('11')">Xem 32 bài ⌄</button>
+      </div>
+    </div>
+
+    <!-- Grade 12 -->
+    <div class="grade-card card-12">
+      <div class="grade-header">
+        <span class="grade-pill">Trọng Tâm Tốt Nghiệp 2025</span>
+        <span class="grade-icon">📈</span>
+      </div>
+      <div class="grade-title">Toán Học 12</div>
+      <div class="grade-desc">Ứng dụng đạo hàm khảo sát hàm số, vectơ & toạ độ không gian Oxyz, nguyên hàm, tích phân và xác suất có điều kiện.</div>
+      <div class="stats-row">
+        <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Chương</div></div>
+        <div class="stat-item"><div class="stat-num">19</div><div class="stat-label">Bài học</div></div>
+        <div class="stat-item"><div class="stat-num">190</div><div class="stat-label">Câu hỏi</div></div>
+      </div>
+      <div class="grade-btn-group">
+        <a href="./lop12/" class="btn-enter">Vào Học & Thi ➔</a>
+        <button class="btn-view-lessons" onclick="openLessonsModal('12')">Xem 19 bài ⌄</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features section -->
+  <div class="features-card">
+    <h2><span>✨</span> ƯU ĐIỂM CÔNG NGHỆ & CHUẨN MỰC SƯ PHẠM</h2>
+    <div class="features-grid">
+      <div class="feature-box">
+        <b>📐 Đồ Họa Vector Dark Neon</b>
+        <p>100% đồ thị hàm số, bảng biến thiên, hình không gian và hệ toạ độ Oxyz vẽ bằng SVG sắc nét, chuẩn toạ độ 0-pixel offset.</p>
+      </div>
+      <div class="feature-box">
+        <b>🎯 Chuẩn Đánh Giá Bộ GD&ĐT 2025</b>
+        <p>Tích hợp 4 định dạng tương tác: MCQ xáo trộn vị trí, Đúng/Sai bậc thang (0,1-0,25-0,5-1,0), Ghép nối và Điền khuyết từ khóa.</p>
+      </div>
+      <div class="feature-box">
+        <b>🔤 Công Thức Unicode Thuần</b>
+        <p>Phân số tự nhiên đồng màu, không dùng LaTeX thô, đổi màu xanh ngọc khi đúng và đỏ khi sai mà không cần tải thư viện ngoài.</p>
+      </div>
+      <div class="feature-box">
+        <b>📲 Hoạt Động Ngoại Tuyến 100%</b>
+        <p>Công nghệ PWA Offline cho phép cài đặt App trực tiếp lên màn hình chính, dùng trọn đời không cần mạng, lưu học bạ LocalStorage.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Guide section -->
+  <div class="guide-card">
+    <h3><span>💡</span> HƯỚNG DẪN CÀI ĐẶT APP DÙNG TRỌN ĐỜI KHÔNG CẦN INTERNET</h3>
+    <div class="guide-columns">
+      <div class="guide-step">
+        <b>📱 Trên iPhone / iPad (Safari):</b><br>
+        Bấm vào nút <b>Chia sẻ</b> (biểu tượng ô vuông có mũi tên hướng lên ở dưới cùng trình duyệt) ➔ Chọn <b>"Thêm vào Màn hình chính" (Add to Home Screen)</b>.
+      </div>
+      <div class="guide-step">
+        <b>🤖 Trên Android (Chrome / Cốc Cốc):</b><br>
+        Bấm nút <b>"Cài Đặt App"</b> phía trên hoặc bấm biểu tượng dấu <b>3 chấm ⋮</b> góc trên bên phải trình duyệt ➔ Chọn <b>"Cài đặt ứng dụng"</b> hoặc <b>"Thêm vào M.hình chính"</b>.
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Hệ Thống Trắc Nghiệm Tương Tác Toán Học THPT • Bám sát SGK Kết nối tri thức với cuộc sống<br>
+    Tác giả định hướng & chuẩn mực sư phạm: <b>Thầy Trần Mạnh Tùng</b>
+  </footer>
+
+  <!-- Modal Lessons List -->
+  <div class="modal-overlay" id="lessonsModal" onclick="handleModalOverlayClick(event)">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title" id="modalTitle">Danh Sách Bài Học</div>
+        <button class="btn-close" onclick="closeLessonsModal()">&times;</button>
+      </div>
+      <div class="modal-controls">
+        <input type="text" class="search-input" id="modalSearchInput" placeholder="🔍 Tìm kiếm bài học (ví dụ: đạo hàm, lượng giác...)" oninput="filterModalLessons()">
+        <div class="filter-tabs">
+          <button class="filter-tab active" id="tabAll" onclick="filterModalGrade('all')">Tất Cả (78)</button>
+          <button class="filter-tab" id="tab10" onclick="filterModalGrade('10')">Toán 10 (27)</button>
+          <button class="filter-tab" id="tab11" onclick="filterModalGrade('11')">Toán 11 (32)</button>
+          <button class="filter-tab" id="tab12" onclick="filterModalGrade('12')">Toán 12 (19)</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="lesson-grid" id="modalLessonsGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const ALL_LESSONS = [{"grade": "10", "id": 1, "title": "Bài 1: Mệnh Đề", "url": "./lop10/Bai_01_Menh_De.html"}, {"grade": "10", "id": 2, "title": "Bài 2: Tập Hợp & Các Phép Toán Trên Tập Hợp", "url": "./lop10/Bai_02_Tap_Hop_Va_Phep_Toan.html"}, {"grade": "10", "id": 3, "title": "Bài 3: Bất Phương Trình Bậc Nhất Hai Ẩn", "url": "./lop10/Bai_03_Bat_Phuong_Trinh_Bac_Nhat_Hai_An.html"}, {"grade": "10", "id": 4, "title": "Bài 4: Hệ Bất Phương Trình Bậc Nhất Hai Ẩn", "url": "./lop10/Bai_04_He_Bat_Phuong_Trinh_Bac_Nhat_Hai_An.html"}, {"grade": "10", "id": 5, "title": "Bài 5: Giá Trị Lượng Giác Của Một Góc Từ 0° Đến 180°", "url": "./lop10/Bai_05_Gia_Tri_Luong_Giac_0_Den_180.html"}, {"grade": "10", "id": 6, "title": "Bài 6: Hệ Thức Lượng Trong Tam Giác (Định Lí Cosin, Sin & Diện Tích)", "url": "./lop10/Bai_06_He_Thuc_Luong_Trong_Tam_Giac.html"}, {"grade": "10", "id": 7, "title": "Bài 7: Các Khái Niệm Mở Đầu Về Vectơ", "url": "./lop10/Bai_07_Cac_Khai_Niem_Mo_Dau_Vecto.html"}, {"grade": "10", "id": 8, "title": "Bài 8: Tổng & Hiệu Của Hai Vectơ", "url": "./lop10/Bai_08_Tong_Va_Hieu_Hai_Vecto.html"}, {"grade": "10", "id": 9, "title": "Bài 9: Tích Của Một Vectơ Với Một Số", "url": "./lop10/Bai_09_Tich_Vecto_Voi_Mot_So.html"}, {"grade": "10", "id": 10, "title": "Bài 10: Vectơ Trong Mặt Phẳng Toạ Độ", "url": "./lop10/Bai_10_Vecto_Trong_Mat_Phang_Toa_Do.html"}, {"grade": "10", "id": 11, "title": "Bài 11: Tích Vô Hướng Của Hai Vectơ", "url": "./lop10/Bai_11_Tich_Vo_Huong_Hai_Vecto.html"}, {"grade": "10", "id": 12, "title": "Bài 12: Số Gần Đúng & Sai Số", "url": "./lop10/Bai_12_So_Gan_Dung_Va_Sai_So.html"}, {"grade": "10", "id": 13, "title": "Bài 13: Các Số Đặc Trưng Đo Xu Thế Trung Tâm", "url": "./lop10/Bai_13_Cac_So_Dac_Trung_Do_Xu_The_Trung_Tam.html"}, {"grade": "10", "id": 14, "title": "Bài 14: Các Số Đặc Trưng Đo Độ Phân Tán", "url": "./lop10/Bai_14_Cac_So_Dac_Trung_Do_Do_Phan_Tan.html"}, {"grade": "10", "id": 15, "title": "Bài 15: Hàm Số & Đồ Thị", "url": "./lop10/Bai_15_Ham_So_Va_Do_Thi.html"}, {"grade": "10", "id": 16, "title": "Bài 16: Hàm Số Bậc Hai", "url": "./lop10/Bai_16_Ham_So_Bac_Hai.html"}, {"grade": "10", "id": 17, "title": "Bài 17: Dấu Của Tam Thức Bậc Hai", "url": "./lop10/Bai_17_Dau_Tam_Thuc_Bac_Hai.html"}, {"grade": "10", "id": 18, "title": "Bài 18: Phương Trình Quy Về Phương Trình Bậc Hai", "url": "./lop10/Bai_18_Phuong_Trinh_Quy_Ve_Bac_Hai.html"}, {"grade": "10", "id": 19, "title": "Bài 19: Phương Trình Đường Thẳng", "url": "./lop10/Bai_19_Phuong_Trinh_Duong_Thang.html"}, {"grade": "10", "id": 20, "title": "Bài 20: Vị Trí Tương Đối Giữa Hai Đường Thẳng. Góc & Khoảng Cách", "url": "./lop10/Bai_20_Vi_Tri_Tuong_Doi_Goc_Khoang_Cach.html"}, {"grade": "10", "id": 21, "title": "Bài 21: Đường Tròn Trong Mặt Phẳng Toạ Độ", "url": "./lop10/Bai_21_Duong_Tron_Trong_Mat_Phang_Toa_Do.html"}, {"grade": "10", "id": 22, "title": "Bài 22: Ba Đường Conic (Elip, Hypebol, Parabol)", "url": "./lop10/Bai_22_Ba_Duong_Conic.html"}, {"grade": "10", "id": 23, "title": "Bài 23: Quy Tắc Đếm (Quy Tắc Cộng & Quy Tắc Nhân)", "url": "./lop10/Bai_23_Quy_Tac_Dem.html"}, {"grade": "10", "id": 24, "title": "Bài 24: Hoán Vị, Chỉnh Hợp & Tổ Hợp", "url": "./lop10/Bai_24_Hoan_Vi_Chinh_Hop_To_Hop.html"}, {"grade": "10", "id": 25, "title": "Bài 25: Nhị Thức Newton", "url": "./lop10/Bai_25_Nhi_Thuc_Newton.html"}, {"grade": "10", "id": 26, "title": "Bài 26: Biến Cố & Định Nghĩa Cổ Điển Của Xác Suất", "url": "./lop10/Bai_26_Bien_Co_Va_Dinh_Nghia_Co_Dien.html"}, {"grade": "10", "id": 27, "title": "Bài 27: Thực Hành Tính Xác Suất Theo Định Nghĩa Cổ Điển", "url": "./lop10/Bai_27_Thuc_Hanh_Tinh_Xac_Suat.html"}, {"grade": "11", "id": 1, "title": "Bài 1: Giá Trị Lượng Giác Của Góc Lượng Giác", "url": "./lop11/Bai_01_Gia_Tri_Luong_Giac.html"}, {"grade": "11", "id": 2, "title": "Bài 2: Công Thức Lượng Giác", "url": "./lop11/Bai_02_Cong_Thuc_Luong_Giac.html"}, {"grade": "11", "id": 3, "title": "Bài 3: Hàm Số Lượng Giác", "url": "./lop11/Bai_03_Ham_So_Luong_Giac.html"}, {"grade": "11", "id": 4, "title": "Bài 4: Phương Trình Lượng Giác Cơ Bản", "url": "./lop11/Bai_04_Phuong_Trinh_Luong_Giac_Co_Ban.html"}, {"grade": "11", "id": 5, "title": "Bài 5: Dãy Số", "url": "./lop11/Bai_05_Day_So.html"}, {"grade": "11", "id": 6, "title": "Bài 6: Cấp Số Cộng", "url": "./lop11/Bai_06_Cap_So_Cong.html"}, {"grade": "11", "id": 7, "title": "Bài 7: Cấp Số Nhân", "url": "./lop11/Bai_07_Cap_So_Nhan.html"}, {"grade": "11", "id": 8, "title": "Bài 8: Mẫu Số Liệu Ghép Nhóm", "url": "./lop11/Bai_08_Mau_So_Lieu_Ghep_Nhom.html"}, {"grade": "11", "id": 9, "title": "Bài 9: Các Số Đặc Trưng Đo Xu Thế Trung Tâm", "url": "./lop11/Bai_09_Cac_So_Dac_Trung_Do_Xu_The_Trung_Tam.html"}, {"grade": "11", "id": 10, "title": "Bài 10: Đường Thẳng & Mặt Phẳng Trong Không Gian", "url": "./lop11/Bai_10_Duong_Thang_Va_Mat_Phang.html"}, {"grade": "11", "id": 11, "title": "Bài 11: Hai Đường Thẳng Song Song", "url": "./lop11/Bai_11_Hai_Duong_Thang_Song_Song.html"}, {"grade": "11", "id": 12, "title": "Bài 12: Đường Thẳng & Mặt Phẳng Song Song", "url": "./lop11/Bai_12_Duong_Thang_Va_Mat_Phang_Song_Song.html"}, {"grade": "11", "id": 13, "title": "Bài 13: Hai Mặt Phẳng Song Song", "url": "./lop11/Bai_13_Hai_Mat_Phang_Song_Song.html"}, {"grade": "11", "id": 14, "title": "Bài 14: Phép Chiếu Song Song", "url": "./lop11/Bai_14_Phep_Chieu_Song_Song.html"}, {"grade": "11", "id": 15, "title": "Bài 15: Giới Hạn Của Dãy Số", "url": "./lop11/Bai_15_Gioi_Han_Day_So.html"}, {"grade": "11", "id": 16, "title": "Bài 16: Giới Hạn Của Hàm Số", "url": "./lop11/Bai_16_Gioi_Han_Ham_So.html"}, {"grade": "11", "id": 17, "title": "Bài 17: Hàm Số Liên Tục", "url": "./lop11/Bai_17_Ham_So_Lien_Tuc.html"}, {"grade": "11", "id": 18, "title": "Bài 18: Lũy Thừa Với Số Mũ Thực", "url": "./lop11/Bai_18_Luy_Thua_Voi_So_Mu_Thuc.html"}, {"grade": "11", "id": 19, "title": "Bài 19: Lôgarit", "url": "./lop11/Bai_19_Logarit.html"}, {"grade": "11", "id": 20, "title": "Bài 20: Hàm Số Mũ & Hàm Số Lôgarit", "url": "./lop11/Bai_20_Ham_So_Mu_Va_Ham_So_Logarit.html"}, {"grade": "11", "id": 21, "title": "Bài 21: Phương Trình & BPT Mũ, Lôgarit", "url": "./lop11/Bai_21_Phuong_Trinh_BPT_Mu_Va_Logarit.html"}, {"grade": "11", "id": 22, "title": "Bài 22: Hai Đường Thẳng Vuông Góc", "url": "./lop11/Bai_22_Hai_Duong_Thang_Vuong_Goc.html"}, {"grade": "11", "id": 23, "title": "Bài 23: Đường Thẳng Vuông Góc Với Mặt Phẳng", "url": "./lop11/Bai_23_Duong_Thang_Vuong_Goc_Voi_Mat_Phang.html"}, {"grade": "11", "id": 24, "title": "Bài 24: Phép Chiếu Vuông Góc. Góc Đường & Mặt", "url": "./lop11/Bai_24_Phep_Chieu_Vuong_Goc_Goc_Duong_Mat.html"}, {"grade": "11", "id": 25, "title": "Bài 25: Hai Mặt Phẳng Vuông Góc", "url": "./lop11/Bai_25_Hai_Mat_Phang_Vuong_Goc.html"}, {"grade": "11", "id": 26, "title": "Bài 26: Khoảng Cách Trong Không Gian", "url": "./lop11/Bai_26_Khoang_Cach_Trong_Khong_Gian.html"}, {"grade": "11", "id": 27, "title": "Bài 27: Thể Tích", "url": "./lop11/Bai_27_The_Tich.html"}, {"grade": "11", "id": 28, "title": "Bài 28: Biến Cố Hợp, Biến Cố Giao, Biến Cố Độc Lập", "url": "./lop11/Bai_28_Bien_Co_Hop_Giao_Doc_Lap.html"}, {"grade": "11", "id": 29, "title": "Bài 29: Công Thức Cộng Xác Suất", "url": "./lop11/Bai_29_Cong_Thuc_Cong_Xac_Suat.html"}, {"grade": "11", "id": 30, "title": "Bài 30: Công Thức Nhân Cho Hai Biến Cố Độc Lập", "url": "./lop11/Bai_30_Cong_Thuc_Nhan_Xac_Suat.html"}, {"grade": "11", "id": 31, "title": "Bài 31: Định Nghĩa & Ý Nghĩa Của Đạo Hàm", "url": "./lop11/Bai_31_Dinh_Nghia_Va_Y_Nghia_Dao_Ham.html"}, {"grade": "11", "id": 32, "title": "Bài 32: Các Quy Tắc Tính Đạo Hàm", "url": "./lop11/Bai_32_Cac_Quy_Tac_Tinh_Dao_Ham.html"}, {"grade": "12", "id": 1, "title": "Bài 1: Tính Đơn Điệu & Cực Trị Của Hàm Số", "url": "./lop12/Bai_01_Tinh_Don_Dieu_Va_Cuc_Tri.html"}, {"grade": "12", "id": 2, "title": "Bài 2: Giá Trị Lớn Nhất & Giá Trị Nhỏ Nhất Của Hàm Số", "url": "./lop12/Bai_02_Gia_Tri_Lon_Nhat_Nho_Nhat.html"}, {"grade": "12", "id": 3, "title": "Bài 3: Đường Tiệm Cận Của Đồ Thị Hàm Số", "url": "./lop12/Bai_03_Duong_Tiem_Can_Do_Thi.html"}, {"grade": "12", "id": 4, "title": "Bài 4: Khảo Sát Sự Biến Thiên & Vẽ Đồ Thị Hàm Số", "url": "./lop12/Bai_04_Khao_Sat_Ve_Do_Thi_Ham_So.html"}, {"grade": "12", "id": 5, "title": "Bài 5: Ứng Dụng Đạo Hàm Giải Quyết Bài Toán Thực Tiễn", "url": "./lop12/Bai_05_Ung_Dung_Dao_Ham_Thuc_Tien.html"}, {"grade": "12", "id": 6, "title": "Bài 6: Vectơ Trong Không Gian", "url": "./lop12/Bai_06_Vecto_Trong_Khong_Gian.html"}, {"grade": "12", "id": 7, "title": "Bài 7: Hệ Trục Toạ Độ Trong Không Gian", "url": "./lop12/Bai_07_He_Truc_Toa_Do_Khong_Gian.html"}, {"grade": "12", "id": 8, "title": "Bài 8: Biểu Thức Toạ Độ Của Các Phép Toán Vectơ", "url": "./lop12/Bai_08_Bieu_Thuc_Toa_Do_Phep_Toan_Vecto.html"}, {"grade": "12", "id": 9, "title": "Bài 9: Khoảng Biến Thiên & Khoảng Tứ Phân Vị Ghép Nhóm", "url": "./lop12/Bai_09_Khoang_Bien_Thien_Tu_Phan_Vi.html"}, {"grade": "12", "id": 10, "title": "Bài 10: Phương Sai & Độ Lệch Chuẩn Mẫu Ghép Nhóm", "url": "./lop12/Bai_10_Phuong_Sai_Do_Lech_Chuan.html"}, {"grade": "12", "id": 11, "title": "Bài 11: Nguyên Hàm", "url": "./lop12/Bai_11_Nguyen_Ham.html"}, {"grade": "12", "id": 12, "title": "Bài 12: Tích Phân", "url": "./lop12/Bai_12_Tich_Phan.html"}, {"grade": "12", "id": 13, "title": "Bài 13: Ứng Dụng Hình Học Của Tích Phân (Diện Tích & Thể Tích)", "url": "./lop12/Bai_13_Ung_Dung_Hinh_Hoc_Tich_Phan.html"}, {"grade": "12", "id": 14, "title": "Bài 14: Phương Trình Mặt Phẳng", "url": "./lop12/Bai_14_Phuong_Trinh_Mat_Phang.html"}, {"grade": "12", "id": 15, "title": "Bài 15: Phương Trình Đường Thẳng Trong Không Gian", "url": "./lop12/Bai_15_Phuong_Trinh_Duong_Thang.html"}, {"grade": "12", "id": 16, "title": "Bài 16: Công Thức Tính Góc Trong Không Gian", "url": "./lop12/Bai_16_Cong_Thuc_Tinh_Goc_Khong_Gian.html"}, {"grade": "12", "id": 17, "title": "Bài 17: Phương Trình Mặt Cầu", "url": "./lop12/Bai_17_Phuong_Trinh_Mat_Cau.html"}, {"grade": "12", "id": 18, "title": "Bài 18: Xác Suất Có Điều Kiện", "url": "./lop12/Bai_18_Xac_Suat_Co_Dieu_Kien.html"}, {"grade": "12", "id": 19, "title": "Bài 19: Công Thức Xác Suất Toàn Phần & Công Thức Bayes", "url": "./lop12/Bai_19_Xac_Suat_Toan_Phan_Bayes.html"}];
+    let currentModalGrade = 'all';
+
+    function openLessonsModal(grade) {
+      currentModalGrade = grade || 'all';
+      updateFilterTabs();
+      document.getElementById('modalSearchInput').value = '';
+      renderModalLessons();
+      document.getElementById('lessonsModal').classList.add('open');
+    }
+
+    function closeLessonsModal() {
+      document.getElementById('lessonsModal').classList.remove('open');
+    }
+
+    function handleModalOverlayClick(e) {
+      if (e.target.id === 'lessonsModal') closeLessonsModal();
+    }
+
+    function filterModalGrade(grade) {
+      currentModalGrade = grade;
+      updateFilterTabs();
+      renderModalLessons();
+    }
+
+    function updateFilterTabs() {
+      ['all', '10', '11', '12'].forEach(g => {
+        const el = document.getElementById('tab' + (g === 'all' ? 'All' : g));
+        if (el) {
+          if (g === currentModalGrade) el.classList.add('active');
+          else el.classList.remove('active');
+        }
+      });
+      const titles = {
+        'all': 'Trọn Bộ 78 Bài Học Toán Học THPT',
+        '10': 'Chương Trình Toán Học 10 (27 Bài Học)',
+        '11': 'Chương Trình Toán Học 11 (32 Bài Học)',
+        '12': 'Chương Trình Toán Học 12 (19 Bài Học)'
+      };
+      document.getElementById('modalTitle').innerText = titles[currentModalGrade] || 'Danh Sách Bài Học';
+    }
+
+    function filterModalLessons() {
+      renderModalLessons();
+    }
+
+    function renderModalLessons() {
+      const query = (document.getElementById('modalSearchInput').value || '').toLowerCase().trim();
+      const grid = document.getElementById('modalLessonsGrid');
+      grid.innerHTML = '';
+
+      const filtered = ALL_LESSONS.filter(item => {
+        const matchGrade = (currentModalGrade === 'all' || item.grade === currentModalGrade);
+        const matchQuery = !query || item.title.toLowerCase().includes(query);
+        return matchGrade && matchQuery;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div style="color:#94a3b8; padding:20px; text-align:center; grid-column:1/-1;">Không tìm thấy bài học phù hợp.</div>';
+        return;
+      }
+
+      filtered.forEach(item => {
+        const card = document.createElement('a');
+        card.className = 'lesson-link-card';
+        card.href = item.url;
+        card.innerHTML = `
+          <span class="lesson-badge-pill badge-g${item.grade}">Lớp ${item.grade}</span>
+          <span>${item.title}</span>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('openModal')) {
+      openLessonsModal(urlParams.get('openModal'));
+    }
+
+    // PWA & Service Worker
+    let deferredPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const btn = document.getElementById('btnPwaInstall');
+      if (btn) btn.style.display = 'inline-flex';
+    });
+
+    function handlePwaInstallClick() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
+      } else {
+        alert('Để cài đặt ứng dụng, Thầy Cô và các em hãy bấm vào nút Chia sẻ (iOS Safari) hoặc biểu tượng 3 chấm (Android Chrome) rồi chọn "Thêm vào Màn hình chính" nhé!');
+      }
+    }
+
+    window.addEventListener('online', () => {
+      document.getElementById('offlineBadge').classList.remove('active');
+    });
+    window.addEventListener('offline', () => {
+      document.getElementById('offlineBadge').classList.add('active');
+    });
+    if (!navigator.onLine) {
+      document.getElementById('offlineBadge').classList.add('active');
+    }
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
