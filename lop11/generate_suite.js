@@ -1635,23 +1635,35 @@ function getQuestionRenderersJS() {
     }
 
             /* Drag */
-    function renderDrag(q, idx) {
+            function renderDrag(q, idx) {
       let sentenceHtml = q.sentence || q.text || '';
+      
+      // Step 1: Pre-normalize all placeholder formats to unique %%%SLOT_NORM_i%%% tokens
+      if (sentenceHtml.includes('%%%SLOT_1%%%') && !sentenceHtml.includes('%%%SLOT_0%%%')) {
+        for (let k = 1; k <= q.ans.length; k++) {
+          sentenceHtml = sentenceHtml.split('%%%SLOT_' + k + '%%%').join('%%%SLOT_NORM_' + (k - 1) + '%%%');
+        }
+      } else if (sentenceHtml.includes('%%%SLOT_0%%%')) {
+        for (let k = 0; k < q.ans.length; k++) {
+          sentenceHtml = sentenceHtml.split('%%%SLOT_' + k + '%%%').join('%%%SLOT_NORM_' + k + '%%%');
+        }
+      } else if (sentenceHtml.includes('[blank]')) {
+        for (let k = 0; k < q.ans.length; k++) {
+          sentenceHtml = sentenceHtml.replace('[blank]', '%%%SLOT_NORM_' + k + '%%%');
+        }
+      } else {
+        for (let k = 0; k < q.ans.length; k++) {
+          sentenceHtml = sentenceHtml.split('___' + k + '___').join('%%%SLOT_NORM_' + k + '%%%');
+          sentenceHtml = sentenceHtml.split('[' + k + ']').join('%%%SLOT_NORM_' + k + '%%%');
+        }
+      }
+
+      // Step 2: Inject slot HTML using (1), (2), (3)... labels
       for (let i = 0; i < q.ans.length; i++) {
         const val = dragFilled[i] ? dragFilled[i] : '(' + (i + 1) + ')';
         const activeCls = dragFilled[i] ? ' active' : '';
         const slotHtml = '<span class="blank-slot' + activeCls + '" id="slot' + i + '" onclick="clickDragBlank(' + i + ')">' + val + '</span>';
-        if (sentenceHtml.includes('%%%SLOT_' + (i + 1) + '%%%')) {
-          sentenceHtml = sentenceHtml.replace('%%%SLOT_' + (i + 1) + '%%%', slotHtml);
-        } else if (sentenceHtml.includes('%%%SLOT_' + i + '%%%')) {
-          sentenceHtml = sentenceHtml.replace('%%%SLOT_' + i + '%%%', slotHtml);
-        } else if (sentenceHtml.includes('___' + i + '___')) {
-          sentenceHtml = sentenceHtml.replace('___' + i + '___', slotHtml);
-        } else if (sentenceHtml.includes('[' + i + ']')) {
-          sentenceHtml = sentenceHtml.replace('[' + i + ']', slotHtml);
-        } else if (sentenceHtml.includes('[blank]')) {
-          sentenceHtml = sentenceHtml.replace('[blank]', slotHtml);
-        }
+        sentenceHtml = sentenceHtml.split('%%%SLOT_NORM_' + i + '%%%').join(slotHtml);
       }
 
       let html = '<div class="fill-sentence">' + sentenceHtml + '</div>' +
@@ -1659,7 +1671,7 @@ function getQuestionRenderersJS() {
         '<div class="word-bank">';
       q.words.forEach((w, i) => {
         const isUsed = dragFilled.includes(w);
-        html += '<button class="word-chip ' + (isUsed ? 'used' : '') + '" id="wordChip' + i + '" onclick="clickDragWord(' + i + ')">' + w + '</button>';
+        html += '<button class="word-chip' + (isUsed ? ' used' : '') + '" id="wordChip' + i + '" onclick="clickDragWord(' + i + ')">' + w + '</button>';
       });
       html += '</div>';
       return html;
@@ -2327,9 +2339,13 @@ function buildMasterHub() {
       const q = questions[idx];
       if (!q) return;
 
-            let questionTitle = q.q;
-      if (q.type === 'drag' && (questionTitle.includes('%%%SLOT') || questionTitle.includes('[blank]'))) {
-        questionTitle = questionTitle.includes('<br>') ? questionTitle.split('<br>')[0] : 'Điền từ / cụm từ thích hợp vào chỗ trống:';
+                  let questionTitle = q.q || '';
+      if (q.type === 'drag') {
+        if (questionTitle.includes('<br>')) {
+          questionTitle = questionTitle.split('<br>')[0];
+        }
+        questionTitle = questionTitle.replace(/%%%SLOT_\d+%%%/g, '').replace(/\[blank\]/g, '').trim();
+        if (!questionTitle) questionTitle = 'Điền từ / cụm từ thích hợp vào chỗ trống:';
       }
       let interactionHtml = '';
       if (q.type === 'mcq') interactionHtml = renderMCQ(q, idx);
@@ -2664,6 +2680,7 @@ function buildMasterHub() {
 </html>
 `;
   fs.writeFileSync('He_Thong_Trac_Nghiem_Toan_11.html', html, 'utf8');
+  fs.writeFileSync('index.html', html, 'utf8');
   console.log('Successfully generated upgraded Master Hub (both filenames updated)!');
 }
 
@@ -2857,9 +2874,13 @@ function buildStandaloneFile(filename, lessonId, lessonTitle, questions) {
       const q = questions[idx];
       if (!q) return;
 
-            let questionTitle = q.q;
-      if (q.type === 'drag' && (questionTitle.includes('%%%SLOT') || questionTitle.includes('[blank]'))) {
-        questionTitle = questionTitle.includes('<br>') ? questionTitle.split('<br>')[0] : 'Điền từ / cụm từ thích hợp vào chỗ trống:';
+            let questionTitle = q.q || '';
+      if (q.type === 'drag') {
+        if (questionTitle.includes('<br>')) {
+          questionTitle = questionTitle.split('<br>')[0];
+        }
+        questionTitle = questionTitle.replace(/%%%SLOT_\d+%%%/g, '').replace(/\[blank\]/g, '').trim();
+        if (!questionTitle) questionTitle = 'Điền từ / cụm từ thích hợp vào chỗ trống:';
       }
       let interactionHtml = '';
       if (q.type === 'mcq') interactionHtml = renderMCQ(q, idx);

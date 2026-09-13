@@ -1,5 +1,5 @@
 // Service Worker: Trắc Nghiệm Toán Học THPT (Offline-First PWA)
-const CACHE_NAME = 'toan-thpt-cache-v2';
+const CACHE_NAME = 'toan-thpt-cache-v3';
 
 // 1. Core Shell URLs to cache immediately on install
 const CORE_ASSETS = [
