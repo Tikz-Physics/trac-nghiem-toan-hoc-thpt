@@ -718,9 +718,21 @@
       document.getElementById('offlineBadge').classList.add('active');
     }
 
+    if ('caches' in window) {
+      caches.keys().then(keys => {
+        keys.forEach(k => {
+          if (k !== 'toan-thpt-cache-v2') caches.delete(k);
+        });
+      }).catch(() => {});
+    }
+
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').catch(() => {});
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => {
+            reg.update();
+          })
+          .catch(() => {});
       });
     }
   </script>

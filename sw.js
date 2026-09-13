@@ -1,5 +1,5 @@
 // Service Worker: Trắc Nghiệm Toán Học THPT (Offline-First PWA)
-const CACHE_NAME = 'toan-thpt-cache-v1';
+const CACHE_NAME = 'toan-thpt-cache-v2';
 
 // 1. Core Shell URLs to cache immediately on install
 const CORE_ASSETS = [
@@ -142,31 +142,41 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  event.respondWith(
-    caches.match(event.request, { ignoreSearch: true }).then(cachedResponse => {
-      if (cachedResponse) {
-        fetch(event.request).then(networkResponse => {
-          if (networkResponse && networkResponse.status === 200) {
-            caches.open(CACHE_NAME).then(c => c.put(event.request, networkResponse));
-          }
-        }).catch(() => {});
-        return cachedResponse;
-      }
-
-      return fetch(event.request).then(networkResponse => {
-        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-          return networkResponse;
+  // 1. Navigation requests (HTML pages): Try network FIRST so updates show immediately
+  if (event.request.mode === 'navigate' || event.request.destination === 'document') {
+    event.respondWith(
+      fetch(event.request).then(networkResponse => {
+        if (networkResponse && networkResponse.status === 200) {
+          const resClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(event.request, resClone);
+          });
         }
-        const responseToCache = networkResponse.clone();
-        caches.open(CACHE_NAME).then(cache => {
-          cache.put(event.request, responseToCache);
-        });
         return networkResponse;
       }).catch(() => {
-        if (event.request.mode === 'navigate') {
-          return caches.match('./index.html');
+        // If network completely offline, serve from cache!
+        return caches.match(event.request).then(cached => {
+          return cached || caches.match('./index.html');
+        });
+      })
+    );
+    return;
+  }
+
+  // 2. Static assets (images, scripts): Stale-while-revalidate
+  event.respondWith(
+    caches.match(event.request, { ignoreSearch: true }).then(cachedResponse => {
+      const networkFetch = fetch(event.request).then(networkResponse => {
+        if (networkResponse && networkResponse.status === 200) {
+          const resClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(event.request, resClone);
+          });
         }
-      });
+        return networkResponse;
+      }).catch(() => null);
+
+      return cachedResponse || networkFetch;
     })
   );
 });
