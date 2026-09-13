@@ -971,7 +971,7 @@ function getModalsHTML() {
         <p style="color:#94a3b8; font-size:0.88rem; margin-bottom:12px; line-height:1.5;">
           Nhập tên Thầy / Cô để hiển thị trên tiêu đề bài thi, lời giải chi tiết và trong báo cáo học tập của học sinh:
         </p>
-        <input type="text" id="teacherNameInput" class="custom-input" placeholder="Ví dụ: Thầy Trần Mạnh Tùng, Cô Nguyễn Thị Lan..." />
+        <input type="text" id="teacherNameInput" class="custom-input" placeholder="Ví dụ: Thầy/Cô......" />
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:16px; gap:10px;">
           <button class="btn-modal-sec" onclick="resetTeacherName()">Đặt lại mặc định</button>
           <button class="btn-modal-pri" onclick="saveTeacherName()">Lưu & Áp Dụng 💾</button>
@@ -1291,6 +1291,101 @@ function getBaseJS() {
       animate();
     }
 
+    
+    function stripPrefix(text, type) {
+      if (!text) return '';
+      let s = String(text).trim();
+      if (type === 'num') {
+        return s.replace(/^[0-9]+[.)][ \t]*/, '');
+      } else if (type === 'alpha') {
+        return s.replace(/^[a-eA-E][.)][ \t]*/, '');
+      }
+      return s;
+    }
+
+        function isMatchPairCorrect(q, k, v) {
+      if (!q || !q.ans) return false;
+      const kIdx = parseInt(k);
+      const vIdx = parseInt(v);
+      const letters = ['A', 'B', 'C', 'D', 'E'];
+
+      if (Array.isArray(q.ans)) {
+        return q.ans[kIdx] === vIdx;
+      }
+
+      if (q.ans['1'] !== undefined && q.ans['0'] === undefined && q.ans[0] === undefined) {
+        const exp = q.ans[String(kIdx + 1)];
+        if (typeof exp === 'string') return exp.toUpperCase() === letters[vIdx];
+        if (typeof exp === 'number') return (exp === vIdx || exp === vIdx + 1);
+        return false;
+      }
+
+      const exp = (q.ans[String(kIdx)] !== undefined) ? q.ans[String(kIdx)] : q.ans[kIdx];
+      if (exp !== undefined) {
+        if (typeof exp === 'number') return exp === vIdx;
+        if (typeof exp === 'string') return exp.toUpperCase() === letters[vIdx];
+      }
+
+      return false;
+    }
+
+    function getCorrectAnswerText(q) {
+      if (!q) return '';
+      if (q.correctText && typeof q.correctText === 'string' && q.correctText.trim() && q.correctText !== 'undefined') {
+        return q.correctText;
+      }
+      const letters = ['A', 'B', 'C', 'D', 'E'];
+      if (q.type === 'mcq') {
+        const ansIdx = q.ans || 0;
+        const optVal = (q.opts && q.opts[ansIdx]) ? q.opts[ansIdx] : '';
+        return 'Phương án ' + letters[ansIdx] + ': ' + optVal;
+      }
+      if (q.type === 'tf') {
+        const subLabels = ['a)', 'b)', 'c)', 'd)'];
+        return (q.stmts || []).map((st, i) => {
+          let expected = null;
+          if (q.ans && Array.isArray(q.ans)) expected = q.ans[i];
+          else if (q.items && q.items[i]) expected = q.items[i].ans;
+          else if (st && st.a !== undefined) expected = st.a;
+          return subLabels[i] + ' ' + (expected ? 'Đúng' : 'Sai');
+        }).join(' • ');
+      }
+      if (q.type === 'match') {
+        const pairs = [];
+        for (let k = 0; k < (q.colA || []).length; k++) {
+          let vMatch = null;
+          for (let v = 0; v < (q.colB || []).length; v++) {
+            if (isMatchPairCorrect(q, k, v)) { vMatch = v; break; }
+          }
+          pairs.push((k + 1) + '-' + (vMatch !== null ? letters[vMatch] : '?'));
+        }
+        return pairs.join(' • ');
+      }
+      if (q.type === 'drag') {
+        return (q.ans || []).map((target, i) => {
+          const word = (typeof target === 'number' && q.words) ? q.words[target] : target;
+          return '(' + (i + 1) + ') ' + word;
+        }).join(' • ');
+      }
+      return '';
+    }
+
+    function getExplanationText(q) {
+      if (!q) return '';
+      if (q.exp && typeof q.exp === 'string' && q.exp.trim() && q.exp !== 'undefined' && q.exp !== '...') {
+        return q.exp;
+      }
+      if (q.type === 'tf' && q.items && q.items.length) {
+        const subLabels = ['a', 'b', 'c', 'd'];
+        return q.items.map((it, idx) => {
+          const lbl = subLabels[idx] || (idx + 1);
+          const statusStr = it.ans ? '[Đúng]' : '[Sai]';
+          return '• <b>Ý ' + lbl + ') ' + statusStr + ':</b> ' + (it.exp || '');
+        }).join('<br>');
+      }
+      return q.exp || 'Xem lại kiến thức lí thuyết trong SGK.';
+    }
+
     // Fisher-Yates Shuffling
     function cloneAndShuffleQuestions(source) {
       const cloned = JSON.parse(JSON.stringify(source));
@@ -1305,13 +1400,16 @@ function getBaseJS() {
           q.opts = items.map(it => it.text);
           q.ans = items.findIndex(it => it.isCorrect);
           q.correctText = 'Phương án ' + String.fromCharCode(65 + q.ans) + ': ' + originalCorrectOpt;
+        } else {
+          q.correctText = getCorrectAnswerText(q);
         }
+        q.exp = getExplanationText(q);
       });
       return cloned;
     }
 
     // Teacher Name Management
-    let teacherName = 'Thầy Trần Mạnh Tùng';
+    let teacherName = 'Giáo viên';
     function initTeacherName() {
       try {
         const urlParams = new URLSearchParams(window.location.search);
@@ -1364,7 +1462,7 @@ function getBaseJS() {
 
     function resetTeacherName() {
       AudioEngine.playClick();
-      teacherName = 'Thầy Trần Mạnh Tùng';
+      teacherName = 'Giáo viên';
       SafeStorage.setItem('VT12_CUSTOM_TEACHER', teacherName);
       updateTeacherDisplay();
       closeTeacherModal();
@@ -1415,15 +1513,16 @@ function getQuestionRenderersJS() {
       }
     }
 
-    /* TF */
+        /* TF */
     function renderTF(q, idx) {
       let html = '<div class="tf-table">';
       const subLabels = ['a)', 'b)', 'c)', 'd)'];
       q.stmts.forEach((st, sIdx) => {
         const stmtText = (typeof st === 'string') ? st : (st.t || '');
+        const cleanStmt = stripPrefix(stmtText, 'alpha');
         const savedVal = (examUserAnswers[idx] && examUserAnswers[idx].val) ? examUserAnswers[idx].val[sIdx] : null;
         html += '<div class="tf-row" id="tfRow' + sIdx + '">' +
-          '<div class="tf-stmt-text"><b>' + subLabels[sIdx] + '</b> ' + stmtText + '</div>' +
+          '<div class="tf-stmt-text"><b>' + subLabels[sIdx] + '</b> ' + cleanStmt + '</div>' +
           '<div class="tf-btns">' +
             '<button class="tf-btn ' + (savedVal === true ? 'selected-t' : '') + '" id="btnT' + sIdx + '" onclick="selectTF(' + sIdx + ', true)">ĐÚNG</button>' +
             '<button class="tf-btn ' + (savedVal === false ? 'selected-f' : '') + '" id="btnF' + sIdx + '" onclick="selectTF(' + sIdx + ', false)">SAI</button>' +
@@ -1447,18 +1546,18 @@ function getQuestionRenderersJS() {
       }
     }
 
-    /* Match */
+        /* Match */
     function renderMatch(q, idx) {
       let html = '<div class="match-grid">' +
-        '<div class="match-col"><div style="color:#38bdf8; font-weight:800; font-size:0.82rem; margin-bottom:2px;">CỘT A (Đại lượng / Đặc điểm)</div>';
+        '<div class="match-col"><div style="color:#38bdf8; font-weight:800; font-size:0.82rem; margin-bottom:2px;">CỘT A (Khái niệm / Đại lượng)</div>';
       q.colA.forEach((item, i) => {
-        const cleanItem = String(item).replace(/^\s*\d+[\.\)]\s*/, '');
+        const cleanItem = stripPrefix(item, 'num');
         html += '<div class="match-card" id="matchA' + i + '" onclick="clickMatchLeft(' + i + ')"><b>' + (i+1) + '.</b> ' + cleanItem + '</div>';
       });
-      html += '</div><div class="match-col"><div style="color:#06b6d4; font-weight:800; font-size:0.82rem; margin-bottom:2px;">CỘT B (Ý nghĩa / Đơn vị)</div>';
+      html += '</div><div class="match-col"><div style="color:#06b6d4; font-weight:800; font-size:0.82rem; margin-bottom:2px;">CỘT B (Ý nghĩa / Công thức)</div>';
       q.colB.forEach((item, i) => {
         const letters = ['A', 'B', 'C', 'D', 'E'];
-        const cleanItem = String(item).replace(/^\s*[A-E][\.\)]\s*/, '');
+        const cleanItem = stripPrefix(item, 'alpha');
         html += '<div class="match-card" id="matchB' + i + '" onclick="clickMatchRight(' + i + ')"><b>' + letters[i] + '.</b> ' + cleanItem + '</div>';
       });
       html += '</div></div>';
@@ -1535,30 +1634,24 @@ function getQuestionRenderersJS() {
       }
     }
 
-    /* Drag */
+            /* Drag */
     function renderDrag(q, idx) {
       let sentenceHtml = q.sentence || q.text || '';
-      // Step 1: Pre-tokenize placeholders into unique tokens to eliminate substring nesting collisions
-      for (let i = 0; i < q.ans.length; i++) {
-        const p1 = '___' + i + '___';
-        const p2 = '[' + i + ']';
-        const p3 = '[blank]';
-        const tok = '%%%SLOT_' + i + '%%%';
-        if (sentenceHtml.includes(p1)) {
-          sentenceHtml = sentenceHtml.replace(p1, tok);
-        } else if (sentenceHtml.includes(p2)) {
-          sentenceHtml = sentenceHtml.replace(p2, tok);
-        } else if (sentenceHtml.includes(p3)) {
-          sentenceHtml = sentenceHtml.replace(p3, tok);
-        }
-      }
-
-      // Step 2: Replace tokens with slot HTML using (1), (2), (3) notation
       for (let i = 0; i < q.ans.length; i++) {
         const val = dragFilled[i] ? dragFilled[i] : '(' + (i + 1) + ')';
         const activeCls = dragFilled[i] ? ' active' : '';
         const slotHtml = '<span class="blank-slot' + activeCls + '" id="slot' + i + '" onclick="clickDragBlank(' + i + ')">' + val + '</span>';
-        sentenceHtml = sentenceHtml.replace('%%%SLOT_' + i + '%%%', slotHtml);
+        if (sentenceHtml.includes('%%%SLOT_' + (i + 1) + '%%%')) {
+          sentenceHtml = sentenceHtml.replace('%%%SLOT_' + (i + 1) + '%%%', slotHtml);
+        } else if (sentenceHtml.includes('%%%SLOT_' + i + '%%%')) {
+          sentenceHtml = sentenceHtml.replace('%%%SLOT_' + i + '%%%', slotHtml);
+        } else if (sentenceHtml.includes('___' + i + '___')) {
+          sentenceHtml = sentenceHtml.replace('___' + i + '___', slotHtml);
+        } else if (sentenceHtml.includes('[' + i + ']')) {
+          sentenceHtml = sentenceHtml.replace('[' + i + ']', slotHtml);
+        } else if (sentenceHtml.includes('[blank]')) {
+          sentenceHtml = sentenceHtml.replace('[blank]', slotHtml);
+        }
       }
 
       let html = '<div class="fill-sentence">' + sentenceHtml + '</div>' +
@@ -1566,14 +1659,17 @@ function getQuestionRenderersJS() {
         '<div class="word-bank">';
       q.words.forEach((w, i) => {
         const isUsed = dragFilled.includes(w);
-        html += '<button class="word-chip ' + (isUsed ? 'used' : '') + '" id="wordChip' + i + '" onclick="clickDragWord(\\'' + w.replace(/'/g, "\\\\'") + '\\', ' + i + ')">' + w + '</button>';
+        html += '<button class="word-chip ' + (isUsed ? 'used' : '') + '" id="wordChip' + i + '" onclick="clickDragWord(' + i + ')">' + w + '</button>';
       });
       html += '</div>';
       return html;
     }
 
-    function clickDragWord(word, chipIdx) {
+    function clickDragWord(chipIdx) {
       AudioEngine.playClick();
+      const q = questions[currentQ];
+      if (!q || !q.words) return;
+      const word = q.words[chipIdx];
       dragActiveWord = word;
       document.querySelectorAll('.word-chip').forEach(c => c.classList.remove('active-chip'));
       const chip = document.getElementById('wordChip' + chipIdx);
@@ -1640,10 +1736,7 @@ function getQuestionRenderersJS() {
       } else if (q.type === 'match') {
         let correctPairs = 0;
         for (const [k, v] of Object.entries(val)) {
-          const kIdx = parseInt(k);
-          if (q.ans && q.ans[kIdx] !== undefined) {
-            if (q.ans[kIdx] === v || (q.colB && q.colB[v] === q.ans[kIdx])) correctPairs++;
-          }
+          if (isMatchPairCorrect(q, k, v)) correctPairs++;
         }
         score = (correctPairs / q.colA.length) * 1.0;
         isFullyCorrect = (correctPairs === q.colA.length);
@@ -1661,15 +1754,17 @@ function getQuestionRenderersJS() {
       renderMiniMap();
     }
 
-    /* Check Answer in Practice Mode */
+        /* Check Answer in Practice Mode */
     function renderExplanationHTML(q, badgeClass, statusIcon) {
+      const correctText = getCorrectAnswerText(q);
+      const expContent = getExplanationText(q);
       return '<div class="explanation-panel" id="expPanel">' +
         '<div class="answer-badge-card ' + badgeClass + '">' +
           '<span>' + statusIcon + '</span>' +
-          '<span style="border-left: 2px solid rgba(255,255,255,0.2); padding-left: 10px;">ĐÁP ÁN: ' + q.correctText + '</span>' +
+          '<span style="border-left: 2px solid rgba(255,255,255,0.2); padding-left: 10px;">ĐÁP ÁN: ' + correctText + '</span>' +
         '</div>' +
         '<div class="exp-title-row">' +
-          '<span>💡 Lời giải chi tiết từ <span class="teacher-name-exp">' + teacherName + '</span>:</span>' +
+          '<span>💡 Lời giải chi tiết:</span>' +
           '<div class="exp-zoom-controls">' +
             '<button type="button" class="btn-exp-zoom" onclick="changeExpFontSize(-1)" title="Thu nhỏ cỡ chữ (A-)">A-</button>' +
             '<span class="exp-zoom-level" id="expZoomLevelDisplay">' + Math.round(EXP_FONT_SCALES[expScaleIdx] * 100) + '%</span>' +
@@ -1679,7 +1774,7 @@ function getQuestionRenderersJS() {
             '</button>' +
           '</div>' +
         '</div>' +
-        '<div class="exp-body-content" id="expBodyContent">' + q.exp + '</div>' +
+        '<div class="exp-body-content" id="expBodyContent">' + expContent + '</div>' +
       '</div>';
     }
 
@@ -1728,10 +1823,7 @@ function getQuestionRenderersJS() {
         }
         let correctPairs = 0;
         for (const [k, v] of Object.entries(matchPairs)) {
-          const kIdx = parseInt(k);
-          if (q.ans && q.ans[kIdx] !== undefined) {
-            if (q.ans[kIdx] === v || (q.colB && q.colB[v] === q.ans[kIdx])) correctPairs++;
-          }
+          if (isMatchPairCorrect(q, k, v)) correctPairs++;
         }
         earned = (correctPairs / q.colA.length) * 1.0;
         isFullyCorrect = (correctPairs === q.colA.length);
@@ -1946,7 +2038,7 @@ function buildMasterHub() {
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#070a14" />
-  <title>Hệ Thống Trắc Nghiệm Tương Tác Toán Học 12 | Thầy Trần Mạnh Tùng</title>
+  <title>Hệ Thống Trắc Nghiệm Tương Tác Toán Học 12</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -1965,7 +2057,7 @@ function buildMasterHub() {
         <div class="header-group">
           <div class="teacher-badge" id="teacherBadge" onclick="openTeacherModal()" title="Nhấp để thay đổi tên giáo viên">
             <span>👨‍🏫</span>
-            <span id="teacherNameDisplay">Thầy Trần Mạnh Tùng</span>
+            <span id="teacherNameDisplay">Giáo viên</span>
             <span class="btn-edit-pen">✏️</span>
           </div>
 
@@ -2216,6 +2308,10 @@ function buildMasterHub() {
       const q = questions[idx];
       if (!q) return;
 
+            let questionTitle = q.q;
+      if (q.type === 'drag' && (questionTitle.includes('%%%SLOT') || questionTitle.includes('[blank]'))) {
+        questionTitle = questionTitle.includes('<br>') ? questionTitle.split('<br>')[0] : 'Điền từ / cụm từ thích hợp vào chỗ trống:';
+      }
       let interactionHtml = '';
       if (q.type === 'mcq') interactionHtml = renderMCQ(q, idx);
       else if (q.type === 'tf') interactionHtml = renderTF(q, idx);
@@ -2251,7 +2347,7 @@ function buildMasterHub() {
                 '<span class="q-meta-badge">Câu ' + (idx + 1) + '/' + questions.length + ' • ' + getTypeName(q.type) + '</span>' +
                 '<span class="q-meta-score">1.0 Điểm</span>' +
               '</div>' +
-              '<div class="q-title">' + q.q + '</div>' +
+              '<div class="q-title">' + questionTitle + '</div>' +
               svgHtml +
             '</div>' +
             '<div class="quiz-pane-right">' +
@@ -2267,7 +2363,7 @@ function buildMasterHub() {
             '<span class="q-meta-badge">Câu ' + (idx + 1) + '/' + questions.length + ' • ' + getTypeName(q.type) + '</span>' +
             '<span class="q-meta-score">1.0 Điểm</span>' +
           '</div>' +
-          '<div class="q-title">' + q.q + '</div>' +
+          '<div class="q-title">' + questionTitle + '</div>' +
           '<div class="q-interaction-wrap">' + interactionHtml + '</div>' +
           '<div class="quiz-actions" id="actionWrap">' + actionButtonsHtml + '</div>' +
           '<div id="explanationPlaceholder"></div>' +
@@ -2334,7 +2430,7 @@ function buildMasterHub() {
         cmt.textContent = 'Em nắm rất chắc lý thuyết và phương pháp tính toán. Hãy rà soát thêm câu Đúng/Sai và đồ thị để đạt điểm 10 tuyệt đối!';
       } else if (totalPoints >= 5.0) {
         title.textContent = 'Đạt yêu cầu căn bản! 🎯';
-        cmt.textContent = 'Em đã hiểu các khái niệm cơ bản. Hãy xem lại kỹ lời giải chi tiết của ' + teacherName + ' để củng cố các câu còn nhầm lẫn nhé!';
+        cmt.textContent = 'Em đã hiểu các khái niệm cơ bản. Hãy xem lại kỹ lời giải chi tiết' + ' để củng cố các câu còn nhầm lẫn nhé!';
       } else {
         title.textContent = 'Cần củng cố thêm lý thuyết! 📚';
         cmt.textContent = 'Em hãy làm lại bài thử thách một lần nữa để thành thạo kiến thức nhé!';
@@ -2371,7 +2467,7 @@ function buildMasterHub() {
           '<td>' + getTypeName(q.type) + '</td>' +
           '<td>' + resText + '</td>' +
           '<td><b>+' + score.toFixed(2) + '</b></td>' +
-          '<td><span style="color:#38bdf8; font-weight:700;">' + q.correctText + '</span></td>' +
+          '<td><span style="color:#38bdf8; font-weight:700;">' + getCorrectAnswerText(q) + '</span></td>' +
         '</tr>';
       });
 
@@ -2479,8 +2575,66 @@ function buildMasterHub() {
       const p = new URLSearchParams(window.location.search);
       if (p.has('lesson')) loadLesson(parseInt(p.get('lesson')));
       if (p.has('q')) jumpToQuestion(parseInt(p.get('q')));
-      if (p.get('test') === 'correct') { setTimeout(() => { selectMCQ(questions[currentQ].ans); checkAnswer(currentQ); }, 150); }
-      if (p.get('test') === 'wrong') { setTimeout(() => { selectMCQ((questions[currentQ].ans + 1) % 4); checkAnswer(currentQ); }, 150); }
+            if (p.get('test') === 'correct') {
+        setTimeout(() => {
+          const q = questions[currentQ];
+          if (q.type === 'mcq') {
+            selectMCQ(q.ans);
+          } else if (q.type === 'tf') {
+            q.stmts.forEach((st, sIdx) => {
+              let expected = true;
+              if (q.ans && Array.isArray(q.ans)) expected = q.ans[sIdx];
+              else if (q.items && q.items[sIdx]) expected = q.items[sIdx].ans;
+              else if (st && st.a !== undefined) expected = st.a;
+              selectTF(sIdx, !!expected);
+            });
+          } else if (q.type === 'match') {
+            for (let k = 0; k < q.colA.length; k++) {
+              for (let v = 0; v < q.colB.length; v++) {
+                if (isMatchPairCorrect(q, k, v)) {
+                  matchPairs[k] = v;
+                  break;
+                }
+              }
+            }
+            refreshMatchUI();
+          } else if (q.type === 'drag') {
+            q.ans.forEach((ansTarget, aIdx) => {
+              const word = (typeof ansTarget === 'number' && q.words) ? q.words[ansTarget] : ansTarget;
+              dragFilled[aIdx] = word;
+            });
+            refreshDragUI();
+          }
+          checkAnswer(currentQ);
+        }, 150);
+      }
+      if (p.get('test') === 'wrong') {
+        setTimeout(() => {
+          const q = questions[currentQ];
+          if (q.type === 'mcq') {
+            selectMCQ((q.ans + 1) % 4);
+          } else if (q.type === 'tf') {
+            q.stmts.forEach((st, sIdx) => {
+              let expected = true;
+              if (q.ans && Array.isArray(q.ans)) expected = q.ans[sIdx];
+              else if (q.items && q.items[sIdx]) expected = q.items[sIdx].ans;
+              else if (st && st.a !== undefined) expected = st.a;
+              selectTF(sIdx, !expected);
+            });
+          } else if (q.type === 'match') {
+            for (let k = 0; k < q.colA.length; k++) {
+              matchPairs[k] = (k + 1) % q.colB.length;
+            }
+            refreshMatchUI();
+          } else if (q.type === 'drag') {
+            q.ans.forEach((ansTarget, aIdx) => {
+              dragFilled[aIdx] = q.words[(aIdx + 1) % q.words.length];
+            });
+            refreshDragUI();
+          }
+          checkAnswer(currentQ);
+        }, 150);
+      }
       if (p.get('test') === 'dashboard') { setTimeout(() => { toggleDashboard(); }, 150); }
     });
   </script>
@@ -2502,7 +2656,7 @@ function buildStandaloneFile(filename, lessonId, lessonTitle, questions) {
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#070a14" />
-  <title>Toán Học 12 - ${lessonTitle} | Thầy Trần Mạnh Tùng</title>
+  <title>Toán Học 12 - ${lessonTitle}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -2522,7 +2676,7 @@ function buildStandaloneFile(filename, lessonId, lessonTitle, questions) {
           <a href="./He_Thong_Trac_Nghiem_Toan_12.html" class="nav-btn-hub">← Cổng Tổng Hợp</a>
           <div class="teacher-badge" id="teacherBadge" onclick="openTeacherModal()" title="Nhấp để thay đổi tên giáo viên">
             <span>👨‍🏫</span>
-            <span id="teacherNameDisplay">Thầy Trần Mạnh Tùng</span>
+            <span id="teacherNameDisplay">Giáo viên</span>
             <span class="btn-edit-pen">✏️</span>
           </div>
           <div class="font-scale-group" title="Tăng/giảm kích cỡ chữ">
@@ -2681,6 +2835,10 @@ function buildStandaloneFile(filename, lessonId, lessonTitle, questions) {
       const q = questions[idx];
       if (!q) return;
 
+            let questionTitle = q.q;
+      if (q.type === 'drag' && (questionTitle.includes('%%%SLOT') || questionTitle.includes('[blank]'))) {
+        questionTitle = questionTitle.includes('<br>') ? questionTitle.split('<br>')[0] : 'Điền từ / cụm từ thích hợp vào chỗ trống:';
+      }
       let interactionHtml = '';
       if (q.type === 'mcq') interactionHtml = renderMCQ(q, idx);
       else if (q.type === 'tf') interactionHtml = renderTF(q, idx);
@@ -2716,7 +2874,7 @@ function buildStandaloneFile(filename, lessonId, lessonTitle, questions) {
                 '<span class="q-meta-badge">Câu ' + (idx + 1) + '/' + questions.length + ' • ' + getTypeName(q.type) + '</span>' +
                 '<span class="q-meta-score">1.0 Điểm</span>' +
               '</div>' +
-              '<div class="q-title">' + q.q + '</div>' +
+              '<div class="q-title">' + questionTitle + '</div>' +
               svgHtml +
             '</div>' +
             '<div class="quiz-pane-right">' +
@@ -2732,7 +2890,7 @@ function buildStandaloneFile(filename, lessonId, lessonTitle, questions) {
             '<span class="q-meta-badge">Câu ' + (idx + 1) + '/' + questions.length + ' • ' + getTypeName(q.type) + '</span>' +
             '<span class="q-meta-score">1.0 Điểm</span>' +
           '</div>' +
-          '<div class="q-title">' + q.q + '</div>' +
+          '<div class="q-title">' + questionTitle + '</div>' +
           '<div class="q-interaction-wrap">' + interactionHtml + '</div>' +
           '<div class="quiz-actions" id="actionWrap">' + actionButtonsHtml + '</div>' +
           '<div id="explanationPlaceholder"></div>' +
@@ -2799,7 +2957,7 @@ function buildStandaloneFile(filename, lessonId, lessonTitle, questions) {
         cmt.textContent = 'Em nắm rất chắc lý thuyết và phương pháp tính toán. Hãy rà soát thêm câu Đúng/Sai và đồ thị để đạt điểm 10 tuyệt đối!';
       } else if (totalPoints >= 5.0) {
         title.textContent = 'Đạt yêu cầu căn bản! 🎯';
-        cmt.textContent = 'Em đã hiểu các khái niệm cơ bản. Hãy xem lại kỹ lời giải chi tiết của ' + teacherName + ' để củng cố các câu còn nhầm lẫn nhé!';
+        cmt.textContent = 'Em đã hiểu các khái niệm cơ bản. Hãy xem lại kỹ lời giải chi tiết' + ' để củng cố các câu còn nhầm lẫn nhé!';
       } else {
         title.textContent = 'Cần củng cố thêm lý thuyết! 📚';
         cmt.textContent = 'Em hãy làm lại bài thử thách một lần nữa để thành thạo kiến thức nhé!';
@@ -2836,7 +2994,7 @@ function buildStandaloneFile(filename, lessonId, lessonTitle, questions) {
           '<td>' + getTypeName(q.type) + '</td>' +
           '<td>' + resText + '</td>' +
           '<td><b>+' + score.toFixed(2) + '</b></td>' +
-          '<td><span style="color:#38bdf8; font-weight:700;">' + q.correctText + '</span></td>' +
+          '<td><span style="color:#38bdf8; font-weight:700;">' + getCorrectAnswerText(q) + '</span></td>' +
         '</tr>';
       });
 
@@ -2865,8 +3023,66 @@ function buildStandaloneFile(filename, lessonId, lessonTitle, questions) {
 
       const p = new URLSearchParams(window.location.search);
       if (p.has('q')) jumpToQuestion(parseInt(p.get('q')));
-      if (p.get('test') === 'correct') { setTimeout(() => { selectMCQ(questions[currentQ].ans); checkAnswer(currentQ); }, 150); }
-      if (p.get('test') === 'wrong') { setTimeout(() => { selectMCQ((questions[currentQ].ans + 1) % 4); checkAnswer(currentQ); }, 150); }
+            if (p.get('test') === 'correct') {
+        setTimeout(() => {
+          const q = questions[currentQ];
+          if (q.type === 'mcq') {
+            selectMCQ(q.ans);
+          } else if (q.type === 'tf') {
+            q.stmts.forEach((st, sIdx) => {
+              let expected = true;
+              if (q.ans && Array.isArray(q.ans)) expected = q.ans[sIdx];
+              else if (q.items && q.items[sIdx]) expected = q.items[sIdx].ans;
+              else if (st && st.a !== undefined) expected = st.a;
+              selectTF(sIdx, !!expected);
+            });
+          } else if (q.type === 'match') {
+            for (let k = 0; k < q.colA.length; k++) {
+              for (let v = 0; v < q.colB.length; v++) {
+                if (isMatchPairCorrect(q, k, v)) {
+                  matchPairs[k] = v;
+                  break;
+                }
+              }
+            }
+            refreshMatchUI();
+          } else if (q.type === 'drag') {
+            q.ans.forEach((ansTarget, aIdx) => {
+              const word = (typeof ansTarget === 'number' && q.words) ? q.words[ansTarget] : ansTarget;
+              dragFilled[aIdx] = word;
+            });
+            refreshDragUI();
+          }
+          checkAnswer(currentQ);
+        }, 150);
+      }
+      if (p.get('test') === 'wrong') {
+        setTimeout(() => {
+          const q = questions[currentQ];
+          if (q.type === 'mcq') {
+            selectMCQ((q.ans + 1) % 4);
+          } else if (q.type === 'tf') {
+            q.stmts.forEach((st, sIdx) => {
+              let expected = true;
+              if (q.ans && Array.isArray(q.ans)) expected = q.ans[sIdx];
+              else if (q.items && q.items[sIdx]) expected = q.items[sIdx].ans;
+              else if (st && st.a !== undefined) expected = st.a;
+              selectTF(sIdx, !expected);
+            });
+          } else if (q.type === 'match') {
+            for (let k = 0; k < q.colA.length; k++) {
+              matchPairs[k] = (k + 1) % q.colB.length;
+            }
+            refreshMatchUI();
+          } else if (q.type === 'drag') {
+            q.ans.forEach((ansTarget, aIdx) => {
+              dragFilled[aIdx] = q.words[(aIdx + 1) % q.words.length];
+            });
+            refreshDragUI();
+          }
+          checkAnswer(currentQ);
+        }, 150);
+      }
     });
   </script>
 </body>

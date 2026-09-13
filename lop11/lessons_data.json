@@ -10,23 +10,24 @@
         "<span class=\"fraction\"><span class=\"numerator\">5π</span><span class=\"denominator\">3</span></span> rad",
         "<span class=\"fraction\"><span class=\"numerator\">3π</span><span class=\"denominator\">4</span></span> rad"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: <span class=\"fraction\"><span class=\"numerator\">5π</span><span class=\"denominator\">6</span></span> rad"
     },
     {
       "type": "match",
       "q": "Ghép các công thức lượng giác cơ bản (Cột A) với biểu thức tương ứng (Cột B):",
       "exp": "• 4 hằng đẳng thức lượng giác cơ bản (SGK Toán 11).",
       "colA": [
-        "1. sin² α + cos² α",
-        "2. 1 + tan² α",
-        "3. 1 + cot² α",
-        "4. tan α · cot α"
+        "sin² α + cos² α",
+        "1 + tan² α",
+        "1 + cot² α",
+        "tan α · cot α"
       ],
       "colB": [
-        "A. = 1 (với mọi α)",
-        "B. = 1 / cos² α (với α ≠ π/2 + kπ)",
-        "C. = 1 / sin² α (với α ≠ kπ)",
-        "D. = 1 (với α ≠ kπ/2)"
+        "= 1 (với mọi α)",
+        "= 1 / cos² α (với α ≠ π/2 + kπ)",
+        "= 1 / sin² α (với α ≠ kπ)",
+        "= 1 (với α ≠ kπ/2)"
       ],
       "pairs": [
         {
@@ -51,17 +52,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Cho góc lượng giác α thỏa mãn π/2 < α < π và sin α = 3/5. Xét tính đúng - sai:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> π/2 < α < π là góc phần tư thứ II (Đúng).<br>• <b>Ý b) [Đúng]:</b> Trong góc phần tư II, hoành độ điểm biểu diễn âm nên cos α < 0 (Đúng).<br>• <b>Ý c) [Đúng]:</b> cos² α = 1 - (3/5)² = 16/25. Vì cos α < 0 nên cos α = -4/5 (Đúng).<br>• <b>Ý d) [Sai]:</b> tan α = sin α / cos α = (3/5) / (-4/5) = -3/4 (Sai).",
       "stmts": [
-        "a) Góc α thuộc góc phần tư thứ II.",
-        "b) cos α < 0.",
-        "c) cos α = -4/5.",
-        "d) tan α = 3/4."
+        "Góc α thuộc góc phần tư thứ II.",
+        "cos α < 0.",
+        "cos α = -4/5.",
+        "tan α = 3/4."
       ],
       "ans": [
         true,
@@ -71,26 +73,27 @@
       ],
       "items": [
         {
-          "text": "a) Góc α thuộc góc phần tư thứ II.",
+          "text": "Góc α thuộc góc phần tư thứ II.",
           "ans": true,
           "exp": "π/2 < α < π là góc phần tư thứ II (Đúng)."
         },
         {
-          "text": "b) cos α < 0.",
+          "text": "cos α < 0.",
           "ans": true,
           "exp": "Trong góc phần tư II, hoành độ điểm biểu diễn âm nên cos α < 0 (Đúng)."
         },
         {
-          "text": "c) cos α = -4/5.",
+          "text": "cos α = -4/5.",
           "ans": true,
           "exp": "cos² α = 1 - (3/5)² = 16/25. Vì cos α < 0 nên cos α = -4/5 (Đúng)."
         },
         {
-          "text": "d) tan α = 3/4.",
+          "text": "tan α = 3/4.",
           "ans": false,
           "exp": "tan α = sin α / cos α = (3/5) / (-4/5) = -3/4 (Sai)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -102,13 +105,14 @@
         "1/3",
         "1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 3"
     },
     {
       "type": "drag",
-      "q": "Kéo các giá trị lượng giác chính xác vào chỗ trống:<br>• sin(π/6) = %%%SLOT_1%%%.<br>• cos(π/4) = %%%SLOT_2%%%.<br>• tan(π/3) = %%%SLOT_3%%%.",
+      "q": "Kéo các giá trị lượng giác chính xác vào chỗ trống:",
       "exp": "• sin 30° = 1/2.<br>• cos 45° = √2/2.<br>• tan 60° = √3.",
-      "sentence": "Kéo các giá trị lượng giác chính xác vào chỗ trống:<br>• sin(π/6) = %%%SLOT_1%%%.<br>• cos(π/4) = %%%SLOT_2%%%.<br>• tan(π/3) = %%%SLOT_3%%%.",
+      "sentence": "• sin(π/6) = %%%SLOT_1%%%.<br>• cos(π/4) = %%%SLOT_2%%%.<br>• tan(π/3) = %%%SLOT_3%%%.",
       "words": [
         "1/2",
         "√2/2",
@@ -132,7 +136,8 @@
         "1/2",
         "√2/2",
         "√3"
-      ]
+      ],
+      "correctText": "(1) 1/2 • (2) √2/2 • (3) √3"
     },
     {
       "type": "mcq",
@@ -144,7 +149,8 @@
         "18π cm",
         "12π cm"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 6π cm (≈ 18,85 cm)"
     },
     {
       "type": "mcq",
@@ -156,7 +162,8 @@
         "sin α",
         "0"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: cos α"
     },
     {
       "type": "mcq",
@@ -168,7 +175,8 @@
         "0,5π m/s",
         "60 m/s"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: π m/s (≈ 3,14 m/s)"
     },
     {
       "type": "mcq",
@@ -180,7 +188,8 @@
         "12π cm",
         "24π cm"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 8π cm (≈ 25,1 cm)"
     },
     {
       "type": "mcq",
@@ -192,7 +201,8 @@
         "10.500 km",
         "84.000 km"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 21.000 km"
     }
   ],
   "2": [
@@ -206,23 +216,24 @@
         "sin 2a = 2 sin a",
         "sin 2a = cos² a - sin² a"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: sin 2a = 2 sin a · cos a"
     },
     {
       "type": "match",
       "q": "Ghép các công thức cộng lượng giác (Cột A) với vế phải tương ứng (Cột B):",
       "exp": "• Các công thức cộng lượng giác cơ bản.",
       "colA": [
-        "1. cos(a + b)",
-        "2. cos(a - b)",
-        "3. sin(a + b)",
-        "4. sin(a - b)"
+        "cos(a + b)",
+        "cos(a - b)",
+        "sin(a + b)",
+        "sin(a - b)"
       ],
       "colB": [
-        "A. = cos a · cos b - sin a · sin b",
-        "B. = cos a · cos b + sin a · sin b",
-        "C. = sin a · cos b + cos a · sin b",
-        "D. = sin a · cos b - cos a · sin b"
+        "= cos a · cos b - sin a · sin b",
+        "= cos a · cos b + sin a · sin b",
+        "= sin a · cos b + cos a · sin b",
+        "= sin a · cos b - cos a · sin b"
       ],
       "pairs": [
         {
@@ -247,17 +258,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Cho sin a = 3/5 với 0 < a < π/2. Xét tính đúng - sai:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> cos a = √(1 - 9/25) = 4/5 (vì 0 < a < π/2) (Đúng).<br>• <b>Ý b) [Đúng]:</b> sin 2a = 2 · (3/5) · (4/5) = 24/25 (Đúng).<br>• <b>Ý c) [Đúng]:</b> cos 2a = cos² a - sin² a = 16/25 - 9/25 = 7/25 (Đúng).<br>• <b>Ý d) [Đúng]:</b> tan 2a = sin 2a / cos 2a = (24/25) / (7/25) = 24/7 (Đúng).",
       "stmts": [
-        "a) cos a = 4/5.",
-        "b) sin 2a = 24/25.",
-        "c) cos 2a = 7/25.",
-        "d) tan 2a = 24/7."
+        "cos a = 4/5.",
+        "sin 2a = 24/25.",
+        "cos 2a = 7/25.",
+        "tan 2a = 24/7."
       ],
       "ans": [
         true,
@@ -267,26 +279,27 @@
       ],
       "items": [
         {
-          "text": "a) cos a = 4/5.",
+          "text": "cos a = 4/5.",
           "ans": true,
           "exp": "cos a = √(1 - 9/25) = 4/5 (vì 0 < a < π/2) (Đúng)."
         },
         {
-          "text": "b) sin 2a = 24/25.",
+          "text": "sin 2a = 24/25.",
           "ans": true,
           "exp": "sin 2a = 2 · (3/5) · (4/5) = 24/25 (Đúng)."
         },
         {
-          "text": "c) cos 2a = 7/25.",
+          "text": "cos 2a = 7/25.",
           "ans": true,
           "exp": "cos 2a = cos² a - sin² a = 16/25 - 9/25 = 7/25 (Đúng)."
         },
         {
-          "text": "d) tan 2a = 24/7.",
+          "text": "tan 2a = 24/7.",
           "ans": true,
           "exp": "tan 2a = sin 2a / cos 2a = (24/25) / (7/25) = 24/7 (Đúng)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng"
     },
     {
       "type": "mcq",
@@ -298,13 +311,14 @@
         "√2 / 4",
         "1/2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: (√6 - √2) / 4"
     },
     {
       "type": "drag",
-      "q": "Kéo các biểu thức hạ bậc chính xác vào chỗ trống:<br>• cos² a = %%%SLOT_1%%%.<br>• sin² a = %%%SLOT_2%%%.<br>• cos 2a = %%%SLOT_3%%%.",
+      "q": "Kéo các biểu thức hạ bậc chính xác vào chỗ trống:",
       "exp": "• Công thức hạ bậc: cos² a = (1 + cos 2a)/2; sin² a = (1 - cos 2a)/2.",
-      "sentence": "Kéo các biểu thức hạ bậc chính xác vào chỗ trống:<br>• cos² a = %%%SLOT_1%%%.<br>• sin² a = %%%SLOT_2%%%.<br>• cos 2a = %%%SLOT_3%%%.",
+      "sentence": "• cos² a = %%%SLOT_1%%%.<br>• sin² a = %%%SLOT_2%%%.<br>• cos 2a = %%%SLOT_3%%%.",
       "words": [
         "(1 + cos 2a)/2",
         "(1 - cos 2a)/2",
@@ -328,7 +342,8 @@
         "(1 + cos 2a)/2",
         "(1 - cos 2a)/2",
         "cos² a - sin² a"
-      ]
+      ],
+      "correctText": "(1) (1 + cos 2a)/2 • (2) (1 - cos 2a)/2 • (3) cos² a - sin² a"
     },
     {
       "type": "mcq",
@@ -340,7 +355,8 @@
         "sin 2x",
         "1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: cos 2y"
     },
     {
       "type": "mcq",
@@ -352,7 +368,8 @@
         "cos 4x + cos 2x",
         "cos 4x - cos 2x"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: sin 4x + sin 2x"
     },
     {
       "type": "mcq",
@@ -364,7 +381,8 @@
         "400 W",
         "0 W"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 800 W"
     },
     {
       "type": "mcq",
@@ -376,7 +394,8 @@
         "A",
         "0"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: A√3"
     },
     {
       "type": "mcq",
@@ -388,7 +407,8 @@
         "60°",
         "90°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 45°"
     }
   ],
   "3": [
@@ -402,23 +422,24 @@
         "T = ℝ",
         "T = [0; 1]"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: T = [-1; 1]"
     },
     {
       "type": "match",
       "q": "Ghép các hàm số lượng giác (Cột A) với chu kì tuần hoàn tương ứng (Cột B):",
       "exp": "• sin và cos có chu kì 2π.<br>• tan và cot có chu kì π.",
       "colA": [
-        "1. Hàm số y = sin x",
-        "2. Hàm số y = cos x",
-        "3. Hàm số y = tan x",
-        "4. Hàm số y = cot x"
+        "Hàm số y = sin x",
+        "Hàm số y = cos x",
+        "Hàm số y = tan x",
+        "Hàm số y = cot x"
       ],
       "colB": [
-        "A. Tuần hoàn với chu kì T = 2π",
-        "B. Tuần hoàn với chu kì T = 2π",
-        "C. Tuần hoàn với chu kì T = π",
-        "D. Tuần hoàn với chu kì T = π"
+        "Tuần hoàn với chu kì T = 2π",
+        "Tuần hoàn với chu kì T = 2π",
+        "Tuần hoàn với chu kì T = π",
+        "Tuần hoàn với chu kì T = π"
       ],
       "pairs": [
         {
@@ -443,17 +464,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Xét tính chẵn - lẻ của các hàm số lượng giác:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> cos(-x) = cos x với mọi x nên y = cos x là hàm chẵn (Đúng).<br>• <b>Ý b) [Đúng]:</b> sin(-x) = -sin x nên y = sin x là hàm lẻ (Đúng).<br>• <b>Ý c) [Sai]:</b> tan(-x) = -tan x nên y = tan x là hàm số lẻ (Sai).<br>• <b>Ý d) [Đúng]:</b> Hàm số lẻ có đồ thị đối xứng qua gốc toạ độ O (Đúng).",
       "stmts": [
-        "a) Hàm số y = cos x là hàm số chẵn trên ℝ.",
-        "b) Hàm số y = sin x là hàm số lẻ trên ℝ.",
-        "c) Hàm số y = tan x là hàm số chẵn trên tập xác định.",
-        "d) Đồ thị hàm số y = sin x đối xứng qua gốc toạ độ O."
+        "Hàm số y = cos x là hàm số chẵn trên ℝ.",
+        "Hàm số y = sin x là hàm số lẻ trên ℝ.",
+        "Hàm số y = tan x là hàm số chẵn trên tập xác định.",
+        "Đồ thị hàm số y = sin x đối xứng qua gốc toạ độ O."
       ],
       "ans": [
         true,
@@ -463,26 +485,27 @@
       ],
       "items": [
         {
-          "text": "a) Hàm số y = cos x là hàm số chẵn trên ℝ.",
+          "text": "Hàm số y = cos x là hàm số chẵn trên ℝ.",
           "ans": true,
           "exp": "cos(-x) = cos x với mọi x nên y = cos x là hàm chẵn (Đúng)."
         },
         {
-          "text": "b) Hàm số y = sin x là hàm số lẻ trên ℝ.",
+          "text": "Hàm số y = sin x là hàm số lẻ trên ℝ.",
           "ans": true,
           "exp": "sin(-x) = -sin x nên y = sin x là hàm lẻ (Đúng)."
         },
         {
-          "text": "c) Hàm số y = tan x là hàm số chẵn trên tập xác định.",
+          "text": "Hàm số y = tan x là hàm số chẵn trên tập xác định.",
           "ans": false,
           "exp": "tan(-x) = -tan x nên y = tan x là hàm số lẻ (Sai)."
         },
         {
-          "text": "d) Đồ thị hàm số y = sin x đối xứng qua gốc toạ độ O.",
+          "text": "Đồ thị hàm số y = sin x đối xứng qua gốc toạ độ O.",
           "ans": true,
           "exp": "Hàm số lẻ có đồ thị đối xứng qua gốc toạ độ O (Đúng)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {
       "type": "mcq",
@@ -494,13 +517,14 @@
         "D = ℝ",
         "D = (-1; 1)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: D = ℝ \\ {π/2 + kπ, k ∈ ℤ}"
     },
     {
       "type": "drag",
-      "q": "Kéo các chu kì vào chỗ trống cho các hàm số sau:<br>• Hàm số y = sin(2x) có chu kì T = %%%SLOT_1%%%.<br>• Hàm số y = cos(3x) có chu kì T = %%%SLOT_2%%%.<br>• Hàm số y = tan(x/2) có chu kì T = %%%SLOT_3%%%.",
+      "q": "Kéo các chu kì vào chỗ trống cho các hàm số sau:",
       "exp": "• sin(ax): T = 2π / |a| = 2π / 2 = π.<br>• cos(3x): T = 2π / 3.<br>• tan(x/2): T = π / (1/2) = 2π.",
-      "sentence": "Kéo các chu kì vào chỗ trống cho các hàm số sau:<br>• Hàm số y = sin(2x) có chu kì T = %%%SLOT_1%%%.<br>• Hàm số y = cos(3x) có chu kì T = %%%SLOT_2%%%.<br>• Hàm số y = tan(x/2) có chu kì T = %%%SLOT_3%%%.",
+      "sentence": "• Hàm số y = sin(2x) có chu kì T = %%%SLOT_1%%%.<br>• Hàm số y = cos(3x) có chu kì T = %%%SLOT_2%%%.<br>• Hàm số y = tan(x/2) có chu kì T = %%%SLOT_3%%%.",
       "words": [
         "π",
         "2π/3",
@@ -524,7 +548,8 @@
         "π",
         "2π/3",
         "2π"
-      ]
+      ],
+      "correctText": "(1) π • (2) 2π/3 • (3) 2π"
     },
     {
       "type": "mcq",
@@ -536,7 +561,8 @@
         "M = 5, m = -1",
         "M = 1, m = -1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: M = 1, m = -5"
     },
     {
       "type": "mcq",
@@ -548,7 +574,8 @@
         "(π/2; 3π/2)",
         "(π; 2π)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: (-π/2; π/2)"
     },
     {
       "type": "mcq",
@@ -560,7 +587,8 @@
         "Lúc 3h chiều",
         "Lúc 18h tối"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Lúc 0h và 12h trưa (Độ cao cực đại 8 mét)"
     },
     {
       "type": "mcq",
@@ -572,7 +600,8 @@
         "f = 60 Hz",
         "f = 220 Hz"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: f = 50 Hz"
     },
     {
       "type": "mcq",
@@ -584,7 +613,8 @@
         "18 giờ",
         "14 giờ"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 15 giờ"
     }
   ],
   "4": [
@@ -598,23 +628,24 @@
         "x = α + k2π hoặc x = -α + k2π",
         "x = ±α + k2π"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: x = α + k2π hoặc x = π - α + k2π (k ∈ ℤ)"
     },
     {
       "type": "match",
       "q": "Ghép các phương trình lượng giác cơ bản (Cột A) với công thức nghiệm (Cột B):",
       "exp": "• Các công thức nghiệm phương trình lượng giác cơ bản.",
       "colA": [
-        "1. cos x = cos α",
-        "2. sin x = sin α",
-        "3. tan x = tan α",
-        "4. cot x = cot α"
+        "cos x = cos α",
+        "sin x = sin α",
+        "tan x = tan α",
+        "cot x = cot α"
       ],
       "colB": [
-        "A. x = ±α + k2π (k ∈ ℤ)",
-        "B. x = α + k2π hoặc x = π - α + k2π",
-        "C. x = α + kπ (k ∈ ℤ)",
-        "D. x = α + kπ (k ∈ ℤ)"
+        "x = ±α + k2π (k ∈ ℤ)",
+        "x = α + k2π hoặc x = π - α + k2π",
+        "x = α + kπ (k ∈ ℤ)",
+        "x = α + kπ (k ∈ ℤ)"
       ],
       "pairs": [
         {
@@ -639,17 +670,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Xét tính đúng - sai của các khẳng định về phương trình lượng giác:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Vì |sin x| ≤ 1 mà 2 > 1 nên vô nghiệm (Đúng).<br>• <b>Ý b) [Đúng]:</b> cos x = 0 khi điểm biểu diễn ở 2 cực Bắc Nam: x = π/2 + kπ (Đúng).<br>• <b>Ý c) [Sai]:</b> Hàm tan có chu kì π nên họ nghiệm là x = π/4 + kπ (Sai).<br>• <b>Ý d) [Đúng]:</b> Điểm biểu diễn ở cực Nam (0; -1) có toạ độ x = -π/2 + k2π (Đúng).",
       "stmts": [
-        "a) Phương trình sin x = 2 vô nghiệm.",
-        "b) Phương trình cos x = 0 có nghiệm x = π/2 + kπ (k ∈ ℤ).",
-        "c) Phương trình tan x = 1 có nghiệm x = π/4 + k2π (k ∈ ℤ).",
-        "d) Phương trình sin x = -1 có nghiệm x = -π/2 + k2π (k ∈ ℤ)."
+        "Phương trình sin x = 2 vô nghiệm.",
+        "Phương trình cos x = 0 có nghiệm x = π/2 + kπ (k ∈ ℤ).",
+        "Phương trình tan x = 1 có nghiệm x = π/4 + k2π (k ∈ ℤ).",
+        "Phương trình sin x = -1 có nghiệm x = -π/2 + k2π (k ∈ ℤ)."
       ],
       "ans": [
         true,
@@ -659,26 +691,27 @@
       ],
       "items": [
         {
-          "text": "a) Phương trình sin x = 2 vô nghiệm.",
+          "text": "Phương trình sin x = 2 vô nghiệm.",
           "ans": true,
           "exp": "Vì |sin x| ≤ 1 mà 2 > 1 nên vô nghiệm (Đúng)."
         },
         {
-          "text": "b) Phương trình cos x = 0 có nghiệm x = π/2 + kπ (k ∈ ℤ).",
+          "text": "Phương trình cos x = 0 có nghiệm x = π/2 + kπ (k ∈ ℤ).",
           "ans": true,
           "exp": "cos x = 0 khi điểm biểu diễn ở 2 cực Bắc Nam: x = π/2 + kπ (Đúng)."
         },
         {
-          "text": "c) Phương trình tan x = 1 có nghiệm x = π/4 + k2π (k ∈ ℤ).",
+          "text": "Phương trình tan x = 1 có nghiệm x = π/4 + k2π (k ∈ ℤ).",
           "ans": false,
           "exp": "Hàm tan có chu kì π nên họ nghiệm là x = π/4 + kπ (Sai)."
         },
         {
-          "text": "d) Phương trình sin x = -1 có nghiệm x = -π/2 + k2π (k ∈ ℤ).",
+          "text": "Phương trình sin x = -1 có nghiệm x = -π/2 + k2π (k ∈ ℤ).",
           "ans": true,
           "exp": "Điểm biểu diễn ở cực Nam (0; -1) có toạ độ x = -π/2 + k2π (Đúng)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {
       "type": "mcq",
@@ -690,13 +723,14 @@
         "3 nghiệm",
         "4 nghiệm"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 2 nghiệm (x = π/3 và x = 5π/3)"
     },
     {
       "type": "drag",
-      "q": "Kéo các nghiệm đặc biệt vào chỗ trống:<br>• sin x = 0 ⇔ x = %%%SLOT_1%%%.<br>• cos x = 1 ⇔ x = %%%SLOT_2%%%.<br>• cos x = -1 ⇔ x = %%%SLOT_3%%%.",
+      "q": "Kéo các nghiệm đặc biệt vào chỗ trống:",
       "exp": "• sin x = 0: x = kπ.<br>• cos x = 1: x = k2π.<br>• cos x = -1: x = π + k2π.",
-      "sentence": "Kéo các nghiệm đặc biệt vào chỗ trống:<br>• sin x = 0 ⇔ x = %%%SLOT_1%%%.<br>• cos x = 1 ⇔ x = %%%SLOT_2%%%.<br>• cos x = -1 ⇔ x = %%%SLOT_3%%%.",
+      "sentence": "• sin x = 0 ⇔ x = %%%SLOT_1%%%.<br>• cos x = 1 ⇔ x = %%%SLOT_2%%%.<br>• cos x = -1 ⇔ x = %%%SLOT_3%%%.",
       "words": [
         "kπ",
         "k2π",
@@ -720,7 +754,8 @@
         "kπ",
         "k2π",
         "π + k2π"
-      ]
+      ],
+      "correctText": "(1) kπ • (2) k2π • (3) π + k2π"
     },
     {
       "type": "mcq",
@@ -732,7 +767,8 @@
         "x = π/2 + kπ",
         "x = kπ"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: x = 2π/3 + kπ (k ∈ ℤ)"
     },
     {
       "type": "mcq",
@@ -744,7 +780,8 @@
         "5π/12",
         "π/4"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: π/12"
     },
     {
       "type": "mcq",
@@ -756,7 +793,8 @@
         "t = 1/4 s",
         "t = 1/6 s"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: t = 5/24 s"
     },
     {
       "type": "mcq",
@@ -768,7 +806,8 @@
         "40 lần",
         "2 lần"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 20 lần"
     },
     {
       "type": "mcq",
@@ -780,7 +819,8 @@
         "Chỉ lúc 0h",
         "Cả 12 giờ"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Từ 0h đến 2h và từ 10h đến 12h (tổng cộng 4 giờ)"
     }
   ],
   "5": [
@@ -794,23 +834,24 @@
         "u_(n+1) ≥ u_n",
         "u_n > 0"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: u_(n+1) > u_n"
     },
     {
       "type": "match",
       "q": "Ghép các khái niệm về dãy số (Cột A) với định nghĩa tương ứng (Cột B):",
       "exp": "• Các định nghĩa về tính bị chặn và tính chất dãy số.",
       "colA": [
-        "1. Dãy số bị chặn trên",
-        "2. Dãy số bị chặn dưới",
-        "3. Dãy số bị chặn",
-        "4. Dãy số hữu hạn"
+        "Dãy số bị chặn trên",
+        "Dãy số bị chặn dưới",
+        "Dãy số bị chặn",
+        "Dãy số hữu hạn"
       ],
       "colB": [
-        "A. Tồn tại số M sao cho u_n ≤ M với mọi n ∈ ℕ*",
-        "B. Tồn tại số m sao cho u_n ≥ m với mọi n ∈ ℕ*",
-        "C. Vừa bị chặn trên vừa bị chặn dưới: m ≤ u_n ≤ M",
-        "D. Tập xác định là tập hợp {1, 2, ..., m}"
+        "Tồn tại số M sao cho u_n ≤ M với mọi n ∈ ℕ*",
+        "Tồn tại số m sao cho u_n ≥ m với mọi n ∈ ℕ*",
+        "Vừa bị chặn trên vừa bị chặn dưới: m ≤ u_n ≤ M",
+        "Tập xác định là tập hợp {1, 2, ..., m}"
       ],
       "pairs": [
         {
@@ -835,17 +876,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Cho dãy số (u_n) với u_n = <span class=\"fraction\"><span class=\"numerator\">n</span><span class=\"denominator\">n + 1</span></span>. Xét tính đúng - sai:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> u₁ = 1 / (1 + 1) = 1/2 (Đúng).<br>• <b>Ý b) [Đúng]:</b> u_(n+1) - u_n = (n+1)/(n+2) - n/(n+1) = 1/[(n+1)(n+2)] > 0 nên dãy tăng (Đúng).<br>• <b>Ý c) [Đúng]:</b> n < n + 1 nên u_n = n/(n+1) < 1 với mọi n ∈ ℕ* (Đúng).<br>• <b>Ý d) [Sai]:</b> n/(n+1) = 10/11 ⇔ n = 10 ∈ ℕ* nên 10/11 chính là số hạng u₁₀ (Sai).",
       "stmts": [
-        "a) Số hạng đầu tiên u₁ = 1/2.",
-        "b) Dãy số (u_n) là dãy số tăng.",
-        "c) Dãy số (u_n) bị chặn trên bởi 1.",
-        "d) Số 10/11 không phải là một số hạng của dãy."
+        "Số hạng đầu tiên u₁ = 1/2.",
+        "Dãy số (u_n) là dãy số tăng.",
+        "Dãy số (u_n) bị chặn trên bởi 1.",
+        "Số 10/11 không phải là một số hạng của dãy."
       ],
       "ans": [
         true,
@@ -855,26 +897,27 @@
       ],
       "items": [
         {
-          "text": "a) Số hạng đầu tiên u₁ = 1/2.",
+          "text": "Số hạng đầu tiên u₁ = 1/2.",
           "ans": true,
           "exp": "u₁ = 1 / (1 + 1) = 1/2 (Đúng)."
         },
         {
-          "text": "b) Dãy số (u_n) là dãy số tăng.",
+          "text": "Dãy số (u_n) là dãy số tăng.",
           "ans": true,
           "exp": "u_(n+1) - u_n = (n+1)/(n+2) - n/(n+1) = 1/[(n+1)(n+2)] > 0 nên dãy tăng (Đúng)."
         },
         {
-          "text": "c) Dãy số (u_n) bị chặn trên bởi 1.",
+          "text": "Dãy số (u_n) bị chặn trên bởi 1.",
           "ans": true,
           "exp": "n < n + 1 nên u_n = n/(n+1) < 1 với mọi n ∈ ℕ* (Đúng)."
         },
         {
-          "text": "d) Số 10/11 không phải là một số hạng của dãy.",
+          "text": "Số 10/11 không phải là một số hạng của dãy.",
           "ans": false,
           "exp": "n/(n+1) = 10/11 ⇔ n = 10 ∈ ℕ* nên 10/11 chính là số hạng u₁₀ (Sai)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -886,13 +929,14 @@
         "41",
         "17"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 14"
     },
     {
       "type": "drag",
-      "q": "Kéo các số hạng của dãy Fibonacci (u₁ = 1, u₂ = 1, u_(n+2) = u_(n+1) + u_n) vào chỗ trống:<br>• u₃ = %%%SLOT_1%%%.<br>• u₄ = %%%SLOT_2%%%.<br>• u₅ = %%%SLOT_3%%%.",
+      "q": "Kéo các số hạng của dãy Fibonacci (u₁ = 1, u₂ = 1, u_(n+2) = u_(n+1) + u_n) vào chỗ trống:",
       "exp": "• Dãy Fibonacci: 1, 1, 2, 3, 5, 8, 13...",
-      "sentence": "Kéo các số hạng của dãy Fibonacci (u₁ = 1, u₂ = 1, u_(n+2) = u_(n+1) + u_n) vào chỗ trống:<br>• u₃ = %%%SLOT_1%%%.<br>• u₄ = %%%SLOT_2%%%.<br>• u₅ = %%%SLOT_3%%%.",
+      "sentence": "• u₃ = %%%SLOT_1%%%.<br>• u₄ = %%%SLOT_2%%%.<br>• u₅ = %%%SLOT_3%%%.",
       "words": [
         "2",
         "3",
@@ -916,7 +960,8 @@
         "2",
         "3",
         "5"
-      ]
+      ],
+      "correctText": "(1) 2 • (2) 3 • (3) 5"
     },
     {
       "type": "mcq",
@@ -928,7 +973,8 @@
         "u_n = n²",
         "u_n = 2ⁿ"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: u_n = 1/n"
     },
     {
       "type": "mcq",
@@ -940,7 +986,8 @@
         "u_n = 2ⁿ",
         "u_n = n² + 1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: u_n = 2n"
     },
     {
       "type": "mcq",
@@ -952,7 +999,8 @@
         "N_n = 1.000 · n²",
         "N_n = 2.000n"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: N_n = 1.000 · 2ⁿ"
     },
     {
       "type": "mcq",
@@ -964,7 +1012,8 @@
         "V_n = 500 · (0,1)ⁿ",
         "V_n = 500 · (1,1)ⁿ"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: V_n = 500 · (0,9)ⁿ"
     },
     {
       "type": "mcq",
@@ -976,7 +1025,8 @@
         "7 bước",
         "16 bước"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 15 bước"
     }
   ],
   "6": [
@@ -990,23 +1040,24 @@
         "u_n = (u_(n-1))²",
         "u_n = u_(n-1) - n"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: u_n = u_(n-1) + d (d là công sai)"
     },
     {
       "type": "match",
       "q": "Ghép các công thức của cấp số cộng (u_n) có số hạng đầu u₁ và công sai d (Cột A) với biểu thức tương ứng (Cột B):",
       "exp": "• Các công thức cơ bản của cấp số cộng.",
       "colA": [
-        "1. Số hạng tổng quát u_n",
-        "2. Tổng n số hạng đầu S_n",
-        "3. Tính chất 3 số hạng liên tiếp",
-        "4. Tổng theo số hạng đầu và cuối"
+        "Số hạng tổng quát u_n",
+        "Tổng n số hạng đầu S_n",
+        "Tính chất 3 số hạng liên tiếp",
+        "Tổng theo số hạng đầu và cuối"
       ],
       "colB": [
-        "A. u_n = u₁ + (n - 1)d",
-        "B. S_n = (n/2) · [2u₁ + (n - 1)d]",
-        "C. u_k = (u_(k-1) + u_(k+1)) / 2",
-        "D. S_n = (n/2) · (u₁ + u_n)"
+        "u_n = u₁ + (n - 1)d",
+        "S_n = (n/2) · [2u₁ + (n - 1)d]",
+        "u_k = (u_(k-1) + u_(k+1)) / 2",
+        "S_n = (n/2) · (u₁ + u_n)"
       ],
       "pairs": [
         {
@@ -1031,17 +1082,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Cho cấp số cộng (u_n) có u₁ = 3 và công sai d = 4. Xét tính đúng - sai:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> u₂ = 3 + 4 = 7 (Đúng).<br>• <b>Ý b) [Đúng]:</b> u₁₀ = u₁ + 9d = 3 + 9(4) = 3 + 36 = 39 (Đúng).<br>• <b>Ý c) [Đúng]:</b> u_n = 3 + (n - 1)4 = 103 ⇔ 4(n - 1) = 100 ⇔ n - 1 = 25 ⇔ n = 26 (Đúng).<br>• <b>Ý d) [Sai]:</b> S₁₀ = (10/2) · (u₁ + u₁₀) = 5 · (3 + 39) = 5 · 42 = 210 ≠ 200 (Sai).",
       "stmts": [
-        "a) Số hạng thứ hai u₂ = 7.",
-        "b) Số hạng thứ 10 là u₁₀ = 39.",
-        "c) Số 103 là số hạng thứ 26 của cấp số cộng.",
-        "d) Tổng 10 số hạng đầu tiên S₁₀ = 200."
+        "Số hạng thứ hai u₂ = 7.",
+        "Số hạng thứ 10 là u₁₀ = 39.",
+        "Số 103 là số hạng thứ 26 của cấp số cộng.",
+        "Tổng 10 số hạng đầu tiên S₁₀ = 200."
       ],
       "ans": [
         true,
@@ -1051,26 +1103,27 @@
       ],
       "items": [
         {
-          "text": "a) Số hạng thứ hai u₂ = 7.",
+          "text": "Số hạng thứ hai u₂ = 7.",
           "ans": true,
           "exp": "u₂ = 3 + 4 = 7 (Đúng)."
         },
         {
-          "text": "b) Số hạng thứ 10 là u₁₀ = 39.",
+          "text": "Số hạng thứ 10 là u₁₀ = 39.",
           "ans": true,
           "exp": "u₁₀ = u₁ + 9d = 3 + 9(4) = 3 + 36 = 39 (Đúng)."
         },
         {
-          "text": "c) Số 103 là số hạng thứ 26 của cấp số cộng.",
+          "text": "Số 103 là số hạng thứ 26 của cấp số cộng.",
           "ans": true,
           "exp": "u_n = 3 + (n - 1)4 = 103 ⇔ 4(n - 1) = 100 ⇔ n - 1 = 25 ⇔ n = 26 (Đúng)."
         },
         {
-          "text": "d) Tổng 10 số hạng đầu tiên S₁₀ = 200.",
+          "text": "Tổng 10 số hạng đầu tiên S₁₀ = 200.",
           "ans": false,
           "exp": "S₁₀ = (10/2) · (u₁ + u₁₀) = 5 · (3 + 39) = 5 · 42 = 210 ≠ 200 (Sai)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -1082,13 +1135,14 @@
         "d = 4",
         "d = -3"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: d = 3"
     },
     {
       "type": "drag",
-      "q": "Kéo các giá trị thích hợp vào chỗ trống cho cấp số cộng: 5, 8, 11, 14, ...:<br>• Công sai d = %%%SLOT_1%%%.<br>• Số hạng tổng quát u_n = %%%SLOT_2%%%.<br>• Tổng 20 số hạng đầu S₂₀ = %%%SLOT_3%%%.",
+      "q": "Kéo các giá trị thích hợp vào chỗ trống cho cấp số cộng: 5, 8, 11, 14, ...:",
       "exp": "• d = 8 - 5 = 3.<br>• u_n = 5 + (n - 1)3 = 3n + 2.<br>• u₂₀ = 3(20) + 2 = 62 ⇒ S₂₀ = (20/2)(5 + 62) = 10 · 67 = 670.",
-      "sentence": "Kéo các giá trị thích hợp vào chỗ trống cho cấp số cộng: 5, 8, 11, 14, ...:<br>• Công sai d = %%%SLOT_1%%%.<br>• Số hạng tổng quát u_n = %%%SLOT_2%%%.<br>• Tổng 20 số hạng đầu S₂₀ = %%%SLOT_3%%%.",
+      "sentence": "• Công sai d = %%%SLOT_1%%%.<br>• Số hạng tổng quát u_n = %%%SLOT_2%%%.<br>• Tổng 20 số hạng đầu S₂₀ = %%%SLOT_3%%%.",
       "words": [
         "3",
         "3n + 2",
@@ -1112,7 +1166,8 @@
         "3",
         "3n + 2",
         "670"
-      ]
+      ],
+      "correctText": "(1) 3 • (2) 3n + 2 • (3) 670"
     },
     {
       "type": "mcq",
@@ -1124,7 +1179,8 @@
         "x = 3",
         "x = -1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: x = 2"
     },
     {
       "type": "mcq",
@@ -1136,7 +1192,8 @@
         "5.100",
         "10.000"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 5.050"
     },
     {
       "type": "mcq",
@@ -1148,7 +1205,8 @@
         "1.200 ghế",
         "980 ghế"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 1.100 ghế"
     },
     {
       "type": "mcq",
@@ -1160,7 +1218,8 @@
         "1,5 tỉ đồng",
         "1,8 tỉ đồng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 1,65 tỉ đồng (1.650 triệu)"
     },
     {
       "type": "mcq",
@@ -1172,7 +1231,8 @@
         "550 khúc",
         "480 khúc"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 525 khúc"
     }
   ],
   "7": [
@@ -1186,23 +1246,24 @@
         "u_n = (u_(n-1)) / q",
         "u_n = (u_(n-1))ⁿ"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: u_n = u_(n-1) · q (q là công bội)"
     },
     {
       "type": "match",
       "q": "Ghép các công thức của cấp số nhân (u_n) có công bội q ≠ 1 (Cột A) với biểu thức tương ứng (Cột B):",
       "exp": "• Các công thức chuẩn của cấp số nhân và cấp số nhân lùi vô hạn.",
       "colA": [
-        "1. Số hạng tổng quát u_n",
-        "2. Tổng n số hạng đầu S_n",
-        "3. Tính chất 3 số hạng liên tiếp",
-        "4. Tổng cấp số nhân lùi vô hạn (|q| < 1)"
+        "Số hạng tổng quát u_n",
+        "Tổng n số hạng đầu S_n",
+        "Tính chất 3 số hạng liên tiếp",
+        "Tổng cấp số nhân lùi vô hạn (|q| < 1)"
       ],
       "colB": [
-        "A. u_n = u₁ · q^(n - 1)",
-        "B. S_n = u₁ · (1 - qⁿ) / (1 - q)",
-        "C. u_k² = u_(k-1) · u_(k+1)",
-        "D. S = u₁ / (1 - q)"
+        "u_n = u₁ · q^(n - 1)",
+        "S_n = u₁ · (1 - qⁿ) / (1 - q)",
+        "u_k² = u_(k-1) · u_(k+1)",
+        "S = u₁ / (1 - q)"
       ],
       "pairs": [
         {
@@ -1227,17 +1288,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Cho cấp số nhân (u_n) có u₁ = 3 và công bội q = 2. Xét tính đúng - sai:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> u₂ = 3 · 2 = 6 (Đúng).<br>• <b>Ý b) [Đúng]:</b> u₅ = 3 · 2⁴ = 3 · 16 = 48 (Đúng).<br>• <b>Ý c) [Đúng]:</b> S₅ = 3 · (1 - 2⁵)/(1 - 2) = 3 · (1 - 32)/(-1) = 3 · 31 = 93 (Đúng).<br>• <b>Ý d) [Sai]:</b> u_n = 3 · 2^(n-1) = 196 ⇒ 2^(n-1) = 196/3 không phải số nguyên (Sai).",
       "stmts": [
-        "a) Số hạng thứ 2 là u₂ = 6.",
-        "b) Số hạng thứ 5 là u₅ = 48.",
-        "c) Tổng 5 số hạng đầu S₅ = 93.",
-        "d) Số 196 là một số hạng của cấp số nhân."
+        "Số hạng thứ 2 là u₂ = 6.",
+        "Số hạng thứ 5 là u₅ = 48.",
+        "Tổng 5 số hạng đầu S₅ = 93.",
+        "Số 196 là một số hạng của cấp số nhân."
       ],
       "ans": [
         true,
@@ -1247,26 +1309,27 @@
       ],
       "items": [
         {
-          "text": "a) Số hạng thứ 2 là u₂ = 6.",
+          "text": "Số hạng thứ 2 là u₂ = 6.",
           "ans": true,
           "exp": "u₂ = 3 · 2 = 6 (Đúng)."
         },
         {
-          "text": "b) Số hạng thứ 5 là u₅ = 48.",
+          "text": "Số hạng thứ 5 là u₅ = 48.",
           "ans": true,
           "exp": "u₅ = 3 · 2⁴ = 3 · 16 = 48 (Đúng)."
         },
         {
-          "text": "c) Tổng 5 số hạng đầu S₅ = 93.",
+          "text": "Tổng 5 số hạng đầu S₅ = 93.",
           "ans": true,
           "exp": "S₅ = 3 · (1 - 2⁵)/(1 - 2) = 3 · (1 - 32)/(-1) = 3 · 31 = 93 (Đúng)."
         },
         {
-          "text": "d) Số 196 là một số hạng của cấp số nhân.",
+          "text": "Số 196 là một số hạng của cấp số nhân.",
           "ans": false,
           "exp": "u_n = 3 · 2^(n-1) = 196 ⇒ 2^(n-1) = 196/3 không phải số nguyên (Sai)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -1278,13 +1341,14 @@
         "q = -3",
         "q = 4"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: q = 3"
     },
     {
       "type": "drag",
-      "q": "Kéo các giá trị thích hợp vào chỗ trống cho cấp số nhân: 2, -6, 18, -54, ...:<br>• Công bội q = %%%SLOT_1%%%.<br>• Số hạng tổng quát u_n = %%%SLOT_2%%%.<br>• Dấu của các số hạng là %%%SLOT_3%%%.",
+      "q": "Kéo các giá trị thích hợp vào chỗ trống cho cấp số nhân: 2, -6, 18, -54, ...:",
       "exp": "• q = -6 / 2 = -3.<br>• u_n = 2 · (-3)^(n-1).<br>• q < 0 nên các số hạng đan dấu.",
-      "sentence": "Kéo các giá trị thích hợp vào chỗ trống cho cấp số nhân: 2, -6, 18, -54, ...:<br>• Công bội q = %%%SLOT_1%%%.<br>• Số hạng tổng quát u_n = %%%SLOT_2%%%.<br>• Dấu của các số hạng là %%%SLOT_3%%%.",
+      "sentence": "• Công bội q = %%%SLOT_1%%%.<br>• Số hạng tổng quát u_n = %%%SLOT_2%%%.<br>• Dấu của các số hạng là %%%SLOT_3%%%.",
       "words": [
         "-3",
         "2 · (-3)^(n-1)",
@@ -1308,7 +1372,8 @@
         "-3",
         "2 · (-3)^(n-1)",
         "đan dấu (+, -)"
-      ]
+      ],
+      "correctText": "(1) -3 • (2) 2 · (-3)^(n-1) • (3) đan dấu (+, -)"
     },
     {
       "type": "mcq",
@@ -1320,7 +1385,8 @@
         "x = 3",
         "x = 1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: x = 4"
     },
     {
       "type": "mcq",
@@ -1332,7 +1398,8 @@
         "3/2",
         "4"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 2"
     },
     {
       "type": "mcq",
@@ -1344,7 +1411,8 @@
         "140,5 triệu đồng",
         "125,0 triệu đồng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 133,8 triệu đồng"
     },
     {
       "type": "mcq",
@@ -1356,7 +1424,8 @@
         "80 mét",
         "50 mét"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 70 mét"
     },
     {
       "type": "mcq",
@@ -1368,7 +1437,8 @@
         "2,5 mg",
         "20 mg"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 5 mg"
     }
   ],
   "8": [
@@ -1382,23 +1452,24 @@
         "c_i = a_i",
         "c_i = a_(i+1)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: c_i = (a_i + a_(i+1)) / 2"
     },
     {
       "type": "match",
       "q": "Ghép các khái niệm trong mẫu ghép nhóm (Cột A) với định nghĩa tương ứng (Cột B):",
       "exp": "• Các thành phần của bảng phân bố tần số ghép nhóm.",
       "colA": [
-        "1. Độ dài của nhóm [a; b)",
-        "2. Giá trị đại diện",
-        "3. Tần số của nhóm",
-        "4. Tần số tích lũy"
+        "Độ dài của nhóm [a; b)",
+        "Giá trị đại diện",
+        "Tần số của nhóm",
+        "Tần số tích lũy"
       ],
       "colB": [
-        "A. d = b - a",
-        "B. c = (a + b) / 2",
-        "C. Số lượng quan sát thuộc vào nhóm đó",
-        "D. Tổng tần số của nhóm đó và tất cả các nhóm đứng trước"
+        "d = b - a",
+        "c = (a + b) / 2",
+        "Số lượng quan sát thuộc vào nhóm đó",
+        "Tổng tần số của nhóm đó và tất cả các nhóm đứng trước"
       ],
       "pairs": [
         {
@@ -1423,17 +1494,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Cho nhóm số liệu ghép nhóm [150; 160) có tần số n₁ = 12. Xét tính đúng - sai:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> 160 - 150 = 10 (Đúng).<br>• <b>Ý b) [Đúng]:</b> c₁ = (150 + 160)/2 = 155 (Đúng).<br>• <b>Ý c) [Sai]:</b> Nhóm [150; 160) là nửa khoảng lấy từ 150 đến sát 160, không chứa 160 (Sai).<br>• <b>Ý d) [Đúng]:</b> Tần số n₁ = 12 có nghĩa là có 12 số liệu thuộc nhóm (Đúng).",
       "stmts": [
-        "a) Độ dài của nhóm là d = 10.",
-        "b) Giá trị đại diện của nhóm là c₁ = 155.",
-        "c) Giá trị x = 160 thuộc vào nhóm [150; 160).",
-        "d) Có 12 phần tử có giá trị nằm trong nửa khoảng [150; 160)."
+        "Độ dài của nhóm là d = 10.",
+        "Giá trị đại diện của nhóm là c₁ = 155.",
+        "Giá trị x = 160 thuộc vào nhóm [150; 160).",
+        "Có 12 phần tử có giá trị nằm trong nửa khoảng [150; 160)."
       ],
       "ans": [
         true,
@@ -1443,26 +1515,27 @@
       ],
       "items": [
         {
-          "text": "a) Độ dài của nhóm là d = 10.",
+          "text": "Độ dài của nhóm là d = 10.",
           "ans": true,
           "exp": "160 - 150 = 10 (Đúng)."
         },
         {
-          "text": "b) Giá trị đại diện của nhóm là c₁ = 155.",
+          "text": "Giá trị đại diện của nhóm là c₁ = 155.",
           "ans": true,
           "exp": "c₁ = (150 + 160)/2 = 155 (Đúng)."
         },
         {
-          "text": "c) Giá trị x = 160 thuộc vào nhóm [150; 160).",
+          "text": "Giá trị x = 160 thuộc vào nhóm [150; 160).",
           "ans": false,
           "exp": "Nhóm [150; 160) là nửa khoảng lấy từ 150 đến sát 160, không chứa 160 (Sai)."
         },
         {
-          "text": "d) Có 12 phần tử có giá trị nằm trong nửa khoảng [150; 160).",
+          "text": "Có 12 phần tử có giá trị nằm trong nửa khoảng [150; 160).",
           "ans": true,
           "exp": "Tần số n₁ = 12 có nghĩa là có 12 số liệu thuộc nhóm (Đúng)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {
       "type": "mcq",
@@ -1474,13 +1547,14 @@
         "165",
         "5"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 162,5"
     },
     {
       "type": "drag",
-      "q": "Kéo các giá trị đại diện vào đúng nhóm tương ứng:<br>• Nhóm [20; 30) có giá trị đại diện là %%%SLOT_1%%%.<br>• Nhóm [30; 40) có giá trị đại diện là %%%SLOT_2%%%.<br>• Nhóm [40; 50) có giá trị đại diện là %%%SLOT_3%%%.",
+      "q": "Kéo các giá trị đại diện vào đúng nhóm tương ứng:",
       "exp": "• (20+30)/2 = 25; (30+40)/2 = 35; (40+50)/2 = 45.",
-      "sentence": "Kéo các giá trị đại diện vào đúng nhóm tương ứng:<br>• Nhóm [20; 30) có giá trị đại diện là %%%SLOT_1%%%.<br>• Nhóm [30; 40) có giá trị đại diện là %%%SLOT_2%%%.<br>• Nhóm [40; 50) có giá trị đại diện là %%%SLOT_3%%%.",
+      "sentence": "• Nhóm [20; 30) có giá trị đại diện là %%%SLOT_1%%%.<br>• Nhóm [30; 40) có giá trị đại diện là %%%SLOT_2%%%.<br>• Nhóm [40; 50) có giá trị đại diện là %%%SLOT_3%%%.",
       "words": [
         "25",
         "35",
@@ -1504,7 +1578,8 @@
         "25",
         "35",
         "45"
-      ]
+      ],
+      "correctText": "(1) 25 • (2) 35 • (3) 45"
     },
     {
       "type": "mcq",
@@ -1516,7 +1591,8 @@
         "50",
         "35"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 40"
     },
     {
       "type": "mcq",
@@ -1528,7 +1604,8 @@
         "5",
         "32"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 20 (5 + 15)"
     },
     {
       "type": "mcq",
@@ -1540,7 +1617,8 @@
         "15%",
         "45%"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 55%"
     },
     {
       "type": "mcq",
@@ -1552,7 +1630,8 @@
         "30%",
         "80%"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 70% (21 ngày)"
     },
     {
       "type": "mcq",
@@ -1564,7 +1643,8 @@
         "75%",
         "80%"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 70%"
     }
   ],
   "9": [
@@ -1578,23 +1658,24 @@
         "x̄ = (m₁ + m₂ + ... + m_k) / n",
         "x̄ = (c_max - c_min) / 2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: x̄ = (m₁c₁ + m₂c₂ + ... + m_k c_k) / n"
     },
     {
       "type": "match",
       "q": "Ghép các công thức tính số đặc trưng mẫu ghép nhóm (Cột A) với biểu thức tương ứng (Cột B):",
       "exp": "• Các công thức nội suy trung vị, mốt và tứ phân vị mẫu số liệu ghép nhóm.",
       "colA": [
-        "1. Trung vị M_e của mẫu ghép nhóm",
-        "2. Mốt M_o của mẫu ghép nhóm",
-        "3. Tứ phân vị thứ nhất Q₁",
-        "4. Tứ phân vị thứ ba Q₃"
+        "Trung vị M_e của mẫu ghép nhóm",
+        "Mốt M_o của mẫu ghép nhóm",
+        "Tứ phân vị thứ nhất Q₁",
+        "Tứ phân vị thứ ba Q₃"
       ],
       "colB": [
-        "A. M_e = u_m + [(n/2 - C) / n_m] · h",
-        "B. M_o = u_mo + [(n_mo - n_(mo-1)) / (2n_mo - n_(mo-1) - n_(mo+1))] · h",
-        "C. Q₁ = u_p + [(n/4 - C) / n_p] · h",
-        "D. Q₃ = u_q + [(3n/4 - C) / n_q] · h"
+        "M_e = u_m + [(n/2 - C) / n_m] · h",
+        "M_o = u_mo + [(n_mo - n_(mo-1)) / (2n_mo - n_(mo-1) - n_(mo+1))] · h",
+        "Q₁ = u_p + [(n/4 - C) / n_p] · h",
+        "Q₃ = u_q + [(3n/4 - C) / n_q] · h"
       ],
       "pairs": [
         {
@@ -1619,17 +1700,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Bảng số liệu điểm kiểm tra ghép nhóm của 20 học sinh: [5; 7) có 8 bạn, [7; 9) có 10 bạn, [9; 11) có 2 bạn. Xét tính đúng - sai:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> (5+7)/2 = 6; (7+9)/2 = 8; (9+11)/2 = 10 (Đúng).<br>• <b>Ý b) [Đúng]:</b> x̄ = (8·6 + 10·8 + 2·10)/20 = (48 + 80 + 20)/20 = 148 / 20 = 7,4 (Đúng).<br>• <b>Ý c) [Đúng]:</b> Nhóm [7; 9) có tần số lớn nhất bằng 10 (Đúng).<br>• <b>Ý d) [Sai]:</b> n/2 = 10. Tần số tích lũy nhóm 1 là 8 < 10, nhóm 2 tích lũy là 18 ≥ 10 nên trung vị thuộc nhóm [7; 9) (Sai).",
       "stmts": [
-        "a) Giá trị đại diện của 3 nhóm lần lượt là 6, 8, 10.",
-        "b) Số điểm trung bình là x̄ = 7,4.",
-        "c) Nhóm chứa mốt là nhóm [7; 9).",
-        "d) Nhóm chứa trung vị là nhóm [5; 7)."
+        "Giá trị đại diện của 3 nhóm lần lượt là 6, 8, 10.",
+        "Số điểm trung bình là x̄ = 7,4.",
+        "Nhóm chứa mốt là nhóm [7; 9).",
+        "Nhóm chứa trung vị là nhóm [5; 7)."
       ],
       "ans": [
         true,
@@ -1639,26 +1721,27 @@
       ],
       "items": [
         {
-          "text": "a) Giá trị đại diện của 3 nhóm lần lượt là 6, 8, 10.",
+          "text": "Giá trị đại diện của 3 nhóm lần lượt là 6, 8, 10.",
           "ans": true,
           "exp": "(5+7)/2 = 6; (7+9)/2 = 8; (9+11)/2 = 10 (Đúng)."
         },
         {
-          "text": "b) Số điểm trung bình là x̄ = 7,4.",
+          "text": "Số điểm trung bình là x̄ = 7,4.",
           "ans": true,
           "exp": "x̄ = (8·6 + 10·8 + 2·10)/20 = (48 + 80 + 20)/20 = 148 / 20 = 7,4 (Đúng)."
         },
         {
-          "text": "c) Nhóm chứa mốt là nhóm [7; 9).",
+          "text": "Nhóm chứa mốt là nhóm [7; 9).",
           "ans": true,
           "exp": "Nhóm [7; 9) có tần số lớn nhất bằng 10 (Đúng)."
         },
         {
-          "text": "d) Nhóm chứa trung vị là nhóm [5; 7).",
+          "text": "Nhóm chứa trung vị là nhóm [5; 7).",
           "ans": false,
           "exp": "n/2 = 10. Tần số tích lũy nhóm 1 là 8 < 10, nhóm 2 tích lũy là 18 ≥ 10 nên trung vị thuộc nhóm [7; 9) (Sai)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -1670,13 +1753,14 @@
         "15",
         "12"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 11"
     },
     {
       "type": "drag",
-      "q": "Kéo các công thức xác định vị trí nhóm phân vị của mẫu có cỡ mẫu n:<br>• Nhóm chứa trung vị M_e là nhóm có tần số tích lũy đầu tiên ≥ %%%SLOT_1%%%.<br>• Nhóm chứa tứ phân vị thứ nhất Q₁ có tần số tích lũy đầu tiên ≥ %%%SLOT_2%%%.<br>• Nhóm chứa tứ phân vị thứ ba Q₃ có tần số tích lũy đầu tiên ≥ %%%SLOT_3%%%.",
+      "q": "Kéo các công thức xác định vị trí nhóm phân vị của mẫu có cỡ mẫu n:",
       "exp": "• Trung vị: n/2.<br>• Q₁: n/4.<br>• Q₃: 3n/4.",
-      "sentence": "Kéo các công thức xác định vị trí nhóm phân vị của mẫu có cỡ mẫu n:<br>• Nhóm chứa trung vị M_e là nhóm có tần số tích lũy đầu tiên ≥ %%%SLOT_1%%%.<br>• Nhóm chứa tứ phân vị thứ nhất Q₁ có tần số tích lũy đầu tiên ≥ %%%SLOT_2%%%.<br>• Nhóm chứa tứ phân vị thứ ba Q₃ có tần số tích lũy đầu tiên ≥ %%%SLOT_3%%%.",
+      "sentence": "• Nhóm chứa trung vị M_e là nhóm có tần số tích lũy đầu tiên ≥ %%%SLOT_1%%%.<br>• Nhóm chứa tứ phân vị thứ nhất Q₁ có tần số tích lũy đầu tiên ≥ %%%SLOT_2%%%.<br>• Nhóm chứa tứ phân vị thứ ba Q₃ có tần số tích lũy đầu tiên ≥ %%%SLOT_3%%%.",
       "words": [
         "n / 2",
         "n / 4",
@@ -1700,7 +1784,8 @@
         "n / 2",
         "n / 4",
         "3n / 4"
-      ]
+      ],
+      "correctText": "(1) n / 2 • (2) n / 4 • (3) 3n / 4"
     },
     {
       "type": "mcq",
@@ -1712,7 +1797,8 @@
         "9,5 phút",
         "8,8 phút"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 9,0 phút"
     },
     {
       "type": "mcq",
@@ -1724,7 +1810,8 @@
         "giá trị đại diện lớn nhất",
         "tần số tích lũy bằng n/2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: tần số lớn nhất trong tất cả các nhóm"
     },
     {
       "type": "mcq",
@@ -1736,7 +1823,8 @@
         "8,5 triệu đồng",
         "7,0 triệu đồng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 8,0 triệu đồng"
     },
     {
       "type": "mcq",
@@ -1748,7 +1836,8 @@
         "6,5 năm",
         "7,0 năm"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 6,0 năm"
     },
     {
       "type": "mcq",
@@ -1760,7 +1849,8 @@
         "10,0 km",
         "6,5 km"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 7,5 km"
     }
   ],
   "10": [
@@ -1774,23 +1864,24 @@
         "Vô số mặt phẳng",
         "Không có mặt phẳng nào"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Duy nhất 1 mặt phẳng"
     },
     {
       "type": "match",
       "q": "Ghép các cách xác định mặt phẳng (Cột A) với điều kiện tương ứng (Cột B):",
       "exp": "• Các cách xác định một mặt phẳng trong không gian.",
       "colA": [
-        "1. Qua 3 điểm",
-        "2. Qua 1 điểm và 1 đường thẳng",
-        "3. Qua 2 đường thẳng",
-        "4. Giao tuyến của hai mặt phẳng"
+        "Qua 3 điểm",
+        "Qua 1 điểm và 1 đường thẳng",
+        "Qua 2 đường thẳng",
+        "Giao tuyến của hai mặt phẳng"
       ],
       "colB": [
-        "A. Không thẳng hàng",
-        "B. Điểm không thuộc đường thẳng đó",
-        "C. Cắt nhau hoặc song song",
-        "D. Đường thẳng chứa tất cả các điểm chung"
+        "Không thẳng hàng",
+        "Điểm không thuộc đường thẳng đó",
+        "Cắt nhau hoặc song song",
+        "Đường thẳng chứa tất cả các điểm chung"
       ],
       "pairs": [
         {
@@ -1815,17 +1906,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Cho hình chóp S.ABCD có đáy ABCD là hình bình hành. Xét tính đúng - sai:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> S là đỉnh chóp nên S ∉ (ABCD) (Đúng).<br>• <b>Ý b) [Đúng]:</b> S là điểm chung của hai mặt phẳng nên giao tuyến đi qua S (Đúng).<br>• <b>Ý c) [Sai]:</b> S, A, B tạo thành tam giác SAB nên không thẳng hàng (Sai).<br>• <b>Ý d) [Đúng]:</b> S không thuộc mặt phẳng (ABC) nên 4 điểm không đồng phẳng (Đúng).",
       "stmts": [
-        "a) Điểm S không thuộc mặt phẳng (ABCD).",
-        "b) Giao tuyến của hai mặt phẳng (SAB) và (SCD) đi qua điểm S.",
-        "c) Ba điểm S, A, B thẳng hàng.",
-        "d) Bốn điểm S, A, B, C không đồng phẳng."
+        "Điểm S không thuộc mặt phẳng (ABCD).",
+        "Giao tuyến của hai mặt phẳng (SAB) và (SCD) đi qua điểm S.",
+        "Ba điểm S, A, B thẳng hàng.",
+        "Bốn điểm S, A, B, C không đồng phẳng."
       ],
       "ans": [
         true,
@@ -1835,26 +1927,27 @@
       ],
       "items": [
         {
-          "text": "a) Điểm S không thuộc mặt phẳng (ABCD).",
+          "text": "Điểm S không thuộc mặt phẳng (ABCD).",
           "ans": true,
           "exp": "S là đỉnh chóp nên S ∉ (ABCD) (Đúng)."
         },
         {
-          "text": "b) Giao tuyến của hai mặt phẳng (SAB) và (SCD) đi qua điểm S.",
+          "text": "Giao tuyến của hai mặt phẳng (SAB) và (SCD) đi qua điểm S.",
           "ans": true,
           "exp": "S là điểm chung của hai mặt phẳng nên giao tuyến đi qua S (Đúng)."
         },
         {
-          "text": "c) Ba điểm S, A, B thẳng hàng.",
+          "text": "Ba điểm S, A, B thẳng hàng.",
           "ans": false,
           "exp": "S, A, B tạo thành tam giác SAB nên không thẳng hàng (Sai)."
         },
         {
-          "text": "d) Bốn điểm S, A, B, C không đồng phẳng.",
+          "text": "Bốn điểm S, A, B, C không đồng phẳng.",
           "ans": true,
           "exp": "S không thuộc mặt phẳng (ABC) nên 4 điểm không đồng phẳng (Đúng)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {
       "type": "mcq",
@@ -1866,13 +1959,14 @@
         "6 mặt phẳng",
         "1 mặt phẳng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 4 mặt phẳng (tạo thành hình tứ diện)"
     },
     {
       "type": "drag",
-      "q": "Kéo các từ thích hợp vào chỗ trống:<br>• Nếu hai mặt phẳng phân biệt có một điểm chung thì chúng có một %%%SLOT_1%%% chung duy nhất đi qua điểm chung đó.<br>• Hình chóp tứ giác có đáy là tứ giác và %%%SLOT_2%%% mặt bên.<br>• Một tứ diện có tất cả %%%SLOT_3%%% cạnh.",
+      "q": "Kéo các từ thích hợp vào chỗ trống:",
       "exp": "• Giao tuyến là đường thẳng chung.<br>• Chóp tứ giác có 4 mặt bên.<br>• Tứ diện có 6 cạnh.",
-      "sentence": "Kéo các từ thích hợp vào chỗ trống:<br>• Nếu hai mặt phẳng phân biệt có một điểm chung thì chúng có một %%%SLOT_1%%% chung duy nhất đi qua điểm chung đó.<br>• Hình chóp tứ giác có đáy là tứ giác và %%%SLOT_2%%% mặt bên.<br>• Một tứ diện có tất cả %%%SLOT_3%%% cạnh.",
+      "sentence": "• Nếu hai mặt phẳng phân biệt có một điểm chung thì chúng có một %%%SLOT_1%%% chung duy nhất đi qua điểm chung đó.<br>• Hình chóp tứ giác có đáy là tứ giác và %%%SLOT_2%%% mặt bên.<br>• Một tứ diện có tất cả %%%SLOT_3%%% cạnh.",
       "words": [
         "đường thẳng",
         "4",
@@ -1896,7 +1990,8 @@
         "đường thẳng",
         "4",
         "6"
-      ]
+      ],
+      "correctText": "(1) đường thẳng • (2) 4 • (3) 6"
     },
     {
       "type": "mcq",
@@ -1908,7 +2003,8 @@
         "Chỉ có thể là tam giác",
         "Hình bình hành"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Tam giác hoặc tứ giác"
     },
     {
       "type": "mcq",
@@ -1920,7 +2016,8 @@
         "Cạnh của tứ diện",
         "Đường chéo của tứ diện"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Đoạn nối trung điểm hai cạnh đối diện của tứ diện"
     },
     {
       "type": "mcq",
@@ -1932,7 +2029,8 @@
         "Tam giác có diện tích nhỏ nhất",
         "Quy tắc đòn bẩy"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Qua 3 điểm không thẳng hàng luôn xác định duy nhất 1 mặt phẳng (không bao giờ bị bập bênh)"
     },
     {
       "type": "mcq",
@@ -1944,7 +2042,8 @@
         "Dễ thi công hơn hình vuông",
         "Chịu lực uốn kém hơn"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Tam giác là hình học bất biến cứng vững (không bị biến dạng khi các cạnh cố định độ dài)"
     },
     {
       "type": "mcq",
@@ -1956,7 +2055,8 @@
         "Hình thang cân",
         "Đường thẳng vuông góc"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Nếu một đường thẳng có hai điểm thuộc mặt phẳng thì mọi điểm của đường thẳng đều nằm trong mặt phẳng đó"
     }
   ],
   "11": [
@@ -1970,23 +2070,24 @@
         "cắt nhau tại vô số điểm",
         "vuông góc với nhau"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: không cùng nằm trong một mặt phẳng nào"
     },
     {
       "type": "match",
       "q": "Ghép các vị trí tương đối của hai đường thẳng a và b trong không gian (Cột A) với đặc điểm tương ứng (Cột B):",
       "exp": "• 4 vị trí tương đối giữa hai đường thẳng trong không gian.",
       "colA": [
-        "1. Trùng nhau",
-        "2. Cắt nhau",
-        "3. Song song",
-        "4. Chéo nhau"
+        "Trùng nhau",
+        "Cắt nhau",
+        "Song song",
+        "Chéo nhau"
       ],
       "colB": [
-        "A. Cùng thuộc một mặt phẳng và có vô số điểm chung",
-        "B. Cùng thuộc một mặt phẳng và có đúng 1 điểm chung",
-        "C. Cùng thuộc một mặt phẳng và không có điểm chung",
-        "D. Không đồng phẳng (không cùng nằm trong mặt phẳng nào)"
+        "Cùng thuộc một mặt phẳng và có vô số điểm chung",
+        "Cùng thuộc một mặt phẳng và có đúng 1 điểm chung",
+        "Cùng thuộc một mặt phẳng và không có điểm chung",
+        "Không đồng phẳng (không cùng nằm trong mặt phẳng nào)"
       ],
       "pairs": [
         {
@@ -2011,17 +2112,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Cho tứ diện ABCD. Xét tính đúng - sai về vị trí các cạnh:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> AB và CD là hai cạnh đối diện của tứ diện, không cùng nằm trong một mặt phẳng nào nên chéo nhau (Đúng).<br>• <b>Ý b) [Đúng]:</b> Cùng nằm trong mp(ABC) và có điểm chung B (Đúng).<br>• <b>Ý c) [Sai]:</b> AC và BD là hai cạnh đối diện của tứ diện nên chéo nhau (Sai).<br>• <b>Ý d) [Đúng]:</b> MN là đường trung bình của tam giác ABC nên MN // BC (Đúng).",
       "stmts": [
-        "a) Hai đường thẳng AB và CD chéo nhau.",
-        "b) Hai đường thẳng AB và BC cắt nhau tại B.",
-        "c) Hai đường thẳng AC và BD song song với nhau.",
-        "d) Gọi M, N là trung điểm của AB và AC thì MN // BC."
+        "Hai đường thẳng AB và CD chéo nhau.",
+        "Hai đường thẳng AB và BC cắt nhau tại B.",
+        "Hai đường thẳng AC và BD song song với nhau.",
+        "Gọi M, N là trung điểm của AB và AC thì MN // BC."
       ],
       "ans": [
         true,
@@ -2031,26 +2133,27 @@
       ],
       "items": [
         {
-          "text": "a) Hai đường thẳng AB và CD chéo nhau.",
+          "text": "Hai đường thẳng AB và CD chéo nhau.",
           "ans": true,
           "exp": "AB và CD là hai cạnh đối diện của tứ diện, không cùng nằm trong một mặt phẳng nào nên chéo nhau (Đúng)."
         },
         {
-          "text": "b) Hai đường thẳng AB và BC cắt nhau tại B.",
+          "text": "Hai đường thẳng AB và BC cắt nhau tại B.",
           "ans": true,
           "exp": "Cùng nằm trong mp(ABC) và có điểm chung B (Đúng)."
         },
         {
-          "text": "c) Hai đường thẳng AC và BD song song với nhau.",
+          "text": "Hai đường thẳng AC và BD song song với nhau.",
           "ans": false,
           "exp": "AC và BD là hai cạnh đối diện của tứ diện nên chéo nhau (Sai)."
         },
         {
-          "text": "d) Gọi M, N là trung điểm của AB và AC thì MN // BC.",
+          "text": "Gọi M, N là trung điểm của AB và AC thì MN // BC.",
           "ans": true,
           "exp": "MN là đường trung bình của tam giác ABC nên MN // BC (Đúng)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {
       "type": "mcq",
@@ -2062,13 +2165,14 @@
         "luôn đôi một song song",
         "luôn trùng nhau"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: hoặc đồng quy hoặc đôi một song song"
     },
     {
       "type": "drag",
-      "q": "Kéo vị trí tương đối vào chỗ trống cho hình lập phương ABCD.A'B'C'D':<br>• Đường thẳng AB và C'D' là hai đường thẳng %%%SLOT_1%%%.<br>• Đường thẳng AB và B'C' là hai đường thẳng %%%SLOT_2%%%.<br>• Đường thẳng AA' và BB' là hai đường thẳng %%%SLOT_3%%%.",
+      "q": "Kéo vị trí tương đối vào chỗ trống cho hình lập phương ABCD.A'B'C'D':",
       "exp": "• AB // CD mà CD // C'D' ⇒ AB // C'D'.<br>• AB và B'C' không đồng phẳng ⇒ chéo nhau.<br>• AA' // BB'.",
-      "sentence": "Kéo vị trí tương đối vào chỗ trống cho hình lập phương ABCD.A'B'C'D':<br>• Đường thẳng AB và C'D' là hai đường thẳng %%%SLOT_1%%%.<br>• Đường thẳng AB và B'C' là hai đường thẳng %%%SLOT_2%%%.<br>• Đường thẳng AA' và BB' là hai đường thẳng %%%SLOT_3%%%.",
+      "sentence": "• Đường thẳng AB và C'D' là hai đường thẳng %%%SLOT_1%%%.<br>• Đường thẳng AB và B'C' là hai đường thẳng %%%SLOT_2%%%.<br>• Đường thẳng AA' và BB' là hai đường thẳng %%%SLOT_3%%%.",
       "words": [
         "song song",
         "chéo nhau",
@@ -2092,7 +2196,8 @@
         "song song",
         "chéo nhau",
         "song song"
-      ]
+      ],
+      "correctText": "(1) song song • (2) chéo nhau • (3) song song"
     },
     {
       "type": "mcq",
@@ -2104,7 +2209,8 @@
         "Đoạn thẳng BD",
         "Đường thẳng SO"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Đường thẳng d đi qua S và song song với AB và CD"
     },
     {
       "type": "mcq",
@@ -2116,7 +2222,8 @@
         "2 mặt phẳng",
         "Không có mặt phẳng nào"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Duy nhất 1 mặt phẳng"
     },
     {
       "type": "mcq",
@@ -2128,7 +2235,8 @@
         "Cắt nhau",
         "Trùng nhau"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Chéo nhau"
     },
     {
       "type": "mcq",
@@ -2140,7 +2248,8 @@
         "Hai đường thẳng cắt nhau",
         "Hai mặt phẳng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Hai đường thẳng song song"
     },
     {
       "type": "mcq",
@@ -2152,7 +2261,8 @@
         "Hai đường thẳng song song",
         "Hai đường thẳng trùng nhau"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Hai đường thẳng chéo nhau (đảm bảo an toàn không va chạm)"
     }
   ],
   "12": [
@@ -2166,23 +2276,24 @@
         "a nằm trong (P)",
         "a cắt (P) tại đúng 1 điểm"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: a và (P) không có điểm chung nào"
     },
     {
       "type": "match",
       "q": "Ghép các định lý về đường thẳng song song mặt phẳng (Cột A) với nội dung (Cột B):",
       "exp": "• Các định lý trọng tâm về đường thẳng và mặt phẳng song song.",
       "colA": [
-        "1. Dấu hiệu nhận biết a // (P)",
-        "2. Tính chất a // (P) và mp(Q) chứa a cắt (P)",
-        "3. Hai mặt phẳng cùng song song với a",
-        "4. a // b và b ⊂ (P)"
+        "Dấu hiệu nhận biết a // (P)",
+        "Tính chất a // (P) và mp(Q) chứa a cắt (P)",
+        "Hai mặt phẳng cùng song song với a",
+        "a // b và b ⊂ (P)"
       ],
       "colB": [
-        "A. a ⊄ (P) và a song song với một đường thẳng b nằm trong (P)",
-        "B. Giao tuyến của (P) và (Q) song song với a",
-        "C. Giao tuyến của chúng (nếu có) song song với a",
-        "D. a // (P) hoặc a ⊂ (P)"
+        "a ⊄ (P) và a song song với một đường thẳng b nằm trong (P)",
+        "Giao tuyến của (P) và (Q) song song với a",
+        "Giao tuyến của chúng (nếu có) song song với a",
+        "a // (P) hoặc a ⊂ (P)"
       ],
       "pairs": [
         {
@@ -2207,17 +2318,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Cho hình chóp S.ABCD đáy là hình bình hành ABCD. Xét tính đúng - sai:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> AB ⊄ (SCD) và AB // CD (CD ⊂ (SCD)) nên AB // (SCD) (Đúng).<br>• <b>Ý b) [Đúng]:</b> BC // AD mà AD ⊂ (SAD) nên BC // (SAD) (Đúng).<br>• <b>Ý c) [Sai]:</b> SA cắt (SBC) tại điểm S (Sai).<br>• <b>Ý d) [Đúng]:</b> MN // AB mà AB ⊂ (ABCD) nên MN // (ABCD) (Đúng).",
       "stmts": [
-        "a) Đường thẳng AB song song với mặt phẳng (SCD).",
-        "b) Đường thẳng BC song song với mặt phẳng (SAD).",
-        "c) Đường thẳng SA song song với mặt phẳng (SBC).",
-        "d) Gọi M, N là trung điểm của SA, SB thì MN // (ABCD)."
+        "Đường thẳng AB song song với mặt phẳng (SCD).",
+        "Đường thẳng BC song song với mặt phẳng (SAD).",
+        "Đường thẳng SA song song với mặt phẳng (SBC).",
+        "Gọi M, N là trung điểm của SA, SB thì MN // (ABCD)."
       ],
       "ans": [
         true,
@@ -2227,26 +2339,27 @@
       ],
       "items": [
         {
-          "text": "a) Đường thẳng AB song song với mặt phẳng (SCD).",
+          "text": "Đường thẳng AB song song với mặt phẳng (SCD).",
           "ans": true,
           "exp": "AB ⊄ (SCD) và AB // CD (CD ⊂ (SCD)) nên AB // (SCD) (Đúng)."
         },
         {
-          "text": "b) Đường thẳng BC song song với mặt phẳng (SAD).",
+          "text": "Đường thẳng BC song song với mặt phẳng (SAD).",
           "ans": true,
           "exp": "BC // AD mà AD ⊂ (SAD) nên BC // (SAD) (Đúng)."
         },
         {
-          "text": "c) Đường thẳng SA song song với mặt phẳng (SBC).",
+          "text": "Đường thẳng SA song song với mặt phẳng (SBC).",
           "ans": false,
           "exp": "SA cắt (SBC) tại điểm S (Sai)."
         },
         {
-          "text": "d) Gọi M, N là trung điểm của SA, SB thì MN // (ABCD).",
+          "text": "Gọi M, N là trung điểm của SA, SB thì MN // (ABCD).",
           "ans": true,
           "exp": "MN // AB mà AB ⊂ (ABCD) nên MN // (ABCD) (Đúng)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {
       "type": "mcq",
@@ -2258,13 +2371,14 @@
         "Nếu mặt phẳng (β) chứa d cắt (α) theo giao tuyến c thì d // c",
         "Tồn tại vô số đường thẳng trong (α) chéo nhau với d"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: d song song với mọi đường thẳng nằm trong (α)"
     },
     {
       "type": "drag",
-      "q": "Kéo các từ thích hợp vào định lý nhận biết d // (P):<br>• Nếu đường thẳng d không nằm trong mặt phẳng (P) và d song song với một đường thẳng d' %%%SLOT_1%%% (P) thì d %%%SLOT_2%%% với mặt phẳng (P).<br>• Qua 1 điểm ở ngoài mặt phẳng (P) có %%%SLOT_3%%% đường thẳng song song với (P).",
+      "q": "Kéo các từ thích hợp vào định lý nhận biết d // (P):",
       "exp": "• Dấu hiệu: d // d' ⊂ (P) ⇒ d // (P).<br>• Qua điểm ngoài mp có vô số đường thẳng song song mp đó (nằm trên mp song song).",
-      "sentence": "Kéo các từ thích hợp vào định lý nhận biết d // (P):<br>• Nếu đường thẳng d không nằm trong mặt phẳng (P) và d song song với một đường thẳng d' %%%SLOT_1%%% (P) thì d %%%SLOT_2%%% với mặt phẳng (P).<br>• Qua 1 điểm ở ngoài mặt phẳng (P) có %%%SLOT_3%%% đường thẳng song song với (P).",
+      "sentence": "• Nếu đường thẳng d không nằm trong mặt phẳng (P) và d song song với một đường thẳng d' %%%SLOT_1%%% (P) thì d %%%SLOT_2%%% với mặt phẳng (P).<br>• Qua 1 điểm ở ngoài mặt phẳng (P) có %%%SLOT_3%%% đường thẳng song song với (P).",
       "words": [
         "nằm trong",
         "song song",
@@ -2288,7 +2402,8 @@
         "nằm trong",
         "song song",
         "vô số"
-      ]
+      ],
+      "correctText": "(1) nằm trong • (2) song song • (3) vô số"
     },
     {
       "type": "mcq",
@@ -2300,7 +2415,8 @@
         "(ABC)",
         "(ABD)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: (ACD)"
     },
     {
       "type": "mcq",
@@ -2312,7 +2428,8 @@
         "Vô số mặt phẳng",
         "Không có mặt phẳng nào"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Duy nhất 1 mặt phẳng"
     },
     {
       "type": "mcq",
@@ -2324,7 +2441,8 @@
         "Đường thẳng cắt mặt phẳng",
         "Đường thẳng nằm trên mặt phẳng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Đường thẳng song song với mặt phẳng"
     },
     {
       "type": "mcq",
@@ -2336,7 +2454,8 @@
         "Hai đường thẳng chéo nhau",
         "Đường thẳng cắt mặt phẳng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Đường thẳng song song với mặt phẳng nằm ngang"
     },
     {
       "type": "mcq",
@@ -2348,7 +2467,8 @@
         "Vuông góc với mặt đất",
         "Trùng với mặt đất"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Song song với mặt phẳng mặt đất"
     }
   ],
   "13": [
@@ -2362,23 +2482,24 @@
         "có chung 1 điểm duy nhất",
         "vuông góc với nhau"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: không có điểm chung nào"
     },
     {
       "type": "match",
       "q": "Ghép định lý về hai mặt phẳng song song (Cột A) với nội dung (Cột B):",
       "exp": "• Các định lý trọng tâm về hai mặt phẳng song song.",
       "colA": [
-        "1. Dấu hiệu nhận biết (P) // (Q)",
-        "2. Mặt phẳng thứ ba (R) cắt (P) và (Q)",
-        "3. Qua điểm A ngoài (P)",
-        "4. Định lý Thales trong không gian"
+        "Dấu hiệu nhận biết (P) // (Q)",
+        "Mặt phẳng thứ ba (R) cắt (P) và (Q)",
+        "Qua điểm A ngoài (P)",
+        "Định lý Thales trong không gian"
       ],
       "colB": [
-        "A. (P) chứa 2 đường thẳng cắt nhau a, b cùng song song với (Q)",
-        "B. Cho hai giao tuyến song song với nhau",
-        "C. Có duy nhất 1 mặt phẳng song song với (P)",
-        "D. Các mặt phẳng song song chắn trên hai cát tuyến các đoạn tương ứng tỉ lệ"
+        "(P) chứa 2 đường thẳng cắt nhau a, b cùng song song với (Q)",
+        "Cho hai giao tuyến song song với nhau",
+        "Có duy nhất 1 mặt phẳng song song với (P)",
+        "Các mặt phẳng song song chắn trên hai cát tuyến các đoạn tương ứng tỉ lệ"
       ],
       "pairs": [
         {
@@ -2403,17 +2524,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Cho hình lập phương ABCD.A'B'C'D'. Xét tính đúng - sai:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Hai mặt đáy của hình lập phương song song với nhau (Đúng).<br>• <b>Ý b) [Đúng]:</b> Hai mặt bên đối diện của hình lập phương song song với nhau (Đúng).<br>• <b>Ý c) [Sai]:</b> Hai mặt phẳng này cắt nhau theo giao tuyến BD (Sai).<br>• <b>Ý d) [Đúng]:</b> Khoảng cách giữa hai mặt phẳng song song bằng độ dài cạnh hình lập phương (Đúng).",
       "stmts": [
-        "a) Mặt phẳng (ABCD) song song với mặt phẳng (A'B'C'D').",
-        "b) Mặt phẳng (ABB'A') song song với mặt phẳng (CDD'C').",
-        "c) Mặt phẳng (BDA') song song với mặt phẳng (BDC').",
-        "d) Khoảng cách giữa hai mặt phẳng đối diện là không đổi."
+        "Mặt phẳng (ABCD) song song với mặt phẳng (A'B'C'D').",
+        "Mặt phẳng (ABB'A') song song với mặt phẳng (CDD'C').",
+        "Mặt phẳng (BDA') song song với mặt phẳng (BDC').",
+        "Khoảng cách giữa hai mặt phẳng đối diện là không đổi."
       ],
       "ans": [
         true,
@@ -2423,26 +2545,27 @@
       ],
       "items": [
         {
-          "text": "a) Mặt phẳng (ABCD) song song với mặt phẳng (A'B'C'D').",
+          "text": "Mặt phẳng (ABCD) song song với mặt phẳng (A'B'C'D').",
           "ans": true,
           "exp": "Hai mặt đáy của hình lập phương song song với nhau (Đúng)."
         },
         {
-          "text": "b) Mặt phẳng (ABB'A') song song với mặt phẳng (CDD'C').",
+          "text": "Mặt phẳng (ABB'A') song song với mặt phẳng (CDD'C').",
           "ans": true,
           "exp": "Hai mặt bên đối diện của hình lập phương song song với nhau (Đúng)."
         },
         {
-          "text": "c) Mặt phẳng (BDA') song song với mặt phẳng (BDC').",
+          "text": "Mặt phẳng (BDA') song song với mặt phẳng (BDC').",
           "ans": false,
           "exp": "Hai mặt phẳng này cắt nhau theo giao tuyến BD (Sai)."
         },
         {
-          "text": "d) Khoảng cách giữa hai mặt phẳng đối diện là không đổi.",
+          "text": "Khoảng cách giữa hai mặt phẳng đối diện là không đổi.",
           "ans": true,
           "exp": "Khoảng cách giữa hai mặt phẳng song song bằng độ dài cạnh hình lập phương (Đúng)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {
       "type": "mcq",
@@ -2454,13 +2577,14 @@
         "(P) chứa hai đường thẳng phân biệt cùng song song với (Q)",
         "(P) và (Q) cùng vuông góc với đường thẳng thứ ba"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: (P) chứa hai đường thẳng cắt nhau cùng song song với (Q)"
     },
     {
       "type": "drag",
-      "q": "Kéo các từ thích hợp vào định lý Thales không gian:<br>• Ba mặt phẳng đôi một song song chắn trên hai cát tuyến bất kì những đoạn thẳng %%%SLOT_1%%%.<br>• Hình lăng trụ có hai đáy là hai đa giác bằng nhau nằm trên hai mặt phẳng %%%SLOT_2%%%.<br>• Các cạnh bên của hình lăng trụ đôi một %%%SLOT_3%%%.",
+      "q": "Kéo các từ thích hợp vào định lý Thales không gian:",
       "exp": "• Định lý Thales: tỉ lệ.<br>• Hai đáy lăng trụ //.<br>• Các cạnh bên // và bằng nhau.",
-      "sentence": "Kéo các từ thích hợp vào định lý Thales không gian:<br>• Ba mặt phẳng đôi một song song chắn trên hai cát tuyến bất kì những đoạn thẳng %%%SLOT_1%%%.<br>• Hình lăng trụ có hai đáy là hai đa giác bằng nhau nằm trên hai mặt phẳng %%%SLOT_2%%%.<br>• Các cạnh bên của hình lăng trụ đôi một %%%SLOT_3%%%.",
+      "sentence": "• Ba mặt phẳng đôi một song song chắn trên hai cát tuyến bất kì những đoạn thẳng %%%SLOT_1%%%.<br>• Hình lăng trụ có hai đáy là hai đa giác bằng nhau nằm trên hai mặt phẳng %%%SLOT_2%%%.<br>• Các cạnh bên của hình lăng trụ đôi một %%%SLOT_3%%%.",
       "words": [
         "tương ứng tỉ lệ",
         "song song",
@@ -2484,7 +2608,8 @@
         "tương ứng tỉ lệ",
         "song song",
         "song song và bằng nhau"
-      ]
+      ],
+      "correctText": "(1) tương ứng tỉ lệ • (2) song song • (3) song song và bằng nhau"
     },
     {
       "type": "mcq",
@@ -2496,7 +2621,8 @@
         "Luôn chéo nhau",
         "Cắt nhau"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Song song hoặc chéo nhau"
     },
     {
       "type": "mcq",
@@ -2508,7 +2634,8 @@
         "1/8",
         "1/16"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 1/4"
     },
     {
       "type": "mcq",
@@ -2520,7 +2647,8 @@
         "Hai mặt phẳng vuông góc",
         "Hai mặt phẳng trùng nhau"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Hai mặt phẳng song song"
     },
     {
       "type": "mcq",
@@ -2532,7 +2660,8 @@
         "Vuông góc mặt đất",
         "Chéo nhau"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Song song với nhau và song song với mặt đất"
     },
     {
       "type": "mcq",
@@ -2544,7 +2673,8 @@
         "Hai mặt phẳng cắt nhau",
         "Hình lăng trụ"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Hai mặt phẳng song song"
     }
   ],
   "14": [
@@ -2558,23 +2688,24 @@
         "Một đoạn thẳng",
         "Một tia"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Một điểm"
     },
     {
       "type": "match",
       "q": "Ghép các tính chất của phép chiếu song song (Cột A) với hình ảnh (Cột B):",
       "exp": "• Các tính chất bất biến của phép chiếu song song.",
       "colA": [
-        "1. Biến hai đường thẳng song song",
-        "2. Biến đoạn thẳng AB",
-        "3. Giữ nguyên tỉ số",
-        "4. Biến tam giác"
+        "Biến hai đường thẳng song song",
+        "Biến đoạn thẳng AB",
+        "Giữ nguyên tỉ số",
+        "Biến tam giác"
       ],
       "colB": [
-        "A. Thành hai đường thẳng song song hoặc trùng nhau",
-        "B. Thành đoạn thẳng A'B'",
-        "C. Độ dài của hai đoạn thẳng cùng nằm trên một đường thẳng",
-        "D. Thành một tam giác (nếu không song song phương chiếu)"
+        "Thành hai đường thẳng song song hoặc trùng nhau",
+        "Thành đoạn thẳng A'B'",
+        "Độ dài của hai đoạn thẳng cùng nằm trên một đường thẳng",
+        "Thành một tam giác (nếu không song song phương chiếu)"
       ],
       "pairs": [
         {
@@ -2599,17 +2730,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Xét tính đúng - sai về hình biểu diễn của các hình học phẳng qua phép chiếu song song:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Phép chiếu song song bảo toàn tính song song nên biến hình bình hành thành hình bình hành (Đúng).<br>• <b>Ý b) [Sai]:</b> Hình biểu diễn của hình tròn nói chung là một đường elip (Sai).<br>• <b>Ý c) [Đúng]:</b> Phép chiếu song song không bảo toàn độ lớn góc nên tam giác đều chiếu thành tam giác thường (Đúng).<br>• <b>Ý d) [Đúng]:</b> Bảo toàn tỉ số đoạn thẳng nên trung điểm biến thành trung điểm (Đúng).",
       "stmts": [
-        "a) Hình biểu diễn của một hình bình hành là một hình bình hành.",
-        "b) Hình biểu diễn của một hình tròn luôn luôn là một hình tròn.",
-        "c) Hình biểu diễn của tam giác đều có thể là một tam giác thường.",
-        "d) Trung điểm của đoạn thẳng biến thành trung điểm của đoạn thẳng biểu diễn."
+        "Hình biểu diễn của một hình bình hành là một hình bình hành.",
+        "Hình biểu diễn của một hình tròn luôn luôn là một hình tròn.",
+        "Hình biểu diễn của tam giác đều có thể là một tam giác thường.",
+        "Trung điểm của đoạn thẳng biến thành trung điểm của đoạn thẳng biểu diễn."
       ],
       "ans": [
         true,
@@ -2619,26 +2751,27 @@
       ],
       "items": [
         {
-          "text": "a) Hình biểu diễn của một hình bình hành là một hình bình hành.",
+          "text": "Hình biểu diễn của một hình bình hành là một hình bình hành.",
           "ans": true,
           "exp": "Phép chiếu song song bảo toàn tính song song nên biến hình bình hành thành hình bình hành (Đúng)."
         },
         {
-          "text": "b) Hình biểu diễn của một hình tròn luôn luôn là một hình tròn.",
+          "text": "Hình biểu diễn của một hình tròn luôn luôn là một hình tròn.",
           "ans": false,
           "exp": "Hình biểu diễn của hình tròn nói chung là một đường elip (Sai)."
         },
         {
-          "text": "c) Hình biểu diễn của tam giác đều có thể là một tam giác thường.",
+          "text": "Hình biểu diễn của tam giác đều có thể là một tam giác thường.",
           "ans": true,
           "exp": "Phép chiếu song song không bảo toàn độ lớn góc nên tam giác đều chiếu thành tam giác thường (Đúng)."
         },
         {
-          "text": "d) Trung điểm của đoạn thẳng biến thành trung điểm của đoạn thẳng biểu diễn.",
+          "text": "Trung điểm của đoạn thẳng biến thành trung điểm của đoạn thẳng biểu diễn.",
           "ans": true,
           "exp": "Bảo toàn tỉ số đoạn thẳng nên trung điểm biến thành trung điểm (Đúng)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Sai • c) Đúng • d) Đúng"
     },
     {
       "type": "mcq",
@@ -2650,13 +2783,14 @@
         "Hình bình hành",
         "Hình chữ nhật"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: A'B' // C'D' và C'D' = 2A'B'"
     },
     {
       "type": "drag",
-      "q": "Kéo các hình biểu diễn chính xác vào chỗ trống:<br>• Hình biểu diễn của hình chữ nhật là %%%SLOT_1%%%.<br>• Hình biểu diễn của hình thoi là %%%SLOT_2%%%.<br>• Hình biểu diễn của đường tròn thường là %%%SLOT_3%%%.",
+      "q": "Kéo các hình biểu diễn chính xác vào chỗ trống:",
       "exp": "• Góc vuông không được bảo toàn nên hình chữ nhật và hình thoi đều vẽ thành hình bình hành.<br>• Đường tròn chiếu thành elip.",
-      "sentence": "Kéo các hình biểu diễn chính xác vào chỗ trống:<br>• Hình biểu diễn của hình chữ nhật là %%%SLOT_1%%%.<br>• Hình biểu diễn của hình thoi là %%%SLOT_2%%%.<br>• Hình biểu diễn của đường tròn thường là %%%SLOT_3%%%.",
+      "sentence": "• Hình biểu diễn của hình chữ nhật là %%%SLOT_1%%%.<br>• Hình biểu diễn của hình thoi là %%%SLOT_2%%%.<br>• Hình biểu diễn của đường tròn thường là %%%SLOT_3%%%.",
       "words": [
         "hình bình hành",
         "hình bình hành",
@@ -2680,7 +2814,8 @@
         "hình bình hành",
         "hình bình hành",
         "đường elip"
-      ]
+      ],
+      "correctText": "(1) hình bình hành • (2) hình bình hành • (3) đường elip"
     },
     {
       "type": "mcq",
@@ -2692,7 +2827,8 @@
         "Tính song song của hai đường thẳng",
         "Tỉ số của hai đoạn thẳng cùng nằm trên 1 đường thẳng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Độ lớn của góc và độ dài đoạn thẳng"
     },
     {
       "type": "mcq",
@@ -2704,7 +2840,8 @@
         "Hình thang",
         "Tam giác"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Hình bình hành"
     },
     {
       "type": "mcq",
@@ -2716,7 +2853,8 @@
         "18 m",
         "40 m"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 32 m"
     },
     {
       "type": "mcq",
@@ -2728,7 +2866,8 @@
         "Hình thang",
         "Đường tròn"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Hình bình hành"
     },
     {
       "type": "mcq",
@@ -2740,7 +2879,8 @@
         "Phép vị tự",
         "Phép đối xứng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Phép chiếu song song của ánh sáng mặt trời tạo bóng kim thay đổi góc theo thời gian trong ngày"
     }
   ],
   "15": [
@@ -2754,23 +2894,24 @@
         "lim (1/n) = +∞",
         "lim (1/n) = -1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: lim (1/n) = 0"
     },
     {
       "type": "match",
       "q": "Ghép các giới hạn cơ bản (Cột A) với kết quả tương ứng (Cột B):",
       "exp": "• Các giới hạn dãy số kinh điển.",
       "colA": [
-        "1. lim qⁿ với |q| < 1",
-        "2. lim qⁿ với q > 1",
-        "3. lim c (hằng số)",
-        "4. lim n^k (k nguyên dương)"
+        "lim qⁿ với |q| < 1",
+        "lim qⁿ với q > 1",
+        "lim c (hằng số)",
+        "lim n^k (k nguyên dương)"
       ],
       "colB": [
-        "A. = 0",
-        "B. = +∞",
-        "C. = c",
-        "D. = +∞"
+        "= 0",
+        "= +∞",
+        "= c",
+        "= +∞"
       ],
       "pairs": [
         {
@@ -2795,17 +2936,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Xét tính đúng - sai của các giới hạn sau:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Chia cả tử và mẫu cho n: lim (2 + 1/n)/(1 + 3/n) = 2/1 = 2 (Đúng).<br>• <b>Ý b) [Đúng]:</b> Bậc tử bằng bậc mẫu, hệ số cao nhất là 1/2 (Đúng).<br>• <b>Ý c) [Sai]:</b> Vì |0,5| < 1 nên lim (0,5)ⁿ = 0 (Sai).<br>• <b>Ý d) [Đúng]:</b> n² - n = n²(1 - 1/n) → +∞ · 1 = +∞ (Đúng).",
       "stmts": [
-        "a) lim <span class=\"fraction\"><span class=\"numerator\">2n + 1</span><span class=\"denominator\">n + 3</span></span> = 2.",
-        "b) lim <span class=\"fraction\"><span class=\"numerator\">n² - 3</span><span class=\"denominator\">2n² + 5</span></span> = 1/2.",
-        "c) lim (0,5)ⁿ = +∞.",
-        "d) lim (n² - n) = +∞."
+        "lim <span class=\"fraction\"><span class=\"numerator\">2n + 1</span><span class=\"denominator\">n + 3</span></span> = 2.",
+        "lim <span class=\"fraction\"><span class=\"numerator\">n² - 3</span><span class=\"denominator\">2n² + 5</span></span> = 1/2.",
+        "lim (0,5)ⁿ = +∞.",
+        "lim (n² - n) = +∞."
       ],
       "ans": [
         true,
@@ -2815,26 +2957,27 @@
       ],
       "items": [
         {
-          "text": "a) lim <span class=\"fraction\"><span class=\"numerator\">2n + 1</span><span class=\"denominator\">n + 3</span></span> = 2.",
+          "text": "lim <span class=\"fraction\"><span class=\"numerator\">2n + 1</span><span class=\"denominator\">n + 3</span></span> = 2.",
           "ans": true,
           "exp": "Chia cả tử và mẫu cho n: lim (2 + 1/n)/(1 + 3/n) = 2/1 = 2 (Đúng)."
         },
         {
-          "text": "b) lim <span class=\"fraction\"><span class=\"numerator\">n² - 3</span><span class=\"denominator\">2n² + 5</span></span> = 1/2.",
+          "text": "lim <span class=\"fraction\"><span class=\"numerator\">n² - 3</span><span class=\"denominator\">2n² + 5</span></span> = 1/2.",
           "ans": true,
           "exp": "Bậc tử bằng bậc mẫu, hệ số cao nhất là 1/2 (Đúng)."
         },
         {
-          "text": "c) lim (0,5)ⁿ = +∞.",
+          "text": "lim (0,5)ⁿ = +∞.",
           "ans": false,
           "exp": "Vì |0,5| < 1 nên lim (0,5)ⁿ = 0 (Sai)."
         },
         {
-          "text": "d) lim (n² - n) = +∞.",
+          "text": "lim (n² - n) = +∞.",
           "ans": true,
           "exp": "n² - n = n²(1 - 1/n) → +∞ · 1 = +∞ (Đúng)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {
       "type": "mcq",
@@ -2846,13 +2989,14 @@
         "+∞",
         "0"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 3/2"
     },
     {
       "type": "drag",
-      "q": "Kéo các kết quả giới hạn vào chỗ trống:<br>• lim <span class=\"fraction\"><span class=\"numerator\">5</span><span class=\"denominator\">n² + 1</span></span> = %%%SLOT_1%%%.<br>• lim <span class=\"fraction\"><span class=\"numerator\">4n³ + 1</span><span class=\"denominator\">n² + 2</span></span> = %%%SLOT_2%%%.<br>• lim <span class=\"fraction\"><span class=\"numerator\">2ⁿ⁺¹</span><span class=\"denominator\">2ⁿ + 1</span></span> = %%%SLOT_3%%%.",
+      "q": "Kéo các kết quả giới hạn vào chỗ trống:",
       "exp": "• Bậc tử < mẫu: 0.<br>• Bậc tử > mẫu: +∞.<br>• 2ⁿ⁺¹ / 2ⁿ = 2.",
-      "sentence": "Kéo các kết quả giới hạn vào chỗ trống:<br>• lim <span class=\"fraction\"><span class=\"numerator\">5</span><span class=\"denominator\">n² + 1</span></span> = %%%SLOT_1%%%.<br>• lim <span class=\"fraction\"><span class=\"numerator\">4n³ + 1</span><span class=\"denominator\">n² + 2</span></span> = %%%SLOT_2%%%.<br>• lim <span class=\"fraction\"><span class=\"numerator\">2ⁿ⁺¹</span><span class=\"denominator\">2ⁿ + 1</span></span> = %%%SLOT_3%%%.",
+      "sentence": "• lim <span class=\"fraction\"><span class=\"numerator\">5</span><span class=\"denominator\">n² + 1</span></span> = %%%SLOT_1%%%.<br>• lim <span class=\"fraction\"><span class=\"numerator\">4n³ + 1</span><span class=\"denominator\">n² + 2</span></span> = %%%SLOT_2%%%.<br>• lim <span class=\"fraction\"><span class=\"numerator\">2ⁿ⁺¹</span><span class=\"denominator\">2ⁿ + 1</span></span> = %%%SLOT_3%%%.",
       "words": [
         "0",
         "+∞",
@@ -2876,7 +3020,8 @@
         "0",
         "+∞",
         "2"
-      ]
+      ],
+      "correctText": "(1) 0 • (2) +∞ • (3) 2"
     },
     {
       "type": "mcq",
@@ -2888,7 +3033,8 @@
         "2",
         "+∞"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 1"
     },
     {
       "type": "mcq",
@@ -2900,7 +3046,8 @@
         "6",
         "4"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 3"
     },
     {
       "type": "mcq",
@@ -2912,7 +3059,8 @@
         "200 mg",
         "50 mg"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 100 mg"
     },
     {
       "type": "mcq",
@@ -2924,7 +3072,8 @@
         "4",
         "3"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 2"
     },
     {
       "type": "mcq",
@@ -2936,7 +3085,8 @@
         "12 s",
         "Vô hạn"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 100/9 s (≈ 11,11 giây)"
     }
   ],
   "16": [
@@ -2950,23 +3100,24 @@
         "5",
         "11"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 9"
     },
     {
       "type": "match",
       "q": "Ghép các dạng vô định của giới hạn hàm số (Cột A) với phương pháp khử tương ứng (Cột B):",
       "exp": "• 4 dạng vô định kinh điển và kĩ thuật khử vô định.",
       "colA": [
-        "1. Dạng vô định 0/0 chứa đa thức",
-        "2. Dạng vô định 0/0 chứa căn thức",
-        "3. Dạng vô định ∞/∞ khi x → ∞",
-        "4. Dạng vô định ∞ - ∞"
+        "Dạng vô định 0/0 chứa đa thức",
+        "Dạng vô định 0/0 chứa căn thức",
+        "Dạng vô định ∞/∞ khi x → ∞",
+        "Dạng vô định ∞ - ∞"
       ],
       "colB": [
-        "A. Phân tích nhân tử (x - x₀) để rút gọn",
-        "B. Nhân chia biểu thức liên hợp",
-        "C. Chia cả tử và mẫu cho lũy thừa bậc cao nhất của x",
-        "D. Nhân liên hợp hoặc quy đồng mẫu số"
+        "Phân tích nhân tử (x - x₀) để rút gọn",
+        "Nhân chia biểu thức liên hợp",
+        "Chia cả tử và mẫu cho lũy thừa bậc cao nhất của x",
+        "Nhân liên hợp hoặc quy đồng mẫu số"
       ],
       "pairs": [
         {
@@ -2991,17 +3142,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Xét tính đúng - sai của các giới hạn hàm số sau:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> (x² - 1)/(x - 1) = x + 1 → 1 + 1 = 2 (Đúng).<br>• <b>Ý b) [Sai]:</b> 1/x tiến ra vô cực (không tồn tại giới hạn hữu hạn) (Sai).<br>• <b>Ý c) [Đúng]:</b> Bậc tử bằng mẫu, tỉ số hệ số 2/1 = 2 (Đúng).<br>• <b>Ý d) [Đúng]:</b> Tử dương (1), mẫu tiến về 0 từ phía dương nên kết quả là +∞ (Đúng).",
       "stmts": [
-        "a) lim_(x → 1) <span class=\"fraction\"><span class=\"numerator\">x² - 1</span><span class=\"denominator\">x - 1</span></span> = 2.",
-        "b) lim_(x → 0) (1/x) = 0.",
-        "c) lim_(x → +∞) <span class=\"fraction\"><span class=\"numerator\">2x + 3</span><span class=\"denominator\">x - 1</span></span> = 2.",
-        "d) lim_(x → 3⁺) <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x - 3</span></span> = +∞."
+        "lim_(x → 1) <span class=\"fraction\"><span class=\"numerator\">x² - 1</span><span class=\"denominator\">x - 1</span></span> = 2.",
+        "lim_(x → 0) (1/x) = 0.",
+        "lim_(x → +∞) <span class=\"fraction\"><span class=\"numerator\">2x + 3</span><span class=\"denominator\">x - 1</span></span> = 2.",
+        "lim_(x → 3⁺) <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x - 3</span></span> = +∞."
       ],
       "ans": [
         true,
@@ -3011,26 +3163,27 @@
       ],
       "items": [
         {
-          "text": "a) lim_(x → 1) <span class=\"fraction\"><span class=\"numerator\">x² - 1</span><span class=\"denominator\">x - 1</span></span> = 2.",
+          "text": "lim_(x → 1) <span class=\"fraction\"><span class=\"numerator\">x² - 1</span><span class=\"denominator\">x - 1</span></span> = 2.",
           "ans": true,
           "exp": "(x² - 1)/(x - 1) = x + 1 → 1 + 1 = 2 (Đúng)."
         },
         {
-          "text": "b) lim_(x → 0) (1/x) = 0.",
+          "text": "lim_(x → 0) (1/x) = 0.",
           "ans": false,
           "exp": "1/x tiến ra vô cực (không tồn tại giới hạn hữu hạn) (Sai)."
         },
         {
-          "text": "c) lim_(x → +∞) <span class=\"fraction\"><span class=\"numerator\">2x + 3</span><span class=\"denominator\">x - 1</span></span> = 2.",
+          "text": "lim_(x → +∞) <span class=\"fraction\"><span class=\"numerator\">2x + 3</span><span class=\"denominator\">x - 1</span></span> = 2.",
           "ans": true,
           "exp": "Bậc tử bằng mẫu, tỉ số hệ số 2/1 = 2 (Đúng)."
         },
         {
-          "text": "d) lim_(x → 3⁺) <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x - 3</span></span> = +∞.",
+          "text": "lim_(x → 3⁺) <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x - 3</span></span> = +∞.",
           "ans": true,
           "exp": "Tử dương (1), mẫu tiến về 0 từ phía dương nên kết quả là +∞ (Đúng)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Sai • c) Đúng • d) Đúng"
     },
     {
       "type": "mcq",
@@ -3042,13 +3195,14 @@
         "3",
         "∞"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 6"
     },
     {
       "type": "drag",
-      "q": "Kéo kết quả giới hạn thích hợp vào chỗ trống:<br>• lim_(x → 0) <span class=\"fraction\"><span class=\"numerator\">√(x + 4) - 2</span><span class=\"denominator\">x</span></span> = %%%SLOT_1%%%.<br>• lim_(x → +∞) <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x²</span></span> = %%%SLOT_2%%%.<br>• lim_(x → 1⁻) <span class=\"fraction\"><span class=\"numerator\">-2</span><span class=\"denominator\">x - 1</span></span> = %%%SLOT_3%%%.",
+      "q": "Kéo kết quả giới hạn thích hợp vào chỗ trống:",
       "exp": "• Nhân liên hợp: x / [x(√(x+4)+2)] = 1/4.<br>• 1/x² → 0.<br>• -2 / (0⁻) = +∞.",
-      "sentence": "Kéo kết quả giới hạn thích hợp vào chỗ trống:<br>• lim_(x → 0) <span class=\"fraction\"><span class=\"numerator\">√(x + 4) - 2</span><span class=\"denominator\">x</span></span> = %%%SLOT_1%%%.<br>• lim_(x → +∞) <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x²</span></span> = %%%SLOT_2%%%.<br>• lim_(x → 1⁻) <span class=\"fraction\"><span class=\"numerator\">-2</span><span class=\"denominator\">x - 1</span></span> = %%%SLOT_3%%%.",
+      "sentence": "• lim_(x → 0) <span class=\"fraction\"><span class=\"numerator\">√(x + 4) - 2</span><span class=\"denominator\">x</span></span> = %%%SLOT_1%%%.<br>• lim_(x → +∞) <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x²</span></span> = %%%SLOT_2%%%.<br>• lim_(x → 1⁻) <span class=\"fraction\"><span class=\"numerator\">-2</span><span class=\"denominator\">x - 1</span></span> = %%%SLOT_3%%%.",
       "words": [
         "1/4",
         "0",
@@ -3072,7 +3226,8 @@
         "1/4",
         "0",
         "+∞"
-      ]
+      ],
+      "correctText": "(1) 1/4 • (2) 0 • (3) +∞"
     },
     {
       "type": "mcq",
@@ -3084,7 +3239,8 @@
         "4",
         "-4"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: -2"
     },
     {
       "type": "mcq",
@@ -3096,7 +3252,8 @@
         "m = 0",
         "m = -4"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: m = 4"
     },
     {
       "type": "mcq",
@@ -3108,7 +3265,8 @@
         "44,1 m/s",
         "9,8 m/s"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 29,4 m/s"
     },
     {
       "type": "mcq",
@@ -3120,7 +3278,8 @@
         "+∞",
         "Q₀"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Q₀ / (RC)"
     },
     {
       "type": "mcq",
@@ -3132,7 +3291,8 @@
         "5000 nghìn đồng",
         "+∞"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 20 nghìn đồng (chi phí biên cố định)"
     }
   ],
   "17": [
@@ -3146,23 +3306,24 @@
         "f(x₀) > 0",
         "f(x) xác định tại mọi x"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: lim_(x → x₀) f(x) = f(x₀)"
     },
     {
       "type": "match",
       "q": "Ghép các định lý về hàm số liên tục (Cột A) với nội dung (Cột B):",
       "exp": "• Các định lý nền tảng về tính liên tục và nghiệm của phương trình.",
       "colA": [
-        "1. Hàm đa thức",
-        "2. Hàm phân thức hữu tỉ và lượng giác",
-        "3. Định lý giá trị trung gian",
-        "4. Đồ thị hàm số liên tục trên một khoảng"
+        "Hàm đa thức",
+        "Hàm phân thức hữu tỉ và lượng giác",
+        "Định lý giá trị trung gian",
+        "Đồ thị hàm số liên tục trên một khoảng"
       ],
       "colB": [
-        "A. Liên tục trên toàn bộ tập số thực ℝ",
-        "B. Liên tục trên từng khoảng của tập xác định",
-        "C. f liên tục trên [a; b] và f(a)·f(b) < 0 thì tồn tại c ∈ (a; b) sao cho f(c) = 0",
-        "D. Là một đường liền nét không bị đứt đoạn"
+        "Liên tục trên toàn bộ tập số thực ℝ",
+        "Liên tục trên từng khoảng của tập xác định",
+        "f liên tục trên [a; b] và f(a)·f(b) < 0 thì tồn tại c ∈ (a; b) sao cho f(c) = 0",
+        "Là một đường liền nét không bị đứt đoạn"
       ],
       "pairs": [
         {
@@ -3187,17 +3348,18 @@
         "2": "B",
         "3": "C",
         "4": "D"
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
       "q": "Xét tính liên tục của hàm số f(x) = (x² - 1)/(x - 1) khi x ≠ 1 và f(1) = 2:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> lim (x + 1) = 2 (Đúng).<br>• <b>Ý b) [Đúng]:</b> Theo định nghĩa hàm số f(1) = 2 (Đúng).<br>• <b>Ý c) [Đúng]:</b> lim f(x) = f(1) = 2 nên hàm số liên tục tại x = 1 (Đúng).<br>• <b>Ý d) [Sai]:</b> Vì hàm số liên tục nên đồ thị là một đường thẳng liền nét, không có lỗ thủng (Sai).",
       "stmts": [
-        "a) lim_(x → 1) f(x) = 2.",
-        "b) f(1) = 2.",
-        "c) Hàm số liên tục tại x = 1.",
-        "d) Đồ thị của hàm số bị thủng tại điểm (1; 2)."
+        "lim_(x → 1) f(x) = 2.",
+        "f(1) = 2.",
+        "Hàm số liên tục tại x = 1.",
+        "Đồ thị của hàm số bị thủng tại điểm (1; 2)."
       ],
       "ans": [
         true,
@@ -3207,26 +3369,27 @@
       ],
       "items": [
         {
-          "text": "a) lim_(x → 1) f(x) = 2.",
+          "text": "lim_(x → 1) f(x) = 2.",
           "ans": true,
           "exp": "lim (x + 1) = 2 (Đúng)."
         },
         {
-          "text": "b) f(1) = 2.",
+          "text": "f(1) = 2.",
           "ans": true,
           "exp": "Theo định nghĩa hàm số f(1) = 2 (Đúng)."
         },
         {
-          "text": "c) Hàm số liên tục tại x = 1.",
+          "text": "Hàm số liên tục tại x = 1.",
           "ans": true,
           "exp": "lim f(x) = f(1) = 2 nên hàm số liên tục tại x = 1 (Đúng)."
         },
         {
-          "text": "d) Đồ thị của hàm số bị thủng tại điểm (1; 2).",
+          "text": "Đồ thị của hàm số bị thủng tại điểm (1; 2).",
           "ans": false,
           "exp": "Vì hàm số liên tục nên đồ thị là một đường thẳng liền nét, không có lỗ thủng (Sai)."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -3238,13 +3401,14 @@
         "m = 0",
         "m = 1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: m = 4"
     },
     {
       "type": "drag",
-      "q": "Kéo các từ thích hợp vào định lý Bolzano về nghiệm phương trình:<br>• Cho hàm số f(x) %%%SLOT_1%%% trên đoạn [a; b].<br>• Nếu f(a) · f(b) %%%SLOT_2%%% 0 thì phương trình f(x) = 0 có %%%SLOT_3%%% một nghiệm nằm trong khoảng (a; b).",
+      "q": "Kéo các từ thích hợp vào định lý Bolzano về nghiệm phương trình:",
       "exp": "• Định lý Bolzano: liên tục trên [a; b] và f(a)f(b) < 0 thì có ít nhất 1 nghiệm trong (a; b).",
-      "sentence": "Kéo các từ thích hợp vào định lý Bolzano về nghiệm phương trình:<br>• Cho hàm số f(x) %%%SLOT_1%%% trên đoạn [a; b].<br>• Nếu f(a) · f(b) %%%SLOT_2%%% 0 thì phương trình f(x) = 0 có %%%SLOT_3%%% một nghiệm nằm trong khoảng (a; b).",
+      "sentence": "• Cho hàm số f(x) %%%SLOT_1%%% trên đoạn [a; b].<br>• Nếu f(a) · f(b) %%%SLOT_2%%% 0 thì phương trình f(x) = 0 có %%%SLOT_3%%% một nghiệm nằm trong khoảng (a; b).",
       "words": [
         "liên tục",
         "<",
@@ -3268,7 +3432,8 @@
         "liên tục",
         "<",
         "ít nhất"
-      ]
+      ],
+      "correctText": "(1) liên tục • (2) < • (3) ít nhất"
     },
     {
       "type": "mcq",
@@ -3280,7 +3445,8 @@
         "(2; 3)",
         "(-1; 0)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: (1; 2)"
     },
     {
       "type": "mcq",
@@ -3292,7 +3458,8 @@
         "y = sin x",
         "y = √(x + 1)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: y = 1 / (x - 3)"
     },
     {
       "type": "mcq",
@@ -3304,7 +3471,8 @@
         "Nhiệt độ lò không bao giờ vượt quá 200°C",
         "Lò đạt 150°C đúng tại phút thứ 5"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Có ít nhất một thời điểm trong 10 phút đầu lò nướng đạt đúng 150°C"
     },
     {
       "type": "mcq",
@@ -3316,7 +3484,8 @@
         "Xe đạt 60 km/h ở giây thứ 2,4",
         "Tốc độ xe luôn tăng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Chắc chắn có thời điểm xe đạt tốc độ đúng 60 km/h"
     },
     {
       "type": "mcq",
@@ -3328,7 +3497,8 @@
         "Chỉ khi cáp treo dừng lại",
         "Không thể kết luận"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Chắc chắn có ít nhất một lần"
     }
   ],
   "18": [
@@ -3342,17 +3512,18 @@
         "(a<sup>m</sup>)<sup>n</sup> = a<sup>m + n</sup>",
         "a<sup>m</sup> / a<sup>n</sup> = a<sup>n - m</sup>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: a<sup>m</sup> · a<sup>n</sup> = a<sup>m + n</sup>"
     },
     {
       "type": "tf",
       "q": "Xét tính đúng/sai của các mệnh đề sau về lũy thừa với số mũ thực:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng theo định nghĩa lũy thừa với số mũ hữu tỉ.<br>• <b>Ý b) [Sai]:</b> Sai, với 0 < a < 1, cơ số nhỏ hơn 1 nên hàm nghịch biến: α < β ⇒ a<sup>α</sup> > a<sup>β</sup>.<br>• <b>Ý c) [Đúng]:</b> Đúng, lũy thừa số mũ không nguyên chỉ xác định với cơ số dương a > 0.<br>• <b>Ý d) [Đúng]:</b> Đúng, tính chất lũy thừa của một tích.",
       "stmts": [
-        "a) Với a > 0 và m, n ∈ ℤ, n ≥ 2 thì a<sup>m/n</sup> = <sup>n</sup>√(a<sup>m</sup>).",
-        "b) Với 0 < a < 1 và α < β thì a<sup>α</sup> < a<sup>β</sup>.",
-        "c) Biểu thức (-2)<sup>1/2</sup> không có nghĩa trong tập số thực ℝ.",
-        "d) Với a > 0, b > 0 và số thực α thì (a · b)<sup>α</sup> = a<sup>α</sup> · b<sup>α</sup>."
+        "Với a > 0 và m, n ∈ ℤ, n ≥ 2 thì a<sup>m/n</sup> = <sup>n</sup>√(a<sup>m</sup>).",
+        "Với 0 < a < 1 và α < β thì a<sup>α</sup> < a<sup>β</sup>.",
+        "Biểu thức (-2)<sup>1/2</sup> không có nghĩa trong tập số thực ℝ.",
+        "Với a > 0, b > 0 và số thực α thì (a · b)<sup>α</sup> = a<sup>α</sup> · b<sup>α</sup>."
       ],
       "ans": [
         true,
@@ -3362,26 +3533,27 @@
       ],
       "items": [
         {
-          "text": "a) Với a > 0 và m, n ∈ ℤ, n ≥ 2 thì a<sup>m/n</sup> = <sup>n</sup>√(a<sup>m</sup>).",
+          "text": "Với a > 0 và m, n ∈ ℤ, n ≥ 2 thì a<sup>m/n</sup> = <sup>n</sup>√(a<sup>m</sup>).",
           "ans": true,
           "exp": "Đúng theo định nghĩa lũy thừa với số mũ hữu tỉ."
         },
         {
-          "text": "b) Với 0 < a < 1 và α < β thì a<sup>α</sup> < a<sup>β</sup>.",
+          "text": "Với 0 < a < 1 và α < β thì a<sup>α</sup> < a<sup>β</sup>.",
           "ans": false,
           "exp": "Sai, với 0 < a < 1, cơ số nhỏ hơn 1 nên hàm nghịch biến: α < β ⇒ a<sup>α</sup> > a<sup>β</sup>."
         },
         {
-          "text": "c) Biểu thức (-2)<sup>1/2</sup> không có nghĩa trong tập số thực ℝ.",
+          "text": "Biểu thức (-2)<sup>1/2</sup> không có nghĩa trong tập số thực ℝ.",
           "ans": true,
           "exp": "Đúng, lũy thừa số mũ không nguyên chỉ xác định với cơ số dương a > 0."
         },
         {
-          "text": "d) Với a > 0, b > 0 và số thực α thì (a · b)<sup>α</sup> = a<sup>α</sup> · b<sup>α</sup>.",
+          "text": "Với a > 0, b > 0 và số thực α thì (a · b)<sup>α</sup> = a<sup>α</sup> · b<sup>α</sup>.",
           "ans": true,
           "exp": "Đúng, tính chất lũy thừa của một tích."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Sai • c) Đúng • d) Đúng"
     },
     {
       "type": "mcq",
@@ -3393,7 +3565,8 @@
         "2/3",
         "1/2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 5/6"
     },
     {
       "type": "mcq",
@@ -3405,7 +3578,8 @@
         "32",
         "26"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 30"
     },
     {
       "type": "mcq",
@@ -3417,13 +3591,14 @@
         "1",
         "a + 1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: a"
     },
     {
       "type": "drag",
-      "q": "Cho x > 0. Biểu thức P = √(x · √(x · √x)) viết dưới dạng x<sup>m/n</sup> (với phân số m/n tối giản). Hãy điền các giá trị thích hợp:<br>Giá trị m = %%%SLOT_0%%%, giá trị n = %%%SLOT_1%%%.",
+      "q": "Cho x > 0. Biểu thức P = √(x · √(x · √x)) viết dưới dạng x<sup>m/n</sup> (với phân số m/n tối giản). Hãy điền các giá trị thích hợp:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: m = 7, n = 8</b><br><br>Ta có: P = (x · (x · x<sup>1/2</sup>)<sup>1/2</sup>)<sup>1/2</sup> = (x · (x<sup>3/2</sup>)<sup>1/2</sup>)<sup>1/2</sup> = (x · x<sup>3/4</sup>)<sup>1/2</sup> = (x<sup>7/4</sup>)<sup>1/2</sup> = x<sup>7/8</sup>. Do đó m = 7, n = 8.",
-      "sentence": "Cho x > 0. Biểu thức P = √(x · √(x · √x)) viết dưới dạng x<sup>m/n</sup> (với phân số m/n tối giản). Hãy điền các giá trị thích hợp:<br>Giá trị m = %%%SLOT_0%%%, giá trị n = %%%SLOT_1%%%.",
+      "sentence": "Giá trị m = %%%SLOT_0%%%, giá trị n = %%%SLOT_1%%%.",
       "words": [
         "7",
         "8",
@@ -3447,23 +3622,24 @@
       "slots": [
         "7",
         "8"
-      ]
+      ],
+      "correctText": "(1) 7 • (2) 8"
     },
     {
       "type": "match",
       "q": "Ghép mỗi phép biến đổi lũy thừa ở Cột A với kết quả thu gọn tương ứng ở Cột B (với a > 0):",
       "exp": "1 - A (2 + 1/2 = 5/2)<br>2 - B ((3/2)*2 = 3)<br>3 - C (1/3 - 4/3 = -1)<br>4 - D (6/3 = 2).",
       "colA": [
-        "1. a<sup>2</sup> · a<sup>1/2</sup>",
-        "2. (a<sup>3/2</sup>)<sup>2</sup>",
-        "3. a<sup>1/3</sup> / a<sup>4/3</sup>",
-        "4. <sup>3</sup>√(a<sup>6</sup>)"
+        "a<sup>2</sup> · a<sup>1/2</sup>",
+        "(a<sup>3/2</sup>)<sup>2</sup>",
+        "a<sup>1/3</sup> / a<sup>4/3</sup>",
+        "<sup>3</sup>√(a<sup>6</sup>)"
       ],
       "colB": [
-        "A. a<sup>5/2</sup>",
-        "B. a<sup>3</sup>",
-        "C. a<sup>-1</sup>",
-        "D. a<sup>2</sup>"
+        "a<sup>5/2</sup>",
+        "a<sup>3</sup>",
+        "a<sup>-1</sup>",
+        "a<sup>2</sup>"
       ],
       "pairs": [
         {
@@ -3488,7 +3664,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -3500,7 +3677,8 @@
         "12 giờ",
         "3 giờ"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 9 giờ"
     },
     {
       "type": "mcq",
@@ -3512,7 +3690,8 @@
         "126,25 triệu đồng",
         "135,40 triệu đồng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 133,82 triệu đồng"
     },
     {
       "type": "mcq",
@@ -3524,7 +3703,8 @@
         "72,14°C",
         "55,40°C"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 68,52°C"
     }
   ],
   "19": [
@@ -3538,17 +3718,18 @@
         "log<sub>a</sub>(b / c) = log<sub>a</sub> b / log<sub>a</sub> c",
         "log<sub>a</sub> b = log<sub>b</sub> a"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: log<sub>a</sub>(b<sup>α</sup>) = α · log<sub>a</sub> b"
     },
     {
       "type": "tf",
       "q": "Cho a, b, c là các số thực dương, a ≠ 1. Xét tính đúng/sai của các mệnh đề sau:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng theo định nghĩa cơ bản của logarit.<br>• <b>Ý b) [Đúng]:</b> Đúng, đây là hệ thức căn bản giữa lũy thừa và logarit.<br>• <b>Ý c) [Đúng]:</b> Đúng, logarit của một tích bằng tổng các logarit.<br>• <b>Ý d) [Sai]:</b> Sai, công thức chuẩn là log<sub>a</sub> b = log<sub>c</sub> b / log<sub>c</sub> a.",
       "stmts": [
-        "a) log<sub>a</sub> 1 = 0 và log<sub>a</sub> a = 1.",
-        "b) a<sup>log<sub>a</sub> b</sup> = b.",
-        "c) log<sub>a</sub>(b · c) = log<sub>a</sub> b + log<sub>a</sub> c.",
-        "d) Công thức đổi cơ số: log<sub>a</sub> b = log<sub>c</sub> a / log<sub>c</sub> b (với c ≠ 1)."
+        "log<sub>a</sub> 1 = 0 và log<sub>a</sub> a = 1.",
+        "a<sup>log<sub>a</sub> b</sup> = b.",
+        "log<sub>a</sub>(b · c) = log<sub>a</sub> b + log<sub>a</sub> c.",
+        "Công thức đổi cơ số: log<sub>a</sub> b = log<sub>c</sub> a / log<sub>c</sub> b (với c ≠ 1)."
       ],
       "ans": [
         true,
@@ -3558,26 +3739,27 @@
       ],
       "items": [
         {
-          "text": "a) log<sub>a</sub> 1 = 0 và log<sub>a</sub> a = 1.",
+          "text": "log<sub>a</sub> 1 = 0 và log<sub>a</sub> a = 1.",
           "ans": true,
           "exp": "Đúng theo định nghĩa cơ bản của logarit."
         },
         {
-          "text": "b) a<sup>log<sub>a</sub> b</sup> = b.",
+          "text": "a<sup>log<sub>a</sub> b</sup> = b.",
           "ans": true,
           "exp": "Đúng, đây là hệ thức căn bản giữa lũy thừa và logarit."
         },
         {
-          "text": "c) log<sub>a</sub>(b · c) = log<sub>a</sub> b + log<sub>a</sub> c.",
+          "text": "log<sub>a</sub>(b · c) = log<sub>a</sub> b + log<sub>a</sub> c.",
           "ans": true,
           "exp": "Đúng, logarit của một tích bằng tổng các logarit."
         },
         {
-          "text": "d) Công thức đổi cơ số: log<sub>a</sub> b = log<sub>c</sub> a / log<sub>c</sub> b (với c ≠ 1).",
+          "text": "Công thức đổi cơ số: log<sub>a</sub> b = log<sub>c</sub> a / log<sub>c</sub> b (với c ≠ 1).",
           "ans": false,
           "exp": "Sai, công thức chuẩn là log<sub>a</sub> b = log<sub>c</sub> b / log<sub>c</sub> a."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -3589,7 +3771,8 @@
         "5/2",
         "3/2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 9/2"
     },
     {
       "type": "mcq",
@@ -3601,7 +3784,8 @@
         "<span class=\"fraction\"><span class=\"numerator\">1 + a</span><span class=\"denominator\">2 + a</span></span>",
         "<span class=\"fraction\"><span class=\"numerator\">2a</span><span class=\"denominator\">a + 1</span></span>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: <span class=\"fraction\"><span class=\"numerator\">1 + 2a</span><span class=\"denominator\">2 + a</span></span>"
     },
     {
       "type": "mcq",
@@ -3613,13 +3797,14 @@
         "log<sub>3</sub>(a + b) = 3(log<sub>3</sub> a + log<sub>3</sub> b)",
         "log<sub>3</sub><span class=\"fraction\"><span class=\"numerator\">a + b</span><span class=\"denominator\">7</span></span> = <span class=\"fraction\"><span class=\"numerator\">log<sub>3</sub> a + log<sub>3</sub> b</span><span class=\"denominator\">2</span></span>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: log<sub>3</sub><span class=\"fraction\"><span class=\"numerator\">a + b</span><span class=\"denominator\">3</span></span> = <span class=\"fraction\"><span class=\"numerator\">log<sub>3</sub> a + log<sub>3</sub> b</span><span class=\"denominator\">2</span></span>"
     },
     {
       "type": "drag",
-      "q": "Tính giá trị của biểu thức A = 4<sup>log<sub>2</sub> 5</sup> + 9<sup>log<sub>3</sub> 2</sup> - 27<sup>log<sub>3</sub> 2</sup>:<br>Biểu thức có kết quả bằng: %%%SLOT_0%%%.",
+      "q": "Tính giá trị của biểu thức A = 4<sup>log<sub>2</sub> 5</sup> + 9<sup>log<sub>3</sub> 2</sup> - 27<sup>log<sub>3</sub> 2</sup>:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: 21</b><br><br>4<sup>log<sub>2</sub> 5</sup> = (2<sup>2</sup>)<sup>log<sub>2</sub> 5</sup> = (2<sup>log<sub>2</sub> 5</sup>)<sup>2</sup> = 5<sup>2</sup> = 25.<br>9<sup>log<sub>3</sub> 2</sup> = (3<sup>2</sup>)<sup>log<sub>3</sub> 2</sup> = 2<sup>2</sup> = 4.<br>27<sup>log<sub>3</sub> 2</sup> = (3<sup>3</sup>)<sup>log<sub>3</sub> 2</sup> = 2<sup>3</sup> = 8.<br>Vậy A = 25 + 4 - 8 = 21.",
-      "sentence": "Tính giá trị của biểu thức A = 4<sup>log<sub>2</sub> 5</sup> + 9<sup>log<sub>3</sub> 2</sup> - 27<sup>log<sub>3</sub> 2</sup>:<br>Biểu thức có kết quả bằng: %%%SLOT_0%%%.",
+      "sentence": "Biểu thức có kết quả bằng: %%%SLOT_0%%%.",
       "words": [
         "21",
         "25",
@@ -3639,23 +3824,24 @@
       ],
       "slots": [
         "21"
-      ]
+      ],
+      "correctText": "(1) 21"
     },
     {
       "type": "match",
       "q": "Ghép mỗi giá trị logarit ở Cột A với kết quả tương ứng ở Cột B:",
       "exp": "1 - A (2^5 = 32); 2 - B (ln e^4 = 4); 3 - C (10^-1 = 0.1, 0.1^-2 = 100); 4 - D (√3^4 = 9).",
       "colA": [
-        "1. log<sub>2</sub> 32",
-        "2. ln(e<sup>4</sup>)",
-        "3. log<sub>0,1</sub> 100",
-        "4. log<sub>√3</sub> 9"
+        "log<sub>2</sub> 32",
+        "ln(e<sup>4</sup>)",
+        "log<sub>0,1</sub> 100",
+        "log<sub>√3</sub> 9"
       ],
       "colB": [
-        "A. 5",
-        "B. 4",
-        "C. -2",
-        "D. 4"
+        "5",
+        "4",
+        "-2",
+        "4"
       ],
       "pairs": [
         {
@@ -3680,7 +3866,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -3692,7 +3879,8 @@
         "2,30",
         "3,00"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 2,70"
     },
     {
       "type": "mcq",
@@ -3704,7 +3892,8 @@
         "100 dB",
         "160 dB"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 140 dB"
     },
     {
       "type": "mcq",
@@ -3716,7 +3905,8 @@
         "10 lần",
         "2 lần"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 100 lần"
     }
   ],
   "20": [
@@ -3730,17 +3920,18 @@
         "Hàm số mũ đồng biến còn hàm số lôgarit nghịch biến.",
         "Đồ thị của hai hàm số đối xứng nhau qua trục hoành Ox."
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Cả hai hàm số đều nghịch biến trên tập xác định của chúng."
     },
     {
       "type": "tf",
       "q": "Cho hàm số y = log<sub>2</sub> x và y = 2<sup>x</sup>. Xét tính đúng/sai của các mệnh đề sau:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng, biểu thức trong logarit phải dương.<br>• <b>Ý b) [Đúng]:</b> Đúng, lũy thừa cơ số 2 luôn nhận giá trị dương.<br>• <b>Ý c) [Đúng]:</b> Đúng, vì log<sub>2</sub> 1 = 0.<br>• <b>Ý d) [Sai]:</b> Sai, đồ thị của chúng đối xứng nhau qua đường thẳng y = x.",
       "stmts": [
-        "a) Tập xác định của hàm số y = log<sub>2</sub> x là (0; +∞).",
-        "b) Tập giá trị của hàm số y = 2<sup>x</sup> là (0; +∞).",
-        "c) Đồ thị của hàm số y = log<sub>2</sub> x luôn đi qua điểm (1; 0).",
-        "d) Đồ thị hàm số y = 2<sup>x</sup> và y = log<sub>2</sub> x đối xứng nhau qua trục tung Oy."
+        "Tập xác định của hàm số y = log<sub>2</sub> x là (0; +∞).",
+        "Tập giá trị của hàm số y = 2<sup>x</sup> là (0; +∞).",
+        "Đồ thị của hàm số y = log<sub>2</sub> x luôn đi qua điểm (1; 0).",
+        "Đồ thị hàm số y = 2<sup>x</sup> và y = log<sub>2</sub> x đối xứng nhau qua trục tung Oy."
       ],
       "ans": [
         true,
@@ -3750,26 +3941,27 @@
       ],
       "items": [
         {
-          "text": "a) Tập xác định của hàm số y = log<sub>2</sub> x là (0; +∞).",
+          "text": "Tập xác định của hàm số y = log<sub>2</sub> x là (0; +∞).",
           "ans": true,
           "exp": "Đúng, biểu thức trong logarit phải dương."
         },
         {
-          "text": "b) Tập giá trị của hàm số y = 2<sup>x</sup> là (0; +∞).",
+          "text": "Tập giá trị của hàm số y = 2<sup>x</sup> là (0; +∞).",
           "ans": true,
           "exp": "Đúng, lũy thừa cơ số 2 luôn nhận giá trị dương."
         },
         {
-          "text": "c) Đồ thị của hàm số y = log<sub>2</sub> x luôn đi qua điểm (1; 0).",
+          "text": "Đồ thị của hàm số y = log<sub>2</sub> x luôn đi qua điểm (1; 0).",
           "ans": true,
           "exp": "Đúng, vì log<sub>2</sub> 1 = 0."
         },
         {
-          "text": "d) Đồ thị hàm số y = 2<sup>x</sup> và y = log<sub>2</sub> x đối xứng nhau qua trục tung Oy.",
+          "text": "Đồ thị hàm số y = 2<sup>x</sup> và y = log<sub>2</sub> x đối xứng nhau qua trục tung Oy.",
           "ans": false,
           "exp": "Sai, đồ thị của chúng đối xứng nhau qua đường thẳng y = x."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -3781,7 +3973,8 @@
         "D = [1; 3]",
         "D = (-∞; 1] ∪ [3; +∞)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: D = (-∞; 1) ∪ (3; +∞)"
     },
     {
       "type": "mcq",
@@ -3793,7 +3986,8 @@
         "y' = 2 · e<sup>2x</sup>",
         "y' = (1 + x) · e<sup>2x</sup>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: y' = (1 + 2x) · e<sup>2x</sup>"
     },
     {
       "type": "mcq",
@@ -3805,13 +3999,14 @@
         "y' = <span class=\"fraction\"><span class=\"numerator\">x</span><span class=\"denominator\">x<sup>2</sup> + 1</span></span>",
         "y' = <span class=\"fraction\"><span class=\"numerator\">2</span><span class=\"denominator\">x<sup>2</sup> + 1</span></span>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: y' = <span class=\"fraction\"><span class=\"numerator\">2x</span><span class=\"denominator\">x<sup>2</sup> + 1</span></span>"
     },
     {
       "type": "drag",
-      "q": "Tìm giá trị nhỏ nhất m của hàm số y = e<sup>x</sup> - x trên đoạn [0; 2]:<br>Giá trị m = %%%SLOT_0%%%.",
+      "q": "Tìm giá trị nhỏ nhất m của hàm số y = e<sup>x</sup> - x trên đoạn [0; 2]:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: 1</b><br><br>y' = e<sup>x</sup> - 1. Cho y' = 0 ⇔ e<sup>x</sup> = 1 ⇔ x = 0.<br>Ta tính giá trị tại các điểm biên: y(0) = e<sup>0</sup> - 0 = 1; y(2) = e<sup>2</sup> - 2 ≈ 5,389 > 1.<br>Do đó m = min y = 1.",
-      "sentence": "Tìm giá trị nhỏ nhất m của hàm số y = e<sup>x</sup> - x trên đoạn [0; 2]:<br>Giá trị m = %%%SLOT_0%%%.",
+      "sentence": "Giá trị m = %%%SLOT_0%%%.",
       "words": [
         "1",
         "0",
@@ -3831,23 +4026,24 @@
       ],
       "slots": [
         "1"
-      ]
+      ],
+      "correctText": "(1) 1"
     },
     {
       "type": "match",
       "q": "Ghép mỗi hàm số ở Cột A với tập xác định tương ứng ở Cột B:",
       "exp": "1 - A (hàm mũ xác định trên ℝ); 2 - B (x - 1 > 0); 3 - C (4 - x^2 > 0 ⇔ -2 < x < 2); 4 - D (số mũ nguyên âm, x - 2 ≠ 0).",
       "colA": [
-        "1. y = 3<sup>x</sup>",
-        "2. y = log<sub>2</sub>(x - 1)",
-        "3. y = ln(4 - x<sup>2</sup>)",
-        "4. y = (x - 2)<sup>-3</sup>"
+        "y = 3<sup>x</sup>",
+        "y = log<sub>2</sub>(x - 1)",
+        "y = ln(4 - x<sup>2</sup>)",
+        "y = (x - 2)<sup>-3</sup>"
       ],
       "colB": [
-        "A. ℝ",
-        "B. (1; +∞)",
-        "C. (-2; 2)",
-        "D. ℝ \\ {2}"
+        "ℝ",
+        "(1; +∞)",
+        "(-2; 2)",
+        "ℝ \\ {2}"
       ],
       "pairs": [
         {
@@ -3872,7 +4068,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -3884,7 +4081,8 @@
         "2,50 triệu người",
         "2,60 triệu người"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 2,32 triệu người"
     },
     {
       "type": "mcq",
@@ -3896,7 +4094,8 @@
         "414 ngày",
         "200 ngày"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 276 ngày"
     },
     {
       "type": "mcq",
@@ -3908,7 +4107,8 @@
         "460 mmHg",
         "610 mmHg"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 521 mmHg"
     }
   ],
   "21": [
@@ -3922,17 +4122,18 @@
         "x = b / a",
         "x = a<sup>b</sup>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: x = log<sub>a</sub> b"
     },
     {
       "type": "tf",
       "q": "Xét tính đúng/sai của các mệnh đề sau về bất phương trình mũ và logarit:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng, cơ số a > 1 giữ nguyên chiều bất phương trình.<br>• <b>Ý b) [Đúng]:</b> Đúng, cơ số bé hơn 1 đảo chiều và cần điều kiện dương.<br>• <b>Ý c) [Sai]:</b> Sai, logarit nhận giá trị trong ℝ; nghiệm là x = 2^(-3) = 1/8 > 0.<br>• <b>Ý d) [Sai]:</b> Sai, 3^x > 0 với mọi x nên phương trình vô nghiệm.",
       "stmts": [
-        "a) Với a > 1, a<sup>f(x)</sup> > a<sup>g(x)</sup> ⇔ f(x) > g(x).",
-        "b) Với 0 < a < 1, log<sub>a</sub> f(x) < log<sub>a</sub> g(x) ⇔ f(x) > g(x) > 0.",
-        "c) Phương trình log<sub>2</sub> x = -3 vô nghiệm vì giá trị vế phải âm.",
-        "d) Phương trình 3<sup>x</sup> = -5 có nghiệm duy nhất x = log<sub>3</sub>(-5)."
+        "Với a > 1, a<sup>f(x)</sup> > a<sup>g(x)</sup> ⇔ f(x) > g(x).",
+        "Với 0 < a < 1, log<sub>a</sub> f(x) < log<sub>a</sub> g(x) ⇔ f(x) > g(x) > 0.",
+        "Phương trình log<sub>2</sub> x = -3 vô nghiệm vì giá trị vế phải âm.",
+        "Phương trình 3<sup>x</sup> = -5 có nghiệm duy nhất x = log<sub>3</sub>(-5)."
       ],
       "ans": [
         true,
@@ -3942,26 +4143,27 @@
       ],
       "items": [
         {
-          "text": "a) Với a > 1, a<sup>f(x)</sup> > a<sup>g(x)</sup> ⇔ f(x) > g(x).",
+          "text": "Với a > 1, a<sup>f(x)</sup> > a<sup>g(x)</sup> ⇔ f(x) > g(x).",
           "ans": true,
           "exp": "Đúng, cơ số a > 1 giữ nguyên chiều bất phương trình."
         },
         {
-          "text": "b) Với 0 < a < 1, log<sub>a</sub> f(x) < log<sub>a</sub> g(x) ⇔ f(x) > g(x) > 0.",
+          "text": "Với 0 < a < 1, log<sub>a</sub> f(x) < log<sub>a</sub> g(x) ⇔ f(x) > g(x) > 0.",
           "ans": true,
           "exp": "Đúng, cơ số bé hơn 1 đảo chiều và cần điều kiện dương."
         },
         {
-          "text": "c) Phương trình log<sub>2</sub> x = -3 vô nghiệm vì giá trị vế phải âm.",
+          "text": "Phương trình log<sub>2</sub> x = -3 vô nghiệm vì giá trị vế phải âm.",
           "ans": false,
           "exp": "Sai, logarit nhận giá trị trong ℝ; nghiệm là x = 2^(-3) = 1/8 > 0."
         },
         {
-          "text": "d) Phương trình 3<sup>x</sup> = -5 có nghiệm duy nhất x = log<sub>3</sub>(-5).",
+          "text": "Phương trình 3<sup>x</sup> = -5 có nghiệm duy nhất x = log<sub>3</sub>(-5).",
           "ans": false,
           "exp": "Sai, 3^x > 0 với mọi x nên phương trình vô nghiệm."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Sai"
     },
     {
       "type": "mcq",
@@ -3973,7 +4175,8 @@
         "S = {2; 4}",
         "S = {-2; 2}"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: S = {-2; 4}"
     },
     {
       "type": "mcq",
@@ -3985,7 +4188,8 @@
         "x = 9/2",
         "x = 7/2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: x = 5"
     },
     {
       "type": "mcq",
@@ -3997,11 +4201,12 @@
         "S = (-∞; 1]",
         "S = [1; +∞)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: S = (-∞; 2]"
     },
     {
       "type": "drag",
-      "q": "Tổng các nghiệm của phương trình 9<sup>x</sup> - 4 · 3<sup>x</sup> + 3 = 0 bằng: %%%SLOT_0%%%.",
+      "q": "Điền từ / cụm từ thích hợp vào chỗ trống:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: 1</b><br><br>Đặt t = 3<sup>x</sup> (t > 0). Phương trình trở thành t<sup>2</sup> - 4t + 3 = 0.<br>Ta có hai nghiệm: t<sub>1</sub> = 1, t<sub>2</sub> = 3.<br>- 3<sup>x</sup> = 1 ⇒ x<sub>1</sub> = 0.<br>- 3<sup>x</sup> = 3 ⇒ x<sub>2</sub> = 1.<br>Tổng các nghiệm là x<sub>1</sub> + x<sub>2</sub> = 0 + 1 = 1.",
       "sentence": "Tổng các nghiệm của phương trình 9<sup>x</sup> - 4 · 3<sup>x</sup> + 3 = 0 bằng: %%%SLOT_0%%%.",
       "words": [
@@ -4023,23 +4228,24 @@
       ],
       "slots": [
         "1"
-      ]
+      ],
+      "correctText": "(1) 1"
     },
     {
       "type": "match",
       "q": "Ghép mỗi phương trình/bất phương trình ở Cột A với tập nghiệm tương ứng ở Cột B:",
       "exp": "1 - A (x = 2^3 = 8); 2 - B (3^3 = 27); 3 - C (0 < x < 3^1 = 3); 4 - D (x ≤ 2).",
       "colA": [
-        "1. log<sub>2</sub> x = 3",
-        "2. 3<sup>x</sup> = 27",
-        "3. log<sub>3</sub> x < 1",
-        "4. 2<sup>x</sup> ≤ 4"
+        "log<sub>2</sub> x = 3",
+        "3<sup>x</sup> = 27",
+        "log<sub>3</sub> x < 1",
+        "2<sup>x</sup> ≤ 4"
       ],
       "colB": [
-        "A. {8}",
-        "B. {3}",
-        "C. (0; 3)",
-        "D. (-∞; 2]"
+        "{8}",
+        "{3}",
+        "(0; 3)",
+        "(-∞; 2]"
       ],
       "pairs": [
         {
@@ -4064,7 +4270,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -4076,7 +4283,8 @@
         "10 năm",
         "11 năm"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 9 năm"
     },
     {
       "type": "mcq",
@@ -4088,7 +4296,8 @@
         "9 giờ",
         "10 giờ"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 8 giờ"
     },
     {
       "type": "mcq",
@@ -4100,7 +4309,8 @@
         "12,5 m",
         "20,0 m"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 17,3 m"
     }
   ],
   "22": [
@@ -4114,17 +4324,18 @@
         "[0°; 180°]",
         "(0°; 90°]"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: [0°; 90°]"
     },
     {
       "type": "tf",
       "q": "Cho hình lập phương ABCD.A'B'C'D'. Xét tính đúng/sai của các mệnh đề sau:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng, vì B'C' // BC mà AB ⊥ BC nên AB ⊥ B'C'.<br>• <b>Ý b) [Đúng]:</b> Đúng, vì A'B // D'C và tam giác BCD' là tam giác đều.<br>• <b>Ý c) [Đúng]:</b> Đúng, AC ⊥ (BDD'B') nên AC vuông góc với BD'.<br>• <b>Ý d) [Sai]:</b> Sai, hai đường thẳng chéo nhau hoàn toàn có thể vuông góc với nhau (ví dụ AB và B'C').",
       "stmts": [
-        "a) Đường thẳng AB vuông góc với đường thẳng B'C'.",
-        "b) Góc giữa hai đường thẳng A'B và B'C bằng 60°.",
-        "c) Đường thẳng AC vuông góc với đường thẳng BD'.",
-        "d) Hai đường thẳng chéo nhau thì không thể vuông góc với nhau."
+        "Đường thẳng AB vuông góc với đường thẳng B'C'.",
+        "Góc giữa hai đường thẳng A'B và B'C bằng 60°.",
+        "Đường thẳng AC vuông góc với đường thẳng BD'.",
+        "Hai đường thẳng chéo nhau thì không thể vuông góc với nhau."
       ],
       "ans": [
         true,
@@ -4134,26 +4345,27 @@
       ],
       "items": [
         {
-          "text": "a) Đường thẳng AB vuông góc với đường thẳng B'C'.",
+          "text": "Đường thẳng AB vuông góc với đường thẳng B'C'.",
           "ans": true,
           "exp": "Đúng, vì B'C' // BC mà AB ⊥ BC nên AB ⊥ B'C'."
         },
         {
-          "text": "b) Góc giữa hai đường thẳng A'B và B'C bằng 60°.",
+          "text": "Góc giữa hai đường thẳng A'B và B'C bằng 60°.",
           "ans": true,
           "exp": "Đúng, vì A'B // D'C và tam giác BCD' là tam giác đều."
         },
         {
-          "text": "c) Đường thẳng AC vuông góc với đường thẳng BD'.",
+          "text": "Đường thẳng AC vuông góc với đường thẳng BD'.",
           "ans": true,
           "exp": "Đúng, AC ⊥ (BDD'B') nên AC vuông góc với BD'."
         },
         {
-          "text": "d) Hai đường thẳng chéo nhau thì không thể vuông góc với nhau.",
+          "text": "Hai đường thẳng chéo nhau thì không thể vuông góc với nhau.",
           "ans": false,
           "exp": "Sai, hai đường thẳng chéo nhau hoàn toàn có thể vuông góc với nhau (ví dụ AB và B'C')."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -4165,7 +4377,8 @@
         "45°",
         "30°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 90°"
     },
     {
       "type": "mcq",
@@ -4177,7 +4390,8 @@
         "√3/2",
         "0"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 1/2"
     },
     {
       "type": "mcq",
@@ -4189,11 +4403,12 @@
         "45°",
         "30°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 90°"
     },
     {
       "type": "drag",
-      "q": "Cho hình lập phương ABCD.A'B'C'D'. Số đo góc giữa hai đường thẳng AC và A'D bằng: %%%SLOT_0%%% độ.",
+      "q": "Điền từ / cụm từ thích hợp vào chỗ trống:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: 60 độ</b><br><br>Do A'D // B'C nên góc giữa AC và A'D bằng góc giữa AC và B'C. Tam giác ACB' có 3 cạnh là 3 đường chéo của hình vuông nên tam giác này đều, góc bằng 60°.",
       "sentence": "Cho hình lập phương ABCD.A'B'C'D'. Số đo góc giữa hai đường thẳng AC và A'D bằng: %%%SLOT_0%%% độ.",
       "words": [
@@ -4215,23 +4430,24 @@
       ],
       "slots": [
         "60"
-      ]
+      ],
+      "correctText": "(1) 60"
     },
     {
       "type": "match",
       "q": "Cho hình lập phương ABCD.A'B'C'D'. Ghép mỗi cặp đường thẳng ở Cột A với góc giữa chúng ở Cột B:",
       "exp": "1 - A (CC' // BB' ⊥ AB); 2 - B (A'D' // AD ⊥ AB); 3 - C (song song nên góc 0°); 4 - D (hai đường chéo hình vuông vuông góc).",
       "colA": [
-        "1. AB và CC'",
-        "2. AB và A'D'",
-        "3. AC và A'C'",
-        "4. AC và BD"
+        "AB và CC'",
+        "AB và A'D'",
+        "AC và A'C'",
+        "AC và BD"
       ],
       "colB": [
-        "A. 90°",
-        "B. 90°",
-        "C. 0°",
-        "D. 90°"
+        "90°",
+        "90°",
+        "0°",
+        "90°"
       ],
       "pairs": [
         {
@@ -4256,7 +4472,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -4268,7 +4485,8 @@
         "60°",
         "30°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 90°"
     },
     {
       "type": "mcq",
@@ -4280,7 +4498,8 @@
         "Tạo với nhau góc 45°",
         "Trùng nhau"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Vuông góc với nhau"
     },
     {
       "type": "mcq",
@@ -4292,7 +4511,8 @@
         "45°",
         "0°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 90°"
     }
   ],
   "23": [
@@ -4306,17 +4526,18 @@
         "d vuông góc với hai đường thẳng song song nằm trong (P).",
         "d song song với một đường thẳng nằm trong (P)."
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: d vuông góc với hai đường thẳng cắt nhau cùng nằm trong (P)."
     },
     {
       "type": "tf",
       "q": "Xét tính đúng/sai của các khẳng định sau về đường thẳng vuông góc mặt phẳng:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng theo định nghĩa đường thẳng vuông góc mặt phẳng.<br>• <b>Ý b) [Đúng]:</b> Đúng, tính chất duy nhất.<br>• <b>Ý c) [Sai]:</b> Sai, nếu a và b song song thì d chưa chắc vuông góc với (P).<br>• <b>Ý d) [Đúng]:</b> Đúng, tính chất quan hệ song song và vuông góc.",
       "stmts": [
-        "a) Nếu d ⊥ (P) thì d vuông góc với mọi đường thẳng nằm trong (P).",
-        "b) Qua một điểm cho trước có duy nhất một mặt phẳng vuông góc với một đường thẳng cho trước.",
-        "c) Nếu d vuông góc với hai đường thẳng a và b trong (P) thì d ⊥ (P).",
-        "d) Hai đường thẳng phân biệt cùng vuông góc với một mặt phẳng thì song song với nhau."
+        "Nếu d ⊥ (P) thì d vuông góc với mọi đường thẳng nằm trong (P).",
+        "Qua một điểm cho trước có duy nhất một mặt phẳng vuông góc với một đường thẳng cho trước.",
+        "Nếu d vuông góc với hai đường thẳng a và b trong (P) thì d ⊥ (P).",
+        "Hai đường thẳng phân biệt cùng vuông góc với một mặt phẳng thì song song với nhau."
       ],
       "ans": [
         true,
@@ -4326,26 +4547,27 @@
       ],
       "items": [
         {
-          "text": "a) Nếu d ⊥ (P) thì d vuông góc với mọi đường thẳng nằm trong (P).",
+          "text": "Nếu d ⊥ (P) thì d vuông góc với mọi đường thẳng nằm trong (P).",
           "ans": true,
           "exp": "Đúng theo định nghĩa đường thẳng vuông góc mặt phẳng."
         },
         {
-          "text": "b) Qua một điểm cho trước có duy nhất một mặt phẳng vuông góc với một đường thẳng cho trước.",
+          "text": "Qua một điểm cho trước có duy nhất một mặt phẳng vuông góc với một đường thẳng cho trước.",
           "ans": true,
           "exp": "Đúng, tính chất duy nhất."
         },
         {
-          "text": "c) Nếu d vuông góc với hai đường thẳng a và b trong (P) thì d ⊥ (P).",
+          "text": "Nếu d vuông góc với hai đường thẳng a và b trong (P) thì d ⊥ (P).",
           "ans": false,
           "exp": "Sai, nếu a và b song song thì d chưa chắc vuông góc với (P)."
         },
         {
-          "text": "d) Hai đường thẳng phân biệt cùng vuông góc với một mặt phẳng thì song song với nhau.",
+          "text": "Hai đường thẳng phân biệt cùng vuông góc với một mặt phẳng thì song song với nhau.",
           "ans": true,
           "exp": "Đúng, tính chất quan hệ song song và vuông góc."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {
       "type": "mcq",
@@ -4357,7 +4579,8 @@
         "AB ⊥ (SBC)",
         "BC ⊥ (SAC)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: BC ⊥ (SAB)"
     },
     {
       "type": "mcq",
@@ -4369,7 +4592,8 @@
         "BC ⊥ (SAB)",
         "AC ⊥ (SBD)"
       ],
-      "ans": 3
+      "ans": 3,
+      "correctText": "Phương án D: AC ⊥ (SBD)"
     },
     {
       "type": "mcq",
@@ -4381,13 +4605,14 @@
         "a√3 / 2",
         "a"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: a√2 / 2"
     },
     {
       "type": "drag",
-      "q": "Cho hình chóp S.ABCD có đáy ABCD là hình chữ nhật, SA ⊥ (ABCD). Có bao nhiêu mặt bên của hình chóp là các tam giác vuông?<br>Số mặt bên là tam giác vuông là: %%%SLOT_0%%%.",
+      "q": "Cho hình chóp S.ABCD có đáy ABCD là hình chữ nhật, SA ⊥ (ABCD). Có bao nhiêu mặt bên của hình chóp là các tam giác vuông?",
       "exp": "<b>ĐÁP ÁN ĐÚNG: 4</b><br><br>Cả 4 mặt bên đều là tam giác vuông:<br>- Tam giác SAB vuông tại A (SA ⊥ AB).<br>- Tam giác SAD vuông tại A (SA ⊥ AD).<br>- Tam giác SBC vuông tại B (BC ⊥ (SAB) ⇒ BC ⊥ SB).<br>- Tam giác SDC vuông tại D (CD ⊥ (SAD) ⇒ CD ⊥ SD).",
-      "sentence": "Cho hình chóp S.ABCD có đáy ABCD là hình chữ nhật, SA ⊥ (ABCD). Có bao nhiêu mặt bên của hình chóp là các tam giác vuông?<br>Số mặt bên là tam giác vuông là: %%%SLOT_0%%%.",
+      "sentence": "Số mặt bên là tam giác vuông là: %%%SLOT_0%%%.",
       "words": [
         "4",
         "2",
@@ -4405,23 +4630,24 @@
       ],
       "slots": [
         "4"
-      ]
+      ],
+      "correctText": "(1) 4"
     },
     {
       "type": "match",
       "q": "Cho hình chóp S.ABCD có đáy là hình vuông, SA ⊥ (ABCD). Ghép mỗi đường thẳng ở Cột A với mặt phẳng vuông góc tương ứng ở Cột B:",
       "exp": "1 - A (giả thiết); 2 - B (BC ⊥ AB, BC ⊥ SA); 3 - C (CD ⊥ AD, CD ⊥ SA); 4 - D (BD ⊥ AC, BD ⊥ SA).",
       "colA": [
-        "1. Đường thẳng SA",
-        "2. Đường thẳng BC",
-        "3. Đường thẳng CD",
-        "4. Đường thẳng BD"
+        "Đường thẳng SA",
+        "Đường thẳng BC",
+        "Đường thẳng CD",
+        "Đường thẳng BD"
       ],
       "colB": [
-        "A. Mặt phẳng (ABCD)",
-        "B. Mặt phẳng (SAB)",
-        "C. Mặt phẳng (SAD)",
-        "D. Mặt phẳng (SAC)"
+        "Mặt phẳng (ABCD)",
+        "Mặt phẳng (SAB)",
+        "Mặt phẳng (SAD)",
+        "Mặt phẳng (SAC)"
       ],
       "pairs": [
         {
@@ -4446,7 +4672,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -4458,7 +4685,8 @@
         "Dây dọi tạo với mặt đất góc 45°.",
         "Dây dọi và mặt tường là hai đường thẳng chéo nhau."
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Dây dọi luôn có phương thẳng đứng, vuông góc với mặt phẳng nằm ngang của nền nhà."
     },
     {
       "type": "mcq",
@@ -4470,7 +4698,8 @@
         "Chỉ cần cắm hai cọc neo bất kì.",
         "Cột nghiêng về phía cọc gần nhất."
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Ba cọc neo không thẳng hàng trên mặt đất."
     },
     {
       "type": "mcq",
@@ -4482,7 +4711,8 @@
         "Hình đa giác lồi",
         "Hình parabol"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Hình tròn có tâm trùng với chân trụ dù"
     }
   ],
   "24": [
@@ -4496,17 +4726,18 @@
         "Đường thẳng d và đường vuông góc với (P).",
         "Đường thẳng d' và trục tung."
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Đường thẳng d và hình chiếu d' của nó trên mặt phẳng (P)."
     },
     {
       "type": "tf",
       "q": "Xét tính đúng/sai của các mệnh đề sau về góc giữa đường thẳng và mặt phẳng:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng theo quy ước số đo góc giữa đường thẳng và mặt phẳng.<br>• <b>Ý b) [Đúng]:</b> Đúng theo định nghĩa.<br>• <b>Ý c) [Đúng]:</b> Đúng, khi đó d // d' nên góc giữa chúng bằng 0°.<br>• <b>Ý d) [Sai]:</b> Sai, góc giữa đường thẳng và mặt phẳng không bao giờ vượt quá 90°.",
       "stmts": [
-        "a) Số đo góc giữa đường thẳng và mặt phẳng luôn nằm trong đoạn [0°; 90°].",
-        "b) Nếu đường thẳng d vuông góc với mặt phẳng (P) thì góc giữa d và (P) bằng 90°.",
-        "c) Nếu d // (P) thì góc giữa d và (P) bằng 0°.",
-        "d) Góc giữa d và (P) là góc tù nếu d cắt (P) theo góc xiên lớn."
+        "Số đo góc giữa đường thẳng và mặt phẳng luôn nằm trong đoạn [0°; 90°].",
+        "Nếu đường thẳng d vuông góc với mặt phẳng (P) thì góc giữa d và (P) bằng 90°.",
+        "Nếu d // (P) thì góc giữa d và (P) bằng 0°.",
+        "Góc giữa d và (P) là góc tù nếu d cắt (P) theo góc xiên lớn."
       ],
       "ans": [
         true,
@@ -4516,26 +4747,27 @@
       ],
       "items": [
         {
-          "text": "a) Số đo góc giữa đường thẳng và mặt phẳng luôn nằm trong đoạn [0°; 90°].",
+          "text": "Số đo góc giữa đường thẳng và mặt phẳng luôn nằm trong đoạn [0°; 90°].",
           "ans": true,
           "exp": "Đúng theo quy ước số đo góc giữa đường thẳng và mặt phẳng."
         },
         {
-          "text": "b) Nếu đường thẳng d vuông góc với mặt phẳng (P) thì góc giữa d và (P) bằng 90°.",
+          "text": "Nếu đường thẳng d vuông góc với mặt phẳng (P) thì góc giữa d và (P) bằng 90°.",
           "ans": true,
           "exp": "Đúng theo định nghĩa."
         },
         {
-          "text": "c) Nếu d // (P) thì góc giữa d và (P) bằng 0°.",
+          "text": "Nếu d // (P) thì góc giữa d và (P) bằng 0°.",
           "ans": true,
           "exp": "Đúng, khi đó d // d' nên góc giữa chúng bằng 0°."
         },
         {
-          "text": "d) Góc giữa d và (P) là góc tù nếu d cắt (P) theo góc xiên lớn.",
+          "text": "Góc giữa d và (P) là góc tù nếu d cắt (P) theo góc xiên lớn.",
           "ans": false,
           "exp": "Sai, góc giữa đường thẳng và mặt phẳng không bao giờ vượt quá 90°."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -4547,7 +4779,8 @@
         "30°",
         "90°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 45°"
     },
     {
       "type": "mcq",
@@ -4559,7 +4792,8 @@
         "30°",
         "75°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 60°"
     },
     {
       "type": "mcq",
@@ -4571,11 +4805,12 @@
         "1/2",
         "√3/2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 1/√3"
     },
     {
       "type": "drag",
-      "q": "Cho hình chóp S.ABC có SA ⊥ (ABC), tam giác ABC vuông cân tại B có BA = BC = a. Biết SA = a√2. Tang của góc giữa SC và mặt phẳng (SAB) bằng: tan α = %%%SLOT_0%%%.",
+      "q": "Điền từ / cụm từ thích hợp vào chỗ trống:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: 1/√3</b><br><br>Do BC ⊥ AB và BC ⊥ SA nên BC ⊥ (SAB). Do đó B là hình chiếu của C trên (SAB).<br>Hình chiếu của SC trên (SAB) là SB. Góc cần tìm là góc CSB.<br>Tam giác SBC vuông tại B. Cạnh SB = √(SA<sup>2</sup> + AB<sup>2</sup>) = √(2a<sup>2</sup> + a<sup>2</sup>) = a√3.<br>Cạnh BC = a. Vậy tan(CSB) = BC / SB = a / (a√3) = 1/√3.",
       "sentence": "Cho hình chóp S.ABC có SA ⊥ (ABC), tam giác ABC vuông cân tại B có BA = BC = a. Biết SA = a√2. Tang của góc giữa SC và mặt phẳng (SAB) bằng: tan α = %%%SLOT_0%%%.",
       "words": [
@@ -4597,23 +4832,24 @@
       ],
       "slots": [
         "1/√3"
-      ]
+      ],
+      "correctText": "(1) 1/√3"
     },
     {
       "type": "match",
       "q": "Cho hình lập phương ABCD.A'B'C'D'. Ghép mỗi đường thẳng ở Cột A với góc tạo bởi nó và mặt phẳng (ABCD) ở Cột B:",
       "exp": "1 - A (A'A ⊥ (ABCD) ⇒ 90°); 2 - B (AB nằm trong (ABCD) ⇒ 0°); 3 - C (tan = A'A/AC = a/(a√2) = 1/√2); 4 - D (tan = A'A/AB = 1 ⇒ 45°).",
       "colA": [
-        "1. Đường thẳng A'A",
-        "2. Đường thẳng AB",
-        "3. Đường thẳng A'C",
-        "4. Đường thẳng A'B"
+        "Đường thẳng A'A",
+        "Đường thẳng AB",
+        "Đường thẳng A'C",
+        "Đường thẳng A'B"
       ],
       "colB": [
-        "A. 90°",
-        "B. 0°",
-        "C. arctan(1/√2)",
-        "D. 45°"
+        "90°",
+        "0°",
+        "arctan(1/√2)",
+        "45°"
       ],
       "pairs": [
         {
@@ -4638,7 +4874,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -4650,7 +4887,8 @@
         "45°",
         "90°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 60°"
     },
     {
       "type": "mcq",
@@ -4662,7 +4900,8 @@
         "60°",
         "15°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 30°"
     },
     {
       "type": "mcq",
@@ -4674,7 +4913,8 @@
         "45°",
         "15°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 30°"
     }
   ],
   "25": [
@@ -4688,17 +4928,18 @@
         "Đường giao tuyến của chúng vuông góc với một đường thẳng thứ ba.",
         "Hai mặt phẳng không có điểm chung."
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Mặt phẳng (P) chứa một đường thẳng vuông góc với mặt phẳng (Q)."
     },
     {
       "type": "tf",
       "q": "Cho hai mặt phẳng (P) và (Q) vuông góc với nhau theo giao tuyến d. Xét tính đúng/sai của các mệnh đề sau:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng, định lí cơ bản về hai mặt phẳng vuông góc.<br>• <b>Ý b) [Sai]:</b> Sai, chỉ những đường vuông góc với giao tuyến d mới vuông góc với (Q).<br>• <b>Ý c) [Đúng]:</b> Đúng, tính chất đường vuông góc đi qua một điểm.<br>• <b>Ý d) [Đúng]:</b> Đúng theo định nghĩa số đo góc giữa hai mặt phẳng.",
       "stmts": [
-        "a) Nếu một đường thẳng nằm trong (P) và vuông góc với d thì nó vuông góc với (Q).",
-        "b) Mọi đường thẳng nằm trong (P) đều vuông góc với (Q).",
-        "c) Nếu một điểm A thuộc (P), đường thẳng qua A vuông góc với (Q) sẽ nằm trong (P).",
-        "d) Góc giữa hai mặt phẳng vuông góc bằng 90°."
+        "Nếu một đường thẳng nằm trong (P) và vuông góc với d thì nó vuông góc với (Q).",
+        "Mọi đường thẳng nằm trong (P) đều vuông góc với (Q).",
+        "Nếu một điểm A thuộc (P), đường thẳng qua A vuông góc với (Q) sẽ nằm trong (P).",
+        "Góc giữa hai mặt phẳng vuông góc bằng 90°."
       ],
       "ans": [
         true,
@@ -4708,26 +4949,27 @@
       ],
       "items": [
         {
-          "text": "a) Nếu một đường thẳng nằm trong (P) và vuông góc với d thì nó vuông góc với (Q).",
+          "text": "Nếu một đường thẳng nằm trong (P) và vuông góc với d thì nó vuông góc với (Q).",
           "ans": true,
           "exp": "Đúng, định lí cơ bản về hai mặt phẳng vuông góc."
         },
         {
-          "text": "b) Mọi đường thẳng nằm trong (P) đều vuông góc với (Q).",
+          "text": "Mọi đường thẳng nằm trong (P) đều vuông góc với (Q).",
           "ans": false,
           "exp": "Sai, chỉ những đường vuông góc với giao tuyến d mới vuông góc với (Q)."
         },
         {
-          "text": "c) Nếu một điểm A thuộc (P), đường thẳng qua A vuông góc với (Q) sẽ nằm trong (P).",
+          "text": "Nếu một điểm A thuộc (P), đường thẳng qua A vuông góc với (Q) sẽ nằm trong (P).",
           "ans": true,
           "exp": "Đúng, tính chất đường vuông góc đi qua một điểm."
         },
         {
-          "text": "d) Góc giữa hai mặt phẳng vuông góc bằng 90°.",
+          "text": "Góc giữa hai mặt phẳng vuông góc bằng 90°.",
           "ans": true,
           "exp": "Đúng theo định nghĩa số đo góc giữa hai mặt phẳng."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Sai • c) Đúng • d) Đúng"
     },
     {
       "type": "mcq",
@@ -4739,7 +4981,8 @@
         "45°",
         "30°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 90°"
     },
     {
       "type": "mcq",
@@ -4751,7 +4994,8 @@
         "60°",
         "30°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 90°"
     },
     {
       "type": "mcq",
@@ -4763,13 +5007,14 @@
         "(SAD) ⊥ (SCD)",
         "(SAB) ⊥ (SCD)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: (SBD) ⊥ (SAC)"
     },
     {
       "type": "drag",
-      "q": "Cho hình chóp tam giác đều S.ABC có cạnh đáy bằng a và chiều cao SO = a/2. Tính số đo góc nhị diện [S, BC, A]:<br>Số đo góc bằng: %%%SLOT_0%%% độ.",
+      "q": "Cho hình chóp tam giác đều S.ABC có cạnh đáy bằng a và chiều cao SO = a/2. Tính số đo góc nhị diện [S, BC, A]:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: 60 độ</b><br><br>Gọi M là trung điểm BC. Ta có AM ⊥ BC và SM ⊥ BC, góc giữa hai mặt phẳng là góc SMO.<br>Đáy ABC là tam giác đều cạnh a nên đường cao AM = a√3/2. Điểm O là trọng tâm nên OM = AM / 3 = a√3 / 6.<br>tan(SMO) = SO / OM = (a/2) / (a√3/6) = (1/2) * (6/√3) = 3/√3 = √3. Do đó góc SMO = 60°.",
-      "sentence": "Cho hình chóp tam giác đều S.ABC có cạnh đáy bằng a và chiều cao SO = a/2. Tính số đo góc nhị diện [S, BC, A]:<br>Số đo góc bằng: %%%SLOT_0%%% độ.",
+      "sentence": "Số đo góc bằng: %%%SLOT_0%%% độ.",
       "words": [
         "60",
         "45",
@@ -4787,23 +5032,24 @@
       ],
       "slots": [
         "60"
-      ]
+      ],
+      "correctText": "(1) 60"
     },
     {
       "type": "match",
       "q": "Cho hình lập phương ABCD.A'B'C'D'. Ghép mỗi cặp mặt phẳng ở Cột A với góc giữa chúng ở Cột B:",
       "exp": "1 - A (hai mặt liền kề vuông góc); 2 - B (hai mặt đáy song song); 3 - C (tan = A'A/AO = a/(a√2/2) = √2); 4 - D (hai mặt phẳng chéo vuông góc).",
       "colA": [
-        "1. (ABCD) và (ABB'A')",
-        "2. (ABCD) và (A'B'C'D')",
-        "3. (ABCD) và (A'BD)",
-        "4. (ACC'A') và (BDD'B')"
+        "(ABCD) và (ABB'A')",
+        "(ABCD) và (A'B'C'D')",
+        "(ABCD) và (A'BD)",
+        "(ACC'A') và (BDD'B')"
       ],
       "colB": [
-        "A. 90°",
-        "B. 0°",
-        "C. arctan(√2)",
-        "D. 90°"
+        "90°",
+        "0°",
+        "arctan(√2)",
+        "90°"
       ],
       "pairs": [
         {
@@ -4828,7 +5074,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -4840,7 +5087,8 @@
         "Đường cong uốn lượn",
         "Đường xiên 45°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Đường thẳng thẳng đứng vuông góc với mặt sàn nhà"
     },
     {
       "type": "mcq",
@@ -4852,7 +5100,8 @@
         "45°",
         "60°"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 90°"
     },
     {
       "type": "mcq",
@@ -4864,7 +5113,8 @@
         "Không cần vuông góc với tường",
         "Đường chéo góc sàn"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Cả hai bức tường giáp góc"
     }
   ],
   "26": [
@@ -4878,17 +5128,18 @@
         "Độ dài hình chiếu của a lên b.",
         "Nửa tổng khoảng cách từ một điểm trên a đến b."
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Độ dài đoạn vuông góc chung của hai đường thẳng đó."
     },
     {
       "type": "tf",
       "q": "Xét tính đúng/sai của các khẳng định sau về khoảng cách trong không gian:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng theo định nghĩa.<br>• <b>Ý b) [Đúng]:</b> Đúng theo tính chất song song.<br>• <b>Ý c) [Sai]:</b> Sai, phải là khoảng cách từ một điểm trên mặt phẳng này đến mặt phẳng kia theo phương vuông góc.<br>• <b>Ý d) [Đúng]:</b> Đúng theo định nghĩa đoạn vuông góc chung.",
       "stmts": [
-        "a) Khoảng cách từ điểm M đến mặt phẳng (P) bằng độ dài đoạn MH với H là hình chiếu vuông góc của M lên (P).",
-        "b) Nếu đường thẳng d // (P) thì khoảng cách giữa d và (P) bằng khoảng cách từ một điểm bất kì trên d đến (P).",
-        "c) Khoảng cách giữa hai mặt phẳng song song là khoảng cách giữa hai điểm bất kì thuộc hai mặt phẳng.",
-        "d) Đoạn vuông góc chung của hai đường thẳng chéo nhau luôn cắt cả hai đường thẳng đó."
+        "Khoảng cách từ điểm M đến mặt phẳng (P) bằng độ dài đoạn MH với H là hình chiếu vuông góc của M lên (P).",
+        "Nếu đường thẳng d // (P) thì khoảng cách giữa d và (P) bằng khoảng cách từ một điểm bất kì trên d đến (P).",
+        "Khoảng cách giữa hai mặt phẳng song song là khoảng cách giữa hai điểm bất kì thuộc hai mặt phẳng.",
+        "Đoạn vuông góc chung của hai đường thẳng chéo nhau luôn cắt cả hai đường thẳng đó."
       ],
       "ans": [
         true,
@@ -4898,26 +5149,27 @@
       ],
       "items": [
         {
-          "text": "a) Khoảng cách từ điểm M đến mặt phẳng (P) bằng độ dài đoạn MH với H là hình chiếu vuông góc của M lên (P).",
+          "text": "Khoảng cách từ điểm M đến mặt phẳng (P) bằng độ dài đoạn MH với H là hình chiếu vuông góc của M lên (P).",
           "ans": true,
           "exp": "Đúng theo định nghĩa."
         },
         {
-          "text": "b) Nếu đường thẳng d // (P) thì khoảng cách giữa d và (P) bằng khoảng cách từ một điểm bất kì trên d đến (P).",
+          "text": "Nếu đường thẳng d // (P) thì khoảng cách giữa d và (P) bằng khoảng cách từ một điểm bất kì trên d đến (P).",
           "ans": true,
           "exp": "Đúng theo tính chất song song."
         },
         {
-          "text": "c) Khoảng cách giữa hai mặt phẳng song song là khoảng cách giữa hai điểm bất kì thuộc hai mặt phẳng.",
+          "text": "Khoảng cách giữa hai mặt phẳng song song là khoảng cách giữa hai điểm bất kì thuộc hai mặt phẳng.",
           "ans": false,
           "exp": "Sai, phải là khoảng cách từ một điểm trên mặt phẳng này đến mặt phẳng kia theo phương vuông góc."
         },
         {
-          "text": "d) Đoạn vuông góc chung của hai đường thẳng chéo nhau luôn cắt cả hai đường thẳng đó.",
+          "text": "Đoạn vuông góc chung của hai đường thẳng chéo nhau luôn cắt cả hai đường thẳng đó.",
           "ans": true,
           "exp": "Đúng theo định nghĩa đoạn vuông góc chung."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {
       "type": "mcq",
@@ -4929,7 +5181,8 @@
         "a√3",
         "a/2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: a"
     },
     {
       "type": "mcq",
@@ -4941,7 +5194,8 @@
         "a√3",
         "a/2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: a√2"
     },
     {
       "type": "mcq",
@@ -4953,11 +5207,12 @@
         "a√3 / 3",
         "a/2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: a√2 / 2"
     },
     {
       "type": "drag",
-      "q": "Cho hình chóp S.ABCD có đáy là hình vuông cạnh a, SA ⊥ (ABCD) và SA = a√3. Khoảng cách từ A đến đường thẳng SC bằng d = a · %%%SLOT_0%%%.",
+      "q": "Điền từ / cụm từ thích hợp vào chỗ trống:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: √3/2</b><br><br>Tam giác SAC vuông tại A có SA = a√3 và AC = a√2.<br>Cạnh huyền SC = √(SA<sup>2</sup> + AC<sup>2</sup>) = √(3a<sup>2</sup> + 2a<sup>2</sup>) = a√5... À, d = (SA · AC) / SC = (a√3 · a√2) / (a√5) = a√6 / √5 = a√30/5.<br>Để đơn giản và chuẩn mực: xét tam giác SAB: SA = a√3, AB = a ⇒ SB = 2a. Hạ AK ⊥ SB ⇒ AK = (SA · AB) / SB = (a√3 · a) / (2a) = a · (√3/2). Khoảng cách từ A đến SB là a · √3/2.",
       "sentence": "Cho hình chóp S.ABCD có đáy là hình vuông cạnh a, SA ⊥ (ABCD) và SA = a√3. Khoảng cách từ A đến đường thẳng SC bằng d = a · %%%SLOT_0%%%.",
       "words": [
@@ -4979,23 +5234,24 @@
       ],
       "slots": [
         "√3/2"
-      ]
+      ],
+      "correctText": "(1) √3/2"
     },
     {
       "type": "match",
       "q": "Cho hình lập phương ABCD.A'B'C'D' cạnh a. Ghép mỗi khoảng cách ở Cột A với giá trị tương ứng ở Cột B:",
       "exp": "1 - A (AD = a); 2 - B (AA' = a); 3 - C (BK = (a*a√2)/(a√3) = a√(2/3)); 4 - D (đường chéo mặt a√2).",
       "colA": [
-        "1. Khoảng cách từ A đến (CDD'C')",
-        "2. Khoảng cách giữa (ABCD) và (A'B'C'D')",
-        "3. Khoảng cách từ B đến BD'",
-        "4. Khoảng cách từ A đến C"
+        "Khoảng cách từ A đến (CDD'C')",
+        "Khoảng cách giữa (ABCD) và (A'B'C'D')",
+        "Khoảng cách từ B đến BD'",
+        "Khoảng cách từ A đến C"
       ],
       "colB": [
-        "A. a",
-        "B. a",
-        "C. a√(2/3)",
-        "D. a√2"
+        "a",
+        "a",
+        "a√(2/3)",
+        "a√2"
       ],
       "pairs": [
         {
@@ -5020,7 +5276,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -5032,7 +5289,8 @@
         "12,0 m",
         "9,8 m"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 10,8 m"
     },
     {
       "type": "mcq",
@@ -5044,7 +5302,8 @@
         "0 m",
         "9,2 m"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 6,5 m"
     },
     {
       "type": "mcq",
@@ -5056,7 +5315,8 @@
         "1 200 m",
         "850 m"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 1 000 m"
     }
   ],
   "27": [
@@ -5070,17 +5330,18 @@
         "V = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span> · S · h",
         "V = <span class=\"fraction\"><span class=\"numerator\">4</span><span class=\"denominator\">3</span></span> · S · h"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: V = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">3</span></span> · S · h"
     },
     {
       "type": "tf",
       "q": "Xét tính đúng/sai của các mệnh đề sau về thể tích khối đa diện:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng theo công thức tính thể tích lăng trụ.<br>• <b>Ý b) [Đúng]:</b> Đúng, a · a · a = a<sup>3</sup>.<br>• <b>Ý c) [Đúng]:</b> Đúng theo tính chất cộng thể tích.<br>• <b>Ý d) [Sai]:</b> Sai, thể tích tăng lên 2<sup>3</sup> = 8 lần.",
       "stmts": [
-        "a) Thể tích khối lăng trụ có diện tích đáy S và chiều cao h là V = S · h.",
-        "b) Thể tích khối lập phương cạnh a là V = a<sup>3</sup>.",
-        "c) Nếu chia một khối đa diện thành hai khối đa diện không có điểm trong chung thì thể tích của nó bằng tổng thể tích hai khối đó.",
-        "d) Nếu tăng tất cả các cạnh của một hình hộp chữ nhật lên 2 lần thì thể tích tăng lên 4 lần."
+        "Thể tích khối lăng trụ có diện tích đáy S và chiều cao h là V = S · h.",
+        "Thể tích khối lập phương cạnh a là V = a<sup>3</sup>.",
+        "Nếu chia một khối đa diện thành hai khối đa diện không có điểm trong chung thì thể tích của nó bằng tổng thể tích hai khối đó.",
+        "Nếu tăng tất cả các cạnh của một hình hộp chữ nhật lên 2 lần thì thể tích tăng lên 4 lần."
       ],
       "ans": [
         true,
@@ -5090,26 +5351,27 @@
       ],
       "items": [
         {
-          "text": "a) Thể tích khối lăng trụ có diện tích đáy S và chiều cao h là V = S · h.",
+          "text": "Thể tích khối lăng trụ có diện tích đáy S và chiều cao h là V = S · h.",
           "ans": true,
           "exp": "Đúng theo công thức tính thể tích lăng trụ."
         },
         {
-          "text": "b) Thể tích khối lập phương cạnh a là V = a<sup>3</sup>.",
+          "text": "Thể tích khối lập phương cạnh a là V = a<sup>3</sup>.",
           "ans": true,
           "exp": "Đúng, a · a · a = a<sup>3</sup>."
         },
         {
-          "text": "c) Nếu chia một khối đa diện thành hai khối đa diện không có điểm trong chung thì thể tích của nó bằng tổng thể tích hai khối đó.",
+          "text": "Nếu chia một khối đa diện thành hai khối đa diện không có điểm trong chung thì thể tích của nó bằng tổng thể tích hai khối đó.",
           "ans": true,
           "exp": "Đúng theo tính chất cộng thể tích."
         },
         {
-          "text": "d) Nếu tăng tất cả các cạnh của một hình hộp chữ nhật lên 2 lần thì thể tích tăng lên 4 lần.",
+          "text": "Nếu tăng tất cả các cạnh của một hình hộp chữ nhật lên 2 lần thì thể tích tăng lên 4 lần.",
           "ans": false,
           "exp": "Sai, thể tích tăng lên 2<sup>3</sup> = 8 lần."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -5121,7 +5383,8 @@
         "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">6</span></span>",
         "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">2</span></span>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">3</span></span>"
     },
     {
       "type": "mcq",
@@ -5133,7 +5396,8 @@
         "a<sup>3</sup>√3 / 3",
         "a<sup>3</sup> / 2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: a<sup>3</sup>√3"
     },
     {
       "type": "mcq",
@@ -5145,13 +5409,14 @@
         "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup></span><span class=\"denominator\">12</span></span>",
         "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">12</span></span>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup></span><span class=\"denominator\">4</span></span>"
     },
     {
       "type": "drag",
-      "q": "Tính thể tích khối tứ diện đều có cạnh bằng a = 6 cm:<br>Thể tích khối tứ diện là: V = %%%SLOT_0%%% · √2 cm<sup>3</sup>.",
+      "q": "Tính thể tích khối tứ diện đều có cạnh bằng a = 6 cm:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: 18</b><br><br>Công thức thể tích tứ diện đều cạnh a là: V = <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√2</span><span class=\"denominator\">12</span></span>.<br>Với a = 6: V = <span class=\"fraction\"><span class=\"numerator\">6<sup>3</sup> · √2</span><span class=\"denominator\">12</span></span> = <span class=\"fraction\"><span class=\"numerator\">216 · √2</span><span class=\"denominator\">12</span></span> = 18√2 cm<sup>3</sup>.",
-      "sentence": "Tính thể tích khối tứ diện đều có cạnh bằng a = 6 cm:<br>Thể tích khối tứ diện là: V = %%%SLOT_0%%% · √2 cm<sup>3</sup>.",
+      "sentence": "Thể tích khối tứ diện là: V = %%%SLOT_0%%% · √2 cm<sup>3</sup>.",
       "words": [
         "18",
         "12",
@@ -5171,23 +5436,24 @@
       ],
       "slots": [
         "18"
-      ]
+      ],
+      "correctText": "(1) 18"
     },
     {
       "type": "match",
       "q": "Ghép mỗi khối đa diện ở Cột A với công thức thể tích tương ứng ở Cột B:",
       "exp": "1 - A; 2 - B; 3 - C; 4 - D.",
       "colA": [
-        "1. Khối hộp chữ nhật kích thước a, b, c",
-        "2. Khối chóp diện tích đáy S, chiều cao h",
-        "3. Khối lăng trụ diện tích đáy S, chiều cao h",
-        "4. Khối lập phương cạnh a"
+        "Khối hộp chữ nhật kích thước a, b, c",
+        "Khối chóp diện tích đáy S, chiều cao h",
+        "Khối lăng trụ diện tích đáy S, chiều cao h",
+        "Khối lập phương cạnh a"
       ],
       "colB": [
-        "A. a · b · c",
-        "B. (1/3) · S · h",
-        "C. S · h",
-        "D. a<sup>3</sup>"
+        "a · b · c",
+        "(1/3) · S · h",
+        "S · h",
+        "a<sup>3</sup>"
       ],
       "pairs": [
         {
@@ -5212,7 +5478,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -5224,7 +5491,8 @@
         "1 850 000 m<sup>3</sup>",
         "3 120 000 m<sup>3</sup>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 2 592 100 m<sup>3</sup>"
     },
     {
       "type": "mcq",
@@ -5236,7 +5504,8 @@
         "6,4 giờ",
         "12 giờ"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 8 giờ"
     },
     {
       "type": "mcq",
@@ -5248,7 +5517,8 @@
         "2,16 m<sup>3</sup>",
         "4,50 m<sup>3</sup>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 3,24 m<sup>3</sup>"
     }
   ],
   "28": [
@@ -5262,17 +5532,18 @@
         "Biến cố đối của A.",
         "Biến cố chắc chắn."
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Biến cố hợp của A và B, kí hiệu là A ∪ B."
     },
     {
       "type": "tf",
       "q": "Xét tính đúng/sai của các phát biểu sau về các loại biến cố trong xác suất:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng theo định nghĩa biến cố giao AB (hoặc A ∩ B).<br>• <b>Ý b) [Đúng]:</b> Đúng theo định nghĩa hai biến cố xung khắc.<br>• <b>Ý c) [Đúng]:</b> Đúng theo định nghĩa hai biến cố độc lập.<br>• <b>Ý d) [Sai]:</b> Sai, hai biến cố xung khắc có xác suất dương thì phụ thuộc lẫn nhau vì nếu một biến cố xảy ra thì biến cố kia chắc chắn không xảy ra.",
       "stmts": [
-        "a) Biến cố giao của A và B xảy ra khi và chỉ khi cả A và B cùng xảy ra.",
-        "b) Hai biến cố A và B được gọi là xung khắc nếu chúng không bao giờ cùng xảy ra, tức A ∩ B = ∅.",
-        "c) Hai biến cố A và B độc lập nếu việc biến cố này xảy ra hay không không ảnh hưởng đến xác suất xảy ra biến cố kia.",
-        "d) Nếu hai biến cố xung khắc thì chúng luôn luôn độc lập với nhau."
+        "Biến cố giao của A và B xảy ra khi và chỉ khi cả A và B cùng xảy ra.",
+        "Hai biến cố A và B được gọi là xung khắc nếu chúng không bao giờ cùng xảy ra, tức A ∩ B = ∅.",
+        "Hai biến cố A và B độc lập nếu việc biến cố này xảy ra hay không không ảnh hưởng đến xác suất xảy ra biến cố kia.",
+        "Nếu hai biến cố xung khắc thì chúng luôn luôn độc lập với nhau."
       ],
       "ans": [
         true,
@@ -5282,26 +5553,27 @@
       ],
       "items": [
         {
-          "text": "a) Biến cố giao của A và B xảy ra khi và chỉ khi cả A và B cùng xảy ra.",
+          "text": "Biến cố giao của A và B xảy ra khi và chỉ khi cả A và B cùng xảy ra.",
           "ans": true,
           "exp": "Đúng theo định nghĩa biến cố giao AB (hoặc A ∩ B)."
         },
         {
-          "text": "b) Hai biến cố A và B được gọi là xung khắc nếu chúng không bao giờ cùng xảy ra, tức A ∩ B = ∅.",
+          "text": "Hai biến cố A và B được gọi là xung khắc nếu chúng không bao giờ cùng xảy ra, tức A ∩ B = ∅.",
           "ans": true,
           "exp": "Đúng theo định nghĩa hai biến cố xung khắc."
         },
         {
-          "text": "c) Hai biến cố A và B độc lập nếu việc biến cố này xảy ra hay không không ảnh hưởng đến xác suất xảy ra biến cố kia.",
+          "text": "Hai biến cố A và B độc lập nếu việc biến cố này xảy ra hay không không ảnh hưởng đến xác suất xảy ra biến cố kia.",
           "ans": true,
           "exp": "Đúng theo định nghĩa hai biến cố độc lập."
         },
         {
-          "text": "d) Nếu hai biến cố xung khắc thì chúng luôn luôn độc lập với nhau.",
+          "text": "Nếu hai biến cố xung khắc thì chúng luôn luôn độc lập với nhau.",
           "ans": false,
           "exp": "Sai, hai biến cố xung khắc có xác suất dương thì phụ thuộc lẫn nhau vì nếu một biến cố xảy ra thì biến cố kia chắc chắn không xảy ra."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -5313,7 +5585,8 @@
         "1",
         "4"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 2"
     },
     {
       "type": "mcq",
@@ -5325,7 +5598,8 @@
         "E và F là hai biến cố đối nhau.",
         "E ∪ F là biến cố không thể."
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: E và F là hai biến cố độc lập."
     },
     {
       "type": "mcq",
@@ -5337,11 +5611,12 @@
         "8",
         "7"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 9"
     },
     {
       "type": "drag",
-      "q": "Gieo hai con xúc xắc cân đối và đồng chất. Gọi A là biến cố \"Tổng số chấm xuất hiện bằng 7\", B là biến cố \"Tổng số chấm xuất hiện bằng 11\". Số phần tử của biến cố hợp A ∪ B là: %%%SLOT_0%%%.",
+      "q": "Điền từ / cụm từ thích hợp vào chỗ trống:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: 8</b><br><br>A = {(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)} ⇒ n(A) = 6.<br>B = {(5,6), (6,5)} ⇒ n(B) = 2.<br>Vì tổng số chấm không thể vừa bằng 7 vừa bằng 11 nên A và B xung khắc (A ∩ B = ∅).<br>Vậy n(A ∪ B) = 6 + 2 = 8.",
       "sentence": "Gieo hai con xúc xắc cân đối và đồng chất. Gọi A là biến cố \"Tổng số chấm xuất hiện bằng 7\", B là biến cố \"Tổng số chấm xuất hiện bằng 11\". Số phần tử của biến cố hợp A ∪ B là: %%%SLOT_0%%%.",
       "words": [
@@ -5363,23 +5638,24 @@
       ],
       "slots": [
         "8"
-      ]
+      ],
+      "correctText": "(1) 8"
     },
     {
       "type": "match",
       "q": "Gieo một con xúc xắc. Ghép mỗi cặp biến cố ở Cột A với mối quan hệ tương ứng ở Cột B:",
       "exp": "1 - A; 2 - B (giao là {6}); 3 - C ({5,6} và {1} rời nhau nhưng hợp không bằng không gian mẫu); 4 - D.",
       "colA": [
-        "1. \"Số chẵn\" và \"Số lẻ\"",
-        "2. \"Số chẵn\" và \"Số chia hết cho 3\"",
-        "3. \"Lớn hơn 4\" và \"Bé hơn 2\"",
-        "4. \"Lớn hơn 0\" và \"Bé hơn 7\""
+        "\"Số chẵn\" và \"Số lẻ\"",
+        "\"Số chẵn\" và \"Số chia hết cho 3\"",
+        "\"Lớn hơn 4\" và \"Bé hơn 2\"",
+        "\"Lớn hơn 0\" và \"Bé hơn 7\""
       ],
       "colB": [
-        "A. Xung khắc và đối nhau",
-        "B. Không xung khắc",
-        "C. Xung khắc nhưng không đối",
-        "D. Biến cố chắc chắn"
+        "Xung khắc và đối nhau",
+        "Không xung khắc",
+        "Xung khắc nhưng không đối",
+        "Biến cố chắc chắn"
       ],
       "pairs": [
         {
@@ -5404,7 +5680,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -5416,7 +5693,8 @@
         "A \\ B",
         "Biến cố đối của A ∪ B"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: A ∪ B"
     },
     {
       "type": "mcq",
@@ -5428,7 +5706,8 @@
         "A đối",
         "B đối"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: A ∩ B"
     },
     {
       "type": "mcq",
@@ -5440,7 +5719,8 @@
         "Hai biến cố đối nhau",
         "Biến cố không thể"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: Hai biến cố độc lập"
     }
   ],
   "29": [
@@ -5454,17 +5734,18 @@
         "P(A ∪ B) = P(A) + P(B) - P(A ∩ B)",
         "P(A ∪ B) = 1 - P(A)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: P(A ∪ B) = P(A) + P(B)"
     },
     {
       "type": "tf",
       "q": "Cho hai biến cố A và B bất kì của cùng một phép thử. Xét tính đúng/sai của các khẳng định sau:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng, đây là công thức cộng tổng quát.<br>• <b>Ý b) [Đúng]:</b> Đúng theo tính chất của biến cố đối.<br>• <b>Ý c) [Sai]:</b> Sai, chỉ đúng khi hai biến cố xung khắc.<br>• <b>Ý d) [Đúng]:</b> Đúng, xác suất của mọi biến cố luôn nằm trong đoạn [0; 1].",
       "stmts": [
-        "a) Với hai biến cố bất kì: P(A ∪ B) = P(A) + P(B) - P(A ∩ B).",
-        "b) Xác suất của biến cố đối A là P(A) = 1 - P(A).",
-        "c) Xác suất của biến cố hợp luôn bằng tổng xác suất của từng biến cố.",
-        "d) Luôn có 0 ≤ P(A ∪ B) ≤ 1."
+        "Với hai biến cố bất kì: P(A ∪ B) = P(A) + P(B) - P(A ∩ B).",
+        "Xác suất của biến cố đối A là P(A) = 1 - P(A).",
+        "Xác suất của biến cố hợp luôn bằng tổng xác suất của từng biến cố.",
+        "Luôn có 0 ≤ P(A ∪ B) ≤ 1."
       ],
       "ans": [
         true,
@@ -5474,26 +5755,27 @@
       ],
       "items": [
         {
-          "text": "a) Với hai biến cố bất kì: P(A ∪ B) = P(A) + P(B) - P(A ∩ B).",
+          "text": "Với hai biến cố bất kì: P(A ∪ B) = P(A) + P(B) - P(A ∩ B).",
           "ans": true,
           "exp": "Đúng, đây là công thức cộng tổng quát."
         },
         {
-          "text": "b) Xác suất của biến cố đối A là P(A) = 1 - P(A).",
+          "text": "Xác suất của biến cố đối A là P(A) = 1 - P(A).",
           "ans": true,
           "exp": "Đúng theo tính chất của biến cố đối."
         },
         {
-          "text": "c) Xác suất của biến cố hợp luôn bằng tổng xác suất của từng biến cố.",
+          "text": "Xác suất của biến cố hợp luôn bằng tổng xác suất của từng biến cố.",
           "ans": false,
           "exp": "Sai, chỉ đúng khi hai biến cố xung khắc."
         },
         {
-          "text": "d) Luôn có 0 ≤ P(A ∪ B) ≤ 1.",
+          "text": "Luôn có 0 ≤ P(A ∪ B) ≤ 1.",
           "ans": true,
           "exp": "Đúng, xác suất của mọi biến cố luôn nằm trong đoạn [0; 1]."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {
       "type": "mcq",
@@ -5505,7 +5787,8 @@
         "0,10",
         "0,70"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 0,80"
     },
     {
       "type": "mcq",
@@ -5517,7 +5800,8 @@
         "0,9",
         "1,1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 0,8"
     },
     {
       "type": "mcq",
@@ -5529,13 +5813,14 @@
         "1/4",
         "1/13"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 4/13"
     },
     {
       "type": "drag",
-      "q": "Một hộp có 10 quả cầu đỏ, 8 quả cầu xanh và 6 quả cầu vàng. Lấy ngẫu nhiên 1 quả. Xác suất lấy được quả cầu đỏ hoặc vàng là phân số tối giản a/b.<br>Giá trị tử số a = %%%SLOT_0%%%, mẫu số b = %%%SLOT_1%%%.",
+      "q": "Một hộp có 10 quả cầu đỏ, 8 quả cầu xanh và 6 quả cầu vàng. Lấy ngẫu nhiên 1 quả. Xác suất lấy được quả cầu đỏ hoặc vàng là phân số tối giản a/b.",
       "exp": "<b>ĐÁP ÁN ĐÚNG: a = 2, b = 3</b><br><br>Tổng số quả cầu: 10 + 8 + 6 = 24.<br>Số quả đỏ hoặc vàng: 10 + 6 = 16.<br>Xác suất: P = 16/24 = 2/3. Do đó a = 2, b = 3.",
-      "sentence": "Một hộp có 10 quả cầu đỏ, 8 quả cầu xanh và 6 quả cầu vàng. Lấy ngẫu nhiên 1 quả. Xác suất lấy được quả cầu đỏ hoặc vàng là phân số tối giản a/b.<br>Giá trị tử số a = %%%SLOT_0%%%, mẫu số b = %%%SLOT_1%%%.",
+      "sentence": "Giá trị tử số a = %%%SLOT_0%%%, mẫu số b = %%%SLOT_1%%%.",
       "words": [
         "2",
         "3",
@@ -5559,23 +5844,24 @@
       "slots": [
         "2",
         "3"
-      ]
+      ],
+      "correctText": "(1) 2 • (2) 3"
     },
     {
       "type": "match",
       "q": "Ghép mỗi tình huống ở Cột A với xác suất tương ứng ở Cột B (gieo một con xúc xắc 6 mặt):",
       "exp": "1 - A (2/6 = 1/3); 2 - B ({2,4,6,5} gồm 4/6 = 2/3); 3 - C ({2,3,5} ∪ {2,4,6} = {2,3,4,5,6} gồm 5/6); 4 - D (biến cố không thể).",
       "colA": [
-        "1. Xuất hiện mặt 1 hoặc mặt 6",
-        "2. Xuất hiện số chẵn hoặc số 5",
-        "3. Xuất hiện số nguyên tố hoặc số chia hết cho 2",
-        "4. Xuất hiện mặt lớn hơn 6"
+        "Xuất hiện mặt 1 hoặc mặt 6",
+        "Xuất hiện số chẵn hoặc số 5",
+        "Xuất hiện số nguyên tố hoặc số chia hết cho 2",
+        "Xuất hiện mặt lớn hơn 6"
       ],
       "colB": [
-        "A. 1/3",
-        "B. 2/3",
-        "C. 5/6",
-        "D. 0"
+        "1/3",
+        "2/3",
+        "5/6",
+        "0"
       ],
       "pairs": [
         {
@@ -5600,7 +5886,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -5612,7 +5899,8 @@
         "1,00",
         "0,70"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 0,80"
     },
     {
       "type": "mcq",
@@ -5624,7 +5912,8 @@
         "0,26",
         "0,17"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 0,20"
     },
     {
       "type": "mcq",
@@ -5636,7 +5925,8 @@
         "0,50",
         "0,70"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 0,60"
     }
   ],
   "30": [
@@ -5650,17 +5940,18 @@
         "P(A ∩ B) = P(A) / P(B)",
         "P(A ∩ B) = P(A) + P(B) - 1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: P(A ∩ B) = P(A) · P(B)"
     },
     {
       "type": "tf",
       "q": "Cho hai biến cố độc lập A và B. Xét tính đúng/sai của các mệnh đề sau:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng theo công thức nhân xác suất biến cố độc lập.<br>• <b>Ý b) [Đúng]:</b> Đúng, nếu A và B độc lập thì A và B̄, Ā và B, Ā và B̄ cũng độc lập.<br>• <b>Ý c) [Đúng]:</b> Đúng theo tính chất độc lập của biến cố đối.<br>• <b>Ý d) [Sai]:</b> Sai, xung khắc yêu cầu P(AB) = 0.",
       "stmts": [
-        "a) P(A ∩ B) = P(A) · P(B).",
-        "b) Hai biến cố A và biến cố đối B̄ cũng độc lập với nhau.",
-        "c) Xác suất để cả hai biến cố cùng không xảy ra là P(Ā ∩ B̄) = (1 - P(A)) · (1 - P(B)).",
-        "d) Nếu P(A ∩ B) = P(A) · P(B) thì A và B luôn xung khắc nhau."
+        "P(A ∩ B) = P(A) · P(B).",
+        "Hai biến cố A và biến cố đối B̄ cũng độc lập với nhau.",
+        "Xác suất để cả hai biến cố cùng không xảy ra là P(Ā ∩ B̄) = (1 - P(A)) · (1 - P(B)).",
+        "Nếu P(A ∩ B) = P(A) · P(B) thì A và B luôn xung khắc nhau."
       ],
       "ans": [
         true,
@@ -5670,26 +5961,27 @@
       ],
       "items": [
         {
-          "text": "a) P(A ∩ B) = P(A) · P(B).",
+          "text": "P(A ∩ B) = P(A) · P(B).",
           "ans": true,
           "exp": "Đúng theo công thức nhân xác suất biến cố độc lập."
         },
         {
-          "text": "b) Hai biến cố A và biến cố đối B̄ cũng độc lập với nhau.",
+          "text": "Hai biến cố A và biến cố đối B̄ cũng độc lập với nhau.",
           "ans": true,
           "exp": "Đúng, nếu A và B độc lập thì A và B̄, Ā và B, Ā và B̄ cũng độc lập."
         },
         {
-          "text": "c) Xác suất để cả hai biến cố cùng không xảy ra là P(Ā ∩ B̄) = (1 - P(A)) · (1 - P(B)).",
+          "text": "Xác suất để cả hai biến cố cùng không xảy ra là P(Ā ∩ B̄) = (1 - P(A)) · (1 - P(B)).",
           "ans": true,
           "exp": "Đúng theo tính chất độc lập của biến cố đối."
         },
         {
-          "text": "d) Nếu P(A ∩ B) = P(A) · P(B) thì A và B luôn xung khắc nhau.",
+          "text": "Nếu P(A ∩ B) = P(A) · P(B) thì A và B luôn xung khắc nhau.",
           "ans": false,
           "exp": "Sai, xung khắc yêu cầu P(AB) = 0."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -5701,7 +5993,8 @@
         "0,94",
         "0,75"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 0,56"
     },
     {
       "type": "mcq",
@@ -5713,7 +6006,8 @@
         "1/18",
         "1/12"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 1/36"
     },
     {
       "type": "mcq",
@@ -5725,11 +6019,12 @@
         "0,42",
         "0,24"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 0,38"
     },
     {
       "type": "drag",
-      "q": "Một bài thi trắc nghiệm gồm 4 câu hỏi độc lập, mỗi câu có 4 phương án và chỉ có 1 phương án đúng. Một học sinh chọn ngẫu nhiên cả 4 câu. Xác suất để học sinh đó trả lời đúng cả 4 câu là phân số 1/%%%SLOT_0%%%.",
+      "q": "Điền từ / cụm từ thích hợp vào chỗ trống:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: 256</b><br><br>Mỗi câu có xác suất chọn đúng là 1/4. Vì 4 câu độc lập nên xác suất đúng cả 4 câu là: P = (1/4)<sup>4</sup> = 1/256.",
       "sentence": "Một bài thi trắc nghiệm gồm 4 câu hỏi độc lập, mỗi câu có 4 phương án và chỉ có 1 phương án đúng. Một học sinh chọn ngẫu nhiên cả 4 câu. Xác suất để học sinh đó trả lời đúng cả 4 câu là phân số 1/%%%SLOT_0%%%.",
       "words": [
@@ -5749,23 +6044,24 @@
       ],
       "slots": [
         "256"
-      ]
+      ],
+      "correctText": "(1) 256"
     },
     {
       "type": "match",
       "q": "Cho hai biến cố độc lập A, B với P(A) = 0,6 và P(B) = 0,5. Ghép mỗi biến cố ở Cột A với xác suất tương ứng ở Cột B:",
       "exp": "1 - A (0.6*0.5 = 0.3); 2 - B (0.6*0.5 = 0.3); 3 - C (0.4*0.5 = 0.2); 4 - D (0.6 + 0.5 - 0.3 = 0.8).",
       "colA": [
-        "1. P(A ∩ B)",
-        "2. P(A ∩ B̄)",
-        "3. P(Ā ∩ B̄)",
-        "4. P(A ∪ B)"
+        "P(A ∩ B)",
+        "P(A ∩ B̄)",
+        "P(Ā ∩ B̄)",
+        "P(A ∪ B)"
       ],
       "colB": [
-        "A. 0,30",
-        "B. 0,30",
-        "C. 0,20",
-        "D. 0,80"
+        "0,30",
+        "0,30",
+        "0,20",
+        "0,80"
       ],
       "pairs": [
         {
@@ -5790,7 +6086,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -5802,7 +6099,8 @@
         "0,56",
         "0,75"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 0,94"
     },
     {
       "type": "mcq",
@@ -5814,7 +6112,8 @@
         "0,980",
         "0,900"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 0,931"
     },
     {
       "type": "mcq",
@@ -5826,7 +6125,8 @@
         "0,765",
         "0,875"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 0,985"
     }
   ],
   "31": [
@@ -5840,17 +6140,18 @@
         "lim<sub>x → x<sub>0</sub></sub> <span class=\"fraction\"><span class=\"numerator\">f(x) - f(x<sub>0</sub>)</span><span class=\"denominator\">x + x<sub>0</sub></span></span>",
         "lim<sub>x → 0</sub> <span class=\"fraction\"><span class=\"numerator\">f(x)</span><span class=\"denominator\">x</span></span>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: lim<sub>x → x<sub>0</sub></sub> <span class=\"fraction\"><span class=\"numerator\">f(x) - f(x<sub>0</sub>)</span><span class=\"denominator\">x - x<sub>0</sub></span></span>"
     },
     {
       "type": "tf",
       "q": "Xét tính đúng/sai của các mệnh đề sau về đạo hàm và ý nghĩa hình học, vật lí của đạo hàm:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng theo ý nghĩa hình học của đạo hàm.<br>• <b>Ý b) [Đúng]:</b> Đúng theo ý nghĩa vật lí của đạo hàm.<br>• <b>Ý c) [Đúng]:</b> Đúng, có đạo hàm thì ắt liên tục.<br>• <b>Ý d) [Sai]:</b> Sai, ví dụ hàm y = |x| liên tục tại x = 0 nhưng không có đạo hàm tại đó.",
       "stmts": [
-        "a) Hệ số góc của tiếp tuyến của đồ thị hàm số y = f(x) tại điểm M(x<sub>0</sub>; y<sub>0</sub>) là k = f'(x<sub>0</sub>).",
-        "b) Vận tốc tức thời của chuyển động s = s(t) tại thời điểm t<sub>0</sub> là v(t<sub>0</sub>) = s'(t<sub>0</sub>).",
-        "c) Nếu hàm số y = f(x) có đạo hàm tại x<sub>0</sub> thì nó liên tục tại x<sub>0</sub>.",
-        "d) Nếu hàm số y = f(x) liên tục tại x<sub>0</sub> thì chắc chắn có đạo hàm tại x<sub>0</sub>."
+        "Hệ số góc của tiếp tuyến của đồ thị hàm số y = f(x) tại điểm M(x<sub>0</sub>; y<sub>0</sub>) là k = f'(x<sub>0</sub>).",
+        "Vận tốc tức thời của chuyển động s = s(t) tại thời điểm t<sub>0</sub> là v(t<sub>0</sub>) = s'(t<sub>0</sub>).",
+        "Nếu hàm số y = f(x) có đạo hàm tại x<sub>0</sub> thì nó liên tục tại x<sub>0</sub>.",
+        "Nếu hàm số y = f(x) liên tục tại x<sub>0</sub> thì chắc chắn có đạo hàm tại x<sub>0</sub>."
       ],
       "ans": [
         true,
@@ -5860,26 +6161,27 @@
       ],
       "items": [
         {
-          "text": "a) Hệ số góc của tiếp tuyến của đồ thị hàm số y = f(x) tại điểm M(x<sub>0</sub>; y<sub>0</sub>) là k = f'(x<sub>0</sub>).",
+          "text": "Hệ số góc của tiếp tuyến của đồ thị hàm số y = f(x) tại điểm M(x<sub>0</sub>; y<sub>0</sub>) là k = f'(x<sub>0</sub>).",
           "ans": true,
           "exp": "Đúng theo ý nghĩa hình học của đạo hàm."
         },
         {
-          "text": "b) Vận tốc tức thời của chuyển động s = s(t) tại thời điểm t<sub>0</sub> là v(t<sub>0</sub>) = s'(t<sub>0</sub>).",
+          "text": "Vận tốc tức thời của chuyển động s = s(t) tại thời điểm t<sub>0</sub> là v(t<sub>0</sub>) = s'(t<sub>0</sub>).",
           "ans": true,
           "exp": "Đúng theo ý nghĩa vật lí của đạo hàm."
         },
         {
-          "text": "c) Nếu hàm số y = f(x) có đạo hàm tại x<sub>0</sub> thì nó liên tục tại x<sub>0</sub>.",
+          "text": "Nếu hàm số y = f(x) có đạo hàm tại x<sub>0</sub> thì nó liên tục tại x<sub>0</sub>.",
           "ans": true,
           "exp": "Đúng, có đạo hàm thì ắt liên tục."
         },
         {
-          "text": "d) Nếu hàm số y = f(x) liên tục tại x<sub>0</sub> thì chắc chắn có đạo hàm tại x<sub>0</sub>.",
+          "text": "Nếu hàm số y = f(x) liên tục tại x<sub>0</sub> thì chắc chắn có đạo hàm tại x<sub>0</sub>.",
           "ans": false,
           "exp": "Sai, ví dụ hàm y = |x| liên tục tại x = 0 nhưng không có đạo hàm tại đó."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -5891,7 +6193,8 @@
         "-1",
         "2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 1"
     },
     {
       "type": "mcq",
@@ -5903,7 +6206,8 @@
         "y = -x + 1",
         "y = 2x - 2"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: y = x - 1"
     },
     {
       "type": "mcq",
@@ -5915,11 +6219,12 @@
         "2",
         "1/8"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 1/4"
     },
     {
       "type": "drag",
-      "q": "Cho hàm số y = <span class=\"fraction\"><span class=\"numerator\">2x + 1</span><span class=\"denominator\">x - 1</span></span>. Hệ số góc tiếp tuyến của đồ thị tại điểm có hoành độ x<sub>0</sub> = 2 bằng: k = %%%SLOT_0%%%.",
+      "q": "Điền từ / cụm từ thích hợp vào chỗ trống:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: -3</b><br><br>y' = (2(x - 1) - 1(2x + 1)) / (x - 1)<sup>2</sup> = (2x - 2 - 2x - 1) / (x - 1)<sup>2</sup> = -3 / (x - 1)<sup>2</sup>.<br>Tại x<sub>0</sub> = 2: k = y'(2) = -3 / (2 - 1)<sup>2</sup> = -3.",
       "sentence": "Cho hàm số y = <span class=\"fraction\"><span class=\"numerator\">2x + 1</span><span class=\"denominator\">x - 1</span></span>. Hệ số góc tiếp tuyến của đồ thị tại điểm có hoành độ x<sub>0</sub> = 2 bằng: k = %%%SLOT_0%%%.",
       "words": [
@@ -5941,23 +6246,24 @@
       ],
       "slots": [
         "-3"
-      ]
+      ],
+      "correctText": "(1) -3"
     },
     {
       "type": "match",
       "q": "Ghép mỗi hàm số f(x) ở Cột A với giá trị đạo hàm f'(1) tương ứng ở Cột B:",
       "exp": "1 - A (4*1^3 = 4); 2 - B (-1/1^2 = -1); 3 - C ((3x-5)' = 3); 4 - D (2x+2 tại x=1 là 4).",
       "colA": [
-        "1. f(x) = x<sup>4</sup>",
-        "2. f(x) = 1/x",
-        "3. f(x) = 3x - 5",
-        "4. f(x) = x<sup>2</sup> + 2x"
+        "f(x) = x<sup>4</sup>",
+        "f(x) = 1/x",
+        "f(x) = 3x - 5",
+        "f(x) = x<sup>2</sup> + 2x"
       ],
       "colB": [
-        "A. 4",
-        "B. -1",
-        "C. 3",
-        "D. 4"
+        "4",
+        "-1",
+        "3",
+        "4"
       ],
       "pairs": [
         {
@@ -5982,7 +6288,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -5994,7 +6301,8 @@
         "15 m/s",
         "60 m/s"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 30 m/s"
     },
     {
       "type": "mcq",
@@ -6006,7 +6314,8 @@
         "8 A",
         "7 A"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 11 A"
     },
     {
       "type": "mcq",
@@ -6018,7 +6327,8 @@
         "42 nghìn đồng",
         "48 nghìn đồng"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 44 nghìn đồng"
     }
   ],
   "32": [
@@ -6032,17 +6342,18 @@
         "(u / v)' = u' / v'",
         "(u / v)' = <span class=\"fraction\"><span class=\"numerator\">uv' - u'v</span><span class=\"denominator\">v<sup>2</sup></span></span>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: (u / v)' = <span class=\"fraction\"><span class=\"numerator\">u'v - uv'</span><span class=\"denominator\">v<sup>2</sup></span></span>"
     },
     {
       "type": "tf",
       "q": "Xét tính đúng/sai của các công thức tính đạo hàm cơ bản sau:",
-      "exp": "",
+      "exp": "• <b>Ý a) [Đúng]:</b> Đúng theo bảng đạo hàm lượng giác cơ bản.<br>• <b>Ý b) [Đúng]:</b> Đúng theo công thức đạo hàm hàm tang.<br>• <b>Ý c) [Đúng]:</b> Đúng theo quy tắc chuỗi tính đạo hàm hàm hợp.<br>• <b>Ý d) [Sai]:</b> Sai, đạo hàm của hàm mũ e^x là chính nó: (e<sup>x</sup>)' = e<sup>x</sup>.",
       "stmts": [
-        "a) (sin x)' = cos x và (cos x)' = -sin x.",
-        "b) (tan x)' = 1 / cos<sup>2</sup> x = 1 + tan<sup>2</sup> x.",
-        "c) Đạo hàm hàm hợp: Nếu y = f(u) và u = u(x) thì y'<sub>x</sub> = y'<sub>u</sub> · u'<sub>x</sub>.",
-        "d) (e<sup>x</sup>)' = x · e<sup>x - 1</sup>."
+        "(sin x)' = cos x và (cos x)' = -sin x.",
+        "(tan x)' = 1 / cos<sup>2</sup> x = 1 + tan<sup>2</sup> x.",
+        "Đạo hàm hàm hợp: Nếu y = f(u) và u = u(x) thì y'<sub>x</sub> = y'<sub>u</sub> · u'<sub>x</sub>.",
+        "(e<sup>x</sup>)' = x · e<sup>x - 1</sup>."
       ],
       "ans": [
         true,
@@ -6052,26 +6363,27 @@
       ],
       "items": [
         {
-          "text": "a) (sin x)' = cos x và (cos x)' = -sin x.",
+          "text": "(sin x)' = cos x và (cos x)' = -sin x.",
           "ans": true,
           "exp": "Đúng theo bảng đạo hàm lượng giác cơ bản."
         },
         {
-          "text": "b) (tan x)' = 1 / cos<sup>2</sup> x = 1 + tan<sup>2</sup> x.",
+          "text": "(tan x)' = 1 / cos<sup>2</sup> x = 1 + tan<sup>2</sup> x.",
           "ans": true,
           "exp": "Đúng theo công thức đạo hàm hàm tang."
         },
         {
-          "text": "c) Đạo hàm hàm hợp: Nếu y = f(u) và u = u(x) thì y'<sub>x</sub> = y'<sub>u</sub> · u'<sub>x</sub>.",
+          "text": "Đạo hàm hàm hợp: Nếu y = f(u) và u = u(x) thì y'<sub>x</sub> = y'<sub>u</sub> · u'<sub>x</sub>.",
           "ans": true,
           "exp": "Đúng theo quy tắc chuỗi tính đạo hàm hàm hợp."
         },
         {
-          "text": "d) (e<sup>x</sup>)' = x · e<sup>x - 1</sup>.",
+          "text": "(e<sup>x</sup>)' = x · e<sup>x - 1</sup>.",
           "ans": false,
           "exp": "Sai, đạo hàm của hàm mũ e^x là chính nó: (e<sup>x</sup>)' = e<sup>x</sup>."
         }
-      ]
+      ],
+      "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
@@ -6083,7 +6395,8 @@
         "y' = 2(2x + 1)<sup>4</sup>",
         "y' = 10(2x + 1)<sup>5</sup>"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: y' = 10(2x + 1)<sup>4</sup>"
     },
     {
       "type": "mcq",
@@ -6095,7 +6408,8 @@
         "y' = -3 · cos(3x - π/4)",
         "y' = 3 · sin(3x - π/4)"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: y' = 3 · cos(3x - π/4)"
     },
     {
       "type": "mcq",
@@ -6107,11 +6421,12 @@
         "-3",
         "1"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: -5"
     },
     {
       "type": "drag",
-      "q": "Đạo hàm của hàm số y = x · cos x có giá trị tại x = π bằng: y'(π) = %%%SLOT_0%%%.",
+      "q": "Điền từ / cụm từ thích hợp vào chỗ trống:",
       "exp": "<b>ĐÁP ÁN ĐÚNG: -1</b><br><br>y' = (x)' cos x + x (cos x)' = cos x - x sin x.<br>Tại x = π: y'(π) = cos(π) - π · sin(π) = -1 - 0 = -1.",
       "sentence": "Đạo hàm của hàm số y = x · cos x có giá trị tại x = π bằng: y'(π) = %%%SLOT_0%%%.",
       "words": [
@@ -6133,23 +6448,24 @@
       ],
       "slots": [
         "-1"
-      ]
+      ],
+      "correctText": "(1) -1"
     },
     {
       "type": "match",
       "q": "Ghép mỗi hàm số ở Cột A với đạo hàm tương ứng ở Cột B:",
       "exp": "1 - A; 2 - B; 3 - C; 4 - D ((ln 2x)' = 2/(2x) = 1/x).",
       "colA": [
-        "1. y = x<sup>3</sup> - 4x",
-        "2. y = cos(2x)",
-        "3. y = e<sup>3x</sup>",
-        "4. y = ln(2x)"
+        "y = x<sup>3</sup> - 4x",
+        "y = cos(2x)",
+        "y = e<sup>3x</sup>",
+        "y = ln(2x)"
       ],
       "colB": [
-        "A. 3x<sup>2</sup> - 4",
-        "B. -2 · sin(2x)",
-        "C. 3 · e<sup>3x</sup>",
-        "D. 1/x"
+        "3x<sup>2</sup> - 4",
+        "-2 · sin(2x)",
+        "3 · e<sup>3x</sup>",
+        "1/x"
       ],
       "pairs": [
         {
@@ -6174,7 +6490,8 @@
         "1": 1,
         "2": 2,
         "3": 3
-      }
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "mcq",
@@ -6186,7 +6503,8 @@
         "4 giây",
         "3 giây"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 2 giây"
     },
     {
       "type": "mcq",
@@ -6198,7 +6516,8 @@
         "18°C/phút",
         "20°C/phút"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 24°C/phút"
     },
     {
       "type": "mcq",
@@ -6210,7 +6529,8 @@
         "10 triệu đồng/tấn",
         "0 triệu đồng/tấn"
       ],
-      "ans": 0
+      "ans": 0,
+      "correctText": "Phương án A: 20 triệu đồng/tấn"
     }
   ]
 }
