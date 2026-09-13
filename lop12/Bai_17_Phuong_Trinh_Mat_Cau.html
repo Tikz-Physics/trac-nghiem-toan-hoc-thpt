@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1084,7 +1126,7 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: I(1; -2; 3) và R = 5",
-    "exp": "• Đối chiếu phương trình chuẩn (x - a)² + (y - b)² + (z - c)² = R²:<br>a = 1, b = -2, c = 3 và R = √25 = 5.<br>⇒ Tâm <b>I(1; -2; 3)</b> và bán kính <b>R = 5</b>."
+    "exp": "• Đối chiếu phương trình chuẩn (x - a)² + (y - b)² + (z - c)² = R²:<br>a = 1, b = -2, c = 3 và R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25</span></span> = 5.<br>⇒ Tâm <b>I(1; -2; 3)</b> và bán kính <b>R = 5</b>."
   },
   {
     "type": "mcq",
@@ -1097,7 +1139,7 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: x² + (y - 2)² + (z - 1)² = 6",
-    "exp": "• Tâm I là trung điểm AB: I = ((1-1)/2; (3+1)/2; (-1+3)/2) = (0; 2; 1).<br>• Bán kính: R = IA = √[(1 - 0)² + (3 - 2)² + (-1 - 1)²] = √[1 + 1 + 4] = √6.<br>• Phương trình mặt cầu: <b>x² + (y - 2)² + (z - 1)² = 6</b>."
+    "exp": "• Tâm I là trung điểm AB: I = ((1-1)/2; (3+1)/2; (-1+3)/2) = (0; 2; 1).<br>• Bán kính: R = IA = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(1 - 0)² + (3 - 2)² + (-1 - 1)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1 + 1 + 4</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>.<br>• Phương trình mặt cầu: <b>x² + (y - 2)² + (z - 1)² = 6</b>."
   },
   {
     "type": "tf",
@@ -1115,7 +1157,7 @@
       true
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-    "exp": "• <b>Ý a [Đúng]:</b> Tâm I(1; -2; 3).<br>• <b>Ý b [Đúng]:</b> R = √(1 + 4 + 9 - (-11)) = √25 = 5.<br>• <b>Ý c [Đúng]:</b> d(I, (P)) = |2(1) - 2(-2) + 3| / √(2² + (-2)² + 1²) = |2 + 4 + 3| / 3 = 9/3 = 3.<br>• <b>Ý d [Đúng]:</b> r = √(R² - d²) = √(5² - 3²) = 4."
+    "exp": "• <b>Ý a [Đúng]:</b> Tâm I(1; -2; 3).<br>• <b>Ý b [Đúng]:</b> R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1 + 4 + 9 - (-11)</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25</span></span> = 5.<br>• <b>Ý c [Đúng]:</b> d(I, (P)) = |2(1) - 2(-2) + 3| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + (-2)² + 1²</span></span> = |2 + 4 + 3| / 3 = 9/3 = 3.<br>• <b>Ý d [Đúng]:</b> r = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5² - 3²</span></span> = 4."
   },
   {
     "type": "match",
@@ -1148,7 +1190,7 @@
     "words": [
       "cắt",
       "đường tròn",
-      "√(R² - d²)",
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span>",
       "tiếp xúc",
       "đường elip",
       "R - d"
@@ -1159,8 +1201,8 @@
       2,
       3
     ],
-    "correctText": "(1) cắt • (2) đường tròn • (3) √(R² - d²) • (4) tiếp xúc",
-    "exp": "• <b>Vị trí tương đối mặt cầu và mặt phẳng:</b><br>- d < R: Cắt theo đường tròn bán kính r = √(R² - d²).<br>- d = R: Tiếp xúc tại một điểm.<br>- d > R: Không giao nhau."
+    "correctText": "(1) cắt • (2) đường tròn • (3) <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span> • (4) tiếp xúc",
+    "exp": "• <b>Vị trí tương đối mặt cầu và mặt phẳng:</b><br>- d < R: Cắt theo đường tròn bán kính r = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span>.<br>- d = R: Tiếp xúc tại một điểm.<br>- d > R: Không giao nhau."
   },
   {
     "type": "mcq",
@@ -1168,12 +1210,12 @@
     "opts": [
       "r = 4",
       "r = 2",
-      "r = √34",
+      "r = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">34</span></span>",
       "r = 3"
     ],
     "ans": 0,
     "correctText": "Phương án A: r = 4",
-    "exp": "• Theo định lý Pythagoras trong tam giác vuông tạo bởi tâm mặt cầu, tâm đường tròn giao tuyến và một điểm trên đường tròn:<br>r = √(R² - d²) = √(5² - 3²) = √(25 - 9) = √16 = <b>4</b>.",
+    "exp": "• Theo định lý Pythagoras trong tam giác vuông tạo bởi tâm mặt cầu, tâm đường tròn giao tuyến và một điểm trên đường tròn:<br>r = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5² - 3²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25 - 9</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">16</span></span> = <b>4</b>.",
     "svgGraph": "<svg viewBox=\"0 0 380 220\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"8\" y=\"8\" width=\"364\" height=\"204\" rx=\"10\" fill=\"rgba(15,23,42,0.95)\" stroke=\"#0ea5e9\" stroke-width=\"1.6\"/>\n  <!-- Sphere boundary -->\n  <circle cx=\"190\" cy=\"115\" r=\"70\" fill=\"rgba(56,189,248,0.12)\" stroke=\"#38bdf8\" stroke-width=\"1.8\"/>\n  <!-- Intersection circle (ellipse in perspective) -->\n  <ellipse cx=\"190\" cy=\"85\" rx=\"55\" ry=\"18\" fill=\"rgba(244,63,94,0.2)\" stroke=\"#f43f5e\" stroke-width=\"1.8\"/>\n  <!-- Center I -->\n  <circle cx=\"190\" cy=\"115\" r=\"3.5\" fill=\"#38bdf8\"/>\n  <text x=\"200\" y=\"125\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">I</text>\n  <!-- Distance d = 3 from I to slice plane -->\n  <line x1=\"190\" y1=\"115\" x2=\"190\" y2=\"85\" stroke=\"#fbbf24\" stroke-width=\"2\"/>\n  <text x=\"175\" y=\"102\" fill=\"#fbbf24\" font-size=\"12\" font-weight=\"800\">d = 3</text>\n  <!-- Sphere radius R = 5 -->\n  <line x1=\"190\" y1=\"115\" x2=\"245\" y2=\"85\" stroke=\"#34d399\" stroke-width=\"2\"/>\n  <text x=\"225\" y=\"110\" fill=\"#34d399\" font-size=\"12\" font-weight=\"800\">R = 5</text>\n  <!-- Slice radius r -->\n  <line x1=\"190\" y1=\"85\" x2=\"245\" y2=\"85\" stroke=\"#f43f5e\" stroke-width=\"2\"/>\n  <text x=\"218\" y=\"78\" fill=\"#f43f5e\" font-size=\"13\" font-weight=\"800\">r = ?</text>\n</svg>"
   },
   {
@@ -1205,7 +1247,7 @@
       true
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-    "exp": "• <b>Ý a [Đúng]:</b> Tâm H(0; 0; 0,1), R = 20 ⇒ x² + y² + (z - 0,1)² = 20² = 400.<br>• <b>Ý b [Đúng]:</b> Khoảng cách mặt biển d_ngang = √(12² + 16²) = √(144 + 256) = √400 = 20 km.<br>• <b>Ý c [Đúng]:</b> HA = √(12² + 16² + (-0,1)²) = √(400 + 0,01) ≈ 20,00025 km, xấp xỉ mép quét tín hiệu.<br>• <b>Ý d [Đúng]:</b> Chạy lại gần 5 km thì khoảng cách mặt ngang còn 15 km ⇒ khoảng cách thực tế √(15² + 0,1²) ≈ 15,0003 km < 16 km."
+    "exp": "• <b>Ý a [Đúng]:</b> Tâm H(0; 0; 0,1), R = 20 ⇒ x² + y² + (z - 0,1)² = 20² = 400.<br>• <b>Ý b [Đúng]:</b> Khoảng cách mặt biển d_ngang = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">12² + 16²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">144 + 256</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">400</span></span> = 20 km.<br>• <b>Ý c [Đúng]:</b> HA = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">12² + 16² + (-0,1)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">400 + 0,01</span></span> ≈ 20,00025 km, xấp xỉ mép quét tín hiệu.<br>• <b>Ý d [Đúng]:</b> Chạy lại gần 5 km thì khoảng cách mặt ngang còn 15 km ⇒ khoảng cách thực tế <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">15² + 0,1²</span></span> ≈ 15,0003 km < 16 km."
   },
   {
     "type": "mcq",
@@ -1218,7 +1260,7 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: 60 km",
-    "exp": "• Đường bay cắt mặt cầu quét của radar theo một dây cung AB.<br>• Nửa chiều dài dây cung: L/2 = √(R² - d²) = √(50² - 40²) = √(2500 - 1600) = √900 = 30 km.<br>• Tổng chiều dài đoạn bay bị radar phát hiện là L = 2 · 30 = <b>60 km</b>."
+    "exp": "• Đường bay cắt mặt cầu quét của radar theo một dây cung AB.<br>• Nửa chiều dài dây cung: L/2 = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">50² - 40²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2500 - 1600</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">900</span></span> = 30 km.<br>• Tổng chiều dài đoạn bay bị radar phát hiện là L = 2 · 30 = <b>60 km</b>."
   }
 ];
 

@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1079,7 +1121,7 @@
     "pairs": [
       {
         "a": "1. Dạng khai triển x² + y² - 2ax - 2by + c = 0",
-        "b": "A. Bán kính R = √(a² + b² - c) (với a² + b² - c > 0)"
+        "b": "A. Bán kính R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b² - c</span></span> (với a² + b² - c > 0)"
       },
       {
         "a": "2. Tâm đường tròn dạng khai triển",
@@ -1108,7 +1150,7 @@
       "Điều kiện tiếp xúc đường thẳng Δ"
     ],
     "colB": [
-      "Bán kính R = √(a² + b² - c) (với a² + b² - c > 0)",
+      "Bán kính R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b² - c</span></span> (với a² + b² - c > 0)",
       "I(a; b)",
       "(x₀ - a)(x - a) + (y₀ - b)(y - b) = R²",
       "d(I, Δ) = R"
@@ -1127,7 +1169,7 @@
       {
         "text": "Bán kính của đường tròn là R = 5.",
         "ans": true,
-        "exp": "R = √(2² + (-3)² - (-12)) = √(4 + 9 + 12) = √25 = 5 (Đúng)."
+        "exp": "R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + (-3)² - (-12)</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4 + 9 + 12</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25</span></span> = 5 (Đúng)."
       },
       {
         "text": "Điểm O(0; 0) nằm bên trong đường tròn.",
@@ -1152,7 +1194,7 @@
       true,
       true
     ],
-    "exp": "• <b>Ý a) [Đúng]:</b> a = 2, b = -3 nên tâm I(2; -3) (Đúng).<br>• <b>Ý b) [Đúng]:</b> R = √(2² + (-3)² - (-12)) = √(4 + 9 + 12) = √25 = 5 (Đúng).<br>• <b>Ý c) [Đúng]:</b> 0² + 0² - 0 + 0 - 12 = -12 < 0 nên O nằm trong đường tròn (Đúng).<br>• <b>Ý d) [Đúng]:</b> 2² + 2² - 4(2) + 6(2) - 12 = 4 + 4 - 8 + 12 - 12 = 0 (Đúng).",
+    "exp": "• <b>Ý a) [Đúng]:</b> a = 2, b = -3 nên tâm I(2; -3) (Đúng).<br>• <b>Ý b) [Đúng]:</b> R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + (-3)² - (-12)</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4 + 9 + 12</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25</span></span> = 5 (Đúng).<br>• <b>Ý c) [Đúng]:</b> 0² + 0² - 0 + 0 - 12 = -12 < 0 nên O nằm trong đường tròn (Đúng).<br>• <b>Ý d) [Đúng]:</b> 2² + 2² - 4(2) + 6(2) - 12 = 4 + 4 - 8 + 12 - 12 = 0 (Đúng).",
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng"
   },
   {
@@ -1183,7 +1225,7 @@
       "(-3; 1)",
       "8π"
     ],
-    "exp": "• Tâm I(3; -1).<br>• R = √16 = 4.<br>• Diện tích S = πR² = 16π.",
+    "exp": "• Tâm I(3; -1).<br>• R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">16</span></span> = 4.<br>• Diện tích S = πR² = 16π.",
     "sentence": "• Toạ độ tâm I là %%%SLOT_1%%%.<br>• Bán kính R bằng %%%SLOT_2%%%.<br>• Diện tích hình tròn giới hạn bởi (C) là %%%SLOT_3%%%.",
     "words": [
       "(3; -1)",
@@ -1262,7 +1304,7 @@
       "Không đủ dữ liệu"
     ],
     "ans": 0,
-    "exp": "• Khoảng cách từ tàu đến tâm bão:<br>d = √((150 - 100)² + (190 - 150)²) = √(50² + 40²) = √(2500 + 1600) = √4100 ≈ 64,03 km.<br>• Vì 64,03 km < 80 km nên tàu nằm sâu trong vùng gió bão nguy hiểm.",
+    "exp": "• Khoảng cách từ tàu đến tâm bão:<br>d = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(150 - 100)² + (190 - 150)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">50² + 40²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2500 + 1600</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4100</span></span> ≈ 64,03 km.<br>• Vì 64,03 km < 80 km nên tàu nằm sâu trong vùng gió bão nguy hiểm.",
     "correctText": "Phương án A: Có nằm trong vùng nguy hiểm (khoảng cách đến tâm bão là khoảng 64 km < 80 km)"
   }
 ];

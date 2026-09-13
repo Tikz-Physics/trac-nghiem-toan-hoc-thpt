@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1115,39 +1157,39 @@
   },
   {
     "type": "mcq",
-    "q": "Tính thể tích V của khối chóp tứ giác đều S.ABCD có cạnh đáy bằng a và chiều cao h = a√3:",
-    "exp": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Diện tích đáy:</b> S = a<sup>2</sup>.<br><b>2. Thể tích:</b> V = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">3</span></span> · S · h = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">3</span></span> · a<sup>2</sup> · a√3 = <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">3</span></span>.",
+    "q": "Tính thể tích V của khối chóp tứ giác đều S.ABCD có cạnh đáy bằng a và chiều cao h = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>:",
+    "exp": "<b>ĐÁP ÁN ĐÚNG: A</b><br><br><b>1. Diện tích đáy:</b> S = a<sup>2</sup>.<br><b>2. Thể tích:</b> V = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">3</span></span> · S · h = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">3</span></span> · a<sup>2</sup> · a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> = <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></span><span class=\"denominator\">3</span></span>.",
     "opts": [
-      "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">3</span></span>",
-      "a<sup>3</sup>√3",
-      "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">6</span></span>",
-      "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">2</span></span>"
+      "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></span><span class=\"denominator\">3</span></span>",
+      "a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>",
+      "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></span><span class=\"denominator\">6</span></span>",
+      "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></span><span class=\"denominator\">2</span></span>"
     ],
     "ans": 0,
-    "correctText": "Phương án A: <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">3</span></span>"
+    "correctText": "Phương án A: <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></span><span class=\"denominator\">3</span></span>"
   },
   {
     "type": "mcq",
-    "q": "Cho hình lăng trụ đứng ABC.A'B'C' có đáy ABC là tam giác vuông tại A, AB = a, AC = a√3. Cạnh bên AA' = 2a. Thể tích khối lăng trụ đó là:",
-    "exp": "<b>ĐÁP ÁN ĐÚNG: A (a<sup>3</sup>√3)</b><br><br><b>1. Diện tích đáy:</b> S = (1/2) · AB · AC = (1/2) · a · a√3 = a<sup>2</sup>√3 / 2.<br><b>2. Thể tích lăng trụ:</b> V = S · h = (a<sup>2</sup>√3 / 2) · 2a = a<sup>3</sup>√3.",
+    "q": "Cho hình lăng trụ đứng ABC.A'B'C' có đáy ABC là tam giác vuông tại A, AB = a, AC = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>. Cạnh bên AA' = 2a. Thể tích khối lăng trụ đó là:",
+    "exp": "<b>ĐÁP ÁN ĐÚNG: A (a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>)</b><br><br><b>1. Diện tích đáy:</b> S = (1/2) · AB · AC = (1/2) · a · a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> = a<sup>2</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> / 2.<br><b>2. Thể tích lăng trụ:</b> V = S · h = (a<sup>2</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> / 2) · 2a = a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>.",
     "opts": [
-      "a<sup>3</sup>√3",
-      "2a<sup>3</sup>√3",
-      "a<sup>3</sup>√3 / 3",
+      "a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>",
+      "2a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>",
+      "a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> / 3",
       "a<sup>3</sup> / 2"
     ],
     "ans": 0,
-    "correctText": "Phương án A: a<sup>3</sup>√3"
+    "correctText": "Phương án A: a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
   },
   {
     "type": "mcq",
     "q": "Cho khối chóp S.ABC có đáy là tam giác đều cạnh a, SA ⊥ (ABC) và góc giữa SC và (ABC) bằng 60°. Thể tích khối chóp S.ABC là:",
-    "exp": "<b>ĐÁP ÁN ĐÚNG: A (a<sup>3</sup>/4)</b><br><br><b>1. Diện tích đáy:</b> S<sub>ABC</sub> = a<sup>2</sup>√3 / 4.<br><b>2. Góc:</b> Góc giữa SC và đáy là góc SCA = 60° ⇒ SA = AC · tan 60° = a√3.<br><b>3. Thể tích:</b> V = (1/3) · S · SA = (1/3) · (a<sup>2</sup>√3 / 4) · a√3 = 3a<sup>3</sup> / 12 = a<sup>3</sup> / 4.",
+    "exp": "<b>ĐÁP ÁN ĐÚNG: A (a<sup>3</sup>/4)</b><br><br><b>1. Diện tích đáy:</b> S<sub>ABC</sub> = a<sup>2</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> / 4.<br><b>2. Góc:</b> Góc giữa SC và đáy là góc SCA = 60° ⇒ SA = AC · tan 60° = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>.<br><b>3. Thể tích:</b> V = (1/3) · S · SA = (1/3) · (a<sup>2</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> / 4) · a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> = 3a<sup>3</sup> / 12 = a<sup>3</sup> / 4.",
     "opts": [
       "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup></span><span class=\"denominator\">4</span></span>",
-      "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">4</span></span>",
+      "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></span><span class=\"denominator\">4</span></span>",
       "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup></span><span class=\"denominator\">12</span></span>",
-      "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√3</span><span class=\"denominator\">12</span></span>"
+      "<span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></span><span class=\"denominator\">12</span></span>"
     ],
     "ans": 0,
     "correctText": "Phương án A: <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup></span><span class=\"denominator\">4</span></span>"
@@ -1155,8 +1197,8 @@
   {
     "type": "drag",
     "q": "Tính thể tích khối tứ diện đều có cạnh bằng a = 6 cm:",
-    "exp": "<b>ĐÁP ÁN ĐÚNG: 18</b><br><br>Công thức thể tích tứ diện đều cạnh a là: V = <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup>√2</span><span class=\"denominator\">12</span></span>.<br>Với a = 6: V = <span class=\"fraction\"><span class=\"numerator\">6<sup>3</sup> · √2</span><span class=\"denominator\">12</span></span> = <span class=\"fraction\"><span class=\"numerator\">216 · √2</span><span class=\"denominator\">12</span></span> = 18√2 cm<sup>3</sup>.",
-    "sentence": "Thể tích khối tứ diện là: V = %%%SLOT_0%%% · √2 cm<sup>3</sup>.",
+    "exp": "<b>ĐÁP ÁN ĐÚNG: 18</b><br><br>Công thức thể tích tứ diện đều cạnh a là: V = <span class=\"fraction\"><span class=\"numerator\">a<sup>3</sup><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span><span class=\"denominator\">12</span></span>.<br>Với a = 6: V = <span class=\"fraction\"><span class=\"numerator\">6<sup>3</sup> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span><span class=\"denominator\">12</span></span> = <span class=\"fraction\"><span class=\"numerator\">216 · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span><span class=\"denominator\">12</span></span> = 18<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> cm<sup>3</sup>.",
+    "sentence": "Thể tích khối tứ diện là: V = %%%SLOT_0%%% · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> cm<sup>3</sup>.",
     "words": [
       "18",
       "12",

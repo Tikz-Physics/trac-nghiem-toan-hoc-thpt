@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1064,14 +1106,14 @@
     "type": "mcq",
     "q": "Khoảng cách từ điểm M(x₀; y₀) đến đường thẳng Δ: ax + by + c = 0 được tính bởi công thức:",
     "opts": [
-      "d(M, Δ) = |ax₀ + by₀ + c| / √(a² + b²)",
-      "d(M, Δ) = (ax₀ + by₀ + c) / √(a² + b²)",
+      "d(M, Δ) = |ax₀ + by₀ + c| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b²</span></span>",
+      "d(M, Δ) = (ax₀ + by₀ + c) / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b²</span></span>",
       "d(M, Δ) = |ax₀ + by₀ + c| / (a² + b²)",
-      "d(M, Δ) = √(ax₀² + by₀²)"
+      "d(M, Δ) = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">ax₀² + by₀²</span></span>"
     ],
     "ans": 0,
-    "exp": "• Công thức khoảng cách từ điểm đến đường thẳng (SGK Toán 10): d(M, Δ) = |ax₀ + by₀ + c| / √(a² + b²).",
-    "correctText": "Phương án A: d(M, Δ) = |ax₀ + by₀ + c| / √(a² + b²)"
+    "exp": "• Công thức khoảng cách từ điểm đến đường thẳng (SGK Toán 10): d(M, Δ) = |ax₀ + by₀ + c| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b²</span></span>.",
+    "correctText": "Phương án A: d(M, Δ) = |ax₀ + by₀ + c| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b²</span></span>"
   },
   {
     "type": "match",
@@ -1127,7 +1169,7 @@
       {
         "text": "Khoảng cách từ gốc toạ độ O(0; 0) đến d₁ bằng 1.",
         "ans": true,
-        "exp": "d(O, d₁) = |5| / √(3² + 4²) = 5 / 5 = 1 (Đúng)."
+        "exp": "d(O, d₁) = |5| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 4²</span></span> = 5 / 5 = 1 (Đúng)."
       },
       {
         "text": "Khoảng cách giữa hai đường thẳng d₁ và d₂ bằng 4.",
@@ -1152,7 +1194,7 @@
       true,
       false
     ],
-    "exp": "• <b>Ý a) [Đúng]:</b> 3/3 = -4/(-4) = 1 ≠ 5/(-15) nên d₁ // d₂ (Đúng).<br>• <b>Ý b) [Đúng]:</b> d(O, d₁) = |5| / √(3² + 4²) = 5 / 5 = 1 (Đúng).<br>• <b>Ý c) [Đúng]:</b> Lấy M(0; 5/4) ∈ d₁. d(M, d₂) = |3(0) - 4(5/4) - 15| / 5 = |-5 - 15| / 5 = 20 / 5 = 4 (Đúng).<br>• <b>Ý d) [Sai]:</b> d(A, d₁) = |3 - 8 + 5|/5 = 0; d(A, d₂) = |-20|/5 = 4. Không cách đều (Sai).",
+    "exp": "• <b>Ý a) [Đúng]:</b> 3/3 = -4/(-4) = 1 ≠ 5/(-15) nên d₁ // d₂ (Đúng).<br>• <b>Ý b) [Đúng]:</b> d(O, d₁) = |5| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 4²</span></span> = 5 / 5 = 1 (Đúng).<br>• <b>Ý c) [Đúng]:</b> Lấy M(0; 5/4) ∈ d₁. d(M, d₂) = |3(0) - 4(5/4) - 15| / 5 = |-5 - 15| / 5 = 20 / 5 = 4 (Đúng).<br>• <b>Ý d) [Sai]:</b> d(A, d₁) = |3 - 8 + 5|/5 = 0; d(A, d₂) = |-20|/5 = 4. Không cách đều (Sai).",
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
   },
   {
@@ -1165,7 +1207,7 @@
       "1"
     ],
     "ans": 0,
-    "exp": "• d = |3(1) - 4(-2) + 4| / √(3² + (-4)²) = |3 + 8 + 4| / 5 = 15 / 5 = 3.",
+    "exp": "• d = |3(1) - 4(-2) + 4| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + (-4)²</span></span> = |3 + 8 + 4| / 5 = 15 / 5 = 3.",
     "correctText": "Phương án A: 3"
   },
   {
@@ -1201,7 +1243,7 @@
   },
   {
     "type": "mcq",
-    "q": "Góc giữa hai đường thẳng d₁: x + √3y + 1 = 0 và d₂: x - √3y + 2 = 0 là:",
+    "q": "Góc giữa hai đường thẳng d₁: x + <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>y + 1 = 0 và d₂: x - <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>y + 2 = 0 là:",
     "opts": [
       "60°",
       "30°",
@@ -1209,7 +1251,7 @@
       "45°"
     ],
     "ans": 0,
-    "exp": "• n₁ = (1; √3); n₂ = (1; -√3).<br>• cos φ = |1(1) + √3(-√3)| / [√(1+3) · √(1+3)] = |1 - 3| / (2 · 2) = 2 / 4 = 1/2 ⇒ φ = 60°.",
+    "exp": "• n₁ = (1; <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>); n₂ = (1; -<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>).<br>• cos φ = |1(1) + <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>(-<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>)| / [<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1+3</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1+3</span></span>] = |1 - 3| / (2 · 2) = 2 / 4 = 1/2 ⇒ φ = 60°.",
     "correctText": "Phương án A: 60°"
   },
   {
@@ -1236,7 +1278,7 @@
       "3 km"
     ],
     "ans": 0,
-    "exp": "• d = |3(4) + 4(5) - 7| / √(3² + 4²) = |12 + 20 - 7| / 5 = 25 / 5 = 5 km.",
+    "exp": "• d = |3(4) + 4(5) - 7| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 4²</span></span> = |12 + 20 - 7| / 5 = 25 / 5 = 5 km.",
     "correctText": "Phương án A: 5 km"
   },
   {
@@ -1249,7 +1291,7 @@
       "25 mét"
     ],
     "ans": 0,
-    "exp": "• d = |10 - (-90)| / √(4² + 3²) = 100 / 5 = 20 mét.",
+    "exp": "• d = |10 - (-90)| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4² + 3²</span></span> = 100 / 5 = 20 mét.",
     "correctText": "Phương án A: 20 mét"
   },
   {
@@ -1262,7 +1304,7 @@
       "7/2"
     ],
     "ans": 0,
-    "exp": "• Điểm đối xứng của S(2; 1) qua Ox là S'(2; -1).<br>• Đường thẳng S'R đi qua I: S'R⃗ = (4; 3) ⇒ PTTQ: 3(x - 2) - 4(y + 1) = 0 ⇔ 3x - 4y - 10 = 0.<br>• I thuộc Ox (y = 0) ⇒ 3x - 10 = 0 ⇒ x = 10/3.",
+    "exp": "• Điểm đối xứng của S(2; 1) qua Ox là S'(2; -1).<br>• Đường thẳng S'R đi qua I: <math><mover><mi>S'R</mi><mo>→</mo></mover></math> = (4; 3) ⇒ PTTQ: 3(x - 2) - 4(y + 1) = 0 ⇔ 3x - 4y - 10 = 0.<br>• I thuộc Ox (y = 0) ⇒ 3x - 10 = 0 ⇒ x = 10/3.",
     "correctText": "Phương án A: 10/3 (≈ 3,33)"
   }
 ];

@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1064,14 +1106,14 @@
     "type": "mcq",
     "q": "Trong thống kê ghép nhóm, độ lệch chuẩn s được tính từ phương sai s² theo công thức nào?",
     "opts": [
-      "s = √(s²)",
+      "s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span>",
       "s = (s²)²",
       "s = s² / n",
       "s = 2s²"
     ],
     "ans": 0,
-    "correctText": "Phương án A: s = √(s²)",
-    "exp": "• <b>Định nghĩa (SGK Toán 12):</b> Độ lệch chuẩn s là căn bậc hai số học của phương sai: s = √(s²). Độ lệch chuẩn có cùng đơn vị đo với đại lượng đang khảo sát."
+    "correctText": "Phương án A: s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span>",
+    "exp": "• <b>Định nghĩa (SGK Toán 12):</b> Độ lệch chuẩn s là căn bậc hai số học của phương sai: s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span>. Độ lệch chuẩn có cùng đơn vị đo với đại lượng đang khảo sát."
   },
   {
     "type": "mcq",
@@ -1088,7 +1130,7 @@
   },
   {
     "type": "mcq",
-    "q": "Cho bảng tần số ghép nhóm có số trung bình x̄ = 10 và tổng <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span>∑ nᵢcᵢ² = 116. Phương sai s² của mẫu số liệu ghép nhóm này bằng:",
+    "q": "Cho bảng tần số ghép nhóm có số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 10 và tổng <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span>∑ nᵢcᵢ² = 116. Phương sai s² của mẫu số liệu ghép nhóm này bằng:",
     "opts": [
       "s² = 16",
       "s² = 4",
@@ -1097,16 +1139,16 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: s² = 16",
-    "exp": "• Áp dụng công thức tính phương sai biến đổi:<br>s² = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span>∑ nᵢcᵢ² - (x̄)² = 116 - 10² = 116 - 100 = <b>16</b>.<br>(Khi đó độ lệch chuẩn là s = √16 = 4)."
+    "exp": "• Áp dụng công thức tính phương sai biến đổi:<br>s² = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span>∑ nᵢcᵢ² - (<math><mover><mi>x</mi><mo>¯</mo></mover></math>)² = 116 - 10² = 116 - 100 = <b>16</b>.<br>(Khi đó độ lệch chuẩn là s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">16</span></span> = 4)."
   },
   {
     "type": "tf",
     "q": "Khảo sát cự ly ném bóng xa (mét) của 30 học sinh được ghi nhận theo bảng sau:<br>[20; 30): 6 học sinh; [30; 40): 9 học sinh; [40; 50): 9 học sinh; [50; 60): 6 học sinh. Xét tính Đúng/Sai của từng nhận định sau:",
     "stmts": [
       "Giá trị đại diện của 4 nhóm lần lượt là 25; 35; 45; 55 (mét).",
-      "Cự ly ném bóng trung bình của 30 học sinh là x̄ = 40 mét.",
+      "Cự ly ném bóng trung bình của 30 học sinh là <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 40 mét.",
       "Phương sai của mẫu số liệu ghép nhóm là s² = 105.",
-      "Độ lệch chuẩn của cự ly ném bóng là s = √105 ≈ 10,25 mét."
+      "Độ lệch chuẩn của cự ly ném bóng là s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">105</span></span> ≈ 10,25 mét."
     ],
     "ans": [
       true,
@@ -1115,7 +1157,7 @@
       true
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-    "exp": "• <b>Ý a [Đúng]:</b> 25, 35, 45, 55 m.<br>• <b>Ý b [Đúng]:</b> x̄ = 1200 / 30 = 40 mét.<br>• <b>Ý c [Đúng]:</b> s² = 3150 / 30 = 105.<br>• <b>Ý d [Đúng]:</b> s = √105 ≈ 10,25 mét."
+    "exp": "• <b>Ý a [Đúng]:</b> 25, 35, 45, 55 m.<br>• <b>Ý b [Đúng]:</b> <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 1200 / 30 = 40 mét.<br>• <b>Ý c [Đúng]:</b> s² = 3150 / 30 = 105.<br>• <b>Ý d [Đúng]:</b> s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">105</span></span> ≈ 10,25 mét."
   },
   {
     "type": "match",
@@ -1146,23 +1188,23 @@
     "q": "Chọn công thức thích hợp điền vào chỗ trống để hoàn thiện định nghĩa phương sai mẫu số liệu ghép nhóm:",
     "text": "Phương sai s² của mẫu số liệu ghép nhóm n quan sát được tính theo công thức: s² = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span> ∑ nᵢ · [blank]² hoặc s² = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span> ∑ nᵢcᵢ² - [blank]². Đại lượng đo độ phân tán có cùng đơn vị đo với số liệu là [blank].",
     "words": [
-      "(cᵢ - x̄)",
-      "(x̄)",
+      "(cᵢ - <math><mover><mi>x</mi><mo>¯</mo></mover></math>)",
+      "(<math><mover><mi>x</mi><mo>¯</mo></mover></math>)",
       "độ lệch chuẩn s",
       "khoảng biến thiên",
-      "(cᵢ + x̄)"
+      "(cᵢ + <math><mover><mi>x</mi><mo>¯</mo></mover></math>)"
     ],
     "ans": [
       0,
       1,
       2
     ],
-    "correctText": "(1) (cᵢ - x̄) • (2) (x̄) • (3) độ lệch chuẩn s",
-    "exp": "• <b>Công thức phương sai (SGK Toán 12):</b> s² = (1/n)∑ nᵢ(cᵢ - x̄)² = (1/n)∑ nᵢcᵢ² - (x̄)². Căn bậc hai s = √(s²) là độ lệch chuẩn có cùng đơn vị với mẫu số liệu."
+    "correctText": "(1) (cᵢ - <math><mover><mi>x</mi><mo>¯</mo></mover></math>) • (2) (<math><mover><mi>x</mi><mo>¯</mo></mover></math>) • (3) độ lệch chuẩn s",
+    "exp": "• <b>Công thức phương sai (SGK Toán 12):</b> s² = (1/n)∑ nᵢ(cᵢ - <math><mover><mi>x</mi><mo>¯</mo></mover></math>)² = (1/n)∑ nᵢcᵢ² - (<math><mover><mi>x</mi><mo>¯</mo></mover></math>)². Căn bậc hai s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span> là độ lệch chuẩn có cùng đơn vị với mẫu số liệu."
   },
   {
     "type": "mcq",
-    "q": "Biểu đồ ghép nhóm hình bên có số trung bình x̄ = 15. Phương sai s² của mẫu số liệu ghép nhóm này xấp xỉ bằng:",
+    "q": "Biểu đồ ghép nhóm hình bên có số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 15. Phương sai s² của mẫu số liệu ghép nhóm này xấp xỉ bằng:",
     "opts": [
       "s² = 18,75",
       "s² = 25,00",
@@ -1171,12 +1213,12 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: s² = 18,75",
-    "exp": "• c₁ = 7,5; c₂ = 15; c₃ = 22,5; n = 30.<br>• x̄ = 15.<br>• s² = [5·(-7,5)² + 20·(0)² + 5·(7,5)²] / 30 = [2·5·56,25] / 30 = 562,5 / 30 = <b>18,75</b>.",
+    "exp": "• c₁ = 7,5; c₂ = 15; c₃ = 22,5; n = 30.<br>• <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 15.<br>• s² = [5·(-7,5)² + 20·(0)² + 5·(7,5)²] / 30 = [2·5·56,25] / 30 = 562,5 / 30 = <b>18,75</b>.",
     "svgGraph": "<svg viewBox=\"0 0 360 200\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"340\" height=\"180\" rx=\"8\" fill=\"rgba(15,23,42,0.9)\" stroke=\"#0ea5e9\" stroke-width=\"1.6\"/><line x1=\"50\" y1=\"150\" x2=\"320\" y2=\"150\" stroke=\"rgba(255,255,255,0.3)\" stroke-width=\"1.2\"/><rect x=\"70\" y=\"100\" width=\"55\" height=\"50\" fill=\"rgba(244,63,94,0.4)\" stroke=\"#f43f5e\"/><text x=\"97\" y=\"92\" fill=\"#f43f5e\" font-size=\"11\" text-anchor=\"middle\">5</text><rect x=\"140\" y=\"40\" width=\"65\" height=\"110\" fill=\"rgba(56,189,248,0.4)\" stroke=\"#38bdf8\"/><text x=\"172\" y=\"32\" fill=\"#38bdf8\" font-size=\"11\" text-anchor=\"middle\">20</text><rect x=\"220\" y=\"100\" width=\"55\" height=\"50\" fill=\"rgba(244,63,94,0.4)\" stroke=\"#f43f5e\"/><text x=\"247\" y=\"92\" fill=\"#f43f5e\" font-size=\"11\" text-anchor=\"middle\">5</text><text x=\"70\" y=\"165\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">5</text><text x=\"125\" y=\"165\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">10</text><text x=\"205\" y=\"165\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">20</text><text x=\"275\" y=\"165\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">25</text></svg>"
   },
   {
     "type": "mcq",
-    "q": "Năng suất thu hoạch của hai giống lúa A và B được khảo sát tại các vùng canh tác. Giống lúa A có năng suất trung bình x̄<sub style=\"font-size:0.8em\">A</sub> = 65 tạ/ha và độ lệch chuẩn s<sub style=\"font-size:0.8em\">A</sub> = 2,5 tạ/ha. Giống lúa B có x̄<sub style=\"font-size:0.8em\">B</sub> = 65 tạ/ha và s<sub style=\"font-size:0.8em\">B</sub> = 6,8 tạ/ha. Giống lúa nào có năng suất ổn định hơn?",
+    "q": "Năng suất thu hoạch của hai giống lúa A và B được khảo sát tại các vùng canh tác. Giống lúa A có năng suất trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math><sub style=\"font-size:0.8em\">A</sub> = 65 tạ/ha và độ lệch chuẩn s<sub style=\"font-size:0.8em\">A</sub> = 2,5 tạ/ha. Giống lúa B có <math><mover><mi>x</mi><mo>¯</mo></mover></math><sub style=\"font-size:0.8em\">B</sub> = 65 tạ/ha và s<sub style=\"font-size:0.8em\">B</sub> = 6,8 tạ/ha. Giống lúa nào có năng suất ổn định hơn?",
     "opts": [
       "Giống lúa A (vì độ lệch chuẩn nhỏ hơn)",
       "Giống lúa B (vì độ lệch chuẩn lớn hơn)",
@@ -1189,7 +1231,7 @@
   },
   {
     "type": "tf",
-    "q": "Một chuyên viên quản trị rủi ro theo dõi tỷ lệ sinh lời (%) hàng tháng của hai danh mục đầu tư Quỹ X và Quỹ Y trong 24 tháng qua. Kết quả tính toán thu được:<br>- Quỹ X: Tỷ suất sinh lời trung bình x̄<sub style=\"font-size:0.8em\">X</sub> = 12,5%, độ lệch chuẩn s<sub style=\"font-size:0.8em\">X</sub> = 2,1%.<br>- Quỹ Y: Tỷ suất sinh lời trung bình x̄<sub style=\"font-size:0.8em\">Y</sub> = 12,5%, độ lệch chuẩn s<sub style=\"font-size:0.8em\">Y</sub> = 7,4%.<br>Xét tính Đúng/Sai của từng nhận định sau:",
+    "q": "Một chuyên viên quản trị rủi ro theo dõi tỷ lệ sinh lời (%) hàng tháng của hai danh mục đầu tư Quỹ X và Quỹ Y trong 24 tháng qua. Kết quả tính toán thu được:<br>- Quỹ X: Tỷ suất sinh lời trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math><sub style=\"font-size:0.8em\">X</sub> = 12,5%, độ lệch chuẩn s<sub style=\"font-size:0.8em\">X</sub> = 2,1%.<br>- Quỹ Y: Tỷ suất sinh lời trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math><sub style=\"font-size:0.8em\">Y</sub> = 12,5%, độ lệch chuẩn s<sub style=\"font-size:0.8em\">Y</sub> = 7,4%.<br>Xét tính Đúng/Sai của từng nhận định sau:",
     "stmts": [
       "Mức sinh lời trung bình kỳ vọng của hai quỹ là hoàn toàn như nhau (đều đạt 12,5%/tháng).",
       "Mức độ rủi ro và biến động lợi nhuận của Quỹ Y cao hơn gấp 3 lần so với Quỹ X.",
@@ -1203,7 +1245,7 @@
       false
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-    "exp": "• <b>Ý a [Đúng]:</b> Cả 2 quỹ đều có x̄ = 12,5%.<br>• <b>Ý b [Đúng]:</b> s_Y / s_X = 7,4 / 2,1 ≈ 3,52 lần.<br>• <b>Ý c [Đúng]:</b> Quỹ X có độ lệch chuẩn nhỏ nên an toàn, ổn định.<br>• <b>Ý d [Sai]:</b> Phương sai s_X² = 2,1² = 4,41 nhỏ hơn nhiều so với s_Y² = 7,4² = 54,76."
+    "exp": "• <b>Ý a [Đúng]:</b> Cả 2 quỹ đều có <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 12,5%.<br>• <b>Ý b [Đúng]:</b> s_Y / s_X = 7,4 / 2,1 ≈ 3,52 lần.<br>• <b>Ý c [Đúng]:</b> Quỹ X có độ lệch chuẩn nhỏ nên an toàn, ổn định.<br>• <b>Ý d [Sai]:</b> Phương sai s_X² = 2,1² = 4,41 nhỏ hơn nhiều so với s_Y² = 7,4² = 54,76."
   },
   {
     "type": "mcq",

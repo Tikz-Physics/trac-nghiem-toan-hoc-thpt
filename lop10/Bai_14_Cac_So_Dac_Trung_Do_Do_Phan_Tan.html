@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1083,11 +1125,11 @@
       },
       {
         "a": "2. Phương sai s²",
-        "b": "B. s² = (1/n) · ∑ (x_i - x̄)²"
+        "b": "B. s² = (1/n) · ∑ (x_i - <math><mover><mi>x</mi><mo>¯</mo></mover></math>)²"
       },
       {
         "a": "3. Độ lệch chuẩn s",
-        "b": "C. s = √(s²)"
+        "b": "C. s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span>"
       },
       {
         "a": "4. Giá trị ngoại lệ (bất thường)",
@@ -1109,8 +1151,8 @@
     ],
     "colB": [
       "Δ_Q = Q₃ - Q₁",
-      "s² = (1/n) · ∑ (x_i - x̄)²",
-      "s = √(s²)",
+      "s² = (1/n) · ∑ (x_i - <math><mover><mi>x</mi><mo>¯</mo></mover></math>)²",
+      "s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span>",
       "Nhỏ hơn Q₁ - 1,5·Δ_Q hoặc lớn hơn Q₃ + 1,5·Δ_Q"
     ],
     "correctText": "1-A • 2-B • 3-C • 4-D"
@@ -1125,9 +1167,9 @@
         "exp": "R = 12 - 4 = 8 (Đúng)."
       },
       {
-        "text": "Số trung bình x̄ = 8.",
+        "text": "Số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 8.",
         "ans": true,
-        "exp": "x̄ = (4 + 6 + 8 + 10 + 12)/5 = 40 / 5 = 8 (Đúng)."
+        "exp": "<math><mover><mi>x</mi><mo>¯</mo></mover></math> = (4 + 6 + 8 + 10 + 12)/5 = 40 / 5 = 8 (Đúng)."
       },
       {
         "text": "Phương sai s² = 8.",
@@ -1137,12 +1179,12 @@
       {
         "text": "Độ lệch chuẩn s = 8.",
         "ans": false,
-        "exp": "Độ lệch chuẩn s = √8 = 2√2 ≈ 2,83 (Sai)."
+        "exp": "Độ lệch chuẩn s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">8</span></span> = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> ≈ 2,83 (Sai)."
       }
     ],
     "stmts": [
       "Khoảng biến thiên R = 8.",
-      "Số trung bình x̄ = 8.",
+      "Số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 8.",
       "Phương sai s² = 8.",
       "Độ lệch chuẩn s = 8."
     ],
@@ -1152,7 +1194,7 @@
       true,
       false
     ],
-    "exp": "• <b>Ý a) [Đúng]:</b> R = 12 - 4 = 8 (Đúng).<br>• <b>Ý b) [Đúng]:</b> x̄ = (4 + 6 + 8 + 10 + 12)/5 = 40 / 5 = 8 (Đúng).<br>• <b>Ý c) [Đúng]:</b> s² = [(-4)² + (-2)² + 0² + 2² + 4²] / 5 = [16 + 4 + 0 + 4 + 16]/5 = 40 / 5 = 8 (Đúng).<br>• <b>Ý d) [Sai]:</b> Độ lệch chuẩn s = √8 = 2√2 ≈ 2,83 (Sai).",
+    "exp": "• <b>Ý a) [Đúng]:</b> R = 12 - 4 = 8 (Đúng).<br>• <b>Ý b) [Đúng]:</b> <math><mover><mi>x</mi><mo>¯</mo></mover></math> = (4 + 6 + 8 + 10 + 12)/5 = 40 / 5 = 8 (Đúng).<br>• <b>Ý c) [Đúng]:</b> s² = [(-4)² + (-2)² + 0² + 2² + 4²] / 5 = [16 + 4 + 0 + 4 + 16]/5 = 40 / 5 = 8 (Đúng).<br>• <b>Ý d) [Sai]:</b> Độ lệch chuẩn s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">8</span></span> = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> ≈ 2,83 (Sai).",
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
   },
   {
@@ -1180,7 +1222,7 @@
       "Q₁",
       "Q₃",
       "Q₃ - Q₁",
-      "x̄",
+      "<math><mover><mi>x</mi><mo>¯</mo></mover></math>",
       "R"
     ],
     "exp": "• Rào dưới: Q₁ - 1,5·Δ_Q.<br>• Rào trên: Q₃ + 1,5·Δ_Q.<br>• Δ_Q = Q₃ - Q₁.",
@@ -1189,7 +1231,7 @@
       "Q₁",
       "Q₃",
       "Q₃ - Q₁",
-      "x̄",
+      "<math><mover><mi>x</mi><mo>¯</mo></mover></math>",
       "R"
     ],
     "ans": [
@@ -1209,7 +1251,7 @@
       "2"
     ],
     "ans": 0,
-    "exp": "• s = √16 = 4.",
+    "exp": "• s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">16</span></span> = 4.",
     "correctText": "Phương án A: 4"
   },
   {
@@ -1262,7 +1304,7 @@
       "2,5 gam"
     ],
     "ans": 0,
-    "exp": "• x̄ = 80; s² = 0,4 ⇒ s = √0,4 ≈ 0,63 gam.",
+    "exp": "• <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 80; s² = 0,4 ⇒ s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">0,4</span></span> ≈ 0,63 gam.",
     "correctText": "Phương án A: 0,63 gam"
   }
 ];

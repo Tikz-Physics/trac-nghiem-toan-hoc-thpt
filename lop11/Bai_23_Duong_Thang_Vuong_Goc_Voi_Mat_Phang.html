@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1141,16 +1183,16 @@
   },
   {
     "type": "mcq",
-    "q": "Cho hình chóp S.ABC có SA ⊥ (ABC), tam giác ABC vuông tại B. Cho SA = a, AB = a, BC = a√2. Tính khoảng cách từ A đến mặt phẳng (SBC) bằng độ dài đoạn AH vuông góc SB tại H:",
-    "exp": "<b>ĐÁP ÁN ĐÚNG: A (a√2 / 2)</b><br><br><b>1.</b> Do BC ⊥ (SAB) nên BC ⊥ AH. Lại có AH ⊥ SB ⇒ AH ⊥ (SBC).<br><b>2.</b> Tam giác SAB vuông cân tại A với SA = AB = a.<br><b>3.</b> Đường cao AH ứng với cạnh huyền SB = a√2 là AH = (SA · AB) / SB = a<sup>2</sup> / (a√2) = a√2 / 2.",
+    "q": "Cho hình chóp S.ABC có SA ⊥ (ABC), tam giác ABC vuông tại B. Cho SA = a, AB = a, BC = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>. Tính khoảng cách từ A đến mặt phẳng (SBC) bằng độ dài đoạn AH vuông góc SB tại H:",
+    "exp": "<b>ĐÁP ÁN ĐÚNG: A (a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> / 2)</b><br><br><b>1.</b> Do BC ⊥ (SAB) nên BC ⊥ AH. Lại có AH ⊥ SB ⇒ AH ⊥ (SBC).<br><b>2.</b> Tam giác SAB vuông cân tại A với SA = AB = a.<br><b>3.</b> Đường cao AH ứng với cạnh huyền SB = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> là AH = (SA · AB) / SB = a<sup>2</sup> / (a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>) = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> / 2.",
     "opts": [
-      "a√2 / 2",
+      "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> / 2",
       "a / 2",
-      "a√3 / 2",
+      "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> / 2",
       "a"
     ],
     "ans": 0,
-    "correctText": "Phương án A: a√2 / 2"
+    "correctText": "Phương án A: a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> / 2"
   },
   {
     "type": "drag",

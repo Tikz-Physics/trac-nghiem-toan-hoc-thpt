@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1371,7 +1413,7 @@
         {
           "text": "\"∃x ∈ ℤ: x² = 2\" là mệnh đề đúng.",
           "ans": false,
-          "exp": "x² = 2 có nghiệm x = ±√2 ∉ ℤ, không có nghiệm nguyên (Sai)."
+          "exp": "x² = 2 có nghiệm x = ±<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> ∉ ℤ, không có nghiệm nguyên (Sai)."
         },
         {
           "text": "Mệnh đề phủ định của \"∀x ∈ ℝ: x² - x + 1 > 0\" là \"∃x ∈ ℝ: x² - x + 1 ≤ 0\".",
@@ -1396,7 +1438,7 @@
         true,
         false
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> Vì x² ≥ 0 với mọi x ∈ ℝ nên x² + 1 ≥ 1 > 0 (Đúng).<br>• <b>Ý b) [Sai]:</b> x² = 2 có nghiệm x = ±√2 ∉ ℤ, không có nghiệm nguyên (Sai).<br>• <b>Ý c) [Đúng]:</b> Phủ định của ∀ là ∃, phủ định của > là ≤ (Đúng).<br>• <b>Ý d) [Sai]:</b> Δ = 16 - 16 = 0 nên phương trình có nghiệm kép x = 2 (Sai).",
+      "exp": "• <b>Ý a) [Đúng]:</b> Vì x² ≥ 0 với mọi x ∈ ℝ nên x² + 1 ≥ 1 > 0 (Đúng).<br>• <b>Ý b) [Sai]:</b> x² = 2 có nghiệm x = ±<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> ∉ ℤ, không có nghiệm nguyên (Sai).<br>• <b>Ý c) [Đúng]:</b> Phủ định của ∀ là ∃, phủ định của > là ≤ (Đúng).<br>• <b>Ý d) [Sai]:</b> Δ = 16 - 16 = 0 nên phương trình có nghiệm kép x = 2 (Sai).",
       "correctText": "a) Đúng • b) Sai • c) Đúng • d) Sai"
     },
     {
@@ -2245,31 +2287,31 @@
       "q": "Kéo các giá trị lượng giác chính xác vào chỗ trống:",
       "slots": [
         "-1/2",
-        "√2/2",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2",
         "1"
       ],
       "pool": [
         "-1/2",
-        "√2/2",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2",
         "1",
         "1/2",
-        "-√2/2"
+        "-<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2"
       ],
-      "exp": "• cos 120° = -cos 60° = -1/2.<br>• sin 135° = sin 45° = √2/2.<br>• cos 0° = 1.",
+      "exp": "• cos 120° = -cos 60° = -1/2.<br>• sin 135° = sin 45° = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2.<br>• cos 0° = 1.",
       "sentence": "• cos 120° = %%%SLOT_1%%%.<br>• sin 135° = %%%SLOT_2%%%.<br>• cos 0° = %%%SLOT_3%%%.",
       "words": [
         "-1/2",
-        "√2/2",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2",
         "1",
         "1/2",
-        "-√2/2"
+        "-<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2"
       ],
       "ans": [
         "-1/2",
-        "√2/2",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2",
         "1"
       ],
-      "correctText": "(1) -1/2 • (2) √2/2 • (3) 1"
+      "correctText": "(1) -1/2 • (2) <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2 • (3) 1"
     },
     {
       "type": "mcq",
@@ -2281,21 +2323,21 @@
         "2/5"
       ],
       "ans": 0,
-      "exp": "• Áp dụng sin² α + cos² α = 1 ⇒ sin² α = 1 - (-3/5)² = 1 - 9/25 = 16/25.<br>• Do 90° < α < 180° nên sin α > 0 ⇒ sin α = √(16/25) = 4/5.",
+      "exp": "• Áp dụng sin² α + cos² α = 1 ⇒ sin² α = 1 - (-3/5)² = 1 - 9/25 = 16/25.<br>• Do 90° < α < 180° nên sin α > 0 ⇒ sin α = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">16/25</span></span> = 4/5.",
       "correctText": "Phương án A: 4/5"
     },
     {
       "type": "mcq",
       "q": "Tính giá trị của tan 150°:",
       "opts": [
-        "-√3/3",
-        "√3/3",
-        "-√3",
-        "√3"
+        "-<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/3",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/3",
+        "-<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
       ],
       "ans": 0,
-      "exp": "• tan 150° = tan(180° - 30°) = -tan 30° = -1/√3 = -√3/3.",
-      "correctText": "Phương án A: -√3/3",
+      "exp": "• tan 150° = tan(180° - 30°) = -tan 30° = -1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> = -<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/3.",
+      "correctText": "Phương án A: -<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/3",
       "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <line x1=\"40\" y1=\"130\" x2=\"380\" y2=\"130\" stroke=\"#475569\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"210\" y1=\"210\" x2=\"210\" y2=\"25\" stroke=\"#475569\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"375\" y=\"122\" fill=\"#94a3b8\" font-size=\"13\">x</text>\n  <text x=\"220\" y=\"35\" fill=\"#94a3b8\" font-size=\"13\">y</text>\n  <text x=\"195\" y=\"145\" fill=\"#94a3b8\" font-size=\"12\">O</text>\n  \n  <path d=\"M 120 130 A 90 90 0 0 1 300 130\" fill=\"none\" stroke=\"#475569\" stroke-width=\"2\"/>\n  \n  <line x1=\"210\" y1=\"130\" x2=\"132\" y2=\"85\" stroke=\"#38bdf8\" stroke-width=\"2.5\"/>\n  <circle cx=\"132\" cy=\"85\" r=\"5\" fill=\"#f43f5e\"/>\n  <text x=\"115\" y=\"75\" fill=\"#f43f5e\" font-size=\"12\" font-weight=\"800\">M(x₀; y₀)</text>\n  \n  <path d=\"M 240 130 A 30 30 0 0 0 184 115\" fill=\"none\" stroke=\"#fbbf24\" stroke-width=\"2\"/>\n  <text x=\"215\" y=\"105\" fill=\"#fbbf24\" font-size=\"12\" font-weight=\"800\">150°</text>\n  \n  <line x1=\"132\" y1=\"85\" x2=\"132\" y2=\"130\" stroke=\"#34d399\" stroke-width=\"1.2\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"132\" y1=\"85\" x2=\"210\" y2=\"85\" stroke=\"#34d399\" stroke-width=\"1.2\" stroke-dasharray=\"3,3\"/>\n  <text x=\"220\" y=\"225\" fill=\"#fbbf24\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">Điểm M trên nửa đường tròn đơn vị ứng với góc 150°</text>\n\n</svg>"
     },
     {
@@ -2315,14 +2357,14 @@
       "type": "mcq",
       "q": "Một tấm pin năng lượng mặt trời lắp trên mái nhà nghiêng một góc 45° so với phương ngang. Vào buổi trưa, tia nắng mặt trời chiếu thẳng đứng. Nếu diện tích tấm pin là 2 m² thì diện tích bóng của tấm pin in trên mặt phẳng nằm ngang là:",
       "opts": [
-        "√2 m² (≈ 1,41 m²)",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> m² (≈ 1,41 m²)",
         "2 m²",
         "1 m²",
-        "2√2 m²"
+        "2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> m²"
       ],
       "ans": 0,
-      "exp": "• Công thức chiếu diện tích: S_bóng = S · cos α = 2 · cos 45° = 2 · (√2/2) = √2 m² ≈ 1,41 m².",
-      "correctText": "Phương án A: √2 m² (≈ 1,41 m²)"
+      "exp": "• Công thức chiếu diện tích: S_bóng = S · cos α = 2 · cos 45° = 2 · (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2) = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> m² ≈ 1,41 m².",
+      "correctText": "Phương án A: <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> m² (≈ 1,41 m²)"
     },
     {
       "type": "mcq",
@@ -2379,7 +2421,7 @@
         "3": "C",
         "4": "D"
       },
-      "exp": "• Các công thức diện tích tam giác: S = 1/2 a·h = 1/2 bc·sin A = abc/(4R) = p·r = √[p(p-a)(p-b)(p-c)].",
+      "exp": "• Các công thức diện tích tam giác: S = 1/2 a·h = 1/2 bc·sin A = abc/(4R) = p·r = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">p(p-a)(p-b)(p-c)</span></span>.",
       "colA": [
         "Theo cạnh đáy và đường cao tương ứng",
         "Theo hai cạnh và sin góc xen giữa",
@@ -2438,14 +2480,14 @@
       "type": "mcq",
       "q": "Cho tam giác ABC có b = 7, c = 5, góc A = 60°. Độ dài cạnh a là:",
       "opts": [
-        "√39",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">39</span></span>",
         "39",
-        "√49",
-        "√19"
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">49</span></span>",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">19</span></span>"
       ],
       "ans": 0,
-      "exp": "• Áp dụng định lí Cosin: a² = b² + c² - 2bc · cos A<br>a² = 7² + 5² - 2 · 7 · 5 · cos 60° = 49 + 25 - 70 · (1/2) = 74 - 35 = 39.<br>⇒ a = √39.",
-      "correctText": "Phương án A: √39"
+      "exp": "• Áp dụng định lí Cosin: a² = b² + c² - 2bc · cos A<br>a² = 7² + 5² - 2 · 7 · 5 · cos 60° = 49 + 25 - 70 · (1/2) = 74 - 35 = 39.<br>⇒ a = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">39</span></span>.",
+      "correctText": "Phương án A: <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">39</span></span>"
     },
     {
       "type": "drag",
@@ -2495,14 +2537,14 @@
       "type": "mcq",
       "q": "Tam giác ABC có 3 cạnh a = 4, b = 5, c = 7. Nửa chu vi p và diện tích S theo công thức Heron là:",
       "opts": [
-        "p = 8, S = 4√6",
-        "p = 16, S = 8√6",
+        "p = 8, S = 4<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>",
+        "p = 16, S = 8<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>",
         "p = 8, S = 12",
-        "p = 7, S = 4√5"
+        "p = 7, S = 4<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>"
       ],
       "ans": 0,
-      "exp": "• p = (4 + 5 + 7)/2 = 8.<br>• S = √[8 · (8 - 4) · (8 - 5) · (8 - 7)] = √[8 · 4 · 3 · 1] = √96 = 4√6.",
-      "correctText": "Phương án A: p = 8, S = 4√6",
+      "exp": "• p = (4 + 5 + 7)/2 = 8.<br>• S = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">8 · (8 - 4) · (8 - 5) · (8 - 7)</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">8 · 4 · 3 · 1</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">96</span></span> = 4<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>.",
+      "correctText": "Phương án A: p = 8, S = 4<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>",
       "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <polygon points=\"100,180 340,180 180,60\" fill=\"rgba(56,189,248,0.12)\" stroke=\"#38bdf8\" stroke-width=\"2.5\"/>\n  \n  <circle cx=\"180\" cy=\"60\" r=\"4.5\" fill=\"#fbbf24\"/><text x=\"180\" y=\"45\" fill=\"#fbbf24\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">A</text>\n  <circle cx=\"100\" cy=\"180\" r=\"4.5\" fill=\"#fbbf24\"/><text x=\"80\" y=\"195\" fill=\"#fbbf24\" font-size=\"15\" font-weight=\"800\">B</text>\n  <circle cx=\"340\" cy=\"180\" r=\"4.5\" fill=\"#fbbf24\"/><text x=\"355\" y=\"195\" fill=\"#fbbf24\" font-size=\"15\" font-weight=\"800\">C</text>\n  \n  <text x=\"220\" y=\"202\" fill=\"#34d399\" font-size=\"14\" font-weight=\"800\" text-anchor=\"middle\">a = BC = 4</text>\n  <text x=\"275\" y=\"115\" fill=\"#34d399\" font-size=\"14\" font-weight=\"800\">b = AC = 5</text>\n  <text x=\"120\" y=\"115\" fill=\"#34d399\" font-size=\"14\" font-weight=\"800\" text-anchor=\"end\">c = AB = 7</text>\n  \n  <text x=\"220\" y=\"228\" fill=\"#fbbf24\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">Tam giác ABC với độ dài 3 cạnh a = 4, b = 5, c = 7</text>\n\n</svg>"
     },
     {
@@ -2541,7 +2583,7 @@
         "18,5 km"
       ],
       "ans": 0,
-      "exp": "• Quãng đường người 1 đi: OA = 12 · 1,5 = 18 km.<br>• Quãng đường người 2 đi: OB = 16 · 1,5 = 24 km.<br>• Áp dụng định lí Cosin cho tam giác OAB: AB² = OA² + OB² - 2 · OA · OB · cos 60°<br>AB² = 18² + 24² - 2 · 18 · 24 · 0,5 = 324 + 576 - 432 = 468.<br>⇒ AB = √468 ≈ 21,63 km (khoảng 21,8 km).",
+      "exp": "• Quãng đường người 1 đi: OA = 12 · 1,5 = 18 km.<br>• Quãng đường người 2 đi: OB = 16 · 1,5 = 24 km.<br>• Áp dụng định lí Cosin cho tam giác OAB: AB² = OA² + OB² - 2 · OA · OB · cos 60°<br>AB² = 18² + 24² - 2 · 18 · 24 · 0,5 = 324 + 576 - 432 = 468.<br>⇒ AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">468</span></span> ≈ 21,63 km (khoảng 21,8 km).",
       "correctText": "Phương án A: 21,8 km"
     }
   ],
@@ -2576,7 +2618,7 @@
           "b": "C. Cùng hướng và có cùng độ dài"
         },
         {
-          "a": "4. Vectơ-không (kí hiệu 0⃗)",
+          "a": "4. Vectơ-không (kí hiệu <math><mover><mn>0</mn><mo>→</mo></mover></math>)",
           "b": "D. Có điểm đầu và điểm cuối trùng nhau, độ dài bằng 0"
         }
       ],
@@ -2591,7 +2633,7 @@
         "Giá của vectơ",
         "Hai vectơ cùng phương",
         "Hai vectơ bằng nhau",
-        "Vectơ-không (kí hiệu 0⃗)"
+        "Vectơ-không (kí hiệu <math><mover><mn>0</mn><mo>→</mo></mover></math>)"
       ],
       "colB": [
         "Đường thẳng đi qua điểm đầu và điểm cuối của vectơ",
@@ -2606,31 +2648,31 @@
       "q": "Cho hình bình hành ABCD tâm O. Xét tính đúng - sai:",
       "items": [
         {
-          "text": "Vectơ AB⃗ và DC⃗ là hai vectơ bằng nhau.",
+          "text": "Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>DC</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
           "ans": true,
-          "exp": "AB và DC song song, cùng chiều và AB = DC nên AB⃗ = DC⃗ (Đúng)."
+          "exp": "AB và DC song song, cùng chiều và AB = DC nên <math><mover><mi>AB</mi><mo>→</mo></mover></math> = <math><mover><mi>DC</mi><mo>→</mo></mover></math> (Đúng)."
         },
         {
-          "text": "Vectơ AD⃗ và CB⃗ là hai vectơ bằng nhau.",
+          "text": "Vectơ <math><mover><mi>AD</mi><mo>→</mo></mover></math> và <math><mover><mi>CB</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
           "ans": false,
-          "exp": "AD và CB có hướng ngược nhau nên AD⃗ = -CB⃗ = BC⃗ (Sai)."
+          "exp": "AD và CB có hướng ngược nhau nên <math><mover><mi>AD</mi><mo>→</mo></mover></math> = -<math><mover><mi>CB</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math> (Sai)."
         },
         {
-          "text": "Vectơ AO⃗ và OC⃗ là hai vectơ bằng nhau.",
+          "text": "Vectơ <math><mover><mi>AO</mi><mo>→</mo></mover></math> và <math><mover><mi>OC</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
           "ans": true,
-          "exp": "O là trung điểm AC nên AO = OC và cùng hướng A → C, tức AO⃗ = OC⃗ (Đúng)."
+          "exp": "O là trung điểm AC nên AO = OC và cùng hướng A → C, tức <math><mover><mi>AO</mi><mo>→</mo></mover></math> = <math><mover><mi>OC</mi><mo>→</mo></mover></math> (Đúng)."
         },
         {
-          "text": "Độ dài |AC⃗| bằng độ dài |BD⃗|.",
+          "text": "Độ dài |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| bằng độ dài |<math><mover><mi>BD</mi><mo>→</mo></mover></math>|.",
           "ans": false,
           "exp": "Trong hình bình hành nói chung, độ dài 2 đường chéo không bằng nhau (Sai)."
         }
       ],
       "stmts": [
-        "Vectơ AB⃗ và DC⃗ là hai vectơ bằng nhau.",
-        "Vectơ AD⃗ và CB⃗ là hai vectơ bằng nhau.",
-        "Vectơ AO⃗ và OC⃗ là hai vectơ bằng nhau.",
-        "Độ dài |AC⃗| bằng độ dài |BD⃗|."
+        "Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>DC</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
+        "Vectơ <math><mover><mi>AD</mi><mo>→</mo></mover></math> và <math><mover><mi>CB</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
+        "Vectơ <math><mover><mi>AO</mi><mo>→</mo></mover></math> và <math><mover><mi>OC</mi><mo>→</mo></mover></math> là hai vectơ bằng nhau.",
+        "Độ dài |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| bằng độ dài |<math><mover><mi>BD</mi><mo>→</mo></mover></math>|."
       ],
       "ans": [
         true,
@@ -2638,21 +2680,21 @@
         true,
         false
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> AB và DC song song, cùng chiều và AB = DC nên AB⃗ = DC⃗ (Đúng).<br>• <b>Ý b) [Sai]:</b> AD và CB có hướng ngược nhau nên AD⃗ = -CB⃗ = BC⃗ (Sai).<br>• <b>Ý c) [Đúng]:</b> O là trung điểm AC nên AO = OC và cùng hướng A → C, tức AO⃗ = OC⃗ (Đúng).<br>• <b>Ý d) [Sai]:</b> Trong hình bình hành nói chung, độ dài 2 đường chéo không bằng nhau (Sai).",
+      "exp": "• <b>Ý a) [Đúng]:</b> AB và DC song song, cùng chiều và AB = DC nên <math><mover><mi>AB</mi><mo>→</mo></mover></math> = <math><mover><mi>DC</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý b) [Sai]:</b> AD và CB có hướng ngược nhau nên <math><mover><mi>AD</mi><mo>→</mo></mover></math> = -<math><mover><mi>CB</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math> (Sai).<br>• <b>Ý c) [Đúng]:</b> O là trung điểm AC nên AO = OC và cùng hướng A → C, tức <math><mover><mi>AO</mi><mo>→</mo></mover></math> = <math><mover><mi>OC</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý d) [Sai]:</b> Trong hình bình hành nói chung, độ dài 2 đường chéo không bằng nhau (Sai).",
       "correctText": "a) Đúng • b) Sai • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
-      "q": "Cho hình vuông ABCD cạnh a. Độ dài của vectơ AC⃗ là:",
+      "q": "Cho hình vuông ABCD cạnh a. Độ dài của vectơ <math><mover><mi>AC</mi><mo>→</mo></mover></math> là:",
       "opts": [
-        "a√2",
+        "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>",
         "a",
         "2a",
-        "a√3"
+        "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
       ],
       "ans": 0,
-      "exp": "• Độ dài vectơ AC⃗ chính là độ dài đoạn thẳng AC.<br>• Trong hình vuông cạnh a, đường chéo AC = √(a² + a²) = a√2.",
-      "correctText": "Phương án A: a√2"
+      "exp": "• Độ dài vectơ <math><mover><mi>AC</mi><mo>→</mo></mover></math> chính là độ dài đoạn thẳng AC.<br>• Trong hình vuông cạnh a, đường chéo AC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + a²</span></span> = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
+      "correctText": "Phương án A: a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>"
     },
     {
       "type": "drag",
@@ -2669,7 +2711,7 @@
         "vuông góc",
         "không có hướng"
       ],
-      "exp": "• Hai vectơ cùng phương có thể cùng hướng hoặc ngược hướng.<br>• Vectơ 0⃗ quy ước cùng phương cùng hướng với mọi vectơ.",
+      "exp": "• Hai vectơ cùng phương có thể cùng hướng hoặc ngược hướng.<br>• Vectơ <math><mover><mn>0</mn><mo>→</mo></mover></math> quy ước cùng phương cùng hướng với mọi vectơ.",
       "sentence": "• Hai vectơ cùng phương thì hoặc %%%SLOT_1%%% hoặc %%%SLOT_2%%%.<br>• Vectơ-không được coi là cùng phương, cùng hướng với %%%SLOT_3%%%.",
       "words": [
         "cùng hướng",
@@ -2687,20 +2729,20 @@
     },
     {
       "type": "mcq",
-      "q": "Cho tam giác ABC đều cạnh 4 cm. Độ dài vectơ AB⃗ là:",
+      "q": "Cho tam giác ABC đều cạnh 4 cm. Độ dài vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> là:",
       "opts": [
         "4 cm",
         "2 cm",
-        "4√3 cm",
-        "2√3 cm"
+        "4<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> cm",
+        "2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> cm"
       ],
       "ans": 0,
-      "exp": "• |AB⃗| = AB = 4 cm.",
+      "exp": "• |<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = AB = 4 cm.",
       "correctText": "Phương án A: 4 cm"
     },
     {
       "type": "mcq",
-      "q": "Cho 3 điểm phân biệt A, B, C thẳng hàng. Điều kiện cần và đủ để hai vectơ AB⃗ và AC⃗ cùng hướng là:",
+      "q": "Cho 3 điểm phân biệt A, B, C thẳng hàng. Điều kiện cần và đủ để hai vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>AC</mi><mo>→</mo></mover></math> cùng hướng là:",
       "opts": [
         "Điểm A nằm ngoài đoạn thẳng BC và gần B hơn C (hoặc B nằm giữa A và C)",
         "Điểm A nằm giữa hai điểm B và C",
@@ -2708,13 +2750,13 @@
         "Điểm C là trung điểm của AB"
       ],
       "ans": 0,
-      "exp": "• AB⃗ và AC⃗ cùng hướng khi và chỉ khi hai tia AB và AC trùng nhau, tức A không nằm giữa B và C.",
+      "exp": "• <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>AC</mi><mo>→</mo></mover></math> cùng hướng khi và chỉ khi hai tia AB và AC trùng nhau, tức A không nằm giữa B và C.",
       "correctText": "Phương án A: Điểm A nằm ngoài đoạn thẳng BC và gần B hơn C (hoặc B nằm giữa A và C)",
       "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <line x1=\"40\" y1=\"120\" x2=\"400\" y2=\"120\" stroke=\"#475569\" stroke-width=\"2\"/>\n  \n  <circle cx=\"90\" cy=\"120\" r=\"5\" fill=\"#38bdf8\"/><text x=\"90\" y=\"150\" fill=\"#38bdf8\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">A</text>\n  <circle cx=\"210\" cy=\"120\" r=\"5\" fill=\"#fbbf24\"/><text x=\"210\" y=\"150\" fill=\"#fbbf24\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">B</text>\n  <circle cx=\"330\" cy=\"120\" r=\"5\" fill=\"#34d399\"/><text x=\"330\" y=\"150\" fill=\"#34d399\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">C</text>\n  \n  <line x1=\"90\" y1=\"90\" x2=\"204\" y2=\"90\" stroke=\"#fbbf24\" stroke-width=\"2.5\" marker-end=\"url(#arrAmber)\"/>\n  <text x=\"150\" y=\"80\" fill=\"#fbbf24\" font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">vectơ AB⃗</text>\n  \n  <line x1=\"90\" y1=\"55\" x2=\"324\" y2=\"55\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arrGreen)\"/>\n  <text x=\"210\" y=\"45\" fill=\"#34d399\" font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">vectơ AC⃗</text>\n  \n  <text x=\"220\" y=\"195\" fill=\"#e2e8f0\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\">Hai vectơ AB⃗ và AC⃗ cùng hướng khi nào?</text>\n\n</svg>"
     },
     {
       "type": "mcq",
-      "q": "Một máy bay chở khách đang bay theo hướng Tây sang Đông với vận tốc 700 km/h. Vectơ vận tốc v⃗ của máy bay được biểu diễn bằng một mũi tên:",
+      "q": "Một máy bay chở khách đang bay theo hướng Tây sang Đông với vận tốc 700 km/h. Vectơ vận tốc <math><mover><mi>v</mi><mo>→</mo></mover></math> của máy bay được biểu diễn bằng một mũi tên:",
       "opts": [
         "Nằm ngang, hướng từ trái sang phải, có độ dài biểu diễn 700 km/h",
         "Thẳng đứng hướng lên trên",
@@ -2727,7 +2769,7 @@
     },
     {
       "type": "mcq",
-      "q": "Một con thuyền chuyển động trên mặt hồ phẳng lặng với vận tốc không đổi v⃗ = 15 km/h theo hướng Đông Bắc (hợp với hướng Đông góc 45°). Phát biểu nào sau đây là đúng về vận tốc của thuyền?",
+      "q": "Một con thuyền chuyển động trên mặt hồ phẳng lặng với vận tốc không đổi <math><mover><mi>v</mi><mo>→</mo></mover></math> = 15 km/h theo hướng Đông Bắc (hợp với hướng Đông góc 45°). Phát biểu nào sau đây là đúng về vận tốc của thuyền?",
       "opts": [
         "Vận tốc là một đại lượng vectơ xác định bởi cả hướng di chuyển (Đông Bắc) và tốc độ (15 km/h)",
         "Vận tốc thuyền chỉ là con số 15 km/h không cần quan tâm đến hướng",
@@ -2740,16 +2782,16 @@
     },
     {
       "type": "mcq",
-      "q": "Một quả bóng bàn rơi tự do xuống đất rồi nảy ngược thẳng đứng lên trên với cùng độ lớn vận tốc 4 m/s. Gọi v₁⃗ là vectơ vận tốc ngay trước khi chạm đất và v₂⃗ là vectơ vận tốc ngay sau khi bật lên. Mối quan hệ giữa hai vectơ là:",
+      "q": "Một quả bóng bàn rơi tự do xuống đất rồi nảy ngược thẳng đứng lên trên với cùng độ lớn vận tốc 4 m/s. Gọi <math><mover><mi>v₁</mi><mo>→</mo></mover></math> là vectơ vận tốc ngay trước khi chạm đất và <math><mover><mi>v₂</mi><mo>→</mo></mover></math> là vectơ vận tốc ngay sau khi bật lên. Mối quan hệ giữa hai vectơ là:",
       "opts": [
-        "v₂⃗ = -v₁⃗ (hai vectơ đối nhau)",
-        "v₂⃗ = v₁⃗ (hai vectơ bằng nhau)",
-        "v₂⃗ = 2v₁⃗",
-        "v₂⃗ vuông góc với v₁⃗"
+        "<math><mover><mi>v₂</mi><mo>→</mo></mover></math> = -<math><mover><mi>v₁</mi><mo>→</mo></mover></math> (hai vectơ đối nhau)",
+        "<math><mover><mi>v₂</mi><mo>→</mo></mover></math> = <math><mover><mi>v₁</mi><mo>→</mo></mover></math> (hai vectơ bằng nhau)",
+        "<math><mover><mi>v₂</mi><mo>→</mo></mover></math> = 2<math><mover><mi>v₁</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>v₂</mi><mo>→</mo></mover></math> vuông góc với <math><mover><mi>v₁</mi><mo>→</mo></mover></math>"
       ],
       "ans": 0,
-      "exp": "• v₁⃗ hướng thẳng đứng xuống dưới, v₂⃗ hướng thẳng đứng lên trên.<br>• Cùng độ lớn 4 m/s và ngược hướng nên v₂⃗ = -v₁⃗ (hai vectơ đối nhau).",
-      "correctText": "Phương án A: v₂⃗ = -v₁⃗ (hai vectơ đối nhau)"
+      "exp": "• <math><mover><mi>v₁</mi><mo>→</mo></mover></math> hướng thẳng đứng xuống dưới, <math><mover><mi>v₂</mi><mo>→</mo></mover></math> hướng thẳng đứng lên trên.<br>• Cùng độ lớn 4 m/s và ngược hướng nên <math><mover><mi>v₂</mi><mo>→</mo></mover></math> = -<math><mover><mi>v₁</mi><mo>→</mo></mover></math> (hai vectơ đối nhau).",
+      "correctText": "Phương án A: <math><mover><mi>v₂</mi><mo>→</mo></mover></math> = -<math><mover><mi>v₁</mi><mo>→</mo></mover></math> (hai vectơ đối nhau)"
     }
   ],
   "8": [
@@ -2757,14 +2799,14 @@
       "type": "mcq",
       "q": "Quy tắc 3 điểm đối với phép cộng vectơ khẳng định rằng với 3 điểm A, B, C bất kì ta luôn có:",
       "opts": [
-        "AB⃗ + BC⃗ = AC⃗",
-        "AB⃗ + AC⃗ = BC⃗",
-        "AB⃗ - BC⃗ = AC⃗",
-        "AB⃗ + BC⃗ = CA⃗"
+        "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>BC</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>BC</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>BC</mi><mo>→</mo></mover></math> = <math><mover><mi>CA</mi><mo>→</mo></mover></math>"
       ],
       "ans": 0,
-      "exp": "• Quy tắc 3 điểm (nối đuôi): AB⃗ + BC⃗ = AC⃗.",
-      "correctText": "Phương án A: AB⃗ + BC⃗ = AC⃗"
+      "exp": "• Quy tắc 3 điểm (nối đuôi): <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>BC</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>.",
+      "correctText": "Phương án A: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>BC</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>"
     },
     {
       "type": "match",
@@ -2772,19 +2814,19 @@
       "pairs": [
         {
           "a": "1. Quy tắc hình bình hành ABCD",
-          "b": "A. AB⃗ + AD⃗ = AC⃗"
+          "b": "A. <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>"
         },
         {
           "a": "2. Quy tắc trừ (chung gốc)",
-          "b": "B. OB⃗ - OA⃗ = AB⃗"
+          "b": "B. <math><mover><mi>OB</mi><mo>→</mo></mover></math> - <math><mover><mi>OA</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math>"
         },
         {
           "a": "3. Tính chất trung điểm I của đoạn AB",
-          "b": "C. IA⃗ + IB⃗ = 0⃗"
+          "b": "C. <math><mover><mi>IA</mi><mo>→</mo></mover></math> + <math><mover><mi>IB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>"
         },
         {
           "a": "4. Tính chất trọng tâm G tam giác ABC",
-          "b": "D. GA⃗ + GB⃗ + GC⃗ = 0⃗"
+          "b": "D. <math><mover><mi>GA</mi><mo>→</mo></mover></math> + <math><mover><mi>GB</mi><mo>→</mo></mover></math> + <math><mover><mi>GC</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>"
         }
       ],
       "ans": {
@@ -2793,7 +2835,7 @@
         "3": "C",
         "4": "D"
       },
-      "exp": "• Hình bình hành: AB⃗ + AD⃗ = AC⃗.<br>• Phép trừ: OB⃗ - OA⃗ = AB⃗.<br>• Trung điểm: IA⃗ + IB⃗ = 0⃗.<br>• Trọng tâm: GA⃗ + GB⃗ + GC⃗ = 0⃗.",
+      "exp": "• Hình bình hành: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>.<br>• Phép trừ: <math><mover><mi>OB</mi><mo>→</mo></mover></math> - <math><mover><mi>OA</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math>.<br>• Trung điểm: <math><mover><mi>IA</mi><mo>→</mo></mover></math> + <math><mover><mi>IB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>.<br>• Trọng tâm: <math><mover><mi>GA</mi><mo>→</mo></mover></math> + <math><mover><mi>GB</mi><mo>→</mo></mover></math> + <math><mover><mi>GC</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>.",
       "colA": [
         "Quy tắc hình bình hành ABCD",
         "Quy tắc trừ (chung gốc)",
@@ -2801,10 +2843,10 @@
         "Tính chất trọng tâm G tam giác ABC"
       ],
       "colB": [
-        "AB⃗ + AD⃗ = AC⃗",
-        "OB⃗ - OA⃗ = AB⃗",
-        "IA⃗ + IB⃗ = 0⃗",
-        "GA⃗ + GB⃗ + GC⃗ = 0⃗"
+        "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>OB</mi><mo>→</mo></mover></math> - <math><mover><mi>OA</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>IA</mi><mo>→</mo></mover></math> + <math><mover><mi>IB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>",
+        "<math><mover><mi>GA</mi><mo>→</mo></mover></math> + <math><mover><mi>GB</mi><mo>→</mo></mover></math> + <math><mover><mi>GC</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>"
       ],
       "correctText": "1-A • 2-B • 3-C • 4-D"
     },
@@ -2813,31 +2855,31 @@
       "q": "Cho hình vuông ABCD cạnh a tâm O. Xét tính đúng - sai:",
       "items": [
         {
-          "text": "AB⃗ + AD⃗ = AC⃗.",
+          "text": "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>.",
           "ans": true,
-          "exp": "Theo quy tắc hình bình hành: AB⃗ + AD⃗ = AC⃗ (Đúng)."
+          "exp": "Theo quy tắc hình bình hành: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math> (Đúng)."
         },
         {
-          "text": "Độ dài |AB⃗ + AD⃗| = a√2.",
+          "text": "Độ dài |<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math>| = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
           "ans": true,
-          "exp": "|AB⃗ + AD⃗| = |AC⃗| = AC = a√2 (Đúng)."
+          "exp": "|<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math>| = |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| = AC = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> (Đúng)."
         },
         {
-          "text": "AB⃗ - AD⃗ = DB⃗.",
+          "text": "<math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>DB</mi><mo>→</mo></mover></math>.",
           "ans": true,
-          "exp": "AB⃗ - AD⃗ = DB⃗ (theo quy tắc trừ chung gốc A) (Đúng)."
+          "exp": "<math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>DB</mi><mo>→</mo></mover></math> (theo quy tắc trừ chung gốc A) (Đúng)."
         },
         {
-          "text": "OA⃗ + OB⃗ + OC⃗ + OD⃗ = a√2.",
+          "text": "<math><mover><mi>OA</mi><mo>→</mo></mover></math> + <math><mover><mi>OB</mi><mo>→</mo></mover></math> + <math><mover><mi>OC</mi><mo>→</mo></mover></math> + <math><mover><mi>OD</mi><mo>→</mo></mover></math> = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
           "ans": false,
-          "exp": "OA⃗ + OC⃗ = 0⃗ và OB⃗ + OD⃗ = 0⃗, tổng là 0⃗, độ dài bằng 0 (Sai)."
+          "exp": "<math><mover><mi>OA</mi><mo>→</mo></mover></math> + <math><mover><mi>OC</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math> và <math><mover><mi>OB</mi><mo>→</mo></mover></math> + <math><mover><mi>OD</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>, tổng là <math><mover><mn>0</mn><mo>→</mo></mover></math>, độ dài bằng 0 (Sai)."
         }
       ],
       "stmts": [
-        "AB⃗ + AD⃗ = AC⃗.",
-        "Độ dài |AB⃗ + AD⃗| = a√2.",
-        "AB⃗ - AD⃗ = DB⃗.",
-        "OA⃗ + OB⃗ + OC⃗ + OD⃗ = a√2."
+        "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>.",
+        "Độ dài |<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math>| = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
+        "<math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>DB</mi><mo>→</mo></mover></math>.",
+        "<math><mover><mi>OA</mi><mo>→</mo></mover></math> + <math><mover><mi>OB</mi><mo>→</mo></mover></math> + <math><mover><mi>OC</mi><mo>→</mo></mover></math> + <math><mover><mi>OD</mi><mo>→</mo></mover></math> = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>."
       ],
       "ans": [
         true,
@@ -2845,56 +2887,56 @@
         true,
         false
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> Theo quy tắc hình bình hành: AB⃗ + AD⃗ = AC⃗ (Đúng).<br>• <b>Ý b) [Đúng]:</b> |AB⃗ + AD⃗| = |AC⃗| = AC = a√2 (Đúng).<br>• <b>Ý c) [Đúng]:</b> AB⃗ - AD⃗ = DB⃗ (theo quy tắc trừ chung gốc A) (Đúng).<br>• <b>Ý d) [Sai]:</b> OA⃗ + OC⃗ = 0⃗ và OB⃗ + OD⃗ = 0⃗, tổng là 0⃗, độ dài bằng 0 (Sai).",
+      "exp": "• <b>Ý a) [Đúng]:</b> Theo quy tắc hình bình hành: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý b) [Đúng]:</b> |<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math>| = |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| = AC = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> (Đúng).<br>• <b>Ý c) [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>DB</mi><mo>→</mo></mover></math> (theo quy tắc trừ chung gốc A) (Đúng).<br>• <b>Ý d) [Sai]:</b> <math><mover><mi>OA</mi><mo>→</mo></mover></math> + <math><mover><mi>OC</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math> và <math><mover><mi>OB</mi><mo>→</mo></mover></math> + <math><mover><mi>OD</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>, tổng là <math><mover><mn>0</mn><mo>→</mo></mover></math>, độ dài bằng 0 (Sai).",
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
-      "q": "Cho tam giác ABC đều cạnh a. Độ dài của tổng vectơ |AB⃗ + AC⃗| bằng:",
+      "q": "Cho tam giác ABC đều cạnh a. Độ dài của tổng vectơ |<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math>| bằng:",
       "opts": [
-        "a√3",
+        "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>",
         "2a",
         "a",
-        "a√3/2"
+        "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2"
       ],
       "ans": 0,
-      "exp": "• Gọi M là trung điểm BC thì AB⃗ + AC⃗ = 2AM⃗.<br>• Trong tam giác đều cạnh a, đường cao AM = a√3/2.<br>• Độ dài: |AB⃗ + AC⃗| = 2 · (a√3/2) = a√3.",
-      "correctText": "Phương án A: a√3"
+      "exp": "• Gọi M là trung điểm BC thì <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math> = 2<math><mover><mi>AM</mi><mo>→</mo></mover></math>.<br>• Trong tam giác đều cạnh a, đường cao AM = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2.<br>• Độ dài: |<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math>| = 2 · (a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2) = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>.",
+      "correctText": "Phương án A: a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
     },
     {
       "type": "drag",
       "q": "Kéo các kết quả chính xác vào vị trí biểu thức:",
       "slots": [
-        "2MI⃗",
-        "3MG⃗",
-        "2a⃗"
+        "2<math><mover><mi>MI</mi><mo>→</mo></mover></math>",
+        "3<math><mover><mi>MG</mi><mo>→</mo></mover></math>",
+        "2<math><mover><mi>a</mi><mo>→</mo></mover></math>"
       ],
       "pool": [
-        "2MI⃗",
-        "3MG⃗",
-        "2a⃗",
-        "0⃗",
-        "MG⃗"
+        "2<math><mover><mi>MI</mi><mo>→</mo></mover></math>",
+        "3<math><mover><mi>MG</mi><mo>→</mo></mover></math>",
+        "2<math><mover><mi>a</mi><mo>→</mo></mover></math>",
+        "<math><mover><mn>0</mn><mo>→</mo></mover></math>",
+        "<math><mover><mi>MG</mi><mo>→</mo></mover></math>"
       ],
-      "exp": "• MA⃗ + MB⃗ = 2MI⃗.<br>• MA⃗ + MB⃗ + MC⃗ = 3MG⃗.<br>• a⃗ - (-a⃗) = a⃗ + a⃗ = 2a⃗.",
-      "sentence": "• Với điểm M bất kì và I là trung điểm AB: MA⃗ + MB⃗ = %%%SLOT_1%%%.<br>• Với điểm M bất kì và G là trọng tâm tam giác ABC: MA⃗ + MB⃗ + MC⃗ = %%%SLOT_2%%%.<br>• Hiệu hai vectơ đối nhau a⃗ - (-a⃗) = %%%SLOT_3%%%.",
+      "exp": "• <math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> = 2<math><mover><mi>MI</mi><mo>→</mo></mover></math>.<br>• <math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> + <math><mover><mi>MC</mi><mo>→</mo></mover></math> = 3<math><mover><mi>MG</mi><mo>→</mo></mover></math>.<br>• <math><mover><mi>a</mi><mo>→</mo></mover></math> - (-<math><mover><mi>a</mi><mo>→</mo></mover></math>) = <math><mover><mi>a</mi><mo>→</mo></mover></math> + <math><mover><mi>a</mi><mo>→</mo></mover></math> = 2<math><mover><mi>a</mi><mo>→</mo></mover></math>.",
+      "sentence": "• Với điểm M bất kì và I là trung điểm AB: <math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> = %%%SLOT_1%%%.<br>• Với điểm M bất kì và G là trọng tâm tam giác ABC: <math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> + <math><mover><mi>MC</mi><mo>→</mo></mover></math> = %%%SLOT_2%%%.<br>• Hiệu hai vectơ đối nhau <math><mover><mi>a</mi><mo>→</mo></mover></math> - (-<math><mover><mi>a</mi><mo>→</mo></mover></math>) = %%%SLOT_3%%%.",
       "words": [
-        "2MI⃗",
-        "3MG⃗",
-        "2a⃗",
-        "0⃗",
-        "MG⃗"
+        "2<math><mover><mi>MI</mi><mo>→</mo></mover></math>",
+        "3<math><mover><mi>MG</mi><mo>→</mo></mover></math>",
+        "2<math><mover><mi>a</mi><mo>→</mo></mover></math>",
+        "<math><mover><mn>0</mn><mo>→</mo></mover></math>",
+        "<math><mover><mi>MG</mi><mo>→</mo></mover></math>"
       ],
       "ans": [
-        "2MI⃗",
-        "3MG⃗",
-        "2a⃗"
+        "2<math><mover><mi>MI</mi><mo>→</mo></mover></math>",
+        "3<math><mover><mi>MG</mi><mo>→</mo></mover></math>",
+        "2<math><mover><mi>a</mi><mo>→</mo></mover></math>"
       ],
-      "correctText": "(1) 2MI⃗ • (2) 3MG⃗ • (3) 2a⃗"
+      "correctText": "(1) 2<math><mover><mi>MI</mi><mo>→</mo></mover></math> • (2) 3<math><mover><mi>MG</mi><mo>→</mo></mover></math> • (3) 2<math><mover><mi>a</mi><mo>→</mo></mover></math>"
     },
     {
       "type": "mcq",
-      "q": "Cho hình chữ nhật ABCD có AB = 3, BC = 4. Độ dài của vectơ AB⃗ + AD⃗ là:",
+      "q": "Cho hình chữ nhật ABCD có AB = 3, BC = 4. Độ dài của vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> là:",
       "opts": [
         "5",
         "7",
@@ -2902,12 +2944,12 @@
         "25"
       ],
       "ans": 0,
-      "exp": "• Theo quy tắc hình bình hành: AB⃗ + AD⃗ = AC⃗.<br>• Độ dài: AC = √(AB² + BC²) = √(3² + 4²) = 5.",
+      "exp": "• Theo quy tắc hình bình hành: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>.<br>• Độ dài: AC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">AB² + BC²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 4²</span></span> = 5.",
       "correctText": "Phương án A: 5"
     },
     {
       "type": "mcq",
-      "q": "Cho hai vectơ a⃗ và b⃗ vuông góc với nhau và có độ lớn |a⃗| = 6, |b⃗| = 8. Độ lớn của vectơ tổng |a⃗ + b⃗| là:",
+      "q": "Cho hai vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> và <math><mover><mi>b</mi><mo>→</mo></mover></math> vuông góc với nhau và có độ lớn |<math><mover><mi>a</mi><mo>→</mo></mover></math>| = 6, |<math><mover><mi>b</mi><mo>→</mo></mover></math>| = 8. Độ lớn của vectơ tổng |<math><mover><mi>a</mi><mo>→</mo></mover></math> + <math><mover><mi>b</mi><mo>→</mo></mover></math>| là:",
       "opts": [
         "10",
         "14",
@@ -2915,13 +2957,13 @@
         "48"
       ],
       "ans": 0,
-      "exp": "• Do a⃗ ⊥ b⃗ nên |a⃗ + b⃗|² = 6² + 8² = 100 ⇒ |a⃗ + b⃗| = 10.",
+      "exp": "• Do <math><mover><mi>a</mi><mo>→</mo></mover></math> ⊥ <math><mover><mi>b</mi><mo>→</mo></mover></math> nên |<math><mover><mi>a</mi><mo>→</mo></mover></math> + <math><mover><mi>b</mi><mo>→</mo></mover></math>|² = 6² + 8² = 100 ⇒ |<math><mover><mi>a</mi><mo>→</mo></mover></math> + <math><mover><mi>b</mi><mo>→</mo></mover></math>| = 10.",
       "correctText": "Phương án A: 10",
       "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <line x1=\"120\" y1=\"170\" x2=\"270\" y2=\"170\" stroke=\"#38bdf8\" stroke-width=\"2.5\" marker-end=\"url(#arrCyan)\"/>\n  <text x=\"195\" y=\"192\" fill=\"#38bdf8\" font-size=\"14\" font-weight=\"800\">a⃗ (|a⃗| = 6)</text>\n  \n  <line x1=\"120\" y1=\"170\" x2=\"120\" y2=\"50\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arrGreen)\"/>\n  <text x=\"65\" y=\"110\" fill=\"#34d399\" font-size=\"14\" font-weight=\"800\">b⃗ (|b⃗| = 8)</text>\n  \n  <rect x=\"120\" y=\"152\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"#fbbf24\" stroke-width=\"1.5\"/>\n  \n  <line x1=\"270\" y1=\"170\" x2=\"270\" y2=\"50\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"120\" y1=\"50\" x2=\"270\" y2=\"50\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"4,4\"/>\n  \n  <line x1=\"120\" y1=\"170\" x2=\"265\" y2=\"54\" stroke=\"#f43f5e\" stroke-width=\"3\" marker-end=\"url(#arrRose)\"/>\n  <text x=\"210\" y=\"95\" fill=\"#f43f5e\" font-size=\"14\" font-weight=\"800\">vectơ tổng a⃗ + b⃗</text>\n\n</svg>"
     },
     {
       "type": "mcq",
-      "q": "Hai lực F₁⃗ và F₂⃗ cùng tác dụng vào một chất điểm tại điểm O, có độ lớn |F₁⃗| = 40 N và |F₂⃗| = 30 N, hai lực hợp với nhau một góc 90°. Hợp lực F⃗ = F₁⃗ + F₂⃗ có độ lớn là:",
+      "q": "Hai lực <math><mover><mi>F₁</mi><mo>→</mo></mover></math> và <math><mover><mi>F₂</mi><mo>→</mo></mover></math> cùng tác dụng vào một chất điểm tại điểm O, có độ lớn |<math><mover><mi>F₁</mi><mo>→</mo></mover></math>| = 40 N và |<math><mover><mi>F₂</mi><mo>→</mo></mover></math>| = 30 N, hai lực hợp với nhau một góc 90°. Hợp lực <math><mover><mi>F</mi><mo>→</mo></mover></math> = <math><mover><mi>F₁</mi><mo>→</mo></mover></math> + <math><mover><mi>F₂</mi><mo>→</mo></mover></math> có độ lớn là:",
       "opts": [
         "50 N",
         "70 N",
@@ -2962,7 +3004,7 @@
   "9": [
     {
       "type": "mcq",
-      "q": "Cho số thực k và vectơ a⃗ ≠ 0⃗. Vectơ k·a⃗ cùng hướng với a⃗ khi và chỉ khi:",
+      "q": "Cho số thực k và vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> ≠ <math><mover><mn>0</mn><mo>→</mo></mover></math>. Vectơ k·<math><mover><mi>a</mi><mo>→</mo></mover></math> cùng hướng với <math><mover><mi>a</mi><mo>→</mo></mover></math> khi và chỉ khi:",
       "opts": [
         "k > 0",
         "k < 0",
@@ -2979,19 +3021,19 @@
       "pairs": [
         {
           "a": "1. Điểm M là trung điểm đoạn AB",
-          "b": "A. MA⃗ + MB⃗ = 0⃗ hay AM⃗ = (1/2)AB⃗"
+          "b": "A. <math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math> hay <math><mover><mi>AM</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math>"
         },
         {
           "a": "2. Điểm G là trọng tâm tam giác ABC",
-          "b": "B. AG⃗ = (2/3)AM⃗ (M là trung điểm BC)"
+          "b": "B. <math><mover><mi>AG</mi><mo>→</mo></mover></math> = (2/3)<math><mover><mi>AM</mi><mo>→</mo></mover></math> (M là trung điểm BC)"
         },
         {
           "a": "3. Điểm B nằm giữa A và C với AB = 2BC",
-          "b": "C. AB⃗ = 2BC⃗"
+          "b": "C. <math><mover><mi>AB</mi><mo>→</mo></mover></math> = 2<math><mover><mi>BC</mi><mo>→</mo></mover></math>"
         },
         {
           "a": "4. Hai vectơ cùng phương",
-          "b": "D. a⃗ = k·b⃗ (với b⃗ ≠ 0⃗)"
+          "b": "D. <math><mover><mi>a</mi><mo>→</mo></mover></math> = k·<math><mover><mi>b</mi><mo>→</mo></mover></math> (với <math><mover><mi>b</mi><mo>→</mo></mover></math> ≠ <math><mover><mn>0</mn><mo>→</mo></mover></math>)"
         }
       ],
       "ans": {
@@ -3000,7 +3042,7 @@
         "3": "C",
         "4": "D"
       },
-      "exp": "• Trung điểm: AM⃗ = 1/2 AB⃗.<br>• Trọng tâm: AG⃗ = 2/3 AM⃗.<br>• Tỉ lệ đoạn thẳng: AB⃗ = 2BC⃗.<br>• Cùng phương: a⃗ = k·b⃗.",
+      "exp": "• Trung điểm: <math><mover><mi>AM</mi><mo>→</mo></mover></math> = 1/2 <math><mover><mi>AB</mi><mo>→</mo></mover></math>.<br>• Trọng tâm: <math><mover><mi>AG</mi><mo>→</mo></mover></math> = 2/3 <math><mover><mi>AM</mi><mo>→</mo></mover></math>.<br>• Tỉ lệ đoạn thẳng: <math><mover><mi>AB</mi><mo>→</mo></mover></math> = 2<math><mover><mi>BC</mi><mo>→</mo></mover></math>.<br>• Cùng phương: <math><mover><mi>a</mi><mo>→</mo></mover></math> = k·<math><mover><mi>b</mi><mo>→</mo></mover></math>.",
       "colA": [
         "Điểm M là trung điểm đoạn AB",
         "Điểm G là trọng tâm tam giác ABC",
@@ -3008,10 +3050,10 @@
         "Hai vectơ cùng phương"
       ],
       "colB": [
-        "MA⃗ + MB⃗ = 0⃗ hay AM⃗ = (1/2)AB⃗",
-        "AG⃗ = (2/3)AM⃗ (M là trung điểm BC)",
-        "AB⃗ = 2BC⃗",
-        "a⃗ = k·b⃗ (với b⃗ ≠ 0⃗)"
+        "<math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math> hay <math><mover><mi>AM</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>AG</mi><mo>→</mo></mover></math> = (2/3)<math><mover><mi>AM</mi><mo>→</mo></mover></math> (M là trung điểm BC)",
+        "<math><mover><mi>AB</mi><mo>→</mo></mover></math> = 2<math><mover><mi>BC</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>a</mi><mo>→</mo></mover></math> = k·<math><mover><mi>b</mi><mo>→</mo></mover></math> (với <math><mover><mi>b</mi><mo>→</mo></mover></math> ≠ <math><mover><mn>0</mn><mo>→</mo></mover></math>)"
       ],
       "correctText": "1-A • 2-B • 3-C • 4-D"
     },
@@ -3020,31 +3062,31 @@
       "q": "Cho đoạn thẳng AB có độ dài 6 cm và I là trung điểm của AB. Xét tính đúng - sai:",
       "items": [
         {
-          "text": "AI⃗ = (1/2)AB⃗.",
+          "text": "<math><mover><mi>AI</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math>.",
           "ans": true,
-          "exp": "AI và AB cùng hướng, AI = 3 = (1/2)AB nên AI⃗ = (1/2)AB⃗ (Đúng)."
+          "exp": "AI và AB cùng hướng, AI = 3 = (1/2)AB nên <math><mover><mi>AI</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math> (Đúng)."
         },
         {
-          "text": "IB⃗ = -IA⃗.",
+          "text": "<math><mover><mi>IB</mi><mo>→</mo></mover></math> = -<math><mover><mi>IA</mi><mo>→</mo></mover></math>.",
           "ans": true,
-          "exp": "IB và IA đối nhau nên IB⃗ = -IA⃗ (Đúng)."
+          "exp": "IB và IA đối nhau nên <math><mover><mi>IB</mi><mo>→</mo></mover></math> = -<math><mover><mi>IA</mi><mo>→</mo></mover></math> (Đúng)."
         },
         {
-          "text": "Độ dài |2AB⃗| = 12 cm.",
+          "text": "Độ dài |2<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = 12 cm.",
           "ans": true,
-          "exp": "|2AB⃗| = 2 · 6 = 12 cm (Đúng)."
+          "exp": "|2<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = 2 · 6 = 12 cm (Đúng)."
         },
         {
-          "text": "Vectơ -3AI⃗ có độ dài bằng -9 cm.",
+          "text": "Vectơ -3<math><mover><mi>AI</mi><mo>→</mo></mover></math> có độ dài bằng -9 cm.",
           "ans": false,
-          "exp": "Độ dài vectơ luôn không âm: |-3AI⃗| = 3 · 3 = 9 cm (Sai)."
+          "exp": "Độ dài vectơ luôn không âm: |-3<math><mover><mi>AI</mi><mo>→</mo></mover></math>| = 3 · 3 = 9 cm (Sai)."
         }
       ],
       "stmts": [
-        "AI⃗ = (1/2)AB⃗.",
-        "IB⃗ = -IA⃗.",
-        "Độ dài |2AB⃗| = 12 cm.",
-        "Vectơ -3AI⃗ có độ dài bằng -9 cm."
+        "<math><mover><mi>AI</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math>.",
+        "<math><mover><mi>IB</mi><mo>→</mo></mover></math> = -<math><mover><mi>IA</mi><mo>→</mo></mover></math>.",
+        "Độ dài |2<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = 12 cm.",
+        "Vectơ -3<math><mover><mi>AI</mi><mo>→</mo></mover></math> có độ dài bằng -9 cm."
       ],
       "ans": [
         true,
@@ -3052,21 +3094,21 @@
         true,
         false
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> AI và AB cùng hướng, AI = 3 = (1/2)AB nên AI⃗ = (1/2)AB⃗ (Đúng).<br>• <b>Ý b) [Đúng]:</b> IB và IA đối nhau nên IB⃗ = -IA⃗ (Đúng).<br>• <b>Ý c) [Đúng]:</b> |2AB⃗| = 2 · 6 = 12 cm (Đúng).<br>• <b>Ý d) [Sai]:</b> Độ dài vectơ luôn không âm: |-3AI⃗| = 3 · 3 = 9 cm (Sai).",
+      "exp": "• <b>Ý a) [Đúng]:</b> AI và AB cùng hướng, AI = 3 = (1/2)AB nên <math><mover><mi>AI</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý b) [Đúng]:</b> IB và IA đối nhau nên <math><mover><mi>IB</mi><mo>→</mo></mover></math> = -<math><mover><mi>IA</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý c) [Đúng]:</b> |2<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = 2 · 6 = 12 cm (Đúng).<br>• <b>Ý d) [Sai]:</b> Độ dài vectơ luôn không âm: |-3<math><mover><mi>AI</mi><mo>→</mo></mover></math>| = 3 · 3 = 9 cm (Sai).",
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
-      "q": "Cho tam giác ABC có trọng tâm G và M là trung điểm BC. Biểu diễn vectơ AG⃗ theo hai vectơ AB⃗ và AC⃗ là:",
+      "q": "Cho tam giác ABC có trọng tâm G và M là trung điểm BC. Biểu diễn vectơ <math><mover><mi>AG</mi><mo>→</mo></mover></math> theo hai vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>AC</mi><mo>→</mo></mover></math> là:",
       "opts": [
-        "AG⃗ = (1/3)AB⃗ + (1/3)AC⃗",
-        "AG⃗ = (1/2)AB⃗ + (1/2)AC⃗",
-        "AG⃗ = (2/3)AB⃗ + (2/3)AC⃗",
-        "AG⃗ = AB⃗ + AC⃗"
+        "<math><mover><mi>AG</mi><mo>→</mo></mover></math> = (1/3)<math><mover><mi>AB</mi><mo>→</mo></mover></math> + (1/3)<math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>AG</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math> + (1/2)<math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>AG</mi><mo>→</mo></mover></math> = (2/3)<math><mover><mi>AB</mi><mo>→</mo></mover></math> + (2/3)<math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>AG</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math>"
       ],
       "ans": 0,
-      "exp": "• AM⃗ = (1/2)(AB⃗ + AC⃗) ⇒ AG⃗ = (2/3)AM⃗ = (1/3)AB⃗ + (1/3)AC⃗.",
-      "correctText": "Phương án A: AG⃗ = (1/3)AB⃗ + (1/3)AC⃗"
+      "exp": "• <math><mover><mi>AM</mi><mo>→</mo></mover></math> = (1/2)(<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math>) ⇒ <math><mover><mi>AG</mi><mo>→</mo></mover></math> = (2/3)<math><mover><mi>AM</mi><mo>→</mo></mover></math> = (1/3)<math><mover><mi>AB</mi><mo>→</mo></mover></math> + (1/3)<math><mover><mi>AC</mi><mo>→</mo></mover></math>.",
+      "correctText": "Phương án A: <math><mover><mi>AG</mi><mo>→</mo></mover></math> = (1/3)<math><mover><mi>AB</mi><mo>→</mo></mover></math> + (1/3)<math><mover><mi>AC</mi><mo>→</mo></mover></math>"
     },
     {
       "type": "drag",
@@ -3083,8 +3125,8 @@
         "4/3",
         "3"
       ],
-      "exp": "• AC = (3/4)AB ⇒ AC⃗ = (3/4)AB⃗.<br>• CA⃗ = -3CB⃗.<br>• OC⃗ = (1/4)OA⃗ + (3/4)OB⃗.",
-      "sentence": "• Cho điểm C thuộc đoạn AB sao cho AC = 3CB. Khi đó AC⃗ = %%%SLOT_1%%% AB⃗.<br>• Vectơ CA⃗ = %%%SLOT_2%%% CB⃗.<br>• Với điểm O bất kì: OC⃗ = %%%SLOT_3%%% OA⃗ + (3/4)OB⃗.",
+      "exp": "• AC = (3/4)AB ⇒ <math><mover><mi>AC</mi><mo>→</mo></mover></math> = (3/4)<math><mover><mi>AB</mi><mo>→</mo></mover></math>.<br>• <math><mover><mi>CA</mi><mo>→</mo></mover></math> = -3<math><mover><mi>CB</mi><mo>→</mo></mover></math>.<br>• <math><mover><mi>OC</mi><mo>→</mo></mover></math> = (1/4)<math><mover><mi>OA</mi><mo>→</mo></mover></math> + (3/4)<math><mover><mi>OB</mi><mo>→</mo></mover></math>.",
+      "sentence": "• Cho điểm C thuộc đoạn AB sao cho AC = 3CB. Khi đó <math><mover><mi>AC</mi><mo>→</mo></mover></math> = %%%SLOT_1%%% <math><mover><mi>AB</mi><mo>→</mo></mover></math>.<br>• Vectơ <math><mover><mi>CA</mi><mo>→</mo></mover></math> = %%%SLOT_2%%% <math><mover><mi>CB</mi><mo>→</mo></mover></math>.<br>• Với điểm O bất kì: <math><mover><mi>OC</mi><mo>→</mo></mover></math> = %%%SLOT_3%%% <math><mover><mi>OA</mi><mo>→</mo></mover></math> + (3/4)<math><mover><mi>OB</mi><mo>→</mo></mover></math>.",
       "words": [
         "3/4",
         "-3",
@@ -3101,7 +3143,7 @@
     },
     {
       "type": "mcq",
-      "q": "Cho tam giác ABC. Điểm N thỏa mãn NA⃗ + 2NB⃗ = 0⃗. Vị trí của điểm N là:",
+      "q": "Cho tam giác ABC. Điểm N thỏa mãn <math><mover><mi>NA</mi><mo>→</mo></mover></math> + 2<math><mover><mi>NB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>. Vị trí của điểm N là:",
       "opts": [
         "N nằm trên đoạn thẳng AB và NB = (1/2)NA",
         "N là trung điểm AB",
@@ -3109,12 +3151,12 @@
         "N trùng với điểm A"
       ],
       "ans": 0,
-      "exp": "• NA⃗ = -2NB⃗ ⇒ N nằm giữa A và B, NA = 2NB.",
+      "exp": "• <math><mover><mi>NA</mi><mo>→</mo></mover></math> = -2<math><mover><mi>NB</mi><mo>→</mo></mover></math> ⇒ N nằm giữa A và B, NA = 2NB.",
       "correctText": "Phương án A: N nằm trên đoạn thẳng AB và NB = (1/2)NA"
     },
     {
       "type": "mcq",
-      "q": "Cho hai vectơ a⃗ và b⃗ không cùng phương. Vectơ u⃗ = 2a⃗ - 3b⃗ và v⃗ = ka⃗ + 6b⃗ cùng phương khi giá trị k bằng:",
+      "q": "Cho hai vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> và <math><mover><mi>b</mi><mo>→</mo></mover></math> không cùng phương. Vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = 2<math><mover><mi>a</mi><mo>→</mo></mover></math> - 3<math><mover><mi>b</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> = k<math><mover><mi>a</mi><mo>→</mo></mover></math> + 6<math><mover><mi>b</mi><mo>→</mo></mover></math> cùng phương khi giá trị k bằng:",
       "opts": [
         "-4",
         "4",
@@ -3128,33 +3170,33 @@
     },
     {
       "type": "mcq",
-      "q": "Một hệ thống đòn bẩy có điểm tựa O nằm giữa hai đầu A và B. Một vật nặng treo ở A sinh lực F₁ = 60 N, một vật nặng treo ở B sinh lực F₂ = 20 N để đòn bẩy cân bằng. Mối quan hệ vectơ vị trí OA⃗ và OB⃗ là:",
+      "q": "Một hệ thống đòn bẩy có điểm tựa O nằm giữa hai đầu A và B. Một vật nặng treo ở A sinh lực F₁ = 60 N, một vật nặng treo ở B sinh lực F₂ = 20 N để đòn bẩy cân bằng. Mối quan hệ vectơ vị trí <math><mover><mi>OA</mi><mo>→</mo></mover></math> và <math><mover><mi>OB</mi><mo>→</mo></mover></math> là:",
       "opts": [
-        "OA⃗ = -(1/3)OB⃗",
-        "OA⃗ = -3OB⃗",
-        "OA⃗ = (1/3)OB⃗",
-        "OA⃗ = OB⃗"
+        "<math><mover><mi>OA</mi><mo>→</mo></mover></math> = -(1/3)<math><mover><mi>OB</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>OA</mi><mo>→</mo></mover></math> = -3<math><mover><mi>OB</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>OA</mi><mo>→</mo></mover></math> = (1/3)<math><mover><mi>OB</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>OA</mi><mo>→</mo></mover></math> = <math><mover><mi>OB</mi><mo>→</mo></mover></math>"
       ],
       "ans": 0,
-      "exp": "• F₁ · OA = F₂ · OB ⇒ 60 OA = 20 OB ⇒ OA = 1/3 OB.<br>• O nằm giữa nên ngược hướng ⇒ OA⃗ = -(1/3)OB⃗.",
-      "correctText": "Phương án A: OA⃗ = -(1/3)OB⃗"
+      "exp": "• F₁ · OA = F₂ · OB ⇒ 60 OA = 20 OB ⇒ OA = 1/3 OB.<br>• O nằm giữa nên ngược hướng ⇒ <math><mover><mi>OA</mi><mo>→</mo></mover></math> = -(1/3)<math><mover><mi>OB</mi><mo>→</mo></mover></math>.",
+      "correctText": "Phương án A: <math><mover><mi>OA</mi><mo>→</mo></mover></math> = -(1/3)<math><mover><mi>OB</mi><mo>→</mo></mover></math>"
     },
     {
       "type": "mcq",
-      "q": "Một vệ tinh viễn thông bay ở quỹ đạo địa tĩnh với bán kính r₂ = 42.164 km từ tâm Trái Đất, trong khi một vệ tinh tầm thấp bay ở bán kính r₁ = 7.000 km. Tỉ số bán kính vị trí vectơ r₂⃗ so với r₁⃗ khi hai vệ tinh nằm trên cùng một tia xuất phát từ tâm Trái Đất là:",
+      "q": "Một vệ tinh viễn thông bay ở quỹ đạo địa tĩnh với bán kính r₂ = 42.164 km từ tâm Trái Đất, trong khi một vệ tinh tầm thấp bay ở bán kính r₁ = 7.000 km. Tỉ số bán kính vị trí vectơ <math><mover><mi>r₂</mi><mo>→</mo></mover></math> so với <math><mover><mi>r₁</mi><mo>→</mo></mover></math> khi hai vệ tinh nằm trên cùng một tia xuất phát từ tâm Trái Đất là:",
       "opts": [
-        "r₂⃗ ≈ 6,02 · r₁⃗",
-        "r₂⃗ ≈ 0,16 · r₁⃗",
-        "r₂⃗ = -6,02 · r₁⃗",
-        "r₂⃗ = 12 · r₁⃗"
+        "<math><mover><mi>r₂</mi><mo>→</mo></mover></math> ≈ 6,02 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>r₂</mi><mo>→</mo></mover></math> ≈ 0,16 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>r₂</mi><mo>→</mo></mover></math> = -6,02 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>r₂</mi><mo>→</mo></mover></math> = 12 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>"
       ],
       "ans": 0,
-      "exp": "• r₂ / r₁ = 42.164 / 7.000 ≈ 6,02 ⇒ r₂⃗ ≈ 6,02 · r₁⃗.",
-      "correctText": "Phương án A: r₂⃗ ≈ 6,02 · r₁⃗"
+      "exp": "• r₂ / r₁ = 42.164 / 7.000 ≈ 6,02 ⇒ <math><mover><mi>r₂</mi><mo>→</mo></mover></math> ≈ 6,02 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>.",
+      "correctText": "Phương án A: <math><mover><mi>r₂</mi><mo>→</mo></mover></math> ≈ 6,02 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>"
     },
     {
       "type": "mcq",
-      "q": "Trọng tâm G của một con tàu chở hàng ba khoang A, B, C có khối lượng bằng nhau được mô tả bởi công thức vị trí đối với gốc toạ độ hải đăng O: OG⃗ = (1/3)(OA⃗ + OB⃗ + OC⃗). Nếu khoang A có toạ độ (10; 20), khoang B có (40; 50), khoang C có (70; 20) (đơn vị: mét). Toạ độ trọng tâm G là:",
+      "q": "Trọng tâm G của một con tàu chở hàng ba khoang A, B, C có khối lượng bằng nhau được mô tả bởi công thức vị trí đối với gốc toạ độ hải đăng O: <math><mover><mi>OG</mi><mo>→</mo></mover></math> = (1/3)(<math><mover><mi>OA</mi><mo>→</mo></mover></math> + <math><mover><mi>OB</mi><mo>→</mo></mover></math> + <math><mover><mi>OC</mi><mo>→</mo></mover></math>). Nếu khoang A có toạ độ (10; 20), khoang B có (40; 50), khoang C có (70; 20) (đơn vị: mét). Toạ độ trọng tâm G là:",
       "opts": [
         "(40; 30)",
         "(30; 40)",
@@ -3169,24 +3211,24 @@
   "10": [
     {
       "type": "mcq",
-      "q": "Trong mặt phẳng toạ độ Oxy, toạ độ của vectơ u⃗ = x·i⃗ + y·j⃗ (với i⃗, j⃗ là các vectơ đơn vị trên Ox, Oy) là:",
+      "q": "Trong mặt phẳng toạ độ Oxy, toạ độ của vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = x·<math><mover><mi>i</mi><mo>→</mo></mover></math> + y·<math><mover><mi>j</mi><mo>→</mo></mover></math> (với <math><mover><mi>i</mi><mo>→</mo></mover></math>, <math><mover><mi>j</mi><mo>→</mo></mover></math> là các vectơ đơn vị trên Ox, Oy) là:",
       "opts": [
-        "u⃗ = (x; y)",
-        "u⃗ = (y; x)",
-        "u⃗ = (x + y; 0)",
-        "u⃗ = (1; 1)"
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; y)",
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (y; x)",
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (x + y; 0)",
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 1)"
       ],
       "ans": 0,
-      "exp": "• Định nghĩa: u⃗ = x·i⃗ + y·j⃗ ⇔ u⃗ = (x; y).",
-      "correctText": "Phương án A: u⃗ = (x; y)"
+      "exp": "• Định nghĩa: <math><mover><mi>u</mi><mo>→</mo></mover></math> = x·<math><mover><mi>i</mi><mo>→</mo></mover></math> + y·<math><mover><mi>j</mi><mo>→</mo></mover></math> ⇔ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; y).",
+      "correctText": "Phương án A: <math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; y)"
     },
     {
       "type": "match",
       "q": "Ghép các công thức toạ độ vectơ và điểm (Cột A) với biểu thức tương ứng (Cột B):",
       "pairs": [
         {
-          "a": "1. Vectơ AB⃗ nối hai điểm A(x_A; y_A), B(x_B; y_B)",
-          "b": "A. AB⃗ = (x_B - x_A; y_B - y_A)"
+          "a": "1. Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> nối hai điểm A(x_A; y_A), B(x_B; y_B)",
+          "b": "A. <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (x_B - x_A; y_B - y_A)"
         },
         {
           "a": "2. Trung điểm I của đoạn thẳng AB",
@@ -3197,8 +3239,8 @@
           "b": "C. x_G = (x_A + x_B + x_C)/3; y_G = (y_A + y_B + y_C)/3"
         },
         {
-          "a": "4. Độ dài của vectơ u⃗ = (x; y)",
-          "b": "D. |u⃗| = √(x² + y²)"
+          "a": "4. Độ dài của vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; y)",
+          "b": "D. |<math><mover><mi>u</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² + y²</span></span>"
         }
       ],
       "ans": {
@@ -3209,16 +3251,16 @@
       },
       "exp": "• Toạ độ vectơ: cuối trừ đầu.<br>• Trung điểm: trung bình cộng 2 điểm.<br>• Trọng tâm: trung bình cộng 3 điểm.<br>• Độ dài: căn tổng bình phương.",
       "colA": [
-        "Vectơ AB⃗ nối hai điểm A(x_A; y_A), B(x_B; y_B)",
+        "Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> nối hai điểm A(x_A; y_A), B(x_B; y_B)",
         "Trung điểm I của đoạn thẳng AB",
         "Trọng tâm G của tam giác ABC",
-        "Độ dài của vectơ u⃗ = (x; y)"
+        "Độ dài của vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; y)"
       ],
       "colB": [
-        "AB⃗ = (x_B - x_A; y_B - y_A)",
+        "<math><mover><mi>AB</mi><mo>→</mo></mover></math> = (x_B - x_A; y_B - y_A)",
         "x_I = (x_A + x_B)/2; y_I = (y_A + y_B)/2",
         "x_G = (x_A + x_B + x_C)/3; y_G = (y_A + y_B + y_C)/3",
-        "|u⃗| = √(x² + y²)"
+        "|<math><mover><mi>u</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² + y²</span></span>"
       ],
       "correctText": "1-A • 2-B • 3-C • 4-D"
     },
@@ -3227,9 +3269,9 @@
       "q": "Cho hai điểm A(2; -3) và B(4; 1). Xét tính đúng - sai:",
       "items": [
         {
-          "text": "Vectơ AB⃗ có toạ độ là (2; 4).",
+          "text": "Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> có toạ độ là (2; 4).",
           "ans": true,
-          "exp": "AB⃗ = (4 - 2; 1 - (-3)) = (2; 4) (Đúng)."
+          "exp": "<math><mover><mi>AB</mi><mo>→</mo></mover></math> = (4 - 2; 1 - (-3)) = (2; 4) (Đúng)."
         },
         {
           "text": "Trung điểm I của đoạn AB có toạ độ là (3; -1).",
@@ -3237,21 +3279,21 @@
           "exp": "x_I = (2 + 4)/2 = 3; y_I = (-3 + 1)/2 = -1 (Đúng)."
         },
         {
-          "text": "Độ dài đoạn thẳng AB bằng 2√5.",
+          "text": "Độ dài đoạn thẳng AB bằng 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>.",
           "ans": true,
-          "exp": "AB = √(2² + 4²) = √20 = 2√5 (Đúng)."
+          "exp": "AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + 4²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">20</span></span> = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> (Đúng)."
         },
         {
-          "text": "Vectơ đối của AB⃗ là (-2; 4).",
+          "text": "Vectơ đối của <math><mover><mi>AB</mi><mo>→</mo></mover></math> là (-2; 4).",
           "ans": false,
-          "exp": "-AB⃗ = (-2; -4) (Sai)."
+          "exp": "-<math><mover><mi>AB</mi><mo>→</mo></mover></math> = (-2; -4) (Sai)."
         }
       ],
       "stmts": [
-        "Vectơ AB⃗ có toạ độ là (2; 4).",
+        "Vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> có toạ độ là (2; 4).",
         "Trung điểm I của đoạn AB có toạ độ là (3; -1).",
-        "Độ dài đoạn thẳng AB bằng 2√5.",
-        "Vectơ đối của AB⃗ là (-2; 4)."
+        "Độ dài đoạn thẳng AB bằng 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>.",
+        "Vectơ đối của <math><mover><mi>AB</mi><mo>→</mo></mover></math> là (-2; 4)."
       ],
       "ans": [
         true,
@@ -3259,12 +3301,12 @@
         true,
         false
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> AB⃗ = (4 - 2; 1 - (-3)) = (2; 4) (Đúng).<br>• <b>Ý b) [Đúng]:</b> x_I = (2 + 4)/2 = 3; y_I = (-3 + 1)/2 = -1 (Đúng).<br>• <b>Ý c) [Đúng]:</b> AB = √(2² + 4²) = √20 = 2√5 (Đúng).<br>• <b>Ý d) [Sai]:</b> -AB⃗ = (-2; -4) (Sai).",
+      "exp": "• <b>Ý a) [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (4 - 2; 1 - (-3)) = (2; 4) (Đúng).<br>• <b>Ý b) [Đúng]:</b> x_I = (2 + 4)/2 = 3; y_I = (-3 + 1)/2 = -1 (Đúng).<br>• <b>Ý c) [Đúng]:</b> AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + 4²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">20</span></span> = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> (Đúng).<br>• <b>Ý d) [Sai]:</b> -<math><mover><mi>AB</mi><mo>→</mo></mover></math> = (-2; -4) (Sai).",
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
-      "q": "Cho u⃗ = (2; -1) và v⃗ = (-3; 4). Toạ độ của vectơ tổng 2u⃗ + v⃗ là:",
+      "q": "Cho <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; -1) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (-3; 4). Toạ độ của vectơ tổng 2<math><mover><mi>u</mi><mo>→</mo></mover></math> + <math><mover><mi>v</mi><mo>→</mo></mover></math> là:",
       "opts": [
         "(1; 2)",
         "(-1; 2)",
@@ -3272,7 +3314,7 @@
         "(7; -2)"
       ],
       "ans": 0,
-      "exp": "• 2u⃗ = (4; -2) ⇒ 2u⃗ + v⃗ = (4 - 3; -2 + 4) = (1; 2).",
+      "exp": "• 2<math><mover><mi>u</mi><mo>→</mo></mover></math> = (4; -2) ⇒ 2<math><mover><mi>u</mi><mo>→</mo></mover></math> + <math><mover><mi>v</mi><mo>→</mo></mover></math> = (4 - 3; -2 + 4) = (1; 2).",
       "correctText": "Phương án A: (1; 2)"
     },
     {
@@ -3281,34 +3323,34 @@
       "slots": [
         "(1; 2)",
         "(3; -1)",
-        "√10"
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>"
       ],
       "pool": [
         "(1; 2)",
         "(3; -1)",
-        "√10",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>",
         "(3; 6)",
         "10"
       ],
-      "exp": "• G = ( (1-2+4)/3; (2+3+1)/3 ) = (1; 2).<br>• AC⃗ = (4-1; 1-2) = (3; -1).<br>• AC = √(3² + (-1)²) = √10.",
-      "sentence": "• Trọng tâm G có toạ độ là %%%SLOT_1%%%.<br>• Vectơ AC⃗ có toạ độ là %%%SLOT_2%%%.<br>• Độ dài cạnh AC là %%%SLOT_3%%%.",
+      "exp": "• G = ( (1-2+4)/3; (2+3+1)/3 ) = (1; 2).<br>• <math><mover><mi>AC</mi><mo>→</mo></mover></math> = (4-1; 1-2) = (3; -1).<br>• AC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + (-1)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>.",
+      "sentence": "• Trọng tâm G có toạ độ là %%%SLOT_1%%%.<br>• Vectơ <math><mover><mi>AC</mi><mo>→</mo></mover></math> có toạ độ là %%%SLOT_2%%%.<br>• Độ dài cạnh AC là %%%SLOT_3%%%.",
       "words": [
         "(1; 2)",
         "(3; -1)",
-        "√10",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>",
         "(3; 6)",
         "10"
       ],
       "ans": [
         "(1; 2)",
         "(3; -1)",
-        "√10"
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>"
       ],
-      "correctText": "(1) (1; 2) • (2) (3; -1) • (3) √10"
+      "correctText": "(1) (1; 2) • (2) (3; -1) • (3) <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>"
     },
     {
       "type": "mcq",
-      "q": "Cho u⃗ = (x; 2) và v⃗ = (6; -3). Hai vectơ u⃗ và v⃗ cùng phương khi x nhận giá trị:",
+      "q": "Cho <math><mover><mi>u</mi><mo>→</mo></mover></math> = (x; 2) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (6; -3). Hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> cùng phương khi x nhận giá trị:",
       "opts": [
         "-4",
         "4",
@@ -3329,7 +3371,7 @@
         "(7; 5)"
       ],
       "ans": 0,
-      "exp": "• AD⃗ = BC⃗ = (2; -5) ⇒ x_D + 1 = 2, y_D - 2 = -5 ⇒ D(1; -3).",
+      "exp": "• <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math> = (2; -5) ⇒ x_D + 1 = 2, y_D - 2 = -5 ⇒ D(1; -3).",
       "correctText": "Phương án A: (1; -3)",
       "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <line x1=\"40\" y1=\"140\" x2=\"400\" y2=\"140\" stroke=\"#475569\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"160\" y1=\"220\" x2=\"160\" y2=\"20\" stroke=\"#475569\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"395\" y=\"132\" fill=\"#94a3b8\" font-size=\"13\">x</text>\n  <text x=\"170\" y=\"30\" fill=\"#94a3b8\" font-size=\"13\">y</text>\n  \n  <polygon points=\"134,88 238,36 290,166 186,218\" fill=\"rgba(56,189,248,0.12)\" stroke=\"#38bdf8\" stroke-width=\"2.2\"/>\n  \n  <circle cx=\"134\" cy=\"88\" r=\"4.5\" fill=\"#38bdf8\"/><text x=\"120\" y=\"80\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">A(-1; 2)</text>\n  <circle cx=\"238\" cy=\"36\" r=\"4.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"35\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">B(3; 4)</text>\n  <circle cx=\"290\" cy=\"166\" r=\"4.5\" fill=\"#38bdf8\"/><text x=\"300\" y=\"170\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">C(5; -1)</text>\n  \n  <circle cx=\"186\" cy=\"218\" r=\"5\" fill=\"#f43f5e\"/>\n  <text x=\"198\" y=\"222\" fill=\"#f43f5e\" font-size=\"13\" font-weight=\"900\">D(x; y) = ?</text>\n\n</svg>"
     },
@@ -3343,7 +3385,7 @@
         "7 km"
       ],
       "ans": 0,
-      "exp": "• OA = √(6² + 8²) = 10 km.",
+      "exp": "• OA = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6² + 8²</span></span> = 10 km.",
       "correctText": "Phương án A: 10 km"
     },
     {
@@ -3356,7 +3398,7 @@
         "0,8 m/s"
       ],
       "ans": 0,
-      "exp": "• AB = √(3² + 4²) = 5 m.<br>• v = 5 m / 5 s = 1,0 m/s.",
+      "exp": "• AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 4²</span></span> = 5 m.<br>• v = 5 m / 5 s = 1,0 m/s.",
       "correctText": "Phương án A: 1,0 m/s"
     },
     {
@@ -3369,43 +3411,43 @@
         "D(6; 4)"
       ],
       "ans": 0,
-      "exp": "• AD⃗ = BC⃗ = (2; 4) ⇒ D(2 + 2; 1 + 4) = D(4; 5).",
+      "exp": "• <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math> = (2; 4) ⇒ D(2 + 2; 1 + 4) = D(4; 5).",
       "correctText": "Phương án A: D(4; 5)"
     }
   ],
   "11": [
     {
       "type": "mcq",
-      "q": "Tích vô hướng của hai vectơ a⃗ và b⃗ đều khác 0⃗ được tính bởi công thức:",
+      "q": "Tích vô hướng của hai vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> và <math><mover><mi>b</mi><mo>→</mo></mover></math> đều khác <math><mover><mn>0</mn><mo>→</mo></mover></math> được tính bởi công thức:",
       "opts": [
-        "a⃗ · b⃗ = |a⃗| · |b⃗| · cos(a⃗, b⃗)",
-        "a⃗ · b⃗ = |a⃗| · |b⃗| · sin(a⃗, b⃗)",
-        "a⃗ · b⃗ = |a⃗| · |b⃗|",
-        "a⃗ · b⃗ = |a⃗ + b⃗| · cos(a⃗, b⃗)"
+        "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math>| · |<math><mover><mi>b</mi><mo>→</mo></mover></math>| · cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>)",
+        "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math>| · |<math><mover><mi>b</mi><mo>→</mo></mover></math>| · sin(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>)",
+        "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math>| · |<math><mover><mi>b</mi><mo>→</mo></mover></math>|",
+        "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math> + <math><mover><mi>b</mi><mo>→</mo></mover></math>| · cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>)"
       ],
       "ans": 0,
-      "exp": "• Định nghĩa: a⃗ · b⃗ = |a⃗| · |b⃗| · cos(a⃗, b⃗).",
-      "correctText": "Phương án A: a⃗ · b⃗ = |a⃗| · |b⃗| · cos(a⃗, b⃗)"
+      "exp": "• Định nghĩa: <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math>| · |<math><mover><mi>b</mi><mo>→</mo></mover></math>| · cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>).",
+      "correctText": "Phương án A: <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math>| · |<math><mover><mi>b</mi><mo>→</mo></mover></math>| · cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>)"
     },
     {
       "type": "match",
       "q": "Ghép các tính chất của tích vô hướng (Cột A) với biểu thức tương ứng (Cột B):",
       "pairs": [
         {
-          "a": "1. Hai vectơ vuông góc a⃗ ⊥ b⃗",
-          "b": "A. a⃗ · b⃗ = 0"
+          "a": "1. Hai vectơ vuông góc <math><mover><mi>a</mi><mo>→</mo></mover></math> ⊥ <math><mover><mi>b</mi><mo>→</mo></mover></math>",
+          "b": "A. <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = 0"
         },
         {
-          "a": "2. Bình phương vô hướng a⃗²",
-          "b": "B. = |a⃗|² (bằng bình phương độ dài)"
+          "a": "2. Bình phương vô hướng <math><mover><mi>a</mi><mo>→</mo></mover></math>²",
+          "b": "B. = |<math><mover><mi>a</mi><mo>→</mo></mover></math>|² (bằng bình phương độ dài)"
         },
         {
-          "a": "3. Biểu thức toạ độ khi a⃗ = (x₁; y₁), b⃗ = (x₂; y₂)",
-          "b": "C. a⃗ · b⃗ = x₁x₂ + y₁y₂"
+          "a": "3. Biểu thức toạ độ khi <math><mover><mi>a</mi><mo>→</mo></mover></math> = (x₁; y₁), <math><mover><mi>b</mi><mo>→</mo></mover></math> = (x₂; y₂)",
+          "b": "C. <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = x₁x₂ + y₁y₂"
         },
         {
           "a": "4. Cosin của góc giữa hai vectơ",
-          "b": "D. cos(a⃗, b⃗) = (x₁x₂ + y₁y₂) / [√(x₁² + y₁²) · √(x₂² + y₂²)]"
+          "b": "D. cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>) = (x₁x₂ + y₁y₂) / [<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x₁² + y₁²</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x₂² + y₂²</span></span>]"
         }
       ],
       "ans": {
@@ -3416,49 +3458,49 @@
       },
       "exp": "• Vuông góc ⇔ tích vô hướng bằng 0.<br>• Bình phương vô hướng = bình phương độ dài.<br>• Toạ độ: x₁x₂ + y₁y₂.<br>• Cosin góc.",
       "colA": [
-        "Hai vectơ vuông góc a⃗ ⊥ b⃗",
-        "Bình phương vô hướng a⃗²",
-        "Biểu thức toạ độ khi a⃗ = (x₁; y₁), b⃗ = (x₂; y₂)",
+        "Hai vectơ vuông góc <math><mover><mi>a</mi><mo>→</mo></mover></math> ⊥ <math><mover><mi>b</mi><mo>→</mo></mover></math>",
+        "Bình phương vô hướng <math><mover><mi>a</mi><mo>→</mo></mover></math>²",
+        "Biểu thức toạ độ khi <math><mover><mi>a</mi><mo>→</mo></mover></math> = (x₁; y₁), <math><mover><mi>b</mi><mo>→</mo></mover></math> = (x₂; y₂)",
         "Cosin của góc giữa hai vectơ"
       ],
       "colB": [
-        "a⃗ · b⃗ = 0",
-        "= |a⃗|² (bằng bình phương độ dài)",
-        "a⃗ · b⃗ = x₁x₂ + y₁y₂",
-        "cos(a⃗, b⃗) = (x₁x₂ + y₁y₂) / [√(x₁² + y₁²) · √(x₂² + y₂²)]"
+        "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = 0",
+        "= |<math><mover><mi>a</mi><mo>→</mo></mover></math>|² (bằng bình phương độ dài)",
+        "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = x₁x₂ + y₁y₂",
+        "cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>) = (x₁x₂ + y₁y₂) / [<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x₁² + y₁²</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x₂² + y₂²</span></span>]"
       ],
       "correctText": "1-A • 2-B • 3-C • 4-D"
     },
     {
       "type": "tf",
-      "q": "Cho hai vectơ u⃗ = (1; 2) và v⃗ = (-2; 1). Xét tính đúng - sai:",
+      "q": "Cho hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 2) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (-2; 1). Xét tính đúng - sai:",
       "items": [
         {
-          "text": "Tích vô hướng u⃗ · v⃗ = 0.",
+          "text": "Tích vô hướng <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0.",
           "ans": true,
-          "exp": "u⃗ · v⃗ = 1(-2) + 2(1) = 0 (Đúng)."
+          "exp": "<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 1(-2) + 2(1) = 0 (Đúng)."
         },
         {
-          "text": "Hai vectơ u⃗ và v⃗ vuông góc với nhau.",
+          "text": "Hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> vuông góc với nhau.",
           "ans": true,
-          "exp": "u⃗ · v⃗ = 0 ⇒ u⃗ ⊥ v⃗ (Đúng)."
+          "exp": "<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0 ⇒ <math><mover><mi>u</mi><mo>→</mo></mover></math> ⊥ <math><mover><mi>v</mi><mo>→</mo></mover></math> (Đúng)."
         },
         {
-          "text": "Độ dài |u⃗| = |v⃗| = √5.",
+          "text": "Độ dài |<math><mover><mi>u</mi><mo>→</mo></mover></math>| = |<math><mover><mi>v</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>.",
           "ans": true,
-          "exp": "√(1² + 2²) = √5 (Đúng)."
+          "exp": "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1² + 2²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> (Đúng)."
         },
         {
-          "text": "Góc giữa u⃗ và v⃗ là 0°.",
+          "text": "Góc giữa <math><mover><mi>u</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> là 0°.",
           "ans": false,
           "exp": "Góc giữa chúng là 90° (Sai)."
         }
       ],
       "stmts": [
-        "Tích vô hướng u⃗ · v⃗ = 0.",
-        "Hai vectơ u⃗ và v⃗ vuông góc với nhau.",
-        "Độ dài |u⃗| = |v⃗| = √5.",
-        "Góc giữa u⃗ và v⃗ là 0°."
+        "Tích vô hướng <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0.",
+        "Hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> vuông góc với nhau.",
+        "Độ dài |<math><mover><mi>u</mi><mo>→</mo></mover></math>| = |<math><mover><mi>v</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>.",
+        "Góc giữa <math><mover><mi>u</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> là 0°."
       ],
       "ans": [
         true,
@@ -3466,25 +3508,25 @@
         true,
         false
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> u⃗ · v⃗ = 1(-2) + 2(1) = 0 (Đúng).<br>• <b>Ý b) [Đúng]:</b> u⃗ · v⃗ = 0 ⇒ u⃗ ⊥ v⃗ (Đúng).<br>• <b>Ý c) [Đúng]:</b> √(1² + 2²) = √5 (Đúng).<br>• <b>Ý d) [Sai]:</b> Góc giữa chúng là 90° (Sai).",
+      "exp": "• <b>Ý a) [Đúng]:</b> <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 1(-2) + 2(1) = 0 (Đúng).<br>• <b>Ý b) [Đúng]:</b> <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0 ⇒ <math><mover><mi>u</mi><mo>→</mo></mover></math> ⊥ <math><mover><mi>v</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý c) [Đúng]:</b> <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1² + 2²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> (Đúng).<br>• <b>Ý d) [Sai]:</b> Góc giữa chúng là 90° (Sai).",
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
-      "q": "Cho tam giác đều ABC cạnh a. Tích vô hướng AB⃗ · AC⃗ có giá trị là:",
+      "q": "Cho tam giác đều ABC cạnh a. Tích vô hướng <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math> có giá trị là:",
       "opts": [
         "a²/2",
         "a²",
-        "a²√3/2",
+        "a²<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2",
         "-a²/2"
       ],
       "ans": 0,
-      "exp": "• AB⃗ · AC⃗ = a · a · cos 60° = a²/2.",
+      "exp": "• <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math> = a · a · cos 60° = a²/2.",
       "correctText": "Phương án A: a²/2"
     },
     {
       "type": "drag",
-      "q": "Kéo các giá trị thích hợp vào chỗ trống cho hai vectơ a⃗ = (3; 4) và b⃗ = (4; -3):",
+      "q": "Kéo các giá trị thích hợp vào chỗ trống cho hai vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> = (3; 4) và <math><mover><mi>b</mi><mo>→</mo></mover></math> = (4; -3):",
       "slots": [
         "0",
         "90°",
@@ -3497,8 +3539,8 @@
         "24",
         "45°"
       ],
-      "exp": "• a⃗ · b⃗ = 3(4) + 4(-3) = 0.<br>• Góc = 90°.<br>• a⃗² = 3² + 4² = 25.",
-      "sentence": "• Tích vô hướng a⃗ · b⃗ = %%%SLOT_1%%%.<br>• Góc giữa hai vectơ là %%%SLOT_2%%%.<br>• Bình phương vô hướng a⃗² = %%%SLOT_3%%%.",
+      "exp": "• <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = 3(4) + 4(-3) = 0.<br>• Góc = 90°.<br>• <math><mover><mi>a</mi><mo>→</mo></mover></math>² = 3² + 4² = 25.",
+      "sentence": "• Tích vô hướng <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = %%%SLOT_1%%%.<br>• Góc giữa hai vectơ là %%%SLOT_2%%%.<br>• Bình phương vô hướng <math><mover><mi>a</mi><mo>→</mo></mover></math>² = %%%SLOT_3%%%.",
       "words": [
         "0",
         "90°",
@@ -3515,20 +3557,20 @@
     },
     {
       "type": "mcq",
-      "q": "Cho hai vectơ a⃗ = (2; 1) và b⃗ = (1; 3). Cosin của góc giữa hai vectơ là:",
+      "q": "Cho hai vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> = (2; 1) và <math><mover><mi>b</mi><mo>→</mo></mover></math> = (1; 3). Cosin của góc giữa hai vectơ là:",
       "opts": [
-        "1/√2 (tức góc 45°)",
-        "√3/2",
+        "1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> (tức góc 45°)",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2",
         "1/2",
         "0"
       ],
       "ans": 0,
-      "exp": "• a⃗ · b⃗ = 5; |a⃗| = √5; |b⃗| = √10 ⇒ cos = 5 / (√5√10) = 1/√2.",
-      "correctText": "Phương án A: 1/√2 (tức góc 45°)"
+      "exp": "• <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = 5; |<math><mover><mi>a</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>; |<math><mover><mi>b</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span> ⇒ cos = 5 / (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>) = 1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
+      "correctText": "Phương án A: 1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> (tức góc 45°)"
     },
     {
       "type": "mcq",
-      "q": "Tìm m để hai vectơ u⃗ = (m; 3) và v⃗ = (2; -4) vuông góc với nhau:",
+      "q": "Tìm m để hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (m; 3) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (2; -4) vuông góc với nhau:",
       "opts": [
         "m = 6",
         "m = -6",
@@ -3542,7 +3584,7 @@
     },
     {
       "type": "mcq",
-      "q": "Một công nhân tác dụng lực kéo F⃗ không đổi có độ lớn 120 N để kéo một thùng hàng di chuyển quãng đường s = 25 m trên sàn phẳng. Lực F⃗ hợp với hướng chuyển động góc 60°. Công cơ học thực hiện bởi lực kéo là:",
+      "q": "Một công nhân tác dụng lực kéo <math><mover><mi>F</mi><mo>→</mo></mover></math> không đổi có độ lớn 120 N để kéo một thùng hàng di chuyển quãng đường s = 25 m trên sàn phẳng. Lực <math><mover><mi>F</mi><mo>→</mo></mover></math> hợp với hướng chuyển động góc 60°. Công cơ học thực hiện bởi lực kéo là:",
       "opts": [
         "1.500 J",
         "3.000 J",
@@ -3555,7 +3597,7 @@
     },
     {
       "type": "mcq",
-      "q": "Một cần cẩu nâng một khối bê tông lên cao theo phương thẳng đứng với lực nâng F⃗ có độ lớn 8000 N, độ dời h = 10 m. Góc giữa lực nâng và hướng chuyển động là 0°. Công của lực nâng cần cẩu là:",
+      "q": "Một cần cẩu nâng một khối bê tông lên cao theo phương thẳng đứng với lực nâng <math><mover><mi>F</mi><mo>→</mo></mover></math> có độ lớn 8000 N, độ dời h = 10 m. Góc giữa lực nâng và hướng chuyển động là 0°. Công của lực nâng cần cẩu là:",
       "opts": [
         "80.000 J",
         "0 J",
@@ -3568,7 +3610,7 @@
     },
     {
       "type": "mcq",
-      "q": "Trong đồ họa máy tính 3D, kiểm tra xem bề mặt vật thể có quay về phía camera hay không bằng tích vô hướng giữa vectơ pháp tuyến mặt n⃗ và vectơ hướng nhìn v⃗. Nếu n⃗ = (0,6; 0,8) và v⃗ = (-0,8; 0,6) thì góc giữa hai vectơ là:",
+      "q": "Trong đồ họa máy tính 3D, kiểm tra xem bề mặt vật thể có quay về phía camera hay không bằng tích vô hướng giữa vectơ pháp tuyến mặt <math><mover><mi>n</mi><mo>→</mo></mover></math> và vectơ hướng nhìn <math><mover><mi>v</mi><mo>→</mo></mover></math>. Nếu <math><mover><mi>n</mi><mo>→</mo></mover></math> = (0,6; 0,8) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (-0,8; 0,6) thì góc giữa hai vectơ là:",
       "opts": [
         "90° (vuông góc, mặt phẳng nằm nghiêng tiếp tuyến góc nhìn)",
         "0°",
@@ -3576,7 +3618,7 @@
         "45°"
       ],
       "ans": 0,
-      "exp": "• n⃗ · v⃗ = 0,6(-0,8) + 0,8(0,6) = 0 ⇒ góc 90°.",
+      "exp": "• <math><mover><mi>n</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0,6(-0,8) + 0,8(0,6) = 0 ⇒ góc 90°.",
       "correctText": "Phương án A: 90° (vuông góc, mặt phẳng nằm nghiêng tiếp tuyến góc nhìn)"
     }
   ],
@@ -3806,7 +3848,7 @@
       "q": "Ghép các số đặc trưng đo xu thế trung tâm (Cột A) với ý nghĩa tương ứng (Cột B):",
       "pairs": [
         {
-          "a": "1. Số trung bình (x̄)",
+          "a": "1. Số trung bình (<math><mover><mi>x</mi><mo>¯</mo></mover></math>)",
           "b": "A. Đại diện cho giá trị trung bình cộng của cả mẫu"
         },
         {
@@ -3830,7 +3872,7 @@
       },
       "exp": "• Trung bình: nhạy cảm với ngoại lai.<br>• Trung vị: chống chịu tốt ngoại lai.<br>• Mốt: thị hiếu phổ biến nhất.<br>• Tứ phân vị: phân vị 25%, 50%, 75%.",
       "colA": [
-        "Số trung bình (x̄)",
+        "Số trung bình (<math><mover><mi>x</mi><mo>¯</mo></mover></math>)",
         "Trung vị (M_e hay Q₂)",
         "Mốt (M_o)",
         "Tứ phân vị (Q₁, Q₂, Q₃)"
@@ -3848,9 +3890,9 @@
       "q": "Cho mẫu số liệu điểm kiểm tra: 6, 7, 7, 8, 8, 8, 9, 10 (n = 8). Xét tính đúng - sai:",
       "items": [
         {
-          "text": "Số trung bình x̄ = 7,875.",
+          "text": "Số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 7,875.",
           "ans": true,
-          "exp": "Tổng = 63. x̄ = 63 / 8 = 7,875 (Đúng)."
+          "exp": "Tổng = 63. <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 63 / 8 = 7,875 (Đúng)."
         },
         {
           "text": "Mốt của mẫu số liệu là M_o = 8.",
@@ -3869,7 +3911,7 @@
         }
       ],
       "stmts": [
-        "Số trung bình x̄ = 7,875.",
+        "Số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 7,875.",
         "Mốt của mẫu số liệu là M_o = 8.",
         "Trung vị M_e = 8.",
         "Tứ phân vị thứ nhất Q₁ = 6,5."
@@ -3880,7 +3922,7 @@
         true,
         false
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> Tổng = 63. x̄ = 63 / 8 = 7,875 (Đúng).<br>• <b>Ý b) [Đúng]:</b> Điểm 8 xuất hiện 3 lần (nhiều nhất) (Đúng).<br>• <b>Ý c) [Đúng]:</b> M_e = (8 + 8)/2 = 8 (Đúng).<br>• <b>Ý d) [Sai]:</b> Nửa dưới {6, 7, 7, 8} có Q₁ = (7 + 7)/2 = 7 (Sai).",
+      "exp": "• <b>Ý a) [Đúng]:</b> Tổng = 63. <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 63 / 8 = 7,875 (Đúng).<br>• <b>Ý b) [Đúng]:</b> Điểm 8 xuất hiện 3 lần (nhiều nhất) (Đúng).<br>• <b>Ý c) [Đúng]:</b> M_e = (8 + 8)/2 = 8 (Đúng).<br>• <b>Ý d) [Sai]:</b> Nửa dưới {6, 7, 7, 8} có Q₁ = (7 + 7)/2 = 7 (Sai).",
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
@@ -3911,8 +3953,8 @@
         "10",
         "4"
       ],
-      "exp": "• x̄ = 30 / 5 = 6.<br>• M_e = 6.<br>• R = 10 - 2 = 8.",
-      "sentence": "• Số trung bình x̄ = %%%SLOT_1%%%.<br>• Trung vị M_e = %%%SLOT_2%%%.<br>• Khoảng biến thiên R = %%%SLOT_3%%%.",
+      "exp": "• <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 30 / 5 = 6.<br>• M_e = 6.<br>• R = 10 - 2 = 8.",
+      "sentence": "• Số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> = %%%SLOT_1%%%.<br>• Trung vị M_e = %%%SLOT_2%%%.<br>• Khoảng biến thiên R = %%%SLOT_3%%%.",
       "words": [
         "6",
         "6",
@@ -4018,11 +4060,11 @@
         },
         {
           "a": "2. Phương sai s²",
-          "b": "B. s² = (1/n) · ∑ (x_i - x̄)²"
+          "b": "B. s² = (1/n) · ∑ (x_i - <math><mover><mi>x</mi><mo>¯</mo></mover></math>)²"
         },
         {
           "a": "3. Độ lệch chuẩn s",
-          "b": "C. s = √(s²)"
+          "b": "C. s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span>"
         },
         {
           "a": "4. Giá trị ngoại lệ (bất thường)",
@@ -4044,8 +4086,8 @@
       ],
       "colB": [
         "Δ_Q = Q₃ - Q₁",
-        "s² = (1/n) · ∑ (x_i - x̄)²",
-        "s = √(s²)",
+        "s² = (1/n) · ∑ (x_i - <math><mover><mi>x</mi><mo>¯</mo></mover></math>)²",
+        "s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span>",
         "Nhỏ hơn Q₁ - 1,5·Δ_Q hoặc lớn hơn Q₃ + 1,5·Δ_Q"
       ],
       "correctText": "1-A • 2-B • 3-C • 4-D"
@@ -4060,9 +4102,9 @@
           "exp": "R = 12 - 4 = 8 (Đúng)."
         },
         {
-          "text": "Số trung bình x̄ = 8.",
+          "text": "Số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 8.",
           "ans": true,
-          "exp": "x̄ = (4 + 6 + 8 + 10 + 12)/5 = 40 / 5 = 8 (Đúng)."
+          "exp": "<math><mover><mi>x</mi><mo>¯</mo></mover></math> = (4 + 6 + 8 + 10 + 12)/5 = 40 / 5 = 8 (Đúng)."
         },
         {
           "text": "Phương sai s² = 8.",
@@ -4072,12 +4114,12 @@
         {
           "text": "Độ lệch chuẩn s = 8.",
           "ans": false,
-          "exp": "Độ lệch chuẩn s = √8 = 2√2 ≈ 2,83 (Sai)."
+          "exp": "Độ lệch chuẩn s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">8</span></span> = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> ≈ 2,83 (Sai)."
         }
       ],
       "stmts": [
         "Khoảng biến thiên R = 8.",
-        "Số trung bình x̄ = 8.",
+        "Số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 8.",
         "Phương sai s² = 8.",
         "Độ lệch chuẩn s = 8."
       ],
@@ -4087,7 +4129,7 @@
         true,
         false
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> R = 12 - 4 = 8 (Đúng).<br>• <b>Ý b) [Đúng]:</b> x̄ = (4 + 6 + 8 + 10 + 12)/5 = 40 / 5 = 8 (Đúng).<br>• <b>Ý c) [Đúng]:</b> s² = [(-4)² + (-2)² + 0² + 2² + 4²] / 5 = [16 + 4 + 0 + 4 + 16]/5 = 40 / 5 = 8 (Đúng).<br>• <b>Ý d) [Sai]:</b> Độ lệch chuẩn s = √8 = 2√2 ≈ 2,83 (Sai).",
+      "exp": "• <b>Ý a) [Đúng]:</b> R = 12 - 4 = 8 (Đúng).<br>• <b>Ý b) [Đúng]:</b> <math><mover><mi>x</mi><mo>¯</mo></mover></math> = (4 + 6 + 8 + 10 + 12)/5 = 40 / 5 = 8 (Đúng).<br>• <b>Ý c) [Đúng]:</b> s² = [(-4)² + (-2)² + 0² + 2² + 4²] / 5 = [16 + 4 + 0 + 4 + 16]/5 = 40 / 5 = 8 (Đúng).<br>• <b>Ý d) [Sai]:</b> Độ lệch chuẩn s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">8</span></span> = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> ≈ 2,83 (Sai).",
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
@@ -4115,7 +4157,7 @@
         "Q₁",
         "Q₃",
         "Q₃ - Q₁",
-        "x̄",
+        "<math><mover><mi>x</mi><mo>¯</mo></mover></math>",
         "R"
       ],
       "exp": "• Rào dưới: Q₁ - 1,5·Δ_Q.<br>• Rào trên: Q₃ + 1,5·Δ_Q.<br>• Δ_Q = Q₃ - Q₁.",
@@ -4124,7 +4166,7 @@
         "Q₁",
         "Q₃",
         "Q₃ - Q₁",
-        "x̄",
+        "<math><mover><mi>x</mi><mo>¯</mo></mover></math>",
         "R"
       ],
       "ans": [
@@ -4144,7 +4186,7 @@
         "2"
       ],
       "ans": 0,
-      "exp": "• s = √16 = 4.",
+      "exp": "• s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">16</span></span> = 4.",
       "correctText": "Phương án A: 4"
     },
     {
@@ -4197,14 +4239,14 @@
         "2,5 gam"
       ],
       "ans": 0,
-      "exp": "• x̄ = 80; s² = 0,4 ⇒ s = √0,4 ≈ 0,63 gam.",
+      "exp": "• <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 80; s² = 0,4 ⇒ s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">0,4</span></span> ≈ 0,63 gam.",
       "correctText": "Phương án A: 0,63 gam"
     }
   ],
   "15": [
     {
       "type": "mcq",
-      "q": "Tập xác định D của hàm số y = √(x - 2) + <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x - 5</span></span> là:",
+      "q": "Tập xác định D của hàm số y = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x - 2</span></span> + <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x - 5</span></span> là:",
       "opts": [
         "D = [2; +∞) \\ {5}",
         "D = [2; +∞)",
@@ -4825,7 +4867,7 @@
   "18": [
     {
       "type": "mcq",
-      "q": "Phương trình dạng √(ax² + bx + c) = dx + e được giải bằng phương pháp bình phương hai vế sau khi đặt điều kiện:",
+      "q": "Phương trình dạng <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">ax² + bx + c</span></span> = dx + e được giải bằng phương pháp bình phương hai vế sau khi đặt điều kiện:",
       "opts": [
         "dx + e ≥ 0",
         "ax² + bx + c ≥ 0",
@@ -4841,11 +4883,11 @@
       "q": "Ghép dạng phương trình chứa căn (Cột A) với phương pháp giải chuẩn (Cột B):",
       "pairs": [
         {
-          "a": "1. √(f(x)) = √(g(x))",
+          "a": "1. <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">f(x)</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">g(x)</span></span>",
           "b": "A. Bình phương hai vế và đặt điều kiện f(x) ≥ 0 (hoặc g(x) ≥ 0)"
         },
         {
-          "a": "2. √(f(x)) = g(x)",
+          "a": "2. <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">f(x)</span></span> = g(x)",
           "b": "B. Điều kiện g(x) ≥ 0 rồi bình phương hai vế: f(x) = [g(x)]²"
         },
         {
@@ -4865,8 +4907,8 @@
       },
       "exp": "• Quy tắc giải phương trình vô tỉ cơ bản lớp 10.",
       "colA": [
-        "√(f(x)) = √(g(x))",
-        "√(f(x)) = g(x)",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">f(x)</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">g(x)</span></span>",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">f(x)</span></span> = g(x)",
         "Thử lại nghiệm",
         "Nghiệm ngoại lai"
       ],
@@ -4880,7 +4922,7 @@
     },
     {
       "type": "tf",
-      "q": "Cho phương trình √(x² - 3x + 2) = x - 1. Xét tính đúng - sai:",
+      "q": "Cho phương trình <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² - 3x + 2</span></span> = x - 1. Xét tính đúng - sai:",
       "items": [
         {
           "text": "Điều kiện để vế phải không âm là x ≥ 1.",
@@ -4920,7 +4962,7 @@
     },
     {
       "type": "mcq",
-      "q": "Số nghiệm của phương trình √(2x² - 5x + 3) = √(x² - 2x + 1) là:",
+      "q": "Số nghiệm của phương trình <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2x² - 5x + 3</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² - 2x + 1</span></span> là:",
       "opts": [
         "2 nghiệm (x = 1 và x = 2)",
         "1 nghiệm",
@@ -4928,12 +4970,12 @@
         "3 nghiệm"
       ],
       "ans": 0,
-      "exp": "• Bình phương: 2x² - 5x + 3 = x² - 2x + 1 ⇔ x² - 3x + 2 = 0 ⇔ x = 1 hoặc x = 2.<br>• Thử lại:<br>- x = 1: vế trái √0 = vế phải √0 = 0 (thỏa mãn).<br>- x = 2: vế trái √(8 - 10 + 3) = 1, vế phải √(4 - 4 + 1) = 1 (thỏa mãn).<br>• Phương trình có 2 nghiệm.",
+      "exp": "• Bình phương: 2x² - 5x + 3 = x² - 2x + 1 ⇔ x² - 3x + 2 = 0 ⇔ x = 1 hoặc x = 2.<br>• Thử lại:<br>- x = 1: vế trái <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">0</span></span> = vế phải <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">0</span></span> = 0 (thỏa mãn).<br>- x = 2: vế trái <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">8 - 10 + 3</span></span> = 1, vế phải <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4 - 4 + 1</span></span> = 1 (thỏa mãn).<br>• Phương trình có 2 nghiệm.",
       "correctText": "Phương án A: 2 nghiệm (x = 1 và x = 2)"
     },
     {
       "type": "drag",
-      "q": "Kéo nghiệm chính xác vào vị trí giải phương trình √(3x + 1) = x - 1:",
+      "q": "Kéo nghiệm chính xác vào vị trí giải phương trình <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3x + 1</span></span> = x - 1:",
       "slots": [
         "5",
         "1",
@@ -4964,7 +5006,7 @@
     },
     {
       "type": "mcq",
-      "q": "Tổng các nghiệm của phương trình √(x² - 4x + 3) = x - 1 là:",
+      "q": "Tổng các nghiệm của phương trình <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² - 4x + 3</span></span> = x - 1 là:",
       "opts": [
         "1 (chỉ có nghiệm duy nhất x = 1)",
         "3",
@@ -4972,12 +5014,12 @@
         "0"
       ],
       "ans": 0,
-      "exp": "• x² - 4x + 3 = (x - 1)² = x² - 2x + 1 ⇔ -2x = -2 ⇔ x = 1.<br>• Thử lại x = 1: √0 = 0 (thỏa mãn). Nghiệm duy nhất x = 1.",
+      "exp": "• x² - 4x + 3 = (x - 1)² = x² - 2x + 1 ⇔ -2x = -2 ⇔ x = 1.<br>• Thử lại x = 1: <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">0</span></span> = 0 (thỏa mãn). Nghiệm duy nhất x = 1.",
       "correctText": "Phương án A: 1 (chỉ có nghiệm duy nhất x = 1)"
     },
     {
       "type": "mcq",
-      "q": "Phương trình √(x + 3) = 2x - 1 có tập nghiệm là:",
+      "q": "Phương trình <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x + 3</span></span> = 2x - 1 có tập nghiệm là:",
       "opts": [
         "S = {1}",
         "S = {-1/4; 1}",
@@ -4985,13 +5027,13 @@
         "S = ∅"
       ],
       "ans": 0,
-      "exp": "• Điều kiện: 2x - 1 ≥ 0 ⇔ x ≥ 1/2.<br>• x + 3 = 4x² - 4x + 1 ⇔ 4x² - 5x - 2 = 0.<br>• Nghiệm x = (5 ± √57)/8. x ≈ 1,57 > 1/2 thỏa mãn.",
+      "exp": "• Điều kiện: 2x - 1 ≥ 0 ⇔ x ≥ 1/2.<br>• x + 3 = 4x² - 4x + 1 ⇔ 4x² - 5x - 2 = 0.<br>• Nghiệm x = (5 ± <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">57</span></span>)/8. x ≈ 1,57 > 1/2 thỏa mãn.",
       "correctText": "Phương án A: S = {1}",
       "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <line x1=\"40\" y1=\"150\" x2=\"400\" y2=\"150\" stroke=\"#475569\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"160\" y1=\"220\" x2=\"160\" y2=\"25\" stroke=\"#475569\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/>\n  \n  <path d=\"M 70 150 Q 120 100 280 60\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"2.5\"/>\n  <text x=\"285\" y=\"60\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"700\">y = √(x + 3)</text>\n  \n  <line x1=\"140\" y1=\"190\" x2=\"250\" y2=\"30\" stroke=\"#fbbf24\" stroke-width=\"2\"/>\n  <text x=\"245\" y=\"25\" fill=\"#fbbf24\" font-size=\"12\" font-weight=\"700\">y = 2x - 1</text>\n  \n  <circle cx=\"190\" cy=\"90\" r=\"5\" fill=\"#f43f5e\"/>\n  <text x=\"202\" y=\"95\" fill=\"#f43f5e\" font-size=\"13\" font-weight=\"800\">Giao điểm</text>\n  \n  <text x=\"220\" y=\"215\" fill=\"#34d399\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">Tìm nghiệm phương trình: √(x + 3) = 2x - 1</text>\n\n</svg>"
     },
     {
       "type": "mcq",
-      "q": "Một sợi dây cáp nối từ đỉnh một cột ăng-ten cao h = 12 m đến cọc néo trên mặt đất cách chân cột khoảng cách d (mét). Biết chiều dài dây cáp là L = √(d² + 144). Để chiều dài cáp bằng đúng d + 4 (mét), khoảng cách d phải là:",
+      "q": "Một sợi dây cáp nối từ đỉnh một cột ăng-ten cao h = 12 m đến cọc néo trên mặt đất cách chân cột khoảng cách d (mét). Biết chiều dài dây cáp là L = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">d² + 144</span></span>. Để chiều dài cáp bằng đúng d + 4 (mét), khoảng cách d phải là:",
       "opts": [
         "16 m",
         "12 m",
@@ -4999,12 +5041,12 @@
         "18 m"
       ],
       "ans": 0,
-      "exp": "• √(d² + 144) = d + 4.<br>• Bình phương: d² + 144 = d² + 8d + 16 ⇔ 8d = 128 ⇔ d = 16 m.",
+      "exp": "• <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">d² + 144</span></span> = d + 4.<br>• Bình phương: d² + 144 = d² + 8d + 16 ⇔ 8d = 128 ⇔ d = 16 m.",
       "correctText": "Phương án A: 16 m"
     },
     {
       "type": "mcq",
-      "q": "Hai ô tô xuất phát cùng lúc từ ngã tư đường vuông góc. Xe A đi về hướng Bắc với vận tốc 30 km/h, xe B đi về hướng Đông với vận tốc 40 km/h. Khoảng cách d(t) giữa hai xe sau t giờ là d(t) = √((30t)² + (40t)²) = 50t. Sau bao lâu khoảng cách giữa hai xe là 125 km?",
+      "q": "Hai ô tô xuất phát cùng lúc từ ngã tư đường vuông góc. Xe A đi về hướng Bắc với vận tốc 30 km/h, xe B đi về hướng Đông với vận tốc 40 km/h. Khoảng cách d(t) giữa hai xe sau t giờ là d(t) = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(30t)² + (40t)²</span></span> = 50t. Sau bao lâu khoảng cách giữa hai xe là 125 km?",
       "opts": [
         "2,5 giờ (2 giờ 30 phút)",
         "3,0 giờ",
@@ -5017,7 +5059,7 @@
     },
     {
       "type": "mcq",
-      "q": "Tầm nhìn xa d (hải lý) từ đài quan sát trên ngọn hải đăng có độ cao h (feet) so với mực nước biển xấp xỉ theo công thức d = 1,17√h. Để người gác hải đăng có tầm nhìn xa 11,7 hải lý thì ngọn hải đăng cần có độ cao là:",
+      "q": "Tầm nhìn xa d (hải lý) từ đài quan sát trên ngọn hải đăng có độ cao h (feet) so với mực nước biển xấp xỉ theo công thức d = 1,17<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">h</span></span>. Để người gác hải đăng có tầm nhìn xa 11,7 hải lý thì ngọn hải đăng cần có độ cao là:",
       "opts": [
         "100 feet (khoảng 30,5 m)",
         "10 feet",
@@ -5025,7 +5067,7 @@
         "80 feet"
       ],
       "ans": 0,
-      "exp": "• 1,17√h = 11,7 ⇒ √h = 10 ⇒ h = 100 feet.",
+      "exp": "• 1,17<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">h</span></span> = 11,7 ⇒ <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">h</span></span> = 10 ⇒ h = 100 feet.",
       "correctText": "Phương án A: 100 feet (khoảng 30,5 m)"
     }
   ],
@@ -5034,14 +5076,14 @@
       "type": "mcq",
       "q": "Vectơ nào sau đây là một <b>vectơ chỉ phương</b> của đường thẳng có phương trình tổng quát 2x - 3y + 6 = 0?",
       "opts": [
-        "u⃗ = (3; 2)",
-        "u⃗ = (2; -3)",
-        "u⃗ = (-3; 2)",
-        "u⃗ = (2; 3)"
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 2)",
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; -3)",
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (-3; 2)",
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; 3)"
       ],
       "ans": 0,
-      "exp": "• Đường thẳng ax + by + c = 0 có VTPT n⃗ = (a; b) = (2; -3).<br>• VTCP u⃗ vuông góc với n⃗ nên u⃗ = (-b; a) = (3; 2).",
-      "correctText": "Phương án A: u⃗ = (3; 2)"
+      "exp": "• Đường thẳng ax + by + c = 0 có VTPT <math><mover><mi>n</mi><mo>→</mo></mover></math> = (a; b) = (2; -3).<br>• VTCP <math><mover><mi>u</mi><mo>→</mo></mover></math> vuông góc với <math><mover><mi>n</mi><mo>→</mo></mover></math> nên <math><mover><mi>u</mi><mo>→</mo></mover></math> = (-b; a) = (3; 2).",
+      "correctText": "Phương án A: <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 2)"
     },
     {
       "type": "match",
@@ -5052,7 +5094,7 @@
           "b": "A. ax + by + c = 0 (với a² + b² > 0)"
         },
         {
-          "a": "2. Phương trình tham số đi qua M(x₀; y₀) có VTCP u⃗ = (u₁; u₂)",
+          "a": "2. Phương trình tham số đi qua M(x₀; y₀) có VTCP <math><mover><mi>u</mi><mo>→</mo></mover></math> = (u₁; u₂)",
           "b": "B. {x = x₀ + u₁t; y = y₀ + u₂t}"
         },
         {
@@ -5073,7 +5115,7 @@
       "exp": "• Các dạng phương trình đường thẳng trong mặt phẳng toạ độ Oxy.",
       "colA": [
         "Phương trình tổng quát",
-        "Phương trình tham số đi qua M(x₀; y₀) có VTCP u⃗ = (u₁; u₂)",
+        "Phương trình tham số đi qua M(x₀; y₀) có VTCP <math><mover><mi>u</mi><mo>→</mo></mover></math> = (u₁; u₂)",
         "Phương trình chính tắc",
         "Phương trình theo đoạn chắn qua (a; 0) và (0; b)"
       ],
@@ -5095,9 +5137,9 @@
           "exp": "Khi t = 0 thì x = 1, y = -3 nên A(1; -3) ∈ d (Đúng)."
         },
         {
-          "text": "Một vectơ chỉ phương của d là u⃗ = (2; 4).",
+          "text": "Một vectơ chỉ phương của d là <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; 4).",
           "ans": true,
-          "exp": "Hệ số của t là (2; 4) nên u⃗ = (2; 4) là VTCP (Đúng)."
+          "exp": "Hệ số của t là (2; 4) nên <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; 4) là VTCP (Đúng)."
         },
         {
           "text": "Điểm B(3; 1) thuộc đường thẳng d.",
@@ -5107,12 +5149,12 @@
         {
           "text": "Phương trình tổng quát của d là 4x + 2y + 2 = 0.",
           "ans": false,
-          "exp": "u⃗ = (1; 2) ⇒ n⃗ = (2; -1). PTTQ: 2(x - 1) - 1(y + 3) = 0 ⇔ 2x - y - 5 = 0 (Sai)."
+          "exp": "<math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 2) ⇒ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (2; -1). PTTQ: 2(x - 1) - 1(y + 3) = 0 ⇔ 2x - y - 5 = 0 (Sai)."
         }
       ],
       "stmts": [
         "Đường thẳng d đi qua điểm A(1; -3).",
-        "Một vectơ chỉ phương của d là u⃗ = (2; 4).",
+        "Một vectơ chỉ phương của d là <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; 4).",
         "Điểm B(3; 1) thuộc đường thẳng d.",
         "Phương trình tổng quát của d là 4x + 2y + 2 = 0."
       ],
@@ -5122,12 +5164,12 @@
         true,
         false
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> Khi t = 0 thì x = 1, y = -3 nên A(1; -3) ∈ d (Đúng).<br>• <b>Ý b) [Đúng]:</b> Hệ số của t là (2; 4) nên u⃗ = (2; 4) là VTCP (Đúng).<br>• <b>Ý c) [Đúng]:</b> Với t = 1: x = 1 + 2(1) = 3; y = -3 + 4(1) = 1 nên B(3; 1) ∈ d (Đúng).<br>• <b>Ý d) [Sai]:</b> u⃗ = (1; 2) ⇒ n⃗ = (2; -1). PTTQ: 2(x - 1) - 1(y + 3) = 0 ⇔ 2x - y - 5 = 0 (Sai).",
+      "exp": "• <b>Ý a) [Đúng]:</b> Khi t = 0 thì x = 1, y = -3 nên A(1; -3) ∈ d (Đúng).<br>• <b>Ý b) [Đúng]:</b> Hệ số của t là (2; 4) nên <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; 4) là VTCP (Đúng).<br>• <b>Ý c) [Đúng]:</b> Với t = 1: x = 1 + 2(1) = 3; y = -3 + 4(1) = 1 nên B(3; 1) ∈ d (Đúng).<br>• <b>Ý d) [Sai]:</b> <math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 2) ⇒ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (2; -1). PTTQ: 2(x - 1) - 1(y + 3) = 0 ⇔ 2x - y - 5 = 0 (Sai).",
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
       "type": "mcq",
-      "q": "Phương trình tổng quát của đường thẳng đi qua điểm M(2; -1) và nhận n⃗ = (3; 4) làm vectơ pháp tuyến là:",
+      "q": "Phương trình tổng quát của đường thẳng đi qua điểm M(2; -1) và nhận <math><mover><mi>n</mi><mo>→</mo></mover></math> = (3; 4) làm vectơ pháp tuyến là:",
       "opts": [
         "3x + 4y - 2 = 0",
         "3x + 4y + 2 = 0",
@@ -5179,7 +5221,7 @@
         "x + 2y - 7 = 0"
       ],
       "ans": 0,
-      "exp": "• Trung điểm I: x_I = 3, y_I = 2 ⇒ I(3; 2).<br>• AB⃗ = (4; -2) cùng phương n⃗ = (2; -1).<br>• Trung trực: 2(x - 3) - 1(y - 2) = 0 ⇔ 2x - y - 4 = 0.",
+      "exp": "• Trung điểm I: x_I = 3, y_I = 2 ⇒ I(3; 2).<br>• <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (4; -2) cùng phương <math><mover><mi>n</mi><mo>→</mo></mover></math> = (2; -1).<br>• Trung trực: 2(x - 3) - 1(y - 2) = 0 ⇔ 2x - y - 4 = 0.",
       "correctText": "Phương án A: 2x - y - 4 = 0"
     },
     {
@@ -5206,7 +5248,7 @@
         "4x - 8y + 16 = 0"
       ],
       "ans": 0,
-      "exp": "• AB⃗ = (4; 8) = 4(1; 2) ⇒ n⃗ = (2; -1).<br>• Đường thẳng qua A(2; 3): 2(x - 2) - (y - 3) = 0 ⇔ 2x - y - 1 = 0.",
+      "exp": "• <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (4; 8) = 4(1; 2) ⇒ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (2; -1).<br>• Đường thẳng qua A(2; 3): 2(x - 2) - (y - 3) = 0 ⇔ 2x - y - 1 = 0.",
       "correctText": "Phương án A: 2x - y - 1 = 0"
     },
     {
@@ -5224,7 +5266,7 @@
     },
     {
       "type": "mcq",
-      "q": "Một chiếc tàu cứu hộ neo đậu tại cảng toạ độ A(1; 2) nhận lệnh cứu nạn một thuyền câu đang trôi dạt theo hướng vectơ u⃗ = (3; 4). Phương trình đường đi thẳng của tàu cứu hộ để tiếp cận nhanh nhất là:",
+      "q": "Một chiếc tàu cứu hộ neo đậu tại cảng toạ độ A(1; 2) nhận lệnh cứu nạn một thuyền câu đang trôi dạt theo hướng vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 4). Phương trình đường đi thẳng của tàu cứu hộ để tiếp cận nhanh nhất là:",
       "opts": [
         "{x = 1 + 3t; y = 2 + 4t} (t ≥ 0)",
         "{x = 3 + t; y = 4 + 2t}",
@@ -5232,7 +5274,7 @@
         "3x + 4y - 11 = 0"
       ],
       "ans": 0,
-      "exp": "• Đường thẳng qua A(1; 2) có VTCP u⃗ = (3; 4) có dạng tham số: {x = 1 + 3t; y = 2 + 4t}.",
+      "exp": "• Đường thẳng qua A(1; 2) có VTCP <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 4) có dạng tham số: {x = 1 + 3t; y = 2 + 4t}.",
       "correctText": "Phương án A: {x = 1 + 3t; y = 2 + 4t} (t ≥ 0)"
     }
   ],
@@ -5241,14 +5283,14 @@
       "type": "mcq",
       "q": "Khoảng cách từ điểm M(x₀; y₀) đến đường thẳng Δ: ax + by + c = 0 được tính bởi công thức:",
       "opts": [
-        "d(M, Δ) = |ax₀ + by₀ + c| / √(a² + b²)",
-        "d(M, Δ) = (ax₀ + by₀ + c) / √(a² + b²)",
+        "d(M, Δ) = |ax₀ + by₀ + c| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b²</span></span>",
+        "d(M, Δ) = (ax₀ + by₀ + c) / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b²</span></span>",
         "d(M, Δ) = |ax₀ + by₀ + c| / (a² + b²)",
-        "d(M, Δ) = √(ax₀² + by₀²)"
+        "d(M, Δ) = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">ax₀² + by₀²</span></span>"
       ],
       "ans": 0,
-      "exp": "• Công thức khoảng cách từ điểm đến đường thẳng (SGK Toán 10): d(M, Δ) = |ax₀ + by₀ + c| / √(a² + b²).",
-      "correctText": "Phương án A: d(M, Δ) = |ax₀ + by₀ + c| / √(a² + b²)"
+      "exp": "• Công thức khoảng cách từ điểm đến đường thẳng (SGK Toán 10): d(M, Δ) = |ax₀ + by₀ + c| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b²</span></span>.",
+      "correctText": "Phương án A: d(M, Δ) = |ax₀ + by₀ + c| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b²</span></span>"
     },
     {
       "type": "match",
@@ -5304,7 +5346,7 @@
         {
           "text": "Khoảng cách từ gốc toạ độ O(0; 0) đến d₁ bằng 1.",
           "ans": true,
-          "exp": "d(O, d₁) = |5| / √(3² + 4²) = 5 / 5 = 1 (Đúng)."
+          "exp": "d(O, d₁) = |5| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 4²</span></span> = 5 / 5 = 1 (Đúng)."
         },
         {
           "text": "Khoảng cách giữa hai đường thẳng d₁ và d₂ bằng 4.",
@@ -5329,7 +5371,7 @@
         true,
         false
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> 3/3 = -4/(-4) = 1 ≠ 5/(-15) nên d₁ // d₂ (Đúng).<br>• <b>Ý b) [Đúng]:</b> d(O, d₁) = |5| / √(3² + 4²) = 5 / 5 = 1 (Đúng).<br>• <b>Ý c) [Đúng]:</b> Lấy M(0; 5/4) ∈ d₁. d(M, d₂) = |3(0) - 4(5/4) - 15| / 5 = |-5 - 15| / 5 = 20 / 5 = 4 (Đúng).<br>• <b>Ý d) [Sai]:</b> d(A, d₁) = |3 - 8 + 5|/5 = 0; d(A, d₂) = |-20|/5 = 4. Không cách đều (Sai).",
+      "exp": "• <b>Ý a) [Đúng]:</b> 3/3 = -4/(-4) = 1 ≠ 5/(-15) nên d₁ // d₂ (Đúng).<br>• <b>Ý b) [Đúng]:</b> d(O, d₁) = |5| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 4²</span></span> = 5 / 5 = 1 (Đúng).<br>• <b>Ý c) [Đúng]:</b> Lấy M(0; 5/4) ∈ d₁. d(M, d₂) = |3(0) - 4(5/4) - 15| / 5 = |-5 - 15| / 5 = 20 / 5 = 4 (Đúng).<br>• <b>Ý d) [Sai]:</b> d(A, d₁) = |3 - 8 + 5|/5 = 0; d(A, d₂) = |-20|/5 = 4. Không cách đều (Sai).",
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
     },
     {
@@ -5342,7 +5384,7 @@
         "1"
       ],
       "ans": 0,
-      "exp": "• d = |3(1) - 4(-2) + 4| / √(3² + (-4)²) = |3 + 8 + 4| / 5 = 15 / 5 = 3.",
+      "exp": "• d = |3(1) - 4(-2) + 4| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + (-4)²</span></span> = |3 + 8 + 4| / 5 = 15 / 5 = 3.",
       "correctText": "Phương án A: 3"
     },
     {
@@ -5378,7 +5420,7 @@
     },
     {
       "type": "mcq",
-      "q": "Góc giữa hai đường thẳng d₁: x + √3y + 1 = 0 và d₂: x - √3y + 2 = 0 là:",
+      "q": "Góc giữa hai đường thẳng d₁: x + <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>y + 1 = 0 và d₂: x - <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>y + 2 = 0 là:",
       "opts": [
         "60°",
         "30°",
@@ -5386,7 +5428,7 @@
         "45°"
       ],
       "ans": 0,
-      "exp": "• n₁ = (1; √3); n₂ = (1; -√3).<br>• cos φ = |1(1) + √3(-√3)| / [√(1+3) · √(1+3)] = |1 - 3| / (2 · 2) = 2 / 4 = 1/2 ⇒ φ = 60°.",
+      "exp": "• n₁ = (1; <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>); n₂ = (1; -<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>).<br>• cos φ = |1(1) + <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>(-<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>)| / [<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1+3</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1+3</span></span>] = |1 - 3| / (2 · 2) = 2 / 4 = 1/2 ⇒ φ = 60°.",
       "correctText": "Phương án A: 60°"
     },
     {
@@ -5413,7 +5455,7 @@
         "3 km"
       ],
       "ans": 0,
-      "exp": "• d = |3(4) + 4(5) - 7| / √(3² + 4²) = |12 + 20 - 7| / 5 = 25 / 5 = 5 km.",
+      "exp": "• d = |3(4) + 4(5) - 7| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 4²</span></span> = |12 + 20 - 7| / 5 = 25 / 5 = 5 km.",
       "correctText": "Phương án A: 5 km"
     },
     {
@@ -5426,7 +5468,7 @@
         "25 mét"
       ],
       "ans": 0,
-      "exp": "• d = |10 - (-90)| / √(4² + 3²) = 100 / 5 = 20 mét.",
+      "exp": "• d = |10 - (-90)| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4² + 3²</span></span> = 100 / 5 = 20 mét.",
       "correctText": "Phương án A: 20 mét"
     },
     {
@@ -5439,7 +5481,7 @@
         "7/2"
       ],
       "ans": 0,
-      "exp": "• Điểm đối xứng của S(2; 1) qua Ox là S'(2; -1).<br>• Đường thẳng S'R đi qua I: S'R⃗ = (4; 3) ⇒ PTTQ: 3(x - 2) - 4(y + 1) = 0 ⇔ 3x - 4y - 10 = 0.<br>• I thuộc Ox (y = 0) ⇒ 3x - 10 = 0 ⇒ x = 10/3.",
+      "exp": "• Điểm đối xứng của S(2; 1) qua Ox là S'(2; -1).<br>• Đường thẳng S'R đi qua I: <math><mover><mi>S'R</mi><mo>→</mo></mover></math> = (4; 3) ⇒ PTTQ: 3(x - 2) - 4(y + 1) = 0 ⇔ 3x - 4y - 10 = 0.<br>• I thuộc Ox (y = 0) ⇒ 3x - 10 = 0 ⇒ x = 10/3.",
       "correctText": "Phương án A: 10/3 (≈ 3,33)"
     }
   ],
@@ -5463,7 +5505,7 @@
       "pairs": [
         {
           "a": "1. Dạng khai triển x² + y² - 2ax - 2by + c = 0",
-          "b": "A. Bán kính R = √(a² + b² - c) (với a² + b² - c > 0)"
+          "b": "A. Bán kính R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b² - c</span></span> (với a² + b² - c > 0)"
         },
         {
           "a": "2. Tâm đường tròn dạng khai triển",
@@ -5492,7 +5534,7 @@
         "Điều kiện tiếp xúc đường thẳng Δ"
       ],
       "colB": [
-        "Bán kính R = √(a² + b² - c) (với a² + b² - c > 0)",
+        "Bán kính R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² + b² - c</span></span> (với a² + b² - c > 0)",
         "I(a; b)",
         "(x₀ - a)(x - a) + (y₀ - b)(y - b) = R²",
         "d(I, Δ) = R"
@@ -5511,7 +5553,7 @@
         {
           "text": "Bán kính của đường tròn là R = 5.",
           "ans": true,
-          "exp": "R = √(2² + (-3)² - (-12)) = √(4 + 9 + 12) = √25 = 5 (Đúng)."
+          "exp": "R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + (-3)² - (-12)</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4 + 9 + 12</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25</span></span> = 5 (Đúng)."
         },
         {
           "text": "Điểm O(0; 0) nằm bên trong đường tròn.",
@@ -5536,7 +5578,7 @@
         true,
         true
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> a = 2, b = -3 nên tâm I(2; -3) (Đúng).<br>• <b>Ý b) [Đúng]:</b> R = √(2² + (-3)² - (-12)) = √(4 + 9 + 12) = √25 = 5 (Đúng).<br>• <b>Ý c) [Đúng]:</b> 0² + 0² - 0 + 0 - 12 = -12 < 0 nên O nằm trong đường tròn (Đúng).<br>• <b>Ý d) [Đúng]:</b> 2² + 2² - 4(2) + 6(2) - 12 = 4 + 4 - 8 + 12 - 12 = 0 (Đúng).",
+      "exp": "• <b>Ý a) [Đúng]:</b> a = 2, b = -3 nên tâm I(2; -3) (Đúng).<br>• <b>Ý b) [Đúng]:</b> R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + (-3)² - (-12)</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4 + 9 + 12</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25</span></span> = 5 (Đúng).<br>• <b>Ý c) [Đúng]:</b> 0² + 0² - 0 + 0 - 12 = -12 < 0 nên O nằm trong đường tròn (Đúng).<br>• <b>Ý d) [Đúng]:</b> 2² + 2² - 4(2) + 6(2) - 12 = 4 + 4 - 8 + 12 - 12 = 0 (Đúng).",
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng"
     },
     {
@@ -5567,7 +5609,7 @@
         "(-3; 1)",
         "8π"
       ],
-      "exp": "• Tâm I(3; -1).<br>• R = √16 = 4.<br>• Diện tích S = πR² = 16π.",
+      "exp": "• Tâm I(3; -1).<br>• R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">16</span></span> = 4.<br>• Diện tích S = πR² = 16π.",
       "sentence": "• Toạ độ tâm I là %%%SLOT_1%%%.<br>• Bán kính R bằng %%%SLOT_2%%%.<br>• Diện tích hình tròn giới hạn bởi (C) là %%%SLOT_3%%%.",
       "words": [
         "(3; -1)",
@@ -5646,7 +5688,7 @@
         "Không đủ dữ liệu"
       ],
       "ans": 0,
-      "exp": "• Khoảng cách từ tàu đến tâm bão:<br>d = √((150 - 100)² + (190 - 150)²) = √(50² + 40²) = √(2500 + 1600) = √4100 ≈ 64,03 km.<br>• Vì 64,03 km < 80 km nên tàu nằm sâu trong vùng gió bão nguy hiểm.",
+      "exp": "• Khoảng cách từ tàu đến tâm bão:<br>d = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(150 - 100)² + (190 - 150)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">50² + 40²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2500 + 1600</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4100</span></span> ≈ 64,03 km.<br>• Vì 64,03 km < 80 km nên tàu nằm sâu trong vùng gió bão nguy hiểm.",
       "correctText": "Phương án A: Có nằm trong vùng nguy hiểm (khoảng cách đến tâm bão là khoảng 64 km < 80 km)"
     }
   ],
@@ -5682,7 +5724,7 @@
         },
         {
           "a": "4. Tiêu cự của elip",
-          "b": "D. 2c = 2√(a² - b²)"
+          "b": "D. 2c = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² - b²</span></span>"
         }
       ],
       "ans": {
@@ -5702,7 +5744,7 @@
         "x²/a² + y²/b² = 1 (a > b > 0)",
         "x²/a² - y²/b² = 1 (a, b > 0)",
         "y² = 2px (p > 0)",
-        "2c = 2√(a² - b²)"
+        "2c = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² - b²</span></span>"
       ],
       "correctText": "1-A • 2-B • 3-C • 4-D"
     },
@@ -5723,7 +5765,7 @@
         {
           "text": "Tiêu cự của elip bằng 4.",
           "ans": false,
-          "exp": "c = √(a² - b²) = √(25 - 9) = 4. Tiêu cự là 2c = 8 (Sai)."
+          "exp": "c = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² - b²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25 - 9</span></span> = 4. Tiêu cự là 2c = 8 (Sai)."
         },
         {
           "text": "Toạ độ hai tiêu điểm là F₁(-4; 0) và F₂(4; 0).",
@@ -5743,7 +5785,7 @@
         false,
         true
       ],
-      "exp": "• <b>Ý a) [Đúng]:</b> a² = 25 ⇒ a = 5. Độ dài trục lớn 2a = 10 (Đúng).<br>• <b>Ý b) [Đúng]:</b> b² = 9 ⇒ b = 3. Độ dài trục nhỏ 2b = 6 (Đúng).<br>• <b>Ý c) [Sai]:</b> c = √(a² - b²) = √(25 - 9) = 4. Tiêu cự là 2c = 8 (Sai).<br>• <b>Ý d) [Đúng]:</b> Hai tiêu điểm trên trục Ox: F₁(-c; 0) = (-4; 0), F₂(c; 0) = (4; 0) (Đúng).",
+      "exp": "• <b>Ý a) [Đúng]:</b> a² = 25 ⇒ a = 5. Độ dài trục lớn 2a = 10 (Đúng).<br>• <b>Ý b) [Đúng]:</b> b² = 9 ⇒ b = 3. Độ dài trục nhỏ 2b = 6 (Đúng).<br>• <b>Ý c) [Sai]:</b> c = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² - b²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25 - 9</span></span> = 4. Tiêu cự là 2c = 8 (Sai).<br>• <b>Ý d) [Đúng]:</b> Hai tiêu điểm trên trục Ox: F₁(-c; 0) = (-4; 0), F₂(c; 0) = (4; 0) (Đúng).",
       "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
     },
     {

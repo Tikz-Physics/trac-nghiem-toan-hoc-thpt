@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1155,7 +1197,7 @@
   {
     "type": "drag",
     "q": "Cho hình chóp tam giác đều S.ABC có cạnh đáy bằng a và chiều cao SO = a/2. Tính số đo góc nhị diện [S, BC, A]:",
-    "exp": "<b>ĐÁP ÁN ĐÚNG: 60 độ</b><br><br>Gọi M là trung điểm BC. Ta có AM ⊥ BC và SM ⊥ BC, góc giữa hai mặt phẳng là góc SMO.<br>Đáy ABC là tam giác đều cạnh a nên đường cao AM = a√3/2. Điểm O là trọng tâm nên OM = AM / 3 = a√3 / 6.<br>tan(SMO) = SO / OM = (a/2) / (a√3/6) = (1/2) * (6/√3) = 3/√3 = √3. Do đó góc SMO = 60°.",
+    "exp": "<b>ĐÁP ÁN ĐÚNG: 60 độ</b><br><br>Gọi M là trung điểm BC. Ta có AM ⊥ BC và SM ⊥ BC, góc giữa hai mặt phẳng là góc SMO.<br>Đáy ABC là tam giác đều cạnh a nên đường cao AM = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2. Điểm O là trọng tâm nên OM = AM / 3 = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> / 6.<br>tan(SMO) = SO / OM = (a/2) / (a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/6) = (1/2) * (6/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>) = 3/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>. Do đó góc SMO = 60°.",
     "sentence": "Số đo góc bằng: %%%SLOT_0%%% độ.",
     "words": [
       "60",
@@ -1180,7 +1222,7 @@
   {
     "type": "match",
     "q": "Cho hình lập phương ABCD.A'B'C'D'. Ghép mỗi cặp mặt phẳng ở Cột A với góc giữa chúng ở Cột B:",
-    "exp": "1 - A (hai mặt liền kề vuông góc); 2 - B (hai mặt đáy song song); 3 - C (tan = A'A/AO = a/(a√2/2) = √2); 4 - D (hai mặt phẳng chéo vuông góc).",
+    "exp": "1 - A (hai mặt liền kề vuông góc); 2 - B (hai mặt đáy song song); 3 - C (tan = A'A/AO = a/(a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2) = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>); 4 - D (hai mặt phẳng chéo vuông góc).",
     "colA": [
       "(ABCD) và (ABB'A')",
       "(ABCD) và (A'B'C'D')",
@@ -1190,7 +1232,7 @@
     "colB": [
       "90°",
       "0°",
-      "arctan(√2)",
+      "arctan(<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>)",
       "90°"
     ],
     "pairs": [
@@ -1204,7 +1246,7 @@
       },
       {
         "a": "3. (ABCD) và (A'BD)",
-        "b": "C. arctan(√2)"
+        "b": "C. arctan(<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>)"
       },
       {
         "a": "4. (ACC'A') và (BDD'B')",

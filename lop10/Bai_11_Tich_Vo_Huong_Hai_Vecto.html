@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1062,36 +1104,36 @@
     const RAW_QUESTIONS = [
   {
     "type": "mcq",
-    "q": "Tích vô hướng của hai vectơ a⃗ và b⃗ đều khác 0⃗ được tính bởi công thức:",
+    "q": "Tích vô hướng của hai vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> và <math><mover><mi>b</mi><mo>→</mo></mover></math> đều khác <math><mover><mn>0</mn><mo>→</mo></mover></math> được tính bởi công thức:",
     "opts": [
-      "a⃗ · b⃗ = |a⃗| · |b⃗| · cos(a⃗, b⃗)",
-      "a⃗ · b⃗ = |a⃗| · |b⃗| · sin(a⃗, b⃗)",
-      "a⃗ · b⃗ = |a⃗| · |b⃗|",
-      "a⃗ · b⃗ = |a⃗ + b⃗| · cos(a⃗, b⃗)"
+      "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math>| · |<math><mover><mi>b</mi><mo>→</mo></mover></math>| · cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>)",
+      "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math>| · |<math><mover><mi>b</mi><mo>→</mo></mover></math>| · sin(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>)",
+      "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math>| · |<math><mover><mi>b</mi><mo>→</mo></mover></math>|",
+      "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math> + <math><mover><mi>b</mi><mo>→</mo></mover></math>| · cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>)"
     ],
     "ans": 0,
-    "exp": "• Định nghĩa: a⃗ · b⃗ = |a⃗| · |b⃗| · cos(a⃗, b⃗).",
-    "correctText": "Phương án A: a⃗ · b⃗ = |a⃗| · |b⃗| · cos(a⃗, b⃗)"
+    "exp": "• Định nghĩa: <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math>| · |<math><mover><mi>b</mi><mo>→</mo></mover></math>| · cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>).",
+    "correctText": "Phương án A: <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = |<math><mover><mi>a</mi><mo>→</mo></mover></math>| · |<math><mover><mi>b</mi><mo>→</mo></mover></math>| · cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>)"
   },
   {
     "type": "match",
     "q": "Ghép các tính chất của tích vô hướng (Cột A) với biểu thức tương ứng (Cột B):",
     "pairs": [
       {
-        "a": "1. Hai vectơ vuông góc a⃗ ⊥ b⃗",
-        "b": "A. a⃗ · b⃗ = 0"
+        "a": "1. Hai vectơ vuông góc <math><mover><mi>a</mi><mo>→</mo></mover></math> ⊥ <math><mover><mi>b</mi><mo>→</mo></mover></math>",
+        "b": "A. <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = 0"
       },
       {
-        "a": "2. Bình phương vô hướng a⃗²",
-        "b": "B. = |a⃗|² (bằng bình phương độ dài)"
+        "a": "2. Bình phương vô hướng <math><mover><mi>a</mi><mo>→</mo></mover></math>²",
+        "b": "B. = |<math><mover><mi>a</mi><mo>→</mo></mover></math>|² (bằng bình phương độ dài)"
       },
       {
-        "a": "3. Biểu thức toạ độ khi a⃗ = (x₁; y₁), b⃗ = (x₂; y₂)",
-        "b": "C. a⃗ · b⃗ = x₁x₂ + y₁y₂"
+        "a": "3. Biểu thức toạ độ khi <math><mover><mi>a</mi><mo>→</mo></mover></math> = (x₁; y₁), <math><mover><mi>b</mi><mo>→</mo></mover></math> = (x₂; y₂)",
+        "b": "C. <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = x₁x₂ + y₁y₂"
       },
       {
         "a": "4. Cosin của góc giữa hai vectơ",
-        "b": "D. cos(a⃗, b⃗) = (x₁x₂ + y₁y₂) / [√(x₁² + y₁²) · √(x₂² + y₂²)]"
+        "b": "D. cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>) = (x₁x₂ + y₁y₂) / [<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x₁² + y₁²</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x₂² + y₂²</span></span>]"
       }
     ],
     "ans": {
@@ -1102,49 +1144,49 @@
     },
     "exp": "• Vuông góc ⇔ tích vô hướng bằng 0.<br>• Bình phương vô hướng = bình phương độ dài.<br>• Toạ độ: x₁x₂ + y₁y₂.<br>• Cosin góc.",
     "colA": [
-      "Hai vectơ vuông góc a⃗ ⊥ b⃗",
-      "Bình phương vô hướng a⃗²",
-      "Biểu thức toạ độ khi a⃗ = (x₁; y₁), b⃗ = (x₂; y₂)",
+      "Hai vectơ vuông góc <math><mover><mi>a</mi><mo>→</mo></mover></math> ⊥ <math><mover><mi>b</mi><mo>→</mo></mover></math>",
+      "Bình phương vô hướng <math><mover><mi>a</mi><mo>→</mo></mover></math>²",
+      "Biểu thức toạ độ khi <math><mover><mi>a</mi><mo>→</mo></mover></math> = (x₁; y₁), <math><mover><mi>b</mi><mo>→</mo></mover></math> = (x₂; y₂)",
       "Cosin của góc giữa hai vectơ"
     ],
     "colB": [
-      "a⃗ · b⃗ = 0",
-      "= |a⃗|² (bằng bình phương độ dài)",
-      "a⃗ · b⃗ = x₁x₂ + y₁y₂",
-      "cos(a⃗, b⃗) = (x₁x₂ + y₁y₂) / [√(x₁² + y₁²) · √(x₂² + y₂²)]"
+      "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = 0",
+      "= |<math><mover><mi>a</mi><mo>→</mo></mover></math>|² (bằng bình phương độ dài)",
+      "<math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = x₁x₂ + y₁y₂",
+      "cos(<math><mover><mi>a</mi><mo>→</mo></mover></math>, <math><mover><mi>b</mi><mo>→</mo></mover></math>) = (x₁x₂ + y₁y₂) / [<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x₁² + y₁²</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x₂² + y₂²</span></span>]"
     ],
     "correctText": "1-A • 2-B • 3-C • 4-D"
   },
   {
     "type": "tf",
-    "q": "Cho hai vectơ u⃗ = (1; 2) và v⃗ = (-2; 1). Xét tính đúng - sai:",
+    "q": "Cho hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 2) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (-2; 1). Xét tính đúng - sai:",
     "items": [
       {
-        "text": "Tích vô hướng u⃗ · v⃗ = 0.",
+        "text": "Tích vô hướng <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0.",
         "ans": true,
-        "exp": "u⃗ · v⃗ = 1(-2) + 2(1) = 0 (Đúng)."
+        "exp": "<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 1(-2) + 2(1) = 0 (Đúng)."
       },
       {
-        "text": "Hai vectơ u⃗ và v⃗ vuông góc với nhau.",
+        "text": "Hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> vuông góc với nhau.",
         "ans": true,
-        "exp": "u⃗ · v⃗ = 0 ⇒ u⃗ ⊥ v⃗ (Đúng)."
+        "exp": "<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0 ⇒ <math><mover><mi>u</mi><mo>→</mo></mover></math> ⊥ <math><mover><mi>v</mi><mo>→</mo></mover></math> (Đúng)."
       },
       {
-        "text": "Độ dài |u⃗| = |v⃗| = √5.",
+        "text": "Độ dài |<math><mover><mi>u</mi><mo>→</mo></mover></math>| = |<math><mover><mi>v</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>.",
         "ans": true,
-        "exp": "√(1² + 2²) = √5 (Đúng)."
+        "exp": "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1² + 2²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> (Đúng)."
       },
       {
-        "text": "Góc giữa u⃗ và v⃗ là 0°.",
+        "text": "Góc giữa <math><mover><mi>u</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> là 0°.",
         "ans": false,
         "exp": "Góc giữa chúng là 90° (Sai)."
       }
     ],
     "stmts": [
-      "Tích vô hướng u⃗ · v⃗ = 0.",
-      "Hai vectơ u⃗ và v⃗ vuông góc với nhau.",
-      "Độ dài |u⃗| = |v⃗| = √5.",
-      "Góc giữa u⃗ và v⃗ là 0°."
+      "Tích vô hướng <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0.",
+      "Hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> vuông góc với nhau.",
+      "Độ dài |<math><mover><mi>u</mi><mo>→</mo></mover></math>| = |<math><mover><mi>v</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>.",
+      "Góc giữa <math><mover><mi>u</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> là 0°."
     ],
     "ans": [
       true,
@@ -1152,25 +1194,25 @@
       true,
       false
     ],
-    "exp": "• <b>Ý a) [Đúng]:</b> u⃗ · v⃗ = 1(-2) + 2(1) = 0 (Đúng).<br>• <b>Ý b) [Đúng]:</b> u⃗ · v⃗ = 0 ⇒ u⃗ ⊥ v⃗ (Đúng).<br>• <b>Ý c) [Đúng]:</b> √(1² + 2²) = √5 (Đúng).<br>• <b>Ý d) [Sai]:</b> Góc giữa chúng là 90° (Sai).",
+    "exp": "• <b>Ý a) [Đúng]:</b> <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 1(-2) + 2(1) = 0 (Đúng).<br>• <b>Ý b) [Đúng]:</b> <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0 ⇒ <math><mover><mi>u</mi><mo>→</mo></mover></math> ⊥ <math><mover><mi>v</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý c) [Đúng]:</b> <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1² + 2²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> (Đúng).<br>• <b>Ý d) [Sai]:</b> Góc giữa chúng là 90° (Sai).",
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
   },
   {
     "type": "mcq",
-    "q": "Cho tam giác đều ABC cạnh a. Tích vô hướng AB⃗ · AC⃗ có giá trị là:",
+    "q": "Cho tam giác đều ABC cạnh a. Tích vô hướng <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math> có giá trị là:",
     "opts": [
       "a²/2",
       "a²",
-      "a²√3/2",
+      "a²<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2",
       "-a²/2"
     ],
     "ans": 0,
-    "exp": "• AB⃗ · AC⃗ = a · a · cos 60° = a²/2.",
+    "exp": "• <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math> = a · a · cos 60° = a²/2.",
     "correctText": "Phương án A: a²/2"
   },
   {
     "type": "drag",
-    "q": "Kéo các giá trị thích hợp vào chỗ trống cho hai vectơ a⃗ = (3; 4) và b⃗ = (4; -3):",
+    "q": "Kéo các giá trị thích hợp vào chỗ trống cho hai vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> = (3; 4) và <math><mover><mi>b</mi><mo>→</mo></mover></math> = (4; -3):",
     "slots": [
       "0",
       "90°",
@@ -1183,8 +1225,8 @@
       "24",
       "45°"
     ],
-    "exp": "• a⃗ · b⃗ = 3(4) + 4(-3) = 0.<br>• Góc = 90°.<br>• a⃗² = 3² + 4² = 25.",
-    "sentence": "• Tích vô hướng a⃗ · b⃗ = %%%SLOT_1%%%.<br>• Góc giữa hai vectơ là %%%SLOT_2%%%.<br>• Bình phương vô hướng a⃗² = %%%SLOT_3%%%.",
+    "exp": "• <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = 3(4) + 4(-3) = 0.<br>• Góc = 90°.<br>• <math><mover><mi>a</mi><mo>→</mo></mover></math>² = 3² + 4² = 25.",
+    "sentence": "• Tích vô hướng <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = %%%SLOT_1%%%.<br>• Góc giữa hai vectơ là %%%SLOT_2%%%.<br>• Bình phương vô hướng <math><mover><mi>a</mi><mo>→</mo></mover></math>² = %%%SLOT_3%%%.",
     "words": [
       "0",
       "90°",
@@ -1201,20 +1243,20 @@
   },
   {
     "type": "mcq",
-    "q": "Cho hai vectơ a⃗ = (2; 1) và b⃗ = (1; 3). Cosin của góc giữa hai vectơ là:",
+    "q": "Cho hai vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> = (2; 1) và <math><mover><mi>b</mi><mo>→</mo></mover></math> = (1; 3). Cosin của góc giữa hai vectơ là:",
     "opts": [
-      "1/√2 (tức góc 45°)",
-      "√3/2",
+      "1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> (tức góc 45°)",
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2",
       "1/2",
       "0"
     ],
     "ans": 0,
-    "exp": "• a⃗ · b⃗ = 5; |a⃗| = √5; |b⃗| = √10 ⇒ cos = 5 / (√5√10) = 1/√2.",
-    "correctText": "Phương án A: 1/√2 (tức góc 45°)"
+    "exp": "• <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = 5; |<math><mover><mi>a</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>; |<math><mover><mi>b</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span> ⇒ cos = 5 / (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>) = 1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
+    "correctText": "Phương án A: 1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> (tức góc 45°)"
   },
   {
     "type": "mcq",
-    "q": "Tìm m để hai vectơ u⃗ = (m; 3) và v⃗ = (2; -4) vuông góc với nhau:",
+    "q": "Tìm m để hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (m; 3) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (2; -4) vuông góc với nhau:",
     "opts": [
       "m = 6",
       "m = -6",
@@ -1228,7 +1270,7 @@
   },
   {
     "type": "mcq",
-    "q": "Một công nhân tác dụng lực kéo F⃗ không đổi có độ lớn 120 N để kéo một thùng hàng di chuyển quãng đường s = 25 m trên sàn phẳng. Lực F⃗ hợp với hướng chuyển động góc 60°. Công cơ học thực hiện bởi lực kéo là:",
+    "q": "Một công nhân tác dụng lực kéo <math><mover><mi>F</mi><mo>→</mo></mover></math> không đổi có độ lớn 120 N để kéo một thùng hàng di chuyển quãng đường s = 25 m trên sàn phẳng. Lực <math><mover><mi>F</mi><mo>→</mo></mover></math> hợp với hướng chuyển động góc 60°. Công cơ học thực hiện bởi lực kéo là:",
     "opts": [
       "1.500 J",
       "3.000 J",
@@ -1241,7 +1283,7 @@
   },
   {
     "type": "mcq",
-    "q": "Một cần cẩu nâng một khối bê tông lên cao theo phương thẳng đứng với lực nâng F⃗ có độ lớn 8000 N, độ dời h = 10 m. Góc giữa lực nâng và hướng chuyển động là 0°. Công của lực nâng cần cẩu là:",
+    "q": "Một cần cẩu nâng một khối bê tông lên cao theo phương thẳng đứng với lực nâng <math><mover><mi>F</mi><mo>→</mo></mover></math> có độ lớn 8000 N, độ dời h = 10 m. Góc giữa lực nâng và hướng chuyển động là 0°. Công của lực nâng cần cẩu là:",
     "opts": [
       "80.000 J",
       "0 J",
@@ -1254,7 +1296,7 @@
   },
   {
     "type": "mcq",
-    "q": "Trong đồ họa máy tính 3D, kiểm tra xem bề mặt vật thể có quay về phía camera hay không bằng tích vô hướng giữa vectơ pháp tuyến mặt n⃗ và vectơ hướng nhìn v⃗. Nếu n⃗ = (0,6; 0,8) và v⃗ = (-0,8; 0,6) thì góc giữa hai vectơ là:",
+    "q": "Trong đồ họa máy tính 3D, kiểm tra xem bề mặt vật thể có quay về phía camera hay không bằng tích vô hướng giữa vectơ pháp tuyến mặt <math><mover><mi>n</mi><mo>→</mo></mover></math> và vectơ hướng nhìn <math><mover><mi>v</mi><mo>→</mo></mover></math>. Nếu <math><mover><mi>n</mi><mo>→</mo></mover></math> = (0,6; 0,8) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (-0,8; 0,6) thì góc giữa hai vectơ là:",
     "opts": [
       "90° (vuông góc, mặt phẳng nằm nghiêng tiếp tuyến góc nhìn)",
       "0°",
@@ -1262,7 +1304,7 @@
       "45°"
     ],
     "ans": 0,
-    "exp": "• n⃗ · v⃗ = 0,6(-0,8) + 0,8(0,6) = 0 ⇒ góc 90°.",
+    "exp": "• <math><mover><mi>n</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0,6(-0,8) + 0,8(0,6) = 0 ⇒ góc 90°.",
     "correctText": "Phương án A: 90° (vuông góc, mặt phẳng nằm nghiêng tiếp tuyến góc nhìn)"
   }
 ];

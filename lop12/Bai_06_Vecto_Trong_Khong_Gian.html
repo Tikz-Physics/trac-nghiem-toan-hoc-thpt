@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1062,33 +1104,33 @@
     const RAW_QUESTIONS = [
   {
     "type": "mcq",
-    "q": "Cho hình hộp ABCD.A'B'C'D'. Quy tắc hình hộp xác định vectơ đường chéo <span class=\"math-sym\">AC'</span> bằng tổng của ba vectơ nào có chung gốc A?",
+    "q": "Cho hình hộp ABCD.A'B'C'D'. Quy tắc hình hộp xác định vectơ đường chéo <math><mover><mi>AC'</mi><mo>→</mo></mover></math> bằng tổng của ba vectơ nào có chung gốc A?",
     "opts": [
-      "<span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span>",
-      "<span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">BC</span> + <span class=\"math-sym\">CD</span>",
-      "<span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">A'B'</span> + <span class=\"math-sym\">A'D'</span> + <span class=\"math-sym\">AA'</span>",
-      "<span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">AB</span> - <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span>"
+      "<math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>BC</mi><mo>→</mo></mover></math> + <math><mover><mi>CD</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>A'B'</mi><mo>→</mo></mover></math> + <math><mover><mi>A'D'</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>"
     ],
     "ans": 0,
-    "correctText": "Phương án A: <span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span>",
-    "exp": "• <b>Quy tắc hình hộp (SGK Toán 12):</b> Cho hình hộp ABCD.A'B'C'D'. Vectơ đường chéo xuất phát từ đỉnh A bằng tổng ba vectơ cạnh xuất phát từ đỉnh A:<br><span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span>."
+    "correctText": "Phương án A: <math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>",
+    "exp": "• <b>Quy tắc hình hộp (SGK Toán 12):</b> Cho hình hộp ABCD.A'B'C'D'. Vectơ đường chéo xuất phát từ đỉnh A bằng tổng ba vectơ cạnh xuất phát từ đỉnh A:<br><math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>."
   },
   {
     "type": "mcq",
-    "q": "Cho hình lập phương ABCD.A'B'C'D' có cạnh bằng a. Tính tích vô hướng <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">A'C'</span>.",
+    "q": "Cho hình lập phương ABCD.A'B'C'D' có cạnh bằng a. Tính tích vô hướng <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>A'C'</mi><mo>→</mo></mover></math>.",
     "opts": [
       "a²",
       "0",
-      "a²√2",
+      "a²<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>",
       "-a²"
     ],
     "ans": 0,
     "correctText": "Phương án A: a²",
-    "exp": "• Do A'B'C'D' là hình vuông cạnh a và <span class=\"math-sym\">A'C'</span> = <span class=\"math-sym\">AC</span> nên:<br><span class=\"math-sym\">AB</span> · <span class=\"math-sym\">A'C'</span> = <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AC</span> = |<span class=\"math-sym\">AB</span>| · |<span class=\"math-sym\">AC</span>| · cos(<span class=\"math-sym\">AB</span>, <span class=\"math-sym\">AC</span>).<br>• |<span class=\"math-sym\">AB</span>| = a, |<span class=\"math-sym\">AC</span>| = a√2, góc BAC = 45°.<br>• Tích vô hướng: a · a√2 · cos(45°) = a · a√2 · <span class=\"fraction\"><span class=\"numerator\">√2</span><span class=\"denominator\">2</span></span> = <b>a²</b>."
+    "exp": "• Do A'B'C'D' là hình vuông cạnh a và <math><mover><mi>A'C'</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math> nên:<br><math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>A'C'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math> = |<math><mover><mi>AB</mi><mo>→</mo></mover></math>| · |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| · cos(<math><mover><mi>AB</mi><mo>→</mo></mover></math>, <math><mover><mi>AC</mi><mo>→</mo></mover></math>).<br>• |<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = a, |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>, góc BAC = 45°.<br>• Tích vô hướng: a · a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> · cos(45°) = a · a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> · <span class=\"fraction\"><span class=\"numerator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span><span class=\"denominator\">2</span></span> = <b>a²</b>."
   },
   {
     "type": "mcq",
-    "q": "Cho tứ diện đều ABCD cạnh bằng a. Góc giữa hai vectơ <span class=\"math-sym\">AB</span> và <span class=\"math-sym\">CD</span> bằng bao nhiêu độ?",
+    "q": "Cho tứ diện đều ABCD cạnh bằng a. Góc giữa hai vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>CD</mi><mo>→</mo></mover></math> bằng bao nhiêu độ?",
     "opts": [
       "90°",
       "60°",
@@ -1097,16 +1139,16 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: 90°",
-    "exp": "• Ta tính tích vô hướng: <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">CD</span> = <span class=\"math-sym\">AB</span> · (<span class=\"math-sym\">AD</span> - <span class=\"math-sym\">AC</span>) = <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AD</span> - <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AC</span>.<br>• Vì tứ diện đều các mặt là tam giác đều cạnh a nên góc BAD = BAC = 60°:<br><span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AD</span> = a · a · cos 60° = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span>.<br><span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AC</span> = a · a · cos 60° = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span>.<br>• Do đó <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">CD</span> = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span> - <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span> = 0 ⇒ Hai vectơ vuông góc, góc giữa chúng bằng <b>90°</b>."
+    "exp": "• Ta tính tích vô hướng: <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>CD</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> · (<math><mover><mi>AD</mi><mo>→</mo></mover></math> - <math><mover><mi>AC</mi><mo>→</mo></mover></math>) = <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AD</mi><mo>→</mo></mover></math> - <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math>.<br>• Vì tứ diện đều các mặt là tam giác đều cạnh a nên góc BAD = BAC = 60°:<br><math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AD</mi><mo>→</mo></mover></math> = a · a · cos 60° = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span>.<br><math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math> = a · a · cos 60° = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span>.<br>• Do đó <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>CD</mi><mo>→</mo></mover></math> = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span> - <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span> = 0 ⇒ Hai vectơ vuông góc, góc giữa chúng bằng <b>90°</b>."
   },
   {
     "type": "tf",
     "q": "Cho hình hộp chữ nhật ABCD.A'B'C'D' có các cạnh AB = 3, AD = 4, AA' = 5. Xét tính Đúng/Sai của từng mệnh đề sau:",
     "stmts": [
-      "Vectơ tổng <span class=\"math-sym\">u</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span> bằng vectơ đường chéo <span class=\"math-sym\">AC'</span>.",
-      "Độ dài của đường chéo hình hộp chữ nhật là AC' = 5√2.",
-      "Tích vô hướng <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AD</span> = 0 do AB vuông góc với AD.",
-      "Góc giữa hai vectơ <span class=\"math-sym\">AC</span> và <span class=\"math-sym\">AA'</span> bằng 45°."
+      "Vectơ tổng <math><mover><mi>u</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math> bằng vectơ đường chéo <math><mover><mi>AC'</mi><mo>→</mo></mover></math>.",
+      "Độ dài của đường chéo hình hộp chữ nhật là AC' = 5<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
+      "Tích vô hướng <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AD</mi><mo>→</mo></mover></math> = 0 do AB vuông góc với AD.",
+      "Góc giữa hai vectơ <math><mover><mi>AC</mi><mo>→</mo></mover></math> và <math><mover><mi>AA'</mi><mo>→</mo></mover></math> bằng 45°."
     ],
     "ans": [
       true,
@@ -1115,7 +1157,7 @@
       false
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-    "exp": "• <b>Ý a [Đúng]:</b> Theo quy tắc hình hộp: <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span> = <span class=\"math-sym\">AC'</span>.<br>• <b>Ý b [Đúng]:</b> AC' = √(AB² + AD² + AA'²) = √(3² + 4² + 5²) = √(9 + 16 + 25) = √50 = 5√2.<br>• <b>Ý c [Đúng]:</b> Đáy là hình chữ nhật nên AB ⊥ AD ⇒ <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AD</span> = 0.<br>• <b>Ý d [Sai]:</b> Đường thẳng AA' vuông góc với mặt phẳng đáy (ABCD) nên AA' ⊥ AC ⇒ góc giữa <span class=\"math-sym\">AC</span> và <span class=\"math-sym\">AA'</span> bằng 90°, không phải 45°."
+    "exp": "• <b>Ý a [Đúng]:</b> Theo quy tắc hình hộp: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math> = <math><mover><mi>AC'</mi><mo>→</mo></mover></math>.<br>• <b>Ý b [Đúng]:</b> AC' = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">AB² + AD² + AA'²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 4² + 5²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">9 + 16 + 25</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">50</span></span> = 5<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.<br>• <b>Ý c [Đúng]:</b> Đáy là hình chữ nhật nên AB ⊥ AD ⇒ <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AD</mi><mo>→</mo></mover></math> = 0.<br>• <b>Ý d [Sai]:</b> Đường thẳng AA' vuông góc với mặt phẳng đáy (ABCD) nên AA' ⊥ AC ⇒ góc giữa <math><mover><mi>AC</mi><mo>→</mo></mover></math> và <math><mover><mi>AA'</mi><mo>→</mo></mover></math> bằng 90°, không phải 45°."
   },
   {
     "type": "match",
@@ -1144,12 +1186,12 @@
   {
     "type": "drag",
     "q": "Chọn thuật ngữ thích hợp điền vào chỗ trống để hoàn thiện định nghĩa ba vectơ đồng phẳng trong không gian:",
-    "text": "Trong không gian, ba vectơ được gọi là [blank] nếu các giá của chúng cùng [blank] với một mặt phẳng. Nếu có hai vectơ không cùng phương thì ba vectơ đồng phẳng khi và chỉ khi có các số m, n sao cho <span class=\"math-sym\">c</span> = [blank] + [blank].",
+    "text": "Trong không gian, ba vectơ được gọi là [blank] nếu các giá của chúng cùng [blank] với một mặt phẳng. Nếu có hai vectơ không cùng phương thì ba vectơ đồng phẳng khi và chỉ khi có các số m, n sao cho <math><mover><mi>c</mi><mo>→</mo></mover></math> = [blank] + [blank].",
     "words": [
       "đồng phẳng",
       "song song hoặc nằm trong",
-      "m<span class=\"math-sym\">a</span>",
-      "n<span class=\"math-sym\">b</span>",
+      "m<math><mover><mi>a</mi><mo>→</mo></mover></math>",
+      "n<math><mover><mi>b</mi><mo>→</mo></mover></math>",
       "cùng phương",
       "vuông góc"
     ],
@@ -1159,43 +1201,43 @@
       2,
       3
     ],
-    "correctText": "(1) đồng phẳng • (2) song song hoặc nằm trong • (3) m<span class=\"math-sym\">a</span> • (4) n<span class=\"math-sym\">b</span>",
-    "exp": "• <b>Định lý đồng phẳng (SGK Toán 12):</b> Ba vectơ đồng phẳng khi các giá của chúng cùng song song hoặc nằm trên một mặt phẳng. Điều kiện cần và đủ là một vectơ phân tích tuyến tính được qua hai vectơ kia: <span class=\"math-sym\">c</span> = m<span class=\"math-sym\">a</span> + n<span class=\"math-sym\">b</span>."
+    "correctText": "(1) đồng phẳng • (2) song song hoặc nằm trong • (3) m<math><mover><mi>a</mi><mo>→</mo></mover></math> • (4) n<math><mover><mi>b</mi><mo>→</mo></mover></math>",
+    "exp": "• <b>Định lý đồng phẳng (SGK Toán 12):</b> Ba vectơ đồng phẳng khi các giá của chúng cùng song song hoặc nằm trên một mặt phẳng. Điều kiện cần và đủ là một vectơ phân tích tuyến tính được qua hai vectơ kia: <math><mover><mi>c</mi><mo>→</mo></mover></math> = m<math><mover><mi>a</mi><mo>→</mo></mover></math> + n<math><mover><mi>b</mi><mo>→</mo></mover></math>."
   },
   {
     "type": "mcq",
-    "q": "Cho hình hộp chữ nhật ABCD.A'B'C'D' có kích thước AB = 2, AD = 3, AA' = 6. Tính độ dài vectơ tổng <span class=\"math-sym\">w</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span>.",
+    "q": "Cho hình hộp chữ nhật ABCD.A'B'C'D' có kích thước AB = 2, AD = 3, AA' = 6. Tính độ dài vectơ tổng <math><mover><mi>w</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>.",
     "opts": [
       "7",
       "11",
-      "√49",
-      "5√2"
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">49</span></span>",
+      "5<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>"
     ],
     "ans": 0,
     "correctText": "Phương án A: 7",
-    "exp": "• Theo quy tắc hình hộp: <span class=\"math-sym\">w</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span> = <span class=\"math-sym\">AC'</span>.<br>• Độ dài vectơ: |<span class=\"math-sym\">w</span>| = AC' = √(AB² + AD² + AA'²) = √(2² + 3² + 6²) = √(4 + 9 + 36) = √49 = <b>7</b>.",
+    "exp": "• Theo quy tắc hình hộp: <math><mover><mi>w</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math> = <math><mover><mi>AC'</mi><mo>→</mo></mover></math>.<br>• Độ dài vectơ: |<math><mover><mi>w</mi><mo>→</mo></mover></math>| = AC' = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">AB² + AD² + AA'²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + 3² + 6²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4 + 9 + 36</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">49</span></span> = <b>7</b>.",
     "svgGraph": "<svg viewBox=\"0 0 380 220\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arrowRed\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1 L 10 5 L 0 9 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect x=\"8\" y=\"8\" width=\"364\" height=\"204\" rx=\"10\" fill=\"rgba(15,23,42,0.95)\" stroke=\"#0ea5e9\" stroke-width=\"1.6\"/>\n  <!-- Bottom face ABCD -->\n  <polygon points=\"70,160 190,160 270,110 150,110\" fill=\"rgba(56,189,248,0.06)\" stroke=\"rgba(255,255,255,0.3)\" stroke-width=\"1.2\"/>\n  <!-- Top face A'B'C'D' -->\n  <polygon points=\"70,80 190,80 270,30 150,30\" fill=\"rgba(56,189,248,0.12)\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/>\n  <!-- Vertical edges -->\n  <line x1=\"70\" y1=\"160\" x2=\"70\" y2=\"80\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/>\n  <line x1=\"190\" y1=\"160\" x2=\"190\" y2=\"80\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/>\n  <line x1=\"270\" y1=\"110\" x2=\"270\" y2=\"30\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/>\n  <line x1=\"150\" y1=\"110\" x2=\"150\" y2=\"30\" stroke=\"rgba(255,255,255,0.3)\" stroke-dasharray=\"3,3\"/>\n  <!-- Hidden bottom edges -->\n  <line x1=\"150\" y1=\"110\" x2=\"70\" y2=\"160\" stroke=\"rgba(255,255,255,0.3)\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"150\" y1=\"110\" x2=\"270\" y2=\"110\" stroke=\"rgba(255,255,255,0.3)\" stroke-dasharray=\"3,3\"/>\n  <!-- Vector diagonal AC' -->\n  <line x1=\"70\" y1=\"160\" x2=\"266\" y2=\"33\" stroke=\"#f43f5e\" stroke-width=\"2.6\" marker-end=\"url(#arrowRed)\"/>\n  <!-- Labels -->\n  <text x=\"52\" y=\"172\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">A</text>\n  <text x=\"195\" y=\"172\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">B</text>\n  <text x=\"278\" y=\"115\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">C</text>\n  <text x=\"135\" y=\"108\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">D</text>\n  <text x=\"52\" y=\"75\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">A'</text>\n  <text x=\"195\" y=\"75\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">B'</text>\n  <text x=\"278\" y=\"28\" fill=\"#f43f5e\" font-size=\"14\" font-weight=\"900\">C'</text>\n  <text x=\"135\" y=\"28\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">D'</text>\n  <!-- Dimension labels -->\n  <text x=\"130\" y=\"175\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">AB = 2</text>\n  <text x=\"235\" y=\"145\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">AD = 3</text>\n  <text x=\"50\" y=\"125\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"700\" text-anchor=\"end\">AA' = 6</text>\n</svg>"
   },
   {
     "type": "mcq",
-    "q": "Cho hình chóp S.ABC có đáy ABC là tam giác đều cạnh a, cạnh bên SA ⊥ (ABC) và SA = a√3. Tính côsin góc giữa hai vectơ <span class=\"math-sym\">SB</span> và <span class=\"math-sym\">AB</span>.",
+    "q": "Cho hình chóp S.ABC có đáy ABC là tam giác đều cạnh a, cạnh bên SA ⊥ (ABC) và SA = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>. Tính côsin góc giữa hai vectơ <math><mover><mi>SB</mi><mo>→</mo></mover></math> và <math><mover><mi>AB</mi><mo>→</mo></mover></math>.",
     "opts": [
       "1/2",
-      "√3/2",
-      "√2/2",
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2",
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2",
       "1/4"
     ],
     "ans": 0,
     "correctText": "Phương án A: 1/2",
-    "exp": "• Tam giác SAB vuông tại A: SA = a√3, AB = a ⇒ SB = √(SA² + AB²) = √(3a² + a²) = 2a.<br>• Trong tam giác vuông SAB: cos(SBA) = <span class=\"fraction\"><span class=\"numerator\">AB</span><span class=\"denominator\">SB</span></span> = <span class=\"fraction\"><span class=\"numerator\">a</span><span class=\"denominator\">2a</span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span> (góc SBA = 60°).<br>• Góc giữa hai vectơ: (<span class=\"math-sym\">SB</span>, <span class=\"math-sym\">AB</span>) = 180° - SBA? Chú ý: <span class=\"math-sym\">BS</span> và <span class=\"math-sym\">BA</span> có chung gốc B, góc giữa chúng là góc SBA = 60°.<br>Vectơ <span class=\"math-sym\">SB</span> = -<span class=\"math-sym\">BS</span> ⇒ cos(<span class=\"math-sym\">SB</span>, <span class=\"math-sym\">AB</span>) = cos(-<span class=\"math-sym\">BS</span>, -<span class=\"math-sym\">BA</span>) = cos(<span class=\"math-sym\">BS</span>, <span class=\"math-sym\">BA</span>) = cos 60° = <b>1/2</b>."
+    "exp": "• Tam giác SAB vuông tại A: SA = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>, AB = a ⇒ SB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">SA² + AB²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3a² + a²</span></span> = 2a.<br>• Trong tam giác vuông SAB: cos(SBA) = <span class=\"fraction\"><span class=\"numerator\">AB</span><span class=\"denominator\">SB</span></span> = <span class=\"fraction\"><span class=\"numerator\">a</span><span class=\"denominator\">2a</span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span> (góc SBA = 60°).<br>• Góc giữa hai vectơ: (<math><mover><mi>SB</mi><mo>→</mo></mover></math>, <math><mover><mi>AB</mi><mo>→</mo></mover></math>) = 180° - SBA? Chú ý: <math><mover><mi>BS</mi><mo>→</mo></mover></math> và <math><mover><mi>BA</mi><mo>→</mo></mover></math> có chung gốc B, góc giữa chúng là góc SBA = 60°.<br>Vectơ <math><mover><mi>SB</mi><mo>→</mo></mover></math> = -<math><mover><mi>BS</mi><mo>→</mo></mover></math> ⇒ cos(<math><mover><mi>SB</mi><mo>→</mo></mover></math>, <math><mover><mi>AB</mi><mo>→</mo></mover></math>) = cos(-<math><mover><mi>BS</mi><mo>→</mo></mover></math>, -<math><mover><mi>BA</mi><mo>→</mo></mover></math>) = cos(<math><mover><mi>BS</mi><mo>→</mo></mover></math>, <math><mover><mi>BA</mi><mo>→</mo></mover></math>) = cos 60° = <b>1/2</b>."
   },
   {
     "type": "tf",
     "q": "Một chiếc đèn chùm trang trí có khối lượng 12 kg (trọng lực P ≈ 120 N) được treo cân bằng dưới trần nhà bằng 3 sợi dây cáp thép không giãn có chiều dài bằng nhau. Ba đầu dây gắn vào trần nhà tại 3 điểm A, B, C tạo thành tam giác đều cạnh 1,2 m. Đèn ở điểm S cách đều A, B, C và khoảng cách thẳng đứng từ S lên trần nhà là h = 0,8 m. Xét tính Đúng/Sai của từng mệnh đề sau:",
     "stmts": [
       "Ba lực căng dây <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">A</sub>, <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">B</sub>, <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">C</sub> có độ lớn bằng nhau do tính đối xứng.",
-      "Hệ lực tác dụng lên đèn cân bằng: <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">A</sub> + <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">B</sub> + <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">C</sub> + <span class=\"math-sym\">P</span> = <span class=\"math-sym\">0</span>.",
-      "Khoảng cách từ tâm trần nhà O đến mỗi điểm buộc cáp là R = <span class=\"fraction\"><span class=\"numerator\">1,2√3</span><span class=\"denominator\">3</span></span> ≈ 0,693 m.",
+      "Hệ lực tác dụng lên đèn cân bằng: <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">A</sub> + <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">B</sub> + <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">C</sub> + <span class=\"math-sym\">P</span> = <math><mover><mn>0</mn><mo>→</mo></mover></math>.",
+      "Khoảng cách từ tâm trần nhà O đến mỗi điểm buộc cáp là R = <span class=\"fraction\"><span class=\"numerator\">1,2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></span><span class=\"denominator\">3</span></span> ≈ 0,693 m.",
       "Độ lớn lực căng trên mỗi sợi dây cáp lớn hơn 100 N."
     ],
     "ans": [
@@ -1205,7 +1247,7 @@
       false
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-    "exp": "• <b>Ý a [Đúng]:</b> Do tam giác đều và đỉnh S cách đều 3 đỉnh nên độ lớn T_A = T_B = T_C = T.<br>• <b>Ý b [Đúng]:</b> Trạng thái cân bằng tĩnh: tổng lực tác dụng bằng 0.<br>• <b>Ý c [Đúng]:</b> Bán kính đường tròn ngoại tiếp tam giác đều cạnh a = 1,2 m là R = a√3/3 = 1,2√3/3 ≈ 0,693 m.<br>• <b>Ý d [Sai]:</b> Độ dài dây treo: L = √(h² + R²) = √(0,8² + 0,693²) = √(0,64 + 0,48) = √1,12 ≈ 1,058 m. Góc hợp bởi dây và phương thẳng đứng: cos α = h/L = 0,8 / 1,058 ≈ 0,756. Chiếu phương thẳng đứng: 3T · cos α = P ⇒ 3T(0,756) = 120 ⇒ T ≈ 120 / 2,268 ≈ 52,9 N (< 100 N)."
+    "exp": "• <b>Ý a [Đúng]:</b> Do tam giác đều và đỉnh S cách đều 3 đỉnh nên độ lớn T_A = T_B = T_C = T.<br>• <b>Ý b [Đúng]:</b> Trạng thái cân bằng tĩnh: tổng lực tác dụng bằng 0.<br>• <b>Ý c [Đúng]:</b> Bán kính đường tròn ngoại tiếp tam giác đều cạnh a = 1,2 m là R = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/3 = 1,2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/3 ≈ 0,693 m.<br>• <b>Ý d [Sai]:</b> Độ dài dây treo: L = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">h² + R²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">0,8² + 0,693²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">0,64 + 0,48</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1,12</span></span> ≈ 1,058 m. Góc hợp bởi dây và phương thẳng đứng: cos α = h/L = 0,8 / 1,058 ≈ 0,756. Chiếu phương thẳng đứng: 3T · cos α = P ⇒ 3T(0,756) = 120 ⇒ T ≈ 120 / 2,268 ≈ 52,9 N (< 100 N)."
   },
   {
     "type": "mcq",
@@ -1218,7 +1260,7 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: 815,5 km/h",
-    "exp": "• Chọn hệ trục 3 chiều vuông góc: hướng Đông (trục Ox), hướng Bắc (trục Oy), hướng thẳng đứng (trục Oz).<br>• Vectơ vận tốc tổng hợp của máy bay: <span class=\"math-sym\">v</span> = (150; 800; 50).<br>• Tốc độ thực tế so với mặt đất: |<span class=\"math-sym\">v</span>| = √(150² + 800² + 50²) = √(22500 + 640000 + 2500) = √665000 ≈ <b>815,5 km/h</b>."
+    "exp": "• Chọn hệ trục 3 chiều vuông góc: hướng Đông (trục Ox), hướng Bắc (trục Oy), hướng thẳng đứng (trục Oz).<br>• Vectơ vận tốc tổng hợp của máy bay: <math><mover><mi>v</mi><mo>→</mo></mover></math> = (150; 800; 50).<br>• Tốc độ thực tế so với mặt đất: |<math><mover><mi>v</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">150² + 800² + 50²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">22500 + 640000 + 2500</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">665000</span></span> ≈ <b>815,5 km/h</b>."
   }
 ];
 

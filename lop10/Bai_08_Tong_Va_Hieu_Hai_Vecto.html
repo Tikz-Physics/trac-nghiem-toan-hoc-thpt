@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1064,14 +1106,14 @@
     "type": "mcq",
     "q": "Quy tắc 3 điểm đối với phép cộng vectơ khẳng định rằng với 3 điểm A, B, C bất kì ta luôn có:",
     "opts": [
-      "AB⃗ + BC⃗ = AC⃗",
-      "AB⃗ + AC⃗ = BC⃗",
-      "AB⃗ - BC⃗ = AC⃗",
-      "AB⃗ + BC⃗ = CA⃗"
+      "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>BC</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>BC</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>BC</mi><mo>→</mo></mover></math> = <math><mover><mi>CA</mi><mo>→</mo></mover></math>"
     ],
     "ans": 0,
-    "exp": "• Quy tắc 3 điểm (nối đuôi): AB⃗ + BC⃗ = AC⃗.",
-    "correctText": "Phương án A: AB⃗ + BC⃗ = AC⃗"
+    "exp": "• Quy tắc 3 điểm (nối đuôi): <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>BC</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>.",
+    "correctText": "Phương án A: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>BC</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>"
   },
   {
     "type": "match",
@@ -1079,19 +1121,19 @@
     "pairs": [
       {
         "a": "1. Quy tắc hình bình hành ABCD",
-        "b": "A. AB⃗ + AD⃗ = AC⃗"
+        "b": "A. <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>"
       },
       {
         "a": "2. Quy tắc trừ (chung gốc)",
-        "b": "B. OB⃗ - OA⃗ = AB⃗"
+        "b": "B. <math><mover><mi>OB</mi><mo>→</mo></mover></math> - <math><mover><mi>OA</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math>"
       },
       {
         "a": "3. Tính chất trung điểm I của đoạn AB",
-        "b": "C. IA⃗ + IB⃗ = 0⃗"
+        "b": "C. <math><mover><mi>IA</mi><mo>→</mo></mover></math> + <math><mover><mi>IB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>"
       },
       {
         "a": "4. Tính chất trọng tâm G tam giác ABC",
-        "b": "D. GA⃗ + GB⃗ + GC⃗ = 0⃗"
+        "b": "D. <math><mover><mi>GA</mi><mo>→</mo></mover></math> + <math><mover><mi>GB</mi><mo>→</mo></mover></math> + <math><mover><mi>GC</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>"
       }
     ],
     "ans": {
@@ -1100,7 +1142,7 @@
       "3": "C",
       "4": "D"
     },
-    "exp": "• Hình bình hành: AB⃗ + AD⃗ = AC⃗.<br>• Phép trừ: OB⃗ - OA⃗ = AB⃗.<br>• Trung điểm: IA⃗ + IB⃗ = 0⃗.<br>• Trọng tâm: GA⃗ + GB⃗ + GC⃗ = 0⃗.",
+    "exp": "• Hình bình hành: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>.<br>• Phép trừ: <math><mover><mi>OB</mi><mo>→</mo></mover></math> - <math><mover><mi>OA</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math>.<br>• Trung điểm: <math><mover><mi>IA</mi><mo>→</mo></mover></math> + <math><mover><mi>IB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>.<br>• Trọng tâm: <math><mover><mi>GA</mi><mo>→</mo></mover></math> + <math><mover><mi>GB</mi><mo>→</mo></mover></math> + <math><mover><mi>GC</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>.",
     "colA": [
       "Quy tắc hình bình hành ABCD",
       "Quy tắc trừ (chung gốc)",
@@ -1108,10 +1150,10 @@
       "Tính chất trọng tâm G tam giác ABC"
     ],
     "colB": [
-      "AB⃗ + AD⃗ = AC⃗",
-      "OB⃗ - OA⃗ = AB⃗",
-      "IA⃗ + IB⃗ = 0⃗",
-      "GA⃗ + GB⃗ + GC⃗ = 0⃗"
+      "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>OB</mi><mo>→</mo></mover></math> - <math><mover><mi>OA</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>IA</mi><mo>→</mo></mover></math> + <math><mover><mi>IB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>",
+      "<math><mover><mi>GA</mi><mo>→</mo></mover></math> + <math><mover><mi>GB</mi><mo>→</mo></mover></math> + <math><mover><mi>GC</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>"
     ],
     "correctText": "1-A • 2-B • 3-C • 4-D"
   },
@@ -1120,31 +1162,31 @@
     "q": "Cho hình vuông ABCD cạnh a tâm O. Xét tính đúng - sai:",
     "items": [
       {
-        "text": "AB⃗ + AD⃗ = AC⃗.",
+        "text": "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>.",
         "ans": true,
-        "exp": "Theo quy tắc hình bình hành: AB⃗ + AD⃗ = AC⃗ (Đúng)."
+        "exp": "Theo quy tắc hình bình hành: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math> (Đúng)."
       },
       {
-        "text": "Độ dài |AB⃗ + AD⃗| = a√2.",
+        "text": "Độ dài |<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math>| = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
         "ans": true,
-        "exp": "|AB⃗ + AD⃗| = |AC⃗| = AC = a√2 (Đúng)."
+        "exp": "|<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math>| = |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| = AC = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> (Đúng)."
       },
       {
-        "text": "AB⃗ - AD⃗ = DB⃗.",
+        "text": "<math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>DB</mi><mo>→</mo></mover></math>.",
         "ans": true,
-        "exp": "AB⃗ - AD⃗ = DB⃗ (theo quy tắc trừ chung gốc A) (Đúng)."
+        "exp": "<math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>DB</mi><mo>→</mo></mover></math> (theo quy tắc trừ chung gốc A) (Đúng)."
       },
       {
-        "text": "OA⃗ + OB⃗ + OC⃗ + OD⃗ = a√2.",
+        "text": "<math><mover><mi>OA</mi><mo>→</mo></mover></math> + <math><mover><mi>OB</mi><mo>→</mo></mover></math> + <math><mover><mi>OC</mi><mo>→</mo></mover></math> + <math><mover><mi>OD</mi><mo>→</mo></mover></math> = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
         "ans": false,
-        "exp": "OA⃗ + OC⃗ = 0⃗ và OB⃗ + OD⃗ = 0⃗, tổng là 0⃗, độ dài bằng 0 (Sai)."
+        "exp": "<math><mover><mi>OA</mi><mo>→</mo></mover></math> + <math><mover><mi>OC</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math> và <math><mover><mi>OB</mi><mo>→</mo></mover></math> + <math><mover><mi>OD</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>, tổng là <math><mover><mn>0</mn><mo>→</mo></mover></math>, độ dài bằng 0 (Sai)."
       }
     ],
     "stmts": [
-      "AB⃗ + AD⃗ = AC⃗.",
-      "Độ dài |AB⃗ + AD⃗| = a√2.",
-      "AB⃗ - AD⃗ = DB⃗.",
-      "OA⃗ + OB⃗ + OC⃗ + OD⃗ = a√2."
+      "<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>.",
+      "Độ dài |<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math>| = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
+      "<math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>DB</mi><mo>→</mo></mover></math>.",
+      "<math><mover><mi>OA</mi><mo>→</mo></mover></math> + <math><mover><mi>OB</mi><mo>→</mo></mover></math> + <math><mover><mi>OC</mi><mo>→</mo></mover></math> + <math><mover><mi>OD</mi><mo>→</mo></mover></math> = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>."
     ],
     "ans": [
       true,
@@ -1152,56 +1194,56 @@
       true,
       false
     ],
-    "exp": "• <b>Ý a) [Đúng]:</b> Theo quy tắc hình bình hành: AB⃗ + AD⃗ = AC⃗ (Đúng).<br>• <b>Ý b) [Đúng]:</b> |AB⃗ + AD⃗| = |AC⃗| = AC = a√2 (Đúng).<br>• <b>Ý c) [Đúng]:</b> AB⃗ - AD⃗ = DB⃗ (theo quy tắc trừ chung gốc A) (Đúng).<br>• <b>Ý d) [Sai]:</b> OA⃗ + OC⃗ = 0⃗ và OB⃗ + OD⃗ = 0⃗, tổng là 0⃗, độ dài bằng 0 (Sai).",
+    "exp": "• <b>Ý a) [Đúng]:</b> Theo quy tắc hình bình hành: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý b) [Đúng]:</b> |<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math>| = |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| = AC = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> (Đúng).<br>• <b>Ý c) [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>DB</mi><mo>→</mo></mover></math> (theo quy tắc trừ chung gốc A) (Đúng).<br>• <b>Ý d) [Sai]:</b> <math><mover><mi>OA</mi><mo>→</mo></mover></math> + <math><mover><mi>OC</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math> và <math><mover><mi>OB</mi><mo>→</mo></mover></math> + <math><mover><mi>OD</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>, tổng là <math><mover><mn>0</mn><mo>→</mo></mover></math>, độ dài bằng 0 (Sai).",
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
   },
   {
     "type": "mcq",
-    "q": "Cho tam giác ABC đều cạnh a. Độ dài của tổng vectơ |AB⃗ + AC⃗| bằng:",
+    "q": "Cho tam giác ABC đều cạnh a. Độ dài của tổng vectơ |<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math>| bằng:",
     "opts": [
-      "a√3",
+      "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>",
       "2a",
       "a",
-      "a√3/2"
+      "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2"
     ],
     "ans": 0,
-    "exp": "• Gọi M là trung điểm BC thì AB⃗ + AC⃗ = 2AM⃗.<br>• Trong tam giác đều cạnh a, đường cao AM = a√3/2.<br>• Độ dài: |AB⃗ + AC⃗| = 2 · (a√3/2) = a√3.",
-    "correctText": "Phương án A: a√3"
+    "exp": "• Gọi M là trung điểm BC thì <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math> = 2<math><mover><mi>AM</mi><mo>→</mo></mover></math>.<br>• Trong tam giác đều cạnh a, đường cao AM = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2.<br>• Độ dài: |<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math>| = 2 · (a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2) = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>.",
+    "correctText": "Phương án A: a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
   },
   {
     "type": "drag",
     "q": "Kéo các kết quả chính xác vào vị trí biểu thức:",
     "slots": [
-      "2MI⃗",
-      "3MG⃗",
-      "2a⃗"
+      "2<math><mover><mi>MI</mi><mo>→</mo></mover></math>",
+      "3<math><mover><mi>MG</mi><mo>→</mo></mover></math>",
+      "2<math><mover><mi>a</mi><mo>→</mo></mover></math>"
     ],
     "pool": [
-      "2MI⃗",
-      "3MG⃗",
-      "2a⃗",
-      "0⃗",
-      "MG⃗"
+      "2<math><mover><mi>MI</mi><mo>→</mo></mover></math>",
+      "3<math><mover><mi>MG</mi><mo>→</mo></mover></math>",
+      "2<math><mover><mi>a</mi><mo>→</mo></mover></math>",
+      "<math><mover><mn>0</mn><mo>→</mo></mover></math>",
+      "<math><mover><mi>MG</mi><mo>→</mo></mover></math>"
     ],
-    "exp": "• MA⃗ + MB⃗ = 2MI⃗.<br>• MA⃗ + MB⃗ + MC⃗ = 3MG⃗.<br>• a⃗ - (-a⃗) = a⃗ + a⃗ = 2a⃗.",
-    "sentence": "• Với điểm M bất kì và I là trung điểm AB: MA⃗ + MB⃗ = %%%SLOT_1%%%.<br>• Với điểm M bất kì và G là trọng tâm tam giác ABC: MA⃗ + MB⃗ + MC⃗ = %%%SLOT_2%%%.<br>• Hiệu hai vectơ đối nhau a⃗ - (-a⃗) = %%%SLOT_3%%%.",
+    "exp": "• <math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> = 2<math><mover><mi>MI</mi><mo>→</mo></mover></math>.<br>• <math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> + <math><mover><mi>MC</mi><mo>→</mo></mover></math> = 3<math><mover><mi>MG</mi><mo>→</mo></mover></math>.<br>• <math><mover><mi>a</mi><mo>→</mo></mover></math> - (-<math><mover><mi>a</mi><mo>→</mo></mover></math>) = <math><mover><mi>a</mi><mo>→</mo></mover></math> + <math><mover><mi>a</mi><mo>→</mo></mover></math> = 2<math><mover><mi>a</mi><mo>→</mo></mover></math>.",
+    "sentence": "• Với điểm M bất kì và I là trung điểm AB: <math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> = %%%SLOT_1%%%.<br>• Với điểm M bất kì và G là trọng tâm tam giác ABC: <math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> + <math><mover><mi>MC</mi><mo>→</mo></mover></math> = %%%SLOT_2%%%.<br>• Hiệu hai vectơ đối nhau <math><mover><mi>a</mi><mo>→</mo></mover></math> - (-<math><mover><mi>a</mi><mo>→</mo></mover></math>) = %%%SLOT_3%%%.",
     "words": [
-      "2MI⃗",
-      "3MG⃗",
-      "2a⃗",
-      "0⃗",
-      "MG⃗"
+      "2<math><mover><mi>MI</mi><mo>→</mo></mover></math>",
+      "3<math><mover><mi>MG</mi><mo>→</mo></mover></math>",
+      "2<math><mover><mi>a</mi><mo>→</mo></mover></math>",
+      "<math><mover><mn>0</mn><mo>→</mo></mover></math>",
+      "<math><mover><mi>MG</mi><mo>→</mo></mover></math>"
     ],
     "ans": [
-      "2MI⃗",
-      "3MG⃗",
-      "2a⃗"
+      "2<math><mover><mi>MI</mi><mo>→</mo></mover></math>",
+      "3<math><mover><mi>MG</mi><mo>→</mo></mover></math>",
+      "2<math><mover><mi>a</mi><mo>→</mo></mover></math>"
     ],
-    "correctText": "(1) 2MI⃗ • (2) 3MG⃗ • (3) 2a⃗"
+    "correctText": "(1) 2<math><mover><mi>MI</mi><mo>→</mo></mover></math> • (2) 3<math><mover><mi>MG</mi><mo>→</mo></mover></math> • (3) 2<math><mover><mi>a</mi><mo>→</mo></mover></math>"
   },
   {
     "type": "mcq",
-    "q": "Cho hình chữ nhật ABCD có AB = 3, BC = 4. Độ dài của vectơ AB⃗ + AD⃗ là:",
+    "q": "Cho hình chữ nhật ABCD có AB = 3, BC = 4. Độ dài của vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> là:",
     "opts": [
       "5",
       "7",
@@ -1209,12 +1251,12 @@
       "25"
     ],
     "ans": 0,
-    "exp": "• Theo quy tắc hình bình hành: AB⃗ + AD⃗ = AC⃗.<br>• Độ dài: AC = √(AB² + BC²) = √(3² + 4²) = 5.",
+    "exp": "• Theo quy tắc hình bình hành: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math>.<br>• Độ dài: AC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">AB² + BC²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 4²</span></span> = 5.",
     "correctText": "Phương án A: 5"
   },
   {
     "type": "mcq",
-    "q": "Cho hai vectơ a⃗ và b⃗ vuông góc với nhau và có độ lớn |a⃗| = 6, |b⃗| = 8. Độ lớn của vectơ tổng |a⃗ + b⃗| là:",
+    "q": "Cho hai vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> và <math><mover><mi>b</mi><mo>→</mo></mover></math> vuông góc với nhau và có độ lớn |<math><mover><mi>a</mi><mo>→</mo></mover></math>| = 6, |<math><mover><mi>b</mi><mo>→</mo></mover></math>| = 8. Độ lớn của vectơ tổng |<math><mover><mi>a</mi><mo>→</mo></mover></math> + <math><mover><mi>b</mi><mo>→</mo></mover></math>| là:",
     "opts": [
       "10",
       "14",
@@ -1222,13 +1264,13 @@
       "48"
     ],
     "ans": 0,
-    "exp": "• Do a⃗ ⊥ b⃗ nên |a⃗ + b⃗|² = 6² + 8² = 100 ⇒ |a⃗ + b⃗| = 10.",
+    "exp": "• Do <math><mover><mi>a</mi><mo>→</mo></mover></math> ⊥ <math><mover><mi>b</mi><mo>→</mo></mover></math> nên |<math><mover><mi>a</mi><mo>→</mo></mover></math> + <math><mover><mi>b</mi><mo>→</mo></mover></math>|² = 6² + 8² = 100 ⇒ |<math><mover><mi>a</mi><mo>→</mo></mover></math> + <math><mover><mi>b</mi><mo>→</mo></mover></math>| = 10.",
     "correctText": "Phương án A: 10",
     "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <line x1=\"120\" y1=\"170\" x2=\"270\" y2=\"170\" stroke=\"#38bdf8\" stroke-width=\"2.5\" marker-end=\"url(#arrCyan)\"/>\n  <text x=\"195\" y=\"192\" fill=\"#38bdf8\" font-size=\"14\" font-weight=\"800\">a⃗ (|a⃗| = 6)</text>\n  \n  <line x1=\"120\" y1=\"170\" x2=\"120\" y2=\"50\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arrGreen)\"/>\n  <text x=\"65\" y=\"110\" fill=\"#34d399\" font-size=\"14\" font-weight=\"800\">b⃗ (|b⃗| = 8)</text>\n  \n  <rect x=\"120\" y=\"152\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"#fbbf24\" stroke-width=\"1.5\"/>\n  \n  <line x1=\"270\" y1=\"170\" x2=\"270\" y2=\"50\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"120\" y1=\"50\" x2=\"270\" y2=\"50\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"4,4\"/>\n  \n  <line x1=\"120\" y1=\"170\" x2=\"265\" y2=\"54\" stroke=\"#f43f5e\" stroke-width=\"3\" marker-end=\"url(#arrRose)\"/>\n  <text x=\"210\" y=\"95\" fill=\"#f43f5e\" font-size=\"14\" font-weight=\"800\">vectơ tổng a⃗ + b⃗</text>\n\n</svg>"
   },
   {
     "type": "mcq",
-    "q": "Hai lực F₁⃗ và F₂⃗ cùng tác dụng vào một chất điểm tại điểm O, có độ lớn |F₁⃗| = 40 N và |F₂⃗| = 30 N, hai lực hợp với nhau một góc 90°. Hợp lực F⃗ = F₁⃗ + F₂⃗ có độ lớn là:",
+    "q": "Hai lực <math><mover><mi>F₁</mi><mo>→</mo></mover></math> và <math><mover><mi>F₂</mi><mo>→</mo></mover></math> cùng tác dụng vào một chất điểm tại điểm O, có độ lớn |<math><mover><mi>F₁</mi><mo>→</mo></mover></math>| = 40 N và |<math><mover><mi>F₂</mi><mo>→</mo></mover></math>| = 30 N, hai lực hợp với nhau một góc 90°. Hợp lực <math><mover><mi>F</mi><mo>→</mo></mover></math> = <math><mover><mi>F₁</mi><mo>→</mo></mover></math> + <math><mover><mi>F₂</mi><mo>→</mo></mover></math> có độ lớn là:",
     "opts": [
       "50 N",
       "70 N",

@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1187,7 +1229,7 @@
   },
   {
     "type": "tf",
-    "q": "Một bệnh viện dùng xét nghiệm nhanh để tầm soát một loại bệnh hiếm trong cộng đồng. Tỷ lệ người mắc bệnh trong cộng đồng là 1% (P(B) = 0,01). Nếu một người mắc bệnh, xét nghiệm cho kết quả Dương tính (+) với xác suất 98% (P(+|B) = 0,98). Nếu người không mắc bệnh, xét nghiệm vẫn cho kết quả Dương tính giả với xác suất 2% (P(+|B̄) = 0,02). Chọn ngẫu nhiên 1 người đi xét nghiệm. Xét tính Đúng/Sai của từng mệnh đề sau:",
+    "q": "Một bệnh viện dùng xét nghiệm nhanh để tầm soát một loại bệnh hiếm trong cộng đồng. Tỷ lệ người mắc bệnh trong cộng đồng là 1% (P(B) = 0,01). Nếu một người mắc bệnh, xét nghiệm cho kết quả Dương tính (+) với xác suất 98% (P(+|B) = 0,98). Nếu người không mắc bệnh, xét nghiệm vẫn cho kết quả Dương tính giả với xác suất 2% (P(+|<math><mover><mi>B</mi><mo>¯</mo></mover></math>) = 0,02). Chọn ngẫu nhiên 1 người đi xét nghiệm. Xét tính Đúng/Sai của từng mệnh đề sau:",
     "stmts": [
       "Xác suất để một người bất kì nhận kết quả xét nghiệm Dương tính là P(+) = 0,0296.",
       "Trong các kết quả xét nghiệm Dương tính, tỷ lệ dương tính giả chiếm hơn 65%.",

@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1118,7 +1160,7 @@
   {
     "type": "tf",
     "q": "Cho sin a = 3/5 với 0 < a < π/2. Xét tính đúng - sai:",
-    "exp": "• <b>Ý a) [Đúng]:</b> cos a = √(1 - 9/25) = 4/5 (vì 0 < a < π/2) (Đúng).<br>• <b>Ý b) [Đúng]:</b> sin 2a = 2 · (3/5) · (4/5) = 24/25 (Đúng).<br>• <b>Ý c) [Đúng]:</b> cos 2a = cos² a - sin² a = 16/25 - 9/25 = 7/25 (Đúng).<br>• <b>Ý d) [Đúng]:</b> tan 2a = sin 2a / cos 2a = (24/25) / (7/25) = 24/7 (Đúng).",
+    "exp": "• <b>Ý a) [Đúng]:</b> cos a = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1 - 9/25</span></span> = 4/5 (vì 0 < a < π/2) (Đúng).<br>• <b>Ý b) [Đúng]:</b> sin 2a = 2 · (3/5) · (4/5) = 24/25 (Đúng).<br>• <b>Ý c) [Đúng]:</b> cos 2a = cos² a - sin² a = 16/25 - 9/25 = 7/25 (Đúng).<br>• <b>Ý d) [Đúng]:</b> tan 2a = sin 2a / cos 2a = (24/25) / (7/25) = 24/7 (Đúng).",
     "stmts": [
       "cos a = 4/5.",
       "sin 2a = 24/25.",
@@ -1135,7 +1177,7 @@
       {
         "text": "cos a = 4/5.",
         "ans": true,
-        "exp": "cos a = √(1 - 9/25) = 4/5 (vì 0 < a < π/2) (Đúng)."
+        "exp": "cos a = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1 - 9/25</span></span> = 4/5 (vì 0 < a < π/2) (Đúng)."
       },
       {
         "text": "sin 2a = 24/25.",
@@ -1158,15 +1200,15 @@
   {
     "type": "mcq",
     "q": "Giá trị chính xác của sin 15° = sin(45° - 30°) là:",
-    "exp": "• sin(45° - 30°) = sin 45° cos 30° - cos 45° sin 30° = (√2/2)(√3/2) - (√2/2)(1/2) = (√6 - √2)/4.",
+    "exp": "• sin(45° - 30°) = sin 45° cos 30° - cos 45° sin 30° = (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2)(<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2) - (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2)(1/2) = (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span> - <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>)/4.",
     "opts": [
-      "(√6 - √2) / 4",
-      "(√6 + √2) / 4",
-      "√2 / 4",
+      "(<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span> - <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>) / 4",
+      "(<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span> + <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>) / 4",
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> / 4",
       "1/2"
     ],
     "ans": 0,
-    "correctText": "Phương án A: (√6 - √2) / 4"
+    "correctText": "Phương án A: (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span> - <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>) / 4"
   },
   {
     "type": "drag",
@@ -1242,15 +1284,15 @@
   {
     "type": "mcq",
     "q": "Khi hai sóng âm cùng tần số f = 440 Hz (nốt La chuẩn) giao thoa với nhau: y₁(t) = A cos(ωt) và y₂(t) = A cos(ωt + φ). Sóng tổng hợp có biên độ là A_th = 2A · |cos(φ/2)|. Nếu góc lệch pha φ = π/3 thì biên độ sóng tổng hợp bằng:",
-    "exp": "• A_th = 2A · cos(π/6) = 2A · (√3/2) = A√3.",
+    "exp": "• A_th = 2A · cos(π/6) = 2A · (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2) = A<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>.",
     "opts": [
-      "A√3",
+      "A<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>",
       "2A",
       "A",
       "0"
     ],
     "ans": 0,
-    "correctText": "Phương án A: A√3"
+    "correctText": "Phương án A: A<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
   },
   {
     "type": "mcq",

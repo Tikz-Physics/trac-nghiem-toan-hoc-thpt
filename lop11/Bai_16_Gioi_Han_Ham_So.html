@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1171,8 +1213,8 @@
   {
     "type": "drag",
     "q": "Kéo kết quả giới hạn thích hợp vào chỗ trống:",
-    "exp": "• Nhân liên hợp: x / [x(√(x+4)+2)] = 1/4.<br>• 1/x² → 0.<br>• -2 / (0⁻) = +∞.",
-    "sentence": "• lim_(x → 0) <span class=\"fraction\"><span class=\"numerator\">√(x + 4) - 2</span><span class=\"denominator\">x</span></span> = %%%SLOT_1%%%.<br>• lim_(x → +∞) <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x²</span></span> = %%%SLOT_2%%%.<br>• lim_(x → 1⁻) <span class=\"fraction\"><span class=\"numerator\">-2</span><span class=\"denominator\">x - 1</span></span> = %%%SLOT_3%%%.",
+    "exp": "• Nhân liên hợp: x / [x(<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x+4</span></span>+2)] = 1/4.<br>• 1/x² → 0.<br>• -2 / (0⁻) = +∞.",
+    "sentence": "• lim_(x → 0) <span class=\"fraction\"><span class=\"numerator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x + 4</span></span> - 2</span><span class=\"denominator\">x</span></span> = %%%SLOT_1%%%.<br>• lim_(x → +∞) <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">x²</span></span> = %%%SLOT_2%%%.<br>• lim_(x → 1⁻) <span class=\"fraction\"><span class=\"numerator\">-2</span><span class=\"denominator\">x - 1</span></span> = %%%SLOT_3%%%.",
     "words": [
       "1/4",
       "0",
@@ -1201,8 +1243,8 @@
   },
   {
     "type": "mcq",
-    "q": "Tính giới hạn lim_(x → -∞) <span class=\"fraction\"><span class=\"numerator\">√(4x² + 1)</span><span class=\"denominator\">x + 1</span></span>:",
-    "exp": "• Khi x → -∞, √(x²) = |x| = -x.<br>• Tử số = -x √(4 + 1/x²). Mẫu số = x(1 + 1/x).<br>• Giới hạn: -√4 / 1 = -2.",
+    "q": "Tính giới hạn lim_(x → -∞) <span class=\"fraction\"><span class=\"numerator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4x² + 1</span></span></span><span class=\"denominator\">x + 1</span></span>:",
+    "exp": "• Khi x → -∞, <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x²</span></span> = |x| = -x.<br>• Tử số = -x <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4 + 1/x²</span></span>. Mẫu số = x(1 + 1/x).<br>• Giới hạn: -<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4</span></span> / 1 = -2.",
     "opts": [
       "-2",
       "2",
@@ -1254,7 +1296,7 @@
   },
   {
     "type": "mcq",
-    "q": "Chi phí trung bình để sản xuất x đơn vị sản phẩm là C̄(x) = (5000 + 20x) / x (nghìn đồng/sản phẩm). Khi quy mô sản xuất mở rộng vô hạn (x → +∞), chi phí trung bình trên mỗi sản phẩm tiến về:",
+    "q": "Chi phí trung bình để sản xuất x đơn vị sản phẩm là <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) = (5000 + 20x) / x (nghìn đồng/sản phẩm). Khi quy mô sản xuất mở rộng vô hạn (x → +∞), chi phí trung bình trên mỗi sản phẩm tiến về:",
     "exp": "• lim_(x → +∞) (5000/x + 20) = 0 + 20 = 20 nghìn đồng/sản phẩm.",
     "opts": [
       "20 nghìn đồng (chi phí biên cố định)",

@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1128,8 +1170,8 @@
   },
   {
     "type": "mcq",
-    "q": "Cho hình chóp S.ABCD có đáy là hình vuông cạnh a, SA ⊥ (ABCD) và SA = a√6. Tính số đo góc giữa đường thẳng SC và mặt phẳng đáy (ABCD):",
-    "exp": "<b>ĐÁP ÁN ĐÚNG: A (60°)</b><br><br><b>1. Hình chiếu:</b> Hình chiếu của SC trên (ABCD) là AC.<br><b>2. Tính AC:</b> AC là đường chéo hình vuông cạnh a ⇒ AC = a√2.<br><b>3. Tính góc SCA:</b> tan(SCA) = SA / AC = (a√6) / (a√2) = √3 ⇒ góc SCA = 60°.",
+    "q": "Cho hình chóp S.ABCD có đáy là hình vuông cạnh a, SA ⊥ (ABCD) và SA = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>. Tính số đo góc giữa đường thẳng SC và mặt phẳng đáy (ABCD):",
+    "exp": "<b>ĐÁP ÁN ĐÚNG: A (60°)</b><br><br><b>1. Hình chiếu:</b> Hình chiếu của SC trên (ABCD) là AC.<br><b>2. Tính AC:</b> AC là đường chéo hình vuông cạnh a ⇒ AC = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.<br><b>3. Tính góc SCA:</b> tan(SCA) = SA / AC = (a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>) / (a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>) = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> ⇒ góc SCA = 60°.",
     "opts": [
       "60°",
       "45°",
@@ -1142,47 +1184,47 @@
   {
     "type": "mcq",
     "q": "Cho hình lập phương ABCD.A'B'C'D' cạnh a. Tính sin của góc giữa đường chéo AC' và mặt phẳng đáy (ABCD):",
-    "exp": "<b>ĐÁP ÁN ĐÚNG: A (1/√3)</b><br><br><b>1.</b> Hình chiếu vuông góc của AC' trên (ABCD) là AC.<br><b>2.</b> Góc cần tìm là góc C'AC (tam giác C'AC vuông tại C).<br><b>3.</b> C'C = a, AC' = a√3 ⇒ sin(C'AC) = C'C / AC' = a / (a√3) = 1/√3.",
+    "exp": "<b>ĐÁP ÁN ĐÚNG: A (1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>)</b><br><br><b>1.</b> Hình chiếu vuông góc của AC' trên (ABCD) là AC.<br><b>2.</b> Góc cần tìm là góc C'AC (tam giác C'AC vuông tại C).<br><b>3.</b> C'C = a, AC' = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> ⇒ sin(C'AC) = C'C / AC' = a / (a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>) = 1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>.",
     "opts": [
-      "1/√3",
-      "√2/√3",
+      "1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>",
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>",
       "1/2",
-      "√3/2"
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2"
     ],
     "ans": 0,
-    "correctText": "Phương án A: 1/√3"
+    "correctText": "Phương án A: 1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
   },
   {
     "type": "drag",
     "q": "Điền từ / cụm từ thích hợp vào chỗ trống:",
-    "exp": "<b>ĐÁP ÁN ĐÚNG: 1/√3</b><br><br>Do BC ⊥ AB và BC ⊥ SA nên BC ⊥ (SAB). Do đó B là hình chiếu của C trên (SAB).<br>Hình chiếu của SC trên (SAB) là SB. Góc cần tìm là góc CSB.<br>Tam giác SBC vuông tại B. Cạnh SB = √(SA<sup>2</sup> + AB<sup>2</sup>) = √(2a<sup>2</sup> + a<sup>2</sup>) = a√3.<br>Cạnh BC = a. Vậy tan(CSB) = BC / SB = a / (a√3) = 1/√3.",
-    "sentence": "Cho hình chóp S.ABC có SA ⊥ (ABC), tam giác ABC vuông cân tại B có BA = BC = a. Biết SA = a√2. Tang của góc giữa SC và mặt phẳng (SAB) bằng: tan α = %%%SLOT_0%%%.",
+    "exp": "<b>ĐÁP ÁN ĐÚNG: 1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></b><br><br>Do BC ⊥ AB và BC ⊥ SA nên BC ⊥ (SAB). Do đó B là hình chiếu của C trên (SAB).<br>Hình chiếu của SC trên (SAB) là SB. Góc cần tìm là góc CSB.<br>Tam giác SBC vuông tại B. Cạnh SB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">SA<sup>2</sup> + AB<sup>2</sup></span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2a<sup>2</sup> + a<sup>2</sup></span></span> = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>.<br>Cạnh BC = a. Vậy tan(CSB) = BC / SB = a / (a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>) = 1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>.",
+    "sentence": "Cho hình chóp S.ABC có SA ⊥ (ABC), tam giác ABC vuông cân tại B có BA = BC = a. Biết SA = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>. Tang của góc giữa SC và mặt phẳng (SAB) bằng: tan α = %%%SLOT_0%%%.",
     "words": [
-      "1/√3",
-      "1/√2",
-      "√2",
+      "1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>",
+      "1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>",
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>",
       "1",
-      "√3"
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
     ],
     "pool": [
-      "1/√3",
-      "1/√2",
-      "√2",
+      "1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>",
+      "1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>",
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>",
       "1",
-      "√3"
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
     ],
     "ans": [
-      "1/√3"
+      "1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
     ],
     "slots": [
-      "1/√3"
+      "1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
     ],
-    "correctText": "(1) 1/√3"
+    "correctText": "(1) 1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>"
   },
   {
     "type": "match",
     "q": "Cho hình lập phương ABCD.A'B'C'D'. Ghép mỗi đường thẳng ở Cột A với góc tạo bởi nó và mặt phẳng (ABCD) ở Cột B:",
-    "exp": "1 - A (A'A ⊥ (ABCD) ⇒ 90°); 2 - B (AB nằm trong (ABCD) ⇒ 0°); 3 - C (tan = A'A/AC = a/(a√2) = 1/√2); 4 - D (tan = A'A/AB = 1 ⇒ 45°).",
+    "exp": "1 - A (A'A ⊥ (ABCD) ⇒ 90°); 2 - B (AB nằm trong (ABCD) ⇒ 0°); 3 - C (tan = A'A/AC = a/(a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>) = 1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>); 4 - D (tan = A'A/AB = 1 ⇒ 45°).",
     "colA": [
       "Đường thẳng A'A",
       "Đường thẳng AB",
@@ -1192,7 +1234,7 @@
     "colB": [
       "90°",
       "0°",
-      "arctan(1/√2)",
+      "arctan(1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>)",
       "45°"
     ],
     "pairs": [
@@ -1206,7 +1248,7 @@
       },
       {
         "a": "3. Đường thẳng A'C",
-        "b": "C. arctan(1/√2)"
+        "b": "C. arctan(1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>)"
       },
       {
         "a": "4. Đường thẳng A'B",
@@ -1250,8 +1292,8 @@
   },
   {
     "type": "mcq",
-    "q": "Cột cờ của một trường học cao 12 m. Vào một thời điểm buổi chiều, bóng của đỉnh cột cờ in trên sân trường cách chân cột cờ một khoảng 12√3 m. Góc tạo bởi tia nắng mặt trời và mặt sân lúc đó là:",
-    "exp": "<b>ĐÁP ÁN ĐÚNG: A (30°)</b><br><br><b>1. Mô hình tam giác vuông:</b> Cạnh đối h = 12 m, cạnh kề bóng b = 12√3 m.<br><b>2. Tang góc dốc:</b> tan α = h / b = 12 / (12√3) = 1/√3 ⇒ α = 30°.",
+    "q": "Cột cờ của một trường học cao 12 m. Vào một thời điểm buổi chiều, bóng của đỉnh cột cờ in trên sân trường cách chân cột cờ một khoảng 12<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> m. Góc tạo bởi tia nắng mặt trời và mặt sân lúc đó là:",
+    "exp": "<b>ĐÁP ÁN ĐÚNG: A (30°)</b><br><br><b>1. Mô hình tam giác vuông:</b> Cạnh đối h = 12 m, cạnh kề bóng b = 12<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> m.<br><b>2. Tang góc dốc:</b> tan α = h / b = 12 / (12<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>) = 1/<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span> ⇒ α = 30°.",
     "opts": [
       "30°",
       "60°",

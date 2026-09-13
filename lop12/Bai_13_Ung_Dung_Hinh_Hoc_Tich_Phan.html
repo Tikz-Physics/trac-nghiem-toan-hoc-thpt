@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1088,7 +1130,7 @@
   },
   {
     "type": "mcq",
-    "q": "Tính thể tích V của khối tròn xoay tạo thành khi quay hình phẳng giới hạn bởi đồ thị y = √x, trục hoành và hai đường thẳng x = 1, x = 4 xung quanh trục hoành Ox.",
+    "q": "Tính thể tích V của khối tròn xoay tạo thành khi quay hình phẳng giới hạn bởi đồ thị y = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x</span></span>, trục hoành và hai đường thẳng x = 1, x = 4 xung quanh trục hoành Ox.",
     "opts": [
       "15π/2",
       "15/2",
@@ -1097,7 +1139,7 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: 15π/2",
-    "exp": "• Công thức thể tích khối tròn xoay quanh Ox: V = π ∫ₐᵇ [f(x)]² dx.<br>• V = π ∫₁⁴ (√x)² dx = π ∫₁⁴ x dx = π [<span class=\"fraction\"><span class=\"numerator\">x²</span><span class=\"denominator\">2</span></span>]₁⁴ = π (<span class=\"fraction\"><span class=\"numerator\">16</span><span class=\"denominator\">2</span></span> - <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span>) = <b><span class=\"fraction\"><span class=\"numerator\">15π</span><span class=\"denominator\">2</span></span></b>."
+    "exp": "• Công thức thể tích khối tròn xoay quanh Ox: V = π ∫ₐᵇ [f(x)]² dx.<br>• V = π ∫₁⁴ (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x</span></span>)² dx = π ∫₁⁴ x dx = π [<span class=\"fraction\"><span class=\"numerator\">x²</span><span class=\"denominator\">2</span></span>]₁⁴ = π (<span class=\"fraction\"><span class=\"numerator\">16</span><span class=\"denominator\">2</span></span> - <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span>) = <b><span class=\"fraction\"><span class=\"numerator\">15π</span><span class=\"denominator\">2</span></span></b>."
   },
   {
     "type": "tf",
@@ -1201,7 +1243,7 @@
       false
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-    "exp": "• <b>Ý a [Đúng]:</b> a² = 16 ⇒ a = 4 m, b² = 9 ⇒ b = 3 m.<br>• <b>Ý b [Đúng]:</b> S = 4 ∫₀⁴ <span class=\"fraction\"><span class=\"numerator\">3</span><span class=\"denominator\">4</span></span>√(16 - x²) dx = πab.<br>• <b>Ý c [Đúng]:</b> S = π(4)(3) = 12π ≈ 37,7 m².<br>• <b>Ý d [Sai]:</b> Tổng kinh phí = 37,7 × 200.000 đ = 7.540.000 đồng (khoảng 7,54 triệu đồng, nhỏ hơn 10 triệu đồng)."
+    "exp": "• <b>Ý a [Đúng]:</b> a² = 16 ⇒ a = 4 m, b² = 9 ⇒ b = 3 m.<br>• <b>Ý b [Đúng]:</b> S = 4 ∫₀⁴ <span class=\"fraction\"><span class=\"numerator\">3</span><span class=\"denominator\">4</span></span><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">16 - x²</span></span> dx = πab.<br>• <b>Ý c [Đúng]:</b> S = π(4)(3) = 12π ≈ 37,7 m².<br>• <b>Ý d [Sai]:</b> Tổng kinh phí = 37,7 × 200.000 đ = 7.540.000 đồng (khoảng 7,54 triệu đồng, nhỏ hơn 10 triệu đồng)."
   },
   {
     "type": "mcq",

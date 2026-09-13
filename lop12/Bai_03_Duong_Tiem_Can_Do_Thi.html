@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1121,7 +1163,7 @@
     "type": "match",
     "q": "Ghép các mô hình hàm số thực tế (Cột A) với giá trị tiệm cận tương ứng khi thời gian t hoặc số lượng x tăng rất lớn (Cột B):",
     "colA": [
-      "Chi phí trung bình: C̄(x) = 50 + <span class=\"fraction\"><span class=\"numerator\">2000</span><span class=\"denominator\">x</span></span> (nghìn đồng/sản phẩm)",
+      "Chi phí trung bình: <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) = 50 + <span class=\"fraction\"><span class=\"numerator\">2000</span><span class=\"denominator\">x</span></span> (nghìn đồng/sản phẩm)",
       "Nồng độ muối trong bể: S(t) = <span class=\"fraction\"><span class=\"numerator\">30t</span><span class=\"denominator\">t + 10</span></span> (gam/lít, t ≥ 0)",
       "Vận tốc rơi có lực cản: v(t) = 40(1 - e⁻⁰·²ᵗ) (m/s, t ≥ 0)",
       "Tỷ lệ dân số dùng Internet: P(t) = <span class=\"fraction\"><span class=\"numerator\">95</span><span class=\"denominator\">1 + 9e⁻⁰·⁵ᵗ</span></span> (%)"
@@ -1139,7 +1181,7 @@
       2
     ],
     "correctText": "1-B • 2-A • 3-D • 4-C",
-    "exp": "• <b>1 ghép B:</b> Khi x → +∞ thì 2000/x → 0 ⇒ C̄(x) → 50.<br>• <b>2 ghép A:</b> Khi t → +∞ thì 30t/(t + 10) → 30.<br>• <b>3 ghép D:</b> Khi t → +∞ thì e⁻⁰·²ᵗ → 0 ⇒ v(t) → 40 m/s.<br>• <b>4 ghép C:</b> Khi t → +∞ thì e⁻⁰·⁵ᵗ → 0 ⇒ P(t) → 95%."
+    "exp": "• <b>1 ghép B:</b> Khi x → +∞ thì 2000/x → 0 ⇒ <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) → 50.<br>• <b>2 ghép A:</b> Khi t → +∞ thì 30t/(t + 10) → 30.<br>• <b>3 ghép D:</b> Khi t → +∞ thì e⁻⁰·²ᵗ → 0 ⇒ v(t) → 40 m/s.<br>• <b>4 ghép C:</b> Khi t → +∞ thì e⁻⁰·⁵ᵗ → 0 ⇒ P(t) → 95%."
   },
   {
     "type": "drag",
@@ -1176,7 +1218,7 @@
   },
   {
     "type": "mcq",
-    "q": "Số đường tiệm cận đứng và tiệm cận ngang của đồ thị hàm số y = <span class=\"fraction\"><span class=\"numerator\">x - 1</span><span class=\"denominator\">√(x² - 4)</span></span> là:",
+    "q": "Số đường tiệm cận đứng và tiệm cận ngang của đồ thị hàm số y = <span class=\"fraction\"><span class=\"numerator\">x - 1</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² - 4</span></span></span></span> là:",
     "opts": [
       "4 đường tiệm cận (2 đứng, 2 ngang)",
       "3 đường tiệm cận (2 đứng, 1 ngang)",
@@ -1185,13 +1227,13 @@
     ],
     "ans": 0,
     "correctText": "Phương án A: 4 đường tiệm cận (2 đứng, 2 ngang)",
-    "exp": "• <b>Tập xác định:</b> x² - 4 > 0 ⇔ x ∈ (-∞; -2) ∪ (2; +∞).<br>• <b>Tiệm cận đứng:</b><br>- lim<sub style=\"font-size:0.8em\">x→2⁺</sub> y = +∞ ⇒ <b>x = 2</b> là TCĐ.<br>- lim<sub style=\"font-size:0.8em\">x→-2⁻</sub> y = -∞ ⇒ <b>x = -2</b> là TCĐ. (Có 2 TCĐ).<br>• <b>Tiệm cận ngang:</b><br>- lim<sub style=\"font-size:0.8em\">x→+∞</sub> <span class=\"fraction\"><span class=\"numerator\">x(1 - 1/x)</span><span class=\"denominator\">x√(1 - 4/x²)</span></span> = 1 ⇒ <b>y = 1</b>.<br>- lim<sub style=\"font-size:0.8em\">x→-∞</sub> <span class=\"fraction\"><span class=\"numerator\">x(1 - 1/x)</span><span class=\"denominator\">-x√(1 - 4/x²)</span></span> = -1 ⇒ <b>y = -1</b>. (Có 2 TCN).<br>• Tổng cộng đồ thị có <b>4 đường tiệm cận</b>."
+    "exp": "• <b>Tập xác định:</b> x² - 4 > 0 ⇔ x ∈ (-∞; -2) ∪ (2; +∞).<br>• <b>Tiệm cận đứng:</b><br>- lim<sub style=\"font-size:0.8em\">x→2⁺</sub> y = +∞ ⇒ <b>x = 2</b> là TCĐ.<br>- lim<sub style=\"font-size:0.8em\">x→-2⁻</sub> y = -∞ ⇒ <b>x = -2</b> là TCĐ. (Có 2 TCĐ).<br>• <b>Tiệm cận ngang:</b><br>- lim<sub style=\"font-size:0.8em\">x→+∞</sub> <span class=\"fraction\"><span class=\"numerator\">x(1 - 1/x)</span><span class=\"denominator\">x<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1 - 4/x²</span></span></span></span> = 1 ⇒ <b>y = 1</b>.<br>- lim<sub style=\"font-size:0.8em\">x→-∞</sub> <span class=\"fraction\"><span class=\"numerator\">x(1 - 1/x)</span><span class=\"denominator\">-x<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1 - 4/x²</span></span></span></span> = -1 ⇒ <b>y = -1</b>. (Có 2 TCN).<br>• Tổng cộng đồ thị có <b>4 đường tiệm cận</b>."
   },
   {
     "type": "tf",
-    "q": "Một công ty sản xuất thiết bị gia dụng có tổng chi phí sản xuất x nghìn sản phẩm (tính bằng triệu đồng) là C(x) = 50 + 2x + 0,001x². Chi phí trung bình để sản xuất một nghìn sản phẩm là C̄(x) = <span class=\"fraction\"><span class=\"numerator\">C(x)</span><span class=\"denominator\">x</span></span>. Xét tính Đúng/Sai của từng mệnh đề sau:",
+    "q": "Một công ty sản xuất thiết bị gia dụng có tổng chi phí sản xuất x nghìn sản phẩm (tính bằng triệu đồng) là C(x) = 50 + 2x + 0,001x². Chi phí trung bình để sản xuất một nghìn sản phẩm là <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) = <span class=\"fraction\"><span class=\"numerator\">C(x)</span><span class=\"denominator\">x</span></span>. Xét tính Đúng/Sai của từng mệnh đề sau:",
     "stmts": [
-      "Hàm chi phí trung bình là C̄(x) = <span class=\"fraction\"><span class=\"numerator\">50</span><span class=\"denominator\">x</span></span> + 2 + 0,001x (với x > 0).",
+      "Hàm chi phí trung bình là <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) = <span class=\"fraction\"><span class=\"numerator\">50</span><span class=\"denominator\">x</span></span> + 2 + 0,001x (với x > 0).",
       "Đồ thị hàm số chi phí trung bình có tiệm cận đứng là trục tung x = 0.",
       "Đồ thị hàm số chi phí trung bình có tiệm cận xiên là đường thẳng y = 0,001x + 2.",
       "Khi quy mô sản xuất x tăng lên vô cùng lớn, chi phí trung bình trên mỗi sản phẩm tiến dần về 2 triệu đồng."
@@ -1203,7 +1245,7 @@
       false
     ],
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-    "exp": "• <b>Ý a [Đúng]:</b> C̄(x) = C(x)/x = 50/x + 2 + 0,001x.<br>• <b>Ý b [Đúng]:</b> lim<sub style=\"font-size:0.8em\">x→0⁺</sub> C̄(x) = +∞ nên trục tung x = 0 là tiệm cận đứng.<br>• <b>Ý c [Đúng]:</b> lim<sub style=\"font-size:0.8em\">x→+∞</sub> [C̄(x) - (0,001x + 2)] = lim<sub style=\"font-size:0.8em\">x→+∞</sub> (50/x) = 0 nên y = 0,001x + 2 là tiệm cận xiên.<br>• <b>Ý d [Sai]:</b> Khi x → +∞, chi phí trung bình tăng dần theo tiệm cận xiên (tiến ra vô cực) do chi phí lưu kho và quản lý (thành phần 0,001x²), không phải tiến về 2 triệu đồng."
+    "exp": "• <b>Ý a [Đúng]:</b> <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) = C(x)/x = 50/x + 2 + 0,001x.<br>• <b>Ý b [Đúng]:</b> lim<sub style=\"font-size:0.8em\">x→0⁺</sub> <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) = +∞ nên trục tung x = 0 là tiệm cận đứng.<br>• <b>Ý c [Đúng]:</b> lim<sub style=\"font-size:0.8em\">x→+∞</sub> [<math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) - (0,001x + 2)] = lim<sub style=\"font-size:0.8em\">x→+∞</sub> (50/x) = 0 nên y = 0,001x + 2 là tiệm cận xiên.<br>• <b>Ý d [Sai]:</b> Khi x → +∞, chi phí trung bình tăng dần theo tiệm cận xiên (tiến ra vô cực) do chi phí lưu kho và quản lý (thành phần 0,001x²), không phải tiến về 2 triệu đồng."
   },
   {
     "type": "mcq",

@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1127,7 +1169,7 @@
       {
         "text": "\"∃x ∈ ℤ: x² = 2\" là mệnh đề đúng.",
         "ans": false,
-        "exp": "x² = 2 có nghiệm x = ±√2 ∉ ℤ, không có nghiệm nguyên (Sai)."
+        "exp": "x² = 2 có nghiệm x = ±<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> ∉ ℤ, không có nghiệm nguyên (Sai)."
       },
       {
         "text": "Mệnh đề phủ định của \"∀x ∈ ℝ: x² - x + 1 > 0\" là \"∃x ∈ ℝ: x² - x + 1 ≤ 0\".",
@@ -1152,7 +1194,7 @@
       true,
       false
     ],
-    "exp": "• <b>Ý a) [Đúng]:</b> Vì x² ≥ 0 với mọi x ∈ ℝ nên x² + 1 ≥ 1 > 0 (Đúng).<br>• <b>Ý b) [Sai]:</b> x² = 2 có nghiệm x = ±√2 ∉ ℤ, không có nghiệm nguyên (Sai).<br>• <b>Ý c) [Đúng]:</b> Phủ định của ∀ là ∃, phủ định của > là ≤ (Đúng).<br>• <b>Ý d) [Sai]:</b> Δ = 16 - 16 = 0 nên phương trình có nghiệm kép x = 2 (Sai).",
+    "exp": "• <b>Ý a) [Đúng]:</b> Vì x² ≥ 0 với mọi x ∈ ℝ nên x² + 1 ≥ 1 > 0 (Đúng).<br>• <b>Ý b) [Sai]:</b> x² = 2 có nghiệm x = ±<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> ∉ ℤ, không có nghiệm nguyên (Sai).<br>• <b>Ý c) [Đúng]:</b> Phủ định của ∀ là ∃, phủ định của > là ≤ (Đúng).<br>• <b>Ý d) [Sai]:</b> Δ = 16 - 16 = 0 nên phương trình có nghiệm kép x = 2 (Sai).",
     "correctText": "a) Đúng • b) Sai • c) Đúng • d) Sai"
   },
   {

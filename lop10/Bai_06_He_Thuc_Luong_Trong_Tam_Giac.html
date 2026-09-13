@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1100,7 +1142,7 @@
       "3": "C",
       "4": "D"
     },
-    "exp": "• Các công thức diện tích tam giác: S = 1/2 a·h = 1/2 bc·sin A = abc/(4R) = p·r = √[p(p-a)(p-b)(p-c)].",
+    "exp": "• Các công thức diện tích tam giác: S = 1/2 a·h = 1/2 bc·sin A = abc/(4R) = p·r = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">p(p-a)(p-b)(p-c)</span></span>.",
     "colA": [
       "Theo cạnh đáy và đường cao tương ứng",
       "Theo hai cạnh và sin góc xen giữa",
@@ -1159,14 +1201,14 @@
     "type": "mcq",
     "q": "Cho tam giác ABC có b = 7, c = 5, góc A = 60°. Độ dài cạnh a là:",
     "opts": [
-      "√39",
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">39</span></span>",
       "39",
-      "√49",
-      "√19"
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">49</span></span>",
+      "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">19</span></span>"
     ],
     "ans": 0,
-    "exp": "• Áp dụng định lí Cosin: a² = b² + c² - 2bc · cos A<br>a² = 7² + 5² - 2 · 7 · 5 · cos 60° = 49 + 25 - 70 · (1/2) = 74 - 35 = 39.<br>⇒ a = √39.",
-    "correctText": "Phương án A: √39"
+    "exp": "• Áp dụng định lí Cosin: a² = b² + c² - 2bc · cos A<br>a² = 7² + 5² - 2 · 7 · 5 · cos 60° = 49 + 25 - 70 · (1/2) = 74 - 35 = 39.<br>⇒ a = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">39</span></span>.",
+    "correctText": "Phương án A: <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">39</span></span>"
   },
   {
     "type": "drag",
@@ -1216,14 +1258,14 @@
     "type": "mcq",
     "q": "Tam giác ABC có 3 cạnh a = 4, b = 5, c = 7. Nửa chu vi p và diện tích S theo công thức Heron là:",
     "opts": [
-      "p = 8, S = 4√6",
-      "p = 16, S = 8√6",
+      "p = 8, S = 4<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>",
+      "p = 16, S = 8<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>",
       "p = 8, S = 12",
-      "p = 7, S = 4√5"
+      "p = 7, S = 4<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>"
     ],
     "ans": 0,
-    "exp": "• p = (4 + 5 + 7)/2 = 8.<br>• S = √[8 · (8 - 4) · (8 - 5) · (8 - 7)] = √[8 · 4 · 3 · 1] = √96 = 4√6.",
-    "correctText": "Phương án A: p = 8, S = 4√6",
+    "exp": "• p = (4 + 5 + 7)/2 = 8.<br>• S = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">8 · (8 - 4) · (8 - 5) · (8 - 7)</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">8 · 4 · 3 · 1</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">96</span></span> = 4<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>.",
+    "correctText": "Phương án A: p = 8, S = 4<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>",
     "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <polygon points=\"100,180 340,180 180,60\" fill=\"rgba(56,189,248,0.12)\" stroke=\"#38bdf8\" stroke-width=\"2.5\"/>\n  \n  <circle cx=\"180\" cy=\"60\" r=\"4.5\" fill=\"#fbbf24\"/><text x=\"180\" y=\"45\" fill=\"#fbbf24\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">A</text>\n  <circle cx=\"100\" cy=\"180\" r=\"4.5\" fill=\"#fbbf24\"/><text x=\"80\" y=\"195\" fill=\"#fbbf24\" font-size=\"15\" font-weight=\"800\">B</text>\n  <circle cx=\"340\" cy=\"180\" r=\"4.5\" fill=\"#fbbf24\"/><text x=\"355\" y=\"195\" fill=\"#fbbf24\" font-size=\"15\" font-weight=\"800\">C</text>\n  \n  <text x=\"220\" y=\"202\" fill=\"#34d399\" font-size=\"14\" font-weight=\"800\" text-anchor=\"middle\">a = BC = 4</text>\n  <text x=\"275\" y=\"115\" fill=\"#34d399\" font-size=\"14\" font-weight=\"800\">b = AC = 5</text>\n  <text x=\"120\" y=\"115\" fill=\"#34d399\" font-size=\"14\" font-weight=\"800\" text-anchor=\"end\">c = AB = 7</text>\n  \n  <text x=\"220\" y=\"228\" fill=\"#fbbf24\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">Tam giác ABC với độ dài 3 cạnh a = 4, b = 5, c = 7</text>\n\n</svg>"
   },
   {
@@ -1262,7 +1304,7 @@
       "18,5 km"
     ],
     "ans": 0,
-    "exp": "• Quãng đường người 1 đi: OA = 12 · 1,5 = 18 km.<br>• Quãng đường người 2 đi: OB = 16 · 1,5 = 24 km.<br>• Áp dụng định lí Cosin cho tam giác OAB: AB² = OA² + OB² - 2 · OA · OB · cos 60°<br>AB² = 18² + 24² - 2 · 18 · 24 · 0,5 = 324 + 576 - 432 = 468.<br>⇒ AB = √468 ≈ 21,63 km (khoảng 21,8 km).",
+    "exp": "• Quãng đường người 1 đi: OA = 12 · 1,5 = 18 km.<br>• Quãng đường người 2 đi: OB = 16 · 1,5 = 24 km.<br>• Áp dụng định lí Cosin cho tam giác OAB: AB² = OA² + OB² - 2 · OA · OB · cos 60°<br>AB² = 18² + 24² - 2 · 18 · 24 · 0,5 = 324 + 576 - 432 = 468.<br>⇒ AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">468</span></span> ≈ 21,63 km (khoảng 21,8 km).",
     "correctText": "Phương án A: 21,8 km"
   }
 ];

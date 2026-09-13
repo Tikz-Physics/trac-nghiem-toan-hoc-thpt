@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1062,16 +1104,16 @@
     const RAW_QUESTIONS = [
   {
     "type": "mcq",
-    "q": "Số trung bình x̄ của mẫu số liệu ghép nhóm có k nhóm với các giá trị đại diện c_i và tần số m_i được tính bởi công thức:",
-    "exp": "• Công thức số trung bình mẫu ghép nhóm (SGK Toán 11): x̄ = (∑ m_i · c_i) / n.",
+    "q": "Số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> của mẫu số liệu ghép nhóm có k nhóm với các giá trị đại diện c_i và tần số m_i được tính bởi công thức:",
+    "exp": "• Công thức số trung bình mẫu ghép nhóm (SGK Toán 11): <math><mover><mi>x</mi><mo>¯</mo></mover></math> = (∑ m_i · c_i) / n.",
     "opts": [
-      "x̄ = (m₁c₁ + m₂c₂ + ... + m_k c_k) / n",
-      "x̄ = (c₁ + c₂ + ... + c_k) / k",
-      "x̄ = (m₁ + m₂ + ... + m_k) / n",
-      "x̄ = (c_max - c_min) / 2"
+      "<math><mover><mi>x</mi><mo>¯</mo></mover></math> = (m₁c₁ + m₂c₂ + ... + m_k c_k) / n",
+      "<math><mover><mi>x</mi><mo>¯</mo></mover></math> = (c₁ + c₂ + ... + c_k) / k",
+      "<math><mover><mi>x</mi><mo>¯</mo></mover></math> = (m₁ + m₂ + ... + m_k) / n",
+      "<math><mover><mi>x</mi><mo>¯</mo></mover></math> = (c_max - c_min) / 2"
     ],
     "ans": 0,
-    "correctText": "Phương án A: x̄ = (m₁c₁ + m₂c₂ + ... + m_k c_k) / n"
+    "correctText": "Phương án A: <math><mover><mi>x</mi><mo>¯</mo></mover></math> = (m₁c₁ + m₂c₂ + ... + m_k c_k) / n"
   },
   {
     "type": "match",
@@ -1118,10 +1160,10 @@
   {
     "type": "tf",
     "q": "Bảng số liệu điểm kiểm tra ghép nhóm của 20 học sinh: [5; 7) có 8 bạn, [7; 9) có 10 bạn, [9; 11) có 2 bạn. Xét tính đúng - sai:",
-    "exp": "• <b>Ý a) [Đúng]:</b> (5+7)/2 = 6; (7+9)/2 = 8; (9+11)/2 = 10 (Đúng).<br>• <b>Ý b) [Đúng]:</b> x̄ = (8·6 + 10·8 + 2·10)/20 = (48 + 80 + 20)/20 = 148 / 20 = 7,4 (Đúng).<br>• <b>Ý c) [Đúng]:</b> Nhóm [7; 9) có tần số lớn nhất bằng 10 (Đúng).<br>• <b>Ý d) [Sai]:</b> n/2 = 10. Tần số tích lũy nhóm 1 là 8 < 10, nhóm 2 tích lũy là 18 ≥ 10 nên trung vị thuộc nhóm [7; 9) (Sai).",
+    "exp": "• <b>Ý a) [Đúng]:</b> (5+7)/2 = 6; (7+9)/2 = 8; (9+11)/2 = 10 (Đúng).<br>• <b>Ý b) [Đúng]:</b> <math><mover><mi>x</mi><mo>¯</mo></mover></math> = (8·6 + 10·8 + 2·10)/20 = (48 + 80 + 20)/20 = 148 / 20 = 7,4 (Đúng).<br>• <b>Ý c) [Đúng]:</b> Nhóm [7; 9) có tần số lớn nhất bằng 10 (Đúng).<br>• <b>Ý d) [Sai]:</b> n/2 = 10. Tần số tích lũy nhóm 1 là 8 < 10, nhóm 2 tích lũy là 18 ≥ 10 nên trung vị thuộc nhóm [7; 9) (Sai).",
     "stmts": [
       "Giá trị đại diện của 3 nhóm lần lượt là 6, 8, 10.",
-      "Số điểm trung bình là x̄ = 7,4.",
+      "Số điểm trung bình là <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 7,4.",
       "Nhóm chứa mốt là nhóm [7; 9).",
       "Nhóm chứa trung vị là nhóm [5; 7)."
     ],
@@ -1138,9 +1180,9 @@
         "exp": "(5+7)/2 = 6; (7+9)/2 = 8; (9+11)/2 = 10 (Đúng)."
       },
       {
-        "text": "Số điểm trung bình là x̄ = 7,4.",
+        "text": "Số điểm trung bình là <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 7,4.",
         "ans": true,
-        "exp": "x̄ = (8·6 + 10·8 + 2·10)/20 = (48 + 80 + 20)/20 = 148 / 20 = 7,4 (Đúng)."
+        "exp": "<math><mover><mi>x</mi><mo>¯</mo></mover></math> = (8·6 + 10·8 + 2·10)/20 = (48 + 80 + 20)/20 = 148 / 20 = 7,4 (Đúng)."
       },
       {
         "text": "Nhóm chứa mốt là nhóm [7; 9).",
@@ -1158,7 +1200,7 @@
   {
     "type": "mcq",
     "q": "Tính số trung bình của mẫu ghép nhóm sau: [0; 10) có 4 phần tử, [10; 20) có 6 phần tử:",
-    "exp": "• c₁ = 5, c₂ = 15.<br>• x̄ = (4 · 5 + 6 · 15) / 10 = (20 + 90) / 10 = 110 / 10 = 11.",
+    "exp": "• c₁ = 5, c₂ = 15.<br>• <math><mover><mi>x</mi><mo>¯</mo></mover></math> = (4 · 5 + 6 · 15) / 10 = (20 + 90) / 10 = 110 / 10 = 11.",
     "opts": [
       "11",
       "10",
@@ -1229,7 +1271,7 @@
   {
     "type": "mcq",
     "q": "Thống kê mức lương của 100 công nhân một nhà máy may: [5; 7) có 25 người, [7; 9) có 50 người, [9; 11) có 25 người (triệu đồng). Mức lương trung bình của công nhân nhà máy là:",
-    "exp": "• c₁ = 6, c₂ = 8, c₃ = 10.<br>• x̄ = (25·6 + 50·8 + 25·10)/100 = (150 + 400 + 250)/100 = 800 / 100 = 8,0 triệu đồng.",
+    "exp": "• c₁ = 6, c₂ = 8, c₃ = 10.<br>• <math><mover><mi>x</mi><mo>¯</mo></mover></math> = (25·6 + 50·8 + 25·10)/100 = (150 + 400 + 250)/100 = 800 / 100 = 8,0 triệu đồng.",
     "opts": [
       "8,0 triệu đồng",
       "7,5 triệu đồng",
@@ -1242,7 +1284,7 @@
   {
     "type": "mcq",
     "q": "Đo tuổi thọ (năm) của 200 bóng đèn LED: [3; 5) có 40 bóng, [5; 7) có 120 bóng, [7; 9) có 40 bóng. Tuổi thọ trung bình của bóng đèn là:",
-    "exp": "• x̄ = (40·4 + 120·6 + 40·8)/200 = (160 + 720 + 320)/200 = 1200 / 200 = 6,0 năm.",
+    "exp": "• <math><mover><mi>x</mi><mo>¯</mo></mover></math> = (40·4 + 120·6 + 40·8)/200 = (160 + 720 + 320)/200 = 1200 / 200 = 6,0 năm.",
     "opts": [
       "6,0 năm",
       "5,5 năm",

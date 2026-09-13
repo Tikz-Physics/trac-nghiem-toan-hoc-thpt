@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1091,7 +1133,7 @@
       },
       {
         "a": "4. Tiêu cự của elip",
-        "b": "D. 2c = 2√(a² - b²)"
+        "b": "D. 2c = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² - b²</span></span>"
       }
     ],
     "ans": {
@@ -1111,7 +1153,7 @@
       "x²/a² + y²/b² = 1 (a > b > 0)",
       "x²/a² - y²/b² = 1 (a, b > 0)",
       "y² = 2px (p > 0)",
-      "2c = 2√(a² - b²)"
+      "2c = 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² - b²</span></span>"
     ],
     "correctText": "1-A • 2-B • 3-C • 4-D"
   },
@@ -1132,7 +1174,7 @@
       {
         "text": "Tiêu cự của elip bằng 4.",
         "ans": false,
-        "exp": "c = √(a² - b²) = √(25 - 9) = 4. Tiêu cự là 2c = 8 (Sai)."
+        "exp": "c = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² - b²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25 - 9</span></span> = 4. Tiêu cự là 2c = 8 (Sai)."
       },
       {
         "text": "Toạ độ hai tiêu điểm là F₁(-4; 0) và F₂(4; 0).",
@@ -1152,7 +1194,7 @@
       false,
       true
     ],
-    "exp": "• <b>Ý a) [Đúng]:</b> a² = 25 ⇒ a = 5. Độ dài trục lớn 2a = 10 (Đúng).<br>• <b>Ý b) [Đúng]:</b> b² = 9 ⇒ b = 3. Độ dài trục nhỏ 2b = 6 (Đúng).<br>• <b>Ý c) [Sai]:</b> c = √(a² - b²) = √(25 - 9) = 4. Tiêu cự là 2c = 8 (Sai).<br>• <b>Ý d) [Đúng]:</b> Hai tiêu điểm trên trục Ox: F₁(-c; 0) = (-4; 0), F₂(c; 0) = (4; 0) (Đúng).",
+    "exp": "• <b>Ý a) [Đúng]:</b> a² = 25 ⇒ a = 5. Độ dài trục lớn 2a = 10 (Đúng).<br>• <b>Ý b) [Đúng]:</b> b² = 9 ⇒ b = 3. Độ dài trục nhỏ 2b = 6 (Đúng).<br>• <b>Ý c) [Sai]:</b> c = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">a² - b²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25 - 9</span></span> = 4. Tiêu cự là 2c = 8 (Sai).<br>• <b>Ý d) [Đúng]:</b> Hai tiêu điểm trên trục Ox: F₁(-c; 0) = (-4; 0), F₂(c; 0) = (4; 0) (Đúng).",
     "correctText": "a) Đúng • b) Đúng • c) Sai • d) Đúng"
   },
   {

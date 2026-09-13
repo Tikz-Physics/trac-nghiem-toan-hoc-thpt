@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1062,7 +1104,7 @@
     const RAW_QUESTIONS = [
   {
     "type": "mcq",
-    "q": "Cho số thực k và vectơ a⃗ ≠ 0⃗. Vectơ k·a⃗ cùng hướng với a⃗ khi và chỉ khi:",
+    "q": "Cho số thực k và vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> ≠ <math><mover><mn>0</mn><mo>→</mo></mover></math>. Vectơ k·<math><mover><mi>a</mi><mo>→</mo></mover></math> cùng hướng với <math><mover><mi>a</mi><mo>→</mo></mover></math> khi và chỉ khi:",
     "opts": [
       "k > 0",
       "k < 0",
@@ -1079,19 +1121,19 @@
     "pairs": [
       {
         "a": "1. Điểm M là trung điểm đoạn AB",
-        "b": "A. MA⃗ + MB⃗ = 0⃗ hay AM⃗ = (1/2)AB⃗"
+        "b": "A. <math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math> hay <math><mover><mi>AM</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math>"
       },
       {
         "a": "2. Điểm G là trọng tâm tam giác ABC",
-        "b": "B. AG⃗ = (2/3)AM⃗ (M là trung điểm BC)"
+        "b": "B. <math><mover><mi>AG</mi><mo>→</mo></mover></math> = (2/3)<math><mover><mi>AM</mi><mo>→</mo></mover></math> (M là trung điểm BC)"
       },
       {
         "a": "3. Điểm B nằm giữa A và C với AB = 2BC",
-        "b": "C. AB⃗ = 2BC⃗"
+        "b": "C. <math><mover><mi>AB</mi><mo>→</mo></mover></math> = 2<math><mover><mi>BC</mi><mo>→</mo></mover></math>"
       },
       {
         "a": "4. Hai vectơ cùng phương",
-        "b": "D. a⃗ = k·b⃗ (với b⃗ ≠ 0⃗)"
+        "b": "D. <math><mover><mi>a</mi><mo>→</mo></mover></math> = k·<math><mover><mi>b</mi><mo>→</mo></mover></math> (với <math><mover><mi>b</mi><mo>→</mo></mover></math> ≠ <math><mover><mn>0</mn><mo>→</mo></mover></math>)"
       }
     ],
     "ans": {
@@ -1100,7 +1142,7 @@
       "3": "C",
       "4": "D"
     },
-    "exp": "• Trung điểm: AM⃗ = 1/2 AB⃗.<br>• Trọng tâm: AG⃗ = 2/3 AM⃗.<br>• Tỉ lệ đoạn thẳng: AB⃗ = 2BC⃗.<br>• Cùng phương: a⃗ = k·b⃗.",
+    "exp": "• Trung điểm: <math><mover><mi>AM</mi><mo>→</mo></mover></math> = 1/2 <math><mover><mi>AB</mi><mo>→</mo></mover></math>.<br>• Trọng tâm: <math><mover><mi>AG</mi><mo>→</mo></mover></math> = 2/3 <math><mover><mi>AM</mi><mo>→</mo></mover></math>.<br>• Tỉ lệ đoạn thẳng: <math><mover><mi>AB</mi><mo>→</mo></mover></math> = 2<math><mover><mi>BC</mi><mo>→</mo></mover></math>.<br>• Cùng phương: <math><mover><mi>a</mi><mo>→</mo></mover></math> = k·<math><mover><mi>b</mi><mo>→</mo></mover></math>.",
     "colA": [
       "Điểm M là trung điểm đoạn AB",
       "Điểm G là trọng tâm tam giác ABC",
@@ -1108,10 +1150,10 @@
       "Hai vectơ cùng phương"
     ],
     "colB": [
-      "MA⃗ + MB⃗ = 0⃗ hay AM⃗ = (1/2)AB⃗",
-      "AG⃗ = (2/3)AM⃗ (M là trung điểm BC)",
-      "AB⃗ = 2BC⃗",
-      "a⃗ = k·b⃗ (với b⃗ ≠ 0⃗)"
+      "<math><mover><mi>MA</mi><mo>→</mo></mover></math> + <math><mover><mi>MB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math> hay <math><mover><mi>AM</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>AG</mi><mo>→</mo></mover></math> = (2/3)<math><mover><mi>AM</mi><mo>→</mo></mover></math> (M là trung điểm BC)",
+      "<math><mover><mi>AB</mi><mo>→</mo></mover></math> = 2<math><mover><mi>BC</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>a</mi><mo>→</mo></mover></math> = k·<math><mover><mi>b</mi><mo>→</mo></mover></math> (với <math><mover><mi>b</mi><mo>→</mo></mover></math> ≠ <math><mover><mn>0</mn><mo>→</mo></mover></math>)"
     ],
     "correctText": "1-A • 2-B • 3-C • 4-D"
   },
@@ -1120,31 +1162,31 @@
     "q": "Cho đoạn thẳng AB có độ dài 6 cm và I là trung điểm của AB. Xét tính đúng - sai:",
     "items": [
       {
-        "text": "AI⃗ = (1/2)AB⃗.",
+        "text": "<math><mover><mi>AI</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math>.",
         "ans": true,
-        "exp": "AI và AB cùng hướng, AI = 3 = (1/2)AB nên AI⃗ = (1/2)AB⃗ (Đúng)."
+        "exp": "AI và AB cùng hướng, AI = 3 = (1/2)AB nên <math><mover><mi>AI</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math> (Đúng)."
       },
       {
-        "text": "IB⃗ = -IA⃗.",
+        "text": "<math><mover><mi>IB</mi><mo>→</mo></mover></math> = -<math><mover><mi>IA</mi><mo>→</mo></mover></math>.",
         "ans": true,
-        "exp": "IB và IA đối nhau nên IB⃗ = -IA⃗ (Đúng)."
+        "exp": "IB và IA đối nhau nên <math><mover><mi>IB</mi><mo>→</mo></mover></math> = -<math><mover><mi>IA</mi><mo>→</mo></mover></math> (Đúng)."
       },
       {
-        "text": "Độ dài |2AB⃗| = 12 cm.",
+        "text": "Độ dài |2<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = 12 cm.",
         "ans": true,
-        "exp": "|2AB⃗| = 2 · 6 = 12 cm (Đúng)."
+        "exp": "|2<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = 2 · 6 = 12 cm (Đúng)."
       },
       {
-        "text": "Vectơ -3AI⃗ có độ dài bằng -9 cm.",
+        "text": "Vectơ -3<math><mover><mi>AI</mi><mo>→</mo></mover></math> có độ dài bằng -9 cm.",
         "ans": false,
-        "exp": "Độ dài vectơ luôn không âm: |-3AI⃗| = 3 · 3 = 9 cm (Sai)."
+        "exp": "Độ dài vectơ luôn không âm: |-3<math><mover><mi>AI</mi><mo>→</mo></mover></math>| = 3 · 3 = 9 cm (Sai)."
       }
     ],
     "stmts": [
-      "AI⃗ = (1/2)AB⃗.",
-      "IB⃗ = -IA⃗.",
-      "Độ dài |2AB⃗| = 12 cm.",
-      "Vectơ -3AI⃗ có độ dài bằng -9 cm."
+      "<math><mover><mi>AI</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math>.",
+      "<math><mover><mi>IB</mi><mo>→</mo></mover></math> = -<math><mover><mi>IA</mi><mo>→</mo></mover></math>.",
+      "Độ dài |2<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = 12 cm.",
+      "Vectơ -3<math><mover><mi>AI</mi><mo>→</mo></mover></math> có độ dài bằng -9 cm."
     ],
     "ans": [
       true,
@@ -1152,21 +1194,21 @@
       true,
       false
     ],
-    "exp": "• <b>Ý a) [Đúng]:</b> AI và AB cùng hướng, AI = 3 = (1/2)AB nên AI⃗ = (1/2)AB⃗ (Đúng).<br>• <b>Ý b) [Đúng]:</b> IB và IA đối nhau nên IB⃗ = -IA⃗ (Đúng).<br>• <b>Ý c) [Đúng]:</b> |2AB⃗| = 2 · 6 = 12 cm (Đúng).<br>• <b>Ý d) [Sai]:</b> Độ dài vectơ luôn không âm: |-3AI⃗| = 3 · 3 = 9 cm (Sai).",
+    "exp": "• <b>Ý a) [Đúng]:</b> AI và AB cùng hướng, AI = 3 = (1/2)AB nên <math><mover><mi>AI</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý b) [Đúng]:</b> IB và IA đối nhau nên <math><mover><mi>IB</mi><mo>→</mo></mover></math> = -<math><mover><mi>IA</mi><mo>→</mo></mover></math> (Đúng).<br>• <b>Ý c) [Đúng]:</b> |2<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = 2 · 6 = 12 cm (Đúng).<br>• <b>Ý d) [Sai]:</b> Độ dài vectơ luôn không âm: |-3<math><mover><mi>AI</mi><mo>→</mo></mover></math>| = 3 · 3 = 9 cm (Sai).",
     "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai"
   },
   {
     "type": "mcq",
-    "q": "Cho tam giác ABC có trọng tâm G và M là trung điểm BC. Biểu diễn vectơ AG⃗ theo hai vectơ AB⃗ và AC⃗ là:",
+    "q": "Cho tam giác ABC có trọng tâm G và M là trung điểm BC. Biểu diễn vectơ <math><mover><mi>AG</mi><mo>→</mo></mover></math> theo hai vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>AC</mi><mo>→</mo></mover></math> là:",
     "opts": [
-      "AG⃗ = (1/3)AB⃗ + (1/3)AC⃗",
-      "AG⃗ = (1/2)AB⃗ + (1/2)AC⃗",
-      "AG⃗ = (2/3)AB⃗ + (2/3)AC⃗",
-      "AG⃗ = AB⃗ + AC⃗"
+      "<math><mover><mi>AG</mi><mo>→</mo></mover></math> = (1/3)<math><mover><mi>AB</mi><mo>→</mo></mover></math> + (1/3)<math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>AG</mi><mo>→</mo></mover></math> = (1/2)<math><mover><mi>AB</mi><mo>→</mo></mover></math> + (1/2)<math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>AG</mi><mo>→</mo></mover></math> = (2/3)<math><mover><mi>AB</mi><mo>→</mo></mover></math> + (2/3)<math><mover><mi>AC</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>AG</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math>"
     ],
     "ans": 0,
-    "exp": "• AM⃗ = (1/2)(AB⃗ + AC⃗) ⇒ AG⃗ = (2/3)AM⃗ = (1/3)AB⃗ + (1/3)AC⃗.",
-    "correctText": "Phương án A: AG⃗ = (1/3)AB⃗ + (1/3)AC⃗"
+    "exp": "• <math><mover><mi>AM</mi><mo>→</mo></mover></math> = (1/2)(<math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AC</mi><mo>→</mo></mover></math>) ⇒ <math><mover><mi>AG</mi><mo>→</mo></mover></math> = (2/3)<math><mover><mi>AM</mi><mo>→</mo></mover></math> = (1/3)<math><mover><mi>AB</mi><mo>→</mo></mover></math> + (1/3)<math><mover><mi>AC</mi><mo>→</mo></mover></math>.",
+    "correctText": "Phương án A: <math><mover><mi>AG</mi><mo>→</mo></mover></math> = (1/3)<math><mover><mi>AB</mi><mo>→</mo></mover></math> + (1/3)<math><mover><mi>AC</mi><mo>→</mo></mover></math>"
   },
   {
     "type": "drag",
@@ -1183,8 +1225,8 @@
       "4/3",
       "3"
     ],
-    "exp": "• AC = (3/4)AB ⇒ AC⃗ = (3/4)AB⃗.<br>• CA⃗ = -3CB⃗.<br>• OC⃗ = (1/4)OA⃗ + (3/4)OB⃗.",
-    "sentence": "• Cho điểm C thuộc đoạn AB sao cho AC = 3CB. Khi đó AC⃗ = %%%SLOT_1%%% AB⃗.<br>• Vectơ CA⃗ = %%%SLOT_2%%% CB⃗.<br>• Với điểm O bất kì: OC⃗ = %%%SLOT_3%%% OA⃗ + (3/4)OB⃗.",
+    "exp": "• AC = (3/4)AB ⇒ <math><mover><mi>AC</mi><mo>→</mo></mover></math> = (3/4)<math><mover><mi>AB</mi><mo>→</mo></mover></math>.<br>• <math><mover><mi>CA</mi><mo>→</mo></mover></math> = -3<math><mover><mi>CB</mi><mo>→</mo></mover></math>.<br>• <math><mover><mi>OC</mi><mo>→</mo></mover></math> = (1/4)<math><mover><mi>OA</mi><mo>→</mo></mover></math> + (3/4)<math><mover><mi>OB</mi><mo>→</mo></mover></math>.",
+    "sentence": "• Cho điểm C thuộc đoạn AB sao cho AC = 3CB. Khi đó <math><mover><mi>AC</mi><mo>→</mo></mover></math> = %%%SLOT_1%%% <math><mover><mi>AB</mi><mo>→</mo></mover></math>.<br>• Vectơ <math><mover><mi>CA</mi><mo>→</mo></mover></math> = %%%SLOT_2%%% <math><mover><mi>CB</mi><mo>→</mo></mover></math>.<br>• Với điểm O bất kì: <math><mover><mi>OC</mi><mo>→</mo></mover></math> = %%%SLOT_3%%% <math><mover><mi>OA</mi><mo>→</mo></mover></math> + (3/4)<math><mover><mi>OB</mi><mo>→</mo></mover></math>.",
     "words": [
       "3/4",
       "-3",
@@ -1201,7 +1243,7 @@
   },
   {
     "type": "mcq",
-    "q": "Cho tam giác ABC. Điểm N thỏa mãn NA⃗ + 2NB⃗ = 0⃗. Vị trí của điểm N là:",
+    "q": "Cho tam giác ABC. Điểm N thỏa mãn <math><mover><mi>NA</mi><mo>→</mo></mover></math> + 2<math><mover><mi>NB</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>. Vị trí của điểm N là:",
     "opts": [
       "N nằm trên đoạn thẳng AB và NB = (1/2)NA",
       "N là trung điểm AB",
@@ -1209,12 +1251,12 @@
       "N trùng với điểm A"
     ],
     "ans": 0,
-    "exp": "• NA⃗ = -2NB⃗ ⇒ N nằm giữa A và B, NA = 2NB.",
+    "exp": "• <math><mover><mi>NA</mi><mo>→</mo></mover></math> = -2<math><mover><mi>NB</mi><mo>→</mo></mover></math> ⇒ N nằm giữa A và B, NA = 2NB.",
     "correctText": "Phương án A: N nằm trên đoạn thẳng AB và NB = (1/2)NA"
   },
   {
     "type": "mcq",
-    "q": "Cho hai vectơ a⃗ và b⃗ không cùng phương. Vectơ u⃗ = 2a⃗ - 3b⃗ và v⃗ = ka⃗ + 6b⃗ cùng phương khi giá trị k bằng:",
+    "q": "Cho hai vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> và <math><mover><mi>b</mi><mo>→</mo></mover></math> không cùng phương. Vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = 2<math><mover><mi>a</mi><mo>→</mo></mover></math> - 3<math><mover><mi>b</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> = k<math><mover><mi>a</mi><mo>→</mo></mover></math> + 6<math><mover><mi>b</mi><mo>→</mo></mover></math> cùng phương khi giá trị k bằng:",
     "opts": [
       "-4",
       "4",
@@ -1228,33 +1270,33 @@
   },
   {
     "type": "mcq",
-    "q": "Một hệ thống đòn bẩy có điểm tựa O nằm giữa hai đầu A và B. Một vật nặng treo ở A sinh lực F₁ = 60 N, một vật nặng treo ở B sinh lực F₂ = 20 N để đòn bẩy cân bằng. Mối quan hệ vectơ vị trí OA⃗ và OB⃗ là:",
+    "q": "Một hệ thống đòn bẩy có điểm tựa O nằm giữa hai đầu A và B. Một vật nặng treo ở A sinh lực F₁ = 60 N, một vật nặng treo ở B sinh lực F₂ = 20 N để đòn bẩy cân bằng. Mối quan hệ vectơ vị trí <math><mover><mi>OA</mi><mo>→</mo></mover></math> và <math><mover><mi>OB</mi><mo>→</mo></mover></math> là:",
     "opts": [
-      "OA⃗ = -(1/3)OB⃗",
-      "OA⃗ = -3OB⃗",
-      "OA⃗ = (1/3)OB⃗",
-      "OA⃗ = OB⃗"
+      "<math><mover><mi>OA</mi><mo>→</mo></mover></math> = -(1/3)<math><mover><mi>OB</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>OA</mi><mo>→</mo></mover></math> = -3<math><mover><mi>OB</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>OA</mi><mo>→</mo></mover></math> = (1/3)<math><mover><mi>OB</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>OA</mi><mo>→</mo></mover></math> = <math><mover><mi>OB</mi><mo>→</mo></mover></math>"
     ],
     "ans": 0,
-    "exp": "• F₁ · OA = F₂ · OB ⇒ 60 OA = 20 OB ⇒ OA = 1/3 OB.<br>• O nằm giữa nên ngược hướng ⇒ OA⃗ = -(1/3)OB⃗.",
-    "correctText": "Phương án A: OA⃗ = -(1/3)OB⃗"
+    "exp": "• F₁ · OA = F₂ · OB ⇒ 60 OA = 20 OB ⇒ OA = 1/3 OB.<br>• O nằm giữa nên ngược hướng ⇒ <math><mover><mi>OA</mi><mo>→</mo></mover></math> = -(1/3)<math><mover><mi>OB</mi><mo>→</mo></mover></math>.",
+    "correctText": "Phương án A: <math><mover><mi>OA</mi><mo>→</mo></mover></math> = -(1/3)<math><mover><mi>OB</mi><mo>→</mo></mover></math>"
   },
   {
     "type": "mcq",
-    "q": "Một vệ tinh viễn thông bay ở quỹ đạo địa tĩnh với bán kính r₂ = 42.164 km từ tâm Trái Đất, trong khi một vệ tinh tầm thấp bay ở bán kính r₁ = 7.000 km. Tỉ số bán kính vị trí vectơ r₂⃗ so với r₁⃗ khi hai vệ tinh nằm trên cùng một tia xuất phát từ tâm Trái Đất là:",
+    "q": "Một vệ tinh viễn thông bay ở quỹ đạo địa tĩnh với bán kính r₂ = 42.164 km từ tâm Trái Đất, trong khi một vệ tinh tầm thấp bay ở bán kính r₁ = 7.000 km. Tỉ số bán kính vị trí vectơ <math><mover><mi>r₂</mi><mo>→</mo></mover></math> so với <math><mover><mi>r₁</mi><mo>→</mo></mover></math> khi hai vệ tinh nằm trên cùng một tia xuất phát từ tâm Trái Đất là:",
     "opts": [
-      "r₂⃗ ≈ 6,02 · r₁⃗",
-      "r₂⃗ ≈ 0,16 · r₁⃗",
-      "r₂⃗ = -6,02 · r₁⃗",
-      "r₂⃗ = 12 · r₁⃗"
+      "<math><mover><mi>r₂</mi><mo>→</mo></mover></math> ≈ 6,02 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>r₂</mi><mo>→</mo></mover></math> ≈ 0,16 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>r₂</mi><mo>→</mo></mover></math> = -6,02 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>",
+      "<math><mover><mi>r₂</mi><mo>→</mo></mover></math> = 12 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>"
     ],
     "ans": 0,
-    "exp": "• r₂ / r₁ = 42.164 / 7.000 ≈ 6,02 ⇒ r₂⃗ ≈ 6,02 · r₁⃗.",
-    "correctText": "Phương án A: r₂⃗ ≈ 6,02 · r₁⃗"
+    "exp": "• r₂ / r₁ = 42.164 / 7.000 ≈ 6,02 ⇒ <math><mover><mi>r₂</mi><mo>→</mo></mover></math> ≈ 6,02 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>.",
+    "correctText": "Phương án A: <math><mover><mi>r₂</mi><mo>→</mo></mover></math> ≈ 6,02 · <math><mover><mi>r₁</mi><mo>→</mo></mover></math>"
   },
   {
     "type": "mcq",
-    "q": "Trọng tâm G của một con tàu chở hàng ba khoang A, B, C có khối lượng bằng nhau được mô tả bởi công thức vị trí đối với gốc toạ độ hải đăng O: OG⃗ = (1/3)(OA⃗ + OB⃗ + OC⃗). Nếu khoang A có toạ độ (10; 20), khoang B có (40; 50), khoang C có (70; 20) (đơn vị: mét). Toạ độ trọng tâm G là:",
+    "q": "Trọng tâm G của một con tàu chở hàng ba khoang A, B, C có khối lượng bằng nhau được mô tả bởi công thức vị trí đối với gốc toạ độ hải đăng O: <math><mover><mi>OG</mi><mo>→</mo></mover></math> = (1/3)(<math><mover><mi>OA</mi><mo>→</mo></mover></math> + <math><mover><mi>OB</mi><mo>→</mo></mover></math> + <math><mover><mi>OC</mi><mo>→</mo></mover></math>). Nếu khoang A có toạ độ (10; 20), khoang B có (40; 50), khoang C có (70; 20) (đơn vị: mét). Toạ độ trọng tâm G là:",
     "opts": [
       "(40; 30)",
       "(30; 40)",

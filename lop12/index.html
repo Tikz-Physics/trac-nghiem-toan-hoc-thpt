@@ -430,8 +430,50 @@
       flex-shrink: 0;
     }
 
-    /* CSS Formula Engine */
+        /* CSS Math & Formula Engine */
+    math {
+      font-size: inherit;
+      color: inherit;
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+    math mi {
+      font-style: italic;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mn {
+      font-style: normal;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 600;
+      color: inherit;
+    }
+    math mo {
+      color: currentColor;
+    }
     .math-sym { font-family: 'Cambria Math', 'Times New Roman', serif; font-style: italic; color: inherit; font-weight: 600; }
+    .sqrt {
+      display: inline-flex;
+      align-items: baseline;
+      vertical-align: baseline;
+      margin: 0 1px;
+      white-space: nowrap;
+    }
+    .sqrt .rad {
+      font-size: 1.15em;
+      line-height: 1;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin-right: -1px;
+      color: currentColor;
+    }
+    .sqrt .radicand {
+      border-top: 1.6px solid currentColor;
+      padding: 0 2px;
+      line-height: 1.2;
+      display: inline-block;
+      color: inherit;
+    }
     .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 3px; font-size: 0.92em; line-height: 1.1; margin: 0 2px; color: inherit; }
     .numerator { border-bottom: 1.6px solid currentColor; padding-bottom: 1px; color: inherit; display: block; font-weight: 700; }
     .denominator { padding-top: 1px; color: inherit; display: block; font-weight: 700; }
@@ -1462,7 +1504,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: m = 4",
-      "exp": "• <b>Cách 1 (Bất đẳng thức Cauchy):</b> Với x > 0, áp dụng BĐT Cauchy cho 2 số dương: x + <span class=\"fraction\"><span class=\"numerator\">4</span><span class=\"denominator\">x</span></span> ≥ 2√(x · <span class=\"fraction\"><span class=\"numerator\">4</span><span class=\"denominator\">x</span></span>) = 2·2 = 4.<br>Dấu bằng xảy ra khi x = 4/x ⇔ x² = 4 ⇔ x = 2 (nhận). Vậy <b>m = 4</b>.<br>• <b>Cách 2 (Đạo hàm):</b> y' = 1 - 4/x² = 0 ⇔ x = 2. Lập BBT suy ra GTNN là y(2) = 4."
+      "exp": "• <b>Cách 1 (Bất đẳng thức Cauchy):</b> Với x > 0, áp dụng BĐT Cauchy cho 2 số dương: x + <span class=\"fraction\"><span class=\"numerator\">4</span><span class=\"denominator\">x</span></span> ≥ 2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x · <span class=\"fraction\"><span class=\"numerator\">4</span><span class=\"denominator\">x</span></span></span></span> = 2·2 = 4.<br>Dấu bằng xảy ra khi x = 4/x ⇔ x² = 4 ⇔ x = 2 (nhận). Vậy <b>m = 4</b>.<br>• <b>Cách 2 (Đạo hàm):</b> y' = 1 - 4/x² = 0 ⇔ x = 2. Lập BBT suy ra GTNN là y(2) = 4."
     },
     {
       "type": "tf",
@@ -1648,7 +1690,7 @@
       "type": "match",
       "q": "Ghép các mô hình hàm số thực tế (Cột A) với giá trị tiệm cận tương ứng khi thời gian t hoặc số lượng x tăng rất lớn (Cột B):",
       "colA": [
-        "Chi phí trung bình: C̄(x) = 50 + <span class=\"fraction\"><span class=\"numerator\">2000</span><span class=\"denominator\">x</span></span> (nghìn đồng/sản phẩm)",
+        "Chi phí trung bình: <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) = 50 + <span class=\"fraction\"><span class=\"numerator\">2000</span><span class=\"denominator\">x</span></span> (nghìn đồng/sản phẩm)",
         "Nồng độ muối trong bể: S(t) = <span class=\"fraction\"><span class=\"numerator\">30t</span><span class=\"denominator\">t + 10</span></span> (gam/lít, t ≥ 0)",
         "Vận tốc rơi có lực cản: v(t) = 40(1 - e⁻⁰·²ᵗ) (m/s, t ≥ 0)",
         "Tỷ lệ dân số dùng Internet: P(t) = <span class=\"fraction\"><span class=\"numerator\">95</span><span class=\"denominator\">1 + 9e⁻⁰·⁵ᵗ</span></span> (%)"
@@ -1666,7 +1708,7 @@
         2
       ],
       "correctText": "1-B • 2-A • 3-D • 4-C",
-      "exp": "• <b>1 ghép B:</b> Khi x → +∞ thì 2000/x → 0 ⇒ C̄(x) → 50.<br>• <b>2 ghép A:</b> Khi t → +∞ thì 30t/(t + 10) → 30.<br>• <b>3 ghép D:</b> Khi t → +∞ thì e⁻⁰·²ᵗ → 0 ⇒ v(t) → 40 m/s.<br>• <b>4 ghép C:</b> Khi t → +∞ thì e⁻⁰·⁵ᵗ → 0 ⇒ P(t) → 95%."
+      "exp": "• <b>1 ghép B:</b> Khi x → +∞ thì 2000/x → 0 ⇒ <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) → 50.<br>• <b>2 ghép A:</b> Khi t → +∞ thì 30t/(t + 10) → 30.<br>• <b>3 ghép D:</b> Khi t → +∞ thì e⁻⁰·²ᵗ → 0 ⇒ v(t) → 40 m/s.<br>• <b>4 ghép C:</b> Khi t → +∞ thì e⁻⁰·⁵ᵗ → 0 ⇒ P(t) → 95%."
     },
     {
       "type": "drag",
@@ -1703,7 +1745,7 @@
     },
     {
       "type": "mcq",
-      "q": "Số đường tiệm cận đứng và tiệm cận ngang của đồ thị hàm số y = <span class=\"fraction\"><span class=\"numerator\">x - 1</span><span class=\"denominator\">√(x² - 4)</span></span> là:",
+      "q": "Số đường tiệm cận đứng và tiệm cận ngang của đồ thị hàm số y = <span class=\"fraction\"><span class=\"numerator\">x - 1</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² - 4</span></span></span></span> là:",
       "opts": [
         "4 đường tiệm cận (2 đứng, 2 ngang)",
         "3 đường tiệm cận (2 đứng, 1 ngang)",
@@ -1712,13 +1754,13 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: 4 đường tiệm cận (2 đứng, 2 ngang)",
-      "exp": "• <b>Tập xác định:</b> x² - 4 > 0 ⇔ x ∈ (-∞; -2) ∪ (2; +∞).<br>• <b>Tiệm cận đứng:</b><br>- lim<sub style=\"font-size:0.8em\">x→2⁺</sub> y = +∞ ⇒ <b>x = 2</b> là TCĐ.<br>- lim<sub style=\"font-size:0.8em\">x→-2⁻</sub> y = -∞ ⇒ <b>x = -2</b> là TCĐ. (Có 2 TCĐ).<br>• <b>Tiệm cận ngang:</b><br>- lim<sub style=\"font-size:0.8em\">x→+∞</sub> <span class=\"fraction\"><span class=\"numerator\">x(1 - 1/x)</span><span class=\"denominator\">x√(1 - 4/x²)</span></span> = 1 ⇒ <b>y = 1</b>.<br>- lim<sub style=\"font-size:0.8em\">x→-∞</sub> <span class=\"fraction\"><span class=\"numerator\">x(1 - 1/x)</span><span class=\"denominator\">-x√(1 - 4/x²)</span></span> = -1 ⇒ <b>y = -1</b>. (Có 2 TCN).<br>• Tổng cộng đồ thị có <b>4 đường tiệm cận</b>."
+      "exp": "• <b>Tập xác định:</b> x² - 4 > 0 ⇔ x ∈ (-∞; -2) ∪ (2; +∞).<br>• <b>Tiệm cận đứng:</b><br>- lim<sub style=\"font-size:0.8em\">x→2⁺</sub> y = +∞ ⇒ <b>x = 2</b> là TCĐ.<br>- lim<sub style=\"font-size:0.8em\">x→-2⁻</sub> y = -∞ ⇒ <b>x = -2</b> là TCĐ. (Có 2 TCĐ).<br>• <b>Tiệm cận ngang:</b><br>- lim<sub style=\"font-size:0.8em\">x→+∞</sub> <span class=\"fraction\"><span class=\"numerator\">x(1 - 1/x)</span><span class=\"denominator\">x<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1 - 4/x²</span></span></span></span> = 1 ⇒ <b>y = 1</b>.<br>- lim<sub style=\"font-size:0.8em\">x→-∞</sub> <span class=\"fraction\"><span class=\"numerator\">x(1 - 1/x)</span><span class=\"denominator\">-x<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1 - 4/x²</span></span></span></span> = -1 ⇒ <b>y = -1</b>. (Có 2 TCN).<br>• Tổng cộng đồ thị có <b>4 đường tiệm cận</b>."
     },
     {
       "type": "tf",
-      "q": "Một công ty sản xuất thiết bị gia dụng có tổng chi phí sản xuất x nghìn sản phẩm (tính bằng triệu đồng) là C(x) = 50 + 2x + 0,001x². Chi phí trung bình để sản xuất một nghìn sản phẩm là C̄(x) = <span class=\"fraction\"><span class=\"numerator\">C(x)</span><span class=\"denominator\">x</span></span>. Xét tính Đúng/Sai của từng mệnh đề sau:",
+      "q": "Một công ty sản xuất thiết bị gia dụng có tổng chi phí sản xuất x nghìn sản phẩm (tính bằng triệu đồng) là C(x) = 50 + 2x + 0,001x². Chi phí trung bình để sản xuất một nghìn sản phẩm là <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) = <span class=\"fraction\"><span class=\"numerator\">C(x)</span><span class=\"denominator\">x</span></span>. Xét tính Đúng/Sai của từng mệnh đề sau:",
       "stmts": [
-        "Hàm chi phí trung bình là C̄(x) = <span class=\"fraction\"><span class=\"numerator\">50</span><span class=\"denominator\">x</span></span> + 2 + 0,001x (với x > 0).",
+        "Hàm chi phí trung bình là <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) = <span class=\"fraction\"><span class=\"numerator\">50</span><span class=\"denominator\">x</span></span> + 2 + 0,001x (với x > 0).",
         "Đồ thị hàm số chi phí trung bình có tiệm cận đứng là trục tung x = 0.",
         "Đồ thị hàm số chi phí trung bình có tiệm cận xiên là đường thẳng y = 0,001x + 2.",
         "Khi quy mô sản xuất x tăng lên vô cùng lớn, chi phí trung bình trên mỗi sản phẩm tiến dần về 2 triệu đồng."
@@ -1730,7 +1772,7 @@
         false
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-      "exp": "• <b>Ý a [Đúng]:</b> C̄(x) = C(x)/x = 50/x + 2 + 0,001x.<br>• <b>Ý b [Đúng]:</b> lim<sub style=\"font-size:0.8em\">x→0⁺</sub> C̄(x) = +∞ nên trục tung x = 0 là tiệm cận đứng.<br>• <b>Ý c [Đúng]:</b> lim<sub style=\"font-size:0.8em\">x→+∞</sub> [C̄(x) - (0,001x + 2)] = lim<sub style=\"font-size:0.8em\">x→+∞</sub> (50/x) = 0 nên y = 0,001x + 2 là tiệm cận xiên.<br>• <b>Ý d [Sai]:</b> Khi x → +∞, chi phí trung bình tăng dần theo tiệm cận xiên (tiến ra vô cực) do chi phí lưu kho và quản lý (thành phần 0,001x²), không phải tiến về 2 triệu đồng."
+      "exp": "• <b>Ý a [Đúng]:</b> <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) = C(x)/x = 50/x + 2 + 0,001x.<br>• <b>Ý b [Đúng]:</b> lim<sub style=\"font-size:0.8em\">x→0⁺</sub> <math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) = +∞ nên trục tung x = 0 là tiệm cận đứng.<br>• <b>Ý c [Đúng]:</b> lim<sub style=\"font-size:0.8em\">x→+∞</sub> [<math><mover><mi>C</mi><mo>¯</mo></mover></math>(x) - (0,001x + 2)] = lim<sub style=\"font-size:0.8em\">x→+∞</sub> (50/x) = 0 nên y = 0,001x + 2 là tiệm cận xiên.<br>• <b>Ý d [Sai]:</b> Khi x → +∞, chi phí trung bình tăng dần theo tiệm cận xiên (tiến ra vô cực) do chi phí lưu kho và quản lý (thành phần 0,001x²), không phải tiến về 2 triệu đồng."
     },
     {
       "type": "mcq",
@@ -1977,7 +2019,7 @@
         "Khảo sát hàm thể tích V(x) = x(a - 2x)²",
         "Khảo sát hàm công suất E(v) = av³ + <span class=\"fraction\"><span class=\"numerator\">b</span><span class=\"denominator\">v</span></span>",
         "Khảo sát hàm hiệu số Doanh thu trừ Chi phí",
-        "Khảo sát hàm tổng khoảng cách L(x) = √(x² + d₁²) + √((c - x)² + d₂²)"
+        "Khảo sát hàm tổng khoảng cách L(x) = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² + d₁²</span></span> + <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(c - x)² + d₂²</span></span>"
       ],
       "ans": [
         0,
@@ -2071,33 +2113,33 @@
   "6": [
     {
       "type": "mcq",
-      "q": "Cho hình hộp ABCD.A'B'C'D'. Quy tắc hình hộp xác định vectơ đường chéo <span class=\"math-sym\">AC'</span> bằng tổng của ba vectơ nào có chung gốc A?",
+      "q": "Cho hình hộp ABCD.A'B'C'D'. Quy tắc hình hộp xác định vectơ đường chéo <math><mover><mi>AC'</mi><mo>→</mo></mover></math> bằng tổng của ba vectơ nào có chung gốc A?",
       "opts": [
-        "<span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span>",
-        "<span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">BC</span> + <span class=\"math-sym\">CD</span>",
-        "<span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">A'B'</span> + <span class=\"math-sym\">A'D'</span> + <span class=\"math-sym\">AA'</span>",
-        "<span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">AB</span> - <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span>"
+        "<math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>BC</mi><mo>→</mo></mover></math> + <math><mover><mi>CD</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>A'B'</mi><mo>→</mo></mover></math> + <math><mover><mi>A'D'</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>",
+        "<math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> - <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>"
       ],
       "ans": 0,
-      "correctText": "Phương án A: <span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span>",
-      "exp": "• <b>Quy tắc hình hộp (SGK Toán 12):</b> Cho hình hộp ABCD.A'B'C'D'. Vectơ đường chéo xuất phát từ đỉnh A bằng tổng ba vectơ cạnh xuất phát từ đỉnh A:<br><span class=\"math-sym\">AC'</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span>."
+      "correctText": "Phương án A: <math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>",
+      "exp": "• <b>Quy tắc hình hộp (SGK Toán 12):</b> Cho hình hộp ABCD.A'B'C'D'. Vectơ đường chéo xuất phát từ đỉnh A bằng tổng ba vectơ cạnh xuất phát từ đỉnh A:<br><math><mover><mi>AC'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>."
     },
     {
       "type": "mcq",
-      "q": "Cho hình lập phương ABCD.A'B'C'D' có cạnh bằng a. Tính tích vô hướng <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">A'C'</span>.",
+      "q": "Cho hình lập phương ABCD.A'B'C'D' có cạnh bằng a. Tính tích vô hướng <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>A'C'</mi><mo>→</mo></mover></math>.",
       "opts": [
         "a²",
         "0",
-        "a²√2",
+        "a²<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>",
         "-a²"
       ],
       "ans": 0,
       "correctText": "Phương án A: a²",
-      "exp": "• Do A'B'C'D' là hình vuông cạnh a và <span class=\"math-sym\">A'C'</span> = <span class=\"math-sym\">AC</span> nên:<br><span class=\"math-sym\">AB</span> · <span class=\"math-sym\">A'C'</span> = <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AC</span> = |<span class=\"math-sym\">AB</span>| · |<span class=\"math-sym\">AC</span>| · cos(<span class=\"math-sym\">AB</span>, <span class=\"math-sym\">AC</span>).<br>• |<span class=\"math-sym\">AB</span>| = a, |<span class=\"math-sym\">AC</span>| = a√2, góc BAC = 45°.<br>• Tích vô hướng: a · a√2 · cos(45°) = a · a√2 · <span class=\"fraction\"><span class=\"numerator\">√2</span><span class=\"denominator\">2</span></span> = <b>a²</b>."
+      "exp": "• Do A'B'C'D' là hình vuông cạnh a và <math><mover><mi>A'C'</mi><mo>→</mo></mover></math> = <math><mover><mi>AC</mi><mo>→</mo></mover></math> nên:<br><math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>A'C'</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math> = |<math><mover><mi>AB</mi><mo>→</mo></mover></math>| · |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| · cos(<math><mover><mi>AB</mi><mo>→</mo></mover></math>, <math><mover><mi>AC</mi><mo>→</mo></mover></math>).<br>• |<math><mover><mi>AB</mi><mo>→</mo></mover></math>| = a, |<math><mover><mi>AC</mi><mo>→</mo></mover></math>| = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>, góc BAC = 45°.<br>• Tích vô hướng: a · a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> · cos(45°) = a · a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> · <span class=\"fraction\"><span class=\"numerator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span><span class=\"denominator\">2</span></span> = <b>a²</b>."
     },
     {
       "type": "mcq",
-      "q": "Cho tứ diện đều ABCD cạnh bằng a. Góc giữa hai vectơ <span class=\"math-sym\">AB</span> và <span class=\"math-sym\">CD</span> bằng bao nhiêu độ?",
+      "q": "Cho tứ diện đều ABCD cạnh bằng a. Góc giữa hai vectơ <math><mover><mi>AB</mi><mo>→</mo></mover></math> và <math><mover><mi>CD</mi><mo>→</mo></mover></math> bằng bao nhiêu độ?",
       "opts": [
         "90°",
         "60°",
@@ -2106,16 +2148,16 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: 90°",
-      "exp": "• Ta tính tích vô hướng: <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">CD</span> = <span class=\"math-sym\">AB</span> · (<span class=\"math-sym\">AD</span> - <span class=\"math-sym\">AC</span>) = <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AD</span> - <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AC</span>.<br>• Vì tứ diện đều các mặt là tam giác đều cạnh a nên góc BAD = BAC = 60°:<br><span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AD</span> = a · a · cos 60° = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span>.<br><span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AC</span> = a · a · cos 60° = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span>.<br>• Do đó <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">CD</span> = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span> - <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span> = 0 ⇒ Hai vectơ vuông góc, góc giữa chúng bằng <b>90°</b>."
+      "exp": "• Ta tính tích vô hướng: <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>CD</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> · (<math><mover><mi>AD</mi><mo>→</mo></mover></math> - <math><mover><mi>AC</mi><mo>→</mo></mover></math>) = <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AD</mi><mo>→</mo></mover></math> - <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math>.<br>• Vì tứ diện đều các mặt là tam giác đều cạnh a nên góc BAD = BAC = 60°:<br><math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AD</mi><mo>→</mo></mover></math> = a · a · cos 60° = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span>.<br><math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math> = a · a · cos 60° = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span>.<br>• Do đó <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>CD</mi><mo>→</mo></mover></math> = <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span> - <span class=\"fraction\"><span class=\"numerator\">a²</span><span class=\"denominator\">2</span></span> = 0 ⇒ Hai vectơ vuông góc, góc giữa chúng bằng <b>90°</b>."
     },
     {
       "type": "tf",
       "q": "Cho hình hộp chữ nhật ABCD.A'B'C'D' có các cạnh AB = 3, AD = 4, AA' = 5. Xét tính Đúng/Sai của từng mệnh đề sau:",
       "stmts": [
-        "Vectơ tổng <span class=\"math-sym\">u</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span> bằng vectơ đường chéo <span class=\"math-sym\">AC'</span>.",
-        "Độ dài của đường chéo hình hộp chữ nhật là AC' = 5√2.",
-        "Tích vô hướng <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AD</span> = 0 do AB vuông góc với AD.",
-        "Góc giữa hai vectơ <span class=\"math-sym\">AC</span> và <span class=\"math-sym\">AA'</span> bằng 45°."
+        "Vectơ tổng <math><mover><mi>u</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math> bằng vectơ đường chéo <math><mover><mi>AC'</mi><mo>→</mo></mover></math>.",
+        "Độ dài của đường chéo hình hộp chữ nhật là AC' = 5<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.",
+        "Tích vô hướng <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AD</mi><mo>→</mo></mover></math> = 0 do AB vuông góc với AD.",
+        "Góc giữa hai vectơ <math><mover><mi>AC</mi><mo>→</mo></mover></math> và <math><mover><mi>AA'</mi><mo>→</mo></mover></math> bằng 45°."
       ],
       "ans": [
         true,
@@ -2124,7 +2166,7 @@
         false
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-      "exp": "• <b>Ý a [Đúng]:</b> Theo quy tắc hình hộp: <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span> = <span class=\"math-sym\">AC'</span>.<br>• <b>Ý b [Đúng]:</b> AC' = √(AB² + AD² + AA'²) = √(3² + 4² + 5²) = √(9 + 16 + 25) = √50 = 5√2.<br>• <b>Ý c [Đúng]:</b> Đáy là hình chữ nhật nên AB ⊥ AD ⇒ <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AD</span> = 0.<br>• <b>Ý d [Sai]:</b> Đường thẳng AA' vuông góc với mặt phẳng đáy (ABCD) nên AA' ⊥ AC ⇒ góc giữa <span class=\"math-sym\">AC</span> và <span class=\"math-sym\">AA'</span> bằng 90°, không phải 45°."
+      "exp": "• <b>Ý a [Đúng]:</b> Theo quy tắc hình hộp: <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math> = <math><mover><mi>AC'</mi><mo>→</mo></mover></math>.<br>• <b>Ý b [Đúng]:</b> AC' = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">AB² + AD² + AA'²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 4² + 5²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">9 + 16 + 25</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">50</span></span> = 5<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.<br>• <b>Ý c [Đúng]:</b> Đáy là hình chữ nhật nên AB ⊥ AD ⇒ <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AD</mi><mo>→</mo></mover></math> = 0.<br>• <b>Ý d [Sai]:</b> Đường thẳng AA' vuông góc với mặt phẳng đáy (ABCD) nên AA' ⊥ AC ⇒ góc giữa <math><mover><mi>AC</mi><mo>→</mo></mover></math> và <math><mover><mi>AA'</mi><mo>→</mo></mover></math> bằng 90°, không phải 45°."
     },
     {
       "type": "match",
@@ -2153,12 +2195,12 @@
     {
       "type": "drag",
       "q": "Chọn thuật ngữ thích hợp điền vào chỗ trống để hoàn thiện định nghĩa ba vectơ đồng phẳng trong không gian:",
-      "text": "Trong không gian, ba vectơ được gọi là [blank] nếu các giá của chúng cùng [blank] với một mặt phẳng. Nếu có hai vectơ không cùng phương thì ba vectơ đồng phẳng khi và chỉ khi có các số m, n sao cho <span class=\"math-sym\">c</span> = [blank] + [blank].",
+      "text": "Trong không gian, ba vectơ được gọi là [blank] nếu các giá của chúng cùng [blank] với một mặt phẳng. Nếu có hai vectơ không cùng phương thì ba vectơ đồng phẳng khi và chỉ khi có các số m, n sao cho <math><mover><mi>c</mi><mo>→</mo></mover></math> = [blank] + [blank].",
       "words": [
         "đồng phẳng",
         "song song hoặc nằm trong",
-        "m<span class=\"math-sym\">a</span>",
-        "n<span class=\"math-sym\">b</span>",
+        "m<math><mover><mi>a</mi><mo>→</mo></mover></math>",
+        "n<math><mover><mi>b</mi><mo>→</mo></mover></math>",
         "cùng phương",
         "vuông góc"
       ],
@@ -2168,43 +2210,43 @@
         2,
         3
       ],
-      "correctText": "(1) đồng phẳng • (2) song song hoặc nằm trong • (3) m<span class=\"math-sym\">a</span> • (4) n<span class=\"math-sym\">b</span>",
-      "exp": "• <b>Định lý đồng phẳng (SGK Toán 12):</b> Ba vectơ đồng phẳng khi các giá của chúng cùng song song hoặc nằm trên một mặt phẳng. Điều kiện cần và đủ là một vectơ phân tích tuyến tính được qua hai vectơ kia: <span class=\"math-sym\">c</span> = m<span class=\"math-sym\">a</span> + n<span class=\"math-sym\">b</span>."
+      "correctText": "(1) đồng phẳng • (2) song song hoặc nằm trong • (3) m<math><mover><mi>a</mi><mo>→</mo></mover></math> • (4) n<math><mover><mi>b</mi><mo>→</mo></mover></math>",
+      "exp": "• <b>Định lý đồng phẳng (SGK Toán 12):</b> Ba vectơ đồng phẳng khi các giá của chúng cùng song song hoặc nằm trên một mặt phẳng. Điều kiện cần và đủ là một vectơ phân tích tuyến tính được qua hai vectơ kia: <math><mover><mi>c</mi><mo>→</mo></mover></math> = m<math><mover><mi>a</mi><mo>→</mo></mover></math> + n<math><mover><mi>b</mi><mo>→</mo></mover></math>."
     },
     {
       "type": "mcq",
-      "q": "Cho hình hộp chữ nhật ABCD.A'B'C'D' có kích thước AB = 2, AD = 3, AA' = 6. Tính độ dài vectơ tổng <span class=\"math-sym\">w</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span>.",
+      "q": "Cho hình hộp chữ nhật ABCD.A'B'C'D' có kích thước AB = 2, AD = 3, AA' = 6. Tính độ dài vectơ tổng <math><mover><mi>w</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math>.",
       "opts": [
         "7",
         "11",
-        "√49",
-        "5√2"
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">49</span></span>",
+        "5<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>"
       ],
       "ans": 0,
       "correctText": "Phương án A: 7",
-      "exp": "• Theo quy tắc hình hộp: <span class=\"math-sym\">w</span> = <span class=\"math-sym\">AB</span> + <span class=\"math-sym\">AD</span> + <span class=\"math-sym\">AA'</span> = <span class=\"math-sym\">AC'</span>.<br>• Độ dài vectơ: |<span class=\"math-sym\">w</span>| = AC' = √(AB² + AD² + AA'²) = √(2² + 3² + 6²) = √(4 + 9 + 36) = √49 = <b>7</b>.",
+      "exp": "• Theo quy tắc hình hộp: <math><mover><mi>w</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> + <math><mover><mi>AD</mi><mo>→</mo></mover></math> + <math><mover><mi>AA'</mi><mo>→</mo></mover></math> = <math><mover><mi>AC'</mi><mo>→</mo></mover></math>.<br>• Độ dài vectơ: |<math><mover><mi>w</mi><mo>→</mo></mover></math>| = AC' = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">AB² + AD² + AA'²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + 3² + 6²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4 + 9 + 36</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">49</span></span> = <b>7</b>.",
       "svgGraph": "<svg viewBox=\"0 0 380 220\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arrowRed\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1 L 10 5 L 0 9 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect x=\"8\" y=\"8\" width=\"364\" height=\"204\" rx=\"10\" fill=\"rgba(15,23,42,0.95)\" stroke=\"#0ea5e9\" stroke-width=\"1.6\"/>\n  <!-- Bottom face ABCD -->\n  <polygon points=\"70,160 190,160 270,110 150,110\" fill=\"rgba(56,189,248,0.06)\" stroke=\"rgba(255,255,255,0.3)\" stroke-width=\"1.2\"/>\n  <!-- Top face A'B'C'D' -->\n  <polygon points=\"70,80 190,80 270,30 150,30\" fill=\"rgba(56,189,248,0.12)\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/>\n  <!-- Vertical edges -->\n  <line x1=\"70\" y1=\"160\" x2=\"70\" y2=\"80\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/>\n  <line x1=\"190\" y1=\"160\" x2=\"190\" y2=\"80\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/>\n  <line x1=\"270\" y1=\"110\" x2=\"270\" y2=\"30\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/>\n  <line x1=\"150\" y1=\"110\" x2=\"150\" y2=\"30\" stroke=\"rgba(255,255,255,0.3)\" stroke-dasharray=\"3,3\"/>\n  <!-- Hidden bottom edges -->\n  <line x1=\"150\" y1=\"110\" x2=\"70\" y2=\"160\" stroke=\"rgba(255,255,255,0.3)\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"150\" y1=\"110\" x2=\"270\" y2=\"110\" stroke=\"rgba(255,255,255,0.3)\" stroke-dasharray=\"3,3\"/>\n  <!-- Vector diagonal AC' -->\n  <line x1=\"70\" y1=\"160\" x2=\"266\" y2=\"33\" stroke=\"#f43f5e\" stroke-width=\"2.6\" marker-end=\"url(#arrowRed)\"/>\n  <!-- Labels -->\n  <text x=\"52\" y=\"172\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">A</text>\n  <text x=\"195\" y=\"172\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">B</text>\n  <text x=\"278\" y=\"115\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">C</text>\n  <text x=\"135\" y=\"108\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">D</text>\n  <text x=\"52\" y=\"75\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">A'</text>\n  <text x=\"195\" y=\"75\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">B'</text>\n  <text x=\"278\" y=\"28\" fill=\"#f43f5e\" font-size=\"14\" font-weight=\"900\">C'</text>\n  <text x=\"135\" y=\"28\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"700\">D'</text>\n  <!-- Dimension labels -->\n  <text x=\"130\" y=\"175\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">AB = 2</text>\n  <text x=\"235\" y=\"145\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">AD = 3</text>\n  <text x=\"50\" y=\"125\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"700\" text-anchor=\"end\">AA' = 6</text>\n</svg>"
     },
     {
       "type": "mcq",
-      "q": "Cho hình chóp S.ABC có đáy ABC là tam giác đều cạnh a, cạnh bên SA ⊥ (ABC) và SA = a√3. Tính côsin góc giữa hai vectơ <span class=\"math-sym\">SB</span> và <span class=\"math-sym\">AB</span>.",
+      "q": "Cho hình chóp S.ABC có đáy ABC là tam giác đều cạnh a, cạnh bên SA ⊥ (ABC) và SA = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>. Tính côsin góc giữa hai vectơ <math><mover><mi>SB</mi><mo>→</mo></mover></math> và <math><mover><mi>AB</mi><mo>→</mo></mover></math>.",
       "opts": [
         "1/2",
-        "√3/2",
-        "√2/2",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/2",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2",
         "1/4"
       ],
       "ans": 0,
       "correctText": "Phương án A: 1/2",
-      "exp": "• Tam giác SAB vuông tại A: SA = a√3, AB = a ⇒ SB = √(SA² + AB²) = √(3a² + a²) = 2a.<br>• Trong tam giác vuông SAB: cos(SBA) = <span class=\"fraction\"><span class=\"numerator\">AB</span><span class=\"denominator\">SB</span></span> = <span class=\"fraction\"><span class=\"numerator\">a</span><span class=\"denominator\">2a</span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span> (góc SBA = 60°).<br>• Góc giữa hai vectơ: (<span class=\"math-sym\">SB</span>, <span class=\"math-sym\">AB</span>) = 180° - SBA? Chú ý: <span class=\"math-sym\">BS</span> và <span class=\"math-sym\">BA</span> có chung gốc B, góc giữa chúng là góc SBA = 60°.<br>Vectơ <span class=\"math-sym\">SB</span> = -<span class=\"math-sym\">BS</span> ⇒ cos(<span class=\"math-sym\">SB</span>, <span class=\"math-sym\">AB</span>) = cos(-<span class=\"math-sym\">BS</span>, -<span class=\"math-sym\">BA</span>) = cos(<span class=\"math-sym\">BS</span>, <span class=\"math-sym\">BA</span>) = cos 60° = <b>1/2</b>."
+      "exp": "• Tam giác SAB vuông tại A: SA = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>, AB = a ⇒ SB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">SA² + AB²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3a² + a²</span></span> = 2a.<br>• Trong tam giác vuông SAB: cos(SBA) = <span class=\"fraction\"><span class=\"numerator\">AB</span><span class=\"denominator\">SB</span></span> = <span class=\"fraction\"><span class=\"numerator\">a</span><span class=\"denominator\">2a</span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span> (góc SBA = 60°).<br>• Góc giữa hai vectơ: (<math><mover><mi>SB</mi><mo>→</mo></mover></math>, <math><mover><mi>AB</mi><mo>→</mo></mover></math>) = 180° - SBA? Chú ý: <math><mover><mi>BS</mi><mo>→</mo></mover></math> và <math><mover><mi>BA</mi><mo>→</mo></mover></math> có chung gốc B, góc giữa chúng là góc SBA = 60°.<br>Vectơ <math><mover><mi>SB</mi><mo>→</mo></mover></math> = -<math><mover><mi>BS</mi><mo>→</mo></mover></math> ⇒ cos(<math><mover><mi>SB</mi><mo>→</mo></mover></math>, <math><mover><mi>AB</mi><mo>→</mo></mover></math>) = cos(-<math><mover><mi>BS</mi><mo>→</mo></mover></math>, -<math><mover><mi>BA</mi><mo>→</mo></mover></math>) = cos(<math><mover><mi>BS</mi><mo>→</mo></mover></math>, <math><mover><mi>BA</mi><mo>→</mo></mover></math>) = cos 60° = <b>1/2</b>."
     },
     {
       "type": "tf",
       "q": "Một chiếc đèn chùm trang trí có khối lượng 12 kg (trọng lực P ≈ 120 N) được treo cân bằng dưới trần nhà bằng 3 sợi dây cáp thép không giãn có chiều dài bằng nhau. Ba đầu dây gắn vào trần nhà tại 3 điểm A, B, C tạo thành tam giác đều cạnh 1,2 m. Đèn ở điểm S cách đều A, B, C và khoảng cách thẳng đứng từ S lên trần nhà là h = 0,8 m. Xét tính Đúng/Sai của từng mệnh đề sau:",
       "stmts": [
         "Ba lực căng dây <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">A</sub>, <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">B</sub>, <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">C</sub> có độ lớn bằng nhau do tính đối xứng.",
-        "Hệ lực tác dụng lên đèn cân bằng: <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">A</sub> + <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">B</sub> + <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">C</sub> + <span class=\"math-sym\">P</span> = <span class=\"math-sym\">0</span>.",
-        "Khoảng cách từ tâm trần nhà O đến mỗi điểm buộc cáp là R = <span class=\"fraction\"><span class=\"numerator\">1,2√3</span><span class=\"denominator\">3</span></span> ≈ 0,693 m.",
+        "Hệ lực tác dụng lên đèn cân bằng: <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">A</sub> + <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">B</sub> + <span class=\"math-sym\">T</span><sub style=\"font-size:0.8em\">C</sub> + <span class=\"math-sym\">P</span> = <math><mover><mn>0</mn><mo>→</mo></mover></math>.",
+        "Khoảng cách từ tâm trần nhà O đến mỗi điểm buộc cáp là R = <span class=\"fraction\"><span class=\"numerator\">1,2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></span><span class=\"denominator\">3</span></span> ≈ 0,693 m.",
         "Độ lớn lực căng trên mỗi sợi dây cáp lớn hơn 100 N."
       ],
       "ans": [
@@ -2214,7 +2256,7 @@
         false
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-      "exp": "• <b>Ý a [Đúng]:</b> Do tam giác đều và đỉnh S cách đều 3 đỉnh nên độ lớn T_A = T_B = T_C = T.<br>• <b>Ý b [Đúng]:</b> Trạng thái cân bằng tĩnh: tổng lực tác dụng bằng 0.<br>• <b>Ý c [Đúng]:</b> Bán kính đường tròn ngoại tiếp tam giác đều cạnh a = 1,2 m là R = a√3/3 = 1,2√3/3 ≈ 0,693 m.<br>• <b>Ý d [Sai]:</b> Độ dài dây treo: L = √(h² + R²) = √(0,8² + 0,693²) = √(0,64 + 0,48) = √1,12 ≈ 1,058 m. Góc hợp bởi dây và phương thẳng đứng: cos α = h/L = 0,8 / 1,058 ≈ 0,756. Chiếu phương thẳng đứng: 3T · cos α = P ⇒ 3T(0,756) = 120 ⇒ T ≈ 120 / 2,268 ≈ 52,9 N (< 100 N)."
+      "exp": "• <b>Ý a [Đúng]:</b> Do tam giác đều và đỉnh S cách đều 3 đỉnh nên độ lớn T_A = T_B = T_C = T.<br>• <b>Ý b [Đúng]:</b> Trạng thái cân bằng tĩnh: tổng lực tác dụng bằng 0.<br>• <b>Ý c [Đúng]:</b> Bán kính đường tròn ngoại tiếp tam giác đều cạnh a = 1,2 m là R = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/3 = 1,2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>/3 ≈ 0,693 m.<br>• <b>Ý d [Sai]:</b> Độ dài dây treo: L = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">h² + R²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">0,8² + 0,693²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">0,64 + 0,48</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1,12</span></span> ≈ 1,058 m. Góc hợp bởi dây và phương thẳng đứng: cos α = h/L = 0,8 / 1,058 ≈ 0,756. Chiếu phương thẳng đứng: 3T · cos α = P ⇒ 3T(0,756) = 120 ⇒ T ≈ 120 / 2,268 ≈ 52,9 N (< 100 N)."
     },
     {
       "type": "mcq",
@@ -2227,7 +2269,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: 815,5 km/h",
-      "exp": "• Chọn hệ trục 3 chiều vuông góc: hướng Đông (trục Ox), hướng Bắc (trục Oy), hướng thẳng đứng (trục Oz).<br>• Vectơ vận tốc tổng hợp của máy bay: <span class=\"math-sym\">v</span> = (150; 800; 50).<br>• Tốc độ thực tế so với mặt đất: |<span class=\"math-sym\">v</span>| = √(150² + 800² + 50²) = √(22500 + 640000 + 2500) = √665000 ≈ <b>815,5 km/h</b>."
+      "exp": "• Chọn hệ trục 3 chiều vuông góc: hướng Đông (trục Ox), hướng Bắc (trục Oy), hướng thẳng đứng (trục Oz).<br>• Vectơ vận tốc tổng hợp của máy bay: <math><mover><mi>v</mi><mo>→</mo></mover></math> = (150; 800; 50).<br>• Tốc độ thực tế so với mặt đất: |<math><mover><mi>v</mi><mo>→</mo></mover></math>| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">150² + 800² + 50²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">22500 + 640000 + 2500</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">665000</span></span> ≈ <b>815,5 km/h</b>."
     }
   ],
   "7": [
@@ -2235,14 +2277,14 @@
       "type": "mcq",
       "q": "Trong không gian Oxyz, toạ độ của ba vectơ đơn vị lần lượt trên ba trục Ox, Oy, Oz là:",
       "opts": [
-        "<span class=\"math-sym\">i</span> = (1; 0; 0), <span class=\"math-sym\">j</span> = (0; 1; 0), <span class=\"math-sym\">k</span> = (0; 0; 1)",
-        "<span class=\"math-sym\">i</span> = (0; 1; 0), <span class=\"math-sym\">j</span> = (1; 0; 0), <span class=\"math-sym\">k</span> = (0; 0; 1)",
-        "<span class=\"math-sym\">i</span> = (1; 1; 0), <span class=\"math-sym\">j</span> = (0; 1; 1), <span class=\"math-sym\">k</span> = (1; 0; 1)",
-        "<span class=\"math-sym\">i</span> = (1; 0; 0), <span class=\"math-sym\">j</span> = (0; 0; 1), <span class=\"math-sym\">k</span> = (0; 1; 0)"
+        "<math><mover><mi>i</mi><mo>→</mo></mover></math> = (1; 0; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (0; 1; 0), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 0; 1)",
+        "<math><mover><mi>i</mi><mo>→</mo></mover></math> = (0; 1; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (1; 0; 0), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 0; 1)",
+        "<math><mover><mi>i</mi><mo>→</mo></mover></math> = (1; 1; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (0; 1; 1), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (1; 0; 1)",
+        "<math><mover><mi>i</mi><mo>→</mo></mover></math> = (1; 0; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (0; 0; 1), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 1; 0)"
       ],
       "ans": 0,
-      "correctText": "Phương án A: <span class=\"math-sym\">i</span> = (1; 0; 0), <span class=\"math-sym\">j</span> = (0; 1; 0), <span class=\"math-sym\">k</span> = (0; 0; 1)",
-      "exp": "• <b>Định nghĩa hệ toạ độ Oxyz (SGK Toán 12):</b> Hệ trục toạ độ không gian gồm ba trục toạ độ đôi một vuông góc Ox, Oy, Oz với ba vectơ đơn vị tương ứng là <span class=\"math-sym\">i</span> = (1; 0; 0), <span class=\"math-sym\">j</span> = (0; 1; 0), <span class=\"math-sym\">k</span> = (0; 0; 1)."
+      "correctText": "Phương án A: <math><mover><mi>i</mi><mo>→</mo></mover></math> = (1; 0; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (0; 1; 0), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 0; 1)",
+      "exp": "• <b>Định nghĩa hệ toạ độ Oxyz (SGK Toán 12):</b> Hệ trục toạ độ không gian gồm ba trục toạ độ đôi một vuông góc Ox, Oy, Oz với ba vectơ đơn vị tương ứng là <math><mover><mi>i</mi><mo>→</mo></mover></math> = (1; 0; 0), <math><mover><mi>j</mi><mo>→</mo></mover></math> = (0; 1; 0), <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 0; 1)."
     },
     {
       "type": "mcq",
@@ -2261,14 +2303,14 @@
       "type": "mcq",
       "q": "Tính khoảng cách giữa hai điểm A(1; 2; -1) và B(4; -2; 3) trong không gian Oxyz.",
       "opts": [
-        "√41",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">41</span></span>",
         "5",
-        "√29",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">29</span></span>",
         "7"
       ],
       "ans": 0,
-      "correctText": "Phương án A: √41",
-      "exp": "• Công thức khoảng cách giữa 2 điểm: AB = √[(x_B - x_A)² + (y_B - y_A)² + (z_B - z_A)²].<br>• Thay số: AB = √[(4 - 1)² + (-2 - 2)² + (3 - (-1))²] = √[3² + (-4)² + 4²] = √[9 + 16 + 16] = <b>√41</b>."
+      "correctText": "Phương án A: <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">41</span></span>",
+      "exp": "• Công thức khoảng cách giữa 2 điểm: AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(x_B - x_A)² + (y_B - y_A)² + (z_B - z_A)²</span></span>.<br>• Thay số: AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(4 - 1)² + (-2 - 2)² + (3 - (-1))²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + (-4)² + 4²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">9 + 16 + 16</span></span> = <b><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">41</span></span></b>."
     },
     {
       "type": "tf",
@@ -2276,7 +2318,7 @@
       "stmts": [
         "Toạ độ trung điểm M của đoạn thẳng AB là M(-0,5; 0,5; 2,5).",
         "Toạ độ trọng tâm G của tam giác ABC là G(1; 1; 2).",
-        "Độ dài cạnh BC là BC = √41.",
+        "Độ dài cạnh BC là BC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">41</span></span>.",
         "Điểm D để tứ giác ABCD là hình bình hành có toạ độ là D(7; 1; 0)."
       ],
       "ans": [
@@ -2286,7 +2328,7 @@
         true
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-      "exp": "• <b>Ý a [Đúng]:</b> M(-0,5; 0,5; 2,5).<br>• <b>Ý b [Đúng]:</b> G(1; 1; 2).<br>• <b>Ý c [Đúng]:</b> BC = √[(4 - (-2))² + (2 - 1)² + (1 - 3)²] = √(36 + 1 + 4) = √41.<br>• <b>Ý d [Đúng]:</b> ABCD là hình bình hành ⇔ <span class=\"math-sym\">AD</span> = <span class=\"math-sym\">BC</span> = (6; 1; -2) ⇒ D(1+6; 0+1; 2-2) = (7; 1; 0)."
+      "exp": "• <b>Ý a [Đúng]:</b> M(-0,5; 0,5; 2,5).<br>• <b>Ý b [Đúng]:</b> G(1; 1; 2).<br>• <b>Ý c [Đúng]:</b> BC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(4 - (-2))² + (2 - 1)² + (1 - 3)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">36 + 1 + 4</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">41</span></span>.<br>• <b>Ý d [Đúng]:</b> ABCD là hình bình hành ⇔ <math><mover><mi>AD</mi><mo>→</mo></mover></math> = <math><mover><mi>BC</mi><mo>→</mo></mover></math> = (6; 1; -2) ⇒ D(1+6; 0+1; 2-2) = (7; 1; 0)."
     },
     {
       "type": "match",
@@ -2315,14 +2357,14 @@
     {
       "type": "drag",
       "q": "Chọn từ ngữ thích hợp điền vào chỗ trống để hoàn thiện định nghĩa toạ độ điểm trong không gian:",
-      "text": "Trong không gian Oxyz, toạ độ của điểm M là toạ độ của vectơ [blank]. Nếu <span class=\"math-sym\">OM</span> = x<span class=\"math-sym\">i</span> + y<span class=\"math-sym\">j</span> + z<span class=\"math-sym\">k</span> thì ta viết M([blank]). Số x được gọi là [blank], y là [blank], z là [blank] của điểm M.",
+      "text": "Trong không gian Oxyz, toạ độ của điểm M là toạ độ của vectơ [blank]. Nếu <math><mover><mi>OM</mi><mo>→</mo></mover></math> = x<math><mover><mi>i</mi><mo>→</mo></mover></math> + y<math><mover><mi>j</mi><mo>→</mo></mover></math> + z<math><mover><mi>k</mi><mo>→</mo></mover></math> thì ta viết M([blank]). Số x được gọi là [blank], y là [blank], z là [blank] của điểm M.",
       "words": [
-        "<span class=\"math-sym\">OM</span>",
+        "<math><mover><mi>OM</mi><mo>→</mo></mover></math>",
         "x; y; z",
         "hoành độ",
         "tung độ",
         "cao độ",
-        "<span class=\"math-sym\">MO</span>"
+        "<math><mover><mi>MO</mi><mo>→</mo></mover></math>"
       ],
       "ans": [
         0,
@@ -2331,8 +2373,8 @@
         3,
         4
       ],
-      "correctText": "(1) <span class=\"math-sym\">OM</span> • (2) x; y; z • (3) hoành độ • (4) tung độ • (5) cao độ",
-      "exp": "• <b>Quy chuẩn toạ độ điểm (SGK Toán 12):</b> Toạ độ điểm M chính là bộ ba số (x; y; z) tương ứng với khai triển vectơ vị trí <span class=\"math-sym\">OM</span> theo bộ ba vectơ đơn vị."
+      "correctText": "(1) <math><mover><mi>OM</mi><mo>→</mo></mover></math> • (2) x; y; z • (3) hoành độ • (4) tung độ • (5) cao độ",
+      "exp": "• <b>Quy chuẩn toạ độ điểm (SGK Toán 12):</b> Toạ độ điểm M chính là bộ ba số (x; y; z) tương ứng với khai triển vectơ vị trí <math><mover><mi>OM</mi><mo>→</mo></mover></math> theo bộ ba vectơ đơn vị."
     },
     {
       "type": "mcq",
@@ -2366,7 +2408,7 @@
       "q": "Một trạm radar kiểm soát không lưu tại mặt đất gắn hệ toạ độ Oxyz (đơn vị đo: km) với gốc O tại trạm, mặt phẳng (Oxy) là mặt đất nằm ngang. Radar phát hiện máy bay A tại toạ độ (30; 40; 8) và sau 5 phút máy bay di chuyển đến vị trí B(60; 80; 10). Xét tính Đúng/Sai của từng nhận định sau:",
       "stmts": [
         "Khoảng cách ban đầu từ trạm radar O đến máy bay là khoảng 50,6 km.",
-        "Vectơ độ dời của máy bay trong 5 phút là <span class=\"math-sym\">AB</span> = (30; 40; 2).",
+        "Vectơ độ dời của máy bay trong 5 phút là <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (30; 40; 2).",
         "Quãng đường bay được của máy bay trong 5 phút xấp xỉ 50,04 km.",
         "Vận tốc trung bình của máy bay trong 5 phút này xấp xỉ 600 km/h."
       ],
@@ -2377,39 +2419,39 @@
         true
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-      "exp": "• <b>Ý a [Đúng]:</b> OA = √(30² + 40² + 8²) = √(900 + 1600 + 64) = √2564 ≈ 50,64 km.<br>• <b>Ý b [Đúng]:</b> <span class=\"math-sym\">AB</span> = (60 - 30; 80 - 40; 10 - 8) = (30; 40; 2).<br>• <b>Ý c [Đúng]:</b> Quãng đường AB = √(30² + 40² + 2²) = √(2500 + 4) = √2504 ≈ 50,04 km.<br>• <b>Ý d [Đúng]:</b> Thời gian 5 phút = 5/60 giờ = 1/12 giờ. Vận tốc v = s/t = 50,04 / (1/12) ≈ 600,5 km/h."
+      "exp": "• <b>Ý a [Đúng]:</b> OA = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">30² + 40² + 8²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">900 + 1600 + 64</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2564</span></span> ≈ 50,64 km.<br>• <b>Ý b [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (60 - 30; 80 - 40; 10 - 8) = (30; 40; 2).<br>• <b>Ý c [Đúng]:</b> Quãng đường AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">30² + 40² + 2²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2500 + 4</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2504</span></span> ≈ 50,04 km.<br>• <b>Ý d [Đúng]:</b> Thời gian 5 phút = 5/60 giờ = 1/12 giờ. Vận tốc v = s/t = 50,04 / (1/12) ≈ 600,5 km/h."
     },
     {
       "type": "mcq",
       "q": "Trong một nhà thi đấu dạng hình hộp chữ nhật kích thước 40 × 30 × 12 (m), người ta lắp một camera 360° tại tâm của trần nhà. Khoảng cách từ camera đến một góc bất kỳ trên mặt sàn nhà bằng bao nhiêu mét?",
       "opts": [
-        "√769 ≈ 27,7 m",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">769</span></span> ≈ 27,7 m",
         "25 m",
         "35 m",
-        "√625 = 25 m"
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">625</span></span> = 25 m"
       ],
       "ans": 0,
-      "correctText": "Phương án A: √769 ≈ 27,7 m",
-      "exp": "• Gắn hệ toạ độ Oxyz: Tâm trần camera có toạ độ C(20; 15; 12).<br>• Một góc sàn tại gốc toạ độ O(0; 0; 0).<br>• Khoảng cách: d = √(20² + 15² + 12²) = √(400 + 225 + 144) = √769 ≈ <b>27,73 mét</b>."
+      "correctText": "Phương án A: <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">769</span></span> ≈ 27,7 m",
+      "exp": "• Gắn hệ toạ độ Oxyz: Tâm trần camera có toạ độ C(20; 15; 12).<br>• Một góc sàn tại gốc toạ độ O(0; 0; 0).<br>• Khoảng cách: d = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">20² + 15² + 12²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">400 + 225 + 144</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">769</span></span> ≈ <b>27,73 mét</b>."
     }
   ],
   "8": [
     {
       "type": "mcq",
-      "q": "Trong không gian Oxyz, cho hai vectơ <span class=\"math-sym\">u</span> = (x₁; y₁; z₁) và <span class=\"math-sym\">v</span> = (x₂; y₂; z₂). Biểu thức toạ độ của tích vô hướng <span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> là:",
+      "q": "Trong không gian Oxyz, cho hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (x₁; y₁; z₁) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (x₂; y₂; z₂). Biểu thức toạ độ của tích vô hướng <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> là:",
       "opts": [
-        "<span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = x₁x₂ + y₁y₂ + z₁z₂",
-        "<span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = (x₁ + x₂; y₁ + y₂; z₁ + z₂)",
-        "<span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = x₁y₂ - x₂y₁",
-        "<span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = √(x₁x₂ + y₁y₂ + z₁z₂)"
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = x₁x₂ + y₁y₂ + z₁z₂",
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = (x₁ + x₂; y₁ + y₂; z₁ + z₂)",
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = x₁y₂ - x₂y₁",
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x₁x₂ + y₁y₂ + z₁z₂</span></span>"
       ],
       "ans": 0,
-      "correctText": "Phương án A: <span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = x₁x₂ + y₁y₂ + z₁z₂",
-      "exp": "• <b>Công thức tích vô hướng (SGK Toán 12):</b> Tích vô hướng của hai vectơ bằng tổng các tích của các toạ độ tương ứng:<br><span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = x₁x₂ + y₁y₂ + z₁z₂."
+      "correctText": "Phương án A: <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = x₁x₂ + y₁y₂ + z₁z₂",
+      "exp": "• <b>Công thức tích vô hướng (SGK Toán 12):</b> Tích vô hướng của hai vectơ bằng tổng các tích của các toạ độ tương ứng:<br><math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = x₁x₂ + y₁y₂ + z₁z₂."
     },
     {
       "type": "mcq",
-      "q": "Cho hai vectơ <span class=\"math-sym\">a</span> = (1; -2; 3) và <span class=\"math-sym\">b</span> = (2; 1; -1). Tính tích vô hướng <span class=\"math-sym\">a</span> · <span class=\"math-sym\">b</span>.",
+      "q": "Cho hai vectơ <math><mover><mi>a</mi><mo>→</mo></mover></math> = (1; -2; 3) và <math><mover><mi>b</mi><mo>→</mo></mover></math> = (2; 1; -1). Tính tích vô hướng <math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math>.",
       "opts": [
         "-3",
         "3",
@@ -2418,29 +2460,29 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: -3",
-      "exp": "• Thay toạ độ vào biểu thức tích vô hướng:<br><span class=\"math-sym\">a</span> · <span class=\"math-sym\">b</span> = 1·2 + (-2)·1 + 3·(-1) = 2 - 2 - 3 = <b>-3</b>."
+      "exp": "• Thay toạ độ vào biểu thức tích vô hướng:<br><math><mover><mi>a</mi><mo>→</mo></mover></math> · <math><mover><mi>b</mi><mo>→</mo></mover></math> = 1·2 + (-2)·1 + 3·(-1) = 2 - 2 - 3 = <b>-3</b>."
     },
     {
       "type": "mcq",
-      "q": "Tính côsin của góc giữa hai vectơ <span class=\"math-sym\">u</span> = (2; 1; 0) và <span class=\"math-sym\">v</span> = (-1; 2; √5).",
+      "q": "Tính côsin của góc giữa hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; 1; 0) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (-1; 2; <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>).",
       "opts": [
         "0 (hai vectơ vuông góc)",
         "1/2",
-        "√2/2",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2",
         "-1/5"
       ],
       "ans": 0,
       "correctText": "Phương án A: 0 (hai vectơ vuông góc)",
-      "exp": "• Tính tích vô hướng: <span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = 2·(-1) + 1·2 + 0·√5 = -2 + 2 + 0 = 0.<br>• Do tích vô hướng bằng 0 nên cos(<span class=\"math-sym\">u</span>, <span class=\"math-sym\">v</span>) = 0 (tức góc giữa hai vectơ bằng 90°)."
+      "exp": "• Tính tích vô hướng: <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 2·(-1) + 1·2 + 0·<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> = -2 + 2 + 0 = 0.<br>• Do tích vô hướng bằng 0 nên cos(<math><mover><mi>u</mi><mo>→</mo></mover></math>, <math><mover><mi>v</mi><mo>→</mo></mover></math>) = 0 (tức góc giữa hai vectơ bằng 90°)."
     },
     {
       "type": "tf",
       "q": "Trong không gian Oxyz, cho ba điểm A(1; 0; 0), B(0; 2; 0), C(0; 0; 3). Xét tính Đúng/Sai của từng nhận định sau:",
       "stmts": [
-        "Toạ độ hai vectơ là <span class=\"math-sym\">AB</span> = (-1; 2; 0) và <span class=\"math-sym\">AC</span> = (-1; 0; 3).",
-        "Tích vô hướng <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AC</span> = 1.",
-        "Độ dài các cạnh là AB = √5 và AC = √10.",
-        "Côsin góc BAC của tam giác ABC là cos(BAC) = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">5√2</span></span>."
+        "Toạ độ hai vectơ là <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (-1; 2; 0) và <math><mover><mi>AC</mi><mo>→</mo></mover></math> = (-1; 0; 3).",
+        "Tích vô hướng <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math> = 1.",
+        "Độ dài các cạnh là AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> và AC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>.",
+        "Côsin góc BAC của tam giác ABC là cos(BAC) = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">5<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span></span>."
       ],
       "ans": [
         true,
@@ -2449,16 +2491,16 @@
         true
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-      "exp": "• <b>Ý a [Đúng]:</b> <span class=\"math-sym\">AB</span> = (-1; 2; 0), <span class=\"math-sym\">AC</span> = (-1; 0; 3).<br>• <b>Ý b [Đúng]:</b> <span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AC</span> = (-1)(-1) + 2·0 + 0·3 = 1.<br>• <b>Ý c [Đúng]:</b> AB = √[(-1)² + 2²] = √5, AC = √[(-1)² + 3²] = √10.<br>• <b>Ý d [Đúng]:</b> cos BAC = <span class=\"fraction\"><span class=\"numerator\"><span class=\"math-sym\">AB</span> · <span class=\"math-sym\">AC</span></span><span class=\"denominator\">AB · AC</span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">√5 · √10</span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">5√2</span></span>."
+      "exp": "• <b>Ý a [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (-1; 2; 0), <math><mover><mi>AC</mi><mo>→</mo></mover></math> = (-1; 0; 3).<br>• <b>Ý b [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math> = (-1)(-1) + 2·0 + 0·3 = 1.<br>• <b>Ý c [Đúng]:</b> AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(-1)² + 2²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>, AC = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(-1)² + 3²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span>.<br>• <b>Ý d [Đúng]:</b> cos BAC = <span class=\"fraction\"><span class=\"numerator\"><math><mover><mi>AB</mi><mo>→</mo></mover></math> · <math><mover><mi>AC</mi><mo>→</mo></mover></math></span><span class=\"denominator\">AB · AC</span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10</span></span></span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">5<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span></span>."
     },
     {
       "type": "match",
       "q": "Ghép các biểu thức vectơ toạ độ (Cột A) với các đại lượng thực tế/kĩ thuật tương ứng (Cột B):",
       "colA": [
-        "Công cơ học của lực: A = <span class=\"math-sym\">F</span> · <span class=\"math-sym\">d</span>",
-        "Độ lớn vận tốc tổng hợp: v = √[v_x² + v_y² + v_z²]",
-        "Điều kiện cân bằng tĩnh học: <span class=\"math-sym\">F</span>₁ + <span class=\"math-sym\">F</span>₂ + <span class=\"math-sym\">F</span>₃ = <span class=\"math-sym\">0</span>",
-        "Góc chiếu tia sáng mặt trời: cos θ = <span class=\"fraction\"><span class=\"numerator\">|<span class=\"math-sym\">s</span> · <span class=\"math-sym\">n</span>|</span><span class=\"denominator\">|<span class=\"math-sym\">s</span>||<span class=\"math-sym\">n</span>|</span></span>"
+        "Công cơ học của lực: A = <span class=\"math-sym\">F</span> · <math><mover><mi>d</mi><mo>→</mo></mover></math>",
+        "Độ lớn vận tốc tổng hợp: v = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">v_x² + v_y² + v_z²</span></span>",
+        "Điều kiện cân bằng tĩnh học: <span class=\"math-sym\">F</span>₁ + <span class=\"math-sym\">F</span>₂ + <span class=\"math-sym\">F</span>₃ = <math><mover><mn>0</mn><mo>→</mo></mover></math>",
+        "Góc chiếu tia sáng mặt trời: cos θ = <span class=\"fraction\"><span class=\"numerator\">|<span class=\"math-sym\">s</span> · <math><mover><mi>n</mi><mo>→</mo></mover></math>|</span><span class=\"denominator\">|<span class=\"math-sym\">s</span>||<math><mover><mi>n</mi><mo>→</mo></mover></math>|</span></span>"
       ],
       "colB": [
         "Tổng các thành phần lực trên cả 3 trục toạ độ đều bằng 0",
@@ -2478,20 +2520,20 @@
     {
       "type": "drag",
       "q": "Chọn biểu thức thích hợp điền vào chỗ trống để hoàn thiện điều kiện cùng phương và vuông góc của hai vectơ trong không gian:",
-      "text": "Hai vectơ <span class=\"math-sym\">u</span> và <span class=\"math-sym\">v</span> vuông góc với nhau khi và chỉ khi [blank]. Hai vectơ cùng phương khi và chỉ khi tồn tại số k sao cho [blank] (hoặc các tỉ số toạ độ tương ứng bằng nhau [blank] nếu các toạ độ mẫu khác 0).",
+      "text": "Hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> và <math><mover><mi>v</mi><mo>→</mo></mover></math> vuông góc với nhau khi và chỉ khi [blank]. Hai vectơ cùng phương khi và chỉ khi tồn tại số k sao cho [blank] (hoặc các tỉ số toạ độ tương ứng bằng nhau [blank] nếu các toạ độ mẫu khác 0).",
       "words": [
-        "<span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = 0",
-        "<span class=\"math-sym\">u</span> = k<span class=\"math-sym\">v</span>",
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0",
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> = k<math><mover><mi>v</mi><mo>→</mo></mover></math>",
         "<span class=\"fraction\"><span class=\"numerator\">x₁</span><span class=\"denominator\">x₂</span></span> = <span class=\"fraction\"><span class=\"numerator\">y₁</span><span class=\"denominator\">y₂</span></span> = <span class=\"fraction\"><span class=\"numerator\">z₁</span><span class=\"denominator\">z₂</span></span>",
-        "<span class=\"math-sym\">u</span> + <span class=\"math-sym\">v</span> = <span class=\"math-sym\">0</span>",
-        "|<span class=\"math-sym\">u</span>| = |<span class=\"math-sym\">v</span>|"
+        "<math><mover><mi>u</mi><mo>→</mo></mover></math> + <math><mover><mi>v</mi><mo>→</mo></mover></math> = <math><mover><mn>0</mn><mo>→</mo></mover></math>",
+        "|<math><mover><mi>u</mi><mo>→</mo></mover></math>| = |<math><mover><mi>v</mi><mo>→</mo></mover></math>|"
       ],
       "ans": [
         0,
         1,
         2
       ],
-      "correctText": "(1) <span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = 0 • (2) <span class=\"math-sym\">u</span> = k<span class=\"math-sym\">v</span> • (3) <span class=\"fraction\"><span class=\"numerator\">x₁</span><span class=\"denominator\">x₂</span></span> = <span class=\"fraction\"><span class=\"numerator\">y₁</span><span class=\"denominator\">y₂</span></span> = <span class=\"fraction\"><span class=\"numerator\">z₁</span><span class=\"denominator\">z₂</span></span>",
+      "correctText": "(1) <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0 • (2) <math><mover><mi>u</mi><mo>→</mo></mover></math> = k<math><mover><mi>v</mi><mo>→</mo></mover></math> • (3) <span class=\"fraction\"><span class=\"numerator\">x₁</span><span class=\"denominator\">x₂</span></span> = <span class=\"fraction\"><span class=\"numerator\">y₁</span><span class=\"denominator\">y₂</span></span> = <span class=\"fraction\"><span class=\"numerator\">z₁</span><span class=\"denominator\">z₂</span></span>",
       "exp": "• <b>Quy tắc quan trọng:</b><br>- Vuông góc ⇔ Tích vô hướng bằng 0.<br>- Cùng phương ⇔ Vectơ này bằng k lần vectơ kia."
     },
     {
@@ -2510,7 +2552,7 @@
     },
     {
       "type": "mcq",
-      "q": "Tìm tham số m để hai vectơ <span class=\"math-sym\">u</span> = (m; 1; -2) và <span class=\"math-sym\">v</span> = (2; -4; 1) vuông góc với nhau.",
+      "q": "Tìm tham số m để hai vectơ <math><mover><mi>u</mi><mo>→</mo></mover></math> = (m; 1; -2) và <math><mover><mi>v</mi><mo>→</mo></mover></math> = (2; -4; 1) vuông góc với nhau.",
       "opts": [
         "m = 3",
         "m = -3",
@@ -2519,7 +2561,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: m = 3",
-      "exp": "• Điều kiện để hai vectơ vuông góc: <span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = 0.<br>• 2·m + 1·(-4) + (-2)·1 = 0 ⇔ 2m - 4 - 2 = 0 ⇔ 2m = 6 ⇔ <b>m = 3</b>."
+      "exp": "• Điều kiện để hai vectơ vuông góc: <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = 0.<br>• 2·m + 1·(-4) + (-2)·1 = 0 ⇔ 2m - 4 - 2 = 0 ⇔ 2m = 6 ⇔ <b>m = 3</b>."
     },
     {
       "type": "tf",
@@ -2527,7 +2569,7 @@
       "stmts": [
         "Hợp lực tổng hợp tác dụng lên nút liên kết O là <span class=\"math-sym\">F</span> = (0; 0; 80) kN.",
         "Hợp lực có phương thẳng đứng (song song với trục cao độ Oz).",
-        "Độ lớn của lực <span class=\"math-sym\">F</span>₁ là |<span class=\"math-sym\">F</span>₁| = √1400 ≈ 37,4 kN.",
+        "Độ lớn của lực <span class=\"math-sym\">F</span>₁ là |<span class=\"math-sym\">F</span>₁| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1400</span></span> ≈ 37,4 kN.",
         "Cả ba lực <span class=\"math-sym\">F</span>₁, <span class=\"math-sym\">F</span>₂, <span class=\"math-sym\">F</span>₃ đều có xu hướng kéo nút O lên trên (cao độ z > 0)."
       ],
       "ans": [
@@ -2537,7 +2579,7 @@
         true
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-      "exp": "• <b>Ý a [Đúng]:</b> <span class=\"math-sym\">F</span> = (10 - 15 + 5; 20 + 10 - 30; 30 + 40 + 10) = (0; 0; 80) kN.<br>• <b>Ý b [Đúng]:</b> Do thành phần x = 0 và y = 0 nên vectơ chỉ có thành phần z = 80 hướng thẳng đứng.<br>• <b>Ý c [Đúng]:</b> |<span class=\"math-sym\">F</span>₁| = √(10² + 20² + 30²) = √(100 + 400 + 900) = √1400 ≈ 37,42 kN.<br>• <b>Ý d [Đúng]:</b> Cả 3 lực đều có thành phần z dương (30, 40, 10)."
+      "exp": "• <b>Ý a [Đúng]:</b> <span class=\"math-sym\">F</span> = (10 - 15 + 5; 20 + 10 - 30; 30 + 40 + 10) = (0; 0; 80) kN.<br>• <b>Ý b [Đúng]:</b> Do thành phần x = 0 và y = 0 nên vectơ chỉ có thành phần z = 80 hướng thẳng đứng.<br>• <b>Ý c [Đúng]:</b> |<span class=\"math-sym\">F</span>₁| = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">10² + 20² + 30²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">100 + 400 + 900</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1400</span></span> ≈ 37,42 kN.<br>• <b>Ý d [Đúng]:</b> Cả 3 lực đều có thành phần z dương (30, 40, 10)."
     },
     {
       "type": "mcq",
@@ -2550,7 +2592,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: 180 J",
-      "exp": "• Vectơ độ dời: <span class=\"math-sym\">d</span> = <span class=\"math-sym\">AB</span> = (4 - 1; 6 - 2; 0 - 0) = (3; 4; 0) (m).<br>• Công sinh ra: A = <span class=\"math-sym\">F</span> · <span class=\"math-sym\">d</span> = 20·3 + 30·4 + 5·0 = 60 + 120 + 0 = <b>180 Jun</b>."
+      "exp": "• Vectơ độ dời: <math><mover><mi>d</mi><mo>→</mo></mover></math> = <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (4 - 1; 6 - 2; 0 - 0) = (3; 4; 0) (m).<br>• Công sinh ra: A = <span class=\"math-sym\">F</span> · <math><mover><mi>d</mi><mo>→</mo></mover></math> = 20·3 + 30·4 + 5·0 = 60 + 120 + 0 = <b>180 Jun</b>."
     }
   ],
   "9": [
@@ -2716,14 +2758,14 @@
       "type": "mcq",
       "q": "Trong thống kê ghép nhóm, độ lệch chuẩn s được tính từ phương sai s² theo công thức nào?",
       "opts": [
-        "s = √(s²)",
+        "s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span>",
         "s = (s²)²",
         "s = s² / n",
         "s = 2s²"
       ],
       "ans": 0,
-      "correctText": "Phương án A: s = √(s²)",
-      "exp": "• <b>Định nghĩa (SGK Toán 12):</b> Độ lệch chuẩn s là căn bậc hai số học của phương sai: s = √(s²). Độ lệch chuẩn có cùng đơn vị đo với đại lượng đang khảo sát."
+      "correctText": "Phương án A: s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span>",
+      "exp": "• <b>Định nghĩa (SGK Toán 12):</b> Độ lệch chuẩn s là căn bậc hai số học của phương sai: s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span>. Độ lệch chuẩn có cùng đơn vị đo với đại lượng đang khảo sát."
     },
     {
       "type": "mcq",
@@ -2740,7 +2782,7 @@
     },
     {
       "type": "mcq",
-      "q": "Cho bảng tần số ghép nhóm có số trung bình x̄ = 10 và tổng <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span>∑ nᵢcᵢ² = 116. Phương sai s² của mẫu số liệu ghép nhóm này bằng:",
+      "q": "Cho bảng tần số ghép nhóm có số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 10 và tổng <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span>∑ nᵢcᵢ² = 116. Phương sai s² của mẫu số liệu ghép nhóm này bằng:",
       "opts": [
         "s² = 16",
         "s² = 4",
@@ -2749,16 +2791,16 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: s² = 16",
-      "exp": "• Áp dụng công thức tính phương sai biến đổi:<br>s² = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span>∑ nᵢcᵢ² - (x̄)² = 116 - 10² = 116 - 100 = <b>16</b>.<br>(Khi đó độ lệch chuẩn là s = √16 = 4)."
+      "exp": "• Áp dụng công thức tính phương sai biến đổi:<br>s² = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span>∑ nᵢcᵢ² - (<math><mover><mi>x</mi><mo>¯</mo></mover></math>)² = 116 - 10² = 116 - 100 = <b>16</b>.<br>(Khi đó độ lệch chuẩn là s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">16</span></span> = 4)."
     },
     {
       "type": "tf",
       "q": "Khảo sát cự ly ném bóng xa (mét) của 30 học sinh được ghi nhận theo bảng sau:<br>[20; 30): 6 học sinh; [30; 40): 9 học sinh; [40; 50): 9 học sinh; [50; 60): 6 học sinh. Xét tính Đúng/Sai của từng nhận định sau:",
       "stmts": [
         "Giá trị đại diện của 4 nhóm lần lượt là 25; 35; 45; 55 (mét).",
-        "Cự ly ném bóng trung bình của 30 học sinh là x̄ = 40 mét.",
+        "Cự ly ném bóng trung bình của 30 học sinh là <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 40 mét.",
         "Phương sai của mẫu số liệu ghép nhóm là s² = 105.",
-        "Độ lệch chuẩn của cự ly ném bóng là s = √105 ≈ 10,25 mét."
+        "Độ lệch chuẩn của cự ly ném bóng là s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">105</span></span> ≈ 10,25 mét."
       ],
       "ans": [
         true,
@@ -2767,7 +2809,7 @@
         true
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-      "exp": "• <b>Ý a [Đúng]:</b> 25, 35, 45, 55 m.<br>• <b>Ý b [Đúng]:</b> x̄ = 1200 / 30 = 40 mét.<br>• <b>Ý c [Đúng]:</b> s² = 3150 / 30 = 105.<br>• <b>Ý d [Đúng]:</b> s = √105 ≈ 10,25 mét."
+      "exp": "• <b>Ý a [Đúng]:</b> 25, 35, 45, 55 m.<br>• <b>Ý b [Đúng]:</b> <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 1200 / 30 = 40 mét.<br>• <b>Ý c [Đúng]:</b> s² = 3150 / 30 = 105.<br>• <b>Ý d [Đúng]:</b> s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">105</span></span> ≈ 10,25 mét."
     },
     {
       "type": "match",
@@ -2798,23 +2840,23 @@
       "q": "Chọn công thức thích hợp điền vào chỗ trống để hoàn thiện định nghĩa phương sai mẫu số liệu ghép nhóm:",
       "text": "Phương sai s² của mẫu số liệu ghép nhóm n quan sát được tính theo công thức: s² = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span> ∑ nᵢ · [blank]² hoặc s² = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">n</span></span> ∑ nᵢcᵢ² - [blank]². Đại lượng đo độ phân tán có cùng đơn vị đo với số liệu là [blank].",
       "words": [
-        "(cᵢ - x̄)",
-        "(x̄)",
+        "(cᵢ - <math><mover><mi>x</mi><mo>¯</mo></mover></math>)",
+        "(<math><mover><mi>x</mi><mo>¯</mo></mover></math>)",
         "độ lệch chuẩn s",
         "khoảng biến thiên",
-        "(cᵢ + x̄)"
+        "(cᵢ + <math><mover><mi>x</mi><mo>¯</mo></mover></math>)"
       ],
       "ans": [
         0,
         1,
         2
       ],
-      "correctText": "(1) (cᵢ - x̄) • (2) (x̄) • (3) độ lệch chuẩn s",
-      "exp": "• <b>Công thức phương sai (SGK Toán 12):</b> s² = (1/n)∑ nᵢ(cᵢ - x̄)² = (1/n)∑ nᵢcᵢ² - (x̄)². Căn bậc hai s = √(s²) là độ lệch chuẩn có cùng đơn vị với mẫu số liệu."
+      "correctText": "(1) (cᵢ - <math><mover><mi>x</mi><mo>¯</mo></mover></math>) • (2) (<math><mover><mi>x</mi><mo>¯</mo></mover></math>) • (3) độ lệch chuẩn s",
+      "exp": "• <b>Công thức phương sai (SGK Toán 12):</b> s² = (1/n)∑ nᵢ(cᵢ - <math><mover><mi>x</mi><mo>¯</mo></mover></math>)² = (1/n)∑ nᵢcᵢ² - (<math><mover><mi>x</mi><mo>¯</mo></mover></math>)². Căn bậc hai s = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">s²</span></span> là độ lệch chuẩn có cùng đơn vị với mẫu số liệu."
     },
     {
       "type": "mcq",
-      "q": "Biểu đồ ghép nhóm hình bên có số trung bình x̄ = 15. Phương sai s² của mẫu số liệu ghép nhóm này xấp xỉ bằng:",
+      "q": "Biểu đồ ghép nhóm hình bên có số trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 15. Phương sai s² của mẫu số liệu ghép nhóm này xấp xỉ bằng:",
       "opts": [
         "s² = 18,75",
         "s² = 25,00",
@@ -2823,12 +2865,12 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: s² = 18,75",
-      "exp": "• c₁ = 7,5; c₂ = 15; c₃ = 22,5; n = 30.<br>• x̄ = 15.<br>• s² = [5·(-7,5)² + 20·(0)² + 5·(7,5)²] / 30 = [2·5·56,25] / 30 = 562,5 / 30 = <b>18,75</b>.",
+      "exp": "• c₁ = 7,5; c₂ = 15; c₃ = 22,5; n = 30.<br>• <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 15.<br>• s² = [5·(-7,5)² + 20·(0)² + 5·(7,5)²] / 30 = [2·5·56,25] / 30 = 562,5 / 30 = <b>18,75</b>.",
       "svgGraph": "<svg viewBox=\"0 0 360 200\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"340\" height=\"180\" rx=\"8\" fill=\"rgba(15,23,42,0.9)\" stroke=\"#0ea5e9\" stroke-width=\"1.6\"/><line x1=\"50\" y1=\"150\" x2=\"320\" y2=\"150\" stroke=\"rgba(255,255,255,0.3)\" stroke-width=\"1.2\"/><rect x=\"70\" y=\"100\" width=\"55\" height=\"50\" fill=\"rgba(244,63,94,0.4)\" stroke=\"#f43f5e\"/><text x=\"97\" y=\"92\" fill=\"#f43f5e\" font-size=\"11\" text-anchor=\"middle\">5</text><rect x=\"140\" y=\"40\" width=\"65\" height=\"110\" fill=\"rgba(56,189,248,0.4)\" stroke=\"#38bdf8\"/><text x=\"172\" y=\"32\" fill=\"#38bdf8\" font-size=\"11\" text-anchor=\"middle\">20</text><rect x=\"220\" y=\"100\" width=\"55\" height=\"50\" fill=\"rgba(244,63,94,0.4)\" stroke=\"#f43f5e\"/><text x=\"247\" y=\"92\" fill=\"#f43f5e\" font-size=\"11\" text-anchor=\"middle\">5</text><text x=\"70\" y=\"165\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">5</text><text x=\"125\" y=\"165\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">10</text><text x=\"205\" y=\"165\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">20</text><text x=\"275\" y=\"165\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">25</text></svg>"
     },
     {
       "type": "mcq",
-      "q": "Năng suất thu hoạch của hai giống lúa A và B được khảo sát tại các vùng canh tác. Giống lúa A có năng suất trung bình x̄<sub style=\"font-size:0.8em\">A</sub> = 65 tạ/ha và độ lệch chuẩn s<sub style=\"font-size:0.8em\">A</sub> = 2,5 tạ/ha. Giống lúa B có x̄<sub style=\"font-size:0.8em\">B</sub> = 65 tạ/ha và s<sub style=\"font-size:0.8em\">B</sub> = 6,8 tạ/ha. Giống lúa nào có năng suất ổn định hơn?",
+      "q": "Năng suất thu hoạch của hai giống lúa A và B được khảo sát tại các vùng canh tác. Giống lúa A có năng suất trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math><sub style=\"font-size:0.8em\">A</sub> = 65 tạ/ha và độ lệch chuẩn s<sub style=\"font-size:0.8em\">A</sub> = 2,5 tạ/ha. Giống lúa B có <math><mover><mi>x</mi><mo>¯</mo></mover></math><sub style=\"font-size:0.8em\">B</sub> = 65 tạ/ha và s<sub style=\"font-size:0.8em\">B</sub> = 6,8 tạ/ha. Giống lúa nào có năng suất ổn định hơn?",
       "opts": [
         "Giống lúa A (vì độ lệch chuẩn nhỏ hơn)",
         "Giống lúa B (vì độ lệch chuẩn lớn hơn)",
@@ -2841,7 +2883,7 @@
     },
     {
       "type": "tf",
-      "q": "Một chuyên viên quản trị rủi ro theo dõi tỷ lệ sinh lời (%) hàng tháng của hai danh mục đầu tư Quỹ X và Quỹ Y trong 24 tháng qua. Kết quả tính toán thu được:<br>- Quỹ X: Tỷ suất sinh lời trung bình x̄<sub style=\"font-size:0.8em\">X</sub> = 12,5%, độ lệch chuẩn s<sub style=\"font-size:0.8em\">X</sub> = 2,1%.<br>- Quỹ Y: Tỷ suất sinh lời trung bình x̄<sub style=\"font-size:0.8em\">Y</sub> = 12,5%, độ lệch chuẩn s<sub style=\"font-size:0.8em\">Y</sub> = 7,4%.<br>Xét tính Đúng/Sai của từng nhận định sau:",
+      "q": "Một chuyên viên quản trị rủi ro theo dõi tỷ lệ sinh lời (%) hàng tháng của hai danh mục đầu tư Quỹ X và Quỹ Y trong 24 tháng qua. Kết quả tính toán thu được:<br>- Quỹ X: Tỷ suất sinh lời trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math><sub style=\"font-size:0.8em\">X</sub> = 12,5%, độ lệch chuẩn s<sub style=\"font-size:0.8em\">X</sub> = 2,1%.<br>- Quỹ Y: Tỷ suất sinh lời trung bình <math><mover><mi>x</mi><mo>¯</mo></mover></math><sub style=\"font-size:0.8em\">Y</sub> = 12,5%, độ lệch chuẩn s<sub style=\"font-size:0.8em\">Y</sub> = 7,4%.<br>Xét tính Đúng/Sai của từng nhận định sau:",
       "stmts": [
         "Mức sinh lời trung bình kỳ vọng của hai quỹ là hoàn toàn như nhau (đều đạt 12,5%/tháng).",
         "Mức độ rủi ro và biến động lợi nhuận của Quỹ Y cao hơn gấp 3 lần so với Quỹ X.",
@@ -2855,7 +2897,7 @@
         false
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-      "exp": "• <b>Ý a [Đúng]:</b> Cả 2 quỹ đều có x̄ = 12,5%.<br>• <b>Ý b [Đúng]:</b> s_Y / s_X = 7,4 / 2,1 ≈ 3,52 lần.<br>• <b>Ý c [Đúng]:</b> Quỹ X có độ lệch chuẩn nhỏ nên an toàn, ổn định.<br>• <b>Ý d [Sai]:</b> Phương sai s_X² = 2,1² = 4,41 nhỏ hơn nhiều so với s_Y² = 7,4² = 54,76."
+      "exp": "• <b>Ý a [Đúng]:</b> Cả 2 quỹ đều có <math><mover><mi>x</mi><mo>¯</mo></mover></math> = 12,5%.<br>• <b>Ý b [Đúng]:</b> s_Y / s_X = 7,4 / 2,1 ≈ 3,52 lần.<br>• <b>Ý c [Đúng]:</b> Quỹ X có độ lệch chuẩn nhỏ nên an toàn, ổn định.<br>• <b>Ý d [Sai]:</b> Phương sai s_X² = 2,1² = 4,41 nhỏ hơn nhiều so với s_Y² = 7,4² = 54,76."
     },
     {
       "type": "mcq",
@@ -3148,16 +3190,16 @@
     },
     {
       "type": "mcq",
-      "q": "Tính giá trị của tích phân I = ∫₀¹ <span class=\"fraction\"><span class=\"numerator\">x</span><span class=\"denominator\">√(x² + 1)</span></span> dx.",
+      "q": "Tính giá trị của tích phân I = ∫₀¹ <span class=\"fraction\"><span class=\"numerator\">x</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² + 1</span></span></span></span> dx.",
       "opts": [
-        "√2 - 1",
-        "√2",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> - 1",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>",
         "1",
-        "2√2 - 1"
+        "2<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> - 1"
       ],
       "ans": 0,
-      "correctText": "Phương án A: √2 - 1",
-      "exp": "• Đặt u = √(x² + 1) ⇒ u² = x² + 1 ⇒ 2u du = 2x dx ⇒ u du = x dx.<br>• Đổi cận: x = 0 ⇒ u = 1; x = 1 ⇒ u = √2.<br>• Tích phân: I = ∫₁<sup style=\"font-size:0.8em\">√2</sup> <span class=\"fraction\"><span class=\"numerator\">u du</span><span class=\"denominator\">u</span></span> = ∫₁<sup style=\"font-size:0.8em\">√2</sup> du = [u]₁<sup style=\"font-size:0.8em\">√2</sup> = <b>√2 - 1</b>."
+      "correctText": "Phương án A: <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> - 1",
+      "exp": "• Đặt u = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x² + 1</span></span> ⇒ u² = x² + 1 ⇒ 2u du = 2x dx ⇒ u du = x dx.<br>• Đổi cận: x = 0 ⇒ u = 1; x = 1 ⇒ u = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>.<br>• Tích phân: I = ∫₁<sup style=\"font-size:0.8em\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></sup> <span class=\"fraction\"><span class=\"numerator\">u du</span><span class=\"denominator\">u</span></span> = ∫₁<sup style=\"font-size:0.8em\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></sup> du = [u]₁<sup style=\"font-size:0.8em\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></sup> = <b><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> - 1</b>."
     },
     {
       "type": "tf",
@@ -3220,7 +3262,7 @@
     },
     {
       "type": "mcq",
-      "q": "Tính thể tích V của khối tròn xoay tạo thành khi quay hình phẳng giới hạn bởi đồ thị y = √x, trục hoành và hai đường thẳng x = 1, x = 4 xung quanh trục hoành Ox.",
+      "q": "Tính thể tích V của khối tròn xoay tạo thành khi quay hình phẳng giới hạn bởi đồ thị y = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x</span></span>, trục hoành và hai đường thẳng x = 1, x = 4 xung quanh trục hoành Ox.",
       "opts": [
         "15π/2",
         "15/2",
@@ -3229,7 +3271,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: 15π/2",
-      "exp": "• Công thức thể tích khối tròn xoay quanh Ox: V = π ∫ₐᵇ [f(x)]² dx.<br>• V = π ∫₁⁴ (√x)² dx = π ∫₁⁴ x dx = π [<span class=\"fraction\"><span class=\"numerator\">x²</span><span class=\"denominator\">2</span></span>]₁⁴ = π (<span class=\"fraction\"><span class=\"numerator\">16</span><span class=\"denominator\">2</span></span> - <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span>) = <b><span class=\"fraction\"><span class=\"numerator\">15π</span><span class=\"denominator\">2</span></span></b>."
+      "exp": "• Công thức thể tích khối tròn xoay quanh Ox: V = π ∫ₐᵇ [f(x)]² dx.<br>• V = π ∫₁⁴ (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">x</span></span>)² dx = π ∫₁⁴ x dx = π [<span class=\"fraction\"><span class=\"numerator\">x²</span><span class=\"denominator\">2</span></span>]₁⁴ = π (<span class=\"fraction\"><span class=\"numerator\">16</span><span class=\"denominator\">2</span></span> - <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span>) = <b><span class=\"fraction\"><span class=\"numerator\">15π</span><span class=\"denominator\">2</span></span></b>."
     },
     {
       "type": "tf",
@@ -3333,7 +3375,7 @@
         false
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-      "exp": "• <b>Ý a [Đúng]:</b> a² = 16 ⇒ a = 4 m, b² = 9 ⇒ b = 3 m.<br>• <b>Ý b [Đúng]:</b> S = 4 ∫₀⁴ <span class=\"fraction\"><span class=\"numerator\">3</span><span class=\"denominator\">4</span></span>√(16 - x²) dx = πab.<br>• <b>Ý c [Đúng]:</b> S = π(4)(3) = 12π ≈ 37,7 m².<br>• <b>Ý d [Sai]:</b> Tổng kinh phí = 37,7 × 200.000 đ = 7.540.000 đồng (khoảng 7,54 triệu đồng, nhỏ hơn 10 triệu đồng)."
+      "exp": "• <b>Ý a [Đúng]:</b> a² = 16 ⇒ a = 4 m, b² = 9 ⇒ b = 3 m.<br>• <b>Ý b [Đúng]:</b> S = 4 ∫₀⁴ <span class=\"fraction\"><span class=\"numerator\">3</span><span class=\"denominator\">4</span></span><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">16 - x²</span></span> dx = πab.<br>• <b>Ý c [Đúng]:</b> S = π(4)(3) = 12π ≈ 37,7 m².<br>• <b>Ý d [Sai]:</b> Tổng kinh phí = 37,7 × 200.000 đ = 7.540.000 đồng (khoảng 7,54 triệu đồng, nhỏ hơn 10 triệu đồng)."
     },
     {
       "type": "mcq",
@@ -3361,11 +3403,11 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: Ax + By + Cz + D = 0 (với A² + B² + C² > 0)",
-      "exp": "• <b>Phương trình tổng quát của mặt phẳng (SGK Toán 12):</b> Mọi mặt phẳng trong không gian Oxyz đều có phương trình dạng Ax + By + Cz + D = 0, trong đó vectơ <span class=\"math-sym\">n</span> = (A; B; C) là vectơ pháp tuyến (A, B, C không đồng thời bằng 0)."
+      "exp": "• <b>Phương trình tổng quát của mặt phẳng (SGK Toán 12):</b> Mọi mặt phẳng trong không gian Oxyz đều có phương trình dạng Ax + By + Cz + D = 0, trong đó vectơ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (A; B; C) là vectơ pháp tuyến (A, B, C không đồng thời bằng 0)."
     },
     {
       "type": "mcq",
-      "q": "Viết phương trình mặt phẳng đi qua điểm M(1; -2; 3) và nhận vectơ <span class=\"math-sym\">n</span> = (2; -1; 4) làm vectơ pháp tuyến.",
+      "q": "Viết phương trình mặt phẳng đi qua điểm M(1; -2; 3) và nhận vectơ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (2; -1; 4) làm vectơ pháp tuyến.",
       "opts": [
         "2x - y + 4z - 16 = 0",
         "2x - y + 4z + 16 = 0",
@@ -3387,7 +3429,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: d = 2",
-      "exp": "• Công thức khoảng cách: d(A, (P)) = <span class=\"fraction\"><span class=\"numerator\">|Ax₀ + By₀ + Cz₀ + D|</span><span class=\"denominator\">√(A² + B² + C²)</span></span>.<br>• Thay số: d = <span class=\"fraction\"><span class=\"numerator\">|2(2) - 2(1) + 1(-1) + 5|</span><span class=\"denominator\">√(2² + (-2)² + 1²)</span></span> = <span class=\"fraction\"><span class=\"numerator\">|4 - 2 - 1 + 5|</span><span class=\"denominator\">√(4 + 4 + 1)</span></span> = <span class=\"fraction\"><span class=\"numerator\">6</span><span class=\"denominator\">3</span></span> = <b>2</b>."
+      "exp": "• Công thức khoảng cách: d(A, (P)) = <span class=\"fraction\"><span class=\"numerator\">|Ax₀ + By₀ + Cz₀ + D|</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">A² + B² + C²</span></span></span></span>.<br>• Thay số: d = <span class=\"fraction\"><span class=\"numerator\">|2(2) - 2(1) + 1(-1) + 5|</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + (-2)² + 1²</span></span></span></span> = <span class=\"fraction\"><span class=\"numerator\">|4 - 2 - 1 + 5|</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4 + 4 + 1</span></span></span></span> = <span class=\"fraction\"><span class=\"numerator\">6</span><span class=\"denominator\">3</span></span> = <b>2</b>."
     },
     {
       "type": "tf",
@@ -3395,8 +3437,8 @@
       "stmts": [
         "Phương trình theo đoạn chắn của mặt phẳng (ABC) là <span class=\"fraction\"><span class=\"numerator\">x</span><span class=\"denominator\">2</span></span> + <span class=\"fraction\"><span class=\"numerator\">y</span><span class=\"denominator\">-3</span></span> + <span class=\"fraction\"><span class=\"numerator\">z</span><span class=\"denominator\">4</span></span> = 1.",
         "Phương trình tổng quát của mặt phẳng (ABC) là 6x - 4y + 3z - 12 = 0.",
-        "Vectơ <span class=\"math-sym\">n</span> = (6; -4; 3) là một vectơ pháp tuyến của mặt phẳng (ABC).",
-        "Khoảng cách từ gốc toạ độ O đến mặt phẳng (ABC) bằng <span class=\"fraction\"><span class=\"numerator\">12</span><span class=\"denominator\">√61</span></span>."
+        "Vectơ <math><mover><mi>n</mi><mo>→</mo></mover></math> = (6; -4; 3) là một vectơ pháp tuyến của mặt phẳng (ABC).",
+        "Khoảng cách từ gốc toạ độ O đến mặt phẳng (ABC) bằng <span class=\"fraction\"><span class=\"numerator\">12</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">61</span></span></span></span>."
       ],
       "ans": [
         true,
@@ -3405,7 +3447,7 @@
         true
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-      "exp": "• <b>Ý a [Đúng]:</b> Ba điểm trên 3 trục: x/a + y/b + z/c = 1 ⇔ x/2 + y/(-3) + z/4 = 1.<br>• <b>Ý b [Đúng]:</b> Quy đồng mẫu số chung là 12: 6x - 4y + 3z = 12 ⇔ 6x - 4y + 3z - 12 = 0.<br>• <b>Ý c [Đúng]:</b> Hệ số trước x, y, z cho VTPT <span class=\"math-sym\">n</span> = (6; -4; 3).<br>• <b>Ý d [Đúng]:</b> d(O, (ABC)) = |-12| / √(6² + (-4)² + 3²) = 12 / √(36 + 16 + 9) = 12 / √61."
+      "exp": "• <b>Ý a [Đúng]:</b> Ba điểm trên 3 trục: x/a + y/b + z/c = 1 ⇔ x/2 + y/(-3) + z/4 = 1.<br>• <b>Ý b [Đúng]:</b> Quy đồng mẫu số chung là 12: 6x - 4y + 3z = 12 ⇔ 6x - 4y + 3z - 12 = 0.<br>• <b>Ý c [Đúng]:</b> Hệ số trước x, y, z cho VTPT <math><mover><mi>n</mi><mo>→</mo></mover></math> = (6; -4; 3).<br>• <b>Ý d [Đúng]:</b> d(O, (ABC)) = |-12| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6² + (-4)² + 3²</span></span> = 12 / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">36 + 16 + 9</span></span> = 12 / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">61</span></span>."
     },
     {
       "type": "match",
@@ -3434,19 +3476,19 @@
     {
       "type": "drag",
       "q": "Chọn từ ngữ thích hợp điền vào chỗ trống để hoàn thiện vị trí tương đối giữa hai mặt phẳng (P) và (Q):",
-      "text": "Cho hai mặt phẳng (P) và (Q) có VTPT lần lượt là <span class=\"math-sym\">n</span>₁ và <span class=\"math-sym\">n</span>₂. Hai mặt phẳng vuông góc với nhau khi và chỉ khi [blank]. Hai mặt phẳng song song hoặc trùng nhau khi và chỉ khi hai vectơ pháp tuyến [blank].",
+      "text": "Cho hai mặt phẳng (P) và (Q) có VTPT lần lượt là <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ và <math><mover><mi>n</mi><mo>→</mo></mover></math>₂. Hai mặt phẳng vuông góc với nhau khi và chỉ khi [blank]. Hai mặt phẳng song song hoặc trùng nhau khi và chỉ khi hai vectơ pháp tuyến [blank].",
       "words": [
-        "<span class=\"math-sym\">n</span>₁ · <span class=\"math-sym\">n</span>₂ = 0",
+        "<math><mover><mi>n</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ = 0",
         "cùng phương",
-        "<span class=\"math-sym\">n</span>₁ = <span class=\"math-sym\">n</span>₂",
+        "<math><mover><mi>n</mi><mo>→</mo></mover></math>₁ = <math><mover><mi>n</mi><mo>→</mo></mover></math>₂",
         "cắt nhau"
       ],
       "ans": [
         0,
         1
       ],
-      "correctText": "(1) <span class=\"math-sym\">n</span>₁ · <span class=\"math-sym\">n</span>₂ = 0 • (2) cùng phương",
-      "exp": "• (P) ⊥ (Q) ⇔ <span class=\"math-sym\">n</span>₁ ⊥ <span class=\"math-sym\">n</span>₂ ⇔ <span class=\"math-sym\">n</span>₁ · <span class=\"math-sym\">n</span>₂ = 0.<br>• (P) // (Q) hoặc (P) ≡ (Q) ⇔ <span class=\"math-sym\">n</span>₁ và <span class=\"math-sym\">n</span>₂ cùng phương."
+      "correctText": "(1) <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ = 0 • (2) cùng phương",
+      "exp": "• (P) ⊥ (Q) ⇔ <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ ⊥ <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ ⇔ <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ = 0.<br>• (P) // (Q) hoặc (P) ≡ (Q) ⇔ <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ và <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ cùng phương."
     },
     {
       "type": "mcq",
@@ -3459,7 +3501,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: H(0; 1; 2)",
-      "exp": "• Đường thẳng d qua A vuông góc (P) có VTCP <span class=\"math-sym\">u</span> = <span class=\"math-sym\">n</span><sub style=\"font-size:0.8em\">P</sub> = (1; 1; 1):<br>x = 1 + t, y = 2 + t, z = 3 + t.<br>• Thay vào phương trình (P): (1 + t) + (2 + t) + (3 + t) - 3 = 0 ⇔ 3t + 3 = 0 ⇔ t = -1.<br>• Với t = -1 ⇒ x = 0, y = 1, z = 2. Vậy toạ độ hình chiếu là <b>H(0; 1; 2)</b>.",
+      "exp": "• Đường thẳng d qua A vuông góc (P) có VTCP <math><mover><mi>u</mi><mo>→</mo></mover></math> = <math><mover><mi>n</mi><mo>→</mo></mover></math><sub style=\"font-size:0.8em\">P</sub> = (1; 1; 1):<br>x = 1 + t, y = 2 + t, z = 3 + t.<br>• Thay vào phương trình (P): (1 + t) + (2 + t) + (3 + t) - 3 = 0 ⇔ 3t + 3 = 0 ⇔ t = -1.<br>• Với t = -1 ⇒ x = 0, y = 1, z = 2. Vậy toạ độ hình chiếu là <b>H(0; 1; 2)</b>.",
       "svgGraph": "<svg viewBox=\"0 0 380 200\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"8\" y=\"8\" width=\"364\" height=\"184\" rx=\"10\" fill=\"rgba(15,23,42,0.95)\" stroke=\"#0ea5e9\" stroke-width=\"1.6\"/>\n  <!-- Plane (P) -->\n  <polygon points=\"50,145 230,145 320,95 140,95\" fill=\"rgba(56,189,248,0.18)\" stroke=\"#38bdf8\" stroke-width=\"1.6\"/>\n  <text x=\"90\" y=\"132\" fill=\"#38bdf8\" font-size=\"14\" font-weight=\"800\">(P)</text>\n  <!-- Point A -->\n  <circle cx=\"185\" cy=\"40\" r=\"5\" fill=\"#f43f5e\"/>\n  <text x=\"195\" y=\"42\" fill=\"#f43f5e\" font-size=\"13\" font-weight=\"800\">A(1; 2; 3)</text>\n  <!-- Perpendicular line AH -->\n  <line x1=\"185\" y1=\"40\" x2=\"185\" y2=\"120\" stroke=\"#fbbf24\" stroke-width=\"2\" stroke-dasharray=\"4,3\"/>\n  <circle cx=\"185\" cy=\"120\" r=\"4.5\" fill=\"#34d399\"/>\n  <text x=\"196\" y=\"125\" fill=\"#34d399\" font-size=\"14\" font-weight=\"900\">H</text>\n  <!-- Right angle square at H -->\n  <polyline points=\"185,110 175,110 175,120\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.4\"/>\n</svg>"
     },
     {
@@ -3473,14 +3515,14 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: x - 2y + 2z - 9 = 0 hoặc x - 2y + 2z + 9 = 0",
-      "exp": "• (Q) // (P) nên phương trình (Q) có dạng: x - 2y + 2z + D = 0 (D ≠ 1).<br>• d(O, (Q)) = <span class=\"fraction\"><span class=\"numerator\">|D|</span><span class=\"denominator\">√(1² + (-2)² + 2²)</span></span> = <span class=\"fraction\"><span class=\"numerator\">|D|</span><span class=\"denominator\">3</span></span> = 3 ⇔ |D| = 9 ⇔ <b>D = 9 hoặc D = -9</b>.<br>• Cả hai giá trị đều thỏa mãn D ≠ 1."
+      "exp": "• (Q) // (P) nên phương trình (Q) có dạng: x - 2y + 2z + D = 0 (D ≠ 1).<br>• d(O, (Q)) = <span class=\"fraction\"><span class=\"numerator\">|D|</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1² + (-2)² + 2²</span></span></span></span> = <span class=\"fraction\"><span class=\"numerator\">|D|</span><span class=\"denominator\">3</span></span> = 3 ⇔ |D| = 9 ⇔ <b>D = 9 hoặc D = -9</b>.<br>• Cả hai giá trị đều thỏa mãn D ≠ 1."
     },
     {
       "type": "tf",
       "q": "Trong một triển lãm nghệ thuật, một tấm kính cường lực lớn hình phẳng được dựng nghiêng đi qua 3 điểm gắn tường A(4; 0; 2), B(0; 6; 1), C(2; 3; 3) (đơn vị đo: mét). Xét tính Đúng/Sai của từng mệnh đề sau:",
       "stmts": [
-        "Hai vectơ chỉ phương trên mặt kính là <span class=\"math-sym\">AB</span> = (-4; 6; -1) và <span class=\"math-sym\">AC</span> = (-2; 3; 1).",
-        "Tích có hướng của hai vectơ là [<span class=\"math-sym\">AB</span>, <span class=\"math-sym\">AC</span>] = (9; 6; 0).",
+        "Hai vectơ chỉ phương trên mặt kính là <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (-4; 6; -1) và <math><mover><mi>AC</mi><mo>→</mo></mover></math> = (-2; 3; 1).",
+        "Tích có hướng của hai vectơ là [<math><mover><mi>AB</mi><mo>→</mo></mover></math>, <math><mover><mi>AC</mi><mo>→</mo></mover></math>] = (9; 6; 0).",
         "Phương trình mặt phẳng chứa tấm kính là 3x + 2y - 12 = 0.",
         "Mặt kính này vuông góc với mặt sàn nhà (Oxy)."
       ],
@@ -3491,7 +3533,7 @@
         true
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-      "exp": "• <b>Ý a [Đúng]:</b> <span class=\"math-sym\">AB</span> = (-4; 6; -1), <span class=\"math-sym\">AC</span> = (-2; 3; 1).<br>• <b>Ý b [Đúng]:</b> [<span class=\"math-sym\">AB</span>, <span class=\"math-sym\">AC</span>] = (6·1 - (-1)·3; (-1)(-2) - (-4)·1; (-4)·3 - 6(-2)) = (9; 6; 0).<br>• <b>Ý c [Đúng]:</b> VTPT chọn <span class=\"math-sym\">n</span> = (3; 2; 0). Qua A(4; 0; 2): 3(x - 4) + 2(y - 0) + 0(z - 2) = 0 ⇔ 3x + 2y - 12 = 0.<br>• <b>Ý d [Đúng]:</b> VTPT <span class=\"math-sym\">n</span> = (3; 2; 0) vuông góc với vectơ <span class=\"math-sym\">k</span> = (0; 0; 1) của trục Oz ⇒ Mặt kính vuông góc mặt sàn."
+      "exp": "• <b>Ý a [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (-4; 6; -1), <math><mover><mi>AC</mi><mo>→</mo></mover></math> = (-2; 3; 1).<br>• <b>Ý b [Đúng]:</b> [<math><mover><mi>AB</mi><mo>→</mo></mover></math>, <math><mover><mi>AC</mi><mo>→</mo></mover></math>] = (6·1 - (-1)·3; (-1)(-2) - (-4)·1; (-4)·3 - 6(-2)) = (9; 6; 0).<br>• <b>Ý c [Đúng]:</b> VTPT chọn <math><mover><mi>n</mi><mo>→</mo></mover></math> = (3; 2; 0). Qua A(4; 0; 2): 3(x - 4) + 2(y - 0) + 0(z - 2) = 0 ⇔ 3x + 2y - 12 = 0.<br>• <b>Ý d [Đúng]:</b> VTPT <math><mover><mi>n</mi><mo>→</mo></mover></math> = (3; 2; 0) vuông góc với vectơ <math><mover><mi>k</mi><mo>→</mo></mover></math> = (0; 0; 1) của trục Oz ⇒ Mặt kính vuông góc mặt sàn."
     },
     {
       "type": "mcq",
@@ -3504,13 +3546,13 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: 5,33 km (16/3 km)",
-      "exp": "• Khoảng cách ngắn nhất chính là khoảng cách từ điểm M đến mặt phẳng:<br>d = <span class=\"fraction\"><span class=\"numerator\">|2(4) + 1(8) + 2(5) - 10|</span><span class=\"denominator\">√(2² + 1² + 2²)</span></span> = <span class=\"fraction\"><span class=\"numerator\">|8 + 8 + 10 - 10|</span><span class=\"denominator\">√9</span></span> = <span class=\"fraction\"><span class=\"numerator\">16</span><span class=\"denominator\">3</span></span> ≈ <b>5,33 km</b>."
+      "exp": "• Khoảng cách ngắn nhất chính là khoảng cách từ điểm M đến mặt phẳng:<br>d = <span class=\"fraction\"><span class=\"numerator\">|2(4) + 1(8) + 2(5) - 10|</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + 1² + 2²</span></span></span></span> = <span class=\"fraction\"><span class=\"numerator\">|8 + 8 + 10 - 10|</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">9</span></span></span></span> = <span class=\"fraction\"><span class=\"numerator\">16</span><span class=\"denominator\">3</span></span> ≈ <b>5,33 km</b>."
     }
   ],
   "15": [
     {
       "type": "mcq",
-      "q": "Đường thẳng d đi qua điểm M₀(x₀; y₀; z₀) và có vectơ chỉ phương <span class=\"math-sym\">u</span> = (a; b; c) (với a, b, c đều khác 0) có phương trình chính tắc là:",
+      "q": "Đường thẳng d đi qua điểm M₀(x₀; y₀; z₀) và có vectơ chỉ phương <math><mover><mi>u</mi><mo>→</mo></mover></math> = (a; b; c) (với a, b, c đều khác 0) có phương trình chính tắc là:",
       "opts": [
         "<span class=\"fraction\"><span class=\"numerator\">x - x₀</span><span class=\"denominator\">a</span></span> = <span class=\"fraction\"><span class=\"numerator\">y - y₀</span><span class=\"denominator\">b</span></span> = <span class=\"fraction\"><span class=\"numerator\">z - z₀</span><span class=\"denominator\">c</span></span>",
         "<span class=\"fraction\"><span class=\"numerator\">x - a</span><span class=\"denominator\">x₀</span></span> = <span class=\"fraction\"><span class=\"numerator\">y - b</span><span class=\"denominator\">y₀</span></span> = <span class=\"fraction\"><span class=\"numerator\">z - c</span><span class=\"denominator\">z₀</span></span>",
@@ -3523,7 +3565,7 @@
     },
     {
       "type": "mcq",
-      "q": "Viết phương trình tham số của đường thẳng d đi qua điểm A(1; 2; -3) và có vectơ chỉ phương <span class=\"math-sym\">u</span> = (2; -1; 5).",
+      "q": "Viết phương trình tham số của đường thẳng d đi qua điểm A(1; 2; -3) và có vectơ chỉ phương <math><mover><mi>u</mi><mo>→</mo></mover></math> = (2; -1; 5).",
       "opts": [
         "x = 1 + 2t, y = 2 - t, z = -3 + 5t (t ∈ ℝ)",
         "x = 2 + t, y = -1 + 2t, z = 5 - 3t (t ∈ ℝ)",
@@ -3551,7 +3593,7 @@
       "type": "tf",
       "q": "Trong không gian Oxyz, cho hai điểm A(1; -1; 2) và B(3; 1; 4). Xét tính Đúng/Sai của từng nhận định sau:",
       "stmts": [
-        "Vectơ chỉ phương của đường thẳng AB có thể chọn là <span class=\"math-sym\">u</span> = (1; 1; 1).",
+        "Vectơ chỉ phương của đường thẳng AB có thể chọn là <math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 1; 1).",
         "Phương trình chính tắc của đường thẳng AB là <span class=\"fraction\"><span class=\"numerator\">x - 1</span><span class=\"denominator\">1</span></span> = <span class=\"fraction\"><span class=\"numerator\">y + 1</span><span class=\"denominator\">1</span></span> = <span class=\"fraction\"><span class=\"numerator\">z - 2</span><span class=\"denominator\">1</span></span>.",
         "Điểm M(5; 3; 6) thuộc đường thẳng AB.",
         "Đường thẳng AB vuông góc với mặt phẳng (α): x + y + z + 10 = 0."
@@ -3563,14 +3605,14 @@
         true
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-      "exp": "• <b>Ý a [Đúng]:</b> <span class=\"math-sym\">AB</span> = (2; 2; 2) = 2(1; 1; 1) ⇒ chọn <span class=\"math-sym\">u</span> = (1; 1; 1).<br>• <b>Ý b [Đúng]:</b> Qua A(1; -1; 2) với VTCP (1; 1; 1): (x - 1)/1 = (y + 1)/1 = (z - 2)/1.<br>• <b>Ý c [Đúng]:</b> Thay M(5; 3; 6): (5-1)/1 = (3+1)/1 = (6-2)/1 = 4 (thỏa mãn).<br>• <b>Ý d [Đúng]:</b> VTPT của (α) là <span class=\"math-sym\">n</span> = (1; 1; 1) cùng phương với VTCP của đường thẳng ⇒ AB ⊥ (α)."
+      "exp": "• <b>Ý a [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (2; 2; 2) = 2(1; 1; 1) ⇒ chọn <math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; 1; 1).<br>• <b>Ý b [Đúng]:</b> Qua A(1; -1; 2) với VTCP (1; 1; 1): (x - 1)/1 = (y + 1)/1 = (z - 2)/1.<br>• <b>Ý c [Đúng]:</b> Thay M(5; 3; 6): (5-1)/1 = (3+1)/1 = (6-2)/1 = 4 (thỏa mãn).<br>• <b>Ý d [Đúng]:</b> VTPT của (α) là <math><mover><mi>n</mi><mo>→</mo></mover></math> = (1; 1; 1) cùng phương với VTCP của đường thẳng ⇒ AB ⊥ (α)."
     },
     {
       "type": "match",
       "q": "Ghép các chuyển động thẳng thực tế (Cột A) với phương trình đường thẳng tương ứng trong hệ toạ độ không gian (Cột B):",
       "colA": [
         "Khinh khí cầu bay thẳng đứng lên cao từ bãi phóng (0; 0; 0)",
-        "Tia laser định vị chiếu từ đỉnh tháp (0; 0; 100) theo hướng <span class=\"math-sym\">u</span> = (3; 4; -1)",
+        "Tia laser định vị chiếu từ đỉnh tháp (0; 0; 100) theo hướng <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 4; -1)",
         "Đường hầm tàu điện ngầm khoan thẳng qua lòng núi",
         "Tuyến cáp treo trượt thẳng từ chân đồi lên đỉnh núi"
       ],
@@ -3592,7 +3634,7 @@
     {
       "type": "drag",
       "q": "Chọn từ ngữ thích hợp điền vào chỗ trống để hoàn thiện vị trí tương đối giữa hai đường thẳng d₁ và d₂ trong không gian:",
-      "text": "Nếu hai vectơ chỉ phương <span class=\"math-sym\">u</span>₁ và <span class=\"math-sym\">u</span>₂ cùng phương thì d₁ và d₂ [blank] hoặc [blank]. Nếu <span class=\"math-sym\">u</span>₁ và <span class=\"math-sym\">u</span>₂ không cùng phương và hệ phương trình toạ độ vô nghiệm thì d₁ và d₂ [blank].",
+      "text": "Nếu hai vectơ chỉ phương <math><mover><mi>u</mi><mo>→</mo></mover></math>₁ và <math><mover><mi>u</mi><mo>→</mo></mover></math>₂ cùng phương thì d₁ và d₂ [blank] hoặc [blank]. Nếu <math><mover><mi>u</mi><mo>→</mo></mover></math>₁ và <math><mover><mi>u</mi><mo>→</mo></mover></math>₂ không cùng phương và hệ phương trình toạ độ vô nghiệm thì d₁ và d₂ [blank].",
       "words": [
         "song song",
         "trùng nhau",
@@ -3619,7 +3661,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: Chéo nhau",
-      "exp": "• VTCP: <span class=\"math-sym\">u</span>₁ = (1; 1; 1) và <span class=\"math-sym\">u</span>₂ = (1; 2; 3) không cùng phương (1/1 ≠ 1/2).<br>• Xét hệ giao điểm: t = 1 + s; t = 2s; t = 3s.<br>Từ 2s = 3s ⇒ s = 0 ⇒ t = 0. Thay vào pt 1: 0 = 1 + 0 (vô lý).<br>• Hệ vô nghiệm và 2 VTCP không cùng phương ⇒ Hai đường thẳng <b>chéo nhau</b>.",
+      "exp": "• VTCP: <math><mover><mi>u</mi><mo>→</mo></mover></math>₁ = (1; 1; 1) và <math><mover><mi>u</mi><mo>→</mo></mover></math>₂ = (1; 2; 3) không cùng phương (1/1 ≠ 1/2).<br>• Xét hệ giao điểm: t = 1 + s; t = 2s; t = 3s.<br>Từ 2s = 3s ⇒ s = 0 ⇒ t = 0. Thay vào pt 1: 0 = 1 + 0 (vô lý).<br>• Hệ vô nghiệm và 2 VTCP không cùng phương ⇒ Hai đường thẳng <b>chéo nhau</b>.",
       "svgGraph": "<svg viewBox=\"0 0 360 200\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"340\" height=\"180\" rx=\"8\" fill=\"rgba(15,23,42,0.9)\" stroke=\"#0ea5e9\" stroke-width=\"1.6\"/><polygon points=\"40,140 220,140 310,90 130,90\" fill=\"rgba(56,189,248,0.12)\" stroke=\"#38bdf8\" stroke-width=\"1.4\"/><line x1=\"60\" y1=\"120\" x2=\"280\" y2=\"105\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"285\" y=\"105\" fill=\"#34d399\" font-size=\"12\" font-weight=\"700\">d₁</text><line x1=\"160\" y1=\"30\" x2=\"200\" y2=\"170\" stroke=\"#f43f5e\" stroke-width=\"2\"/><text x=\"205\" y=\"175\" fill=\"#f43f5e\" font-size=\"12\" font-weight=\"700\">d₂</text><text x=\"180\" y=\"25\" fill=\"#fbbf24\" font-size=\"12\" font-weight=\"800\" text-anchor=\"middle\">Hai đường thẳng chéo nhau</text></svg>"
     },
     {
@@ -3629,7 +3671,7 @@
         "0 (M thuộc đường thẳng Δ)",
         "1",
         "2",
-        "√5"
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>"
       ],
       "ans": 0,
       "correctText": "Phương án A: 0 (M thuộc đường thẳng Δ)",
@@ -3639,8 +3681,8 @@
       "type": "tf",
       "q": "Một máy bay không người lái (Drone) cứu hộ bay theo đường thẳng từ trạm A(100; 200; 50) đến vị trí người gặp nạn B(700; 1000; 250) (đơn vị: mét). Xét tính Đúng/Sai của từng mệnh đề sau:",
       "stmts": [
-        "Vectơ chỉ phương của đường bay có thể chọn là <span class=\"math-sym\">u</span> = (3; 4; 1).",
-        "Đoạn đường bay từ A đến B có chiều dài bằng √(600² + 800² + 200²) ≈ 1019,8 mét.",
+        "Vectơ chỉ phương của đường bay có thể chọn là <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 4; 1).",
+        "Đoạn đường bay từ A đến B có chiều dài bằng <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">600² + 800² + 200²</span></span> ≈ 1019,8 mét.",
         "Điểm tiếp sóng cứu hộ tại toạ độ S(400; 600; 150) chính là trung điểm trên đường bay của Drone.",
         "Góc nghiêng bay nâng cao của Drone so với mặt đất nằm ngang lớn hơn 30°."
       ],
@@ -3651,7 +3693,7 @@
         false
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-      "exp": "• <b>Ý a [Đúng]:</b> <span class=\"math-sym\">AB</span> = (600; 800; 200) = 200(3; 4; 1) ⇒ chọn <span class=\"math-sym\">u</span> = (3; 4; 1).<br>• <b>Ý b [Đúng]:</b> AB = √(600² + 800² + 200²) = √(360000 + 640000 + 40000) = √1040000 ≈ 1019,8 m.<br>• <b>Ý c [Đúng]:</b> Trung điểm M = ((100+700)/2; (200+1000)/2; (50+250)/2) = (400; 600; 150).<br>• <b>Ý d [Sai]:</b> Độ cao tăng Δz = 200 m trên quãng đường ngang √(600²+800²) = 1000 m. tan α = 200/1000 = 0,2 ⇒ α ≈ 11,3° (< 30°)."
+      "exp": "• <b>Ý a [Đúng]:</b> <math><mover><mi>AB</mi><mo>→</mo></mover></math> = (600; 800; 200) = 200(3; 4; 1) ⇒ chọn <math><mover><mi>u</mi><mo>→</mo></mover></math> = (3; 4; 1).<br>• <b>Ý b [Đúng]:</b> AB = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">600² + 800² + 200²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">360000 + 640000 + 40000</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1040000</span></span> ≈ 1019,8 m.<br>• <b>Ý c [Đúng]:</b> Trung điểm M = ((100+700)/2; (200+1000)/2; (50+250)/2) = (400; 600; 150).<br>• <b>Ý d [Sai]:</b> Độ cao tăng Δz = 200 m trên quãng đường ngang <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">600²+800²</span></span> = 1000 m. tan α = 200/1000 = 0,2 ⇒ α ≈ 11,3° (< 30°)."
     },
     {
       "type": "mcq",
@@ -3670,16 +3712,16 @@
   "16": [
     {
       "type": "mcq",
-      "q": "Cho hai đường thẳng d₁ và d₂ có vectơ chỉ phương lần lượt là <span class=\"math-sym\">u</span>₁ và <span class=\"math-sym\">u</span>₂. Góc φ giữa hai đường thẳng d₁ và d₂ được tính bởi công thức nào?",
+      "q": "Cho hai đường thẳng d₁ và d₂ có vectơ chỉ phương lần lượt là <math><mover><mi>u</mi><mo>→</mo></mover></math>₁ và <math><mover><mi>u</mi><mo>→</mo></mover></math>₂. Góc φ giữa hai đường thẳng d₁ và d₂ được tính bởi công thức nào?",
       "opts": [
-        "cos φ = <span class=\"fraction\"><span class=\"numerator\">|<span class=\"math-sym\">u</span>₁ · <span class=\"math-sym\">u</span>₂|</span><span class=\"denominator\">|<span class=\"math-sym\">u</span>₁| · |<span class=\"math-sym\">u</span>₂|</span></span> (với 0° ≤ φ ≤ 90°)",
-        "cos φ = <span class=\"fraction\"><span class=\"numerator\"><span class=\"math-sym\">u</span>₁ · <span class=\"math-sym\">u</span>₂</span><span class=\"denominator\">|<span class=\"math-sym\">u</span>₁| · |<span class=\"math-sym\">u</span>₂|</span></span>",
-        "sin φ = <span class=\"fraction\"><span class=\"numerator\">|<span class=\"math-sym\">u</span>₁ · <span class=\"math-sym\">u</span>₂|</span><span class=\"denominator\">|<span class=\"math-sym\">u</span>₁| · |<span class=\"math-sym\">u</span>₂|</span></span>",
-        "tan φ = <span class=\"fraction\"><span class=\"numerator\">|<span class=\"math-sym\">u</span>₁ · <span class=\"math-sym\">u</span>₂|</span><span class=\"denominator\">|<span class=\"math-sym\">u</span>₁| · |<span class=\"math-sym\">u</span>₂|</span></span>"
+        "cos φ = <span class=\"fraction\"><span class=\"numerator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>u</mi><mo>→</mo></mover></math>₂|</span><span class=\"denominator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁| · |<math><mover><mi>u</mi><mo>→</mo></mover></math>₂|</span></span> (với 0° ≤ φ ≤ 90°)",
+        "cos φ = <span class=\"fraction\"><span class=\"numerator\"><math><mover><mi>u</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>u</mi><mo>→</mo></mover></math>₂</span><span class=\"denominator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁| · |<math><mover><mi>u</mi><mo>→</mo></mover></math>₂|</span></span>",
+        "sin φ = <span class=\"fraction\"><span class=\"numerator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>u</mi><mo>→</mo></mover></math>₂|</span><span class=\"denominator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁| · |<math><mover><mi>u</mi><mo>→</mo></mover></math>₂|</span></span>",
+        "tan φ = <span class=\"fraction\"><span class=\"numerator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>u</mi><mo>→</mo></mover></math>₂|</span><span class=\"denominator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁| · |<math><mover><mi>u</mi><mo>→</mo></mover></math>₂|</span></span>"
       ],
       "ans": 0,
-      "correctText": "Phương án A: cos φ = <span class=\"fraction\"><span class=\"numerator\">|<span class=\"math-sym\">u</span>₁ · <span class=\"math-sym\">u</span>₂|</span><span class=\"denominator\">|<span class=\"math-sym\">u</span>₁| · |<span class=\"math-sym\">u</span>₂|</span></span> (với 0° ≤ φ ≤ 90°)",
-      "exp": "• <b>Công thức góc giữa 2 đường thẳng (SGK Toán 12):</b> Góc giữa hai đường thẳng là góc không tù (0° ≤ φ ≤ 90°), do đó tử số phải có dấu giá trị tuyệt đối: cos φ = |<span class=\"math-sym\">u</span>₁ · <span class=\"math-sym\">u</span>₂| / (|<span class=\"math-sym\">u</span>₁| |<span class=\"math-sym\">u</span>₂|)."
+      "correctText": "Phương án A: cos φ = <span class=\"fraction\"><span class=\"numerator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>u</mi><mo>→</mo></mover></math>₂|</span><span class=\"denominator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁| · |<math><mover><mi>u</mi><mo>→</mo></mover></math>₂|</span></span> (với 0° ≤ φ ≤ 90°)",
+      "exp": "• <b>Công thức góc giữa 2 đường thẳng (SGK Toán 12):</b> Góc giữa hai đường thẳng là góc không tù (0° ≤ φ ≤ 90°), do đó tử số phải có dấu giá trị tuyệt đối: cos φ = |<math><mover><mi>u</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>u</mi><mo>→</mo></mover></math>₂| / (|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁| |<math><mover><mi>u</mi><mo>→</mo></mover></math>₂|)."
     },
     {
       "type": "mcq",
@@ -3692,7 +3734,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: φ = 60°",
-      "exp": "• VTPT: <span class=\"math-sym\">n</span>₁ = (1; 1; 0) và <span class=\"math-sym\">n</span>₂ = (0; 1; -1).<br>• cos φ = <span class=\"fraction\"><span class=\"numerator\">|1·0 + 1·1 + 0·(-1)|</span><span class=\"denominator\">√(1² + 1² + 0²) · √(0² + 1² + (-1)²)</span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">√2 · √2</span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span>.<br>• Do 0° ≤ φ ≤ 90° và cos φ = 1/2 nên <b>φ = 60°</b>."
+      "exp": "• VTPT: <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ = (1; 1; 0) và <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ = (0; 1; -1).<br>• cos φ = <span class=\"fraction\"><span class=\"numerator\">|1·0 + 1·1 + 0·(-1)|</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1² + 1² + 0²</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">0² + 1² + (-1)²</span></span></span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span></span> = <span class=\"fraction\"><span class=\"numerator\">1</span><span class=\"denominator\">2</span></span>.<br>• Do 0° ≤ φ ≤ 90° và cos φ = 1/2 nên <b>φ = 60°</b>."
     },
     {
       "type": "mcq",
@@ -3700,20 +3742,20 @@
       "opts": [
         "5/6",
         "1/6",
-        "√5/6",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5</span></span>/6",
         "1/2"
       ],
       "ans": 0,
       "correctText": "Phương án A: 5/6",
-      "exp": "• VTCP của d: <span class=\"math-sym\">u</span> = (1; -1; 2); VTPT của (P): <span class=\"math-sym\">n</span> = (2; -1; 1).<br>• sin(d, (P)) = <span class=\"fraction\"><span class=\"numerator\">|<span class=\"math-sym\">u</span> · <span class=\"math-sym\">n</span>|</span><span class=\"denominator\">|<span class=\"math-sym\">u</span>| · |<span class=\"math-sym\">n</span>|</span></span> = <span class=\"fraction\"><span class=\"numerator\">|1·2 + (-1)(-1) + 2·1|</span><span class=\"denominator\">√(1² + 1² + 2²) · √(2² + 1² + 1²)</span></span> = <span class=\"fraction\"><span class=\"numerator\">|2 + 1 + 2|</span><span class=\"denominator\">√6 · √6</span></span> = <b><span class=\"fraction\"><span class=\"numerator\">5</span><span class=\"denominator\">6</span></span></b>."
+      "exp": "• VTCP của d: <math><mover><mi>u</mi><mo>→</mo></mover></math> = (1; -1; 2); VTPT của (P): <math><mover><mi>n</mi><mo>→</mo></mover></math> = (2; -1; 1).<br>• sin(d, (P)) = <span class=\"fraction\"><span class=\"numerator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>n</mi><mo>→</mo></mover></math>|</span><span class=\"denominator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>| · |<math><mover><mi>n</mi><mo>→</mo></mover></math>|</span></span> = <span class=\"fraction\"><span class=\"numerator\">|1·2 + (-1)(-1) + 2·1|</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1² + 1² + 2²</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + 1² + 1²</span></span></span></span> = <span class=\"fraction\"><span class=\"numerator\">|2 + 1 + 2|</span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span></span></span> = <b><span class=\"fraction\"><span class=\"numerator\">5</span><span class=\"denominator\">6</span></span></b>."
     },
     {
       "type": "tf",
       "q": "Cho hình lập phương ABCD.A'B'C'D' cạnh a. Gắn hệ toạ độ Oxyz với gốc tại A(0; 0; 0), B(a; 0; 0), D(0; a; 0), A'(0; 0; a). Xét tính Đúng/Sai của từng nhận định sau:",
       "stmts": [
-        "Vectơ chỉ phương của đường chéo A'C là <span class=\"math-sym\">u</span> = (a; a; -a).",
-        "Vectơ chỉ phương của đường thẳng BD là <span class=\"math-sym\">v</span> = (-a; a; 0).",
-        "Tích vô hướng <span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = a(-a) + a·a + (-a)·0 = 0.",
+        "Vectơ chỉ phương của đường chéo A'C là <math><mover><mi>u</mi><mo>→</mo></mover></math> = (a; a; -a).",
+        "Vectơ chỉ phương của đường thẳng BD là <math><mover><mi>v</mi><mo>→</mo></mover></math> = (-a; a; 0).",
+        "Tích vô hướng <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = a(-a) + a·a + (-a)·0 = 0.",
         "Góc giữa đường chéo A'C và đường chéo đáy BD bằng 90°."
       ],
       "ans": [
@@ -3723,7 +3765,7 @@
         true
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-      "exp": "• <b>Ý a [Đúng]:</b> A'(0; 0; a), C(a; a; 0) ⇒ <span class=\"math-sym\">A'C</span> = (a; a; -a).<br>• <b>Ý b [Đúng]:</b> B(a; 0; 0), D(0; a; 0) ⇒ <span class=\"math-sym\">BD</span> = (-a; a; 0).<br>• <b>Ý c [Đúng]:</b> <span class=\"math-sym\">u</span> · <span class=\"math-sym\">v</span> = -a² + a² + 0 = 0.<br>• <b>Ý d [Đúng]:</b> Tích vô hướng bằng 0 nên hai đường thẳng vuông góc nhau (góc 90°)."
+      "exp": "• <b>Ý a [Đúng]:</b> A'(0; 0; a), C(a; a; 0) ⇒ <span class=\"math-sym\">A'C</span> = (a; a; -a).<br>• <b>Ý b [Đúng]:</b> B(a; 0; 0), D(0; a; 0) ⇒ <math><mover><mi>BD</mi><mo>→</mo></mover></math> = (-a; a; 0).<br>• <b>Ý c [Đúng]:</b> <math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>v</mi><mo>→</mo></mover></math> = -a² + a² + 0 = 0.<br>• <b>Ý d [Đúng]:</b> Tích vô hướng bằng 0 nên hai đường thẳng vuông góc nhau (góc 90°)."
     },
     {
       "type": "match",
@@ -3752,7 +3794,7 @@
     {
       "type": "drag",
       "q": "Chọn hàm lượng giác thích hợp điền vào chỗ trống để hoàn thiện công thức tính góc trong không gian:",
-      "text": "Góc giữa hai đường thẳng d₁ và d₂ được xác định qua [blank] φ = <span class=\"fraction\"><span class=\"numerator\">|<span class=\"math-sym\">u</span>₁ · <span class=\"math-sym\">u</span>₂|</span><span class=\"denominator\">|<span class=\"math-sym\">u</span>₁||<span class=\"math-sym\">u</span>₂|</span></span>. Góc giữa hai mặt phẳng (P) và (Q) được xác định qua [blank] θ = <span class=\"fraction\"><span class=\"numerator\">|<span class=\"math-sym\">n</span>₁ · <span class=\"math-sym\">n</span>₂|</span><span class=\"denominator\">|<span class=\"math-sym\">n</span>₁||<span class=\"math-sym\">n</span>₂|</span></span>. Góc giữa đường thẳng d và mặt phẳng (P) được xác định qua [blank] α = <span class=\"fraction\"><span class=\"numerator\">|<span class=\"math-sym\">u</span> · <span class=\"math-sym\">n</span>|</span><span class=\"denominator\">|<span class=\"math-sym\">u</span>||<span class=\"math-sym\">n</span>|</span></span>.",
+      "text": "Góc giữa hai đường thẳng d₁ và d₂ được xác định qua [blank] φ = <span class=\"fraction\"><span class=\"numerator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>u</mi><mo>→</mo></mover></math>₂|</span><span class=\"denominator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>₁||<math><mover><mi>u</mi><mo>→</mo></mover></math>₂|</span></span>. Góc giữa hai mặt phẳng (P) và (Q) được xác định qua [blank] θ = <span class=\"fraction\"><span class=\"numerator\">|<math><mover><mi>n</mi><mo>→</mo></mover></math>₁ · <math><mover><mi>n</mi><mo>→</mo></mover></math>₂|</span><span class=\"denominator\">|<math><mover><mi>n</mi><mo>→</mo></mover></math>₁||<math><mover><mi>n</mi><mo>→</mo></mover></math>₂|</span></span>. Góc giữa đường thẳng d và mặt phẳng (P) được xác định qua [blank] α = <span class=\"fraction\"><span class=\"numerator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>n</mi><mo>→</mo></mover></math>|</span><span class=\"denominator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>||<math><mover><mi>n</mi><mo>→</mo></mover></math>|</span></span>.",
       "words": [
         "cos",
         "sin",
@@ -3792,14 +3834,14 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: 60°",
-      "exp": "• <span class=\"math-sym\">n</span>₁ = (1; 1; 0), <span class=\"math-sym\">n</span>₂ = (0; 1; 1).<br>• cos φ = |1·0 + 1·1 + 0·1| / (√2 · √2) = 1/2 ⇒ <b>φ = 60°</b>."
+      "exp": "• <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ = (1; 1; 0), <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ = (0; 1; 1).<br>• cos φ = |1·0 + 1·1 + 0·1| / (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>) = 1/2 ⇒ <b>φ = 60°</b>."
     },
     {
       "type": "tf",
       "q": "Mái ngói của một biệt thự gồm hai vách nghiêng nằm trên hai mặt phẳng có phương trình (P₁): 3x + 4z - 12 = 0 và (P₂): -3x + 4z - 12 = 0. Xét tính Đúng/Sai của từng nhận định sau:",
       "stmts": [
-        "Vectơ pháp tuyến của hai mặt phẳng mái ngói là <span class=\"math-sym\">n</span>₁ = (3; 0; 4) và <span class=\"math-sym\">n</span>₂ = (-3; 0; 4).",
-        "Độ lớn của mỗi vectơ pháp tuyến là |<span class=\"math-sym\">n</span>₁| = |<span class=\"math-sym\">n</span>₂| = 5.",
+        "Vectơ pháp tuyến của hai mặt phẳng mái ngói là <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ = (3; 0; 4) và <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ = (-3; 0; 4).",
+        "Độ lớn của mỗi vectơ pháp tuyến là |<math><mover><mi>n</mi><mo>→</mo></mover></math>₁| = |<math><mover><mi>n</mi><mo>→</mo></mover></math>₂| = 5.",
         "Côsin góc giữa hai mặt phẳng mái ngói là cos θ = <span class=\"fraction\"><span class=\"numerator\">7</span><span class=\"denominator\">25</span></span> = 0,28.",
         "Góc giữa hai mặt phẳng mái ngói lớn hơn 80°."
       ],
@@ -3810,11 +3852,11 @@
         false
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Sai",
-      "exp": "• <b>Ý a [Đúng]:</b> <span class=\"math-sym\">n</span>₁ = (3; 0; 4), <span class=\"math-sym\">n</span>₂ = (-3; 0; 4).<br>• <b>Ý b [Đúng]:</b> √(3² + 0² + 4²) = √25 = 5.<br>• <b>Ý c [Đúng]:</b> cos θ = |3(-3) + 0 + 4(4)| / (5 · 5) = |-9 + 16| / 25 = 7/25 = 0,28.<br>• <b>Ý d [Sai]:</b> arccos(0,28) ≈ 73,74° (< 80°)."
+      "exp": "• <b>Ý a [Đúng]:</b> <math><mover><mi>n</mi><mo>→</mo></mover></math>₁ = (3; 0; 4), <math><mover><mi>n</mi><mo>→</mo></mover></math>₂ = (-3; 0; 4).<br>• <b>Ý b [Đúng]:</b> <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3² + 0² + 4²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25</span></span> = 5.<br>• <b>Ý c [Đúng]:</b> cos θ = |3(-3) + 0 + 4(4)| / (5 · 5) = |-9 + 16| / 25 = 7/25 = 0,28.<br>• <b>Ý d [Sai]:</b> arccos(0,28) ≈ 73,74° (< 80°)."
     },
     {
       "type": "mcq",
-      "q": "Một tấm pin năng lượng mặt trời phẳng có phương trình x + y + √2 z - 10 = 0. Giả sử ánh sáng mặt trời chiếu tới theo phương thẳng đứng (song song với trục cao độ Oz). Góc giữa các tia sáng mặt trời và bề mặt tấm pin bằng bao nhiêu độ?",
+      "q": "Một tấm pin năng lượng mặt trời phẳng có phương trình x + y + <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span> z - 10 = 0. Giả sử ánh sáng mặt trời chiếu tới theo phương thẳng đứng (song song với trục cao độ Oz). Góc giữa các tia sáng mặt trời và bề mặt tấm pin bằng bao nhiêu độ?",
       "opts": [
         "45°",
         "30°",
@@ -3823,7 +3865,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: 45°",
-      "exp": "• Tia sáng có VTCP song song trục Oz: <span class=\"math-sym\">u</span> = (0; 0; 1).<br>• Tấm pin có VTPT: <span class=\"math-sym\">n</span> = (1; 1; √2).<br>• sin α = <span class=\"fraction\"><span class=\"numerator\">|<span class=\"math-sym\">u</span> · <span class=\"math-sym\">n</span>|</span><span class=\"denominator\">|<span class=\"math-sym\">u</span>| · |<span class=\"math-sym\">n</span>|</span></span> = <span class=\"fraction\"><span class=\"numerator\">|0 + 0 + √2|</span><span class=\"denominator\">1 · √(1 + 1 + 2)</span></span> = <span class=\"fraction\"><span class=\"numerator\">√2</span><span class=\"denominator\">√4</span></span> = <span class=\"fraction\"><span class=\"numerator\">√2</span><span class=\"denominator\">2</span></span>.<br>• Do đó góc giữa tia sáng và tấm pin là <b>α = 45°</b>."
+      "exp": "• Tia sáng có VTCP song song trục Oz: <math><mover><mi>u</mi><mo>→</mo></mover></math> = (0; 0; 1).<br>• Tấm pin có VTPT: <math><mover><mi>n</mi><mo>→</mo></mover></math> = (1; 1; <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>).<br>• sin α = <span class=\"fraction\"><span class=\"numerator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math> · <math><mover><mi>n</mi><mo>→</mo></mover></math>|</span><span class=\"denominator\">|<math><mover><mi>u</mi><mo>→</mo></mover></math>| · |<math><mover><mi>n</mi><mo>→</mo></mover></math>|</span></span> = <span class=\"fraction\"><span class=\"numerator\">|0 + 0 + <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>|</span><span class=\"denominator\">1 · <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1 + 1 + 2</span></span></span></span> = <span class=\"fraction\"><span class=\"numerator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span><span class=\"denominator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">4</span></span></span></span> = <span class=\"fraction\"><span class=\"numerator\"><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span><span class=\"denominator\">2</span></span>.<br>• Do đó góc giữa tia sáng và tấm pin là <b>α = 45°</b>."
     }
   ],
   "17": [
@@ -3851,7 +3893,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: I(1; -2; 3) và R = 5",
-      "exp": "• Đối chiếu phương trình chuẩn (x - a)² + (y - b)² + (z - c)² = R²:<br>a = 1, b = -2, c = 3 và R = √25 = 5.<br>⇒ Tâm <b>I(1; -2; 3)</b> và bán kính <b>R = 5</b>."
+      "exp": "• Đối chiếu phương trình chuẩn (x - a)² + (y - b)² + (z - c)² = R²:<br>a = 1, b = -2, c = 3 và R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25</span></span> = 5.<br>⇒ Tâm <b>I(1; -2; 3)</b> và bán kính <b>R = 5</b>."
     },
     {
       "type": "mcq",
@@ -3864,7 +3906,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: x² + (y - 2)² + (z - 1)² = 6",
-      "exp": "• Tâm I là trung điểm AB: I = ((1-1)/2; (3+1)/2; (-1+3)/2) = (0; 2; 1).<br>• Bán kính: R = IA = √[(1 - 0)² + (3 - 2)² + (-1 - 1)²] = √[1 + 1 + 4] = √6.<br>• Phương trình mặt cầu: <b>x² + (y - 2)² + (z - 1)² = 6</b>."
+      "exp": "• Tâm I là trung điểm AB: I = ((1-1)/2; (3+1)/2; (-1+3)/2) = (0; 2; 1).<br>• Bán kính: R = IA = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">(1 - 0)² + (3 - 2)² + (-1 - 1)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1 + 1 + 4</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">6</span></span>.<br>• Phương trình mặt cầu: <b>x² + (y - 2)² + (z - 1)² = 6</b>."
     },
     {
       "type": "tf",
@@ -3882,7 +3924,7 @@
         true
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-      "exp": "• <b>Ý a [Đúng]:</b> Tâm I(1; -2; 3).<br>• <b>Ý b [Đúng]:</b> R = √(1 + 4 + 9 - (-11)) = √25 = 5.<br>• <b>Ý c [Đúng]:</b> d(I, (P)) = |2(1) - 2(-2) + 3| / √(2² + (-2)² + 1²) = |2 + 4 + 3| / 3 = 9/3 = 3.<br>• <b>Ý d [Đúng]:</b> r = √(R² - d²) = √(5² - 3²) = 4."
+      "exp": "• <b>Ý a [Đúng]:</b> Tâm I(1; -2; 3).<br>• <b>Ý b [Đúng]:</b> R = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">1 + 4 + 9 - (-11)</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25</span></span> = 5.<br>• <b>Ý c [Đúng]:</b> d(I, (P)) = |2(1) - 2(-2) + 3| / <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2² + (-2)² + 1²</span></span> = |2 + 4 + 3| / 3 = 9/3 = 3.<br>• <b>Ý d [Đúng]:</b> r = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5² - 3²</span></span> = 4."
     },
     {
       "type": "match",
@@ -3915,7 +3957,7 @@
       "words": [
         "cắt",
         "đường tròn",
-        "√(R² - d²)",
+        "<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span>",
         "tiếp xúc",
         "đường elip",
         "R - d"
@@ -3926,8 +3968,8 @@
         2,
         3
       ],
-      "correctText": "(1) cắt • (2) đường tròn • (3) √(R² - d²) • (4) tiếp xúc",
-      "exp": "• <b>Vị trí tương đối mặt cầu và mặt phẳng:</b><br>- d < R: Cắt theo đường tròn bán kính r = √(R² - d²).<br>- d = R: Tiếp xúc tại một điểm.<br>- d > R: Không giao nhau."
+      "correctText": "(1) cắt • (2) đường tròn • (3) <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span> • (4) tiếp xúc",
+      "exp": "• <b>Vị trí tương đối mặt cầu và mặt phẳng:</b><br>- d < R: Cắt theo đường tròn bán kính r = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span>.<br>- d = R: Tiếp xúc tại một điểm.<br>- d > R: Không giao nhau."
     },
     {
       "type": "mcq",
@@ -3935,12 +3977,12 @@
       "opts": [
         "r = 4",
         "r = 2",
-        "r = √34",
+        "r = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">34</span></span>",
         "r = 3"
       ],
       "ans": 0,
       "correctText": "Phương án A: r = 4",
-      "exp": "• Theo định lý Pythagoras trong tam giác vuông tạo bởi tâm mặt cầu, tâm đường tròn giao tuyến và một điểm trên đường tròn:<br>r = √(R² - d²) = √(5² - 3²) = √(25 - 9) = √16 = <b>4</b>.",
+      "exp": "• Theo định lý Pythagoras trong tam giác vuông tạo bởi tâm mặt cầu, tâm đường tròn giao tuyến và một điểm trên đường tròn:<br>r = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">5² - 3²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">25 - 9</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">16</span></span> = <b>4</b>.",
       "svgGraph": "<svg viewBox=\"0 0 380 220\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"8\" y=\"8\" width=\"364\" height=\"204\" rx=\"10\" fill=\"rgba(15,23,42,0.95)\" stroke=\"#0ea5e9\" stroke-width=\"1.6\"/>\n  <!-- Sphere boundary -->\n  <circle cx=\"190\" cy=\"115\" r=\"70\" fill=\"rgba(56,189,248,0.12)\" stroke=\"#38bdf8\" stroke-width=\"1.8\"/>\n  <!-- Intersection circle (ellipse in perspective) -->\n  <ellipse cx=\"190\" cy=\"85\" rx=\"55\" ry=\"18\" fill=\"rgba(244,63,94,0.2)\" stroke=\"#f43f5e\" stroke-width=\"1.8\"/>\n  <!-- Center I -->\n  <circle cx=\"190\" cy=\"115\" r=\"3.5\" fill=\"#38bdf8\"/>\n  <text x=\"200\" y=\"125\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">I</text>\n  <!-- Distance d = 3 from I to slice plane -->\n  <line x1=\"190\" y1=\"115\" x2=\"190\" y2=\"85\" stroke=\"#fbbf24\" stroke-width=\"2\"/>\n  <text x=\"175\" y=\"102\" fill=\"#fbbf24\" font-size=\"12\" font-weight=\"800\">d = 3</text>\n  <!-- Sphere radius R = 5 -->\n  <line x1=\"190\" y1=\"115\" x2=\"245\" y2=\"85\" stroke=\"#34d399\" stroke-width=\"2\"/>\n  <text x=\"225\" y=\"110\" fill=\"#34d399\" font-size=\"12\" font-weight=\"800\">R = 5</text>\n  <!-- Slice radius r -->\n  <line x1=\"190\" y1=\"85\" x2=\"245\" y2=\"85\" stroke=\"#f43f5e\" stroke-width=\"2\"/>\n  <text x=\"218\" y=\"78\" fill=\"#f43f5e\" font-size=\"13\" font-weight=\"800\">r = ?</text>\n</svg>"
     },
     {
@@ -3972,7 +4014,7 @@
         true
       ],
       "correctText": "a) Đúng • b) Đúng • c) Đúng • d) Đúng",
-      "exp": "• <b>Ý a [Đúng]:</b> Tâm H(0; 0; 0,1), R = 20 ⇒ x² + y² + (z - 0,1)² = 20² = 400.<br>• <b>Ý b [Đúng]:</b> Khoảng cách mặt biển d_ngang = √(12² + 16²) = √(144 + 256) = √400 = 20 km.<br>• <b>Ý c [Đúng]:</b> HA = √(12² + 16² + (-0,1)²) = √(400 + 0,01) ≈ 20,00025 km, xấp xỉ mép quét tín hiệu.<br>• <b>Ý d [Đúng]:</b> Chạy lại gần 5 km thì khoảng cách mặt ngang còn 15 km ⇒ khoảng cách thực tế √(15² + 0,1²) ≈ 15,0003 km < 16 km."
+      "exp": "• <b>Ý a [Đúng]:</b> Tâm H(0; 0; 0,1), R = 20 ⇒ x² + y² + (z - 0,1)² = 20² = 400.<br>• <b>Ý b [Đúng]:</b> Khoảng cách mặt biển d_ngang = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">12² + 16²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">144 + 256</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">400</span></span> = 20 km.<br>• <b>Ý c [Đúng]:</b> HA = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">12² + 16² + (-0,1)²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">400 + 0,01</span></span> ≈ 20,00025 km, xấp xỉ mép quét tín hiệu.<br>• <b>Ý d [Đúng]:</b> Chạy lại gần 5 km thì khoảng cách mặt ngang còn 15 km ⇒ khoảng cách thực tế <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">15² + 0,1²</span></span> ≈ 15,0003 km < 16 km."
     },
     {
       "type": "mcq",
@@ -3985,7 +4027,7 @@
       ],
       "ans": 0,
       "correctText": "Phương án A: 60 km",
-      "exp": "• Đường bay cắt mặt cầu quét của radar theo một dây cung AB.<br>• Nửa chiều dài dây cung: L/2 = √(R² - d²) = √(50² - 40²) = √(2500 - 1600) = √900 = 30 km.<br>• Tổng chiều dài đoạn bay bị radar phát hiện là L = 2 · 30 = <b>60 km</b>."
+      "exp": "• Đường bay cắt mặt cầu quét của radar theo một dây cung AB.<br>• Nửa chiều dài dây cung: L/2 = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">R² - d²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">50² - 40²</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2500 - 1600</span></span> = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">900</span></span> = 30 km.<br>• Tổng chiều dài đoạn bay bị radar phát hiện là L = 2 · 30 = <b>60 km</b>."
     }
   ],
   "18": [
@@ -4277,7 +4319,7 @@
     },
     {
       "type": "tf",
-      "q": "Một bệnh viện dùng xét nghiệm nhanh để tầm soát một loại bệnh hiếm trong cộng đồng. Tỷ lệ người mắc bệnh trong cộng đồng là 1% (P(B) = 0,01). Nếu một người mắc bệnh, xét nghiệm cho kết quả Dương tính (+) với xác suất 98% (P(+|B) = 0,98). Nếu người không mắc bệnh, xét nghiệm vẫn cho kết quả Dương tính giả với xác suất 2% (P(+|B̄) = 0,02). Chọn ngẫu nhiên 1 người đi xét nghiệm. Xét tính Đúng/Sai của từng mệnh đề sau:",
+      "q": "Một bệnh viện dùng xét nghiệm nhanh để tầm soát một loại bệnh hiếm trong cộng đồng. Tỷ lệ người mắc bệnh trong cộng đồng là 1% (P(B) = 0,01). Nếu một người mắc bệnh, xét nghiệm cho kết quả Dương tính (+) với xác suất 98% (P(+|B) = 0,98). Nếu người không mắc bệnh, xét nghiệm vẫn cho kết quả Dương tính giả với xác suất 2% (P(+|<math><mover><mi>B</mi><mo>¯</mo></mover></math>) = 0,02). Chọn ngẫu nhiên 1 người đi xét nghiệm. Xét tính Đúng/Sai của từng mệnh đề sau:",
       "stmts": [
         "Xác suất để một người bất kì nhận kết quả xét nghiệm Dương tính là P(+) = 0,0296.",
         "Trong các kết quả xét nghiệm Dương tính, tỷ lệ dương tính giả chiếm hơn 65%.",
