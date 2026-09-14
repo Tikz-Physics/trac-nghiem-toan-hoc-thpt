@@ -7689,25 +7689,47 @@
     },
     {
       "type": "match",
-      "q": "Ghép mỗi hàm số f(x) ở Cột A với giá trị đạo hàm f'(1) tương ứng ở Cột B:",
-      "exp": "1 - A (4*1^3 = 4); 2 - B (-1/1^2 = -1); 3 - C ((3x-5)' = 3); 4 - D (2x+2 tại x=1 là 4).",
+      "q": "Ghép mỗi khái niệm, hiện tượng ở Cột A với ý nghĩa hình học hoặc vật lí của đạo hàm tương ứng ở Cột B:",
+      "exp": "• <b>1 ➔ A:</b> Ý nghĩa hình học: Hệ số góc của tiếp tuyến của đồ thị hàm số y = f(x) tại tiếp điểm M₀(x₀; y₀) chính là k = f'(x₀).<br>• <b>2 ➔ B:</b> Ý nghĩa vật lí (Cơ học): Vận tốc tức thời của chuyển động s = s(t) tại thời điểm t₀ là v(t₀) = s'(t₀).<br>• <b>3 ➔ C:</b> Ý nghĩa vật lí (Điện học): Cường độ dòng điện tức thời qua tiết diện dây dẫn tại thời điểm t₀ là i(t₀) = Q'(t₀).<br>• <b>4 ➔ D:</b> Định nghĩa đạo hàm bằng giới hạn số gia: f'(x₀) = lim<sub>Δx → 0</sub> <span class=\"fraction\"><span class=\"numerator\">Δy</span><span class=\"denominator\">Δx</span></span>.",
       "colA": [
-        "f(x) = x<sup>4</sup>",
-        "f(x) = 1/x",
-        "f(x) = 3x - 5",
-        "f(x) = x<sup>2</sup> + 2x"
+            "Hệ số góc tiếp tuyến tại M₀(x₀; y₀)",
+            "Vận tốc tức thời v(t₀) của chuyển động s(t)",
+            "Cường độ tức thời i(t₀) của điện lượng Q(t)",
+            "Đạo hàm f'(x₀) theo định nghĩa số gia"
       ],
       "colB": [
-        "4",
-        "-1",
-        "3",
-        "4"
+            "k = f'(x₀)",
+            "v(t₀) = s'(t₀)",
+            "i(t₀) = Q'(t₀)",
+            "lim<sub>Δx → 0</sub> <span class=\"fraction\"><span class=\"numerator\">Δy</span><span class=\"denominator\">Δx</span></span>"
       ],
       "pairs": [
-        {
-          "a": "1. f(x) = x<sup>4</sup>",
-          "b": "A. 4"
-        },
+            {
+                  "a": "1. Hệ số góc tiếp tuyến tại M₀(x₀; y₀)",
+                  "b": "A. k = f'(x₀)"
+            },
+            {
+                  "a": "2. Vận tốc tức thời v(t₀) của chuyển động s(t)",
+                  "b": "B. v(t₀) = s'(t₀)"
+            },
+            {
+                  "a": "3. Cường độ tức thời i(t₀) của điện lượng Q(t)",
+                  "b": "C. i(t₀) = Q'(t₀)"
+            },
+            {
+                  "a": "4. Đạo hàm f'(x₀) theo định nghĩa số gia",
+                  "b": "D. lim<sub>Δx → 0</sub> <span class=\"fraction\"><span class=\"numerator\">Δy</span><span class=\"denominator\">Δx</span></span>"
+            }
+      ],
+      "ans": {
+            "0": 0,
+            "1": 1,
+            "2": 2,
+            "3": 3
+      },
+      "correctText": "1-A • 2-B • 3-C • 4-D",
+      "svgGraph": "<svg viewBox=\"0 0 460 250\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.08)\" stroke-width=\"1\"/>\n  \n  <!-- Trục tọa độ Oxy -->\n  <line x1=\"50\" y1=\"180\" x2=\"420\" y2=\"180\" stroke=\"#475569\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"90\" y1=\"225\" x2=\"90\" y2=\"25\" stroke=\"#475569\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"415\" y=\"172\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\">x</text>\n  <text x=\"100\" y=\"35\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\">y</text>\n  <text x=\"75\" y=\"196\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"700\">O</text>\n  \n  <!-- Đường dóng tọa độ điểm M0 -->\n  <line x1=\"210\" y1=\"180\" x2=\"210\" y2=\"110\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"90\" y1=\"110\" x2=\"210\" y2=\"110\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3,3\"/>\n  <text x=\"210\" y=\"196\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\" text-anchor=\"middle\">x₀</text>\n  <text x=\"72\" y=\"114\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\" text-anchor=\"end\">y₀</text>\n\n  <!-- Đồ thị hàm số y = f(x) -->\n  <path d=\"M 115 201 C 150 162, 180 128, 210 110 C 245 90, 290 70, 360 76\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"2.8\"/>\n  <text x=\"368\" y=\"76\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"800\">y = f(x)</text>\n\n  <!-- Tiếp tuyến d tại điểm M0(x0, y0) -->\n  <line x1=\"110\" y1=\"180\" x2=\"310\" y2=\"40\" stroke=\"#fbbf24\" stroke-width=\"2.4\"/>\n  <text x=\"215\" y=\"45\" fill=\"#fbbf24\" font-size=\"12.5\" font-weight=\"800\">Tiếp tuyến: k = tan α = f'(x₀)</text>\n\n  <!-- Góc nghiêng alpha -->\n  <path d=\"M 150 180 A 40 40 0 0 1 142 157\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\"/>\n  <text x=\"156\" y=\"168\" fill=\"#f43f5e\" font-size=\"12\" font-weight=\"800\">α</text>\n\n  <!-- Điểm tiếp xúc M0 -->\n  <circle cx=\"210\" cy=\"110\" r=\"5\" fill=\"#f43f5e\" stroke=\"#ffffff\" stroke-width=\"1.5\"/>\n  <text x=\"220\" y=\"118\" fill=\"#f43f5e\" font-size=\"13\" font-weight=\"900\">M₀(x₀; y₀)</text>\n\n  <!-- Khung công thức hệ số góc -->\n  <rect x=\"80\" y=\"210\" width=\"300\" height=\"28\" rx=\"6\" fill=\"rgba(6,182,212,0.12)\" stroke=\"rgba(6,182,212,0.35)\" stroke-width=\"1\"/>\n  <text x=\"230\" y=\"229\" fill=\"#38bdf8\" font-size=\"12.5\" font-weight=\"800\" text-anchor=\"middle\">Hệ số góc của tiếp tuyến tại M₀ là k = f'(x₀)</text>\n</svg>"
+},
         {
           "a": "2. f(x) = 1/x",
           "b": "B. -1"
