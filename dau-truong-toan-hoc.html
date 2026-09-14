@@ -12,7 +12,208 @@
   <script src="./arena_questions_data.js"></script>
   <!-- MQTT Library for real-time wireless websocket buzzer -->
   <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script>
+    const urlParamsRole = new URLSearchParams(window.location.search);
+    const roleParam = urlParamsRole.get('role');
+    if (roleParam === 'buzzer') {
+      document.documentElement.classList.add('role-buzzer');
+    } else if (roleParam === 'projector') {
+      document.documentElement.classList.add('role-projector');
+    }
+  </script>
   <style>
+    /* ==========================================================================
+       PROJECTOR DEDICATED VIEW & CLEAN MODE (MÀN HÌNH MÁY CHIẾU CHUYÊN DỤNG)
+       Bỏ 100% nội dung thừa của giáo viên, chỉ tập trung vào đề bài, đồ thị & kết quả
+       ========================================================================== */
+    html.role-projector #buzzerView,
+    html.role-projector #mysteryModal {
+      display: none !important;
+    }
+
+    /* 1. Bỏ 100% thanh điều khiển của giáo viên trên màn hình máy chiếu */
+    html.role-projector .control-toolbar,
+    body.projector-clean-mode .control-toolbar {
+      display: none !important;
+    }
+
+    /* 2. Bỏ các nút cấu hình / quản trị thừa trên Header */
+    html.role-projector .btn-host-admin,
+    body.projector-clean-mode .btn-host-admin,
+    html.role-projector #netStatusBadge,
+    body.projector-clean-mode #netStatusBadge {
+      display: none !important;
+    }
+
+    /* 3. Phóng to và tối ưu không gian cho màn hình máy chiếu */
+    html.role-projector .arena-container,
+    body.projector-clean-mode .arena-container {
+      max-width: 1560px !important;
+      padding: 10px 24px 16px !important;
+      gap: 16px !important;
+    }
+
+    html.role-projector .battle-card,
+    body.projector-clean-mode .battle-card {
+      padding: 22px 30px !important;
+      gap: 16px !important;
+      min-height: auto !important;
+      border-color: rgba(56, 189, 248, 0.4) !important;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    html.role-projector .question-title,
+    body.projector-clean-mode .question-title {
+      font-size: 1.6rem !important;
+      line-height: 1.5 !important;
+      font-weight: 800 !important;
+      color: #ffffff !important;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    html.role-projector .question-img-wrap,
+    body.projector-clean-mode .question-img-wrap {
+      max-height: 240px !important;
+      transition: max-height 0.3s ease;
+    }
+    html.role-projector .question-img-wrap svg,
+    body.projector-clean-mode .question-img-wrap svg {
+      max-height: 220px !important;
+      transition: max-height 0.3s ease;
+    }
+    html.role-projector .battle-card.is-revealed .question-img-wrap,
+    body.projector-clean-mode .battle-card.is-revealed .question-img-wrap {
+      max-height: 140px !important;
+    }
+    html.role-projector .battle-card.is-revealed .question-img-wrap svg,
+    body.projector-clean-mode .battle-card.is-revealed .question-img-wrap svg {
+      max-height: 130px !important;
+    }
+    html.role-projector .battle-card.is-revealed .option-btn,
+    body.projector-clean-mode .battle-card.is-revealed .option-btn {
+      padding: 10px 16px !important;
+      min-height: 48px !important;
+      font-size: 1.05rem !important;
+    }
+
+    html.role-projector .option-btn,
+    body.projector-clean-mode .option-btn {
+      font-size: 1.2rem !important;
+      padding: 16px 20px !important;
+      min-height: 60px !important;
+      border-radius: 14px !important;
+      cursor: default !important;
+    }
+
+    html.role-projector .option-prefix,
+    body.projector-clean-mode .option-prefix {
+      width: 36px !important;
+      height: 36px !important;
+      font-size: 1.15rem !important;
+      font-weight: 900 !important;
+    }
+
+    html.role-projector .timer-widget,
+    body.projector-clean-mode .timer-widget {
+      font-size: 1.35rem !important;
+      padding: 6px 18px !important;
+    }
+    html.role-projector .timer-val,
+    body.projector-clean-mode .timer-val {
+      font-size: 1.5rem !important;
+    }
+
+    html.role-projector .round-tag,
+    body.projector-clean-mode .round-tag {
+      font-size: 0.95rem !important;
+      padding: 6px 16px !important;
+    }
+
+    html.role-projector .q-point-pill,
+    body.projector-clean-mode .q-point-pill {
+      font-size: 1.05rem !important;
+      padding: 6px 18px !important;
+    }
+
+    html.role-projector .explanation-box,
+    body.projector-clean-mode .explanation-box {
+      font-size: 1.15rem !important;
+      line-height: 1.65 !important;
+      padding: 16px 22px !important;
+    }
+
+    /* Giao diện Setup trên máy chiếu: Biến thành Sảnh Chờ trang trọng */
+    html.role-projector #setupLeftCol {
+      display: none !important;
+    }
+    html.role-projector #setupView .setup-grid {
+      grid-template-columns: 1fr !important;
+      max-width: 760px !important;
+      margin: 0 auto !important;
+    }
+    html.role-projector .setup-header {
+      margin-bottom: 24px !important;
+    }
+    html.role-projector .setup-title {
+      font-size: 2.6rem !important;
+    }
+
+    html.role-projector .team-controls,
+    body.projector-clean-mode .team-controls {
+      display: none !important;
+    }
+    html.role-projector .btn-buzzer-team,
+    body.projector-clean-mode .btn-buzzer-team {
+      display: none !important;
+    }
+    html.role-projector .buzzer-alert,
+    body.projector-clean-mode .buzzer-alert {
+      justify-content: center !important;
+      font-size: 1.15rem !important;
+      padding: 12px 24px !important;
+    }
+    html.role-projector .buzzer-alert button,
+    body.projector-clean-mode .buzzer-alert button {
+      display: none !important;
+    }
+    html.role-projector .team-card,
+    body.projector-clean-mode .team-card {
+      padding: 16px !important;
+    }
+    html.role-projector .team-score,
+    body.projector-clean-mode .team-score {
+      font-size: 2.2rem !important;
+    }
+
+    /* Huy hiệu chuyển chế độ chiếu cho chế độ nhân bản (mirror) */
+    .projector-clean-toggle-badge {
+      display: none;
+      position: fixed;
+      bottom: 14px;
+      right: 18px;
+      z-index: 9999;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      transition: all 0.2s ease;
+    }
+    body.projector-clean-mode .projector-clean-toggle-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .projector-clean-toggle-badge:hover {
+      background: #38bdf8;
+      color: #070a14;
+    }
+
     :root {
       --bg-dark: #090d16;
       --bg-card: rgba(17, 24, 39, 0.9);
@@ -1027,7 +1228,7 @@
 
     <div class="setup-grid">
       <!-- Left Column: Choose Grade & Lesson -->
-      <div class="setup-card">
+      <div class="setup-card" id="setupLeftCol">
         <div>
           <div class="setup-section-title"><span>1️⃣</span> BƯỚC 1: CHỌN KHỐI LỚP THI ĐẤU</div>
           <div class="grade-selector-grid">
@@ -1119,16 +1320,22 @@
         <span style="font-size: 0.8rem; color: #f59e0b; margin-left: 6px;" id="arenaBattleSubTitle">Toán Học 12</span>
       </div>
       <div style="display: flex; gap: 8px; align-items: center;">
-        <button class="btn-header" onclick="backToSetupView()">
+        <button class="btn-header btn-host-admin" onclick="backToSetupView()">
           <span>⚙️</span> Đổi Bài Học
         </button>
-        <button class="btn-header qr-btn" onclick="openQrModal()">
+        <button class="btn-header qr-btn btn-host-admin" onclick="openQrModal()">
           <span>📱</span> Mã QR (<span id="roomCodeDisplay">VT88</span>)
+        </button>
+        <button class="btn-header btn-host-admin" id="btnOpenProjector" onclick="openProjectorWindow()" title="Mở một cửa sổ máy chiếu độc lập để kéo sang màn hình thứ 2">
+          <span>📽️</span> Xuất Máy Chiếu
+        </button>
+        <button class="btn-header btn-host-admin" id="btnToggleCleanMode" onclick="toggleProjectorCleanMode()" title="Ẩn/Hiện thanh điều khiển giáo viên để tập trung chiếu lên màn hình lớn (Phím P)">
+          <span>👁️</span> Chế Độ Chiếu (P)
         </button>
         <button class="btn-header" onclick="toggleFullscreen()">
           <span>⛶</span> Toàn Màn Hình
         </button>
-        <button class="btn-header" onclick="resetBattle()">
+        <button class="btn-header btn-host-admin" onclick="resetBattle()">
           <span>🔄</span> Đấu Lại
         </button>
       </div>
@@ -1205,6 +1412,9 @@
 
       <!-- Teams Scoreboard (Bottom Grid) -->
       <div class="teams-grid" id="teamsGrid"></div>
+    </div>
+    <div class="projector-clean-toggle-badge" onclick="toggleProjectorCleanMode()" title="Nhấp hoặc bấm phím P để hiện lại thanh điều khiển giáo viên">
+      <span>⚙️</span> Hiện Thanh Điều Khiển (Phím P)
     </div>
   </div>
 
@@ -1895,6 +2105,7 @@
        ========================================================================== */
     const urlParams = new URLSearchParams(window.location.search);
     const isClientBuzzer = urlParams.get('role') === 'buzzer';
+    const isProjectorRole = urlParams.get('role') === 'projector';
     let roomCode = urlParams.get('room') || generateRoomCode();
     const topic = 'toan-arena/' + roomCode;
 
@@ -1907,10 +2118,16 @@
     }
 
     function initRealtime() {
+      if (isProjectorRole) {
+        document.body.classList.add('projector-clean-mode');
+        setTimeout(() => {
+          broadcastMsg({ action: 'PROJECTOR_HELLO' });
+        }, 300);
+      }
       try {
         if (typeof mqtt !== 'undefined') {
           mqttClient = mqtt.connect('wss://broker.emqx.io:8084/mqtt', {
-            clientId: 'arena_' + (isClientBuzzer ? 'c_' : 'h_') + Math.random().toString(16).substring(2, 8),
+            clientId: 'arena_' + (isClientBuzzer ? 'c_' : (isProjectorRole ? 'p_' : 'h_')) + Math.random().toString(16).substring(2, 8),
             clean: true,
             connectTimeout: 4000
           });
@@ -1940,15 +2157,159 @@
       }
     }
 
+    /* Projector Handlers */
+    function openProjectorWindow() {
+      const isLocalFile = window.location.protocol === 'file:' || !window.location.origin || window.location.origin === 'null';
+      const base = isLocalFile ? window.location.href.split('?')[0] : (window.location.origin + window.location.pathname);
+      const projectorUrl = base + '?role=projector&room=' + roomCode;
+      const w = window.open(projectorUrl, 'ArenaProjector_' + roomCode, 'width=1280,height=720,menubar=no,toolbar=no,location=no,status=no');
+      if (w) {
+        setTimeout(() => { broadcastProjectorSync(); }, 600);
+      }
+    }
+
+    function toggleProjectorCleanMode() {
+      document.body.classList.toggle('projector-clean-mode');
+      const isClean = document.body.classList.contains('projector-clean-mode');
+      const btn = document.getElementById('btnToggleCleanMode');
+      if (btn) {
+        btn.innerHTML = isClean ? '<span>👁️</span> Tắt Chiếu (P)' : '<span>👁️</span> Chế Độ Chiếu (P)';
+      }
+    }
+
+    function broadcastProjectorSync() {
+      const isBattle = document.getElementById('battleView').style.display === 'flex';
+      broadcastMsg({
+        action: 'PROJECTOR_SYNC',
+        isBattle: isBattle,
+        currentQIdx: currentQIdx,
+        battleQuestions: battleQuestions,
+        selectedGrade: selectedGrade,
+        selectedLessonId: selectedLessonId,
+        selectedQCount: selectedQCount,
+        titleLabel: document.getElementById('arenaBattleSubTitle') ? document.getElementById('arenaBattleSubTitle').innerText : '',
+        teams: teams,
+        timeLeft: timeLeft,
+        isTimerRunning: isTimerRunning,
+        isBuzzerArmed: isBuzzerArmed,
+        buzzedTeamId: buzzedTeamId,
+        isRevealed: document.getElementById('explanationBox') ? document.getElementById('explanationBox').classList.contains('show') : false
+      });
+    }
+
+    function projectorOnSync(data) {
+      if (!isProjectorRole || !data) return;
+      if (data.teams) {
+        teams = data.teams;
+        renderTeams();
+      }
+      if (data.titleLabel && document.getElementById('arenaBattleSubTitle')) {
+        document.getElementById('arenaBattleSubTitle').innerText = data.titleLabel;
+      }
+      if (data.isBattle) {
+        document.getElementById('setupView').style.display = 'none';
+        document.getElementById('battleView').style.display = 'flex';
+        if (data.battleQuestions && data.battleQuestions.length > 0) {
+          battleQuestions = data.battleQuestions;
+        }
+        if (typeof data.currentQIdx === 'number') {
+          currentQIdx = data.currentQIdx;
+          loadQuestion(currentQIdx, true);
+        }
+        if (data.isRevealed) {
+          revealAnswer(true);
+        } else if (data.buzzedTeamId) {
+          triggerBuzzer(data.buzzedTeamId, true);
+        }
+      } else {
+        document.getElementById('battleView').style.display = 'none';
+        document.getElementById('setupView').style.display = 'flex';
+      }
+    }
+
+    function projectorOnStartBattle(data) {
+      if (!isProjectorRole || !data) return;
+      selectedGrade = data.grade || selectedGrade;
+      selectedLessonId = data.lessonId || selectedLessonId;
+      selectedQCount = data.qCount || selectedQCount;
+      if (data.titleLabel && document.getElementById('arenaBattleSubTitle')) {
+        document.getElementById('arenaBattleSubTitle').innerText = data.titleLabel;
+      }
+      if (data.questions && data.questions.length > 0) {
+        battleQuestions = data.questions;
+      }
+      document.getElementById('setupView').style.display = 'none';
+      document.getElementById('battleView').style.display = 'flex';
+      renderTeams();
+      loadQuestion(0, true);
+    }
+
+    function projectorOnStartQuestion(data) {
+      if (!isProjectorRole || !data) return;
+      if (typeof data.qIdx === 'number') {
+        loadQuestion(data.qIdx, true);
+      }
+    }
+
+    function projectorOnTimerSync(data) {
+      if (!isProjectorRole || !data) return;
+      timeLeft = typeof data.timeLeft === 'number' ? data.timeLeft : timeLeft;
+      updateTimerDisplay();
+      if (data.isRunning) {
+        startTimer(true);
+      } else {
+        stopTimer(true);
+      }
+    }
+
     function handleIncomingMessage(data) {
       if (!data) return;
       if (isClientBuzzer) {
         if (data.action === 'ARM_BUZZER') clientOnBuzzerArmed(data.excluded || []);
         else if (data.action === 'LOCK_BUZZER') clientOnBuzzerLocked(data.winnerId, data.winnerName);
         else if (data.action === 'RESET_BUZZER') clientOnBuzzerReset();
+      } else if (isProjectorRole) {
+        if (data.action === 'PROJECTOR_SYNC') {
+          projectorOnSync(data);
+        } else if (data.action === 'START_BATTLE') {
+          projectorOnStartBattle(data);
+        } else if (data.action === 'START_QUESTION') {
+          projectorOnStartQuestion(data);
+        } else if (data.action === 'REVEAL_ANSWER') {
+          if (data.teams) teams = data.teams;
+          revealAnswer(true);
+        } else if (data.action === 'TIMER_SYNC') {
+          projectorOnTimerSync(data);
+        } else if (data.action === 'ARM_BUZZER') {
+          isBuzzerArmed = true;
+          buzzedTeamId = null;
+          document.getElementById('buzzerAlert').classList.remove('show');
+          renderTeams();
+        } else if (data.action === 'LOCK_BUZZER') {
+          triggerBuzzer(data.winnerId, true);
+        } else if (data.action === 'RESET_BUZZER') {
+          isBuzzerArmed = false;
+          buzzedTeamId = null;
+          document.getElementById('buzzerAlert').classList.remove('show');
+          renderTeams();
+        } else if (data.action === 'SCORE_UPDATE') {
+          if (data.teams) {
+            teams = data.teams;
+            renderTeams();
+          }
+        } else if (data.action === 'VICTORY_PODIUM') {
+          if (data.teams) teams = data.teams;
+          openVictoryPodium(true);
+        } else if (data.action === 'BACK_TO_SETUP') {
+          backToSetupView(true);
+        } else if (data.action === 'RESET_BATTLE') {
+          resetBattle(true);
+        }
       } else {
+        // Teacher Host Screen
         if (data.action === 'CLIENT_JOIN') hostOnClientJoin(data.teamId);
         else if (data.action === 'CLIENT_BUZZ') hostOnClientBuzz(data.teamId, data.teamName);
+        else if (data.action === 'PROJECTOR_HELLO') broadcastProjectorSync();
       }
     }
 
@@ -2068,7 +2429,7 @@
 
     function launchBattleFromSetup() {
       const select = document.getElementById('setupLessonSelect');
-      selectedLessonId = select.value;
+      selectedLessonId = (select && select.value) ? select.value : 'all';
 
       // Update Subtitle
       const titleLabel = selectedLessonId === 'all' 
@@ -2088,12 +2449,27 @@
       renderTeams();
       loadQuestion(0);
       setupKeyboardListeners();
+
+      // Broadcast to Projector Screen if host
+      if (!isProjectorRole) {
+        broadcastMsg({
+          action: 'START_BATTLE',
+          grade: selectedGrade,
+          lessonId: selectedLessonId,
+          qCount: selectedQCount,
+          titleLabel: titleLabel,
+          questions: battleQuestions
+        });
+      }
     }
 
-    function backToSetupView() {
-      stopTimer();
+    function backToSetupView(isRemote = false) {
+      stopTimer(isRemote);
       document.getElementById('battleView').style.display = 'none';
       document.getElementById('setupView').style.display = 'flex';
+      if (!isRemote && !isProjectorRole) {
+        broadcastMsg({ action: 'BACK_TO_SETUP' });
+      }
     }
 
     /* ==========================================================================
@@ -2209,9 +2585,9 @@
       });
     }
 
-    function loadQuestion(idx) {
+    function loadQuestion(idx, isRemote = false) {
       if (idx >= battleQuestions.length) {
-        openVictoryPodium();
+        openVictoryPodium(isRemote);
         return;
       }
       currentQIdx = idx;
@@ -2220,47 +2596,67 @@
       isBuzzerArmed = false;
       buzzedTeamId = null;
       document.getElementById('buzzerAlert').classList.remove('show');
-      document.getElementById('explanationBox').classList.remove('show');
-      stopTimer();
+      const expBox = document.getElementById('explanationBox');
+      if (expBox) expBox.classList.remove('show');
+      const bCard = document.querySelector('.battle-card');
+      if (bCard) bCard.classList.remove('is-revealed');
+      stopTimer(isRemote);
 
-      broadcastMsg({ action: 'RESET_BUZZER' });
+      if (!isRemote && !isProjectorRole) {
+        broadcastMsg({ action: 'RESET_BUZZER' });
+      }
 
       const round = idx < Math.ceil(battleQuestions.length * 0.3) ? 1 : (idx < Math.ceil(battleQuestions.length * 0.7) ? 2 : 3);
       const points = round === 1 ? 20 : (round === 2 ? 30 : 40);
 
       const roundTag = document.getElementById('roundTag');
-      roundTag.className = `round-tag round-${round}`;
-      roundTag.innerHTML = `<span>⚡</span> VÒNG ${round}: ${round === 1 ? 'KHỞI ĐỘNG' : (round === 2 ? 'TĂNG TỐC' : 'VỀ ĐÍCH')}`;
+      if (roundTag) {
+        roundTag.className = `round-tag round-${round}`;
+        roundTag.innerHTML = `<span>⚡</span> VÒNG ${round}: ${round === 1 ? 'KHỞI ĐỘNG' : (round === 2 ? 'TĂNG TỐC' : 'VỀ ĐÍCH')}`;
+      }
 
-      document.getElementById('qPointBadge').innerText = `+${points} ĐIỂM`;
-      document.getElementById('qTitle').innerHTML = `Câu ${idx + 1}/${battleQuestions.length}: ${q.q}`;
+      const qPointBadge = document.getElementById('qPointBadge');
+      if (qPointBadge) qPointBadge.innerText = `+${points} ĐIỂM`;
+      const qTitle = document.getElementById('qTitle');
+      if (qTitle) qTitle.innerHTML = `Câu ${idx + 1}/${battleQuestions.length}: ${q.q}`;
 
       const imgWrap = document.getElementById('qImgWrap');
-      if (q.svgGraph) {
-        imgWrap.innerHTML = q.svgGraph;
-        imgWrap.style.display = 'flex';
-      } else {
-        imgWrap.style.display = 'none';
+      if (imgWrap) {
+        if (q.svgGraph) {
+          imgWrap.innerHTML = q.svgGraph;
+          imgWrap.style.display = 'flex';
+        } else {
+          imgWrap.style.display = 'none';
+        }
       }
 
       const grid = document.getElementById('optionsGrid');
-      grid.innerHTML = '';
-      const prefixes = ['A', 'B', 'C', 'D'];
-      (q.opts || []).forEach((opt, oIdx) => {
-        const btn = document.createElement('button');
-        btn.className = 'option-btn';
-        btn.id = `optBtn_${oIdx}`;
-        btn.innerHTML = `
-          <div class="option-prefix">${prefixes[oIdx]}</div>
-          <div style="flex: 1; line-height: 1.4;">${opt}</div>
-        `;
-        btn.onclick = () => selectOption(oIdx);
-        grid.appendChild(btn);
-      });
+      if (grid) {
+        grid.innerHTML = '';
+        const prefixes = ['A', 'B', 'C', 'D'];
+        (q.opts || []).forEach((opt, oIdx) => {
+          const btn = document.createElement('button');
+          btn.className = 'option-btn';
+          btn.id = `optBtn_${oIdx}`;
+          btn.innerHTML = `
+            <div class="option-prefix">${prefixes[oIdx]}</div>
+            <div style="flex: 1; line-height: 1.4;">${opt}</div>
+          `;
+          btn.onclick = () => selectOption(oIdx);
+          grid.appendChild(btn);
+        });
+      }
 
       timeLeft = round === 1 ? 20 : (round === 2 ? 15 : 30);
       updateTimerDisplay();
       renderTeams();
+
+      if (!isRemote && !isProjectorRole) {
+        broadcastMsg({
+          action: 'START_QUESTION',
+          qIdx: currentQIdx
+        });
+      }
     }
 
     function selectOption(oIdx) {
@@ -2297,15 +2693,32 @@
       revealAnswer();
     }
 
-    function revealAnswer() {
+    function revealAnswer(isRemote = false) {
+      if (currentQIdx >= battleQuestions.length) return;
       const q = battleQuestions[currentQIdx];
       const correctBtn = document.getElementById(`optBtn_${q.ans}`);
       if (correctBtn) correctBtn.classList.add('correct');
 
+      const bCard = document.querySelector('.battle-card');
+      if (bCard) bCard.classList.add('is-revealed');
+
       const expBox = document.getElementById('explanationBox');
-      document.getElementById('explanationContent').innerHTML = q.exp || 'Đã xác nhận kết quả!';
-      expBox.classList.add('show');
-      stopTimer();
+      if (expBox) {
+        document.getElementById('explanationContent').innerHTML = q.exp || 'Đã xác nhận kết quả!';
+        expBox.classList.add('show');
+      }
+      const bAlert = document.getElementById('buzzerAlert');
+      if (bAlert) bAlert.classList.remove('show');
+      stopTimer(isRemote);
+
+      if (!isRemote && !isProjectorRole) {
+        broadcastMsg({
+          action: 'REVEAL_ANSWER',
+          qIdx: currentQIdx,
+          correctAns: q.ans,
+          teams: teams
+        });
+      }
     }
 
     function activateBuzzer() {
@@ -2318,21 +2731,25 @@
       broadcastMsg({ action: 'ARM_BUZZER' });
     }
 
-    function triggerBuzzer(teamId) {
+    function triggerBuzzer(teamId, isRemote = false) {
       if (buzzedTeamId !== null) return;
       buzzedTeamId = teamId;
       isBuzzerArmed = false;
-      stopTimer();
+      stopTimer(isRemote);
       
       // TRIGGER EXTREME STIMULATING BUZZER SOUND!
       soundExtremeBuzzer();
 
       const team = teams.find(t => t.id === teamId);
-      document.getElementById('buzzerTeamName').innerText = team.name;
-      document.getElementById('buzzerAlert').classList.add('show');
+      if (team) {
+        document.getElementById('buzzerTeamName').innerText = team.name;
+        document.getElementById('buzzerAlert').classList.add('show');
+      }
       renderTeams();
 
-      broadcastMsg({ action: 'LOCK_BUZZER', winnerId: team.id, winnerName: team.name });
+      if (!isRemote && !isProjectorRole) {
+        broadcastMsg({ action: 'LOCK_BUZZER', winnerId: teamId, winnerName: team ? team.name : '' });
+      }
     }
 
     function judgeBuzzedTeam(isCorrect) {
@@ -2345,6 +2762,9 @@
           team.score += earned;
           playVictoryFanfare5s(); // 5+ SECONDS VICTORY
           triggerConfetti(60);
+          const bAlert = document.getElementById('buzzerAlert');
+          if (bAlert) bAlert.classList.remove('show');
+          buzzedTeamId = null;
           revealAnswer();
         } else {
           if (!team.hasShield) {
@@ -2361,6 +2781,9 @@
           broadcastMsg({ action: 'ARM_BUZZER', excluded: [lastBuzzed] });
         }
         renderTeams();
+        if (!isProjectorRole) {
+          broadcastMsg({ action: 'SCORE_UPDATE', teams: teams });
+        }
       }
     }
 
@@ -2387,26 +2810,49 @@
       if (isTimerRunning) stopTimer();
       else startTimer();
     }
-    function startTimer() {
+    function startTimer(isRemote = false) {
+      stopTimer(isRemote);
       isTimerRunning = true;
-      document.getElementById('btnTimer').innerHTML = '<span>⏸️</span> Tạm Dừng (Space)';
+      const btn = document.getElementById('btnTimer');
+      if (btn) btn.innerHTML = '<span>⏸️</span> Tạm Dừng (Space)';
       timerInterval = setInterval(() => {
         timeLeft--;
         soundTick();
         updateTimerDisplay();
         if (timeLeft <= 0) {
-          stopTimer();
+          stopTimer(isRemote);
           soundWrong();
         }
       }, 1000);
+
+      if (!isRemote && !isProjectorRole) {
+        broadcastMsg({
+          action: 'TIMER_SYNC',
+          isRunning: true,
+          timeLeft: timeLeft
+        });
+      }
     }
-    function stopTimer() {
+    function stopTimer(isRemote = false) {
       isTimerRunning = false;
-      clearInterval(timerInterval);
-      document.getElementById('btnTimer').innerHTML = '<span>▶️</span> Tiếp Tục (Space)';
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      const btn = document.getElementById('btnTimer');
+      if (btn) btn.innerHTML = '<span>▶️</span> Tiếp Tục (Space)';
+
+      if (!isRemote && !isProjectorRole) {
+        broadcastMsg({
+          action: 'TIMER_SYNC',
+          isRunning: false,
+          timeLeft: timeLeft
+        });
+      }
     }
     function updateTimerDisplay() {
       const timerEl = document.getElementById('timerVal');
+      if (!timerEl) return;
       timerEl.innerText = timeLeft;
       timerEl.className = 'timer-val';
       if (timeLeft <= 5) timerEl.classList.add('danger');
@@ -2416,10 +2862,13 @@
     function adjustScore(teamId, delta) {
       const team = teams.find(t => t.id === teamId);
       if (team) {
-        team.score += delta;
+        team.score = Math.max(0, team.score + delta);
         renderTeams();
         if (delta > 0) playTone(784, 0.2, 'triangle', 0.3);
         else soundWrong();
+        if (!isProjectorRole) {
+          broadcastMsg({ action: 'SCORE_UPDATE', teams: teams });
+        }
       }
     }
 
@@ -2436,7 +2885,7 @@
     }
     function openMysteryBoxModal() {
       const resBox = document.getElementById('mysteryResult');
-      resBox.style.display = 'none';
+      if (resBox) resBox.style.display = 'none';
       document.querySelectorAll('.mystery-box-item').forEach(b => b.classList.remove('opened'));
       document.getElementById('mysteryModal').classList.add('open');
     }
@@ -2448,15 +2897,22 @@
       const reward = mysteryRewards[idx % mysteryRewards.length];
       if (buzzedTeamId) {
         const team = teams.find(t => t.id === buzzedTeamId);
-        reward.effect(team);
-        renderTeams();
+        if (team) {
+          reward.effect(team);
+          renderTeams();
+          if (!isProjectorRole) {
+            broadcastMsg({ action: 'SCORE_UPDATE', teams: teams });
+          }
+        }
       }
       const resBox = document.getElementById('mysteryResult');
-      resBox.innerHTML = `🎉 ${reward.text}`;
-      resBox.style.display = 'block';
+      if (resBox) {
+        resBox.innerHTML = `🎉 ${reward.text}`;
+        resBox.style.display = 'block';
+      }
     }
 
-    function openVictoryPodium() {
+    function openVictoryPodium(isRemote = false) {
       playVictoryFanfare5s(); // 5+ SECONDS VICTORY
       triggerConfetti(100);
       const sorted = [...teams].sort((a, b) => b.score - a.score);
@@ -2467,16 +2923,23 @@
       document.getElementById('pName3').innerText = sorted[2].name;
       document.getElementById('pScore3').innerText = sorted[2].score + ' đ';
       document.getElementById('victoryModal').classList.add('open');
+      if (!isRemote && !isProjectorRole) {
+        broadcastMsg({ action: 'VICTORY_PODIUM', teams: teams });
+      }
     }
 
-    function resetBattle() {
+    function resetBattle(isRemote = false) {
+      if (!isRemote && !confirm('Bạn có chắc chắn muốn làm mới điểm số và bắt đầu lại trận đấu từ đầu không?')) return;
       teams.forEach(t => {
         t.score = 100;
         t.hasStar = false;
         t.hasShield = false;
       });
       loadQuestionsForBattle(selectedGrade, selectedLessonId, selectedQCount);
-      loadQuestion(0);
+      loadQuestion(0, isRemote);
+      if (!isRemote && !isProjectorRole) {
+        broadcastMsg({ action: 'RESET_BATTLE' });
+      }
     }
 
     function closeModal(id) { document.getElementById(id).classList.remove('open'); }
@@ -2487,10 +2950,16 @@
 
     function setupKeyboardListeners() {
       window.addEventListener('keydown', e => {
+        const targetTag = e.target ? e.target.tagName : '';
+        if (['INPUT', 'TEXTAREA', 'SELECT'].includes(targetTag)) return;
+
         if (e.key === ' ' || e.code === 'Space') { e.preventDefault(); toggleTimer(); }
-        else if (e.key === 'Enter') { revealAnswer(); }
-        else if (e.key === 'b' || e.key === 'B') { activateBuzzer(); }
+        else if (e.key === 'Enter') { e.preventDefault(); revealAnswer(); }
+        else if (e.key === 'b' || e.key === 'B') { e.preventDefault(); activateBuzzer(); }
         else if (['1', '2', '3', '4'].includes(e.key)) { triggerBuzzer(parseInt(e.key)); }
+        else if (e.key === 'ArrowRight') { e.preventDefault(); nextQuestion(); }
+        else if (e.key === 'ArrowLeft') { e.preventDefault(); if (currentQIdx > 0) loadQuestion(currentQIdx - 1); }
+        else if (['p', 'P'].includes(e.key)) { e.preventDefault(); toggleProjectorCleanMode(); }
       });
     }
 
@@ -2644,11 +3113,37 @@
         initClient();
       } else {
         initSetupScreen();
-        if (urlParams.get('test') === 'battle') {
+        const autoState = urlParams.get('state') || urlParams.get('test');
+        if (urlParams.get('clean') === '1') {
+          document.body.classList.add('projector-clean-mode');
+        }
+        if (autoState === 'setup_connected') {
+          setTimeout(() => {
+            hostOnClientJoin(1);
+            hostOnClientJoin(2);
+            hostOnClientJoin(3);
+            hostOnClientJoin(4);
+          }, 200);
+        } else if (autoState === 'battle') {
+          setTimeout(() => launchBattleFromSetup(), 100);
+        } else if (autoState === 'buzzed') {
           setTimeout(() => {
             launchBattleFromSetup();
-          }, 300);
-        } else if (urlParams.get('test') === 'solar') {
+            setTimeout(() => {
+              triggerBuzzer(1);
+            }, 250);
+          }, 150);
+        } else if (autoState === 'revealed' || autoState === 'multi_revealed') {
+          setTimeout(() => {
+            launchBattleFromSetup();
+            setTimeout(() => {
+              triggerBuzzer(1);
+              setTimeout(() => {
+                judgeBuzzedTeam(true);
+              }, 200);
+            }, 250);
+          }, 150);
+        } else if (autoState === 'solar') {
           setTimeout(() => {
             selectSetupGrade(12);
             document.getElementById('setupLessonSelect').value = '16';
