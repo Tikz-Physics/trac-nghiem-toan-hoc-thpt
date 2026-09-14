@@ -1248,8 +1248,7 @@
   },
   {
     "type": "match",
-    "q": "Cho hai biến cố độc lập A, B với P(A) = 0,6 và P(B) = 0,5. Ghép mỗi biến cố ở Cột A với xác suất tương ứng ở Cột B:",
-    "exp": "1 - A (0.6*0.5 = 0.3); 2 - B (0.6*0.5 = 0.3); 3 - C (0.4*0.5 = 0.2); 4 - D (0.6 + 0.5 - 0.3 = 0.8).",
+    "q": "Cho hai biến cố độc lập A và B với P(A) = 0,7 và P(B) = 0,4. Ghép mỗi biến cố ở Cột A với xác suất tương ứng ở Cột B:",
     "colA": [
       "P(A ∩ B)",
       "P(A ∩ <math><mover><mi>B</mi><mo>¯</mo></mover></math>)",
@@ -1257,27 +1256,27 @@
       "P(A ∪ B)"
     ],
     "colB": [
-      "0,30",
-      "0,30",
-      "0,20",
-      "0,80"
+      "0,28",
+      "0,42",
+      "0,18",
+      "0,82"
     ],
     "pairs": [
       {
         "a": "1. P(A ∩ B)",
-        "b": "A. 0,30"
+        "b": "A. 0,28"
       },
       {
         "a": "2. P(A ∩ <math><mover><mi>B</mi><mo>¯</mo></mover></math>)",
-        "b": "B. 0,30"
+        "b": "B. 0,42"
       },
       {
         "a": "3. P(Ā ∩ <math><mover><mi>B</mi><mo>¯</mo></mover></math>)",
-        "b": "C. 0,20"
+        "b": "C. 0,18"
       },
       {
         "a": "4. P(A ∪ B)",
-        "b": "D. 0,80"
+        "b": "D. 0,82"
       }
     ],
     "ans": {
@@ -1287,7 +1286,7 @@
       "3": 3
     },
     "correctText": "1-A • 2-B • 3-C • 4-D",
-    "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <text x=\"220\" y=\"35\" fill=\"#38bdf8\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">Hai biến cố độc lập: P(A) = 0,6 và P(B) = 0,5</text>\n  \n  <g font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">\n    <rect x=\"60\" y=\"60\" width=\"145\" height=\"50\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\"/>\n    <text x=\"132\" y=\"92\" fill=\"#38bdf8\">P(A ∩ B)</text>\n    \n    <rect x=\"235\" y=\"60\" width=\"145\" height=\"50\" rx=\"8\" fill=\"#1e293b\" stroke=\"#34d399\"/>\n    <text x=\"307\" y=\"92\" fill=\"#34d399\">P(A ∩ B̄)</text>\n    \n    <rect x=\"60\" y=\"125\" width=\"145\" height=\"50\" rx=\"8\" fill=\"#1e293b\" stroke=\"#fbbf24\"/>\n    <text x=\"132\" y=\"157\" fill=\"#fbbf24\">P(Ā ∩ B̄)</text>\n    \n    <rect x=\"235\" y=\"125\" width=\"145\" height=\"50\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f43f5e\"/>\n    <text x=\"307\" y=\"157\" fill=\"#f43f5e\">P(A ∪ B)</text>\n  </g>\n  <text x=\"220\" y=\"215\" fill=\"#34d399\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">Tính xác suất các biến cố kết hợp</text>\n\n</svg>"
+    "exp": "1 - A (A và B độc lập ⇒ P(A ∩ B) = P(A) · P(B) = 0,7 · 0,4 = 0,28);<br>2 - B (A và B̄ độc lập ⇒ P(A ∩ B̄) = P(A) · P(B̄) = 0,7 · (1 - 0,4) = 0,42);<br>3 - C (Ā và B̄ độc lập ⇒ P(Ā ∩ B̄) = (1 - 0,7) · (1 - 0,4) = 0,3 · 0,6 = 0,18);<br>4 - D (theo công thức cộng: P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0,7 + 0,4 - 0,28 = 0,82)."
   },
   {
     "type": "mcq",

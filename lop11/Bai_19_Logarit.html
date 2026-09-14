@@ -1251,18 +1251,17 @@
   {
     "type": "match",
     "q": "Ghép mỗi giá trị logarit ở Cột A với kết quả tương ứng ở Cột B:",
-    "exp": "1 - A (2^5 = 32); 2 - B (ln e^4 = 4); 3 - C (10^-1 = 0.1, 0.1^-2 = 100); 4 - D (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>^4 = 9).",
     "colA": [
       "log<sub>2</sub> 32",
       "ln(e<sup>4</sup>)",
       "log<sub>0,1</sub> 100",
-      "log<sub><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></sub> 9"
+      "log<sub>3</sub> 27"
     ],
     "colB": [
       "5",
       "4",
       "-2",
-      "4"
+      "3"
     ],
     "pairs": [
       {
@@ -1278,8 +1277,8 @@
         "b": "C. -2"
       },
       {
-        "a": "4. log<sub><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></sub> 9",
-        "b": "D. 4"
+        "a": "4. log<sub>3</sub> 27",
+        "b": "D. 3"
       }
     ],
     "ans": {
@@ -1289,7 +1288,7 @@
       "3": 3
     },
     "correctText": "1-A • 2-B • 3-C • 4-D",
-    "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <text x=\"220\" y=\"35\" fill=\"#38bdf8\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">Định nghĩa Lôgarit: log_a b = c ⇔ a^c = b</text>\n  <g font-size=\"13\" font-weight=\"700\">\n    <rect x=\"50\" y=\"55\" width=\"340\" height=\"35\" rx=\"6\" fill=\"#1e293b\" stroke=\"#38bdf8\"/>\n    <text x=\"70\" y=\"78\" fill=\"#e2e8f0\">1. log₂ 32</text><text x=\"350\" y=\"78\" fill=\"#38bdf8\" text-anchor=\"end\">2^? = 32</text>\n    \n    <rect x=\"50\" y=\"95\" width=\"340\" height=\"35\" rx=\"6\" fill=\"#1e293b\" stroke=\"#34d399\"/>\n    <text x=\"70\" y=\"118\" fill=\"#e2e8f0\">2. ln(e⁴)</text><text x=\"350\" y=\"118\" fill=\"#34d399\" text-anchor=\"end\">e^? = e⁴</text>\n    \n    <rect x=\"50\" y=\"135\" width=\"340\" height=\"35\" rx=\"6\" fill=\"#1e293b\" stroke=\"#fbbf24\"/>\n    <text x=\"70\" y=\"158\" fill=\"#e2e8f0\">3. log_{0,1} 100</text><text x=\"350\" y=\"158\" fill=\"#fbbf24\" text-anchor=\"end\">0,1^? = 100</text>\n    \n    <rect x=\"50\" y=\"175\" width=\"340\" height=\"35\" rx=\"6\" fill=\"#1e293b\" stroke=\"#f43f5e\"/>\n    <text x=\"70\" y=\"198\" fill=\"#e2e8f0\">4. log_{√3} 9</text><text x=\"350\" y=\"198\" fill=\"#f43f5e\" text-anchor=\"end\">(√3)^? = 9</text>\n  </g>\n\n</svg>"
+    "exp": "1 - A (vì 2⁵ = 32 ⇒ log₂ 32 = 5);<br>2 - B (vì ln(e⁴) = 4 · ln e = 4);<br>3 - C (vì (0,1)⁻² = (10⁻¹)⁻² = 10² = 100 ⇒ log₀,₁ 100 = -2);<br>4 - D (vì 3³ = 27 ⇒ log₃ 27 = 3)."
   },
   {
     "type": "mcq",

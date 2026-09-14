@@ -430,18 +430,17 @@
     {
       "type": "match",
       "q": "Ghép các hàm số lượng giác (Cột A) với chu kì tuần hoàn tương ứng (Cột B):",
-      "exp": "• sin và cos có chu kì 2π.<br>• tan và cot có chu kì π.",
       "colA": [
         "Hàm số y = sin x",
-        "Hàm số y = cos x",
-        "Hàm số y = tan x",
-        "Hàm số y = cot x"
+        "Hàm số y = cos(2x)",
+        "Hàm số y = tan(x/3)",
+        "Hàm số y = cot(4x)"
       ],
       "colB": [
         "Tuần hoàn với chu kì T = 2π",
-        "Tuần hoàn với chu kì T = 2π",
         "Tuần hoàn với chu kì T = π",
-        "Tuần hoàn với chu kì T = π"
+        "Tuần hoàn với chu kì T = 3π",
+        "Tuần hoàn với chu kì T = <span class=\"fraction\"><span class=\"numerator\">π</span><span class=\"denominator\">4</span></span>"
       ],
       "pairs": [
         {
@@ -449,25 +448,26 @@
           "b": "A. Tuần hoàn với chu kì T = 2π"
         },
         {
-          "a": "2. Hàm số y = cos x",
-          "b": "B. Tuần hoàn với chu kì T = 2π"
+          "a": "2. Hàm số y = cos(2x)",
+          "b": "B. Tuần hoàn với chu kì T = π"
         },
         {
-          "a": "3. Hàm số y = tan x",
-          "b": "C. Tuần hoàn với chu kì T = π"
+          "a": "3. Hàm số y = tan(x/3)",
+          "b": "C. Tuần hoàn với chu kì T = 3π"
         },
         {
-          "a": "4. Hàm số y = cot x",
-          "b": "D. Tuần hoàn với chu kì T = π"
+          "a": "4. Hàm số y = cot(4x)",
+          "b": "D. Tuần hoàn với chu kì T = <span class=\"fraction\"><span class=\"numerator\">π</span><span class=\"denominator\">4</span></span>"
         }
       ],
       "ans": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D"
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3
       },
-      "correctText": "1-A • 2-B • 3-C • 4-D"
+      "correctText": "1-A • 2-B • 3-C • 4-D",
+      "exp": "• Hàm số y = sin x tuần hoàn với chu kì T = 2π.<br>• Hàm số y = cos(2x) có chu kì T = 2π/2 = π.<br>• Hàm số y = tan(x/3) có chu kì T = π/(1/3) = 3π.<br>• Hàm số y = cot(4x) có chu kì T = π/4."
     },
     {
       "type": "tf",
@@ -637,18 +637,17 @@
     {
       "type": "match",
       "q": "Ghép các phương trình lượng giác cơ bản (Cột A) với công thức nghiệm (Cột B):",
-      "exp": "• Các công thức nghiệm phương trình lượng giác cơ bản.",
       "colA": [
         "cos x = cos α",
         "sin x = sin α",
-        "tan x = tan α",
-        "cot x = cot α"
+        "tan x = tan α (với cos α ≠ 0)",
+        "cot x = cot α (với sin α ≠ 0)"
       ],
       "colB": [
         "x = ±α + k2π (k ∈ ℤ)",
-        "x = α + k2π hoặc x = π - α + k2π",
-        "x = α + kπ (k ∈ ℤ)",
-        "x = α + kπ (k ∈ ℤ)"
+        "x = α + k2π hoặc x = π - α + k2π (k ∈ ℤ)",
+        "x = α + kπ (k ∈ ℤ, điều kiện α ≠ π/2 + mπ)",
+        "x = α + kπ (k ∈ ℤ, điều kiện α ≠ mπ)"
       ],
       "pairs": [
         {
@@ -657,24 +656,25 @@
         },
         {
           "a": "2. sin x = sin α",
-          "b": "B. x = α + k2π hoặc x = π - α + k2π"
+          "b": "B. x = α + k2π hoặc x = π - α + k2π (k ∈ ℤ)"
         },
         {
-          "a": "3. tan x = tan α",
-          "b": "C. x = α + kπ (k ∈ ℤ)"
+          "a": "3. tan x = tan α (với cos α ≠ 0)",
+          "b": "C. x = α + kπ (k ∈ ℤ, điều kiện α ≠ π/2 + mπ)"
         },
         {
-          "a": "4. cot x = cot α",
-          "b": "D. x = α + kπ (k ∈ ℤ)"
+          "a": "4. cot x = cot α (với sin α ≠ 0)",
+          "b": "D. x = α + kπ (k ∈ ℤ, điều kiện α ≠ mπ)"
         }
       ],
       "ans": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D"
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3
       },
-      "correctText": "1-A • 2-B • 3-C • 4-D"
+      "correctText": "1-A • 2-B • 3-C • 4-D",
+      "exp": "• cos x = cos α ⇔ x = ±α + k2π (k ∈ ℤ).<br>• sin x = sin α ⇔ x = α + k2π hoặc x = π - α + k2π (k ∈ ℤ).<br>• tan x = tan α ⇔ x = α + kπ (điều kiện xác định cos x ≠ 0 và cos α ≠ 0 ⇒ α ≠ π/2 + mπ).<br>• cot x = cot α ⇔ x = α + kπ (điều kiện xác định sin x ≠ 0 và sin α ≠ 0 ⇒ α ≠ mπ)."
     },
     {
       "type": "tf",
@@ -2914,18 +2914,17 @@
     {
       "type": "match",
       "q": "Ghép các giới hạn cơ bản (Cột A) với kết quả tương ứng (Cột B):",
-      "exp": "• Các giới hạn dãy số kinh điển.",
       "colA": [
         "lim qⁿ với |q| < 1",
         "lim qⁿ với q > 1",
-        "lim c (hằng số)",
-        "lim n^k (k nguyên dương)"
+        "lim c (với c là hằng số)",
+        "lim <span class=\"fraction\"><span class=\"numerator\">2n + 1</span><span class=\"denominator\">2n</span></span>"
       ],
       "colB": [
         "= 0",
         "= +∞",
         "= c",
-        "= +∞"
+        "= 1"
       ],
       "pairs": [
         {
@@ -2937,21 +2936,22 @@
           "b": "B. = +∞"
         },
         {
-          "a": "3. lim c (hằng số)",
+          "a": "3. lim c (với c là hằng số)",
           "b": "C. = c"
         },
         {
-          "a": "4. lim n^k (k nguyên dương)",
-          "b": "D. = +∞"
+          "a": "4. lim <span class=\"fraction\"><span class=\"numerator\">2n + 1</span><span class=\"denominator\">2n</span></span>",
+          "b": "D. = 1"
         }
       ],
       "ans": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D"
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3
       },
-      "correctText": "1-A • 2-B • 3-C • 4-D"
+      "correctText": "1-A • 2-B • 3-C • 4-D",
+      "exp": "• lim qⁿ = 0 với |q| < 1.<br>• lim qⁿ = +∞ với q > 1.<br>• lim c = c với c là hằng số.<br>• lim (2n + 1)/(2n) = lim (1 + 1/(2n)) = 1."
     },
     {
       "type": "tf",
@@ -3848,18 +3848,17 @@
     {
       "type": "match",
       "q": "Ghép mỗi giá trị logarit ở Cột A với kết quả tương ứng ở Cột B:",
-      "exp": "1 - A (2^5 = 32); 2 - B (ln e^4 = 4); 3 - C (10^-1 = 0.1, 0.1^-2 = 100); 4 - D (<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>^4 = 9).",
       "colA": [
         "log<sub>2</sub> 32",
         "ln(e<sup>4</sup>)",
         "log<sub>0,1</sub> 100",
-        "log<sub><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></sub> 9"
+        "log<sub>3</sub> 27"
       ],
       "colB": [
         "5",
         "4",
         "-2",
-        "4"
+        "3"
       ],
       "pairs": [
         {
@@ -3875,8 +3874,8 @@
           "b": "C. -2"
         },
         {
-          "a": "4. log<sub><span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span></sub> 9",
-          "b": "D. 4"
+          "a": "4. log<sub>3</sub> 27",
+          "b": "D. 3"
         }
       ],
       "ans": {
@@ -3886,7 +3885,7 @@
         "3": 3
       },
       "correctText": "1-A • 2-B • 3-C • 4-D",
-      "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <text x=\"220\" y=\"35\" fill=\"#38bdf8\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">Định nghĩa Lôgarit: log_a b = c ⇔ a^c = b</text>\n  <g font-size=\"13\" font-weight=\"700\">\n    <rect x=\"50\" y=\"55\" width=\"340\" height=\"35\" rx=\"6\" fill=\"#1e293b\" stroke=\"#38bdf8\"/>\n    <text x=\"70\" y=\"78\" fill=\"#e2e8f0\">1. log₂ 32</text><text x=\"350\" y=\"78\" fill=\"#38bdf8\" text-anchor=\"end\">2^? = 32</text>\n    \n    <rect x=\"50\" y=\"95\" width=\"340\" height=\"35\" rx=\"6\" fill=\"#1e293b\" stroke=\"#34d399\"/>\n    <text x=\"70\" y=\"118\" fill=\"#e2e8f0\">2. ln(e⁴)</text><text x=\"350\" y=\"118\" fill=\"#34d399\" text-anchor=\"end\">e^? = e⁴</text>\n    \n    <rect x=\"50\" y=\"135\" width=\"340\" height=\"35\" rx=\"6\" fill=\"#1e293b\" stroke=\"#fbbf24\"/>\n    <text x=\"70\" y=\"158\" fill=\"#e2e8f0\">3. log_{0,1} 100</text><text x=\"350\" y=\"158\" fill=\"#fbbf24\" text-anchor=\"end\">0,1^? = 100</text>\n    \n    <rect x=\"50\" y=\"175\" width=\"340\" height=\"35\" rx=\"6\" fill=\"#1e293b\" stroke=\"#f43f5e\"/>\n    <text x=\"70\" y=\"198\" fill=\"#e2e8f0\">4. log_{√3} 9</text><text x=\"350\" y=\"198\" fill=\"#f43f5e\" text-anchor=\"end\">(√3)^? = 9</text>\n  </g>\n\n</svg>"
+      "exp": "1 - A (vì 2⁵ = 32 ⇒ log₂ 32 = 5);<br>2 - B (vì ln(e⁴) = 4 · ln e = 4);<br>3 - C (vì (0,1)⁻² = (10⁻¹)⁻² = 10² = 100 ⇒ log₀,₁ 100 = -2);<br>4 - D (vì 3³ = 27 ⇒ log₃ 27 = 3)."
     },
     {
       "type": "mcq",
@@ -4457,34 +4456,33 @@
     {
       "type": "match",
       "q": "Cho hình lập phương ABCD.A'B'C'D'. Ghép mỗi cặp đường thẳng ở Cột A với góc giữa chúng ở Cột B:",
-      "exp": "1 - A (CC' // BB' ⊥ AB); 2 - B (A'D' // AD ⊥ AB); 3 - C (song song nên góc 0°); 4 - D (hai đường chéo hình vuông vuông góc).",
       "colA": [
-        "AB và CC'",
-        "AB và A'D'",
         "AC và A'C'",
-        "AC và BD"
+        "AB và A'C'",
+        "A'B và B'C",
+        "AB và CC'"
       ],
       "colB": [
-        "90°",
-        "90°",
         "0°",
+        "45°",
+        "60°",
         "90°"
       ],
       "pairs": [
         {
-          "a": "1. AB và CC'",
-          "b": "A. 90°"
+          "a": "1. AC và A'C'",
+          "b": "A. 0°"
         },
         {
-          "a": "2. AB và A'D'",
-          "b": "B. 90°"
+          "a": "2. AB và A'C'",
+          "b": "B. 45°"
         },
         {
-          "a": "3. AC và A'C'",
-          "b": "C. 0°"
+          "a": "3. A'B và B'C",
+          "b": "C. 60°"
         },
         {
-          "a": "4. AC và BD",
+          "a": "4. AB và CC'",
           "b": "D. 90°"
         }
       ],
@@ -4495,7 +4493,8 @@
         "3": 3
       },
       "correctText": "1-A • 2-B • 3-C • 4-D",
-      "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <text x=\"220\" y=\"25\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">Hình lập phương ABCD.A'B'C'D' (Xác định góc giữa hai đường thẳng)</text>\n  \n  <!-- Đáy dưới: ABCD -->\n  <!-- Cạnh nhìn thấy: AB, BC -->\n  <line x1=\"100\" y1=\"185\" x2=\"240\" y2=\"185\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"310\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <!-- Cạnh khuất: AD, DC -->\n  <line x1=\"100\" y1=\"185\" x2=\"170\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"310\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Cột đứng: AA', BB', CC' nhìn thấy, DD' khuất -->\n  <line x1=\"100\" y1=\"185\" x2=\"100\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"240\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"310\" y1=\"145\" x2=\"310\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"170\" y2=\"55\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Đáy trên: A'B'C'D' tất cả nhìn thấy -->\n  <polygon points=\"100,95 240,95 310,55 170,55\" fill=\"rgba(56,189,248,0.06)\" stroke=\"#38bdf8\" stroke-width=\"1.8\"/>\n\n  \n  <!-- Highlight AB (đỏ) và CC' (xanh lục) -->\n  <line x1=\"100\" y1=\"185\" x2=\"240\" y2=\"185\" stroke=\"#f43f5e\" stroke-width=\"3.5\"/>\n  <line x1=\"310\" y1=\"145\" x2=\"310\" y2=\"55\" stroke=\"#34d399\" stroke-width=\"3.5\"/>\n\n\n  <!-- Tọa độ 8 đỉnh có chấm tròn và nhãn rõ ràng -->\n  <!-- Đáy dưới -->\n  <circle cx=\"100\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">A</text>\n  <circle cx=\"240\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">B</text>\n  <circle cx=\"310\" cy=\"145\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"150\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">C</text>\n  <circle cx=\"170\" cy=\"145\" r=\"3\" fill=\"#64748b\"/><text x=\"155\" y=\"143\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\">D</text>\n  \n  <!-- Đáy trên -->\n  <circle cx=\"100\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">A'</text>\n  <circle cx=\"240\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">B'</text>\n  <circle cx=\"310\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"55\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">C'</text>\n  <circle cx=\"170\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"165\" y=\"45\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">D'</text>\n</svg>"
+      "exp": "1 - A (AC // A'C' ⇒ hai đường thẳng song song nên góc bằng 0°);<br>2 - B (A'C' // AC, trong mặt phẳng (ABCD) tam giác ABC vuông cân tại B nên góc BAC = 45°);<br>3 - C (B'C // A'D, tam giác A'BD có ba cạnh là ba đường chéo của ba mặt vuông bằng nhau nên tam giác A'BD đều ⇒ góc BA'D = 60°);<br>4 - D (CC' ⊥ (ABCD) ⇒ CC' ⊥ AB ⇒ góc 90°).",
+      "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <text x=\"220\" y=\"25\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">Hình lập phương ABCD.A'B'C'D' (Xác định góc giữa hai đường thẳng)</text>\n  \n  <!-- Đáy dưới: ABCD -->\n  <!-- Cạnh nhìn thấy: AB, BC -->\n  <line x1=\"100\" y1=\"185\" x2=\"240\" y2=\"185\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"310\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <!-- Cạnh khuất: AD, DC -->\n  <line x1=\"100\" y1=\"185\" x2=\"170\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"310\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Cột đứng: AA', BB', CC' nhìn thấy, DD' khuất -->\n  <line x1=\"100\" y1=\"185\" x2=\"100\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"240\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"310\" y1=\"145\" x2=\"310\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"170\" y2=\"55\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Đáy trên: A'B'C'D' tất cả nhìn thấy -->\n  <polygon points=\"100,95 240,95 310,55 170,55\" fill=\"rgba(56,189,248,0.06)\" stroke=\"#38bdf8\" stroke-width=\"1.8\"/>\n\n  <!-- Tọa độ 8 đỉnh có chấm tròn và nhãn rõ ràng -->\n  <!-- Đáy dưới -->\n  <circle cx=\"100\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">A</text>\n  <circle cx=\"240\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">B</text>\n  <circle cx=\"310\" cy=\"145\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"150\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">C</text>\n  <circle cx=\"170\" cy=\"145\" r=\"3\" fill=\"#64748b\"/><text x=\"155\" y=\"143\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\">D</text>\n  \n  <!-- Đáy trên -->\n  <circle cx=\"100\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">A'</text>\n  <circle cx=\"240\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">B'</text>\n  <circle cx=\"310\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"55\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">C'</text>\n  <circle cx=\"170\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"165\" y=\"45\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">D'</text>\n</svg>"
     },
     {
       "type": "mcq",
@@ -5062,34 +5061,33 @@
     {
       "type": "match",
       "q": "Cho hình lập phương ABCD.A'B'C'D'. Ghép mỗi cặp mặt phẳng ở Cột A với góc giữa chúng ở Cột B:",
-      "exp": "1 - A (hai mặt liền kề vuông góc); 2 - B (hai mặt đáy song song); 3 - C (tan = A'A/AO = a/(a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>/2) = <span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>); 4 - D (hai mặt phẳng chéo vuông góc).",
       "colA": [
-        "(ABCD) và (ABB'A')",
         "(ABCD) và (A'B'C'D')",
+        "(A'CD) và (ABCD)",
         "(ABCD) và (A'BD)",
-        "(ACC'A') và (BDD'B')"
+        "(ABCD) và (ABB'A')"
       ],
       "colB": [
-        "90°",
         "0°",
+        "45°",
         "arctan(<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>)",
         "90°"
       ],
       "pairs": [
         {
-          "a": "1. (ABCD) và (ABB'A')",
-          "b": "A. 90°"
+          "a": "1. (ABCD) và (A'B'C'D')",
+          "b": "A. 0°"
         },
         {
-          "a": "2. (ABCD) và (A'B'C'D')",
-          "b": "B. 0°"
+          "a": "2. (A'CD) và (ABCD)",
+          "b": "B. 45°"
         },
         {
           "a": "3. (ABCD) và (A'BD)",
           "b": "C. arctan(<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>)"
         },
         {
-          "a": "4. (ACC'A') và (BDD'B')",
+          "a": "4. (ABCD) và (ABB'A')",
           "b": "D. 90°"
         }
       ],
@@ -5100,7 +5098,8 @@
         "3": 3
       },
       "correctText": "1-A • 2-B • 3-C • 4-D",
-      "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <text x=\"220\" y=\"25\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">Mặt phẳng chéo (ACC'A') vuông góc với mặt phẳng đáy (ABCD)</text>\n  \n  <!-- Đáy dưới: ABCD -->\n  <!-- Cạnh nhìn thấy: AB, BC -->\n  <line x1=\"100\" y1=\"185\" x2=\"240\" y2=\"185\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"310\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <!-- Cạnh khuất: AD, DC -->\n  <line x1=\"100\" y1=\"185\" x2=\"170\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"310\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Cột đứng: AA', BB', CC' nhìn thấy, DD' khuất -->\n  <line x1=\"100\" y1=\"185\" x2=\"100\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"240\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"310\" y1=\"145\" x2=\"310\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"170\" y2=\"55\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Đáy trên: A'B'C'D' tất cả nhìn thấy -->\n  <polygon points=\"100,95 240,95 310,55 170,55\" fill=\"rgba(56,189,248,0.06)\" stroke=\"#38bdf8\" stroke-width=\"1.8\"/>\n\n  \n  <!-- Mặt phẳng chéo (ACC'A') -->\n  <polygon points=\"100,185 310,145 310,55 100,95\" fill=\"rgba(6,182,212,0.22)\" stroke=\"#06b6d4\" stroke-width=\"2\"/>\n  <line x1=\"100\" y1=\"185\" x2=\"310\" y2=\"145\" stroke=\"#06b6d4\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"100\" y1=\"95\" x2=\"310\" y2=\"55\" stroke=\"#06b6d4\" stroke-width=\"2\"/>\n\n\n  <!-- Tọa độ 8 đỉnh có chấm tròn và nhãn rõ ràng -->\n  <!-- Đáy dưới -->\n  <circle cx=\"100\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">A</text>\n  <circle cx=\"240\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">B</text>\n  <circle cx=\"310\" cy=\"145\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"150\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">C</text>\n  <circle cx=\"170\" cy=\"145\" r=\"3\" fill=\"#64748b\"/><text x=\"155\" y=\"143\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\">D</text>\n  \n  <!-- Đáy trên -->\n  <circle cx=\"100\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">A'</text>\n  <circle cx=\"240\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">B'</text>\n  <circle cx=\"310\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"55\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">C'</text>\n  <circle cx=\"170\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"165\" y=\"45\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">D'</text>\n</svg>"
+      "exp": "1 - A (hai mặt đáy song song nên góc bằng 0°);<br>2 - B (giao tuyến CD, A'D ⊥ CD và AD ⊥ CD trong mặt phẳng bên nên góc giữa hai mặt là góc A'DA = 45°);<br>3 - C (giao tuyến BD, gọi O = AC ∩ BD, A'O ⊥ BD và AO ⊥ BD nên góc là A'OA; tan A'OA = A'A / AO = a / (a√2 / 2) = √2 ⇒ arctan(√2));<br>4 - D (mặt bên và mặt đáy vuông góc nên góc bằng 90°).",
+      "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <text x=\"220\" y=\"25\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">Hình lập phương ABCD.A'B'C'D' (Xác định góc giữa hai mặt phẳng)</text>\n  \n  <!-- Đáy dưới: ABCD -->\n  <!-- Cạnh nhìn thấy: AB, BC -->\n  <line x1=\"100\" y1=\"185\" x2=\"240\" y2=\"185\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"310\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <!-- Cạnh khuất: AD, DC -->\n  <line x1=\"100\" y1=\"185\" x2=\"170\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"310\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Cột đứng: AA', BB', CC' nhìn thấy, DD' khuất -->\n  <line x1=\"100\" y1=\"185\" x2=\"100\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"240\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"310\" y1=\"145\" x2=\"310\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"170\" y2=\"55\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Đáy trên: A'B'C'D' tất cả nhìn thấy -->\n  <polygon points=\"100,95 240,95 310,55 170,55\" fill=\"rgba(56,189,248,0.06)\" stroke=\"#38bdf8\" stroke-width=\"1.8\"/>\n\n  <!-- Tọa độ 8 đỉnh có chấm tròn và nhãn rõ ràng -->\n  <!-- Đáy dưới -->\n  <circle cx=\"100\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">A</text>\n  <circle cx=\"240\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">B</text>\n  <circle cx=\"310\" cy=\"145\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"150\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">C</text>\n  <circle cx=\"170\" cy=\"145\" r=\"3\" fill=\"#64748b\"/><text x=\"155\" y=\"143\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\">D</text>\n  \n  <!-- Đáy trên -->\n  <circle cx=\"100\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">A'</text>\n  <circle cx=\"240\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">B'</text>\n  <circle cx=\"310\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"55\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">C'</text>\n  <circle cx=\"170\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"165\" y=\"45\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">D'</text>\n</svg>"
     },
     {
       "type": "mcq",
@@ -5265,35 +5264,34 @@
     {
       "type": "match",
       "q": "Cho hình lập phương ABCD.A'B'C'D' cạnh a. Ghép mỗi khoảng cách ở Cột A với giá trị tương ứng ở Cột B:",
-      "exp": "1 - A (AD = a); 2 - B (AA' = a); 3 - C (BK = (a*a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>)/(a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">3</span></span>) = a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2/3</span></span>); 4 - D (đường chéo mặt a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>).",
       "colA": [
-        "Khoảng cách từ A đến (CDD'C')",
         "Khoảng cách giữa (ABCD) và (A'B'C'D')",
-        "Khoảng cách từ B đến BD'",
-        "Khoảng cách từ A đến C"
+        "Khoảng cách từ điểm A đến đường thẳng BD",
+        "Khoảng cách từ điểm A đến điểm C",
+        "Khoảng cách từ điểm B đến đường thẳng BD'"
       ],
       "colB": [
         "a",
-        "a",
-        "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2/3</span></span>",
-        "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>"
+        "<span class=\"fraction\"><span class=\"numerator\">a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span><span class=\"denominator\">2</span></span>",
+        "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>",
+        "a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2/3</span></span>"
       ],
       "pairs": [
         {
-          "a": "1. Khoảng cách từ A đến (CDD'C')",
+          "a": "1. Khoảng cách giữa (ABCD) và (A'B'C'D')",
           "b": "A. a"
         },
         {
-          "a": "2. Khoảng cách giữa (ABCD) và (A'B'C'D')",
-          "b": "B. a"
+          "a": "2. Khoảng cách từ điểm A đến đường thẳng BD",
+          "b": "B. <span class=\"fraction\"><span class=\"numerator\">a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span></span><span class=\"denominator\">2</span></span>"
         },
         {
-          "a": "3. Khoảng cách từ B đến BD'",
-          "b": "C. a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2/3</span></span>"
+          "a": "3. Khoảng cách từ điểm A đến điểm C",
+          "b": "C. a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>"
         },
         {
-          "a": "4. Khoảng cách từ A đến C",
-          "b": "D. a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2</span></span>"
+          "a": "4. Khoảng cách từ điểm B đến đường thẳng BD'",
+          "b": "D. a<span class=\"sqrt\"><span class=\"rad\">√</span><span class=\"radicand\">2/3</span></span>"
         }
       ],
       "ans": {
@@ -5303,7 +5301,8 @@
         "3": 3
       },
       "correctText": "1-A • 2-B • 3-C • 4-D",
-      "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <text x=\"220\" y=\"25\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">Hình lập phương ABCD.A'B'C'D' cạnh a</text>\n  \n  <!-- Đáy dưới: ABCD -->\n  <!-- Cạnh nhìn thấy: AB, BC -->\n  <line x1=\"100\" y1=\"185\" x2=\"240\" y2=\"185\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"310\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <!-- Cạnh khuất: AD, DC -->\n  <line x1=\"100\" y1=\"185\" x2=\"170\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"310\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Cột đứng: AA', BB', CC' nhìn thấy, DD' khuất -->\n  <line x1=\"100\" y1=\"185\" x2=\"100\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"240\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"310\" y1=\"145\" x2=\"310\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"170\" y2=\"55\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Đáy trên: A'B'C'D' tất cả nhìn thấy -->\n  <polygon points=\"100,95 240,95 310,55 170,55\" fill=\"rgba(56,189,248,0.06)\" stroke=\"#38bdf8\" stroke-width=\"1.8\"/>\n\n  \n  <!-- Kích thước cạnh a -->\n  <text x=\"80\" y=\"145\" fill=\"#fbbf24\" font-size=\"14\" font-weight=\"800\">a</text>\n  <text x=\"170\" y=\"202\" fill=\"#fbbf24\" font-size=\"14\" font-weight=\"800\">a</text>\n\n\n  <!-- Tọa độ 8 đỉnh có chấm tròn và nhãn rõ ràng -->\n  <!-- Đáy dưới -->\n  <circle cx=\"100\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">A</text>\n  <circle cx=\"240\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">B</text>\n  <circle cx=\"310\" cy=\"145\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"150\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">C</text>\n  <circle cx=\"170\" cy=\"145\" r=\"3\" fill=\"#64748b\"/><text x=\"155\" y=\"143\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\">D</text>\n  \n  <!-- Đáy trên -->\n  <circle cx=\"100\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">A'</text>\n  <circle cx=\"240\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">B'</text>\n  <circle cx=\"310\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"55\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">C'</text>\n  <circle cx=\"170\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"165\" y=\"45\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">D'</text>\n</svg>"
+      "exp": "1 - A (khoảng cách giữa hai đáy bằng độ dài cạnh bên AA' = a);<br>2 - B (trong hình vuông ABCD, khoảng cách từ A đến BD là đường cao AO = a√2/2);<br>3 - C (khoảng cách từ A đến C là đường chéo hình vuông đáy AC = a√2);<br>4 - D (trong tam giác vuông B'BD vuông tại B, đường cao BK hạ từ B đến BD' là BK = (BB' · BD) / BD' = (a · a√2) / (a√3) = a√(2/3)).",
+      "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <text x=\"220\" y=\"25\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">Hình lập phương ABCD.A'B'C'D' cạnh a</text>\n  \n  <!-- Đáy dưới: ABCD -->\n  <!-- Cạnh nhìn thấy: AB, BC -->\n  <line x1=\"100\" y1=\"185\" x2=\"240\" y2=\"185\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"310\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <!-- Cạnh khuất: AD, DC -->\n  <line x1=\"100\" y1=\"185\" x2=\"170\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"310\" y2=\"145\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Cột đứng: AA', BB', CC' nhìn thấy, DD' khuất -->\n  <line x1=\"100\" y1=\"185\" x2=\"100\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"240\" y1=\"185\" x2=\"240\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"310\" y1=\"145\" x2=\"310\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1.8\"/>\n  <line x1=\"170\" y1=\"145\" x2=\"170\" y2=\"55\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  \n  <!-- Đáy trên: A'B'C'D' tất cả nhìn thấy -->\n  <polygon points=\"100,95 240,95 310,55 170,55\" fill=\"rgba(56,189,248,0.06)\" stroke=\"#38bdf8\" stroke-width=\"1.8\"/>\n\n  <!-- Kích thước cạnh a -->\n  <text x=\"80\" y=\"145\" fill=\"#fbbf24\" font-size=\"14\" font-weight=\"800\">a</text>\n  <text x=\"170\" y=\"202\" fill=\"#fbbf24\" font-size=\"14\" font-weight=\"800\">a</text>\n\n  <!-- Tọa độ 8 đỉnh có chấm tròn và nhãn rõ ràng -->\n  <!-- Đáy dưới -->\n  <circle cx=\"100\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">A</text>\n  <circle cx=\"240\" cy=\"185\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"195\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">B</text>\n  <circle cx=\"310\" cy=\"145\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"150\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"800\">C</text>\n  <circle cx=\"170\" cy=\"145\" r=\"3\" fill=\"#64748b\"/><text x=\"155\" y=\"143\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\">D</text>\n  \n  <!-- Đáy trên -->\n  <circle cx=\"100\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"85\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">A'</text>\n  <circle cx=\"240\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"245\" y=\"90\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">B'</text>\n  <circle cx=\"310\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"320\" y=\"55\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">C'</text>\n  <circle cx=\"170\" cy=\"55\" r=\"3.5\" fill=\"#38bdf8\"/><text x=\"165\" y=\"45\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"800\">D'</text>\n</svg>"
     },
     {
       "type": "mcq",
@@ -6078,8 +6077,7 @@
     },
     {
       "type": "match",
-      "q": "Cho hai biến cố độc lập A, B với P(A) = 0,6 và P(B) = 0,5. Ghép mỗi biến cố ở Cột A với xác suất tương ứng ở Cột B:",
-      "exp": "1 - A (0.6*0.5 = 0.3); 2 - B (0.6*0.5 = 0.3); 3 - C (0.4*0.5 = 0.2); 4 - D (0.6 + 0.5 - 0.3 = 0.8).",
+      "q": "Cho hai biến cố độc lập A và B với P(A) = 0,7 và P(B) = 0,4. Ghép mỗi biến cố ở Cột A với xác suất tương ứng ở Cột B:",
       "colA": [
         "P(A ∩ B)",
         "P(A ∩ <math><mover><mi>B</mi><mo>¯</mo></mover></math>)",
@@ -6087,27 +6085,27 @@
         "P(A ∪ B)"
       ],
       "colB": [
-        "0,30",
-        "0,30",
-        "0,20",
-        "0,80"
+        "0,28",
+        "0,42",
+        "0,18",
+        "0,82"
       ],
       "pairs": [
         {
           "a": "1. P(A ∩ B)",
-          "b": "A. 0,30"
+          "b": "A. 0,28"
         },
         {
           "a": "2. P(A ∩ <math><mover><mi>B</mi><mo>¯</mo></mover></math>)",
-          "b": "B. 0,30"
+          "b": "B. 0,42"
         },
         {
           "a": "3. P(Ā ∩ <math><mover><mi>B</mi><mo>¯</mo></mover></math>)",
-          "b": "C. 0,20"
+          "b": "C. 0,18"
         },
         {
           "a": "4. P(A ∪ B)",
-          "b": "D. 0,80"
+          "b": "D. 0,82"
         }
       ],
       "ans": {
@@ -6117,7 +6115,7 @@
         "3": 3
       },
       "correctText": "1-A • 2-B • 3-C • 4-D",
-      "svgGraph": "<svg viewBox=\"0 0 440 240\" width=\"100%\" height=\"auto\" style=\"display:block; margin:0 auto; max-height:46vh;\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#94a3b8\"/>\n    </marker>\n    <marker id=\"arrCyan\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#38bdf8\"/>\n    </marker>\n    <marker id=\"arrAmber\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#fbbf24\"/>\n    </marker>\n    <marker id=\"arrGreen\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#34d399\"/>\n    </marker>\n    <marker id=\"arrRose\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 1 2 L 8 5 L 1 8 z\" fill=\"#f43f5e\"/>\n    </marker>\n  </defs>\n  <rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"#0b1120\" stroke=\"rgba(255,255,255,0.06)\" stroke-width=\"1\"/>\n  \n  <text x=\"220\" y=\"35\" fill=\"#38bdf8\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\">Hai biến cố độc lập: P(A) = 0,6 và P(B) = 0,5</text>\n  \n  <g font-size=\"13\" font-weight=\"800\" text-anchor=\"middle\">\n    <rect x=\"60\" y=\"60\" width=\"145\" height=\"50\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\"/>\n    <text x=\"132\" y=\"92\" fill=\"#38bdf8\">P(A ∩ B)</text>\n    \n    <rect x=\"235\" y=\"60\" width=\"145\" height=\"50\" rx=\"8\" fill=\"#1e293b\" stroke=\"#34d399\"/>\n    <text x=\"307\" y=\"92\" fill=\"#34d399\">P(A ∩ B̄)</text>\n    \n    <rect x=\"60\" y=\"125\" width=\"145\" height=\"50\" rx=\"8\" fill=\"#1e293b\" stroke=\"#fbbf24\"/>\n    <text x=\"132\" y=\"157\" fill=\"#fbbf24\">P(Ā ∩ B̄)</text>\n    \n    <rect x=\"235\" y=\"125\" width=\"145\" height=\"50\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f43f5e\"/>\n    <text x=\"307\" y=\"157\" fill=\"#f43f5e\">P(A ∪ B)</text>\n  </g>\n  <text x=\"220\" y=\"215\" fill=\"#34d399\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">Tính xác suất các biến cố kết hợp</text>\n\n</svg>"
+      "exp": "1 - A (A và B độc lập ⇒ P(A ∩ B) = P(A) · P(B) = 0,7 · 0,4 = 0,28);<br>2 - B (A và B̄ độc lập ⇒ P(A ∩ B̄) = P(A) · P(B̄) = 0,7 · (1 - 0,4) = 0,42);<br>3 - C (Ā và B̄ độc lập ⇒ P(Ā ∩ B̄) = (1 - 0,7) · (1 - 0,4) = 0,3 · 0,6 = 0,18);<br>4 - D (theo công thức cộng: P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0,7 + 0,4 - 0,28 = 0,82)."
     },
     {
       "type": "mcq",

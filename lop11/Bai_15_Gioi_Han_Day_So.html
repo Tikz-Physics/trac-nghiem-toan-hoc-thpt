@@ -1145,18 +1145,17 @@
   {
     "type": "match",
     "q": "Ghép các giới hạn cơ bản (Cột A) với kết quả tương ứng (Cột B):",
-    "exp": "• Các giới hạn dãy số kinh điển.",
     "colA": [
       "lim qⁿ với |q| < 1",
       "lim qⁿ với q > 1",
-      "lim c (hằng số)",
-      "lim n^k (k nguyên dương)"
+      "lim c (với c là hằng số)",
+      "lim <span class=\"fraction\"><span class=\"numerator\">2n + 1</span><span class=\"denominator\">2n</span></span>"
     ],
     "colB": [
       "= 0",
       "= +∞",
       "= c",
-      "= +∞"
+      "= 1"
     ],
     "pairs": [
       {
@@ -1168,21 +1167,22 @@
         "b": "B. = +∞"
       },
       {
-        "a": "3. lim c (hằng số)",
+        "a": "3. lim c (với c là hằng số)",
         "b": "C. = c"
       },
       {
-        "a": "4. lim n^k (k nguyên dương)",
-        "b": "D. = +∞"
+        "a": "4. lim <span class=\"fraction\"><span class=\"numerator\">2n + 1</span><span class=\"denominator\">2n</span></span>",
+        "b": "D. = 1"
       }
     ],
     "ans": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D"
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3
     },
-    "correctText": "1-A • 2-B • 3-C • 4-D"
+    "correctText": "1-A • 2-B • 3-C • 4-D",
+    "exp": "• lim qⁿ = 0 với |q| < 1.<br>• lim qⁿ = +∞ với q > 1.<br>• lim c = c với c là hằng số.<br>• lim (2n + 1)/(2n) = lim (1 + 1/(2n)) = 1."
   },
   {
     "type": "tf",

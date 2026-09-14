@@ -1145,18 +1145,17 @@
   {
     "type": "match",
     "q": "Ghép các phương trình lượng giác cơ bản (Cột A) với công thức nghiệm (Cột B):",
-    "exp": "• Các công thức nghiệm phương trình lượng giác cơ bản.",
     "colA": [
       "cos x = cos α",
       "sin x = sin α",
-      "tan x = tan α",
-      "cot x = cot α"
+      "tan x = tan α (với cos α ≠ 0)",
+      "cot x = cot α (với sin α ≠ 0)"
     ],
     "colB": [
       "x = ±α + k2π (k ∈ ℤ)",
-      "x = α + k2π hoặc x = π - α + k2π",
-      "x = α + kπ (k ∈ ℤ)",
-      "x = α + kπ (k ∈ ℤ)"
+      "x = α + k2π hoặc x = π - α + k2π (k ∈ ℤ)",
+      "x = α + kπ (k ∈ ℤ, điều kiện α ≠ π/2 + mπ)",
+      "x = α + kπ (k ∈ ℤ, điều kiện α ≠ mπ)"
     ],
     "pairs": [
       {
@@ -1165,24 +1164,25 @@
       },
       {
         "a": "2. sin x = sin α",
-        "b": "B. x = α + k2π hoặc x = π - α + k2π"
+        "b": "B. x = α + k2π hoặc x = π - α + k2π (k ∈ ℤ)"
       },
       {
-        "a": "3. tan x = tan α",
-        "b": "C. x = α + kπ (k ∈ ℤ)"
+        "a": "3. tan x = tan α (với cos α ≠ 0)",
+        "b": "C. x = α + kπ (k ∈ ℤ, điều kiện α ≠ π/2 + mπ)"
       },
       {
-        "a": "4. cot x = cot α",
-        "b": "D. x = α + kπ (k ∈ ℤ)"
+        "a": "4. cot x = cot α (với sin α ≠ 0)",
+        "b": "D. x = α + kπ (k ∈ ℤ, điều kiện α ≠ mπ)"
       }
     ],
     "ans": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D"
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3
     },
-    "correctText": "1-A • 2-B • 3-C • 4-D"
+    "correctText": "1-A • 2-B • 3-C • 4-D",
+    "exp": "• cos x = cos α ⇔ x = ±α + k2π (k ∈ ℤ).<br>• sin x = sin α ⇔ x = α + k2π hoặc x = π - α + k2π (k ∈ ℤ).<br>• tan x = tan α ⇔ x = α + kπ (điều kiện xác định cos x ≠ 0 và cos α ≠ 0 ⇒ α ≠ π/2 + mπ).<br>• cot x = cot α ⇔ x = α + kπ (điều kiện xác định sin x ≠ 0 và sin α ≠ 0 ⇒ α ≠ mπ)."
   },
   {
     "type": "tf",

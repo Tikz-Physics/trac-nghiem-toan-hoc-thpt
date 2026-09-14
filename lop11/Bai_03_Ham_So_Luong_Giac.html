@@ -1145,18 +1145,17 @@
   {
     "type": "match",
     "q": "Ghép các hàm số lượng giác (Cột A) với chu kì tuần hoàn tương ứng (Cột B):",
-    "exp": "• sin và cos có chu kì 2π.<br>• tan và cot có chu kì π.",
     "colA": [
       "Hàm số y = sin x",
-      "Hàm số y = cos x",
-      "Hàm số y = tan x",
-      "Hàm số y = cot x"
+      "Hàm số y = cos(2x)",
+      "Hàm số y = tan(x/3)",
+      "Hàm số y = cot(4x)"
     ],
     "colB": [
       "Tuần hoàn với chu kì T = 2π",
-      "Tuần hoàn với chu kì T = 2π",
       "Tuần hoàn với chu kì T = π",
-      "Tuần hoàn với chu kì T = π"
+      "Tuần hoàn với chu kì T = 3π",
+      "Tuần hoàn với chu kì T = <span class=\"fraction\"><span class=\"numerator\">π</span><span class=\"denominator\">4</span></span>"
     ],
     "pairs": [
       {
@@ -1164,25 +1163,26 @@
         "b": "A. Tuần hoàn với chu kì T = 2π"
       },
       {
-        "a": "2. Hàm số y = cos x",
-        "b": "B. Tuần hoàn với chu kì T = 2π"
+        "a": "2. Hàm số y = cos(2x)",
+        "b": "B. Tuần hoàn với chu kì T = π"
       },
       {
-        "a": "3. Hàm số y = tan x",
-        "b": "C. Tuần hoàn với chu kì T = π"
+        "a": "3. Hàm số y = tan(x/3)",
+        "b": "C. Tuần hoàn với chu kì T = 3π"
       },
       {
-        "a": "4. Hàm số y = cot x",
-        "b": "D. Tuần hoàn với chu kì T = π"
+        "a": "4. Hàm số y = cot(4x)",
+        "b": "D. Tuần hoàn với chu kì T = <span class=\"fraction\"><span class=\"numerator\">π</span><span class=\"denominator\">4</span></span>"
       }
     ],
     "ans": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D"
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3
     },
-    "correctText": "1-A • 2-B • 3-C • 4-D"
+    "correctText": "1-A • 2-B • 3-C • 4-D",
+    "exp": "• Hàm số y = sin x tuần hoàn với chu kì T = 2π.<br>• Hàm số y = cos(2x) có chu kì T = 2π/2 = π.<br>• Hàm số y = tan(x/3) có chu kì T = π/(1/3) = 3π.<br>• Hàm số y = cot(4x) có chu kì T = π/4."
   },
   {
     "type": "tf",
